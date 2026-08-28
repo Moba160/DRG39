@@ -26,9 +26,60 @@
             flex-direction: column;
         }
 
+        #stellwerk-area {
+            height: 50vh;
+            min-height: 100px;
+            background-color: #e8e8e8;
+            position: relative;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        #stellwerk-controls {
+            padding: 5px 20px;
+            background-color: #d0d0d0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+            flex-shrink: 0;
+            border-bottom: 1px solid #bbb;
+        }
+
+        #stellwerk-content {
+            flex-grow: 1;
+            transform-origin: top left;
+            position: relative;
+            overflow: auto; /* Allow scrolling if zoomed */
+        }
+
+        #resizer-top {
+            height: 10px;
+            background-color: var(--resizer-color);
+            cursor: ns-resize;
+            border-top: 1px solid #aaa;
+            border-bottom: 1px solid #aaa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+            flex-shrink: 0;
+        }
+
+        #resizer-top::before {
+            content: "|||";
+            font-size: 8px;
+            color: #666;
+            transform: rotate(90deg);
+            letter-spacing: 1px;
+        }
+
         #main-area {
             flex-grow: 1;
             background-color: #ffffff;
+            min-height: 50px;
         }
 
         #resizer {
@@ -223,6 +274,16 @@
 </head>
 <body>
 
+    <div id="stellwerk-area">
+        <div id="stellwerk-controls">
+            <strong>Stellwerk</strong>
+            <label>Zoom: <input type="range" id="stellwerk-zoom" min="0.1" max="3" step="0.1" value="1"></label>
+        </div>
+        <div id="stellwerk-content">
+            <!-- Stellwerk Inhalt -->
+        </div>
+    </div>
+    <div id="resizer-top"></div>
     <div id="main-area"></div>
     <div id="resizer"></div>
     <div id="preview-area">
@@ -347,6 +408,39 @@
             requestAnimationFrame(tickSimulation);
         }
         requestAnimationFrame(tickSimulation);
+
+        // --- Stellwerk Top Resizer Logic ---
+        const resizerTop = document.getElementById('resizer-top');
+        const stellwerkArea = document.getElementById('stellwerk-area');
+        let isResizingTop = false;
+
+        resizerTop.addEventListener('mousedown', (e) => {
+            isResizingTop = true;
+            document.body.style.cursor = 'ns-resize';
+        });
+
+        window.addEventListener('mousemove', (e) => {
+            if (!isResizingTop) return;
+            const newHeight = e.clientY;
+            if (newHeight > 50 && newHeight < window.innerHeight - 100) {
+                stellwerkArea.style.height = newHeight + 'px';
+            }
+        });
+
+        window.addEventListener('mouseup', () => {
+            if (isResizingTop) {
+                isResizingTop = false;
+                document.body.style.cursor = 'default';
+            }
+        });
+
+        // --- Stellwerk Zoom Logic ---
+        const stellwerkZoom = document.getElementById('stellwerk-zoom');
+        const stellwerkContent = document.getElementById('stellwerk-content');
+        stellwerkZoom.addEventListener('input', (e) => {
+            const scale = e.target.value;
+            stellwerkContent.style.transform = `scale(${scale})`;
+        });
 
         // --- Resizer Logic ---
         const resizer = document.getElementById('resizer');
