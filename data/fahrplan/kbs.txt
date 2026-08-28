@@ -1,0 +1,1671 @@
+KBS	km	Bahnhof	Anmerkung	
+133a	0	Berlin Anhalter Bf		
+133a	1,5	Yorckstraße		
+133a	3,4	Papestraße		
+133a	5,3	Priesterweg		
+133a	6,6	Mariendorf		
+133a	9,4	Marienfelde		
+133a	11	Buckower Chaussee		
+133a	12,4	Schichauweg		
+133a	13,8	Lichtenrade		
+133a	16,8	Mahlow		
+133a	19,5	Blankenfelde		
+133a	20,7	Dahlewitz		
+133a	24,3	Rangsdorf		
+133a	30,7	Dabendorf		
+133a	32,9	Zossen		
+133a	39,2	Wünsdorf (Kr Teltow)		
+133a	42,2	Neuhof (Kr Teltow)		
+133a	51,5	Baruth (Brandenburg)		
+133a	56,1	Klasdorf		
+133a	61,9	Golßen (Niederlausitz)		
+133a	68,7	Drahnsdorf		
+133a	76,1	Uckro (Reichsb)		
+133a	81,2	Gehren (Kr Luckau)		
+133a	85,6	Walddrehna		
+133a	93,7	Brenitz-Sonnewalde		
+133a	103	Doberlug-Kirchhain		
+133a	108,9	Rückersdorf-Oppelhain		
+133a	116,6	Hohenleipisch		
+133a	121,5	Biehla		
+133a	122,8	Elsterwerda		
+133a	126,8	Prösen-Wainsdorf		
+133a	131,5	Frauenhain		
+133a	135,4	Zabeltitz		
+133a	141,4	Großenhain Berl Bf		
+133a	148,8	Böhla		
+133a	157,4	Weinböhla		
+133a	161,6	Neucoswig		
+133a	165,8	Radebeul-Kötzschenbroda		
+133a	169,5	Radebeul		
+133a	176	Dresden-Neustadt		
+133a	177,7	Dresden Wettinerstraße		
+133a	179,9	Dresden Hbf		
+133b	0	Berlin Anhalter Bf		
+133b	1,5	Yorckstraße		
+133b	3,4	Papestraße		
+133b	5,3	Priesterweg		
+133b	6,5	Südende		
+133b	7,9	Lankwitz		
+133b	9,2	Berlin-Lichterfelde Ost		
+133b	11,6	Lichterfelde Süd		
+133b	14,2	Teltow		
+133b	18,4	Großbeeren		
+133b	24,6	Ludwigsfelde		
+133b	30,3	Thyrow		
+133b	34,4	Trebbin (Kr Teltow)		
+133b	46,1	Woltersdorf (b Luckenwalde)		
+133b	49,8	Luckenwalde		
+133b	55,2	Forst Zinna		
+133b	58,6	Grüna-Kloster Zinna		
+133b	62,8	Jüterbog		
+133b	70,8	Oehna		
+133b	75,7	Zellendorf		
+133b	79,9	Linda (Elster)		
+133b	88,2	Holzdorf (Elster)		
+133b	101	Herzberg (Elster) Reichsb		
+133b	112,1	Falkenberg (Elster)		
+133b	121,5	Saxdorf		
+133b	125,5	Neuburxdorf		
+133b	135,5	Jacobsthal		
+133b	140,7	Röderau		
+133b	144,6	Glaubitz (b Riesa)		
+133b	149,7	Weißig (b Großenhain)		
+133b	157	Priestewitz		
+133b	168	Niederau		
+133b	174,3	Coswig (Bz Dresden)		
+133b	178,1	Radebeul-Kötzschenbroda		
+133b	181,8	Radebeul		
+133b	188,3	Dresden-Neustadt		
+133b	190	Dresden Wettinerstraße		
+133b	192,2	Dresden Hbf		
+133c	0	Elsterwerda-Biehla		
+133c	1,6	Elsterwerda		
+133c	5,1	Prösen		
+133c	9,4	Gröditz (b Riesa)		
+133c	15,3	Wülknitz		
+133c	20,6	Zeithain		
+133c	25,3	Riesa		
+133e	0	Dresden Hbf		
+133e	17	Pirna		
+133e	21,9	Obervogelgesang (Sächs Schweiz)		
+133e	25,4	Stadt Wehlen (Sachs)		
+133e	28,6	Kurort Rathen (Sächs Schweiz)		
+133e	34,8	Königstein (Sächs Schweiz)		
+133e	39,7	Bad Schandau		
+133e	41,3	Krippen		
+133e	46,9	Schmilka-Hirschmühle		
+133e	48,6	Schöna-Herrnskretschen		
+133e	52,2	Niedergrund (Elbe)		
+133e	58,7	Mittelgrund		
+133e	61,9	Bodenbach		
+133e	65,2	Wilsdorf		
+133e	67,9	Kartitz		
+133e	68,9	Topkowitz-Kartitz		
+133e	72,4	Rangstock		
+133e	72,5	Pömmerle		
+133e	76,7	Nestersitz		
+133e	78,1	Mosern		
+133e	79,8	Nestomitz		
+133e	82	Schönpriesen		
+133e	84,6	Aussig (Elbe) Stadt		
+133e	88,5	Wanow		
+133e	94,1	Salesel		
+133e	97,7	Praskowitz (Elbe)		
+133e	99,3	Lichtowitz		
+133e	100,3	Klein Czernosek		
+133e	104,5	Lobositz Stadt		
+133e	106,2	Lobositz		
+133e	113,2	Theresienstadt		
+134	0	Bodenbach		
+134	3,3	Wilsdorf		
+134	6	Kartitz		
+134	7	Topkowitz-Kartitz		
+134	10,5	Rangstock		
+134	13,6	Pömmerle		
+134	14,8	Nestersitz		
+134	16,2	Mosern		
+134	17,9	Nestomitz		
+134	20,1	Schönpriesen		
+134	22,7	Aussig (Elbe) Stadt		
+134	23,8	Aussig (Elbe) Tepl Bf		
+134	27,1	Türmitz		
+134	29,3	Schönfeld		
+134	31,5	Karbitz		
+134	35,5	Marlaschein		
+134	38,8	Turn-Probstau		
+134	40,8	Teplitz-Schönau		
+134	42,9	Settenz		
+134	46,2	Ullersdorf		
+134	50,9	Dux		
+134	54,8	Preschen		
+134	60,4	Maria Radschitz		
+134	66,5	Brüx		
+134	69,1	Tschausch		
+134	71,3	Triebschitz		
+134	74,4	Seestadtl		
+134	78,7	Wurzmes		
+134	81,9	Udwitz		
+134	85	Komotau Hp		
+134	86,3	Komotau Hbf		
+134	91,4	Körbitz		
+134	93,9	Deutsch Kralup		
+134	99,1	Kanden-Brunnersdorf		
+134	105,4	Klösterle (Eger)		
+134	109,4	Ketwa		
+134	112,8	Pürstein		
+134	116	Wotsch		
+134	119,1	Krondorf-Warta		
+134	124,6	Wickwitz		
+134	130,9	Schlackenwerth		
+134	132,9	Schlackenwerth Stadt		
+134	138,3	Neudau		
+134	143,6	Dallwitz		
+134	146,5	Karlsbad ob Bf		
+134	151,2	Maierhöfen		
+134	157,3	Chodau		
+134	161,4	Neusattl		
+134	164,4	Grasset		
+134	169,3	Falkenau (Eger)		
+134	172,6	Zieditz		
+134	178,6	Maria Kulm		
+134	183,9	Königsberg (Eger)		
+134	187,2	Nebanitz		
+134	193,3	Tirschnitz		
+134	198,5	Eger		
+139	0	Röderau		
+139	3,5	Riesa		
+139	9,4	Seehausen		
+139	13,1	Stauchitz		
+139	18,8	Ostrau		
+139	22,4	Zschaitz		
+139	28,1	Döbeln Nord		
+139	29	Döbeln Hbf		
+139	32,5	Limmritz (Sachs)		
+139	35,3	Steina		
+139	38,6	Waldheim		
+139	45,2	Schweikershain		
+139	49	Erlau (Sachs)		
+139	51,6	Mittweida		
+139	53,7	Altmittweida		
+139	57,6	Ottendorf (b Mittweida)		
+139	60,7	Oberlichtenau		
+139	63,4	Chemnitz Kinderwaldstätte		
+139	69,5	Chemnitz Hbf		
+144a	2,4	Plauen (Vogtl) ob Bf		
+144a	2,4	Plauen (Vogtl) West		
+144a	9,1	Weischlitz		
+144a	13	Pirk		
+144a	19,5	Oelsnitz (Vogtl)		
+144a	26,2	Hundsgrün		
+144a	32,8	Adorf (Vogtl)		
+144a	35,9	Bad Elster		
+144a	41,2	Raun		
+144a	49,5	Radiumbad Brambach		
+144a	53,2	Fleißen		
+144a	56,9	Schönberg (b Bad Brambach)		
+144a	59,6	Voitersreuth		
+144a	67,5	Franzensbad		
+144a	74,1	Eger		
+146	0	Leipzig Hbf		
+146	2,1	Leipzig Alfred-Kindler-Str		
+146	6	Leipzig-Stötteritz		
+146	9,4	Leipzig-Connewitz		
+146	12,1	Markleeberg		
+146	14	Markleeberg-Großstädteln		
+146	15,3	Gaschwitz		
+146	17,4	Großdeuben		
+146	20,6	Böhlen (b Leipzig)		
+146	27	Neukieritzsch		
+146	31	Deutzen		
+146	34,6	Regis-Breitingen		
+146	38,7	Trebanz-Treben		
+146	44,5	Altenburg (Thür)		
+146	54	Lehndorf (Kr Altenburg)		
+146	59,5	Gößnitz		
+146	63,6	Ponitz		
+146	68,9	Crimmitschau		
+146	72,6	Schweinsburg-Culten		
+146	77,7	Werdau Nord		
+146	79,7	Werdau		
+146	88,1	Neumark (Sachs)		
+146	96,8	Reichenbach (Vogtl) ob Bf		
+146	102,1	Netzschkau		
+146	105	Limbach (Vogtl)		
+146	107,4	Herlasgrün		
+146	111,8	Ruppertsgrün		
+146	114,3	Jocketa		
+146	117,5	Jößnitz		
+146	122	Plauen (Vogtl) ob Bf		
+146	128,2	Syrau		
+146	133,1	Meltheuer		
+146	139,3	Schönberg (Vogtl)		
+146	147,2	Reuth b Plauen (Vogtl)		
+146	155,5	Gutenfürst		
+146	162,8	Feilitzsch		
+146	168,3	Hof Hp		
+146	170,6	Hof Hbf		
+152	0	Aschersleben		
+152	4,1	Groß Schierstedt		
+152	7,8	Giersleben		
+152	11,8	Güsten		
+152	15,5	Ilberstedt		
+152	23,4	Bernburg		
+152	26,2	Solvayhall		
+152	27,8	Baalberge		
+152	33,1	Biendorf		
+152	44,4	Köthen		
+152	50	Osternienburg		
+152	52,1	Elsnigk (Anh)		
+152	58,8	Mosigkau		
+152	62,1	Dessau-Alten		
+152	65,5	Dessau Hbf		
+152	68	Wallwitzhafen		
+152	70,5	Dessau-Roßlau		
+152	73,1	Meinsdorf		
+152	81,5	Klieken		
+152	87,5	Coswig (Anh)		
+152	92,1	Griebo		
+152	95,9	Piesteritz		
+152	98,1	Klein Wittenberg		
+152	100,5	Wittenberg Elbtor		
+152	102,4	Wittenberg (Prov Sachs)		
+155	0	Berlin Anhalter Bf		
+155	1,5	Yorckstraße		
+155	3,4	Papestraße		
+155	5,3	Priesterweg		
+155	6,5	Südende		
+155	7,9	Lankwitz		
+155	9,2	Berlin-Lichterfelde Ost		
+155	11,6	Lichterfelde Süd		
+155	14,2	Teltow		
+155	18,4	Großbeeren		
+155	24,6	Ludwigsfelde		
+155	30,3	Thyrow		
+155	34,4	Trebbin (Kr Teltow)		
+155	46,1	Woltersdorf (b Luckenwalde)		
+155	49,8	Luckenwalde		
+155	54,8	Forst Zinna		
+155	58,6	Grüna-Kloster Zinna		
+155	62,8	Jüterbog		
+155	69,2	Niedergörsdorf		
+155	75,1	Blönsdorf		
+155	84	Zahna		
+155	87,4	Bülzig		
+155	94,8	Wittenberg (Prov Sachs)		
+155	98,8	Pratau		
+155	104,2	Bergwitz		
+155	111,6	Radis		
+155	116,1	Gräfenhainichen		
+155	121,5	Burgkemnitz		
+155	126,6	Muldenstein		
+155	131,6	Bitterfeld		
+155	138,7	Roitzsch (Kr Bitterfeld)		
+155	142	Brehna		
+155	146,6	Landsberg (b Halle)		
+155	152	Hohenthurm		
+155	161,6	Halle (S) Hbf		
+155	167,6	Ammendorf		
+155	171,7	Schkopau		
+155	175,3	Merseburg		
+155	179,3	Leuna Werke		
+155	185,4	Großkorbetha		
+155	193,4	Weißenfels		
+155	199,2	Leißling		
+155	207,5	Naumburg (S) Hbf		
+155	214,5	Bad Kösen		
+155	220,4	Großheringen		
+155	222,6	Bad Sulza		
+155	228	Niedertrebra		
+155	233,6	Apolda		
+155	241	Oßmannstedt		
+155	248,9	Weimar Reichsb		
+155	256,7	Hopfgarten (b Weimar)		
+155	262,8	Vieselbach		
+155	270,2	Erfurt		
+15x	0	Leipzig Hbf		
+15x	2,4	Leipzig-Gohlis		
+15x	4,2	Leipzig-Möckern		
+15x	7	Leipzig-Leutzsch		
+15x	9,8	Rückmarsdorf		
+15x	12,5	Miltitz (b Leipzig)		
+15x	15,3	Makranstädt		
+15x	19,3	Großlehna		
+15x	22,4	Kötzschau		
+15x	26,1	Bad Dürrenberg		
+15x	32,2	Großkorbetha		
+156	0	Magdeburg Hbf		
+156	2,3	Magdeburg-Neustadt		
+156	8,2	Biederitz		
+156	12	Königsborn		
+156	15,5	Wahlitz		
+156	20,7	Gommern		
+156	27,2	Prödel		
+156	29,8	Lübs (Bez Magdeburg)		
+156	34,4	Güterglück		
+156	42,7	Zerbst		
+156	46,1	Jütrichau		
+156	53,4	Tornau		
+156	55,8	Dessau-Roßlau		
+156	58,3	Wallwitzhafen		
+156	60,8	Dessau Hbf		
+156	65,1	Dessau-Süd		
+156	72,2	Marke		
+156	75,5	Raguhn		
+156	78,7	Jeßnitz (Anh)		
+156	81,3	Wolfen (Kr Bitterfeld)		
+156	83,3	Greppin		
+156	86,3	Bitterfeld		
+156	91,1	Grube Ludwig		
+156	98,2	Delitzsch Berl Bf		
+156	103	Zschortau		
+156	107,8	Rackwitz (b Leipzig)		
+156	112,4	Neuwiederitzsch		
+156	119,1	Leipzig Hbf		
+161	0	Leipzig Hbf		
+161	2,4	Leipzig-Gohlis		
+161	4,2	Leipzig-Möckern		
+161	7	Leipzig-Leutzsch		
+161	11,2	Leipzig-Plagwitz		
+161	14	Leipzig-Großzschocher		
+161	16,7	Leipzig-Knauthain		
+161	19,9	Bösdorf (Elster)		
+161	21,8	Eythra		
+161	25	Groß-Dalzig		
+161	30,2	Pegau		
+161	35,2	Profen		
+161	37,7	Reuden (Kr Zeitz)		
+161	39,8	Bornitz (b Zeitz)		
+161	44,9	Zeitz		
+161	50,8	Haynsburg		
+161	55,2	Wetterzeube		
+161	61,1	Krossen (Elster)		
+161	66,6	Bad Köstritz		
+161	68,7	Langenberg (Thür)		
+161	73	Gera Hbf		
+161	74,7	Gera Süd		
+161	77	Gera-Zwötzen		
+161	79,9	Wolfsgefärth		
+161	85,2	Weida		
+161	93,7	Niederpöllnitz		
+161	100,6	Triptis		
+161	104,5	Traun		
+161	109	Neustadt (Orla)		
+161	112,3	Neunhofen		
+161	117,7	Oppurg		
+161	122,6	Pößneck ob Bf		
+161	126,3	Krölpa-Ranis		
+161	130,7	Könitz (Thür)		
+161	134,6	Unterwellenborn		
+161	140,1	Saalfeld (Saale)		
+163	0	Naumburg (S) Hbf		
+163	7	Bad Kösen		
+163	19,2	Camburg (Saale)		
+163	26,3	Dornburg (Saale)		
+163	30,7	Porstendorf		
+163	33,7	Jena-Zwätzen		
+163	36,6	Jena Saalbf		
+163	38,5	Jena Paradies		
+163	43,4	Göschwitz		
+163	47,3	Rothenstein (Saale)		
+163	52,9	Kahla (Thür)		
+163	58,5	Orlamünde		
+163	62,5	Zeutsch		
+163	66,3	Uhlstädt		
+163	71,5	Kirchhasel		
+163	75,7	Rudolstadt (Thür)		
+163	79,8	Schwarza (Saale)		
+163	85,9	Saalfeld (Saale)		
+163	91,7	Breternitz		
+163	95,8	Eichicht (Saale)		
+163	98	Hockeroda		
+163	101,7	Unterloquitz		
+163	106,8	Marktgölitz		
+163	110,9	Probstzella		
+170	0	Frankfurt (Main) Hbf		
+170	4,5	Frankfurt (Main) Süd		
+170	7,3	Frankfurt-Oberrad		
+170	10,1	Offenbach (M) Hbf		
+170	16	Mühlheim (Main)		
+170	21,1	Steinheim (Main)		
+170	22,9	Hanau Hbf		
+170	25,3	Wolfgang (Kr Hanau)		
+170	30,3	Niederrodenbach		
+170	33,9	Langenselbold		
+170	38	Niedermittlau		
+170	41,2	Meerholz		
+170	44,1	Geinhausen		
+170	50,4	Wirtheim		
+170	54,8	Wächtersb (Borb)		
+170	61,4	Salmünster-Bad Soden		
+170	68	Steinau (Kr Schlüchtern)		
+170	74,3	Schlüchtern		
+170	92,2	Flieden		
+170	97,2	Neuhof (Kr Fulda)		
+170	102,5	Kerzell		
+170	110,6	Fulda		
+170	117,2	Steinau (Kr Fulda)		
+170	120,4	Marbach (Kr Fulda)		
+170	127,1	Hünfeld		
+170	131,5	Burghaun (Kr Hünfeld)		
+170	140,1	Neukirchen (Kr Hünfeld)		
+170	148	Oberhaun		
+170	153,2	Hersfeld		
+170	156,8	Friedlos		
+170	160,1	Mecklar		
+170	166,6	Bebra		
+170	171,8	Ronshausen		
+170	178,2	Hönebach		
+170	185,4	Obersuhl		
+170	187,7	Gerstungen		
+170	194,3	Wommen		
+170	198,6	Herleshausen		
+170	201,4	Wartha		
+170	203	Hörschel		
+170	209,7	Eisenach West		
+170	211,7	Eisenach		
+170	216,8	Wutha		
+170	219,5	Schönau		
+170	224,8	Mechterstedt-Settelstedt		
+170	230,1	Fröttstädt		
+170	240,6	Gotha		
+170	246,5	Seebergen		
+170	251,5	Wandersleben		
+170	256,1	Neudietendorf		
+170	262,8	Bischleben		
+170	268,6	Erfurt		
+173	0	Kassel Hbf		
+173	3,6	Kassel-Wilhelmshöhe		
+173	8,3	Kassel-Oberzwehren		
+173	10,7	Rengershausen		
+173	13,7	Guntershausen		
+173	17	Guxhagen		
+173	21,5	Körle		
+173	24,7	Röhrenfurth		
+173	29,5	Melsungen		
+173	33,1	Malsfeld		
+173	35,2	Beiseförth		
+173	39,9	Altmorschen		
+173	44,4	Heinebach		
+173	46,8	Baumbach		
+173	52	Rotenburg (Fulda)		
+173	54,6	Lispenhausen		
+173	57,8	Bebra		
+230	0	Köln Hbf		
+230	1,2	Köln-Deutz		
+230	3,6	Köln-Kalk		
+230	8,2	Gremberghoven		
+230	10,8	Porz-Urbach		
+230	13,5	Wahn (Rhld)		
+230	18	Spich		
+230	20,8	Troisdorf		
+230	22,4	Friedrich-Wilhelmshütte		
+230	25,1	Menden (Rhld)		
+230	30	Beuel		
+230	33,5	Oberkassel (Siegkreis)		
+230	36,2	Niederdollendorf		
+230	38,2	Königswinter		
+230	40,9	Rhöndorf		
+230	43,1	Honnef (Rh)		
+230	47,2	Unkel		
+230	50	Erpel		
+230	53	Linz (Rh)		
+230	55,4	Leubsdorf (Rhein)		
+230	59,7	Hönningen (Rh)		
+230	62,8	Rheinbrohl		
+230	69,1	Leutesdorf 		
+230	71,8	Fahr-Irlich		
+230	75,5	Neuwied		
+230	80,8	Engers		
+230	83,5	Bendorf (Rhein)		
+230	86,3	Vallendar		
+230	90,9	Ehrenbreitstein		
+230	95,1	Horchheim (Rhein)		
+230	96,2	Niederlahnstein		
+230	98,1	Oberlahnstein		
+230	102,1	Braubach		
+230	108	Osterspai		
+230	113,8	Kamp (Rh)		
+230	119,2	Kestert		
+230	125,8	St, Goarshausen		
+230	136,3	Kaub		
+230	139,9	Lorchhausen		
+230	142,8	Lorch (Rh)		
+230	150,5	Aßmannshausen		
+230	154,7	Rüdesheim (Rh)		
+230	158,8	Geisenheim		
+230	163,1	Oestrich-Winkel		
+230	166,2	Hattenheim		
+230	169,2	Erbach (Rheingau)		
+230	171,2	Eltville		
+230	174,2	Niederwalluf		
+230	177,7	Wiesbaden-Schierstein		
+230	180,6	Wiesbaden-Biebrich		
+230	185	Wiesbaden Hbf		
+230	185,5	Wiesbaden Ost		
+230	192,9	Mainz-Kastel		
+230	197,9	Hochheim (M)		
+230	204,5	Flörsheim		
+230	207,5	Eddersheim		
+230	211,5	Hattersheim (Main)		
+230	214,2	Frankfurt-Hoechst West		
+230	217	Frankfurt-Hoechst		
+230	226,4	Frankfurt (Main) Hbf		
+241a	0	Ludwigshafen (Rh) Hbf		
+241a	4,4	Mannheim Hbf		
+252	0	Mainz Hbf		
+252	1,8	Mainz Süd		
+252	3,8	Mainz-Weisenau		
+252	6,8	Laubenheim (Rhein)		
+252	10,3	Bodenheim		
+252	13,7	Nackenheim		
+252	18,4	Nierstein		
+252	20,4	Oppenheim		
+252	27,8	Guntersblum		
+252	30,8	Alsheim		
+252	33,7	Mettenheim		
+252	37,6	Osthofen		
+252	45,8	Worms		
+252	51	Bobenheim		
+252	56,8	Frankenthal Hbf		
+252	62,7	Ludwigshafen-Oggersheim		
+252	67,5	Ludwigshafen (Rh) Hbf		
+254	0	Frankfurt (Main) Hbf		
+254	3,6	Frankfurt-Niederrad		
+254	6,2	Frankfurt (M) Sportfeld		
+254	10,4	Lufthafen Rhein-Main		
+254	14,7	Walldorf (Hess)		
+254	17,4	Nörfelden		
+254	26,6	Groß Gerau-Dornberg		
+254	30,5	Dornheim		
+254	33	Leeheim-Wolfskehlen		
+254	35,3	Goddelau-Erfelden		
+254	38,3	Stockstadt (Rhein)		
+254	41,5	Biebesheim		
+254	44,7	Gernsheim		
+254	49,5	Groß Rohrheim		
+254	52,9	Biblis		
+254	56	Bobstadt		
+254	58	Bürstadt		
+254	63,4	Lampertheim		
+254	67,3	Sandtorf		
+254	71,5	Mannheim-Waldhof		
+254	74,6	Mannheim-Käfertal		
+254	80,9	Mannheim Hbf		
+254x	0	Worms		
+254x	2,3	Worms Brücke		
+254x	5,6	Hofheim (Ried)		
+254x	10	Biblis		
+301a	0	Frankfurt (Main) Hbf		
+301a	3,7	Frankfurt-Louisa		
+301a	7,2	Neu-Isenburg		
+301a	10,7	Bruchsal-Sprendl		
+301a	13,8	Langen (Hess)		
+301a	16,7	Egelsbach		
+301a	18,6	Erzhausen		
+301a	20,8	Wixhausen		
+301a	22,6	Darmstadt-Arheiligen		
+301a	27,7	Darmstadt Hbf		
+301a	29,7	Darmstadt Süd		
+301a	34,4	Darmstadt-Eberstadt		
+301a	40,7	Bickenbach (Bergstr)		
+301a	43,1	Hähnlein-Alsbach		
+301a	44,5	Zwingenberg (Bergstr)		
+301a	47,1	Auerbach (Bergstr)		
+301a	49,4	Bensheim		
+301a	54	Heppenheim (Bergstr)		
+301a	57,4	Laudenbach (Bergstr)		
+301a	59,8	Hemsbach		
+301a	64,2	Weinheim (Bergstr)		
+301a	67,3	Lützelsachsen		
+301a	69,5	Großsachsen-Heddesheim		
+301a	74,2	Ladenburg		
+301a	77,4	Mannheim-Friedr.feld		
+301a	84,3	Heidelberg-Wieblingen		
+301a	88,2	Heidelberg Hbf		
+301ax	0	Mannheim-Friedr,feld		
+301ax	3,7	Mannheim-Seckenheim		
+301ax	5,9	Mannheim Rbf		
+301ax	9,9	Mannheim Hbf		
+301b	0	Mannheim Hbf		
+301b	4	Mannheim Rbf		
+301b	6,2	Mannheim-Seckenheim		
+301b	8,8	Mannheim-Friedr,feld Süd		
+301b	14,6	Heidelberg-Wieblingen		
+301b	18,4	Heidelberg Hbf		
+301b	22	Heidelberg-Kirchheim		
+301b	24,3	Leimen		
+301b	26,4	St Ilgen (Sandhausen)		
+301b	29,8	Walldorf		
+301b	31,9	Wiesloch-Walldorf		
+301b	37,4	Roth-Malsch		
+301b	40	Mingolsheim-Kronau		
+301b	42,2	Langenbrücken		
+301b	46,1	Ubstadt-Weiher		
+301b	51,5	Bruchsal		
+301b	56,7	Untergrombach		
+301b	60,3	Weingarten (Baden)		
+301b	68,1	Karlsruhe-Durlach		
+301b	72,8	Karlsruhe Hbf		
+301b	78,5	Ettlingen Reichsb		
+301b	81,4	Bruchhausen (b Ettlingen)		
+301b	86,7	Malsch		
+301b	90,6	Muggensturm		
+301b	95,3	Rastatt		
+301b	100,3	Haueneberstein		
+301b	103,6	Baden-Oos		
+301b	107,1	Sinzheim (b Bühl)		
+301b	110,8	Steinbach (Baden)		
+301b	115,1	Bühl (Baden)		
+301b	118,2	Ottersweier		
+301b	123,7	Achern		
+301b	127,7	Önsbach		
+301b	129,9	Renchen		
+301b	135,7	Appenweier		
+301b	138,9	Windschläg		
+301b	143,7	Offenburg		
+301c	0	Offenburg		
+301c	4,6	Schutterwald Reichsb		
+301c	8,9	Niederschopfheim		
+301c	13,2	Friesenheim (Baden)		
+301c	18	Lahr-Dinglingen		
+301c	22,4	Kippenheim		
+301c	26,3	Orschweier		
+301c	29,3	Ringsheim		
+301c	32,2	Herbolzheim (Breisgau)		
+301c	35,5	Kenzingen		
+301c	40,4	Riegel Reichsb		
+301c	43,3	Köndringen		
+301c	47,2	Emmendingen		
+301c	50,9	Kollmarsreute		
+301c	54,3	Denzlingen		
+301c	57,2	Gundelfingen		
+301c	59,4	Freiburg-Zähringen		
+301c	61,4	Freiburg-Herdern		
+301c	62,8	Freiburg (Breisgau) Hbf		
+301c	67	Freiburg-St Georgen		
+301c	71,5	Schallstadt		
+301c	74,3	Norsingen		
+301c	77,4	Bad Krozingen		
+301c	80,4	Tunsel		
+301c	83,3	Heitersheim		
+301c	86,4	Buggingen		
+301c	89,1	Hügelheim		
+301c	91,8	Müllheim (Baden)		
+301c	94,2	Auggen		
+301c	97,7	Schliengen		
+301c	101,3	Bellingen		
+301c	104,4	Rheinweiler		
+301c	107,3	Kleinkems		
+301c	110,9	Istein		
+301c	112,8	Efringen-Kirchen		
+301c	116,7	Eimeldingen		
+301c	118,8	Haltingen		
+301c	121,1	Weil (Rhein)		
+301c	124,4	Basel DRB		
+301c	124,5	Basel SBB		
+302	0	Mannheim Hbf		
+302	2	Mannheim Fabrikstation		
+302	3,4	Mannheim-Neckarau		
+302	4,7	Altrip		
+302	6,4	Mannheim-Rheinau Hafen		
+302	8	Mannheim-Rheinau		
+302	13,6	Schwetzingen		
+302	14,7	Oftersheim		
+302	21,6	Hockenheim		
+302	24,3	Neulußheim		
+302	29,4	Kirrlach		
+302	30,5	Waghäusel		
+302	32,5	Wiesental		
+302	39,7	Graben-Neudorf		
+302	45,5	Friedrichsthal (Baden)		
+302	50,3	Blankenloch		
+302	55,1	Karlsruhe-Hagsfeld		
+302	60,7	Karlsruhe Hbf		
+305d	0	Baden-Oos		
+305d	4,3	Baden-Baden		
+306	0	Offenburg		
+306	4,1	Ortenberg (Baden)		
+306	6,6	Ohlsbach		
+306	9,5	Gengenbach		
+306	15	Schönberg (b Offenburg)		
+306	17,9	Biberach (Baden)		
+306	22,7	Steinach (Baden)		
+306	26,1	Haslach		
+306	33,2	Hausach		
+306	36,9	Gutach		
+306	42,6	Hornberg		
+306	51,8	Niederwasser		
+306	56	Triberg		
+306	63,7	Nußbach		
+306	68,6	Sommerau (Schwarzwald)		
+306	71,3	St, Georgen (Schwarzwald)		
+306	75,2	Peterzell-Königsfeld		
+306	81,8	Kirnach-Villingen		
+306	85,9	Villingen (Schwarzwald)		
+306	88,8	Marbach (Baden)		
+306	91,4	Klengen		
+306	94,3	Grüningen		
+306	96,8	Aufen		
+306	99,7	Donaueschingen		
+306	103,5	Pfohren		
+306	106,3	Neudingen		
+306	110,2	Gutmadingen		
+306	113	Geisingen		
+306	115,8	Hintschingen		
+306	119	Immendingen		
+306	123,6	Hattingen (Baden)		
+306	129,8	Thalmühle (Baden)		
+306	134,6	Engen		
+306	137,3	Welschingen-Neuhausen		
+306	140,8	Mühlhausen (b Engen)		
+306	143,4	Hohenkrähen		
+306	149,1	Singen (Hohentwiel)		
+306	155,9	Böhringen-Rickelshausen		
+306	159,4	Radolfzell		
+306	162,5	Markelfingen		
+306	168,2	Allensbach		
+306	170,7	Hegne		
+306	173,5	Reichenau (Baden)		
+306	177,4	Konstanz-Petershausen		
+306	179,4	Konstanz		
+308	0	Basel DRB		
+308	3,2	Grenzacher Horn		
+308	4,9	Grenzach		
+308	7,3	Wyhlen		
+308	11,1	Herten (Baden)		
+308	14,5	Rheinfelden (Baden)		
+308	18,1	Beuggen		
+308	22,9	Schwörstadt		
+308	26,5	Brennet (Rheintal)		
+308	31,7	Säckingen		
+308	37,2	Murg (Baden)		
+308	40,5	Laufenburg (Baden)		
+308	41,8	Laufenburg (Baden) Ost		
+308	45	Albert-Hauenstein		
+308	47,2	Albbruck		
+308	50,5	Dogern		
+308	55	Waldshut		
+308	56,7	Waldshut Fahrhaus		
+308	60,4	Tiengen (Oberrhein)		
+308	64,4	Oberlauchringen		
+308	70,4	Grießen (Baden)		
+308	74,9	Erzingen (Baden)		
+308	78,2	Wilchingen-Hallau		
+308	80,8	Neunkirch		
+308	87,1	Beringen Reichsb		
+308	90,9	Neuhausen Reichsb		
+308	93,7	Schaffhausen Reichsb		
+308	98	Herblingen		
+308	102,3	Thayngen		
+308	104,9	Bietingen		
+308	107,8	Gottmadingen		
+308	113,4	Singen (Hohentwiel)		
+308	120,1	Böhringen-Rickelshausen		
+308	123,6	Radolfzell		
+308	126,7	Markelfingen		
+308	132,4	Allensbach		
+308	134,9	Hegne		
+308	137,7	Reichenau (Baden)		
+308	141,6	Konstanz-Petershausen		
+308	143,6	Konstanz		
+320	0	Stuttgart Hbf		
+320	3,4	Stuttgart-Bad Cannstadt		
+320	9,6	Fellbach		
+320	12	Waiblingen		
+320	16,3	Neustadt (Württ)		
+320	18,8	Schwaikheim		
+320	21,9	Winnenden		
+320	25	Nellmersbach		
+320	27,9	Maubach		
+320	30,6	Backnang		
+320	32,8	Backnang (Spinnerei)		
+320	34,4	Steinbach (b Backnang)		
+320	37	Reichenberg (Murr)		
+320	40,5	Sulzbach (Murr)		
+320	43,4	Schleißweiler		
+320	46,7	Murrhardt		
+320	51,4	Fornsbach		
+320	56,2	Fichtenberg		
+320	58,9	Mittelrot		
+320	61,2	Gaildorf Reichsb		
+320	64,3	Ottendorf (Kocher)		
+320	68,8	Wilhelmsglück		
+320	72,8	Schwäb Hall-Hessental		
+320	78,6	Sulzdorf		
+320	82,6	Vellberg		
+320	85,8	Großaltdorf		
+320	88,2	Gaugshausen		
+320	89,6	Eckartshausen-Ilshofen		
+320	94,2	Maulach		
+320	100	Crailsheim		
+321	0	Stuttgart Hbf		
+321	2,8	Stuttgart Nord		
+321	4,6	Stuttgart-Feuerbach		
+321	6,5	Stuttgart-Zuffenhausen		
+321	10,4	Kornwestheim Pbf		
+321	13,9	Ludwigsburg		
+321	17,5	Asperg		
+321	20,2	Tamm (Württ)		
+321	23,4	Bietigheim (Württ)		
+321	29,8	Besigheim		
+321	32	Walheim (Württ)		
+321	35,1	Kirchheim (Neckar)		
+321	40,5	Lauffen (Neckar)		
+321	46,5	Nordheim (Württ)		
+321	48,1	Klingenberg (Württ)		
+321	50,7	Heilbronn-Böckingen		
+321	52,7	Heilbronn Hbf		
+321	54	Heilbronn Sülmertor		
+321	58,3	Neckarsulm		
+321	62,1	Bad Friedrichshall-Kochendorf		
+321	63,9	Bad Friedrichsfeld-Jagstfeld		
+321	67,3	Duttenberg-Obergriesheim		
+321	69	Untergriesheim		
+321	73,8	Herbolzheim (Jagst)		
+321	75,3	Neudenau		
+321	78,9	Siglingen		
+321	81,3	Züttlingen		
+321	86	Möckmühl		
+321	91,4	Roigheim		
+321	95	Sennfeld		
+321	98,3	Adelsheim Ost		
+321	102	Osterburken		
+321	106,7	Rosenburg (Baden)		
+321	109,7	Hirschlanden		
+321	113,8	Eubigheim		
+321	120,4	Uiffingen		
+321	124,8	Boxberg-Wölchingen		
+321	126,6	Schweigern (Baden)		
+321	129,8	Unterschüpf		
+321	131,7	Sachsenflur		
+321	134,4	Königshofen (Baden)		
+321	136,8	Lauda		
+321	139,1	Gerlachsheim		
+321	143,7	Grünsfeld		
+321	147,2	Zimmern		
+321	152,4	Wittighausen		
+321	154,5	Gaubüttelbrunn		
+321	158	Kirchheim (b Würzburg)		
+321	164	Geroldshausen		
+321	169,4	Reichenberg (b Würzburg)		
+321	174,4	Heidingsfeld West		
+321	177,3	Würzburg Süd		
+321	180	Würzburg Hbf		
+324	0	Stuttgart Hbf		
+324	8,6	Stuttgart West		
+324	9,5	Stuttgart-Hesslach		
+324	11,2	Stuttgart Wildpark		
+324	15,7	Vaihingen (Filder)		
+324	16,8	Vaihingen-Rohr		
+324	26,1	Böblingen		
+324	31,3	Ehningen (b Böblingen)		
+324	34,9	Gärtringen		
+324	37,8	Nufringen		
+324	41,8	Herrenberg		
+324	46,4	Nebringen		
+324	50,9	Bondorf (b Herrenberg)		
+324	55	Ergenzingen		
+324	57,4	Eutingen (Württ)		
+324	67,4	Horb		
+324	72,7	Dettingen (Hohenzollern)		
+324	74,4	Neckarhausen (b Horb)		
+324	77,5	Fischingen		
+324	81,6	Sulz (Neckar)		
+324	90,6	Aistaig		
+324	92,9	Oberndorf (Neckar)		
+324	96,2	Altoberndorf		
+324	98,9	Epfendorf		
+324	102,6	Talhausen-Herrenzimmern		
+324	104,3	Talhausen		
+324	110,8	Rottweil		
+324	117,6	Neufra (b Rottweil)		
+324	119,2	Neuhaus		
+324	121,6	Aldingen (b Spaichingen)		
+324	123,8	Hofen (b Spaichingen)		
+324	125,8	Spaichingen		
+324	127,4	Balgheim		
+324	130,9	Rietheim (Württ)		
+324	132,7	Weilheim (b Tuttlingen)		
+324	134,2	Wurmlingen		
+324	135,3	Wurmlingen Ort		
+324	138,5	Tuttlingen		
+324	141,8	Möhringen (Baden)		
+324	148,4	Immendingen		
+405	0	München Hbf		
+405	7,4	München-Pasing		
+405	11	Aubing		
+405	15,9	Puchheim		
+405	18,5	Eichenau		
+405	23	Fürstenfeldbruck		
+405	29,1	Schöngeising		
+405	32,3	Grafrath		
+405	39,4	Türkenfeld		
+405	42,1	Geltendorf		
+405	46,2	Schwabhausen (b Landsberg)		
+405	51,2	Epfenhausen		
+405	56,2	Kaufering		
+405	60,5	Igling		
+405	68	Buchloe		
+405	74,9	Beckstetten		
+405	80,2	Pforzen		
+405	83,1	Leinau		
+405	88,3	Kaufbeuren		
+405	93,7	Biessenhofen		
+405	97,6	Ruderatshofen		
+405	102	Aitrang		
+405	111,7	Günzach		
+405	121,6	Wildpoldsrieth		
+405	124,8	Betzigau		
+405	130,8	Kempten (Allgäu) Hbf		
+405/6	124,8	Betzigau		
+405/6	127,8	Kempten-Hegge	"40x gibt es nicht: 405a hilft auch nicht weiter; da es Querpass über Kopfbahnhof Kempten (Hbf) Allgäu gibt, 3km sind geschätzt"	
+406	130,8	Kempten (Allgäu) Hbf		
+406	134,3	Kempten-Hegge		
+406	137,4	Waltenhofen		
+406	142,3	Oberdorf (b Immenstadt)		
+406	146,6	Seifen (Schwaben)		
+406	152,5	Immenstadt		
+406	159,7	Ratholz		
+406	164,6	Thalkirchdorf		
+406	169,3	Oberstaufen		
+406	176,4	Harbatshofen		
+406	182,4	Röthenbach (Allgäu)		
+406	187,1	Heimenkirch		
+406	189,3	Biesenberg		
+406	191,6	Opfenbach		
+406	194,2	Maria Thann		
+406	195,5	Wohmbrechts		
+406	197,8	Hergatz		
+406	203,5	Hergensweiler		
+406	207,1	Schlachters		
+406	208	Rehlings		
+406	212,8	Oberreitnau		
+406	215,6	Lindau-Schönau		
+406	216,9	Bodolz		
+406	219,2	Lindau-Aeschach		
+406	220,9	Lindau Hbf		
+406	222,6	Langenweg		
+406	223,4	Lindau-Reutin		
+406	226,4	Lindau-Siebertsdorf		
+406	227,7	Bregenz-Lochau		
+406	228,2	Haggen		
+406	228,7	Langer Stein		
+406	230,1	Tannenbach		
+406	230,6	Bregenz Hafen		
+406	231,1	Bregenz		
+406	233,6	Riedenburg		
+406	237,3	Hard-Fussach		
+406	242	Lustenau		
+406	243,8	St Margarethen		
+406a	0	Immenstadt		
+406a	4,2	Blaichach (Allgäu)		
+406a	8,3	Sonthofen		
+406a	12,3	Altstädten (Allgäu)		
+406a	14,2	Thalhofen		
+406a	16,1	Fischen		
+406a	18,4	Langenwang (Schwab)		
+406a	21,7	Oberstdorf		
+410	0	München Hbf		
+410	7,4	München-Pasing		
+410	12,5	Lochhausen		
+410	19,1	Olching		
+410	24,8	Maisach		
+410	31	Nannhofen		
+410	36,7	Haspelmoor		
+410	39,8	Althegnenberg		
+410	46,1	Mehringen (Weilheim)		
+410	52	Kissing		
+410	57,1	Augsburg-Hochzoll		
+410	61,9	Augsburg Hbf		
+410	63,9	Augsburg-Oberhausen		
+410	69,8	Westheim (Schwab)		
+410	74,4	Diedorf (Schwaben)		
+410	78,6	Gessertshausen		
+410	84,7	Mödishofen		
+410	89,8	Dinkelscherben		
+410	95,3	Gabelbach		
+410	99,6	Freihalden		
+410	104,4	Jettingen		
+410	107,6	Burgau (Schwab)		
+410	111,4	Mindelaltheim		
+410	115,1	Offingen		
+410	117,8	Neuoffingen		
+410	123,3	Günzburg		
+410	128,4	Leipheim		
+410	132,9	Unterfahlheim		
+410	136	Nersingen		
+410	140,2	Burlafingen		
+410	145,7	Neu Ulm		
+410	147,9	Ulm Hbf		
+411	0	Treuchtlingen		
+411	5,7	Möhren		
+411	8,6	Gundelsheim		
+411	12,3	Otting-Weilheim		
+411	18,1	Fünfstetten		
+411	23,2	Mündling		
+411	34,6	Donauwörth		
+411	38,5	Bäumenheim		
+411	41,9	Mertingen Bahnhof		
+411	49,5	Nordendorf		
+411	51,9	Westendorf		
+411	54,9	Meitingen		
+411	56,7	Herbertshofen		
+411	61	Langweid (Lech)		
+411	64,1	Gablingen		
+411	68,6	Gersthofen		
+411	73,4	Augsburg-Oberhausen		
+411	75,4	Augsburg Hbf		
+411	76,7	Morellstraße		
+411	78,7	Göggingen		
+411	81,9	Inningen		
+411	87,4	Bobingen		
+411	91	Wehringen		
+411	93,1	Großaitingen		
+411	95,4	Mittelstetten		
+411	98,4	Schwabmünchen		
+411	103,9	Westerringen		
+411	108,4	Lamerdingen		
+411	115,3	Buchloe		
+413	0	München Hbf		
+413	10,4	München-Allach		
+413	17,8	Dachau Bahnhof		
+413	22	Walpertshofen		
+413	27,1	Röhrmoos		
+413	30,4	Esterhofen		
+413	36,4	Petershausen (Oberbay)		
+413	40,2	Paindorf		
+413	43,8	Reichertshausen (Ilm)		
+413	49,7	Pfaffenhofen (Ilm)		
+413	55,4	Walkersbach		
+413	60,2	Wolnzach Bahnhof		
+413	66,2	Hög		
+413	72,4	Reichertshofen (Oberbay)		
+413	77,1	Oberstimm		
+413	81	Ingolstadt Hbf		
+413	84,3	Ingolstadt Nord		
+413	90	Gaimersheim		
+413	94,2	Eltensheim		
+413	97,5	Tauberfeld		
+413	102,9	Adelschlag		
+413	107,7	Eichstätt Bahnhof		
+413	111,1	Obereichstätt		
+413	118	Dollnstein		
+413	125,1	Solnhofen		
+413	130,3	Pappenheim		
+413	136,8	Treuchtlingen		
+413	140,6	Grönhart		
+413	145,6	Weißenburg (Bay)		
+413	150	Ellingen (Bay)		
+413	154,9	Pleinfeld		
+413	160,8	Mühlstetten		
+413	164,6	Georgensmünd		
+413	169,2	Unterheckenhofen		
+413	173	Roth		
+413	176,1	Büchenbach		
+413	180,2	Rednitzhembach		
+413	183,6	Schwabach		
+413	185,2	Limbach		
+413	187,2	Katzwang		
+413	188,6	Reichelsdorfer Keller		
+413	190,2	Nürnberg-Reichelsdorf		
+413	193,4	Nürnberg-Eibach		
+413	195,7	Nürnberg-Sandreuth		
+413	198,6	Nürnberg Hbf		
+414	0	Nürnberg Hbf		
+414	2,1	Nürnberg-Rothenburgerstr.		
+414	3,5	Nürnberg-Neusündersbühl		
+414	5,4	Nürnberg-Doos		
+414	7,7	Fürth (Bay) Hbf		
+414	10,2	Fürth-Unterfarrnbach		
+414	14,5	Vach		
+414	16,8	Großgründlach		
+414	18,8	Eltersdorf		
+414	20,6	Erlangen-Bruck		
+414	23,5	Erlangen		
+414	27,5	Bubenreuth		
+414	31	Baiersdorf		
+414	34,6	Kersbach		
+414	38,3	Forchheim (Oberfr)		
+414	45,3	Eggolsheim		
+414	48,5	Butterheim		
+414	51,2	Hirschaid		
+414	54,8	Strullendorf		
+414	62,4	Bamberg		
+414	65,9	Hallstadt (b Bamberg)		
+414	70	Breitengüßbach		
+414	74,5	Ebing		
+414	76,7	Zapfendorf		
+414	82,6	Ebensfeld		
+414	88,1	Staffelstein		
+414	94,3	Lichtenfels		
+414	98,5	Michelau (Oberfr)		
+414	102,6	Hochstadt-Marktzeuln		
+414	106,1	Redwitz (Rodach)		
+414	109,8	Oberlangenstadt		
+414	111,7	Küps		
+414	115,3	Neuses (b Kronach)		
+414	118	Kronach		
+414	122,9	Gundelsdorf		
+414	126,3	Stockheim (Oberfr)		
+414	131,8	Pressig-Rothenkirchen		
+414	137,7	Förtschendorf		
+414	144,1	Steinbach a Wald		
+414	150,2	Ludwigsstadt		
+414	153,2	Lauenstein (Oberfr)		
+414	157,2	Probstzella		
+414	161,2	Marktgölitz		
+414	166,4	Unterloquitz		
+414	170,1	Hockeroda		
+414	172,3	Eichicht (Saale)		
+414	176,4	Breternitz		
+414	182,4	Saalfeld (Saale)		
+417	0	Erfurt		
+417	5,8	Bischleben		
+417	12,5	Neudietendorf		
+417	16,1	Sülzenbrücken		
+417	18,4	Haarhausen		
+417	22,6	Arnstadt Hbf		
+417	24	Arnstadt Süd		
+417	30,9	Plaue (Thür)		
+417	36,9	Gräfenroda		
+417	40,7	Dörrberg		
+417	48,3	Gehlberg		
+417	52,8	Oberhof (Thür)		
+417	58,2	Zella-Mehlis		
+417	64,4	Suhl		
+417	67,8	Suhl-Heinrichswerk		
+417	70,9	Dietzhausen		
+417	77,6	Rohr (Thür)		
+417	84,4	Grimmenthal		
+417	87,7	Ritschenhausen		
+417	95	Rentwertshausen		
+417	101,1	Mühlfeld		
+417	106,1	Mellrichstadt Bahnhof		
+417	109,1	Oberstreu		
+417	112,1	Unsleben		
+417	115,6	Heustreu Bahnhof		
+417	119,4	Bad Neustadt (Saale)		
+417	123,9	Niederlauer		
+417	129,3	Münnerstadt		
+417	138,9	Rottershausen		
+417	144,5	Ebenhausen (Mainfr)		
+417	148,1	Poppenhausen		
+417	151,7	Oberwerrn		
+417	158,2	Schweinfurt Hbf		
+417	165	Bergrheinfeld		
+417	169,6	Waigolshausen		
+417	173,2	Eßleben		
+417	178,7	Bergtheim		
+417	184,2	Seligenstadt (b Wü)		
+417	193,5	Rottendorf		
+417	201,5	Würzburg Hbf		
+421	0	Nürnberg Hbf		
+421	3	Nürnberg-Schweinau		
+421	5,2	Nürnberg-Stein		
+421	7,8	Unterasbach		
+421	9,4	Oberasbach		
+421	10,2	Rehdorf		
+421	12,1	Anwanden		
+421	14,7	Roßtal		
+421	15,9	Roßtal Wegbrücke		
+421	18,9	Clarsbach		
+421	20,2	Raitersaich		
+421	25,5	Heilsbronn		
+421	32,5	Wicklesgreuth		
+421	36,7	Sachsen (b  Ansbach)		
+421	43,8	Ansbach		
+421	54	Leutershausen-Wiedersbach		
+421	57,7	Büchelberg		
+421	67,2	Dombühl		
+421	73,2	Zumhaus		
+421	78,1	Schnelldorf		
+421	82,4	Ellrichshausen		
+421	90,4	Crailsheim		
+422n	0	Eger		
+422n	3	Schöba		
+422n	6	Stabnitz		
+422n	9,5	Lindenhau		
+422n	13,4	Konradsgrün		
+422n	16,7	Sandau		
+422n	22,7	Bad Königswart		
+422n	28	Schanz		
+422n	30,4	Marienbad		
+422n	34	Marienbad Flugplatz		
+422n	37,5	Kuttenplan		
+422n	42,4	Plan (b Marienbad)		
+422n	46,1	Bruck a Hammer		
+422n	51,1	Joseflhütte		
+422n	59	Oschelin		
+422n	64	Schweißing-Tschernoschin		
+422n	67,7	Milikau		
+422n	72,8	Mies		
+422n	79	Sollslau		
+422n	82,8	Neuhof (b Mies)		
+422n	86,1	Piewana		
+422n	89,2	Ullitz-Pleschnitz		
+422n	95,2	Tuschkau-Kosulup		
+422n	97,6	Vochov		
+422n	99,8	Krimice		
+422n	104,8	Pilsen Reichsvorstadt		
+422n	107,1	Pilsen		
+424	0	München Hbf		
+424	9,9	München-Moosach		
+424	12,2	München-Fasanerie		
+424	14,6	München-Feldmoching		
+424	18,6	Schleißheim		
+424	23,5	Lohhof		
+424	26,4	Eching		
+424	30,4	Neufahrn (b Freising)		
+424	36,2	Pulling (b Freising)		
+424	40,7	Freising		
+424	45	Marzling		
+424	50,4	Langenbach (Oberbay)		
+424	57,5	Moosburg		
+424	65,1	Bruckberg		
+424	67,9	Gründlkofen		
+424	76,1	Landshut (Bay) Hbf		
+424	80,2	Ergolding		
+424	84,1	Mirskofen		
+424	91	Kläham		
+424	95,1	Ergoldsbach		
+424	99,3	Neufahrn (Niederbay)		
+424	104,1	Steinrain		
+424	113,5	Eggmühl		
+424	121,3	Hagelstadt		
+424	125,5	Köfering		
+424	130,4	Obertraubling		
+424	133,5	Burgweinting		
+424	138,2	Regensburg Hbf		
+425	0	Regensburg Hbf		
+425	4,3	Regensburg Walhallastr		
+425	7,5	Regensburg Wutzlhofen		
+425	11,4	Regendorf		
+425	15,1	Regenstauf		
+425	24	Ponholz		
+425	27,2	Haidhof		
+425	33,1	Loisnitz		
+425	36,1	Klardorf		
+425	42,6	Schwandorf		
+425	46,9	Irrenlohe		
+425	50,9	Schwarzenfeld		
+425	58,3	Nabburg		
+425	62,8	Pfreimd		
+425	69,5	Wernberg		
+425	75,7	Luhe		
+425	78,1	Luhe-Wildenau		
+425	81,5	Rothenstadt		
+425	86,6	Weiden (Oberpf)		
+425	92,7	Neustadt (Waldnaab)		
+425	98,4	Lamplmühle		
+425	102	Windischeschenbach		
+425	109,5	Reuth (b Erbendorf)		
+425	119,9	Wiesau (Oberpf)		
+425	128	Groschlattengrün		
+425	137,7	Marktredwitz		
+425	145,1	Holenbrunn		
+425	149	Röslau		
+425	156,1	Marktleuthen		
+425	161,2	Kirchenlamitz Ost		
+425	167,7	Martinlamitz		
+425	173,6	Oberkotzau		
+425	177,1	Hof-Moschendorf		
+425	179,3	Hof Hbf		
+427f	0	Landshut (Bay) Hbf		
+427f	3,2	Landshut (Bay) Süd		
+427f	9,1	Götzdorf		
+427f	13,3	Geisenhausen		
+427f	18,1	Höhenberg		
+427f	22,4	Vilsbiburg		
+427f	27,9	Aich (Niederbay)		
+427f	32,5	Egglkofen		
+427f	38,9	Neumarkt-St Veit		
+427f	54,5	Mühldorf (Oberbay)		
+427f	58,2	Mühldorf-Ehring		
+427f	61,5	Tüßling		
+427f	65,5	Mauerberg		
+427f	70,9	Garching		
+427f	78,7	Kirchweidach		
+427f	82,9	Tyrlaching		
+427f	86,2	Lanzing		
+427f	90,3	Wiesmühl (b Tittmoning)		
+427f	96,4	Fridolfing		
+427f	100,6	Kirchanschöring		
+427f	108,1	Laufen (Oberbay)		
+427f	112,1	Gastag		
+427f	115	Surheim		
+427f	120	Freilassing		
+427f	126,7	Salzburg Hbf		
+428a	0	Salzburg Hbf		
+428a	6,7	Freilassing		
+428a	12,6	Hammerau		
+428a	17,5	Piding		
+428a	21,6	Bad Reichenhall		
+428a	23,3	Bad Reichenhall-Kirchberg		
+428a	25	Bayer, Gmain		
+428a	29	Hallthurm		
+428a	31,8	Winkl		
+428a	35,2	Bischofswiesen		
+428a	39,3	Gmundbrücke		
+428a	40,4	Berchtesgaden Hbf		
+456	0	Nürnberg Hbf		
+456	3,6	Nürnberg-Dutzendteich		
+456	8	Fischbach (b Nürnberg)		
+456	12,4	Feucht		
+456	16,6	Ochenbruck		
+456	21,4	Burgthann		
+456	23,8	Oberferrieden		
+456	27	Postbauer		
+456	32,4	Pölling		
+456	36	Neumarkt (Oberpf)		
+456	46,5	Deining (Oberpf)		
+456	52,7	Batzhausen		
+456	56,5	Seubersdorf		
+456	63,8	Parsberg		
+456	69,8	Mausheim		
+456	74,3	Beratshausen		
+456	80,9	Laaber		
+456	85,5	Deuerling		
+456	87,9	Undorf		
+456	90,8	Etterzhausen		
+456	96,8	Regensburg-Prüfening		
+456	100,5	Regensburg Hbf		
+456	105,4	Burgweinting		
+456	108,6	Obertraubling		
+456	112,6	Mangolding		
+456	117,2	Moosham		
+456	120,5	Taimering		
+456	125,2	Sünching		
+456	131,7	Radldorf		
+456	141,3	Straubing		
+456	147,3	Amselfing		
+456	153,3	Straßkirchen		
+456	160,1	Stephansposching		
+456	165,8	Plattling		
+456	175,1	Langenisarhofen		
+456	181,2	Osterhofen (Niederbay)		
+456	186,6	Girching		
+456	190,2	Pleinting		
+456	196,6	Vilshofen (Niederbay)		
+456	203	Sandbach (Niederbay)		
+456	206,3	Seestetten		
+456	211	Schalding		
+456	218,1	Passau Hbf		
+456	222,1	Pyret		
+456	227,4	Wernstein		
+456	232,2	Schärding		
+456	238,7	Allerding		
+456	242,2	Taufkirchen (Pram)		
+456	248	Andorf (Innkr)		
+456	252,2	Griesbach (Innkr)		
+456	255,5	Zell (Pram)		
+456	257	Riedau		
+456	260,9	Kumpfmühl		
+456	265,2	Kimpling		
+456	269,6	Neumarkt-Kallham		
+456	274,6	Obertrattnach		
+456	280,3	Grieskirchen-Gallspach		
+456	283,5	Schlüßlberg		
+456	287	Bad Schallerbach-Wallern		
+456	292,1	Haiding		
+456	295,7	Puchberg (b Wels)		
+456	299,3	Wels Hbf		
+457	0	Wien Westbf		
+457	5,8	Hütteldorf-Hacking		
+457	60,6	St Pölten Hbf		
+457	66	Friesing		
+457	68,7	Prinzersdorf		
+457	70,9	Markersdorf a d Pielach		
+457	73,4	Groß Sirning		
+457	78,1	Loosdorf		
+457	84,7	Melk		
+457	93,9	Pöchlarn		
+457	98,5	Krumnußbaum		
+457	102,6	Säusenstein		
+457	107,1	Ybbs-Kemmelbach		
+457	111,2	Neumarkt a d Y - Karlsbach		
+457	113,7	Hubertendorf		
+457	117	Blindenmarkt		
+457	124,6	Amstetten (Niederdonau)		
+457	131,7	Mauer-Oehling		
+457	135,7	Aschbach (Url)		
+457	140,3	Krenstetten-Biberach		
+457	144,3	St Peter-Seitenstetten		
+457	148,1	St Johann-Weistrach		
+457	150,7	Haag (Niederdonau)		
+457	154,1	Stadt Haag		
+457	158,4	Unterwinden		
+457	164,1	St Valentin		
+457	168,6	Ennsdorf		
+457	171	Enns		
+457	176,4	Asten-St Florian		
+457	178,7	Plohling		
+457	181	Ebelsberg (Reichsb)		
+457	182,3	Kleinmünchen		
+457	188,5	Linz (Donau) Hbf		
+457	192,1	Leonding (Reichsb)		
+457	196	Paschling		
+457	198,1	Hörsching		
+457	201,4	Oftering		
+457	206,2	Marchtrenk		
+457	212,9	Wels Hbf		
+457	220	Gunskirchen		
+457	226,1	Lambach		
+457	227,6	Markt Lambach		
+457	230,4	Neukirchen b Lambach		
+457	233,5	Breitenschützing		
+457	237,4	Schwanenstadt		
+457	243,3	Attnang-Puchheim		
+457	248	Vöcklabrunn		
+457	253,3	Timelkam		
+457	257,1	Neukirchen-Gampern		
+457	259,7	Redl-Zipf		
+457	264,1	Vöcklamarkt (Reichsb)		
+457	268,8	Frankenmarkt		
+457	275,6	Pöndorf		
+457	278,4	Ederbauer		
+457	281,9	Oberhofen-Zell a Moos		
+457	285,2	Straßwaichen		
+457	287,4	Steindorf		
+457	289,2	Neumarkt-Köstendorf		
+457	293,8	Weng		
+457	296,1	Wallersee		
+457	299,4	Seekirchen-Mattsee		
+457	302,7	Eugendorf		
+457	305,5	Hallwang-Elxhausen		
+457	309,8	Berg Maria Plain		
+457	313,5	Salzburg Hbf		
+461	0	Wien Fr Jos Bf		
+461	2,7	Wien Heiligenstadt		
+461	4	Wien Nußdorf		
+461	5,9	Kahlenbergerdorf		
+461	8,9	Klosterneuburg-Weidling		
+461	10,4	Klosterneuburg-Kierling		
+461	12,4	Unter Kritzendorf		
+461	13,9	Kritzendorf		
+461	16,6	Höflein (Donau)		
+461	19,2	Greifenstein-Altenberg		
+461	21,8	St Andrä-Wördern		
+461	24,5	Zeiselmauer-Königstetten		
+461	28,5	Langenlebarn		
+461	33	Tülln		
+461	40	Neu Aigen-Stetteldorf		
+461	43,9	Absdorf-Hippersdorf		
+461	46,3	Absberg		
+461	48,9	Tiefental (Wagram)		
+461	52,4	Groß Welkersdorf		
+461	57,1	Glaubendorf-Wetzdorf		
+461	60,4	Ziersdorf		
+461	64,4	Ravelsbach		
+461	69,8	Limberg-Malssau		
+461	72,9	Straning		
+461	75,2	Grafenberg		
+461	78,7	Eggenburg		
+461	85,2	Klein Meiseldorf-Maria Dreieichen		
+461	88,6	Siegmundsherberg		
+461	92,2	Kainreith-Walkenstein		
+461	98	Hötzelsdorf-Geras		
+461	102,7	Ludweishofen		
+461	108,8	Wappoltenreith		
+461	115,3	Blumau (Wild)		
+461	121,3	Göpfritz		
+461	128,5	Allentsteig		
+461	138,2	Schwarzenau (Waldv)		
+461	141,8	Echsenbach		
+461	147	Vitis		
+461	150,6	Hirschbach (Waldviertel)		
+461	154,1	Pürbach-Schrems		
+461	158,5	Hoheneich		
+461	161,9	Gmünd (Waldv) Stadt		
+461	164,1	Gmünd (Waldv) Hbf		
+461	170,1	Erdweis		
+46x	0	Gmünd (Waldv) Hbf		
+46x	3	Erdweis		"Auch hier wieder Dummystrecke; weil es ""Umfahrung"" von Gmünd (Waldv) Hbf gibt"
+596g	0	Oranienburg		
+596g	7,2	Germendorf		
+596g	17,6	Kremmen		
+596g	23,9	Flatow (Kr Osthavelland)		
+596g	28,6	Börnicke		
+596g	31,9	Kienberg		
+596g	38,2	Nauen		
+596g	42,9	Bredow (Kr Osthavelland)		
+596g	47,9	Wustermark		
+596g	53,2	Priort		
+596g	57,9	Satzkorn		
+596g	60,4	Marquardt		
+596g	62,8	Bornim Grube		
+596g	65,6	Golm		
+596g	69,5	Wildpark		
+596g	75,3	Caputh-Geltow		
+596g	76,4	Schwielowsee		
+596g	80,7	Ferch-Lienewitz		
+596g	88,3	Beelitz Stadt		
+596g	92,3	Elsholz		
+596g	96	Buchholz (Zauche)		
+596g	108,4	Treuenbrietzen Reichsb		
+596g	110,6	Treuenbrietzen Landesanstalt		
+596g	113,2	Frohnsdorf		
+596g	116,8	Tiefenbrunnen		
+596g	121,1	Jüterbog Altes Lager		
+596g	128,3	Jüterbog		
+599c	9,6	Berlin-Lichterfelde Ost		
+599c	8,3	Lankwitz		
+599c	6,9	Südende		
+599c	5,7	Priesterweg		
+599c	3,8	Papestraße		
+599c	1,9	Yorckstraße		
+599c	0	Berlin Potsd, Ringbf		
+599d	0	Berlin Potsd, Ringbf		
+599d	1,9	Yorckstraße		
+599d	3,8	Papestraße		
+599d	5,7	Priesterweg		
+599d	7	Mariendorf		
+599d	9,8	Marienfelde		
+599d	11,4	Buckower Chaussee		
+599d	12,8	Schichauweg		
+599d	14,2	Lichtenrade		
+599d	17,2	Mahlow		
+599d	19,9	Blankenfelde		
+599d	21,1	Dahlewitz		
+599d	24,7	Rangsdorf		
+599d	31,1	Dabendorf		
+599d	33,1	Zossen		
+599d	39,4	Wünsdorf (Kr Teltow)		
+700	0	Theresienstadt		
+700	1,9	Hrdly		
+700	3,5	Oleschko		
+700	6,8	Hrobetz		
+700	11,7	Raudnitz		
+700	14,4	Dobrin		
+700	17,5	Zalusch		
+700	21	Hnewitz		
+700	24,9	Ober Pocap		
+700	30,2	Unter Berkowitz		
+700	33,3	Citow		
+700	38,1	Wranan		
+700	45,8	Weltrus		
+700	48,1	Mühlhausen		
+700	51,2	Kralup		
+700	57,4	Libschitz		
+700	66,6	Rostok		
+700	69,8	Selz		
+700	73,2	Bubentsch		
+700	78,4	Prag Mas Bf		
+700	78,4	Prag Wils Bf		
+705	0	Prag Wils Bf		
+705	5	Smichow		
+705	44	Beraun		
+705	53	Zditz		
+705	63	Horowitz		
+705	73	Holoubkau		
+705	83	Zbirow		
+705	92	Rokitzan		
+705	104	Chrast b P		
+705	115	Pilsen		
+708	0	Prag Wils Bf		
+708	3	Wrschowitz		
+708	10	Hostivar		
+708	15	Aurinoves		
+708	22	Ricany		
+708	29	Strancice		
+708	43	Cercany		
+708	52	Beneschau		
+708	57	Bistric b B		
+708	67	Olbramovice		
+708	70	Wotic Stadt		
+708	75	Kl Hermanitz-Sedletz		
+708	91	Sudomerice-Nemysl		
+708	96	Chotowin		
+708	105	Tabor		
+708	112	Plana a d Luschnitz		
+708	124	Sobleslau		
+708	131	Mezimosti-Veseli		
+708	143	Lomnitz		
+708	152	Wittingau		
+708	154	Wittingau Stadt		
+708	164	Chlum b Wittingau		
+708	170	Suchenthal		
+708	173	Hrdlorecy		
+708	180	Erdweis		
+719	0	Prag Wils Bf		
+719	0	Prag Mas Bf		
+719	5	Lieben		
+719	23	Auwal		
+719	33	Böhm, Brod		
+719	39	Porican		
+719	47	Pecek		
+719	55	Wellm		
+719	63	Kolin		
+719	74	Elbetelnitz-Zabor		
+719	91	Prelauc		
+719	105	Pardubitz		
+719	115	Daschitz-Kostenitz		
+719	119	Morawan		
+719	124	Uhersko		
+719	139	Chotzen		
+719	144	Brandeis a d Adler		
+719	154	Wildenschwert		
+719	155	Wildenschwert Stadt		
+719	164	Böhm, Trübau		
+719	181	Zwittau		
+719	207	Lettowitz		
+719	216	Skalitz-Boskowitz		
+719	225	Raitz		
+719	232	Blansko		
+719	239	Adamstal		
+719	255	Brünn		
+719	258	Ober Gerspitz		
+719	262	Mödritz		
+719	267	Raigern		
+719	273	Rohrbach		
+719	281	Branowitz		
+719	285	Pausram		
+719	288	Poppitz		
+719	291	Auspitz		
+719	297	Saitz		
+719	305	Kostel		
+719	316	Lundenburg		
+719	333	Kuty		
+719	360	Malacky		
+719	372	Zohor		
+719	397	Preßburg		
