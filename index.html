@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DRG39 - Zugvorschau</title>
+    <style>
+        :root {
+            --bg-color: #f4f4f4;
+            --track-color: #333;
+            --resizer-color: #ccc;
+            --signal-red: #ff4c4c;
+            --signal-green: #4cff4c;
+            --preview-scale: 1;
+        }
+        
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: var(--bg-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #main-area {
+            flex-grow: 1;
+            background-color: #ffffff;
+        }
+
+        #resizer {
+            height: 10px;
+            background-color: var(--resizer-color);
+            cursor: ns-resize;
+            border-top: 1px solid #aaa;
+            border-bottom: 1px solid #aaa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+        }
+
+        #resizer::before {
+            content: "|||";
+            font-size: 8px;
+            color: #666;
+            transform: rotate(90deg);
+            letter-spacing: 1px;
+        }
+
+        #preview-area {
+            height: 250px;
+            min-height: 100px;
+            background-color: #e0e0e0;
+            position: relative;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        #controls-bar {
+            padding: 5px 20px;
+            background-color: #d0d0d0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+            flex-shrink: 0;
+            border-bottom: 1px solid #bbb;
+        }
+        .controls-left, .controls-right {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            flex: 1;
+        }
+        .controls-right {
+            justify-content: flex-end;
+        }
+        .controls-center {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+            font-size: 22px;
+            flex-shrink: 0;
+        }
+        .clock-part {
+            cursor: ns-resize;
+            display: inline-block;
+            padding: 0 2px;
+            border-radius: 3px;
+        }
+        .clock-part:hover {
+            background-color: rgba(0,0,0,0.1);
+        }
+        .fw-bold {
+            font-weight: bold;
+        }
+
+        #tracks-area {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding: 20px 0 70px 0;
+        }
+
+        .track-container {
+            position: relative;
+            width: 100%;
+            height: calc(60px * var(--preview-scale)); /* Space for train */
+        }
+
+        .track {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--track-color);
+        }
+
+        /* Signals */
+        .signal {
+            position: absolute;
+            bottom: -13.5px; /* Centered on track (track is 3px at bottom 0, signal is 30px high) */
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            z-index: 20;
+            clip-path: polygon(100% 50%, 0 0, 0 100%);
+            transition: background-color 0.3s;
+        }
+
+        #signal-top {
+            left: 50px;
+            clip-path: polygon(0 50%, 100% 0, 100% 100%);
+        }
+
+        #signal-bottom {
+            right: 50px;
+            clip-path: polygon(100% 50%, 0 0, 0 100%);
+        }
+
+        .halt { background-color: var(--signal-red); }
+        .fahrt { background-color: var(--signal-green); }
+
+        /* Route Labels & Countdowns */
+        .route-label {
+            position: absolute;
+            bottom: -20px;
+            font-size: 12px;
+            color: #333;
+            font-weight: 500;
+            display: none; /* Controlled by JS */
+        }
+        .countdown-label {
+            position: absolute;
+            top: -15px;
+            font-size: 14px;
+            color: #000;
+            font-weight: bold;
+            display: none; /* Controlled by JS */
+        }
+        #route-top, #countdown-top {
+            left: 80px; /* Align with the vertical back line of the signal */
+            text-align: left;
+        }
+        #route-bottom, #countdown-bottom {
+            right: 80px; /* Align with the vertical back line of the signal */
+            text-align: right;
+        }
+
+        /* Trains */
+        .train {
+            position: absolute;
+            bottom: 3px; /* On track (track is 3px high) */
+            display: flex;
+            align-items: flex-end;
+            white-space: nowrap;
+            z-index: 10; /* Behind signals (z-index 20) */
+        }
+
+        .vehicle {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .info-label {
+            position: absolute;
+            top: 100%;
+            padding-top: 5px;
+            font-size: calc(10px * var(--preview-scale));
+            color: #555;
+            white-space: nowrap;
+            display: none;
+        }
+
+        body.show-info .info-label {
+            display: block;
+        }
+
+        .train img {
+            height: calc(40px * var(--preview-scale)); /* Adjust based on image aspect ratio later */
+            display: block;
+            margin: 0;
+            padding: 0;
+            object-fit: contain;
+            object-position: bottom;
+        }
+
+        /* Top train goes left */
+        #train-top {
+            transform-origin: center bottom;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="main-area"></div>
+    <div id="resizer"></div>
+    <div id="preview-area">
+        <div id="controls-bar">
+            <div class="controls-left">
+                <label><input type="radio" name="view-mode" value="schematic"> Schematisch</label>
+                <label><input type="radio" name="view-mode" value="real" checked> Realzug</label>
+                <label><input type="radio" name="view-mode" value="model"> Modellzug</label>
+            </div>
+            
+            <div class="controls-center">
+                <div id="clock-widget" style="display: flex; align-items: center; gap: 5px;">
+                    <svg id="icon-clock" style="cursor: pointer;" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    <span><span class="clock-part fw-bold" id="clock-h">12</span>:<span class="clock-part fw-bold" id="clock-m">00</span>:<span class="clock-part" id="clock-s">00</span></span>
+                </div>
+                <div id="multiplier-widget" style="display: flex; align-items: center; gap: 5px;">
+                    <svg id="icon-mul" style="cursor: pointer;" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 19 22 12 13 5 13 19"></polygon><polygon points="2 19 11 12 2 5 2 19"></polygon></svg>
+                    <span>Faktor <span class="clock-part" id="mul-container">1:<span id="clock-mul">1</span></span></span>
+                </div>
+            </div>
+
+            <div class="controls-right">
+                <label><input type="checkbox" id="info-checkbox"> Wageninformation</label>
+            </div>
+        </div>
+        <div id="tracks-area">
+            <div class="track-container" id="track-top-container">
+                <div id="countdown-top" class="countdown-label">0:00</div>
+                <div class="track"></div>
+                <div id="signal-top" class="signal halt"></div>
+                <div id="route-top" class="route-label">FD80 Berlin Ahb - München Hbf</div>
+                <div id="train-top" class="train"></div>
+            </div>
+            
+            <div class="track-container" id="track-bottom-container">
+                <div id="countdown-bottom" class="countdown-label">0:00</div>
+                <div class="track"></div>
+                <div id="signal-bottom" class="signal fahrt"></div>
+                <div id="route-bottom" class="route-label">FD79 München Hbf - Berlin Ahb</div>
+                <div id="train-bottom" class="train"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // --- Clock Logic ---
+        let simTime = new Date();
+        let clockH = simTime.getHours();
+        let clockM = simTime.getMinutes();
+        let clockS = simTime.getSeconds();
+        let timeMul = 1;
+
+        function updateClockDisplay() {
+            document.getElementById('clock-h').textContent = String(clockH).padStart(2, '0');
+            document.getElementById('clock-m').textContent = String(clockM).padStart(2, '0');
+            document.getElementById('clock-s').textContent = String(clockS).padStart(2, '0');
+            document.getElementById('clock-mul').textContent = timeMul;
+        }
+        updateClockDisplay();
+
+        function attachScrollHandler(id, callback) {
+            document.getElementById(id).addEventListener('wheel', (e) => {
+                e.preventDefault();
+                const delta = Math.sign(e.deltaY);
+                callback(delta < 0 ? 1 : -1);
+                updateClockDisplay();
+            });
+        }
+
+        attachScrollHandler('clock-h', (change) => {
+            clockH = (clockH + change + 24) % 24;
+        });
+        attachScrollHandler('clock-m', (change) => {
+            clockM = (clockM + change + 60) % 60;
+        });
+        attachScrollHandler('clock-s', (change) => {
+            clockS = (clockS + change + 60) % 60;
+        });
+        attachScrollHandler('mul-container', (change) => {
+            timeMul += change;
+            if (timeMul < 1) timeMul = 1;
+            if (timeMul > 20) timeMul = 20;
+        });
+
+        document.getElementById('icon-clock').addEventListener('click', () => {
+            const now = new Date();
+            clockH = now.getHours();
+            clockM = now.getMinutes();
+            clockS = now.getSeconds();
+            updateClockDisplay();
+        });
+
+        document.getElementById('icon-mul').addEventListener('click', () => {
+            timeMul = 2;
+            updateClockDisplay();
+        });
+
+        let lastTime = performance.now();
+        let remainderMs = 0;
+
+        function tickSimulation(now) {
+            const deltaMs = now - lastTime;
+            lastTime = now;
+            
+            remainderMs += deltaMs * timeMul;
+            
+            if (remainderMs >= 1000) {
+                const secsToadd = Math.floor(remainderMs / 1000);
+                remainderMs -= secsToadd * 1000;
+                
+                clockS += secsToadd;
+                if (clockS >= 60) {
+                    clockM += Math.floor(clockS / 60);
+                    clockS = clockS % 60;
+                }
+                if (clockM >= 60) {
+                    clockH = (clockH + Math.floor(clockM / 60)) % 24;
+                    clockM = clockM % 60;
+                }
+                updateClockDisplay();
+            }
+            requestAnimationFrame(tickSimulation);
+        }
+        requestAnimationFrame(tickSimulation);
+
+        // --- Resizer Logic ---
+        const resizer = document.getElementById('resizer');
+        const previewArea = document.getElementById('preview-area');
+        let isResizing = false;
+
+        resizer.addEventListener('mousedown', (e) => {
+            isResizing = true;
+            document.body.style.cursor = 'ns-resize';
+        });
+
+        window.addEventListener('mousemove', (e) => {
+            if (!isResizing) return;
+            const newHeight = window.innerHeight - e.clientY;
+            if (newHeight > 100 && newHeight < window.innerHeight - 50) {
+                previewArea.style.height = newHeight + 'px';
+                const scale = newHeight / 250;
+                document.documentElement.style.setProperty('--preview-scale', scale);
+                train1.updateWidth();
+                train2.updateWidth();
+            }
+        });
+
+        window.addEventListener('mouseup', () => {
+            isResizing = false;
+            document.body.style.cursor = 'default';
+        });
+
+        // --- Signal Logic ---
+        const signalTop = document.getElementById('signal-top');
+        const signalBottom = document.getElementById('signal-bottom');
+
+        let signalTopState = 'halt'; // 'halt' or 'fahrt'
+        let signalBottomState = 'fahrt';
+
+        signalTop.addEventListener('click', () => {
+            signalTopState = signalTopState === 'halt' ? 'fahrt' : 'halt';
+            signalTop.className = `signal ${signalTopState}`;
+        });
+
+        signalBottom.addEventListener('click', () => {
+            signalBottomState = signalBottomState === 'halt' ? 'fahrt' : 'halt';
+            signalBottom.className = `signal ${signalBottomState}`;
+        });
+
+        // --- Train Configuration ---
+        const trainComposition = [
+            'data/img/loks/BR03.0-2.png',
+            'data/img/pwagen/PwPost4ue-28.png',
+            'data/img/pwagen/AB4ue-28.png',
+            'data/img/pwagen/AB4ue-28.png',
+            'data/img/pwagen/WR4ue-29.png',
+            'data/img/pwagen/AB4ue-28.png',
+            'data/img/pwagen/AB4ue-28.png'
+        ];
+
+        function createTrainElements(trainContainerId) {
+            const container = document.getElementById(trainContainerId);
+            container.innerHTML = '';
+            
+            // Depending on direction, we might need to append in order or reverse.
+            // Assuming images face left naturally.
+            // If they face right naturally, we need to flip them.
+            
+            // Let's assume images face left. 
+            // Top train (moves left): Lok should be at the left.
+            // Bottom train (moves right): Lok should be at the right, images flipped.
+            
+            const isTop = trainContainerId === 'train-top';
+            
+            trainComposition.forEach((src, index) => {
+                const vehicleDiv = document.createElement('div');
+                vehicleDiv.className = 'vehicle';
+
+                const img = document.createElement('img');
+                img.src = src;
+
+                const filename = src.split('/').pop().replace('.png', '').replace(/ue/g, 'ü');
+                const label = document.createElement('div');
+                label.className = 'info-label';
+                label.textContent = filename;
+
+                vehicleDiv.appendChild(img);
+                vehicleDiv.appendChild(label);
+                container.appendChild(vehicleDiv);
+            });
+            
+            // We'll apply CSS flipping to the bottom train if it's going right.
+            if (!isTop) {
+                 container.style.flexDirection = 'row-reverse';
+                 const images = container.querySelectorAll('img');
+                 // Lokbilder sind immer auf die Fahrtrichtung links gerichtet. 
+                 // Fährt der Zug nach rechts, wird nur die Lok (erstes Element) gespiegelt.
+                 if (images.length > 0) {
+                     images[0].style.transform = 'scaleX(-1)';
+                 }
+            }
+        }
+
+        const infoCheckbox = document.getElementById('info-checkbox');
+        infoCheckbox.addEventListener('change', (e) => {
+            if(e.target.checked) {
+                document.body.classList.add('show-info');
+            } else {
+                document.body.classList.remove('show-info');
+            }
+        });
+
+        createTrainElements('train-top');
+        createTrainElements('train-bottom');
+
+        // --- Train Animation Logic ---
+        
+        const MAX_SPEED = 2; // px per frame (~120px/s)
+        const ACCELERATION = 0.02; // braking
+        const SIGNAL_TOP_X = 50; // left position
+        
+        class Train {
+            constructor(element, isTopTrack, routeLabelId, countdownId) {
+                this.element = element;
+                this.isTopTrack = isTopTrack;
+                this.routeLabel = document.getElementById(routeLabelId);
+                this.countdownLabel = document.getElementById(countdownId);
+                this.x = isTopTrack ? window.innerWidth + 100 : -1000; 
+                this.speed = MAX_SPEED;
+                this.width = 0; // will be calculated after images load
+                this.state = 'moving'; // 'moving', 'braking', 'stopped', 'waiting'
+                this.routeLabel.style.display = 'block'; // Initially moving
+                this.countdownLabel.style.display = 'block';
+                this.waitTimeMs = 0;
+                this.updateWidth();
+            }
+
+            updateWidth() {
+                setTimeout(() => {
+                    this.width = this.element.getBoundingClientRect().width;
+                    if(this.width === 0) this.updateWidth();
+                }, 100);
+            }
+
+            reset() {
+                this.state = 'waiting';
+                this.routeLabel.style.display = 'none';
+                this.waitTimeMs = Math.random() * 5000 + 2000;
+                if (this.isTopTrack) {
+                    this.x = window.innerWidth + 100;
+                } else {
+                    this.x = -this.width - 100;
+                }
+            }
+
+            update(dtRealMs) {
+                const screenWidth = window.innerWidth;
+                const signalX = this.isTopTrack ? SIGNAL_TOP_X : screenWidth - 50; 
+                const signalState = this.isTopTrack ? signalTopState : signalBottomState;
+                let targetX = this.isTopTrack ? signalX + 40 : signalX - 40;
+                
+                if (this.width === 0) this.width = this.element.getBoundingClientRect().width;
+
+                if (this.state === 'waiting') {
+                    this.waitTimeMs -= dtRealMs;
+                    if (this.waitTimeMs <= 0) {
+                        this.waitTimeMs = 0;
+                        this.speed = MAX_SPEED;
+                        this.state = 'moving';
+                        this.routeLabel.style.display = 'block';
+                    }
+                }
+
+                if (this.state !== 'waiting') {
+                    let lokFrontX = this.isTopTrack ? this.x : this.x + this.width;
+
+                    if (this.isTopTrack) {
+                        if (signalState === 'halt' && this.x > targetX && this.x < targetX + 300) {
+                            let dist = this.x - targetX;
+                            let targetSpeed = Math.sqrt(2 * ACCELERATION * dist);
+                            this.speed = Math.min(this.speed, targetSpeed);
+                            if (dist <= 1 && this.speed < 0.5) {
+                                this.speed = 0;
+                                this.x = targetX;
+                                this.state = 'stopped';
+                            }
+                        } else if (this.state === 'stopped' && signalState === 'fahrt') {
+                            this.state = 'moving';
+                        }
+                        if (this.state === 'moving' && this.speed < MAX_SPEED) {
+                             this.speed += ACCELERATION;
+                             if (this.speed > MAX_SPEED) this.speed = MAX_SPEED;
+                        }
+                        this.x -= this.speed;
+                        if (this.x + this.width < -100) this.reset();
+                    } else {
+                        if (signalState === 'halt' && lokFrontX < targetX && lokFrontX > targetX - 300) {
+                            let dist = targetX - lokFrontX;
+                            let targetSpeed = Math.sqrt(2 * ACCELERATION * dist);
+                            this.speed = Math.min(this.speed, targetSpeed);
+                            if (dist <= 1 && this.speed < 0.5) {
+                                this.speed = 0;
+                                this.x = targetX - this.width;
+                                this.state = 'stopped';
+                            }
+                        } else if (this.state === 'stopped' && signalState === 'fahrt') {
+                            this.state = 'moving';
+                        }
+                        if (this.state === 'moving' && this.speed < MAX_SPEED) {
+                             this.speed += ACCELERATION;
+                             if (this.speed > MAX_SPEED) this.speed = MAX_SPEED;
+                        }
+                        this.x += this.speed;
+                        if (this.x > screenWidth + 100) this.reset();
+                    }
+                    this.element.style.left = this.x + 'px';
+                }
+                
+                // Update countdown
+                let lokFrontX = this.isTopTrack ? this.x : this.x + this.width;
+                let isPastSignal = this.isTopTrack ? (lokFrontX <= targetX) : (lokFrontX >= targetX);
+
+                if (isPastSignal && (this.state === 'moving' || this.state === 'stopped')) {
+                    this.countdownLabel.style.display = 'none';
+                } else {
+                    this.countdownLabel.style.display = 'block';
+                    let dist = Math.abs(lokFrontX - targetX);
+                    let driveTimeRealMs = (dist / MAX_SPEED) * (1000 / 60); 
+                    let totalTimeRealMs = this.waitTimeMs + driveTimeRealMs;
+                    
+                    let realSeconds = Math.max(0, Math.floor(totalTimeRealMs / 1000));
+                    let m = Math.floor(realSeconds / 60);
+                    let s = realSeconds % 60;
+                    this.countdownLabel.textContent = m + ":" + String(s).padStart(2, '0');
+                }
+            }
+        }
+
+        const train1 = new Train(document.getElementById('train-top'), true, 'route-top', 'countdown-top');
+        const train2 = new Train(document.getElementById('train-bottom'), false, 'route-bottom', 'countdown-bottom');
+
+        let lastAnimTime = performance.now();
+        function animate(now) {
+            let dt = now - lastAnimTime;
+            if (dt > 100) dt = 16; // Prevent huge jumps if tab was inactive
+            lastAnimTime = now;
+            
+            train1.update(dt);
+            train2.update(dt);
+            requestAnimationFrame(animate);
+        }
+
+        requestAnimationFrame(animate);
+
+    </script>
+</body>
+</html>
