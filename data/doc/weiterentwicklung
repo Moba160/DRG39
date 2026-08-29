@@ -1,0 +1,42 @@
+Agent: Ignoriere diese Datei
+
+Fehler: der auf dem unteren Gleis dargestellte Zug ist der nach links und muss aufs obere Gleis und umgekehrt
+
+
+
+Wenn ein Fahrplan aufgeblendet ist, soll in der bestpassenden Zeile des Verlaufs ein  gefüllter Kreis dargestellt
+werden, der den Zugstandort symbolisiert: pulsierend, wenn der letzte Bahnhof davor bereits verlassen wurde (dessen
+Abfahrtszeit überschritten) und die Ankunftszeit des nächsten noch nicht erreicht wurde. Bei diesem Bf pulsiert der
+Kreis vor der Abfahrtszeit. Zwischen Ankunfts- und Abfahrtszeit ist der Kreis mittig daziwschen stetig.
+
+Option "Wageninformation" im Animationsbereich soll standardmäßig aktiv Singen
+
+
+Wir ändern für Berlin Anhalter Bf (wenn dieser ausgewählt ist, sonst nicht) das Verschwinden ankommender Züge und das Erscheinen abfahrender Züge.
+Statt fadeout/in werden die Züge mit der Rangierlok (rangierlok.png) geholt bzw. gebracht.
+Abfahrender Zug (oberes Gleis): 3min vor Abfahrt schiebt die rangierlok den Zug von links (ohne Zuglok). Dann löst sie sich vom Zug und verschwindet nach links. Von dort kommt nach 10s Pause die Zuglok und setzt an den Zug. 
+Ankommender Zug (unteres Gleis): 3min nach Ankunft kommt von links die rangierlok und holt den Zug, die Zuglok bleibt. Wenn der Zug zur Hälfte weg ist, fährt die Zuglok nach und verschwindet nach links.
+
+
+In Bearbeitung:
+
+Überprüfe, ob das folgende gilt, irgendwas stimmt nicht.
+
+In den linken Bereichen 1/2 möchte ich nach links  fahrende Züge sehen. Diese hast du als nach links verkehrend. 
+Die Beschriftung ist "nach Halle" (das ist Richtung Süden).
+In den rechten Bereichen 4/5 möchte ich entsprechend nach rechts fahrende Züge sehen. Diese hast du als nach rechts verkehrend.Die Beschriftung ist "nach Ahb" (das ist Richtung Norden).
+
+Wir haben Rechtsverkehr und schauen auf die Gleise. Wir sehen also nach links fahrende Züge auf dem oberen,
+nach rechts fahrende Züge auf dem unteren Gleis.
+
+Die Ausfahrsignale sind entsprechend links auf dem oberen Gleis und rechts auf dem unteren Gleis.
+Die Zuglaufinformationen für nach links fahrende Züge sind entsprechend beim linken, für den nach rechts fahrenden
+Züge beim rechten Signal.
+
+Der Countdown bezieht sich immer auf den unten gewählten Bahnhof auf die Ankunftszeit, wird nicht zeitgerafft und
+bedeutet: soviel m:ss bis der Zug am Signal hält oder durchfährt. Die bisher im Code gemachte Zeitdeltabetrachtung zwischen
+Berlin-Lichterfelde Ost und Berlin Anhalter Bf kann entfallen, da Berlin-LIchterfelde Ost nun eigene Zeiten (meist
+Durchfahrten) in abfahrten.csv hat. Für eine Durchfahrt setze die Zeit bei den Zugläufen an den Signalen in Klammern und kursiv.
+
+Wenn Berlin Anhalter Bf ausgewählt ist, kann das rechte Signal entfallen, nicht jedoch die Zuglaufinformation dort. Hintergrund: es ist ein Kopfbahnhof. Das linke Signal bleibt, dort bezieht sich der Countdown aber auf die Abfahrtszeit von Zügen, die nach links fahren. 3 Minuten vor dieser muss der abfahrende Zug dort erscheinen (Lok am Signal, der Rest könnte theoretisch rechts abgeschnitten sein). Der erscheinende Zug erscheint nicht schlagartig als Ganzes, sondern faded leicht ein als ganzer Zug. Das linke Signal ist dann Halt und bei Abfahrt geht es auf Fahrt und der Zug fährt nach links aus.
+

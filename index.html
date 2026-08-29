@@ -419,11 +419,30 @@
         }
 
 
-        /* Train type colors for signal info */
         .sig-gat-fd { color: #800080; }
         .sig-gat-d  { color: #d32f2f; }
         .sig-gat-e  { color: #1976d2; }
         .sig-gat-p  { color: #222; }
+
+        /* Zugstandort-Indikator im Laufweg */
+        @keyframes pulse-dot {
+            0%   { transform: scale(1);   opacity: 1; }
+            50%  { transform: scale(1.7); opacity: 0.5; }
+            100% { transform: scale(1);   opacity: 1; }
+        }
+        .zug-pos-dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #e53935;
+            vertical-align: middle;
+            margin-right: 5px;
+            flex-shrink: 0;
+        }
+        .zug-pos-dot.pulsing {
+            animation: pulse-dot 1.2s ease-in-out infinite;
+        }
 
         /* Trains */
         .train {
@@ -573,7 +592,7 @@
             </div>
 
             <div class="controls-right">
-                <label><input type="checkbox" id="info-checkbox"> Wageninformation</label>
+                <label><input type="checkbox" id="info-checkbox" checked> Wageninformation</label>
             </div>
         </div>
         <div id="tracks-area">
@@ -583,6 +602,8 @@
                 <div id="signal-top" class="signal halt"></div>
                 <div id="route-top" class="route-label"></div>
                 <div id="train-top" class="train"></div>
+                <div id="rangierlok-top" class="train" style="display:none;"></div>
+                <div id="zuglok-top" class="train" style="display:none;"></div>
             </div>
             
             <div class="track-container" id="track-bottom-container">
@@ -591,6 +612,8 @@
                 <div id="signal-bottom" class="signal fahrt"></div>
                 <div id="route-bottom" class="route-label"></div>
                 <div id="train-bottom" class="train"></div>
+                <div id="rangierlok-bottom" class="train" style="display:none;"></div>
+                <div id="zuglok-bottom" class="train" style="display:none;"></div>
             </div>
         </div>
     </div>
@@ -1013,9 +1036,9 @@
         async function loadFahrplan() {
             try {
                 const [zuegeRes, abfahrtenRes, zpaRes] = await Promise.all([
-                    fetch('data/fahrplan/zuege.txt'),
-                    fetch('data/fahrplan/abfahrten.txt'),
-                    fetch('data/fahrplan/zpa.txt')
+                    fetch('data/fahrplan/zuege.csv'),
+                    fetch('data/fahrplan/abfahrten.csv'),
+                    fetch('data/fahrplan/zpa.csv')
                 ]);
                 
                 if (!zuegeRes.ok || !abfahrtenRes.ok || !zpaRes.ok) {
@@ -1032,7 +1055,7 @@
                 const abfahrtenText = decoder.decode(abfahrtenBuffer);
                 const zpaText = decoder.decode(zpaBuffer);
 
-                // Parse zuege.txt
+                // Parse zuege.csv
                 const zuegeLines = zuegeText.split('\n');
                 const zuegeMap = {};
                 for (let i = 1; i < zuegeLines.length; i++) {
@@ -1044,25 +1067,26 @@
                     }
                 }
 
-                // Parse abfahrten.txt
+                // Parse abfahrten.csv
                 const abfahrtenLines = abfahrtenText.split('\n');
                 const fahrplanMap = {};
                 for (let i = 1; i < abfahrtenLines.length; i++) {
                     const line = abfahrtenLines[i].trim();
                     if (!line) continue;
                     const cols = line.split('\t');
-                    if (cols.length >= 4) {
+                    if (cols.length >= 5) {
                         const zugNr = cols[0].trim();
                         if (!fahrplanMap[zugNr]) fahrplanMap[zugNr] = [];
                         fahrplanMap[zugNr].push({
                             ankunft: cols[1].trim(),
                             abfahrt: cols[2].trim(),
-                            bahnhof: cols[3].trim()
+                            haelt: cols[3].trim(),
+                            bahnhof: cols[4].trim()
                         });
                     }
                 }
 
-                // Parse zpa.txt
+                // Parse zpa.csv
                 const zpaLines = zpaText.split('\n');
                 const zpaMap = {};
                 for (let i = 1; i < zpaLines.length; i++) {
@@ -1101,7 +1125,7 @@
                     const gattung = zuegeMap[zugNr] || '';
                     const zugName = `${gattung} ${zugNr}`.trim();
 
-                    const timeToMin = (t) => {
+                    window.timeToMin = (t) => {
                         if (!t) return 9999;
                         const parts = t.split('.');
                         if (parts.length === 2) {
@@ -1109,6 +1133,7 @@
                         }
                         return 9999;
                     };
+                    const timeToMin = window.timeToMin;
 
                     const getZeitString = (row) => {
                         const ank = row.ankunft;
@@ -1197,9 +1222,84 @@
                     // Laufweg HTML
                     let lwHtml = `<div class="content-laufweg" style="display:${tState === 'laufweg' ? 'block' : 'none'}">`;
                     lwHtml += '<table class="fahrplan-table">';
-                    lwHtml += '<thead><tr><th>Ankunft</th><th>Abfahrt</th><th>Bahnhof</th></tr></thead><tbody>';
-                    for (const r of rows) {
-                        lwHtml += `<tr><td>${r.ankunft}</td><td>${r.abfahrt}</td><td>${r.bahnhof}</td></tr>`;
+                    lwHtml += '<thead><tr><th></th><th>Ankunft</th><th>Abfahrt</th><th>Bahnhof</th></tr></thead><tbody>';
+                    const sel = document.getElementById('station-select');
+                    const currentStation = sel ? sel.value : 'Berlin-Lichterfelde Ost';
+                    
+                    // Current time in minutes for position calculation
+                    const nowMin = clockH * 60 + clockM + clockS / 60;
+                    
+                    // Find the best-matching row index for current train position
+                    // Converts "H.MM" time strings to minutes
+                    const tToMin = (t) => {
+                        if (!t) return null;
+                        const p = t.trim().split('.');
+                        return p.length === 2 ? parseInt(p[0]) * 60 + parseInt(p[1]) : null;
+                    };
+                    
+                    // Determine position indicator for each row
+                    // posRow = index of row where the dot should appear
+                    let posRow = -1;
+                    let dotPulsing = false;
+                    
+                    for (let i = 0; i < rows.length; i++) {
+                        const r = rows[i];
+                        const ank = tToMin(r.ankunft);
+                        const abf = tToMin(r.abfahrt);
+                        const dep = abf !== null ? abf : ank; // time when train leaves this station
+                        const arr = ank !== null ? ank : abf; // time when train arrives at this station
+                        
+                        if (arr !== null && nowMin < arr) {
+                            // Train hasn't arrived at this station yet
+                            // Dot belongs to previous row (between prev station and this)
+                            posRow = i - 1;
+                            dotPulsing = true;
+                            break;
+                        }
+                        
+                        if (arr !== null && abf !== null && nowMin >= arr && nowMin < abf) {
+                            // Train is standing at this station between arrival and departure
+                            posRow = i;
+                            dotPulsing = false;
+                            break;
+                        }
+                        
+                        if (dep !== null && nowMin >= arr && nowMin < dep) {
+                            // Only departure, or after arrival but before departure
+                            posRow = i;
+                            dotPulsing = (arr === null || nowMin < arr); // pulse if not yet arrived
+                            break;
+                        }
+                        
+                        // After departure: position is this row, check if train is en-route to next
+                        if (dep !== null && nowMin >= dep) {
+                            posRow = i; // tentatively
+                            dotPulsing = true;
+                        }
+                    }
+                    
+                    for (let i = 0; i < rows.length; i++) {
+                        const r = rows[i];
+                        let rowStyle = "";
+                        if (r.haelt === 'D') rowStyle += "font-style: italic;";
+                        if (r.bahnhof === currentStation) rowStyle += " background-color: #ffeba1;";
+                        
+                        const styleAttr = rowStyle ? ` style="${rowStyle.trim()}"` : "";
+                        
+                        // Build position dot cell
+                        let dotCell = '<td style="width:14px;padding:0 2px;">';
+                        if (i === posRow) {
+                            const cls = dotPulsing ? 'zug-pos-dot pulsing' : 'zug-pos-dot';
+                            dotCell += `<span class="${cls}"></span>`;
+                        }
+                        dotCell += '</td>';
+                        
+                        if (r.haelt === 'D') {
+                            const time = r.abfahrt || r.ankunft;
+                            lwHtml += `<tr${styleAttr}>${dotCell}<td colspan="2" style="text-align: center;">(${time})</td><td>${r.bahnhof}</td></tr>`;
+                        } else {
+                            lwHtml += `<tr${styleAttr}>${dotCell}<td>${r.ankunft}</td><td>${r.abfahrt}</td><td>${r.bahnhof}</td></tr>`;
+                        }
                     }
                     lwHtml += '</tbody></table></div>';
 
@@ -1293,19 +1393,6 @@
 
         // --- Signal Train Info ---
         // --- Train Animation & Signal Logic ---
-        function getStationOffset(trainsArea) {
-            const sel = document.getElementById('station-select');
-            const station = sel ? sel.value : 'Berlin-Lichterfelde Ost';
-            if (station === 'Berlin Anhalter Bf') return 0;
-            // Berlin-Lichterfelde Ost is left (South) of Anh Bf.
-            // nachHalleZuege (area 1): depart Ahb going south -> LiOst is 7min later (+7 offset)
-            // nachAhbZuege   (area 5): arrive at Ahb from south -> LiOst is 7min earlier (-7 offset)
-            if (trainsArea === 1) return +7;
-            if (trainsArea === 5) return -7;
-            return 0;
-        }
-
-
         window.updateSignalTrainInfo = function() {
             // UI info update is now handled in the animation loop to ensure smooth countdowns
         };
@@ -1326,6 +1413,18 @@
                 this.currentZugNr = null;
                 this.sigState = 'fahrt';
                 this.width = 100;
+                // Shunting elements (only used at Berlin Anhalter Bf)
+                this.rangierlokEl = document.getElementById(isTopTrack ? 'rangierlok-top' : 'rangierlok-bottom');
+                this.zugLokEl    = document.getElementById(isTopTrack ? 'zuglok-top'    : 'zuglok-bottom');
+                // Shunting state machine
+                this.shuntPhase  = 'IDLE'; // IDLE | DEPART_IN | DEPART_SHUNTER_OUT | DEPART_LOK_PAUSE | DEPART_LOK_IN | DEPART_READY | DEPARTING
+                                           //      | ARRIVE_SHUNTER_IN | ARRIVE_PULLING | ARRIVE_LOK_FOLLOWS | ARRIVE_DONE
+                this.shuntTimer  = 0;  // real ms timer for current phase
+                this.rlX         = 0;  // rangierlok left-edge position
+                this.rlWidth     = 0;  // rangierlok width (px)
+                this.zlX         = 0;  // zuglok left-edge position
+                this.zlWidth     = 0;  // zuglok width
+                this.shuntTrainX = 0;  // train left-edge when shunting controls positioning
             }
 
             gatClass(g) {
@@ -1335,14 +1434,302 @@
                 return 'sig-gat-p';
             }
 
-            update(dt, currentTimeSec) {
-                const off = getStationOffset(this.area);
-                const zuegeList = this.area === 5 ? window._nachAhbZuege : window._nachHalleZuege;
-                
-                let z = null;
-                if (zuegeList) {
-                    z = zuegeList.find(t => (t.zeitMin + off) * 60 >= currentTimeSec - 120) || zuegeList[0];
+            // ── Shunting helpers ─────────────────────────────────────────────────
+            _hideShuntElements() {
+                if (this.rangierlokEl) this.rangierlokEl.style.display = 'none';
+                if (this.zugLokEl)    this.zugLokEl.style.display = 'none';
+            }
+
+            _imgEl(src, mirror = false) {
+                const div = document.createElement('div');
+                div.className = 'vehicle';
+                const img = document.createElement('img');
+                img.src = src;
+                if (mirror) img.style.transform = 'scaleX(-1)';
+                div.appendChild(img);
+                return div;
+            }
+
+            _buildRangierlok(el, mirror = false) {
+                el.innerHTML = '';
+                el.style.gap = '0'; el.style.bottom = '5px'; el.style.flexDirection = 'row';
+                el.appendChild(this._imgEl('./data/img/loks/rangierlok.gif', mirror));
+                el.style.display = 'flex';
+                el.getBoundingClientRect(); // force layout
+                this.rlWidth = el.getBoundingClientRect().width || 50;
+            }
+
+            _buildZugLok(el, mirror = false) {
+                el.innerHTML = '';
+                el.style.gap = '0'; el.style.bottom = '5px'; el.style.flexDirection = 'row';
+                el.appendChild(this._imgEl('./data/img/pwagen/lok.png', mirror));
+                el.style.display = 'flex';
+                el.getBoundingClientRect();
+                this.zlWidth = el.getBoundingClientRect().width || 60;
+            }
+
+            _buildCarsOnly(el, zugNr, reverse = false) {
+                const zpList = (window._zpaMap && window._zpaMap[zugNr]) || [];
+                el.innerHTML = '';
+                el.style.gap = '5px'; el.style.bottom = '5px';
+                el.style.flexDirection = reverse ? 'row-reverse' : 'row';
+                zpList.forEach(w => {
+                    let base = w.gattung.split(' ')[0].split(/ue|ü|\?|-|(?<=[0-9])[a-z]/i)[0] || 'Unbekannt';
+                    const img = document.createElement('img');
+                    img.src = `./data/img/pwagen/${base}.png`;
+                    img.onerror = function() { this.onerror = null; this.src = './data/img/pwagen/Unbekannt.png'; };
+                    const div = document.createElement('div'); div.className = 'vehicle'; div.appendChild(img);
+                    el.appendChild(div);
+                });
+                el.style.display = 'flex';
+                el.getBoundingClientRect();
+            }
+
+            // ── Shunting state machine ────────────────────────────────────────────
+            // Called every frame when station === 'Berlin Anhalter Bf'.
+            // Returns true if shunting is controlling the train position (TrainAnimator should skip its own positioning).
+            shuntUpdate(dt, diffSec, z, signalX, screenW) {
+                const ts = Math.min(dt / 16.66, 5); // time-scale
+                const accel = 0.03;
+                const maxSpd = 2.5;
+
+                const moveToward = (cur, target) => {
+                    const dist = target - cur;
+                    if (Math.abs(dist) < 0.5) return target;
+                    const brakeSp = Math.sqrt(2 * accel * Math.abs(dist));
+                    const sp = Math.min((this._shuntSpeed || 0) + accel * ts, maxSpd, brakeSp);
+                    this._shuntSpeed = sp;
+                    return cur + Math.sign(dist) * sp * ts;
+                };
+                const moveLeft = (cur) => {
+                    const sp = Math.min((this._shuntSpeed || 0) + accel * ts, maxSpd);
+                    this._shuntSpeed = sp;
+                    return cur - sp * ts;
+                };
+                const moveRight = (cur) => {
+                    const sp = Math.min((this._shuntSpeed || 0) + accel * ts, maxSpd);
+                    this._shuntSpeed = sp;
+                    return cur + sp * ts;
+                };
+
+                // ── DEPARTING train (top track) ─────────────────────────────────
+                if (this.isTopTrack) {
+                    switch (this.shuntPhase) {
+                        case 'IDLE':
+                            if (diffSec <= 180) {
+                                // Build: [Rangierlok][Cars], enter from left
+                                this._buildCarsOnly(this.trainEl, z.rawZugNr, false);
+                                this.width = this.trainEl.getBoundingClientRect().width || 200;
+                                this._buildRangierlok(this.rangierlokEl, true); // mirrored: facing right to push
+                                // Start positions: off-screen left
+                                this.shuntTrainX = -this.width - this.rlWidth - 80;
+                                this.rlX          = -this.rlWidth - 80;
+                                this.trainEl.style.left = `${this.shuntTrainX}px`;
+                                this.rangierlokEl.style.left = `${this.rlX}px`;
+                                this._shuntSpeed = 0;
+                                this.shuntPhase = 'DEPART_IN';
+                                this.frontX = signalX; // keep TrainAnimator's tracking in sync
+                            }
+                            return false;
+
+                        case 'DEPART_IN': {
+                            // Move right: cars stop at trainTargetX = signalX, rl just behind
+                            const carTarget = signalX;
+                            const atTarget  = Math.abs(this.shuntTrainX - carTarget) < 0.5;
+                            if (!atTarget) {
+                                const next = moveToward(this.shuntTrainX, carTarget);
+                                const delta = next - this.shuntTrainX;
+                                this.shuntTrainX = next;
+                                this.rlX += delta;
+                            } else {
+                                this.shuntTrainX = carTarget;
+                                this.rlX = carTarget - this.rlWidth - 2;
+                                this._shuntSpeed = 0;
+                                this.shuntTimer = 0;
+                                this.shuntPhase = 'DEPART_SHUNTER_OUT';
+                            }
+                            this.trainEl.style.left = `${this.shuntTrainX}px`;
+                            this.rangierlokEl.style.left = `${this.rlX}px`;
+                            return true;
+                        }
+
+                        case 'DEPART_SHUNTER_OUT':
+                            this.shuntTimer += dt;
+                            if (this.shuntTimer < 1200) return true; // 1.2s pause
+                            this._shuntSpeed = 0;
+                            this.shuntPhase = 'DEPART_RL_OUT';
+                            // fall through
+                        case 'DEPART_RL_OUT':
+                            this.rlX = moveLeft(this.rlX);
+                            this.rangierlokEl.style.left = `${this.rlX}px`;
+                            if (this.rlX + this.rlWidth < -20) {
+                                this.rangierlokEl.style.display = 'none';
+                                this._shuntSpeed = 0;
+                                this.shuntTimer = 0;
+                                this.shuntPhase = 'DEPART_LOK_PAUSE';
+                            }
+                            return true;
+
+                        case 'DEPART_LOK_PAUSE':
+                            this.shuntTimer += dt;
+                            if (this.shuntTimer >= 10000) { // 10 real seconds
+                                this._buildZugLok(this.zugLokEl, false); // lok facing left to depart
+                                this.zlX = -this.zlWidth - 50; // start off-screen left
+                                this.zugLokEl.style.left = `${this.zlX}px`;
+                                this._shuntSpeed = 0;
+                                this.shuntPhase = 'DEPART_LOK_IN';
+                            }
+                            return true;
+
+                        case 'DEPART_LOK_IN': {
+                            // Zuglok moves right to attach at left of cars (target: shuntTrainX - zlWidth - 2)
+                            const lokTarget = this.shuntTrainX - this.zlWidth - 2;
+                            const at = Math.abs(this.zlX - lokTarget) < 0.5;
+                            if (!at) {
+                                this.zlX = moveToward(this.zlX, lokTarget);
+                            } else {
+                                this.zlX = lokTarget;
+                                this._shuntSpeed = 0;
+                                this.shuntPhase = 'DEPART_READY';
+                            }
+                            this.zugLokEl.style.left = `${this.zlX}px`;
+                            return true;
+                        }
+
+                        case 'DEPART_READY':
+                            if (diffSec <= 0) {
+                                this._shuntSpeed = 0;
+                                this.shuntPhase = 'DEPARTING';
+                            }
+                            return true; // keep blocking
+
+                        case 'DEPARTING': {
+                            // Both Zuglok and cars move left together
+                            const sp = Math.min((this._shuntSpeed || 0) + accel * ts, maxSpd);
+                            this._shuntSpeed = sp;
+                            this.zlX -= sp * ts;
+                            this.shuntTrainX -= sp * ts;
+                            this.zugLokEl.style.left = `${this.zlX}px`;
+                            this.trainEl.style.left  = `${this.shuntTrainX}px`;
+                            if (this.shuntTrainX + this.width < -100) {
+                                this.trainEl.style.display = 'none';
+                                this.zugLokEl.style.display = 'none';
+                                this._hideShuntElements();
+                                this.shuntPhase = 'IDLE';
+                                this.currentZugNr = null;
+                            }
+                            return true;
+                        }
+                    }
                 }
+
+                // ── ARRIVING train (bottom track) ───────────────────────────────
+                if (!this.isTopTrack) {
+                    switch (this.shuntPhase) {
+                        case 'IDLE':
+                            // Activate 3 sim-minutes (180 sim-sec) after arrival (diffSec < -180)
+                            if (diffSec < -180) {
+                                // Split train: cars in trainEl, Lok separate in zugLokEl
+                                this._buildCarsOnly(this.trainEl, z.rawZugNr, true); // row-reverse (cars on left, empty right where Lok was)
+                                this.width = this.trainEl.getBoundingClientRect().width || 200;
+                                // trainEl left edge: signalX - totalWidth; since we removed Lok width, approximate
+                                this.shuntTrainX = signalX - this.width; // left edge of cars portion
+                                this.trainEl.style.left = `${this.shuntTrainX}px`;
+
+                                // Zuglok at the right end (where it would have been)
+                                this._buildZugLok(this.zugLokEl, true); // mirrored: facing right (arrived from right)
+                                this.zlX = signalX - this.zlWidth;
+                                this.zugLokEl.style.left = `${this.zlX}px`;
+
+                                // Rangierlok comes from left, mirrored to face right
+                                this._buildRangierlok(this.rangierlokEl, false);
+                                this.rlX = -this.rlWidth - 50;
+                                this.rangierlokEl.style.left = `${this.rlX}px`;
+                                this._shuntSpeed = 0;
+                                this.shuntPhase = 'ARRIVE_RL_IN';
+                            }
+                            return false;
+
+                        case 'ARRIVE_RL_IN': {
+                            // Rangierlok moves right to attach at left of cars
+                            const target = this.shuntTrainX - this.rlWidth - 2;
+                            const at = Math.abs(this.rlX - target) < 0.5;
+                            if (!at) {
+                                this.rlX = moveToward(this.rlX, target);
+                            } else {
+                                this.rlX = target;
+                                this._shuntSpeed = 0;
+                                this.shuntTimer = 0;
+                                this.shuntPhase = 'ARRIVE_PAUSE';
+                            }
+                            this.rangierlokEl.style.left = `${this.rlX}px`;
+                            return true;
+                        }
+
+                        case 'ARRIVE_PAUSE':
+                            this.shuntTimer += dt;
+                            if (this.shuntTimer >= 800) {
+                                this._shuntSpeed = 0;
+                                this.shuntPhase = 'ARRIVE_PULLING';
+                            }
+                            return true;
+
+                        case 'ARRIVE_PULLING': {
+                            // Rangierlok + cars move left together; Zuglok stays
+                            const sp = Math.min((this._shuntSpeed || 0) + accel * ts, maxSpd);
+                            this._shuntSpeed = sp;
+                            this.rlX -= sp * ts;
+                            this.shuntTrainX -= sp * ts;
+                            this.rangierlokEl.style.left = `${this.rlX}px`;
+                            this.trainEl.style.left      = `${this.shuntTrainX}px`;
+                            // When train is halfway off-screen left, start Zuglok
+                            if (this.shuntTrainX + this.width / 2 < 0) {
+                                this.shuntPhase = 'ARRIVE_LOK_FOLLOWS';
+                            }
+                            return true;
+                        }
+
+                        case 'ARRIVE_LOK_FOLLOWS': {
+                            const sp = Math.min((this._shuntSpeed || 0) + accel * ts, maxSpd);
+                            this._shuntSpeed = sp;
+                            this.rlX -= sp * ts;
+                            this.shuntTrainX -= sp * ts;
+                            this.zlX -= sp * ts;
+                            this.rangierlokEl.style.left = `${this.rlX}px`;
+                            this.trainEl.style.left      = `${this.shuntTrainX}px`;
+                            this.zugLokEl.style.left     = `${this.zlX}px`;
+                            if (this.shuntTrainX + this.width < -100 && this.zlX + this.zlWidth < -100) {
+                                this.trainEl.style.display = 'none';
+                                this._hideShuntElements();
+                                this.shuntPhase = 'IDLE';
+                                this.currentZugNr = null;
+                            }
+                            return true;
+                        }
+                    }
+                }
+
+                return false;
+            }
+
+            update(dt, currentTimeSec) {
+                const zuegeList = this.area === 5 ? window._nachAhbZuege : window._nachHalleZuege;
+                if (!zuegeList || zuegeList.length === 0) return;
+                
+                const sel = document.getElementById('station-select');
+                const station = sel ? sel.value : 'Berlin-Lichterfelde Ost';
+                
+                // Helper to get time at selected station for a train
+                const getTrainTimeAtStation = (zug) => {
+                    const rows = window._fahrplanMap ? (window._fahrplanMap[zug.rawZugNr] || []) : [];
+                    let r = rows.find(r => r.bahnhof === station);
+                    if (!r) r = rows.find(r => r.bahnhof === 'Berlin Anhalter Bf');
+                    if (!r) return zug.zeitMin;
+                    const timeStr = (station === 'Berlin Anhalter Bf' && this.area === 1) ? (r.abfahrt || r.ankunft) : (r.ankunft || r.abfahrt);
+                    return window.timeToMin(timeStr);
+                };
+                
+                let z = zuegeList.find(t => (getTrainTimeAtStation(t)) * 60 >= currentTimeSec - 120) || zuegeList[0];
                 
                 if (!z) {
                     this.trainEl.style.display = 'none';
@@ -1351,7 +1738,22 @@
                     return;
                 }
 
-                const T_sec = (z.zeitMin + off) * 60;
+                const rows = window._fahrplanMap ? (window._fahrplanMap[z.rawZugNr] || []) : [];
+                let curStationRow = rows.find(r => r.bahnhof === station);
+                if (!curStationRow) curStationRow = rows.find(r => r.bahnhof === 'Berlin Anhalter Bf');
+                
+                let tMin = z.zeitMin;
+                let isDurchfahrt = false;
+                let displayTime = z.zeit;
+                
+                if (curStationRow) {
+                    const timeStrForCalc = (station === 'Berlin Anhalter Bf' && this.area === 1) ? (curStationRow.abfahrt || curStationRow.ankunft) : (curStationRow.ankunft || curStationRow.abfahrt);
+                    tMin = window.timeToMin(timeStrForCalc);
+                    isDurchfahrt = (curStationRow.haelt === 'D');
+                    displayTime = timeStrForCalc;
+                }
+                
+                const T_sec = tMin * 60;
                 let diffSec = T_sec - currentTimeSec; // positive means in future
                 if (diffSec > 12 * 3600) diffSec -= 24 * 3600;
                 if (diffSec < -12 * 3600) diffSec += 24 * 3600;
@@ -1361,35 +1763,32 @@
                 const cls = this.gatClass(g);
                 
                 // Find next stop from Laufweg
-                const sel = document.getElementById('station-select');
-                const station = sel ? sel.value : 'Berlin-Lichterfelde Ost';
-                const rows = window._fahrplanMap ? (window._fahrplanMap[z.rawZugNr] || []) : [];
+                // (sel, station, rows already declared above)
                 let stopLabel = '';
                 if (rows.length > 0) {
                     const ahbName = 'Berlin Anhalter Bf';
                     const liName = 'Berlin-Lichterfelde Ost';
                     const curStation = (station === 'Berlin Anhalter Bf') ? ahbName : liName;
                     let curIdx = rows.findIndex(r => r.bahnhof === curStation);
-                    // If station not in Laufweg, use Ahb as reference (LiOst is before Ahb for top, after for bottom)
                     if (curIdx < 0) {
                         curIdx = rows.findIndex(r => r.bahnhof === ahbName);
                     }
-                    if (this.isTopTrack) {
-                        // Top track: train going LEFT towards Ahb
-                        // Next stop = station after current in list (towards Ahb = end of list)
+                    
+                    if (this.area === 1) {
+                        // area 1: away from Ahb (nach Halle)
                         if (curIdx >= 0 && curIdx + 1 < rows.length) {
                             stopLabel = ` (nächster Halt: ${rows[curIdx + 1].bahnhof})`;
                         }
                     } else {
-                        // Bottom track: train going RIGHT away from Ahb
-                        // Next stop = station after Ahb in list
-                        if (curIdx >= 0 && curIdx + 1 < rows.length) {
-                            stopLabel = ` (nächster Halt: ${rows[curIdx + 1].bahnhof})`;
+                        // area 5: towards Ahb (aus Halle)
+                        if (curIdx > 0) {
+                            stopLabel = ` (letzter Halt: ${rows[curIdx - 1].bahnhof})`;
                         }
                     }
                 }
                 
-                this.routeEl.innerHTML = `${z.zeit}&nbsp;<span class="${cls}"><strong>${z.zug}</strong></span>&nbsp;${z.vonNach}${stopLabel ? `<span style="color:#aaa;font-size:0.9em">${stopLabel}</span>` : ''}`;
+                let vonNachPrefix = this.area === 5 ? 'aus ' : '';
+                this.routeEl.innerHTML = `${z.zeit}&nbsp;<span class="${cls}"><strong>${z.zug}</strong></span>&nbsp;${vonNachPrefix}${z.vonNach}${stopLabel ? `<span style="color:#aaa;font-size:0.9em">${stopLabel}</span>` : ''}`;
                 
                 const screenW = window.innerWidth;
                 const signalX = this.isTopTrack ? 80 : screenW - 80;
@@ -1397,11 +1796,36 @@
                 const realTravelTime = travelDist / 120; // 120px per sec
                 const simTravelTime = realTravelTime * timeMul;
                 
-                const stopping = (g === 'P');
+                let stopping = false;
+                if (rows.length > 0) {
+                    const ahbName = 'Berlin Anhalter Bf';
+                    const liName = 'Berlin-Lichterfelde Ost';
+                    const curStation = (station === 'Berlin Anhalter Bf') ? ahbName : liName;
+                    let localCurIdx = rows.findIndex(r => r.bahnhof === curStation);
+                    if (localCurIdx < 0) localCurIdx = rows.findIndex(r => r.bahnhof === ahbName);
+                    
+                    if (localCurIdx >= 0) {
+                        stopping = (rows[localCurIdx].haelt !== 'D');
+                    } else {
+                        stopping = (g === 'P');
+                    }
+                } else {
+                    stopping = (g === 'P');
+                }
+                
                 const waitSimTime = stopping ? 60 : 0; // stop for 60 simulated seconds
                 const spawnDiffSec = simTravelTime + waitSimTime;
                 
-                let shouldBeActive = (diffSec <= spawnDiffSec && diffSec >= -120);
+                let isKopfbahnhofDepart = (station === 'Berlin Anhalter Bf' && this.isTopTrack);
+                let isKopfbahnhofArrive = (station === 'Berlin Anhalter Bf' && !this.isTopTrack);
+                let shouldBeActive = false;
+                if (isKopfbahnhofDepart) {
+                    shouldBeActive = (diffSec <= 180 && diffSec >= -120);
+                } else if (isKopfbahnhofArrive) {
+                    shouldBeActive = (diffSec <= spawnDiffSec && diffSec >= -180);
+                } else {
+                    shouldBeActive = (diffSec <= spawnDiffSec && diffSec >= -120);
+                }
 
                 // Countdown Logic (Real time until train front reaches the signal)
                 let realTimeToSignal = 0;
@@ -1412,15 +1836,23 @@
                     if (distToSignal > 2) {
                         realTimeToSignal = distToSignal / 120;
                         showCountdown = true;
+                    } else if (isKopfbahnhofDepart && diffSec > 0) {
+                        realTimeToSignal = diffSec / timeMul;
+                        showCountdown = true;
                     }
                 } else if (diffSec > 0 && diffSec < 12 * 3600) {
-                    let simTimeUntilSpawn = diffSec - spawnDiffSec;
-                    if (simTimeUntilSpawn > 0) {
-                        realTimeToSignal = (simTimeUntilSpawn / timeMul) + realTravelTime;
+                    if (isKopfbahnhofDepart) {
+                        realTimeToSignal = diffSec / timeMul;
                         showCountdown = true;
                     } else {
-                        realTimeToSignal = realTravelTime;
-                        showCountdown = true;
+                        let simTimeUntilSpawn = diffSec - spawnDiffSec;
+                        if (simTimeUntilSpawn > 0) {
+                            realTimeToSignal = (simTimeUntilSpawn / timeMul) + realTravelTime;
+                            showCountdown = true;
+                        } else {
+                            realTimeToSignal = realTravelTime;
+                            showCountdown = true;
+                        }
                     }
                 }
 
@@ -1435,16 +1867,35 @@
 
                 if (z.rawZugNr !== this.currentZugNr) {
                     if (shouldBeActive) {
+                        // Reset shunting when new train comes
+                        if (this.shuntPhase !== 'IDLE') this._hideShuntElements();
+                        this.shuntPhase = 'IDLE';
+                        this._shuntSpeed = 0;
                         this.currentZugNr = z.rawZugNr;
-                        this.frontX = this.isTopTrack ? screenW + 100 : -100;
-                        this.speed = this.maxSpeed;
                         
-                        const viewMode = document.querySelector('input[name="view-mode"]:checked')?.value;
-                        if (viewMode === 'schematic') {
-                            renderSchematicTrain(this.trainEl, z, this.isTopTrack);
+                        if (isKopfbahnhofDepart) {
+                            // shuntUpdate() will handle everything
+                            this.frontX = signalX;
+                            this.trainEl.style.opacity = '1';
+                            this.trainEl.style.transition = '';
+                            // Don't render train here – shuntUpdate DEPART_IN will build it
+                        } else if (isKopfbahnhofArrive) {
+                            // Normal arrival: spawn from far side, shuntUpdate handles post-arrival
+                            this.frontX = this.isTopTrack ? screenW + 100 : -100;
+                            this.trainEl.style.opacity = '1';
+                            this.trainEl.style.transition = '';
+                            const viewMode = document.querySelector('input[name="view-mode"]:checked')?.value;
+                            if (viewMode === 'schematic') renderSchematicTrain(this.trainEl, z, this.isTopTrack);
+                            else this.trainEl.innerHTML = '';
                         } else {
-                            this.trainEl.innerHTML = '';
+                            this.frontX = this.isTopTrack ? screenW + 100 : -100;
+                            this.trainEl.style.opacity = '1';
+                            this.trainEl.style.transition = '';
+                            const viewMode = document.querySelector('input[name="view-mode"]:checked')?.value;
+                            if (viewMode === 'schematic') renderSchematicTrain(this.trainEl, z, this.isTopTrack);
+                            else this.trainEl.innerHTML = '';
                         }
+                        this.speed = (isKopfbahnhofDepart) ? 0 : this.maxSpeed;
                     } else {
                         this.trainEl.style.display = 'none';
                         return;
@@ -1453,6 +1904,21 @@
                 
                 this.width = this.trainEl.getBoundingClientRect().width || 100;
                 
+                // ── Shunting takes full control at Berlin Anhalter Bf ──────────
+                if (station === 'Berlin Anhalter Bf' && (isKopfbahnhofDepart || isKopfbahnhofArrive)) {
+                    const shuntHandled = this.shuntUpdate(dt, diffSec, z, signalX, screenW);
+                    if (shuntHandled) {
+                        // shuntUpdate sets trainEl.style.left directly; just ensure it's visible
+                        this.trainEl.style.display = 'flex';
+                        this.signalEl.style.display = isKopfbahnhofArrive ? 'none' : 'block';
+                        // Signal: Halt until shunt DEPARTING or DONE
+                        const shuntDeparting = this.shuntPhase === 'DEPARTING' || this.shuntPhase === 'ARRIVE_LOK_FOLLOWS';
+                        this.sigState = (isKopfbahnhofDepart && shuntDeparting) ? 'fahrt' : 'halt';
+                        this.signalEl.className = `signal ${this.sigState}`;
+                        return;
+                    }
+                }
+
                 let backX = this.isTopTrack ? this.frontX + this.width : this.frontX - this.width;
                 let isOffScreen = this.isTopTrack ? (backX < -100) : (backX > screenW + 100);
                 
@@ -1464,7 +1930,13 @@
                 
                 this.trainEl.style.display = 'flex';
 
-                if (stopping && diffSec > 0) {
+                if (station === 'Berlin Anhalter Bf' && !this.isTopTrack) {
+                    this.signalEl.style.display = 'none';
+                } else {
+                    this.signalEl.style.display = 'block';
+                }
+
+                if (isKopfbahnhofArrive || (stopping && diffSec > 0)) {
                     this.sigState = 'halt';
                 } else {
                     this.sigState = 'fahrt';
@@ -1477,11 +1949,15 @@
                 let targetX = signalX;
 
                 if (this.isTopTrack) { 
-                    if (this.sigState === 'halt' && this.frontX > targetX) {
-                        let dist = this.frontX - targetX;
-                        let targetSpeed = Math.sqrt(2 * this.acceleration * dist);
-                        this.speed = Math.min(this.speed, targetSpeed);
-                        if (dist <= 1 && this.speed < 0.5) {
+                    if (this.sigState === 'halt' && this.frontX >= targetX) {
+                        if (this.frontX > targetX) {
+                            let dist = this.frontX - targetX;
+                            let targetSpeed = Math.sqrt(2 * this.acceleration * dist);
+                            this.speed = Math.min(this.speed, targetSpeed);
+                        } else {
+                            this.speed = 0;
+                        }
+                        if (this.frontX - targetX <= 1 && this.speed < 0.5) {
                             this.speed = 0;
                             this.frontX = targetX;
                         }
@@ -1491,11 +1967,15 @@
                     }
                     this.frontX -= this.speed * timeScale;
                 } else { 
-                    if (this.sigState === 'halt' && this.frontX < targetX) {
-                        let dist = targetX - this.frontX;
-                        let targetSpeed = Math.sqrt(2 * this.acceleration * dist);
-                        this.speed = Math.min(this.speed, targetSpeed);
-                        if (dist <= 1 && this.speed < 0.5) {
+                    if (this.sigState === 'halt' && this.frontX <= targetX) {
+                        if (this.frontX < targetX) {
+                            let dist = targetX - this.frontX;
+                            let targetSpeed = Math.sqrt(2 * this.acceleration * dist);
+                            this.speed = Math.min(this.speed, targetSpeed);
+                        } else {
+                            this.speed = 0;
+                        }
+                        if (targetX - this.frontX <= 1 && this.speed < 0.5) {
                             this.speed = 0;
                             this.frontX = targetX;
                         }
@@ -1511,8 +1991,8 @@
             }
         }
 
-        const animTop = new TrainAnimator(true, 'train-top', 'signal-top', 'route-top', 'countdown-top', 1);
-        const animBottom = new TrainAnimator(false, 'train-bottom', 'signal-bottom', 'route-bottom', 'countdown-bottom', 5);
+        const animTop = new TrainAnimator(true, 'train-top', 'signal-top', 'route-top', 'countdown-top', 5);
+        const animBottom = new TrainAnimator(false, 'train-bottom', 'signal-bottom', 'route-bottom', 'countdown-bottom', 1);
 
         let lastAnimTime = performance.now();
         function animationLoop(now) {
