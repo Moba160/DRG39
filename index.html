@@ -921,6 +921,9 @@
                 document.body.classList.remove('show-info');
             }
         });
+        // Ensure default state is active on load
+        infoCheckbox.checked = true;
+        document.body.classList.add('show-info');
 
         document.querySelectorAll('input[name="view-mode"]').forEach(radio => {
             radio.addEventListener('change', () => {
@@ -1173,6 +1176,9 @@
                 window._nachHalleZuege = nachHalleZuege;
 
                 window._createTable = function createTable(zuege, area) {
+                    const sel = document.getElementById('station-select');
+                    const station = sel ? sel.value : 'Berlin-Lichterfelde Ost';
+
                     let html = '<table class="fahrplan-table">';
                     html += `<thead><tr><th>Zug</th><th>Zeit</th><th>${area === 1 ? 'Nach' : 'Von'}</th></tr></thead><tbody>`;
                     zuege.forEach(z => {
@@ -1181,9 +1187,22 @@
                         else if (z.gattung === 'D') colorClass = 'gattung-d';
                         else if (z.gattung === 'E') colorClass = 'gattung-e';
                         
+                        let displayTime = z.zeit;
+                        let isDurchfahrt = false;
+                        const rows = window._fahrplanMap ? (window._fahrplanMap[z.rawZugNr] || []) : [];
+                        let curStationRow = rows.find(r => r.bahnhof === station);
+                        if (!curStationRow) curStationRow = rows.find(r => r.bahnhof === 'Berlin Anhalter Bf');
+                        if (curStationRow) {
+                            const timeStrForCalc = (station === 'Berlin Anhalter Bf' && area === 1) ? (curStationRow.abfahrt || curStationRow.ankunft) : (curStationRow.ankunft || curStationRow.abfahrt);
+                            if (timeStrForCalc) displayTime = timeStrForCalc;
+                            isDurchfahrt = (curStationRow.haelt === 'D');
+                        }
+                        
+                        const finalTimeHtml = isDurchfahrt ? `<i>(${displayTime})</i>` : displayTime;
+                        
                         html += `<tr class="${colorClass}" data-zugnr="${z.rawZugNr}" onclick="window.selectTrain('${z.rawZugNr}', ${area}, this)">
                             <td>${z.zug}</td>
-                            <td>${z.zeit}</td>
+                            <td>${finalTimeHtml}</td>
                             <td style="text-align:${area === 1 ? 'left' : 'right'};">${z.vonNach}</td>
                         </tr>`;
                     });
@@ -1202,6 +1221,9 @@
 
                     const rows = window._fahrplanMap[zugNr];
                     if (!rows) return;
+                    const targetArea = area === 1 ? 2 : 4;
+                    if (!window._laufwegStates) window._laufwegStates = {};
+                    window._laufwegStates[targetArea] = rows;
 
                     const gattung = window._zuegeMap[zugNr] || '';
                     const zugName = `${gattung} ${zugNr}`.trim();
@@ -1216,67 +1238,25 @@
                         document.getElementById('info-col4').textContent = `${zugName} von ${firstRow.bahnhof}`;
                     }
 
-                    const targetArea = area === 1 ? 2 : 4;
                     const tState = tabState[targetArea];
 
                     // Laufweg HTML
                     let lwHtml = `<div class="content-laufweg" style="display:${tState === 'laufweg' ? 'block' : 'none'}">`;
                     lwHtml += '<table class="fahrplan-table">';
-                    lwHtml += '<thead><tr><th></th><th>Ankunft</th><th>Abfahrt</th><th>Bahnhof</th></tr></thead><tbody>';
+                    lwHtml += '<thead><tr><th>Ankunft</th><th>Abfahrt</th><th>Bahnhof</th></tr></thead><tbody>';
                     const sel = document.getElementById('station-select');
                     const currentStation = sel ? sel.value : 'Berlin-Lichterfelde Ost';
                     
-                    // Current time in minutes for position calculation
+                    // Current time in minutes
                     const nowMin = clockH * 60 + clockM + clockS / 60;
                     
-                    // Find the best-matching row index for current train position
-                    // Converts "H.MM" time strings to minutes
                     const tToMin = (t) => {
                         if (!t) return null;
                         const p = t.trim().split('.');
                         return p.length === 2 ? parseInt(p[0]) * 60 + parseInt(p[1]) : null;
                     };
                     
-                    // Determine position indicator for each row
-                    // posRow = index of row where the dot should appear
-                    let posRow = -1;
-                    let dotPulsing = false;
-                    
-                    for (let i = 0; i < rows.length; i++) {
-                        const r = rows[i];
-                        const ank = tToMin(r.ankunft);
-                        const abf = tToMin(r.abfahrt);
-                        const dep = abf !== null ? abf : ank; // time when train leaves this station
-                        const arr = ank !== null ? ank : abf; // time when train arrives at this station
-                        
-                        if (arr !== null && nowMin < arr) {
-                            // Train hasn't arrived at this station yet
-                            // Dot belongs to previous row (between prev station and this)
-                            posRow = i - 1;
-                            dotPulsing = true;
-                            break;
-                        }
-                        
-                        if (arr !== null && abf !== null && nowMin >= arr && nowMin < abf) {
-                            // Train is standing at this station between arrival and departure
-                            posRow = i;
-                            dotPulsing = false;
-                            break;
-                        }
-                        
-                        if (dep !== null && nowMin >= arr && nowMin < dep) {
-                            // Only departure, or after arrival but before departure
-                            posRow = i;
-                            dotPulsing = (arr === null || nowMin < arr); // pulse if not yet arrived
-                            break;
-                        }
-                        
-                        // After departure: position is this row, check if train is en-route to next
-                        if (dep !== null && nowMin >= dep) {
-                            posRow = i; // tentatively
-                            dotPulsing = true;
-                        }
-                    }
+                    // Determine posRow and pulsing state: handled live by _updateLaufwegDot()
                     
                     for (let i = 0; i < rows.length; i++) {
                         const r = rows[i];
@@ -1286,19 +1266,14 @@
                         
                         const styleAttr = rowStyle ? ` style="${rowStyle.trim()}"` : "";
                         
-                        // Build position dot cell
-                        let dotCell = '<td style="width:14px;padding:0 2px;">';
-                        if (i === posRow) {
-                            const cls = dotPulsing ? 'zug-pos-dot pulsing' : 'zug-pos-dot';
-                            dotCell += `<span class="${cls}"></span>`;
-                        }
-                        dotCell += '</td>';
-                        
                         if (r.haelt === 'D') {
                             const time = r.abfahrt || r.ankunft;
-                            lwHtml += `<tr${styleAttr}>${dotCell}<td colspan="2" style="text-align: center;">(${time})</td><td>${r.bahnhof}</td></tr>`;
+                            lwHtml += `<tr${styleAttr}><td colspan="2" style="text-align: center; font-style: italic; color: #555;">(<i>${time}</i>)</td><td>${r.bahnhof}</td></tr>`;
+                        } else if (r.ankunft && r.abfahrt) {
+                            lwHtml += `<tr${styleAttr}><td>${r.ankunft}</td><td>${r.abfahrt}</td><td>${r.bahnhof}</td></tr>`;
                         } else {
-                            lwHtml += `<tr${styleAttr}>${dotCell}<td>${r.ankunft}</td><td>${r.abfahrt}</td><td>${r.bahnhof}</td></tr>`;
+                            const singleTime = r.ankunft || r.abfahrt || '';
+                            lwHtml += `<tr${styleAttr}><td colspan="2" style="text-align: center;">${singleTime}</td><td>${r.bahnhof}</td></tr>`;
                         }
                     }
                     lwHtml += '</tbody></table></div>';
@@ -1346,18 +1321,32 @@
         window.autoSelectNextTrain = function() {
             const sel = document.getElementById('station-select');
             const station = sel ? sel.value : 'Berlin-Lichterfelde Ost';
-            const offsetLinks = (station === 'Berlin-Lichterfelde Ost') ? -7 : 0; // links = Züge Richtung Ahb, LiOst ist 7min früher
-            const offsetRechts = (station === 'Berlin-Lichterfelde Ost') ? +7 : 0; // rechts = Züge weg von Ahb, LiOst ist 7min später
-            const currentTime = clockH * 60 + clockM;
+            const currentTimeSec = (clockH * 60 + clockM) * 60 + clockS;
+
+            // Get the time (in minutes) for a train at the selected station
+            const getTimeAtStation = (z, area) => {
+                const rows = window._fahrplanMap ? (window._fahrplanMap[z.rawZugNr] || []) : [];
+                let r = rows.find(r => r.bahnhof === station);
+                if (!r) r = rows.find(r => r.bahnhof === 'Berlin Anhalter Bf');
+                if (!r) return z.zeitMin;
+                const timeStr = (station === 'Berlin Anhalter Bf' && area === 1)
+                    ? (r.abfahrt || r.ankunft)
+                    : (r.ankunft || r.abfahrt);
+                return window.timeToMin(timeStr);
+            };
             
             const findNext = (zuege, area) => {
-                const offset = area === 1 ? offsetLinks : offsetRechts;
-                const localTime = currentTime - offset; // convert local time back to Ahb-based time for comparison
+                // Find train with smallest positive time diff, allowing up to 3 min in past
                 let nextZug = null;
+                let minDiff = Infinity;
                 for (const z of zuege) {
-                    if (z.zeitMin >= localTime) {
+                    const tMin = getTimeAtStation(z, area);
+                    let diff = tMin * 60 - currentTimeSec;
+                    if (diff < -12 * 3600) diff += 24 * 3600;
+                    if (diff > 12 * 3600) diff -= 24 * 3600;
+                    if (diff >= -180 && diff < minDiff) {
+                        minDiff = diff;
                         nextZug = z;
-                        break;
                     }
                 }
                 if (!nextZug && zuege.length > 0) nextZug = zuege[0];
@@ -1390,6 +1379,25 @@
             if (window._nachAhbZuege) findNext(window._nachAhbZuege, 5);
             if (window._nachHalleZuege) findNext(window._nachHalleZuege, 1);
         };
+        
+        document.getElementById('station-select').addEventListener('change', () => {
+            const sel1 = document.querySelector('#col1 tr.selected');
+            const z1 = sel1 ? sel1.getAttribute('data-zugnr') : null;
+            const sel5 = document.querySelector('#col5 tr.selected');
+            const z5 = sel5 ? sel5.getAttribute('data-zugnr') : null;
+
+            if (typeof window.applyFilters === 'function') window.applyFilters();
+            if (typeof window.autoSelectNextTrain === 'function') window.autoSelectNextTrain();
+
+            if (z1) {
+                const tr1 = document.querySelector(`#col1 tr[data-zugnr="${z1}"]`);
+                if (tr1) tr1.classList.add('selected');
+            }
+            if (z5) {
+                const tr5 = document.querySelector(`#col5 tr[data-zugnr="${z5}"]`);
+                if (tr5) tr5.classList.add('selected');
+            }
+        });
 
         // --- Signal Train Info ---
         // --- Train Animation & Signal Logic ---
@@ -1729,7 +1737,19 @@
                     return window.timeToMin(timeStr);
                 };
                 
-                let z = zuegeList.find(t => (getTrainTimeAtStation(t)) * 60 >= currentTimeSec - 120) || zuegeList[0];
+                let bestTrain = null;
+                let minDiff = Infinity;
+                for (const t of zuegeList) {
+                    const tMin = getTrainTimeAtStation(t);
+                    let diff = tMin * 60 - currentTimeSec;
+                    if (diff < -12 * 3600) diff += 24 * 3600;
+                    if (diff > 12 * 3600) diff -= 24 * 3600;
+                    if (diff >= -180 && diff < minDiff) {
+                        minDiff = diff;
+                        bestTrain = t;
+                    }
+                }
+                let z = bestTrain || zuegeList[0];
                 
                 if (!z) {
                     this.trainEl.style.display = 'none';
@@ -1788,7 +1808,8 @@
                 }
                 
                 let vonNachPrefix = this.area === 5 ? 'aus ' : '';
-                this.routeEl.innerHTML = `${z.zeit}&nbsp;<span class="${cls}"><strong>${z.zug}</strong></span>&nbsp;${vonNachPrefix}${z.vonNach}${stopLabel ? `<span style="color:#aaa;font-size:0.9em">${stopLabel}</span>` : ''}`;
+                const timeDisplay = isDurchfahrt ? `<i>(${displayTime})</i>` : displayTime;
+                this.routeEl.innerHTML = `${timeDisplay}&nbsp;<span class="${cls}"><strong>${z.zug}</strong></span>&nbsp;${vonNachPrefix}${z.vonNach}${stopLabel ? `<span style="color:#aaa;font-size:0.9em">${stopLabel}</span>` : ''}`;
                 
                 const screenW = window.innerWidth;
                 const signalX = this.isTopTrack ? 80 : screenW - 80;
@@ -1898,6 +1919,7 @@
                         this.speed = (isKopfbahnhofDepart) ? 0 : this.maxSpeed;
                     } else {
                         this.trainEl.style.display = 'none';
+                        if (diffSec < 0) this.routeEl.innerHTML = '';
                         return;
                     }
                 }
@@ -1925,6 +1947,7 @@
                 if (!shouldBeActive && isOffScreen) {
                     this.trainEl.style.display = 'none';
                     this.currentZugNr = null;
+                    if (diffSec < 0) this.routeEl.innerHTML = '';
                     return;
                 }
                 
@@ -1991,8 +2014,54 @@
             }
         }
 
-        const animTop = new TrainAnimator(true, 'train-top', 'signal-top', 'route-top', 'countdown-top', 5);
-        const animBottom = new TrainAnimator(false, 'train-bottom', 'signal-bottom', 'route-bottom', 'countdown-bottom', 1);
+        const animTop = new TrainAnimator(true, 'train-top', 'signal-top', 'route-top', 'countdown-top', 1);
+        const animBottom = new TrainAnimator(false, 'train-bottom', 'signal-bottom', 'route-bottom', 'countdown-bottom', 5);
+
+        // Live update of the Laufweg position dot when clock changes
+        window._laufwegStates = {};
+        window._updateLaufwegDot = function() {
+            if (!window._laufwegStates) return;
+            const nowMin = clockH * 60 + clockM + clockS / 60;
+            const tToMin = (t) => {
+                if (!t) return null;
+                const p = t.trim().split('.');
+                return p.length === 2 ? parseInt(p[0]) * 60 + parseInt(p[1]) : null;
+            };
+            for (const [areaKey, rows] of Object.entries(window._laufwegStates)) {
+                if (!rows) continue;
+                const laufwegTable = document.querySelector(`#col${areaKey} .content-laufweg table tbody`);
+                if (!laufwegTable) continue;
+                let posRow = -1;
+                let dotPulsing = false;
+                for (let i = 0; i < rows.length; i++) {
+                    const r = rows[i];
+                    const ank = tToMin(r.ankunft);
+                    const abf = tToMin(r.abfahrt);
+                    const arrMin = ank !== null ? ank : abf;
+                    const depMin = abf !== null ? abf : ank;
+                    if (arrMin === null) continue;
+                    if (nowMin < arrMin) break; // not yet reached – dot stays at last departed
+                    if (nowMin >= arrMin && (depMin === null || nowMin < depMin + 1)) { posRow = i; dotPulsing = true; break; }
+                    // departed → tentatively here (static), continue to next
+                    posRow = i; dotPulsing = false;
+                }
+                // Remove existing dots and place new one
+                laufwegTable.querySelectorAll('.zug-pos-dot').forEach(el => el.remove());
+                if (posRow >= 0) {
+                    const trs = laufwegTable.querySelectorAll('tr');
+                    if (trs[posRow]) {
+                        const bahnhofTd = trs[posRow].lastElementChild;
+                        if (bahnhofTd) {
+                            const dot = document.createElement('span');
+                            dot.className = dotPulsing ? 'zug-pos-dot pulsing' : 'zug-pos-dot';
+                            dot.style.marginRight = '4px';
+                            dot.style.verticalAlign = 'middle';
+                            bahnhofTd.prepend(dot);
+                        }
+                    }
+                }
+            }
+        };
 
         let lastAnimTime = performance.now();
         function animationLoop(now) {
@@ -2004,6 +2073,7 @@
 
             animTop.update(dt, currentTimeSec);
             animBottom.update(dt, currentTimeSec);
+            window._updateLaufwegDot();
             
             requestAnimationFrame(animationLoop);
         }

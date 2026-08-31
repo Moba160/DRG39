@@ -1,15 +1,9 @@
-Agent: Ignoriere diese Datei
+Agent: Ignoriere diese Datei!!!
 
-Fehler: der auf dem unteren Gleis dargestellte Zug ist der nach links und muss aufs obere Gleis und umgekehrt
+Fehler: Punkt zur Standortanzeige funktioniert nicht korrekt.
+Prüfen: Label der Züge, nächster  Zug ok?
 
 
-
-Wenn ein Fahrplan aufgeblendet ist, soll in der bestpassenden Zeile des Verlaufs ein  gefüllter Kreis dargestellt
-werden, der den Zugstandort symbolisiert: pulsierend, wenn der letzte Bahnhof davor bereits verlassen wurde (dessen
-Abfahrtszeit überschritten) und die Ankunftszeit des nächsten noch nicht erreicht wurde. Bei diesem Bf pulsiert der
-Kreis vor der Abfahrtszeit. Zwischen Ankunfts- und Abfahrtszeit ist der Kreis mittig daziwschen stetig.
-
-Option "Wageninformation" im Animationsbereich soll standardmäßig aktiv Singen
 
 
 Wir ändern für Berlin Anhalter Bf (wenn dieser ausgewählt ist, sonst nicht) das Verschwinden ankommender Züge und das Erscheinen abfahrender Züge.
@@ -24,10 +18,14 @@ In Bearbeitung:
 
 In den linken Bereichen 1/2 möchte ich nach links  fahrende Züge sehen. Diese hast du als nach links verkehrend. 
 Die Beschriftung ist "nach Halle" (das ist Richtung Süden).
-In den rechten Bereichen 4/5 möchte ich entsprechend nach rechts fahrende Züge sehen. Diese hast du als nach rechts verkehrend.Die Beschriftung ist "nach Ahb" (das ist Richtung Norden).
+In den rechten Bereichen 4/5 möchte ich entsprechend nach rechts fahrende Züge sehen. Diese hast du als nach rechts verkehrend.
+Die Beschriftung ist "nach Ahb" (das ist Richtung Norden).
+Das scheint mir richtig zu sein.
 
-Wir haben Rechtsverkehr und schauen auf die Gleise. Wir sehen also nach links fahrende Züge auf dem oberen,
-nach rechts fahrende Züge auf dem unteren Gleis.
+Wir haben Rechtsverkehr und schauen von oben auf die Gleise. Wir sehen also nach links fahrende Züge auf dem oberen,
+nach rechts fahrende Züge auf dem unteren Gleis. Das stimmt nicht. Ich sehe derzeit auf dem oberen Gleis links
+"P314 aus Dresden Hbf", das ist ein nach rechts fahrender Zug!!!
+Ich sehe auf dem unteren Gleis rechts: "13.34 D 64 Prag Mas Bf", das ist ein nach links fahrender Zug!
 
 Die Ausfahrsignale sind entsprechend links auf dem oberen Gleis und rechts auf dem unteren Gleis.
 Die Zuglaufinformationen für nach links fahrende Züge sind entsprechend beim linken, für den nach rechts fahrenden
@@ -40,3 +38,12 @@ Durchfahrten) in abfahrten.csv hat. Für eine Durchfahrt setze die Zeit bei den 
 
 Wenn Berlin Anhalter Bf ausgewählt ist, kann das rechte Signal entfallen, nicht jedoch die Zuglaufinformation dort. Hintergrund: es ist ein Kopfbahnhof. Das linke Signal bleibt, dort bezieht sich der Countdown aber auf die Abfahrtszeit von Zügen, die nach links fahren. 3 Minuten vor dieser muss der abfahrende Zug dort erscheinen (Lok am Signal, der Rest könnte theoretisch rechts abgeschnitten sein). Der erscheinende Zug erscheint nicht schlagartig als Ganzes, sondern faded leicht ein als ganzer Zug. Das linke Signal ist dann Halt und bei Abfahrt geht es auf Fahrt und der Zug fährt nach links aus.
 
+
+
+Demnächst neu:
+Wir definieren die Zeitrafferfunktion neu. Sie dient eigentlich nur dazu, Lücken im Fahrplan zu überspringen. Neu soll sein:
+Sobald von links oder von rechts in den nächsten 30 Sekunden ein Zug kommt, soll die Zeit 1:1 laufen, bis der letzte der beiden Züge 
+wieder weg ist (kommt zwischenzeitlich ein weiterer Zug in diesem Vorschaufenster, bleibt die Zeit 1:1). Ist der letzte Zug
+ausgefahren, soll der Zeitraffer wieder aktiv werden; er holt also den nächsten Zug zeitlich näher heran. Wir hatten schon,
+dass der Countdown 1:1 läuft, das bleibt. Wenn ich den Zeitraffer auf der GUI ändere, gilt das für die nächste zugfreie Zeit. Wenn
+also gerade Zugverkehr ist, bleibt es bei 1:1, der Zeitraffer wird aber immer in seiner Zielgröße korrekt dargestellt.
