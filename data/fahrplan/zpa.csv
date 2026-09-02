@@ -1,426 +1,426 @@
 ZugNr	GattungZp	GattungReal	GattungModell	VonZug	VonBf	NachBf	NachZug	Umlaufplan	Anmerkung
-1	Post4ü			2	Frankfurt (Main)	Berlin	2	02. Jan	
+1	Post4Ã¼			2	Frankfurt (Main)	Berlin	2	02. Jan	
 1	WLAB			180	Frankfurt (Main)	Berlin	402	1452	
-1	C4ü			2	Frankfurt (Main)	Berlin	2	1148	
+1	C4Ã¼			2	Frankfurt (Main)	Berlin	2	1148	
 1	WLC			2	Basel DRB	Berlin	2	1462	
-1	AB4ü			188	Chur	Berlin	2	1745	
-1	C4ü			188	Chur	Berlin	2	1745	
-1	AB4ü			65	Rom	Berlin	2	1300	
+1	AB4Ã¼			188	Chur	Berlin	2	1745	
+1	C4Ã¼			188	Chur	Berlin	2	1745	
+1	AB4Ã¼			65	Rom	Berlin	2	1300	
 1	WLAB			65	Nizza	Berlin	2	1270	
-1	C4ü			65	Mailand	Berlin	2	1301	
+1	C4Ã¼			65	Mailand	Berlin	2	1301	
 1	WLAB			2	Basel SBB	Berlin	2	1460	
-1	Pw4ü			2	Basel SBB	Berlin	2	54	
-2	Post4ü			1	Berlin	Frankfurt (Main)	1	02. Jan	
-2	Pw4ü			1	Berlin	Basel SBB	1	54	
+1	Pw4Ã¼			2	Basel SBB	Berlin	2	54	
+2	Post4Ã¼			1	Berlin	Frankfurt (Main)	1	02. Jan	
+2	Pw4Ã¼			1	Berlin	Basel SBB	1	54	
 2	WLAB 301			1	Berlin	Basel SBB	1	1460	
-2	C4ü			1	Berlin	Chur	187	1745	
-2	AB4ü			1	Berlin	Chur	187	1745	
-2	AB4ü			1	Berlin	Rom	64	1300	bis Mailand 2 Abt 1. Kl
-2	C4ü			1	Berlin	Mailand	64	1301	
+2	C4Ã¼			1	Berlin	Chur	187	1745	
+2	AB4Ã¼			1	Berlin	Chur	187	1745	
+2	AB4Ã¼			1	Berlin	Rom	64	1300	bis Mailand 2 Abt 1. Kl
+2	C4Ã¼			1	Berlin	Mailand	64	1301	
 2	WLAB			1	Berlin	Nizza	64	1270	
 2	WLC 302			1	Berlin	Basel DRB	1	1462	
-2	C4ü			1	Berlin	Frankfurt (Main)	1	1148	
-3	Pw4ü			4	Frankfurt (Main)	Berlin	4	1140	
-3	C4ü			4	Frankfurt (Main)	Berlin	4	1140	
-3	C4ü			4	Frankfurt (Main)	Berlin	4	1140	
-3	C4ü			4	Frankfurt (Main)	Berlin	4	1140	
-3	C4ü			4	Frankfurt (Main)	Berlin	4	1140	
-3	BC4ü			4	Frankfurt (Main)	Berlin	4	1140	
-3	AB4ü			4	Frankfurt (Main)	Berlin	4	1140	
+2	C4Ã¼			1	Berlin	Frankfurt (Main)	1	1148	
+3	Pw4Ã¼			4	Frankfurt (Main)	Berlin	4	1140	
+3	C4Ã¼			4	Frankfurt (Main)	Berlin	4	1140	
+3	C4Ã¼			4	Frankfurt (Main)	Berlin	4	1140	
+3	C4Ã¼			4	Frankfurt (Main)	Berlin	4	1140	
+3	C4Ã¼			4	Frankfurt (Main)	Berlin	4	1140	
+3	BC4Ã¼			4	Frankfurt (Main)	Berlin	4	1140	
+3	AB4Ã¼			4	Frankfurt (Main)	Berlin	4	1140	
 3	WR			44	Frankfurt (Main)	Berlin	356	1496	
-3	AB4ü			137	Paris	Berlin	4	10	
-3	C4ü			137	Paris	Berlin	4	10	
-4	BC4ü			107	Berlin	Erfurt	107	17	vS
-4	C4ü			3	Berlin	Paris	138	10	
-4	AB4ü			3	Berlin	Paris	3	10	
+3	AB4Ã¼			137	Paris	Berlin	4	10	
+3	C4Ã¼			137	Paris	Berlin	4	10	
+4	BC4Ã¼			107	Berlin	Erfurt	107	17	vS
+4	C4Ã¼			3	Berlin	Paris	138	10	
+4	AB4Ã¼			3	Berlin	Paris	3	10	
 4	WR			355	Berlin	Frankfurt (Main)	41	1496	
-4	AB4ü			3	Berlin	Frankfurt (Main)	3	1140	
-4	BC4ü			3	Berlin	Frankfurt (Main)	3	1140	S
-4	C4ü			3	Berlin	Frankfurt (Main)	3	1140	
-4	C4ü			3	Berlin	Frankfurt (Main)	3	1140	
-4	C4ü			3	Berlin	Frankfurt (Main)	3	1140	
-4	C4ü			3	Berlin	Frankfurt (Main)	3	1140	
-4	Pw4ü			3	Berlin	Frankfurt (Main)	3	1140	
-5	PwPost4ü	PwPost4ü-28	PwPost4ü-34	6	Frankfurt (Main)	Berlin	6	12	
-5	AB4ü	AB4ü-28	AB4ü-28	6	Frankfurt (Main)	Berlin	6	12	
-5	AB4ü	AB4ü-28	AB4ü-28	6	Frankfurt (Main)	Berlin	6	12	
-5	WR	WR4ü-28	WR4ü-28	6	Frankfurt (Main)	Berlin	6	1495	
-5	AB4ü	AB4ü-28	AB4ü-28	85	Basel DRB	Berlin	6	14	
-5	AB4ü	AB4ü-28	AB4ü-28	85	Frankfurt (Main)	Berlin	42	36	
-5	Pw4ü			85	Frankfurt (Main)	Berlin	5104	1331	Bedarf
-6	AB4ü	AB4ü-28	AB4ü-28	43	Berlin	Ventimiglia	86	16	
-6	AB4ü	AB4ü-28	AB4ü-28	5	Berlin	Basel DRB	86	14	
-6	WR	WR4ü-28	WR4ü-28	5	Berlin	Frankfurt (Main)	5	1495	
-6	AB4ü	AB4ü-28	AB4ü-28	5	Berlin	Frankfurt (Main)	5	12	
-6	AB4ü	AB4ü-28	AB4ü-28	5	Berlin	Frankfurt (Main)	5	12	
-6	PwPost4ü	PwPost4ü-28	PwPost4ü-34	5	Berlin	Frankfurt (Main)	5	12	
-7	AB4ü			8	Konstanz	Berlin	8	1332	
-7	WR			8	Zürich	Berlin	8	1500	
-7	AB4ü			8	Genua	Berlin	8	101	
-7	AB4ü			8	Stuttgart	Berlin	8	1768	
-7	Pw4ü			8	Stuttgart	Berlin	8	100	
-8	AB4ü			7	Berlin	Konstanz	8	1332	
-8	AB4ü			7	Berlin	Ventimiglia	8	101	
-8	WR			7	Berlin	Zürich	8	1500	
-8	AB4ü			7	Berlin	Stuttgart	7	1768	Bedarf
-8	Pw4ü			7	Berlin	Stuttgart	7	100	
-9	C4ü			10	Konstanz	Berlin	10	1763	
-9	ABC4ü			10	Konstanz	Berlin	10	1763	
+4	AB4Ã¼			3	Berlin	Frankfurt (Main)	3	1140	
+4	BC4Ã¼			3	Berlin	Frankfurt (Main)	3	1140	S
+4	C4Ã¼			3	Berlin	Frankfurt (Main)	3	1140	
+4	C4Ã¼			3	Berlin	Frankfurt (Main)	3	1140	
+4	C4Ã¼			3	Berlin	Frankfurt (Main)	3	1140	
+4	C4Ã¼			3	Berlin	Frankfurt (Main)	3	1140	
+4	Pw4Ã¼			3	Berlin	Frankfurt (Main)	3	1140	
+5	PwPost4Ã¼	28	PwPost4Ã¼-34	6	Frankfurt (Main)	Berlin	6	12	
+5	AB4Ã¼	28	AB4Ã¼-28	6	Frankfurt (Main)	Berlin	6	12	
+5	AB4Ã¼	28	AB4Ã¼-28	6	Frankfurt (Main)	Berlin	6	12	
+5	WR4Ã¼	29	WR4Ã¼-28	6	Frankfurt (Main)	Berlin	6	1495	
+5	AB4Ã¼	28	AB4Ã¼-28	85	Basel DRB	Berlin	6	14	
+5	AB4Ã¼	28	AB4Ã¼-28	85	Frankfurt (Main)	Berlin	42	36	
+5	Pw4Ã¼	34		85	Frankfurt (Main)	Berlin	5104	1331	Bedarf
+6	AB4Ã¼	28	AB4Ã¼-28	43	Berlin	Ventimiglia	86	16	
+6	AB4Ã¼	28	AB4Ã¼-28	5	Berlin	Basel DRB	86	14	
+6	WR4Ã¼	29	WR4Ã¼-28	5	Berlin	Frankfurt (Main)	5	1495	
+6	AB4Ã¼	28	AB4Ã¼-28	5	Berlin	Frankfurt (Main)	5	12	
+6	AB4Ã¼	28	AB4Ã¼-28	5	Berlin	Frankfurt (Main)	5	12	
+6	PwPost4Ã¼	28	PwPost4Ã¼-34	5	Berlin	Frankfurt (Main)	5	12	
+7	AB4Ã¼	28		8	Konstanz	Berlin	8	1332	
+7	WR4Ã¼	29		8	ZÃ¼rich	Berlin	8	1500	
+7	AB4Ã¼	28		8	Genua	Berlin	8	101	
+7	AB4Ã¼	28		8	Stuttgart	Berlin	8	1768	
+7	Pw4Ã¼	34		8	Stuttgart	Berlin	8	100	
+8	AB4Ã¼	28		7	Berlin	Konstanz	8	1332	
+8	AB4Ã¼	28		7	Berlin	Ventimiglia	8	101	
+8	WR4Ã¼	29		7	Berlin	ZÃ¼rich	8	1500	
+8	AB4Ã¼	28		7	Berlin	Stuttgart	7	1768	Bedarf
+8	Pw4Ã¼	34		7	Berlin	Stuttgart	7	100	
+9	C4Ã¼			10	Konstanz	Berlin	10	1763	
+9	ABC4Ã¼			10	Konstanz	Berlin	10	1763	
 9	WR			238	Konstanz	Berlin	10	1493	
-9	C4ü			10	Stuttgart	Berlin	10	103	
-9	ABC4ü			10	Stuttgart	Berlin	10	103	
-9	Pw4ü			10	Stuttgart	Berlin	10	103	
-10	Pw4ü			9	Berlin	Konstanz	9	103	
-10	ABC4ü			9	Berlin	Konstanz	9	103	
-10	C4ü			9	Berlin	Konstanz	9	103	
+9	C4Ã¼			10	Stuttgart	Berlin	10	103	
+9	ABC4Ã¼			10	Stuttgart	Berlin	10	103	
+9	Pw4Ã¼			10	Stuttgart	Berlin	10	103	
+10	Pw4Ã¼			9	Berlin	Konstanz	9	103	
+10	ABC4Ã¼			9	Berlin	Konstanz	9	103	
+10	C4Ã¼			9	Berlin	Konstanz	9	103	
 10	WR			9	Berlin	Stuttgart	237	1493	
-10	ABC4ü			9	Berlin	Stuttgart	9	1763	
-10	C4ü			9	Berlin	Stuttgart	9	1763	
-13	Post4ü			14	Stuttgart	Berlin	14	Feb 18	
-13	Pw4ü			165	Arth Goldau	Berlin	14	1747	
-13	C4ü			14	Stuttgart	Berlin	14	116	
+10	ABC4Ã¼			9	Berlin	Stuttgart	9	1763	
+10	C4Ã¼			9	Berlin	Stuttgart	9	1763	
+13	Post4Ã¼			14	Stuttgart	Berlin	14	Feb 18	
+13	Pw4Ã¼			165	Arth Goldau	Berlin	14	1747	
+13	C4Ã¼			14	Stuttgart	Berlin	14	116	
 13	WLAB 306			14	Stuttgart	Berlin	14	1470	
-13	WLAB 308			165	Zürich	Berlin	14	1468	
-13	AB4ü			165	Rom/Neapel	Berlin	14	1303	bis Milano 3 Abt. 1. Kl
-13	C4ü			165	Mailand	Berlin	14	1306	
-13	BC4ü			313	Konstanz	Berlin	14	113	ü Singen
-13	C4ü			313	Konstanz	Berlin	14	113	ü Singen
-13	BC4ü			213	Saarbrücken	Berlin	14	1735	ü Osterburken
-13	C4ü			14	Suhl	Berlin	14	115	
-14	Post4ü			13	Berlin	Stuttgart	13	Feb 18	
-14	Pw4ü			13	Berlin	Luzern	164	1747	
+13	WLAB 308			165	ZÃ¼rich	Berlin	14	1468	
+13	AB4Ã¼			165	Rom/Neapel	Berlin	14	1303	bis Milano 3 Abt. 1. Kl
+13	C4Ã¼			165	Mailand	Berlin	14	1306	
+13	BC4Ã¼			313	Konstanz	Berlin	14	113	Ã¼ Singen
+13	C4Ã¼			313	Konstanz	Berlin	14	113	Ã¼ Singen
+13	BC4Ã¼			213	SaarbrÃ¼cken	Berlin	14	1735	Ã¼ Osterburken
+13	C4Ã¼			14	Suhl	Berlin	14	115	
+14	Post4Ã¼			13	Berlin	Stuttgart	13	Feb 18	
+14	Pw4Ã¼			13	Berlin	Luzern	164	1747	
 14	WLAB 306			13	Berlin	Stuttgart	13	1470	
-14	C4ü			13	Berlin	Stuttgart	13	116	
-14	AB4ü			13	Berlin	Rom/Neapel	164	1303	Ab Milano 3 Abt. 1. Kl
-14	C4ü			13	Berlin	Mailand	164	1306	
-14	WLAB 308			13	Berlin	Zürich	164	1468	
-14	C4ü			13	Berlin	Konstanz	150	113	ü Singen
-14	BC4ü			13	Berlin	Konstanz	150	113	ü Singen
-14	BC4ü			13	Berlin	Saarbrücken	214	1735	ü Osterburken
-14	C4ü			13	Berlin	Suhl	13	115	
-14	C4ü			869	Berlin	Erfurt	869	114	
-15	Pw4ü			16	Stuttgart	Berlin	16	1760	
-15	AB4ü			16	Stuttgart	Berlin	16	1763	
-15	C4ü			16	Stuttgart	Berlin	16	1763	
+14	C4Ã¼			13	Berlin	Stuttgart	13	116	
+14	AB4Ã¼			13	Berlin	Rom/Neapel	164	1303	Ab Milano 3 Abt. 1. Kl
+14	C4Ã¼			13	Berlin	Mailand	164	1306	
+14	WLAB 308			13	Berlin	ZÃ¼rich	164	1468	
+14	C4Ã¼			13	Berlin	Konstanz	150	113	Ã¼ Singen
+14	BC4Ã¼			13	Berlin	Konstanz	150	113	Ã¼ Singen
+14	BC4Ã¼			13	Berlin	SaarbrÃ¼cken	214	1735	Ã¼ Osterburken
+14	C4Ã¼			13	Berlin	Suhl	13	115	
+14	C4Ã¼			869	Berlin	Erfurt	869	114	
+15	Pw4Ã¼			16	Stuttgart	Berlin	16	1760	
+15	AB4Ã¼			16	Stuttgart	Berlin	16	1763	
+15	C4Ã¼			16	Stuttgart	Berlin	16	1763	
 15	WR			16	Stuttgart	Berlin	16	1503	
-15	C4ü			16	Stuttgart	Berlin	16	1763	
-15	BC4ü			2141	Bad Mergentheim	Berlin	16	105	
-15	ABC4ü			15	Bad Kissingen	Berlin	16	22	
-15	C4ü			15	Bad Kissingen	Berlin	16	22	
-15	AB4ü			15	Bad Kissingen	Berlin	16	22	
-15	Pw4ü			15	Bad Kissingen	Berlin	16	22	
-16	Pw4ü			15	Berlin	Stuttgart	15	1760	
-16	C4ü			15	Berlin	Stuttgart	15	1503	
+15	C4Ã¼			16	Stuttgart	Berlin	16	1763	
+15	BC4Ã¼			2141	Bad Mergentheim	Berlin	16	105	
+15	ABC4Ã¼			15	Bad Kissingen	Berlin	16	22	
+15	C4Ã¼			15	Bad Kissingen	Berlin	16	22	
+15	AB4Ã¼			15	Bad Kissingen	Berlin	16	22	
+15	Pw4Ã¼			15	Bad Kissingen	Berlin	16	22	
+16	Pw4Ã¼			15	Berlin	Stuttgart	15	1760	
+16	C4Ã¼			15	Berlin	Stuttgart	15	1503	
 16	WR			15	Berlin	Stuttgart	15	1503	
-16	C4ü			15	Berlin	Stuttgart	15	1763	
-16	AB4ü			15	Berlin	Stuttgart	15	1763	
-16	BC4ü			15	Berlin	Bad Mergentheim	3492	105	
-16	AB4ü			15	Berlin	Bad Kissingen	16	22	
-16	C4ü			15	Berlin	Bad Kissingen	16	22	
-16	ABC4ü			15	Berlin	Bad Kissingen	16	22	
-16	Pw4ü			15	Berlin	Bad Kissingen	16	22	
-21	Post4ü			30	Leipzig	Berlin	30	Feb 28	
-21	Pw4ü			24	München	Berlin	24	130	
-21	C4ü			24	München	Berlin	24	130	
-21	C4ü			24	München	Berlin	24	130	
-21	WR			24	München	Berlin	70	1511	
-21	BC4ü			24	München	Berlin	24	130	
-21	AB4ü			24	München	Berlin	24	130	
-21	ABC4ü			321	Nürnberg	Berlin	24	161	
-21	C4ü			24	Hof	Berlin	24	163	
-22	ABC4ü			323	Berlin	Nürnberg	122	165	
-22	C4ü			23	Berlin	München	25	174	
-22	C4ü			23	Berlin	München	25	174	
-22	AB4ü			23	Berlin	München	25	174	
-22	WR			23	Berlin	München	23	1512	
-22	ABC4ü			23	Berlin	München	25	173	
-22	C4ü			23	Berlin	München	25	173	
-22	C4ü			23	Berlin	Rom	61	1308	
-22	Pw4ü			23	Berlin	München	25	173	
-23	Post4ü			5242	Leipzig	Berlin	5242	Feb 33	
-23	ABC4ü			123	Nürnberg	Berlin	22	165	
-23	C4ü			62	Rom	Berlin	22	1308	
-23	C4ü			26	München	Berlin	22	173	
-23	ABC4ü			26	München	Berlin	22	173	
-23	WR			22	München	Berlin	22	1512	
-23	AB4ü			26	München	Berlin	22	174	
-23	C4ü			26	München	Berlin	22	174	
-23	C4ü			26	München	Berlin	22	174	
-23	Pw4ü			26	München	Berlin	22	173	
-24	Post4ü			855	Berlin	Leipzig	855	Feb 27	
-24	BC4ü			29	Berlin	Leipzig	29	158	
-24	C4ü			21	Berlin	Hof	21	163	
-24	ABC4ü			21	Berlin	München	326	161	
-24	AB4ü			21	Berlin	München	21	130	
-24	BC4ü			21	Berlin	München	21	130	
-24	WR			71	Berlin	München	21	1511	
-24	C4ü			21	Berlin	München	21	130	
-24	C4ü			21	Berlin	München	21	130	
-24	Pw4ü			23	Berlin	München	21	130	
-25	WLAB 346			415	Nürnberg	Berlin	25	1481	
-25	BC4ü			415	Nürnberg	Berlin	30	1680	
-25	WLAB 134			26	München	Berlin	26	1482	
-25	WLC 345			26	München	Berlin	26	1482	
-25	C4ü			26	München	Berlin	26	176	
-25	C4ü			22	München	Berlin	126	173	
-25	AB4ü			22	München	Berlin	126	173	
-26	Post4ü			25	Berlin	München	25	Feb 29	
-26	Pw4ü			125	Berlin	München	23	174	
-26	C4ü			125	Berlin	München	23	174	
-26	C4ü			25	Berlin	München	23	174	
-26	AB4ü			25	Berlin	München	23	174	
-26	ABC4ü			125	Berlin	München	23	173	
-26	C4ü			125	Berlin	München	23	173	
-26	C4ü			125	Berlin	München	23	173	
-26	WLC 345			25	Berlin	München	25	1482	
-26	WLAB 134			25	Berlin	München	25	1482	
-29	BC4ü			24	München	Leipzig	24	1193	
+16	C4Ã¼			15	Berlin	Stuttgart	15	1763	
+16	AB4Ã¼			15	Berlin	Stuttgart	15	1763	
+16	BC4Ã¼			15	Berlin	Bad Mergentheim	3492	105	
+16	AB4Ã¼			15	Berlin	Bad Kissingen	16	22	
+16	C4Ã¼			15	Berlin	Bad Kissingen	16	22	
+16	ABC4Ã¼			15	Berlin	Bad Kissingen	16	22	
+16	Pw4Ã¼			15	Berlin	Bad Kissingen	16	22	
+21	Post4Ã¼			30	Leipzig	Berlin	30	Feb 28	
+21	Pw4Ã¼			24	MÃ¼nchen	Berlin	24	130	
+21	C4Ã¼			24	MÃ¼nchen	Berlin	24	130	
+21	C4Ã¼			24	MÃ¼nchen	Berlin	24	130	
+21	WR			24	MÃ¼nchen	Berlin	70	1511	
+21	BC4Ã¼			24	MÃ¼nchen	Berlin	24	130	
+21	AB4Ã¼			24	MÃ¼nchen	Berlin	24	130	
+21	ABC4Ã¼			321	NÃ¼rnberg	Berlin	24	161	
+21	C4Ã¼			24	Hof	Berlin	24	163	
+22	ABC4Ã¼			323	Berlin	NÃ¼rnberg	122	165	
+22	C4Ã¼			23	Berlin	MÃ¼nchen	25	174	
+22	C4Ã¼			23	Berlin	MÃ¼nchen	25	174	
+22	AB4Ã¼			23	Berlin	MÃ¼nchen	25	174	
+22	WR			23	Berlin	MÃ¼nchen	23	1512	
+22	ABC4Ã¼			23	Berlin	MÃ¼nchen	25	173	
+22	C4Ã¼			23	Berlin	MÃ¼nchen	25	173	
+22	C4Ã¼			23	Berlin	Rom	61	1308	
+22	Pw4Ã¼			23	Berlin	MÃ¼nchen	25	173	
+23	Post4Ã¼			5242	Leipzig	Berlin	5242	Feb 33	
+23	ABC4Ã¼			123	NÃ¼rnberg	Berlin	22	165	
+23	C4Ã¼			62	Rom	Berlin	22	1308	
+23	C4Ã¼			26	MÃ¼nchen	Berlin	22	173	
+23	ABC4Ã¼			26	MÃ¼nchen	Berlin	22	173	
+23	WR			22	MÃ¼nchen	Berlin	22	1512	
+23	AB4Ã¼			26	MÃ¼nchen	Berlin	22	174	
+23	C4Ã¼			26	MÃ¼nchen	Berlin	22	174	
+23	C4Ã¼			26	MÃ¼nchen	Berlin	22	174	
+23	Pw4Ã¼			26	MÃ¼nchen	Berlin	22	173	
+24	Post4Ã¼			855	Berlin	Leipzig	855	Feb 27	
+24	BC4Ã¼			29	Berlin	Leipzig	29	158	
+24	C4Ã¼			21	Berlin	Hof	21	163	
+24	ABC4Ã¼			21	Berlin	MÃ¼nchen	326	161	
+24	AB4Ã¼			21	Berlin	MÃ¼nchen	21	130	
+24	BC4Ã¼			21	Berlin	MÃ¼nchen	21	130	
+24	WR			71	Berlin	MÃ¼nchen	21	1511	
+24	C4Ã¼			21	Berlin	MÃ¼nchen	21	130	
+24	C4Ã¼			21	Berlin	MÃ¼nchen	21	130	
+24	Pw4Ã¼			23	Berlin	MÃ¼nchen	21	130	
+25	WLAB 346			415	NÃ¼rnberg	Berlin	25	1481	
+25	BC4Ã¼			415	NÃ¼rnberg	Berlin	30	1680	
+25	WLAB 134			26	MÃ¼nchen	Berlin	26	1482	
+25	WLC 345			26	MÃ¼nchen	Berlin	26	1482	
+25	C4Ã¼			26	MÃ¼nchen	Berlin	26	176	
+25	C4Ã¼			22	MÃ¼nchen	Berlin	126	173	
+25	AB4Ã¼			22	MÃ¼nchen	Berlin	126	173	
+26	Post4Ã¼			25	Berlin	MÃ¼nchen	25	Feb 29	
+26	Pw4Ã¼			125	Berlin	MÃ¼nchen	23	174	
+26	C4Ã¼			125	Berlin	MÃ¼nchen	23	174	
+26	C4Ã¼			25	Berlin	MÃ¼nchen	23	174	
+26	AB4Ã¼			25	Berlin	MÃ¼nchen	23	174	
+26	ABC4Ã¼			125	Berlin	MÃ¼nchen	23	173	
+26	C4Ã¼			125	Berlin	MÃ¼nchen	23	173	
+26	C4Ã¼			125	Berlin	MÃ¼nchen	23	173	
+26	WLC 345			25	Berlin	MÃ¼nchen	25	1482	
+26	WLAB 134			25	Berlin	MÃ¼nchen	25	1482	
+29	BC4Ã¼			24	MÃ¼nchen	Leipzig	24	1193	
 29	WR			156	Leipzig	Berlin	244	1497	
-29	WLAB 346			415	Nürnberg	Berlin	30	1481	
-29	WLC 332			30	München	Berlin	30	1473	
-29	WLAB 330			30	München	Berlin	30	1473	
-29	B4ü			30	München	Berlin	30	186	
-29	C4ü			30	München	Berlin	30	186	
-29	C4ü			30	München	Berlin	30	186	
-29	Pw4ü			30	München	Berlin	30	186	
-30	Post4ü			21	Berlin	Leipzig	21	Feb 28	
-30	WLAB 346			25	Berlin	München	416	1481	
-30	BC4ü			25	Berlin	Nürnberg	416	1680	
-30	C4ü			29	Berlin	München	29	182	
-30	C4ü			29	Berlin	München	29	182	
-30	B4ü			29	Berlin	München	29	182	
-30	WLAB 330			29	Berlin	München	29	1473	
-30	WLC 332			29	Berlin	München	29	1473	
-30	Pw4ü			29	Berlin	München	29	182	
-31	C4ü			1244	Halle (S)	Berlin	1244	1185	
-31	C4ü			1244	Halle (S)	Berlin	1244	1185	
-31	C4ü			1244	Halle (S)	Berlin	1244	1185	
-31	AB4ü			1244	Halle (S)	Berlin	1244	1185	
-31	C4ü			1244	Halle (S)	Berlin	1244	1185	
-31	C4ü			1244	Halle (S)	Berlin	1244	1185	
-31	C4ü			1244	Halle (S)	Berlin	1244	1185	
-31	Pw4ü			1244	Halle (S)	Berlin	1244	1185	
-33	B6iVT	B6iVT	B6iVT	34	Basel SBB	Berlin	34	280	von FDt571 77 Plätze
-34	B6iVT	B6iVT	B6iVT	33	Berlin	Basel SBB	33	280	von FDt 572 77 Plätze
-37	Pw4ü			213	Leipzig	Berlin	38	1199	
-37	C4ü			38	Leipzig	Berlin	38	1199	
-37	BC4ü			213	Leipzig	Berlin	38	1199	
-37	B4ü			38	Leipzig	Berlin	38	1199	
-37	C4ü			213	Leipzig	Berlin	38	1199	
-37	C4ü			213	Leipzig	Berlin	38	1199	
-38	Pw4ü			37	Berlin	Leipzig	214	1199	
-38	C4ü			37	Berlin	Leipzig	214	1199	
-38	C4ü			37	Berlin	Leipzig	214	1199	
-38	B4ü			37	Berlin	Leipzig	214	1199	
-38	BC4ü			37	Berlin	Leipzig	37	1199	
-38	C4ü			37	Berlin	Leipzig	214	1199	
-39	Post4ü			40	München	Berlin	40	Feb 22	
-39	Pw4ü			40	München	Berlin	40	1608	
-39	C4ü			40	München	Berlin	40	1608	
-39	C4ü			40	München	Berlin	40	1608	
-39	AB4ü			40	München	Berlin	40	1608	
-39	WR			40	München	Berlin	40	1506	
-39	AB4ü			40	München	Berlin	40	1608	
-39	C4ü			40	München	Berlin	40	1608	
-39	C4ü			40	München	Berlin	40	1608	
-40	Post4ü			39	Berlin	München	39	Feb 22	
-40	Pw4ü			39	Berlin	München	39	1608	
-40	C4ü			39	Berlin	München	39	1608	
-40	C4ü			39	Berlin	München	39	1608	
-40	AB4ü			39	Berlin	München	39	1605	
-40	WR			39	Berlin	München	39	1506	
-40	AB4ü			39	Berlin	München	39	1608	
-40	C4ü			39	Berlin	München	39	1608	
-40	C4ü			39	Berlin	München	39	1608	
-40	BC4ü			83	Berlin	München	39	1608	
-41	BC4ü			75	Frankfurt (Main)	Berlin	44	1141	
-41	C4ü			44	Frankfurt (Main)	Berlin	44	1146	
+29	WLAB 346			415	NÃ¼rnberg	Berlin	30	1481	
+29	WLC 332			30	MÃ¼nchen	Berlin	30	1473	
+29	WLAB 330			30	MÃ¼nchen	Berlin	30	1473	
+29	B4Ã¼			30	MÃ¼nchen	Berlin	30	186	
+29	C4Ã¼			30	MÃ¼nchen	Berlin	30	186	
+29	C4Ã¼			30	MÃ¼nchen	Berlin	30	186	
+29	Pw4Ã¼			30	MÃ¼nchen	Berlin	30	186	
+30	Post4Ã¼			21	Berlin	Leipzig	21	Feb 28	
+30	WLAB 346			25	Berlin	MÃ¼nchen	416	1481	
+30	BC4Ã¼			25	Berlin	NÃ¼rnberg	416	1680	
+30	C4Ã¼			29	Berlin	MÃ¼nchen	29	182	
+30	C4Ã¼			29	Berlin	MÃ¼nchen	29	182	
+30	B4Ã¼			29	Berlin	MÃ¼nchen	29	182	
+30	WLAB 330			29	Berlin	MÃ¼nchen	29	1473	
+30	WLC 332			29	Berlin	MÃ¼nchen	29	1473	
+30	Pw4Ã¼			29	Berlin	MÃ¼nchen	29	182	
+31	C4Ã¼			1244	Halle (S)	Berlin	1244	1185	
+31	C4Ã¼			1244	Halle (S)	Berlin	1244	1185	
+31	C4Ã¼			1244	Halle (S)	Berlin	1244	1185	
+31	AB4Ã¼			1244	Halle (S)	Berlin	1244	1185	
+31	C4Ã¼			1244	Halle (S)	Berlin	1244	1185	
+31	C4Ã¼			1244	Halle (S)	Berlin	1244	1185	
+31	C4Ã¼			1244	Halle (S)	Berlin	1244	1185	
+31	Pw4Ã¼			1244	Halle (S)	Berlin	1244	1185	
+33	B6iVT			34	Basel SBB	Berlin	34	280	von FDt571 77 PlÃ¤tze
+34	B6iVT			33	Berlin	Basel SBB	33	280	von FDt 572 77 PlÃ¤tze
+37	Pw4Ã¼			213	Leipzig	Berlin	38	1199	
+37	C4Ã¼			38	Leipzig	Berlin	38	1199	
+37	BC4Ã¼			213	Leipzig	Berlin	38	1199	
+37	B4Ã¼			38	Leipzig	Berlin	38	1199	
+37	C4Ã¼			213	Leipzig	Berlin	38	1199	
+37	C4Ã¼			213	Leipzig	Berlin	38	1199	
+38	Pw4Ã¼			37	Berlin	Leipzig	214	1199	
+38	C4Ã¼			37	Berlin	Leipzig	214	1199	
+38	C4Ã¼			37	Berlin	Leipzig	214	1199	
+38	B4Ã¼			37	Berlin	Leipzig	214	1199	
+38	BC4Ã¼			37	Berlin	Leipzig	37	1199	
+38	C4Ã¼			37	Berlin	Leipzig	214	1199	
+39	Post4Ã¼			40	MÃ¼nchen	Berlin	40	Feb 22	
+39	Pw4Ã¼			40	MÃ¼nchen	Berlin	40	1608	
+39	C4Ã¼			40	MÃ¼nchen	Berlin	40	1608	
+39	C4Ã¼			40	MÃ¼nchen	Berlin	40	1608	
+39	AB4Ã¼			40	MÃ¼nchen	Berlin	40	1608	
+39	WR			40	MÃ¼nchen	Berlin	40	1506	
+39	AB4Ã¼			40	MÃ¼nchen	Berlin	40	1608	
+39	C4Ã¼			40	MÃ¼nchen	Berlin	40	1608	
+39	C4Ã¼			40	MÃ¼nchen	Berlin	40	1608	
+40	Post4Ã¼			39	Berlin	MÃ¼nchen	39	Feb 22	
+40	Pw4Ã¼			39	Berlin	MÃ¼nchen	39	1608	
+40	C4Ã¼			39	Berlin	MÃ¼nchen	39	1608	
+40	C4Ã¼			39	Berlin	MÃ¼nchen	39	1608	
+40	AB4Ã¼			39	Berlin	MÃ¼nchen	39	1605	
+40	WR			39	Berlin	MÃ¼nchen	39	1506	
+40	AB4Ã¼			39	Berlin	MÃ¼nchen	39	1608	
+40	C4Ã¼			39	Berlin	MÃ¼nchen	39	1608	
+40	C4Ã¼			39	Berlin	MÃ¼nchen	39	1608	
+40	BC4Ã¼			83	Berlin	MÃ¼nchen	39	1608	
+41	BC4Ã¼			75	Frankfurt (Main)	Berlin	44	1141	
+41	C4Ã¼			44	Frankfurt (Main)	Berlin	44	1146	
 41	WR			4	Frankfurt (Main)	Berlin	44	1496	
 41	WLAB 320			71	Lugano	Berlin	44	1464	
-41	AB4ü			71	Ventimiglia	Berlin	44	1310	
+41	AB4Ã¼			71	Ventimiglia	Berlin	44	1310	
 41	WLAB 317			198	Chur	Berlin	44	1466	
 41	WLAB 323			325	Genf	Berlin	44	1463	
-41	ABC4ü			325	Genf	Berlin	44	75	
-41	ABC4ü			225	St Maurice	Berlin	44	78	
-41	C4ü			44	Basel SBB	Berlin	44	46	
+41	ABC4Ã¼			325	Genf	Berlin	44	75	
+41	ABC4Ã¼			225	St Maurice	Berlin	44	78	
+41	C4Ã¼			44	Basel SBB	Berlin	44	46	
 41	WLAB 322			173	Basel SBB	Berlin	44	1465	
-41	Pw4ü			173	Basel SBB	Berlin	44	46	
-42	Post4ü			43	Berlin	Basel SBB	91	02. Feb	
-42	Pw4ü			43	Berlin	Basel SBB	43	1333	
-42	C4ü			43	Berlin	Basel SBB	70	1748	
-42	AB4ü			5	Berlin	Basel SBB	85	36	
-42	C4ü			43	Berlin	Basel DRB	43	1330	
+41	Pw4Ã¼			173	Basel SBB	Berlin	44	46	
+42	Post4Ã¼			43	Berlin	Basel SBB	91	02. Feb	
+42	Pw4Ã¼			43	Berlin	Basel SBB	43	1333	
+42	C4Ã¼			43	Berlin	Basel SBB	70	1748	
+42	AB4Ã¼			5	Berlin	Basel SBB	85	36	
+42	C4Ã¼			43	Berlin	Basel DRB	43	1330	
 42	WR			43	Berlin	Basel SBB	43	1498	
-42	C4ü			43	Berlin	Basel SBB	43	1330	
-42	C4ü			43	Berlin	Basel SBB	43	1330	
-42	ABC4ü			43	Berlin	Ulm	43	47	
-42	C4ü			43	Berlin	Saarbrücken	142	1732	
-42	ABC4ü			43	Berlin	Saarbrücken	142	1732	
-43	Post4ü			91	Basel SBB	Berlin	42	02. Feb	
-43	Pw4ü			42	Basel SBB	Berlin	42	1333	
-43	C4ü			143	Saabrücken	Berlin	42	1732	
-43	ABC4ü			143	Saarbrücken	Berlin	42	1732	
-43	C4ü			42	Basel SBB	Berlin	42	1330	
-43	C4ü			42	Basel SBB	Berlin	42	1330	
+42	C4Ã¼			43	Berlin	Basel SBB	43	1330	
+42	C4Ã¼			43	Berlin	Basel SBB	43	1330	
+42	ABC4Ã¼			43	Berlin	Ulm	43	47	
+42	C4Ã¼			43	Berlin	SaarbrÃ¼cken	142	1732	
+42	ABC4Ã¼			43	Berlin	SaarbrÃ¼cken	142	1732	
+43	Post4Ã¼			91	Basel SBB	Berlin	42	02. Feb	
+43	Pw4Ã¼			42	Basel SBB	Berlin	42	1333	
+43	C4Ã¼			143	SaabrÃ¼cken	Berlin	42	1732	
+43	ABC4Ã¼			143	SaarbrÃ¼cken	Berlin	42	1732	
+43	C4Ã¼			42	Basel SBB	Berlin	42	1330	
+43	C4Ã¼			42	Basel SBB	Berlin	42	1330	
 43	WR			42	Basel SBB	Berlin	42	1498	
-43	C4ü			42	Basel SBB	Berlin	42	1330	
-43	AB4ü			51	Ventimiglia	Berlin	6	16	
-43	C4ü			51	Ventimiglia	Berlin	42	1748	
-43	ABC4ü			243	Ulm	Berlin	42	47	
-44	Pw4ü			41	Berlin	Basel SBB	41	46	
-44	BC4ü			41	Berlin	Basel DRB	99	1141	
-44	C4ü			41	Berlin	Basel SBB	41	46	
+43	C4Ã¼			42	Basel SBB	Berlin	42	1330	
+43	AB4Ã¼			51	Ventimiglia	Berlin	6	16	
+43	C4Ã¼			51	Ventimiglia	Berlin	42	1748	
+43	ABC4Ã¼			243	Ulm	Berlin	42	47	
+44	Pw4Ã¼			41	Berlin	Basel SBB	41	46	
+44	BC4Ã¼			41	Berlin	Basel DRB	99	1141	
+44	C4Ã¼			41	Berlin	Basel SBB	41	46	
 44	WLAB 322			41	Berlin	Basel SBB	41	1456	
-44	ABC4ü			41	Berlin	St Maurice	208	78	
-44	ABC4ü			41	Berlin	Genf	308	75	
+44	ABC4Ã¼			41	Berlin	St Maurice	208	78	
+44	ABC4Ã¼			41	Berlin	Genf	308	75	
 44	WLAB 317			41	Berlin	Chur	177	1466	
 44	WLAB 322			41	Berlin	Genf	56	1463	
-44	AB4ü			41	Berlin	Ventimiglia	54	1310	
+44	AB4Ã¼			41	Berlin	Ventimiglia	54	1310	
 44	WLAB 320			41	Berlin	Lugano	54	1464	
-44	BC4ü			41	Berlin	Basel DRB	75	1141	
+44	BC4Ã¼			41	Berlin	Basel DRB	75	1141	
 44	WR			41	Berlin	Frankfurt (Main)	3	1496	
-44	C4ü			41	Berlin	Frankfurt (Main)	41	1146	
-45	C4ü			246	Leipzig	Berlin	246	1190	
-45	Pw4ü			18	Wiesbaden	Berlin	46	1390	
-45	C4ü			46	Wiesbaden	Berlin	46	1406	
-45	C4ü			46	Wiesbaden	Berlin	46	1406	
-45	B4ü			46	Wiesbaden	Berlin	46	1406	
-45	C4ü			46	Wiesbaden	Berlin	46	1406	
-45	C4ü			46	Wiesbaden	Berlin	46	1406	
-45	C4ü			46	Wiesbaden	Berlin	46	1406	
+44	C4Ã¼			41	Berlin	Frankfurt (Main)	41	1146	
+45	C4Ã¼			246	Leipzig	Berlin	246	1190	
+45	Pw4Ã¼			18	Wiesbaden	Berlin	46	1390	
+45	C4Ã¼			46	Wiesbaden	Berlin	46	1406	
+45	C4Ã¼			46	Wiesbaden	Berlin	46	1406	
+45	B4Ã¼			46	Wiesbaden	Berlin	46	1406	
+45	C4Ã¼			46	Wiesbaden	Berlin	46	1406	
+45	C4Ã¼			46	Wiesbaden	Berlin	46	1406	
+45	C4Ã¼			46	Wiesbaden	Berlin	46	1406	
 45	WR			145	Wiesbaden	Berlin	46	1499	
-45	BC4ü			145	Wiesbaden	Berlin	46	1733	
-45	Post4ü			192	Wiesbaden	Berlin	46	02. Mrz	
-46	Post4ü			45	Berlin	Frankfurt (Main)	326	02. Mrz	
+45	BC4Ã¼			145	Wiesbaden	Berlin	46	1733	
+45	Post4Ã¼			192	Wiesbaden	Berlin	46	02. Mrz	
+46	Post4Ã¼			45	Berlin	Frankfurt (Main)	326	02. Mrz	
 46	WR			45	Berlin	Frankfurt (Main)	142	1499	
-46	BC4ü			45	Berlin	Saarbrücken	146	1733	
-46	C4ü			45	Berlin	Wiesbaden	45	1406	
-46	C4ü			45	Berlin	Wiesbaden	45	1406	
-46	C4ü			45	Berlin	Wiesbaden	45	1406	
-46	B4ü			45	Berlin	Wiesbaden	45	1406	
-46	C4ü			45	Berlin	Wiesbaden	45	1406	
-46	C4ü			45	Berlin	Wiesbaden	45	1406	
-46	Pw4ü			45	Berlin	Wiesbaden	17	1390	
-49	Pw4ü			50	München	Berlin	50	1610	
-49	C4ü			50	München	Berlin	50	1610	
-49	C4ü			50	München	Berlin	50	1610	
-49	WLAB 131			50	München	Berlin	50	1475	
-49	WLC 132			50	München	Berlin	50	1475	
-49	AB4ü			50	München	Berlin	50	135	
+46	BC4Ã¼			45	Berlin	SaarbrÃ¼cken	146	1733	
+46	C4Ã¼			45	Berlin	Wiesbaden	45	1406	
+46	C4Ã¼			45	Berlin	Wiesbaden	45	1406	
+46	C4Ã¼			45	Berlin	Wiesbaden	45	1406	
+46	B4Ã¼			45	Berlin	Wiesbaden	45	1406	
+46	C4Ã¼			45	Berlin	Wiesbaden	45	1406	
+46	C4Ã¼			45	Berlin	Wiesbaden	45	1406	
+46	Pw4Ã¼			45	Berlin	Wiesbaden	17	1390	
+49	Pw4Ã¼			50	MÃ¼nchen	Berlin	50	1610	
+49	C4Ã¼			50	MÃ¼nchen	Berlin	50	1610	
+49	C4Ã¼			50	MÃ¼nchen	Berlin	50	1610	
+49	WLAB 131			50	MÃ¼nchen	Berlin	50	1475	
+49	WLC 132			50	MÃ¼nchen	Berlin	50	1475	
+49	AB4Ã¼			50	MÃ¼nchen	Berlin	50	135	
 49	WLAB			66	Rom	Berlin	50	1274	
-49	ABC4ü			66	Meran	Berlin	50	136	
-50	Post4ü			149	Berlin	München	149	Feb 23	
-50	Pw4ü			49	Berlin	München	49	1610	
+49	ABC4Ã¼			66	Meran	Berlin	50	136	
+50	Post4Ã¼			149	Berlin	MÃ¼nchen	149	Feb 23	
+50	Pw4Ã¼			49	Berlin	MÃ¼nchen	49	1610	
 50	WLAB			49	Berlin	Rom	67	1274	
-50	AB4ü			49	Berlin	Rom	67	135	
-50	ABC4ü			49	Berlin	Meran	67	136	
-50	WLC 132			49	Berlin	München	49	1475	
-50	WLAB 131			49	Berlin	München	49	1475	
-50	C4ü			49	Berlin	München	49	1610	
-50	C4ü			49	Berlin	München	49	1610	
-51	Post4ü			60	Dresden	Berlin	60	Feb 43	
-51	Pw4ü			52	Bodenbach	Berlin	108	226	
-51	C4ü			52	Bodenbach	Berlin	108	226	
+50	AB4Ã¼			49	Berlin	Rom	67	135	
+50	ABC4Ã¼			49	Berlin	Meran	67	136	
+50	WLC 132			49	Berlin	MÃ¼nchen	49	1475	
+50	WLAB 131			49	Berlin	MÃ¼nchen	49	1475	
+50	C4Ã¼			49	Berlin	MÃ¼nchen	49	1610	
+50	C4Ã¼			49	Berlin	MÃ¼nchen	49	1610	
+51	Post4Ã¼			60	Dresden	Berlin	60	Feb 43	
+51	Pw4Ã¼			52	Bodenbach	Berlin	108	226	
+51	C4Ã¼			52	Bodenbach	Berlin	108	226	
 51	WLAB			51	Prag	Berlin	52	1276	
 51	WLAB			51	Wien	Berlin	52	1278	
-51	ABC4ü			51	Wien	Berlin	52	228	
-51	BC4ü			52	Dresden	Berlin	108	200	
-52	Post4ü			61	Berlin	Dresden	61	Feb 42	
-52	Pw4ü			69	Berlin	Wien	1004	227	
-52	Pw4ü			107	Berlin	Bodenbach	51	226	
-52	C4ü			107	Berlin	Bodenbach	51	226	
-52	ABC4ü			51	Berlin	Wien	52	228	
+51	ABC4Ã¼			51	Wien	Berlin	52	228	
+51	BC4Ã¼			52	Dresden	Berlin	108	200	
+52	Post4Ã¼			61	Berlin	Dresden	61	Feb 42	
+52	Pw4Ã¼			69	Berlin	Wien	1004	227	
+52	Pw4Ã¼			107	Berlin	Bodenbach	51	226	
+52	C4Ã¼			107	Berlin	Bodenbach	51	226	
+52	ABC4Ã¼			51	Berlin	Wien	52	228	
 52	WLAB			51	Berlin	Wien	52	1278	
 52	WLAB			51	Berlin	Prag	52	1276	
-52	BC4ü			107	Berlin	Dresden	51	200	
-53	SWRPwPost4ü			58	Dresden	Berlin	54	1108	
-53	SBC4ü			58	Dresden	Berlin	54	1108	
-53	SBC4ü			58	Dresden	Berlin	54	1108	
-53	SBC4ü			58	Dresden	Berlin	54	1108	
-54	SBC4ü			53	Berlin	Dresden	57	1108	
-54	SBC4ü			53	Berlin	Dresden	57	1108	
-54	SBC4ü			53	Berlin	Dresden	57	1108	
-54	SWRPwPost4ü			53	Berlin	Dresden	57	1108	
-55	Pw4ü			56	Dresden	Berlin	56	1083	
+52	BC4Ã¼			107	Berlin	Dresden	51	200	
+53	SWRPwPost4Ã¼	35		58	Dresden	Berlin	54	1108	
+53	SBC4Ã¼	35		58	Dresden	Berlin	54	1108	
+53	SBC4Ã¼	35		58	Dresden	Berlin	54	1108	
+53	SBC4Ã¼	35e		58	Dresden	Berlin	54	1108	
+54	SBC4Ã¼	35e		53	Berlin	Dresden	57	1108	
+54	SBC4Ã¼	35		53	Berlin	Dresden	57	1108	
+54	SBC4Ã¼	35		53	Berlin	Dresden	57	1108	
+54	SWRPwPost4Ã¼	35		53	Berlin	Dresden	57	1108	
+55	Pw4Ã¼			56	Dresden	Berlin	56	1083	
 55	C4i			56	Dresden	Berlin	56	1083	
 55	C4i			56	Dresden	Berlin	56	1083	
 55	B4i			56	Dresden	Berlin	56	1083	
 55	C4i			56	Dresden	Berlin	56	1083	
-55	BC4i			79	Chemnitz	Berlin	56	1083	ü Elsterwerda
-55	C4i			79	Chemnitz	Berlin	56	1085	ü Elsterwerda
+55	BC4i			79	Chemnitz	Berlin	56	1083	Ã¼ Elsterwerda
+55	C4i			79	Chemnitz	Berlin	56	1085	Ã¼ Elsterwerda
 56	Pw4i			55	Berlin	Dresden	55	1083	
 56	C4i			55	Berlin	Dresden	55	1083	
 56	B4i			55	Berlin	Dresden	55	1083	
 56	C4i			55	Berlin	Dresden	55	1083	
 56	C4i			55	Berlin	Dresden	55	1083	
-56	C4i			55	Berlin	Chemnitz	80	1085	ü Elsterwerda
-56	BC4i			55	Berlin	Chemnitz	80	1085	ü Elsterwerda
-57	SWRPwPost4ü			54	Dresden	Berlin	58	1108	
-57	SBC4ü			54	Dresden	Berlin	58	1108	
-57	SBC4ü			54	Dresden	Berlin	58	1108	
-57	SBC4ü			54	Dresden	Berlin	58	1108	
-58	SBC4ü			57	Berlin	Dresden	53	1108	
-58	SBC4ü			57	Berlin	Dresden	53	1108	
-58	SBC4ü			57	Berlin	Dresden	53	1108	
-58	SWRPwPost4ü			57	Berlin	Dresden	53	1108	
-59	Pw4ü			60	Dresden	Berlin	60	1087	
-59	B4ü			60	Dresden	Berlin	60	1087	
-59	BC4ü			60	Dresden	Berlin	60	1087	
+56	C4i			55	Berlin	Chemnitz	80	1085	Ã¼ Elsterwerda
+56	BC4i			55	Berlin	Chemnitz	80	1085	Ã¼ Elsterwerda
+57	SWRPwPost4Ã¼	35		54	Dresden	Berlin	58	1108	
+57	SBC4Ã¼	35		54	Dresden	Berlin	58	1108	
+57	SBC4Ã¼	35		54	Dresden	Berlin	58	1108	
+57	SBC4Ã¼	35e		54	Dresden	Berlin	58	1108	
+58	SBC4Ã¼	35e		57	Berlin	Dresden	53	1108	
+58	SBC4Ã¼	35		57	Berlin	Dresden	53	1108	
+58	SBC4Ã¼	35		57	Berlin	Dresden	53	1108	
+58	SWRPwPost4Ã¼	35		57	Berlin	Dresden	53	1108	
+59	Pw4Ã¼			60	Dresden	Berlin	60	1087	
+59	B4Ã¼			60	Dresden	Berlin	60	1087	
+59	BC4Ã¼			60	Dresden	Berlin	60	1087	
 59	WR			60	Dresden	Berlin	64	1523	
-59	C4ü			60	Dresden	Berlin	64	1087	
-59	C4ü			60	Dresden	Berlin	64	1087	
-59	C4ü			60	Dresden	Berlin	64	1087	
-60	Post4ü			51	Berlin	Dresden	51	Feb 43	
-60	Pw4ü			59	Berlin	Dresden	59	1087	
-60	C4ü			59	Berlin	Dresden	59	1087	
-60	C4ü			59	Berlin	Dresden	59	1087	
-60	C4ü			59	Berlin	Dresden	59	1087	
+59	C4Ã¼			60	Dresden	Berlin	64	1087	
+59	C4Ã¼			60	Dresden	Berlin	64	1087	
+59	C4Ã¼			60	Dresden	Berlin	64	1087	
+60	Post4Ã¼			51	Berlin	Dresden	51	Feb 43	
+60	Pw4Ã¼			59	Berlin	Dresden	59	1087	
+60	C4Ã¼			59	Berlin	Dresden	59	1087	
+60	C4Ã¼			59	Berlin	Dresden	59	1087	
+60	C4Ã¼			59	Berlin	Dresden	59	1087	
 60	WR			63	Berlin	Dresden	59	1523	
-60	BC4ü			59	Berlin	Dresden	59	1087	
-60	B4ü			59	Berlin	Dresden	59	1087	
-61	Post4ü			52	Dresden	Berlin	52	Feb 42	W
-61	Pw4ü			65	Karlsbad	Berlin	62	1094	
+60	BC4Ã¼			59	Berlin	Dresden	59	1087	
+60	B4Ã¼			59	Berlin	Dresden	59	1087	
+61	Post4Ã¼			52	Dresden	Berlin	52	Feb 42	W
+61	Pw4Ã¼			65	Karlsbad	Berlin	62	1094	
 61	WR			62	Bodenbach	Berlin	62	1522	
-61	AB4ü			65	Karlsbad	Berlin	62	1094	
-61	BC4ü			65	Karlsbad	Berlin	62	1094	1 Fr 2. u 3. Kl
-61	C4ü			65	Karlsbad	Berlin	62	1094	
-61	C4ü			11	Wien	Berlin	62	1852	
-61	AB4ü			11	Wien	Berlin	62	1852	
-61	BC4ü			11	Pressburg	Berlin	62	1800	
-61	C4ü			62	Dresden	Berlin	62	1092	1.VI. bis 31.VIII.
-62	Pw4ü			61	Berlin	Karlsbad	66	1094	
-62	C4ü			61	Berlin	Karlsbad	66	1094	
-62	BC4ü			61	Berlin	Karlsbad	66	1094	1 Fr 2. u 3. Kl
-62	AB4ü			61	Berlin	Karlsbad	66	1094	
+61	AB4Ã¼			65	Karlsbad	Berlin	62	1094	
+61	BC4Ã¼			65	Karlsbad	Berlin	62	1094	1 Fr 2. u 3. Kl
+61	C4Ã¼			65	Karlsbad	Berlin	62	1094	
+61	C4Ã¼			11	Wien	Berlin	62	1852	
+61	AB4Ã¼			11	Wien	Berlin	62	1852	
+61	BC4Ã¼			11	Pressburg	Berlin	62	1800	
+61	C4Ã¼			62	Dresden	Berlin	62	1092	1.VI. bis 31.VIII.
+62	Pw4Ã¼			61	Berlin	Karlsbad	66	1094	
+62	C4Ã¼			61	Berlin	Karlsbad	66	1094	
+62	BC4Ã¼			61	Berlin	Karlsbad	66	1094	1 Fr 2. u 3. Kl
+62	AB4Ã¼			61	Berlin	Karlsbad	66	1094	
 62	WR			61	Berlin	Bodenbach	61	1522	
-62	BC4ü			61	Berlin	Pressburg	12	1800	
-62	AB4ü			61	Berlin	Wien	12	1852	
-62	C4ü			61	Berlin	Wien	12	1852	
-62	C4ü			61	Berlin	Dresden	61	1092	2.VI. bis 31.VIII.
-63	Pw4ü			64	Bodenbach	Berlin	64	221	
-63	BC4ü			64	Bodenbach	Berlin	64	221	
-63	ABC4ü			63	Prag	Berlin	64	201	
-63	AB4ü			63	Budapest	Berlin	64	1810	
-63	C4ü			63	Budapest	Berlin	64	220	
-63	C4ü			63	Budapest	Berlin	64	220	bis 1.X. regelm, ab 2.X. n Bed
-63	ABC4ü			67	Karlsbad	Berlin	64	1096	vom 1.IX.-30.IX. und ab 15.IV.
+62	BC4Ã¼			61	Berlin	Pressburg	12	1800	
+62	AB4Ã¼			61	Berlin	Wien	12	1852	
+62	C4Ã¼			61	Berlin	Wien	12	1852	
+62	C4Ã¼			61	Berlin	Dresden	61	1092	2.VI. bis 31.VIII.
+63	Pw4Ã¼			64	Bodenbach	Berlin	64	221	
+63	BC4Ã¼			64	Bodenbach	Berlin	64	221	
+63	ABC4Ã¼			63	Prag	Berlin	64	201	
+63	AB4Ã¼			63	Budapest	Berlin	64	1810	
+63	C4Ã¼			63	Budapest	Berlin	64	220	
+63	C4Ã¼			63	Budapest	Berlin	64	220	bis 1.X. regelm, ab 2.X. n Bed
+63	ABC4Ã¼			67	Karlsbad	Berlin	64	1096	vom 1.IX.-30.IX. und ab 15.IV.
 63	WR			148	Dresden	Berlin	60	1523	
-63	C4ü			64	Dresden	Berlin	64	201	vS
-63	C4ü			64	Dresden	Berlin	64	201	vS
-63	B4ü			64	Dresden	Berlin	64	201	vS
-63	C4ü			64	Dresden	Berlin	64	201	vS
-64	Pw4ü			63	Berlin	Bodenbach	63	221	
-64	C4ü			63	Berlin	Budapest	64	220	
-64	C4ü			63	Berlin	Budapest	64	220	
-64	AB4ü			63	Berlin	Budapest	64	1810	
-64	ABC4ü			63	Berlin	Prag	64	201	
-64	ABC4ü			63	Berlin	Karlsbad	68	1096	
+63	C4Ã¼			64	Dresden	Berlin	64	201	vS
+63	C4Ã¼			64	Dresden	Berlin	64	201	vS
+63	B4Ã¼			64	Dresden	Berlin	64	201	vS
+63	C4Ã¼			64	Dresden	Berlin	64	201	vS
+64	Pw4Ã¼			63	Berlin	Bodenbach	63	221	
+64	C4Ã¼			63	Berlin	Budapest	64	220	
+64	C4Ã¼			63	Berlin	Budapest	64	220	
+64	AB4Ã¼			63	Berlin	Budapest	64	1810	
+64	ABC4Ã¼			63	Berlin	Prag	64	201	
+64	ABC4Ã¼			63	Berlin	Karlsbad	68	1096	
 64	WR			59	Berlin	Bodenbach	147	1523	
-64	BC4ü			63	Berlin	Bodenbach	63	221	
-64	C4ü			63	Berlin	Dresden	63	201	
-64	B4ü			63	Berlin	Dresden	63	201	
-64	C4ü			63	Berlin	Dresden	63	201	
-64	C4ü			63	Berlin	Dresden	63	201	
+64	BC4Ã¼			63	Berlin	Bodenbach	63	221	
+64	C4Ã¼			63	Berlin	Dresden	63	201	
+64	B4Ã¼			63	Berlin	Dresden	63	201	
+64	C4Ã¼			63	Berlin	Dresden	63	201	
+64	C4Ã¼			63	Berlin	Dresden	63	201	
 67	Pw4i-K			68	Dresden	Berlin	68	1098	
 67	C4i			68	Dresden	Berlin	68	1098	vS, S u nS
 67	C4i			68	Dresden	Berlin	68	1098	
@@ -433,101 +433,101 @@ ZugNr	GattungZp	GattungReal	GattungModell	VonZug	VonBf	NachBf	NachZug	Umlaufplan
 68	B4i			67	Berlin	Dresden	67	1098	
 68	C4i			67	Berlin	Dresden	67	1098	
 68	C4i			67	Berlin	Dresden	67	1098	vS, S u nS
-69	Pw4ü Expr			1004	Chemnitz	Berlin	52	227	
-69	Pw4ü			74	Chemnitz	Berlin	76	1090	
-69	C4ü			74	Chemnitz	Berlin	76	1090	
-69	B4ü			74	Chemnitz	Berlin	76	1090	
-69	C4ü			74	Chemnitz	Berlin	76	1090	
-69	C4ü-K			74	Chemnitz	Berlin	76	1090	
-70	Post4ü			71	Berlin	München	71	2/23a	S/nS
-70	Pw4ü			71	Berlin	München	71	1614	
-70	WLC 342			71	Berlin	München	71	1478	Bedarf
-70	WLC 343			71	Berlin	München	71	1478	Bedarf
-70	WLC 341			71	Berlin	München	71	1478	
-70	WLAB 335			71	Berlin	München	71	1478	
-70	WLAB 336			71	Berlin	München	71	1478	
-70	WLAB 337			71	Berlin	München	71	1478	
-70	WLAB 338			71	Berlin	München	71	1478	Bedarf
-70	WLAB 339			71	Berlin	München	71	1478	Bedarf
-70	WLAB 340			71	Berlin	München	71	1478	Bedarf
+69	Pw4Ã¼ Expr			1004	Chemnitz	Berlin	52	227	
+69	Pw4Ã¼			74	Chemnitz	Berlin	76	1090	
+69	C4Ã¼			74	Chemnitz	Berlin	76	1090	
+69	B4Ã¼			74	Chemnitz	Berlin	76	1090	
+69	C4Ã¼			74	Chemnitz	Berlin	76	1090	
+69	C4Ã¼-K			74	Chemnitz	Berlin	76	1090	
+70	Post4Ã¼			71	Berlin	MÃ¼nchen	71	2/23a	S/nS
+70	Pw4Ã¼			71	Berlin	MÃ¼nchen	71	1614	
+70	WLC 342			71	Berlin	MÃ¼nchen	71	1478	Bedarf
+70	WLC 343			71	Berlin	MÃ¼nchen	71	1478	Bedarf
+70	WLC 341			71	Berlin	MÃ¼nchen	71	1478	
+70	WLAB 335			71	Berlin	MÃ¼nchen	71	1478	
+70	WLAB 336			71	Berlin	MÃ¼nchen	71	1478	
+70	WLAB 337			71	Berlin	MÃ¼nchen	71	1478	
+70	WLAB 338			71	Berlin	MÃ¼nchen	71	1478	Bedarf
+70	WLAB 339			71	Berlin	MÃ¼nchen	71	1478	Bedarf
+70	WLAB 340			71	Berlin	MÃ¼nchen	71	1478	Bedarf
 70	WR			21	Berlin	Halle (S)	71	1493/1494	
-71	Post4ü			70	München	Berlin	70	2/23a	S/nS
-71	Pw4ü			70	München	Berlin	70	1614	
-71	WLC 341			70	München	Berlin	70	1478	Bedarf
-71	WLC 342			70	München	Berlin	70	1478	Bedarf
-71	WLC 343			70	München	Berlin	70	1478	Bedarf
-71	WLAB 338			70	München	Berlin	70	1478	Bedarf
-71	WLAB 339			70	München	Berlin	70	1478	Bedarf
-71	WLAB 340			70	München	Berlin	70	1478	Bedarf
-71	WLAB 335			70	München	Berlin	70	1478	Bedarf
-71	WLAB 336			70	München	Berlin	70	1478	Bedarf
-71	WLAB 337			70	München	Berlin	70	1478	Bedarf
+71	Post4Ã¼			70	MÃ¼nchen	Berlin	70	2/23a	S/nS
+71	Pw4Ã¼			70	MÃ¼nchen	Berlin	70	1614	
+71	WLC 341			70	MÃ¼nchen	Berlin	70	1478	Bedarf
+71	WLC 342			70	MÃ¼nchen	Berlin	70	1478	Bedarf
+71	WLC 343			70	MÃ¼nchen	Berlin	70	1478	Bedarf
+71	WLAB 338			70	MÃ¼nchen	Berlin	70	1478	Bedarf
+71	WLAB 339			70	MÃ¼nchen	Berlin	70	1478	Bedarf
+71	WLAB 340			70	MÃ¼nchen	Berlin	70	1478	Bedarf
+71	WLAB 335			70	MÃ¼nchen	Berlin	70	1478	Bedarf
+71	WLAB 336			70	MÃ¼nchen	Berlin	70	1478	Bedarf
+71	WLAB 337			70	MÃ¼nchen	Berlin	70	1478	Bedarf
 71	WR			70	Halle (S)	Berlin	24	1493/1494	
-72	Pw4ü			73	Berlin	Chemnitz	75	1090	
-72	C4ü-K			73	Berlin	Chemnitz	75	1090	
-72	C4ü			73	Berlin	Chemnitz	75	1090	
-72	B4ü			73	Berlin	Chemnitz	75	1090	
-72	C4ü			73	Berlin	Chemnitz	75	1090	
-73	Post4ü			74	Chemnitz	Berlin	74	Feb 49	W
-73	Pw4ü			76	Chemnitz	Berlin	72	1090	
-73	C4ü			76	Chemnitz	Berlin	72	1090	
-73	B4ü			76	Chemnitz	Berlin	72	1090	
-73	C4ü			76	Chemnitz	Berlin	72	1090	
-73	C4ü-K			76	Chemnitz	Berlin	72	1090	
-73	C4ü			76	Chemnitz	Berlin	76	205	nur vS
-73	C4ü			76	Chemnitz	Berlin	76	205	nur vS
-73	C4ü			74	Chemnitz	Berlin	74	1095	nur S
-73	C4ü			74	Chemnitz	Berlin	74	1095	nur S
-74	Post4ü			73	Berlin	Chemnitz	73	Feb 49	W
-74	Pw4ü			73	Berlin	Chemnitz	68	1090	
-74	C4ü			73	Berlin	Chemnitz	75	1095	nur S
-74	C4ü			73	Berlin	Chemnitz	75	1095	nur S
-74	C4ü			75	Berlin	Chemnitz	73	1095	nur vS
-74	C4ü			75	Berlin	Chemnitz	73	1095	nur vS
-74	C4ü			75	Berlin	Chemnitz	73	1095	nur vS
-74	C4ü-K			75	Berlin	Chemnitz	69	1090	
-74	C4ü			75	Berlin	Chemnitz	69	1090	
-74	B4ü			75	Berlin	Chemnitz	69	1090	
-74	C4ü			75	Berlin	Chemnitz	69	1090	
-75	Pw4ü			72	Chemnitz	Berlin	74	1090	
-75	C4ü			72	Chemnitz	Berlin	74	1090	
-75	B4ü			72	Chemnitz	Berlin	74	1090	
-75	C4ü			72	Chemnitz	Berlin	74	1090	
-75	C4ü-K			72	Chemnitz	Berlin	74	1090	
-75	C4ü			72	Chemnitz	Berlin	74	1095	nur vS
-75	C4ü			72	Chemnitz	Berlin	74	1095	nur vS
-75	C4ü			74	Chemnitz	Berlin	74	1095	nur vS
-76	Pw4ü			69	Berlin	Chemnitz	73	1090	
-76	C4ü			73	Berlin	Chemnitz	73	205	nur vS
-76	C4ü			69	Berlin	Chemnitz	73	205	nur vS
-76	C4ü-K			69	Berlin	Chemnitz	73	1090	
-76	C4ü			69	Berlin	Chemnitz	73	1090	
-76	B4ü			69	Berlin	Chemnitz	73	1090	
-76	C4ü			69	Berlin	Chemnitz	73	1090	
-77	Pw4ü-K			78	Chemnitz	Berlin	78	1100	
+72	Pw4Ã¼			73	Berlin	Chemnitz	75	1090	
+72	C4Ã¼-K			73	Berlin	Chemnitz	75	1090	
+72	C4Ã¼			73	Berlin	Chemnitz	75	1090	
+72	B4Ã¼			73	Berlin	Chemnitz	75	1090	
+72	C4Ã¼			73	Berlin	Chemnitz	75	1090	
+73	Post4Ã¼			74	Chemnitz	Berlin	74	Feb 49	W
+73	Pw4Ã¼			76	Chemnitz	Berlin	72	1090	
+73	C4Ã¼			76	Chemnitz	Berlin	72	1090	
+73	B4Ã¼			76	Chemnitz	Berlin	72	1090	
+73	C4Ã¼			76	Chemnitz	Berlin	72	1090	
+73	C4Ã¼-K			76	Chemnitz	Berlin	72	1090	
+73	C4Ã¼			76	Chemnitz	Berlin	76	205	nur vS
+73	C4Ã¼			76	Chemnitz	Berlin	76	205	nur vS
+73	C4Ã¼			74	Chemnitz	Berlin	74	1095	nur S
+73	C4Ã¼			74	Chemnitz	Berlin	74	1095	nur S
+74	Post4Ã¼			73	Berlin	Chemnitz	73	Feb 49	W
+74	Pw4Ã¼			73	Berlin	Chemnitz	68	1090	
+74	C4Ã¼			73	Berlin	Chemnitz	75	1095	nur S
+74	C4Ã¼			73	Berlin	Chemnitz	75	1095	nur S
+74	C4Ã¼			75	Berlin	Chemnitz	73	1095	nur vS
+74	C4Ã¼			75	Berlin	Chemnitz	73	1095	nur vS
+74	C4Ã¼			75	Berlin	Chemnitz	73	1095	nur vS
+74	C4Ã¼-K			75	Berlin	Chemnitz	69	1090	
+74	C4Ã¼			75	Berlin	Chemnitz	69	1090	
+74	B4Ã¼			75	Berlin	Chemnitz	69	1090	
+74	C4Ã¼			75	Berlin	Chemnitz	69	1090	
+75	Pw4Ã¼			72	Chemnitz	Berlin	74	1090	
+75	C4Ã¼			72	Chemnitz	Berlin	74	1090	
+75	B4Ã¼			72	Chemnitz	Berlin	74	1090	
+75	C4Ã¼			72	Chemnitz	Berlin	74	1090	
+75	C4Ã¼-K			72	Chemnitz	Berlin	74	1090	
+75	C4Ã¼			72	Chemnitz	Berlin	74	1095	nur vS
+75	C4Ã¼			72	Chemnitz	Berlin	74	1095	nur vS
+75	C4Ã¼			74	Chemnitz	Berlin	74	1095	nur vS
+76	Pw4Ã¼			69	Berlin	Chemnitz	73	1090	
+76	C4Ã¼			73	Berlin	Chemnitz	73	205	nur vS
+76	C4Ã¼			69	Berlin	Chemnitz	73	205	nur vS
+76	C4Ã¼-K			69	Berlin	Chemnitz	73	1090	
+76	C4Ã¼			69	Berlin	Chemnitz	73	1090	
+76	B4Ã¼			69	Berlin	Chemnitz	73	1090	
+76	C4Ã¼			69	Berlin	Chemnitz	73	1090	
+77	Pw4Ã¼-K			78	Chemnitz	Berlin	78	1100	
 77	C4i			78	Chemnitz	Berlin	78	1100	nur vS u S
 77	C4i			78	Chemnitz	Berlin	78	1100	
 77	B4i			78	Chemnitz	Berlin	78	1100	
 77	C4i			78	Chemnitz	Berlin	78	1100	
 77	C4i			78	Chemnitz	Berlin	78	1100	
-78	Pw4ü-K			77	Berlin	Chemnitz	77	1100	
+78	Pw4Ã¼-K			77	Berlin	Chemnitz	77	1100	
 78	C4i			77	Berlin	Chemnitz	77	1100	
 78	C4i			77	Berlin	Chemnitz	77	1100	
 78	B4i			77	Berlin	Chemnitz	77	1100	
 78	C4i			77	Berlin	Chemnitz	77	1100	vS u S
 78	C4i			77	Berlin	Chemnitz	77	1100	
-79	Pw4ü			80	München	Berlin	80	1611	
-79	AB4ü			80	München	Berlin	80	1611	
-79	AB4ü			80	München	Berlin	80	1611	
-79	AB4ü			80	München	Berlin	80	1611	
-79	WR			62	Brenner	Berlin	80	1508	
-79	AB4ü			62	Rom	Berlin	80	1029	
-80	AB4ü			79	Berlin	Rom	61	168	
-80	WR			79	Berlin	Brenner	61	1508	
-80	AB4ü			79	Berlin	München	79	1611	
-80	AB4ü			79	Berlin	München	79	1611	
-80	AB4ü			79	Berlin	München	79	1611	
-80	Pw4ü			79	Berlin	München	79	1611	
+79	Pw4Ã¼	34		80	MÃ¼nchen	Berlin	80	1611	
+79	AB4Ã¼	28		80	MÃ¼nchen	Berlin	80	1611	
+79	AB4Ã¼	28		80	MÃ¼nchen	Berlin	80	1611	
+79	AB4Ã¼	28		80	MÃ¼nchen	Berlin	80	1611	
+79	WR4Ã¼	29		62	Brenner	Berlin	80	1508	
+79	AB4Ã¼	28		62	Rom	Berlin	80	1029	
+80	AB4Ã¼	28		79	Berlin	Rom	61	168	
+80	WR4Ã¼	29		79	Berlin	Brenner	61	1508	
+80	AB4Ã¼	28		79	Berlin	MÃ¼nchen	79	1611	
+80	AB4Ã¼	28		79	Berlin	MÃ¼nchen	79	1611	
+80	AB4Ã¼	28		79	Berlin	MÃ¼nchen	79	1611	
+80	Pw4Ã¼	34		79	Berlin	MÃ¼nchen	79	1611	
 87	Pw4i-K			68	Dresden	Berlin	68	1098	wie E67
 87	C4i			68	Dresden	Berlin	68	1098	vS, S u nS
 87	C4i			68	Dresden	Berlin	68	1098	
@@ -540,63 +540,63 @@ ZugNr	GattungZp	GattungReal	GattungModell	VonZug	VonBf	NachBf	NachZug	Umlaufplan
 88	B4i			67	Berlin	Dresden	67	1098	
 88	C4i			67	Berlin	Dresden	67	1098	
 88	C4i			67	Berlin	Dresden	67	1098	vS, S u nS
-91	Pw4ü			191	Garmisch	Berlin	92	97	
-91	C4ü			191	Innsbruck	Berlin	92	98	
-91	BC4ü			191	Innsbruck	Berlin	92	98	16./17. VI. bis 11./12.IX. u 15./16.XII. bis 15./16.IV
-91	BC4ü			191	Garmisch	Berlin	92	97	
+91	Pw4Ã¼			191	Garmisch	Berlin	92	97	
+91	C4Ã¼			191	Innsbruck	Berlin	92	98	
+91	BC4Ã¼			191	Innsbruck	Berlin	92	98	16./17. VI. bis 11./12.IX. u 15./16.XII. bis 15./16.IV
+91	BC4Ã¼			191	Garmisch	Berlin	92	97	
 91	WLAB 326			191	Garmisch	Berlin	92	1486	15./16.V. bis 10./11.IX., 15./16.XII. bis 31.III/1.IV.
 91	WLAB 331			591	Oberstdorf	Berlin	92	1479	vom 10./11.I. bis 31.III./1.IV.
-91	ABC4ü			591	Oberstdorf	Berlin	92	299	vom 10./11.I. bis 15./16.IV.
-91	C4ü			591	Oberstdorf	Berlin	92	299	vom 10./11.I. bis 15./16.IV.
-91	C4ü			591	Oberstdorf	Berlin	92	299	Bedarf, vom 10./11.I. bis 15./16.IV.
-91	C4ü			92	Lindau	Berlin	92	96	15,/16.V. bis 1./2.X. und 15./16.XII. bis 15./16.IV.
-91	ABC4ü			92	Lindau	Berlin	92	94	15./16.V. bis 15./16.VI. und 10./11.IX. bis 1.2.X.
-91	ABC4ü			73	Chur	Berlin	92	93	16./17.VI. bis 10./11.IX., 16./17.XII. bis 31.III./1.IV.
+91	ABC4Ã¼			591	Oberstdorf	Berlin	92	299	vom 10./11.I. bis 15./16.IV.
+91	C4Ã¼			591	Oberstdorf	Berlin	92	299	vom 10./11.I. bis 15./16.IV.
+91	C4Ã¼			591	Oberstdorf	Berlin	92	299	Bedarf, vom 10./11.I. bis 15./16.IV.
+91	C4Ã¼			92	Lindau	Berlin	92	96	15,/16.V. bis 1./2.X. und 15./16.XII. bis 15./16.IV.
+91	ABC4Ã¼			92	Lindau	Berlin	92	94	15./16.V. bis 15./16.VI. und 10./11.IX. bis 1.2.X.
+91	ABC4Ã¼			73	Chur	Berlin	92	93	16./17.VI. bis 10./11.IX., 16./17.XII. bis 31.III./1.IV.
 91	WLAB 316			73	Chur	Berlin	92	1483	
-92	ABC4ü			91	Berlin	Chur	72	93	14./15.VI. bis 8./9.IX. u. 14./15.XII. bis 29./30.III.
+92	ABC4Ã¼			91	Berlin	Chur	72	93	14./15.VI. bis 8./9.IX. u. 14./15.XII. bis 29./30.III.
 92	WLAB 316			91	Berlin	Chur	72	1483	14./15.VI. bis 8./9.IX. u. 14./15.XII. bis 29./30.III.
-92	ABC4ü			91	Berlin	Lindau	91	94	14./15.V. bis 14./14.VI. und 9./10.IX. bis 30.IX./1.X.
-92	C4ü			91	Berlin	Lindau	91	96	15./16.V. bis 1.2/.X. und 14./15.XII. bis 14./15.IV.
-92	C4ü			91	Berlin	Oberstdorf	592	299	Bedarf
-92	C4ü			91	Berlin	Oberstdorf	592	299	vom 9./10.I. bis 14./15.IV.
-92	ABC4ü			91	Berlin	Oberstdorf	592	299	vom 9./10.I. bis 14./15.IV.
+92	ABC4Ã¼			91	Berlin	Lindau	91	94	14./15.V. bis 14./14.VI. und 9./10.IX. bis 30.IX./1.X.
+92	C4Ã¼			91	Berlin	Lindau	91	96	15./16.V. bis 1.2/.X. und 14./15.XII. bis 14./15.IV.
+92	C4Ã¼			91	Berlin	Oberstdorf	592	299	Bedarf
+92	C4Ã¼			91	Berlin	Oberstdorf	592	299	vom 9./10.I. bis 14./15.IV.
+92	ABC4Ã¼			91	Berlin	Oberstdorf	592	299	vom 9./10.I. bis 14./15.IV.
 92	WLAB 331			91	Berlin	Oberstdorf	192	1479	vom 9./10.I. bis 30./31.III.
 92	WLAB 326			91	Berlin	Garmisch-Partenkirchen	192	1486	14./15.VI. bis 9./10.IX., 14./15.XII. bis 30./31.III.
-92	BC4ü			91	Berlin	Garmisch-Partenkirchen	192	97	14./15.VI. bis 9./10.IX., 14./15.XII. bis 30./31.III.
-92	BC4ü			91	Berlin	Innsbruck	192	98	15./16.IV. bis 10./11.IX., 14./15.XII. bis 14./15.IV.
-92	C4ü			91	Berlin	Innsbruck	192	98	15./16.IV. bis 10./11.IX., 14./15.XII. bis 14./15.IV.
-92	Pw4ü			91	Berlin	Garmisch-Partenkirchen	192	97	
-107	Pw4ü			108	Kassel	Berlin	52	226	
-107	C4ü			108	Kassel	Berlin	52	226	
-107	BC4ü			108	Kassel	Berlin	52	225	
-107	C4ü-K			108	Kassel	Berlin	108	91	
-107	C4ü			108	Erfurt	Berlin	108	20	
-107	BC4ü			108	Erfurt	Berlin	108	20	
-107	BC4ü			4	Erfurt	Berlin	4	17	S
-107	C4ü			108	Halle (S)	Berlin	108	1194	vS
-108	Post4ü			27	Berlin	Kassel	27	2/20a	W
-108	Pw4ü			51	Berlin	Kassel	107	226	
-108	BC4ü			51	Berlin	Kassel	107	225	
-108	C4ü			51	Berlin	Kassel	107	226	
-108	C4ü-K			107	Berlin	Kassel	105	92	
-108	BC4ü			107	Berlin	Erfurt	107	20	
-108	C4ü			107	Berlin	Erfurt	107	20	
-108	C4ü			107	Berlin	Halle (S)	107	1194	S
-113	Pw4ü Expr Stgt 378			114	Stuttgart	Berlin	114	108	Di/Mi bis Fr/Sa
-113	Pw4ü			114	Stuttgart	Berlin	244	107	Stuttgart 2, Berlin
-113	C4ü			114	Stuttgart	Berlin	244	107	1 Wagenzug
-113	C4ü			114	Stuttgart	Berlin	244	107	1 Wagenzug
-113	AB4ü			114	Stuttgart	Berlin	244	107	1 Wagenzug
+92	BC4Ã¼			91	Berlin	Garmisch-Partenkirchen	192	97	14./15.VI. bis 9./10.IX., 14./15.XII. bis 30./31.III.
+92	BC4Ã¼			91	Berlin	Innsbruck	192	98	15./16.IV. bis 10./11.IX., 14./15.XII. bis 14./15.IV.
+92	C4Ã¼			91	Berlin	Innsbruck	192	98	15./16.IV. bis 10./11.IX., 14./15.XII. bis 14./15.IV.
+92	Pw4Ã¼			91	Berlin	Garmisch-Partenkirchen	192	97	
+107	Pw4Ã¼			108	Kassel	Berlin	52	226	
+107	C4Ã¼			108	Kassel	Berlin	52	226	
+107	BC4Ã¼			108	Kassel	Berlin	52	225	
+107	C4Ã¼-K			108	Kassel	Berlin	108	91	
+107	C4Ã¼			108	Erfurt	Berlin	108	20	
+107	BC4Ã¼			108	Erfurt	Berlin	108	20	
+107	BC4Ã¼			4	Erfurt	Berlin	4	17	S
+107	C4Ã¼			108	Halle (S)	Berlin	108	1194	vS
+108	Post4Ã¼			27	Berlin	Kassel	27	2/20a	W
+108	Pw4Ã¼			51	Berlin	Kassel	107	226	
+108	BC4Ã¼			51	Berlin	Kassel	107	225	
+108	C4Ã¼			51	Berlin	Kassel	107	226	
+108	C4Ã¼-K			107	Berlin	Kassel	105	92	
+108	BC4Ã¼			107	Berlin	Erfurt	107	20	
+108	C4Ã¼			107	Berlin	Erfurt	107	20	
+108	C4Ã¼			107	Berlin	Halle (S)	107	1194	S
+113	Pw4Ã¼ Expr Stgt 378			114	Stuttgart	Berlin	114	108	Di/Mi bis Fr/Sa
+113	Pw4Ã¼			114	Stuttgart	Berlin	244	107	Stuttgart 2, Berlin
+113	C4Ã¼			114	Stuttgart	Berlin	244	107	1 Wagenzug
+113	C4Ã¼			114	Stuttgart	Berlin	244	107	1 Wagenzug
+113	AB4Ã¼			114	Stuttgart	Berlin	244	107	1 Wagenzug
 113	WLAB 307			114	Stuttgart	Berlin	114	1469	
-114	Post4ü			827	Berlin	Halle (S)	870	02. Okt	S/nS
-114	Pw4ü Expr Bln 47			869	Berlin	Frankfurt (Main)	870	2152 Zp B	ü Halle S/nS
+114	Post4Ã¼			827	Berlin	Halle (S)	870	02. Okt	S/nS
+114	Pw4Ã¼ Expr Bln 47			869	Berlin	Frankfurt (Main)	870	2152 Zp B	Ã¼ Halle S/nS
 114	WLAB 307			241	Berlin	Stuttgart	113	1469	Stuttgart 2, Berlin
-114	AB4ü			241	Berlin	Stuttgart	113	107	1 Wagenzug
-114	C4ü			241	Berlin	Stuttgart	113	107	1 Wagenzug
-114	C4ü			241	Berlin	Stuttgart	113	107	1 Wagenzug
-114	Pw4ü			241	Berlin	Stuttgart	113	107	1 Wagenzug
-114	Pw4ü Expr Bln 36			113	Berlin	Stuttgart	113	108	Di/Mi bis Fr/Sa
-120	Post4ü			827	Berlin	Leipzig	398	Feb 20	nS
+114	AB4Ã¼			241	Berlin	Stuttgart	113	107	1 Wagenzug
+114	C4Ã¼			241	Berlin	Stuttgart	113	107	1 Wagenzug
+114	C4Ã¼			241	Berlin	Stuttgart	113	107	1 Wagenzug
+114	Pw4Ã¼			241	Berlin	Stuttgart	113	107	1 Wagenzug
+114	Pw4Ã¼ Expr Bln 36			113	Berlin	Stuttgart	113	108	Di/Mi bis Fr/Sa
+120	Post4Ã¼			827	Berlin	Leipzig	398	Feb 20	nS
 120	Pw4i			121	Berlin	Leipzig	121	278	
 120	C4i			121	Berlin	Leipzig	121	278	
 120	C4i			121	Berlin	Leipzig	121	278	
@@ -609,7 +609,7 @@ ZugNr	GattungZp	GattungReal	GattungModell	VonZug	VonBf	NachBf	NachZug	Umlaufplan
 120	C4i			121	Berlin	Leipzig	121	278	nS
 120	C4i			121	Berlin	Leipzig	121	278	nS
 120	C4i			121	Berlin	Leipzig	121	1192	nS
-121	PwPost4ü			119	Leipzig	Berlin	848	Feb 31	nS
+121	PwPost4Ã¼			119	Leipzig	Berlin	848	Feb 31	nS
 121	Pw4i			120	Leipzig	Berlin	120	278	
 121	C4i			120	Leipzig	Berlin	120	1192	vS
 121	C4i			120	Leipzig	Berlin	120	1192	vS
@@ -622,249 +622,249 @@ ZugNr	GattungZp	GattungReal	GattungModell	VonZug	VonBf	NachBf	NachZug	Umlaufplan
 121	B4i			120	Leipzig	Berlin	120	278	
 121	C4i			120	Leipzig	Berlin	120	278	
 121	C4i			120	Leipzig	Berlin	120	278	
-125	C4ü-K			126	Nürnberg	Berlin	126	172	
-125	BC4ü			126	Nürnberg	Berlin	126	172	
-125	ABC4ü			126	Nürnberg	Berlin	26	173	
-125	C4ü			126	Nürnberg	Berlin	26	173	
-125	Pw4ü			126	Nürnberg	Berlin	26	173	
-126	Pw4ü			25	Berlin	Nürnberg	125	173	
-126	C4ü			25	Berlin	Nürnberg	125	173	
-126	ABC4ü			25	Berlin	Nürnberg	125	172	
-126	BC4ü			125	Berlin	Nürnberg	125	172	
-126	C4ü-K			125	Berlin	Nürnberg	125	172	
-139	C4ü			140	München	Berlin	140	1612	Bedarf
-139	C4ü			140	München	Berlin	140	1612	
-139	C4ü			140	München	Berlin	140	1612	
-139	B4ü			140	München	Berlin	140	1612	
-139	WR			140	München	Berlin	140	1510	
-139	B4ü			140	München	Berlin	140	1612	
-139	C4ü			140	München	Berlin	140	1612	
-139	C4ü			140	München	Berlin	140	1612	
-139	C4ü			140	München	Berlin	140	1612	Bedarf
-139	Pw4ü			140	München	Berlin	140	1612	
-140	Pw4ü			139	Berlin	München	139	1612	
-140	C4ü			139	Berlin	München	139	1612	Bedarf
-140	C4ü			139	Berlin	München	139	1612	
-140	C4ü			139	Berlin	München	139	1612	
-140	B4ü			139	Berlin	München	139	1612	
-140	WR			139	Berlin	München	139	1510	
-140	B4ü			139	Berlin	München	139	1612	
-140	C4ü			139	Berlin	München	139	1612	
-140	C4ü			139	Berlin	München	139	1612	
-140	C4ü			139	Berlin	München	139	1612	Bedarf
-147	PwPost4ü			148	Bodenbach	Berlin	148	232	2
+125	C4Ã¼-K			126	NÃ¼rnberg	Berlin	126	172	
+125	BC4Ã¼			126	NÃ¼rnberg	Berlin	126	172	
+125	ABC4Ã¼			126	NÃ¼rnberg	Berlin	26	173	
+125	C4Ã¼			126	NÃ¼rnberg	Berlin	26	173	
+125	Pw4Ã¼			126	NÃ¼rnberg	Berlin	26	173	
+126	Pw4Ã¼			25	Berlin	NÃ¼rnberg	125	173	
+126	C4Ã¼			25	Berlin	NÃ¼rnberg	125	173	
+126	ABC4Ã¼			25	Berlin	NÃ¼rnberg	125	172	
+126	BC4Ã¼			125	Berlin	NÃ¼rnberg	125	172	
+126	C4Ã¼-K			125	Berlin	NÃ¼rnberg	125	172	
+139	C4Ã¼			140	MÃ¼nchen	Berlin	140	1612	Bedarf
+139	C4Ã¼			140	MÃ¼nchen	Berlin	140	1612	
+139	C4Ã¼			140	MÃ¼nchen	Berlin	140	1612	
+139	B4Ã¼			140	MÃ¼nchen	Berlin	140	1612	
+139	WR			140	MÃ¼nchen	Berlin	140	1510	
+139	B4Ã¼			140	MÃ¼nchen	Berlin	140	1612	
+139	C4Ã¼			140	MÃ¼nchen	Berlin	140	1612	
+139	C4Ã¼			140	MÃ¼nchen	Berlin	140	1612	
+139	C4Ã¼			140	MÃ¼nchen	Berlin	140	1612	Bedarf
+139	Pw4Ã¼			140	MÃ¼nchen	Berlin	140	1612	
+140	Pw4Ã¼			139	Berlin	MÃ¼nchen	139	1612	
+140	C4Ã¼			139	Berlin	MÃ¼nchen	139	1612	Bedarf
+140	C4Ã¼			139	Berlin	MÃ¼nchen	139	1612	
+140	C4Ã¼			139	Berlin	MÃ¼nchen	139	1612	
+140	B4Ã¼			139	Berlin	MÃ¼nchen	139	1612	
+140	WR			139	Berlin	MÃ¼nchen	139	1510	
+140	B4Ã¼			139	Berlin	MÃ¼nchen	139	1612	
+140	C4Ã¼			139	Berlin	MÃ¼nchen	139	1612	
+140	C4Ã¼			139	Berlin	MÃ¼nchen	139	1612	
+140	C4Ã¼			139	Berlin	MÃ¼nchen	139	1612	Bedarf
+147	PwPost4Ã¼			148	Bodenbach	Berlin	148	232	2
 147	WR			64	Bodenbach	Berlin	148	1523	66
-147	AB4ü			147	Wien Ostbf	Berlin	148	238	
-147	C4ü			147	Wien Ostbf	Berlin	148	238	
+147	AB4Ã¼			147	Wien Ostbf	Berlin	148	238	
+147	C4Ã¼			147	Wien Ostbf	Berlin	148	238	
 147	WLAB			147	Athen	Berlin	148	1280	an Berlin Di, Do u Sa
-147	ABC4ü			147	Belgrad	Berlin	148	1320	
-147	C4ü			148	Dresden	Berlin	148	233	
-147	BC4ü			148	Dresden	Berlin	148	233	nur S
-147	C4ü			148	Dresden	Berlin	148	233	nur S
-148	PwPost4ü			147	Berlin	Bodenbach	147	232	2 66
-148	C4ü			147	Berlin	Bodenbach	148	238	
-148	AB4ü			147	Berlin	Wien Ostbf	148	238	
-148	ABC4ü			147	Berlin	Wien Ostbf	148	1320	
+147	ABC4Ã¼			147	Belgrad	Berlin	148	1320	
+147	C4Ã¼			148	Dresden	Berlin	148	233	
+147	BC4Ã¼			148	Dresden	Berlin	148	233	nur S
+147	C4Ã¼			148	Dresden	Berlin	148	233	nur S
+148	PwPost4Ã¼			147	Berlin	Bodenbach	147	232	2 66
+148	C4Ã¼			147	Berlin	Bodenbach	148	238	
+148	AB4Ã¼			147	Berlin	Wien Ostbf	148	238	
+148	ABC4Ã¼			147	Berlin	Wien Ostbf	148	1320	
 148	WLAB			147	Berlin	Belgrad	148	1280	ab Berlin Mi, Fr und So
-148	C4ü			147	Berlin	Athen	147	233	nur S
-148	BC4ü			147	Berlin	Dresden	147	233	nur S
-148	C4ü			147	Berlin	Dresden	147	233	
+148	C4Ã¼			147	Berlin	Athen	147	233	nur S
+148	BC4Ã¼			147	Berlin	Dresden	147	233	nur S
+148	C4Ã¼			147	Berlin	Dresden	147	233	
 148	WR			147	Berlin	Dresden	63	1523	
-149	Post4ü			50	München	Berlin	50	Feb 23	
-149	Pw4ü-K			150	München	Berlin	150	1616	
-149	C4ü			150	München	Berlin	150	1616	1 Fr 3. Kl
-149	AB4ü			150	München	Berlin	150	1616	
-149	C4ü			150	München	Berlin	150	1616	
-149	C4ü			150	München	Berlin	150	1616	
-149	WLAB 131a/b			150	München	Berlin	150	1616	
-149	WLC 132a/b			150	München	Berlin	150	1476	Bedarf
-150	Pw4ü-K			149	Berlin	München	149	1616	
-150	WLAB131a/b			149	Berlin	München	149	1616	
-150	WLC132a/b			149	Berlin	München	149	1616	Bedarf
-150	C4ü			149	Berlin	München	149	1616	
-150	C4ü			149	Berlin	München	149	1616	
-150	AB4ü			149	Berlin	München	149	1616	
-150	C4ü			149	Berlin	München	149	1616	1 Fr 3. Kl
-155	Pw4ü			156	Wien	Berlin	156	1850	
-155	BC4ü			156	Wien	Berlin	156	191	
-155	C4ü			156	Wien	Berlin	156	191	
-155	C4ü			156	Wien	Berlin	156	191	
-155	C4ü			156	Wien	Berlin	156	191	
-155	C4ü			156	Wien	Berlin	156	1850	
-155	AB4ü			156	Wien	Berlin	156	191	
+149	Post4Ã¼			50	MÃ¼nchen	Berlin	50	Feb 23	
+149	Pw4Ã¼-K			150	MÃ¼nchen	Berlin	150	1616	
+149	C4Ã¼			150	MÃ¼nchen	Berlin	150	1616	1 Fr 3. Kl
+149	AB4Ã¼			150	MÃ¼nchen	Berlin	150	1616	
+149	C4Ã¼			150	MÃ¼nchen	Berlin	150	1616	
+149	C4Ã¼			150	MÃ¼nchen	Berlin	150	1616	
+149	WLAB 131a/b			150	MÃ¼nchen	Berlin	150	1616	
+149	WLC 132a/b			150	MÃ¼nchen	Berlin	150	1476	Bedarf
+150	Pw4Ã¼-K			149	Berlin	MÃ¼nchen	149	1616	
+150	WLAB131a/b			149	Berlin	MÃ¼nchen	149	1616	
+150	WLC132a/b			149	Berlin	MÃ¼nchen	149	1616	Bedarf
+150	C4Ã¼			149	Berlin	MÃ¼nchen	149	1616	
+150	C4Ã¼			149	Berlin	MÃ¼nchen	149	1616	
+150	AB4Ã¼			149	Berlin	MÃ¼nchen	149	1616	
+150	C4Ã¼			149	Berlin	MÃ¼nchen	149	1616	1 Fr 3. Kl
+155	Pw4Ã¼			156	Wien	Berlin	156	1850	
+155	BC4Ã¼			156	Wien	Berlin	156	191	
+155	C4Ã¼			156	Wien	Berlin	156	191	
+155	C4Ã¼			156	Wien	Berlin	156	191	
+155	C4Ã¼			156	Wien	Berlin	156	191	
+155	C4Ã¼			156	Wien	Berlin	156	1850	
+155	AB4Ã¼			156	Wien	Berlin	156	191	
 155	WLAB 312			156	Wien	Berlin	156	1487	
-155	Post4ü			156	Wien	Berlin	156	191	
-156	Post4ü			155	Berlin	Wien	155	Feb 30	
-156	Pw4ü			155	Berlin	Wien	155	1850	
+155	Post4Ã¼			156	Wien	Berlin	156	191	
+156	Post4Ã¼			155	Berlin	Wien	155	Feb 30	
+156	Pw4Ã¼			155	Berlin	Wien	155	1850	
 156	WLAB 312			155	Berlin	Wien	155	1487	
-156	AB4ü			155	Berlin	Wien	155	191	
-156	C4ü			155	Berlin	Wien	155	1850	
-156	C4ü			155	Berlin	Wien	155	191	
-156	C4ü			155	Berlin	Wien	155	191	
-156	C4ü			155	Berlin	Wien	155	191	
-156	BC4ü			155	Berlin	Wien	155	191	
+156	AB4Ã¼			155	Berlin	Wien	155	191	
+156	C4Ã¼			155	Berlin	Wien	155	1850	
+156	C4Ã¼			155	Berlin	Wien	155	191	
+156	C4Ã¼			155	Berlin	Wien	155	191	
+156	C4Ã¼			155	Berlin	Wien	155	191	
+156	BC4Ã¼			155	Berlin	Wien	155	191	
 156	WR			241	Berlin	Wien	29	1497	
-185	BC4ü			2029	Radiumbad Oberschlema	Berlin	186	171	ü Werdau bis 30. IX. U ab 2. V.
-185	AB4ü			185	Marienbad	Berlin	186	164	
-185	C4ü			186	Marienbad	Berlin	186	164	2.VI. bis 1.IX.
-185	C4ü			185	Marienbad	Berlin	186	164	1 Fr 3. Kl
+185	BC4Ã¼			2029	Radiumbad Oberschlema	Berlin	186	171	Ã¼ Werdau bis 30. IX. U ab 2. V.
+185	AB4Ã¼			185	Marienbad	Berlin	186	164	
+185	C4Ã¼			186	Marienbad	Berlin	186	164	2.VI. bis 1.IX.
+185	C4Ã¼			185	Marienbad	Berlin	186	164	1 Fr 3. Kl
 185	WR			186	Voitersreuth	Berlin	186	1613	
-185	BC4ü			186	Voitersreuth	Berlin	186	169	
-185	Pw4ü			185	Marienbad	Berlin	186	164	
-186	BC4ü			185	Berlin	Radiumbad Oberschlema	2028	171	bis 30.IX. U ab 2.V. ü Werdau
-186	BC4ü			185	Berlin	Voitersreuth	185	169	
+185	BC4Ã¼			186	Voitersreuth	Berlin	186	169	
+185	Pw4Ã¼			185	Marienbad	Berlin	186	164	
+186	BC4Ã¼			185	Berlin	Radiumbad Oberschlema	2028	171	bis 30.IX. U ab 2.V. Ã¼ Werdau
+186	BC4Ã¼			185	Berlin	Voitersreuth	185	169	
 186	WR			185	Berlin	Voitersreuth	185	1513	
-186	C4ü			185	Berlin	Marienbad	186	164	1 Fr 3. Kl
-186	C4ü			185	Berlin	Marienbad	185	164	1.VI. bis 31.VIII.
-186	AB4ü			185	Berlin	Marienbad	186	164	
-186	Pw4ü			185	Berlin	Marienbad	186	164	
-226	Pw4ü			227	Berlin	Berchtesgaden	227	185	
+186	C4Ã¼			185	Berlin	Marienbad	186	164	1 Fr 3. Kl
+186	C4Ã¼			185	Berlin	Marienbad	185	164	1.VI. bis 31.VIII.
+186	AB4Ã¼			185	Berlin	Marienbad	186	164	
+186	Pw4Ã¼			185	Berlin	Marienbad	186	164	
+226	Pw4Ã¼			227	Berlin	Berchtesgaden	227	185	
 226	WLABC 327			227	Berlin	Berchtesgaden	227	1488	
-226	ABC4ü			227	Berlin	Berchtesgaden	227	185	
-226	C4ü			227	Berlin	Berchtesgaden	227	185	
-226	C4ü			227	Berlin	Berchtesgaden	227	185	
+226	ABC4Ã¼			227	Berlin	Berchtesgaden	227	185	
+226	C4Ã¼			227	Berlin	Berchtesgaden	227	185	
+226	C4Ã¼			227	Berlin	Berchtesgaden	227	185	
 226	WLAB 325			227	Berlin	Badgastein	326	1490	
-226	C4ü			227	Berlin	Klagenfurt	326	189	
-226	AB4ü			227	Berlin	Klagenfurt	326	189	
-226	C4ü			227	Berlin	Salzburg	326	186	
+226	C4Ã¼			227	Berlin	Klagenfurt	326	189	
+226	AB4Ã¼			227	Berlin	Klagenfurt	326	189	
+226	C4Ã¼			227	Berlin	Salzburg	326	186	
 226	WLC 348			227	Berlin	Salzburg	326	1491	
-226	Pw4ü			227	Berlin	Salzburg	326	187	
-227	Pw4ü			226	Berchtesgaden	Berlin	226	185	
-227	C4ü			226	Berchtesgaden	Berlin	226	185	
-227	C4ü			226	Berchtesgaden	Berlin	226	185	
-227	ABC4ü			226	Berchtesgaden	Berlin	226	185	
+226	Pw4Ã¼			227	Berlin	Salzburg	326	187	
+227	Pw4Ã¼			226	Berchtesgaden	Berlin	226	185	
+227	C4Ã¼			226	Berchtesgaden	Berlin	226	185	
+227	C4Ã¼			226	Berchtesgaden	Berlin	226	185	
+227	ABC4Ã¼			226	Berchtesgaden	Berlin	226	185	
 227	WLABC 327			226	Berchtesgaden	Berlin	226	1488	
 227	WLAB 325			226	Badgastein	Berlin	226	1490	
-227	AB4ü			327	Klagenfurt	Berlin	226	189	
-227	C4ü			327	Klagenfurt	Berlin	226	189	
-227	C4ü			327	Salzburg	Berlin	226	186	
+227	AB4Ã¼			327	Klagenfurt	Berlin	226	189	
+227	C4Ã¼			327	Klagenfurt	Berlin	226	189	
+227	C4Ã¼			327	Salzburg	Berlin	226	186	
 227	WLC 348			327	Salzburg	Berlin	226	1491	
-227	Pw4ü			327	Salzburg	Berlin	226	187	
-237	Pw4ü			337	Friedrichshafen	Berlin	238	1770	Zugleich Express 8 Stg ab Crailshaim
+227	Pw4Ã¼			327	Salzburg	Berlin	226	187	
+237	Pw4Ã¼			337	Friedrichshafen	Berlin	238	1770	Zugleich Express 8 Stg ab Crailshaim
 237	WLAB 311			337	Friedrichshafen	Berlin	238	1471	
-237	BC4ü			337	Friedrichshafen	Berlin	238	1770	
-237	C4ü			337	Friedrichshafen	Berlin	238	1770	14./15.VI. bis 15./16.VIII.
-237	ABC4ü			91	Lindau	Berlin	238	95	2./3.X.-14./15.XII., 16./17.IV.-14./15.V.
-237	AB4ü			238	Stuttgart	Berlin	238	1772	1 Fr 3. Kl
-237	C4ü			238	Stuttgart	Berlin	238	1772	
+237	BC4Ã¼			337	Friedrichshafen	Berlin	238	1770	
+237	C4Ã¼			337	Friedrichshafen	Berlin	238	1770	14./15.VI. bis 15./16.VIII.
+237	ABC4Ã¼			91	Lindau	Berlin	238	95	2./3.X.-14./15.XII., 16./17.IV.-14./15.V.
+237	AB4Ã¼			238	Stuttgart	Berlin	238	1772	1 Fr 3. Kl
+237	C4Ã¼			238	Stuttgart	Berlin	238	1772	
 237	WLC 310			238	Stuttgart	Berlin	238	1472	
 237	WLAB 309			238	Stuttgart	Berlin	238	1472	
-237	Pw4ü			337	Stuttgart	Berlin	238	1772	
-237	Post4ü			238	Stuttgart	Berlin	238	Feb 21	S/nS
-238	ABC4ü			237	Berlin	Lindau	92	95	1./2.X.-13./14.XII., 15./16.IV. bis 13./14.V.
-238	Pw4ü			237	Berlin	Friedrichshafen	338	1770	
+237	Pw4Ã¼			337	Stuttgart	Berlin	238	1772	
+237	Post4Ã¼			238	Stuttgart	Berlin	238	Feb 21	S/nS
+238	ABC4Ã¼			237	Berlin	Lindau	92	95	1./2.X.-13./14.XII., 15./16.IV. bis 13./14.V.
+238	Pw4Ã¼			237	Berlin	Friedrichshafen	338	1770	
 238	WLAB 311			237	Berlin	Friedrichshafen	338	1471	
-238	BC4ü			237	Berlin	Friedrichshafen	338	1770	
-238	C4ü			237	Berlin	Friedrichshafen	338	1770	15.VI. bis 16.VIII.
-238	C4ü			237	Berlin	Stuttgart	237	1772	1 Fr 3. Kl
-238	AB4ü			237	Berlin	Stuttgart	266	1768	
+238	BC4Ã¼			237	Berlin	Friedrichshafen	338	1770	
+238	C4Ã¼			237	Berlin	Friedrichshafen	338	1770	15.VI. bis 16.VIII.
+238	C4Ã¼			237	Berlin	Stuttgart	237	1772	1 Fr 3. Kl
+238	AB4Ã¼			237	Berlin	Stuttgart	266	1768	
 238	WLAB 309			237	Berlin	Stuttgart	237	1472	
 238	WLAB 310			237	Berlin	Stuttgart	237	1472	
-238	Pw4ü			237	Berlin	Stuttgart	237	1772	
-238	Post4ü			237	Berlin	Stuttgart	237	Feb 21	S/nS
-239	Pw4ü			240	München	Berlin	240	1609	
-239	C4ü			240	München	Berlin	240	1609	
-239	C4ü			240	München	Berlin	240	1609	
-239	AB4ü			240	München	Berlin	240	1609	
-239	WR			240	München	Berlin	240	1609	
-239	C4ü			240	München	Berlin	240	1609	
-239	C4ü			240	München	Berlin	240	1609	
-240	Pw4ü			239	Berlin	München	239	1609	
-240	C4ü			239	Berlin	München	239	1609	
-240	C4ü			239	Berlin	München	239	1609	
-240	WR			239	Berlin	München	239	1609	
-240	AB4ü			239	Berlin	München	239	1609	
-240	C4ü			239	Berlin	München	239	1609	
-240	C4ü			239	Berlin	München	239	1609	
-241	Post4ü			244	Frankfurt	Berlin	244	02. Apr	Stuttgart 2, Berlin 1 Wagenzug
-241	Pw4ü			244	Mannheim	Berlin	144	107	
-241	AB4ü			244	Mannheim	Berlin	144	107	
-241	C4ü			244	Mannheim	Berlin	144	107	
-241	C4ü			244	Mannheim	Berlin	144	107	
-241	C4ü			244	Frankfurt	Berlin	244	1142	
-241	BC4ü			244	Frankfurt	Berlin	244	1142	
+238	Pw4Ã¼			237	Berlin	Stuttgart	237	1772	
+238	Post4Ã¼			237	Berlin	Stuttgart	237	Feb 21	S/nS
+239	Pw4Ã¼			240	MÃ¼nchen	Berlin	240	1609	
+239	C4Ã¼			240	MÃ¼nchen	Berlin	240	1609	
+239	C4Ã¼			240	MÃ¼nchen	Berlin	240	1609	
+239	AB4Ã¼			240	MÃ¼nchen	Berlin	240	1609	
+239	WR			240	MÃ¼nchen	Berlin	240	1609	
+239	C4Ã¼			240	MÃ¼nchen	Berlin	240	1609	
+239	C4Ã¼			240	MÃ¼nchen	Berlin	240	1609	
+240	Pw4Ã¼			239	Berlin	MÃ¼nchen	239	1609	
+240	C4Ã¼			239	Berlin	MÃ¼nchen	239	1609	
+240	C4Ã¼			239	Berlin	MÃ¼nchen	239	1609	
+240	WR			239	Berlin	MÃ¼nchen	239	1609	
+240	AB4Ã¼			239	Berlin	MÃ¼nchen	239	1609	
+240	C4Ã¼			239	Berlin	MÃ¼nchen	239	1609	
+240	C4Ã¼			239	Berlin	MÃ¼nchen	239	1609	
+241	Post4Ã¼			244	Frankfurt	Berlin	244	02. Apr	Stuttgart 2, Berlin 1 Wagenzug
+241	Pw4Ã¼			244	Mannheim	Berlin	144	107	
+241	AB4Ã¼			244	Mannheim	Berlin	144	107	
+241	C4Ã¼			244	Mannheim	Berlin	144	107	
+241	C4Ã¼			244	Mannheim	Berlin	144	107	
+241	C4Ã¼			244	Frankfurt	Berlin	244	1142	
+241	BC4Ã¼			244	Frankfurt	Berlin	244	1142	
 241	WR			244	Frankfurt	Berlin	156	1497	
-241	C4ü			244	Halle (S)	Berlin	244	1206	Fr bis nS
-244	Post4ü			241	Berlin	Frankfurt (Main)	241	02. Apr	
-244	Pw4ü			113	Berlin	Mannheim	241	107	Stuttgart 2, Berlin 1 Wagenzug
-244	C4ü			113	Berlin	Mannheim	241	107	Stuttgart 2, Berlin 1 Wagenzug
-244	C4ü			113	Berlin	Mannheim	241	107	Stuttgart 2, Berlin 1 Wagenzug
-244	AB4ü			113	Berlin	Mannheim	241	107	Stuttgart 2, Berlin 1 Wagenzug
-244	C4ü			241	Berlin	Frankfurt (Main)	241	1142	
-244	BC4ü			241	Berlin	Frankfurt (Main)	241	1142	
+241	C4Ã¼			244	Halle (S)	Berlin	244	1206	Fr bis nS
+244	Post4Ã¼			241	Berlin	Frankfurt (Main)	241	02. Apr	
+244	Pw4Ã¼			113	Berlin	Mannheim	241	107	Stuttgart 2, Berlin 1 Wagenzug
+244	C4Ã¼			113	Berlin	Mannheim	241	107	Stuttgart 2, Berlin 1 Wagenzug
+244	C4Ã¼			113	Berlin	Mannheim	241	107	Stuttgart 2, Berlin 1 Wagenzug
+244	AB4Ã¼			113	Berlin	Mannheim	241	107	Stuttgart 2, Berlin 1 Wagenzug
+244	C4Ã¼			241	Berlin	Frankfurt (Main)	241	1142	
+244	BC4Ã¼			241	Berlin	Frankfurt (Main)	241	1142	
 244	WR			29	Berlin	Frankfurt (Main)	241	1497	
-244	C4ü			241	Berlin	Halle (S)	241	1206	vS bis Di
-245	Pw4ü			246	Basel DRB	Berlin	246	81	
-245	AB4ü			246	Basel DRB	Berlin	246	81	
-245	C4ü			246	Basel DRB	Berlin	246	81	
-245	C4ü			246	Basel DRB	Berlin	246	81	
-246	C4ü			45	Berlin	Basel DRB	45	1190	nS leer
-246	Pw4ü			45	Berlin	Basel DRB	245	81	
-246	C4ü			45	Berlin	Basel DRB	245	81	
-246	C4ü			45	Berlin	Basel DRB	245	81	
-246	AB4ü			245	Berlin	Basel DRB	245	81	
-322	Pw4ü			323	Berlin	Berchtesgaden	323	193	
-322	AB4ü			323	Berlin	Berchtesgaden	323	193	
-322	C4ü			323	Berlin	Berchtesgaden	323	193	
-322	C4ü			323	Berlin	Berchtesgaden	323	193	
+244	C4Ã¼			241	Berlin	Halle (S)	241	1206	vS bis Di
+245	Pw4Ã¼			246	Basel DRB	Berlin	246	81	
+245	AB4Ã¼			246	Basel DRB	Berlin	246	81	
+245	C4Ã¼			246	Basel DRB	Berlin	246	81	
+245	C4Ã¼			246	Basel DRB	Berlin	246	81	
+246	C4Ã¼			45	Berlin	Basel DRB	45	1190	nS leer
+246	Pw4Ã¼			45	Berlin	Basel DRB	245	81	
+246	C4Ã¼			45	Berlin	Basel DRB	245	81	
+246	C4Ã¼			45	Berlin	Basel DRB	245	81	
+246	AB4Ã¼			245	Berlin	Basel DRB	245	81	
+322	Pw4Ã¼			323	Berlin	Berchtesgaden	323	193	
+322	AB4Ã¼			323	Berlin	Berchtesgaden	323	193	
+322	C4Ã¼			323	Berlin	Berchtesgaden	323	193	
+322	C4Ã¼			323	Berlin	Berchtesgaden	323	193	
 322	WR			323	Berlin	Salzburg	422	1514	
-322	ABC4ü			323	Berlin	Salzburg	422	194	
-322	C4ü			323	Berlin	Salzburg	422	194	
-322	Pw4ü			323	Berlin	Salzburg	422	194	
-323	Pw4ü			322	Berchtesgaden	Berlin	322	193	
-323	ABC4ü			123	Nürnberg	Berlin	22	165	
-323	C4ü			322	Berchtesgaden	Berlin	322	193	
-323	C4ü			322	Berchtesgaden	Berlin	322	193	
-323	AB4ü			322	Salzburg	Berlin	322	193	
+322	ABC4Ã¼			323	Berlin	Salzburg	422	194	
+322	C4Ã¼			323	Berlin	Salzburg	422	194	
+322	Pw4Ã¼			323	Berlin	Salzburg	422	194	
+323	Pw4Ã¼			322	Berchtesgaden	Berlin	322	193	
+323	ABC4Ã¼			123	NÃ¼rnberg	Berlin	22	165	
+323	C4Ã¼			322	Berchtesgaden	Berlin	322	193	
+323	C4Ã¼			322	Berchtesgaden	Berlin	322	193	
+323	AB4Ã¼			322	Salzburg	Berlin	322	193	
 323	WR			423	Salzburg	Berlin	322	1514	
-323	C4ü			423	Salzburg	Berlin	322	194	
-323	ABC4ü			423	Salzburg	Berlin	322	194	
-323	Pw4ü			423	Salzburg	Berlin	322	194	
-401	Pw4ü Expr Frt (29)			402	Frankfurt	Berlin	402	-	
-401	Post4ü			402	Frankfurt	Berlin	402	02. Mai	
+323	C4Ã¼			423	Salzburg	Berlin	322	194	
+323	ABC4Ã¼			423	Salzburg	Berlin	322	194	
+323	Pw4Ã¼			423	Salzburg	Berlin	322	194	
+401	Pw4Ã¼ Expr Frt (29)			402	Frankfurt	Berlin	402	-	
+401	Post4Ã¼			402	Frankfurt	Berlin	402	02. Mai	
 401	WLAB 303			402	Baden-Baden	Berlin	402	1492	20./21.-29./30.VIII.
-401	C4ü			402	Karlsruhe	Berlin	402	1336	
-401	C4ü			402	Karlsruhe	Berlin	402	1336	
-401	C4ü			402	Karlsruhe	Berlin	402	1336	
-401	AB4ü			402	Karlsruhe	Berlin	402	1336	
-401	Pw4ü			402	Karlsruhe	Berlin	402	1336	
-402	Pw4ü Expr Bln (43)			401	Berlin	Frankfurt (Main)	401	-	
-402	Post4ü			401	Berlin	Frankfurt (Main)	401	02. Mai	
-402	Pw4ü			401	Berlin	Karlsruhe	401	1336	
+401	C4Ã¼			402	Karlsruhe	Berlin	402	1336	
+401	C4Ã¼			402	Karlsruhe	Berlin	402	1336	
+401	C4Ã¼			402	Karlsruhe	Berlin	402	1336	
+401	AB4Ã¼			402	Karlsruhe	Berlin	402	1336	
+401	Pw4Ã¼			402	Karlsruhe	Berlin	402	1336	
+402	Pw4Ã¼ Expr Bln (43)			401	Berlin	Frankfurt (Main)	401	-	
+402	Post4Ã¼			401	Berlin	Frankfurt (Main)	401	02. Mai	
+402	Pw4Ã¼			401	Berlin	Karlsruhe	401	1336	
 402	WLAB 303			401	Berlin	Baden-Baden	401	1492	19./20.-28./29.VIII.
-402	AB4ü			401	Berlin	Karlsruhe	401	1336	
-402	C4ü			401	Berlin	Karlsruhe	401	1336	
-402	C4ü			401	Berlin	Karlsruhe	401	1336	
-402	C4ü			401	Berlin	Karlsruhe	401	1336	
+402	AB4Ã¼			401	Berlin	Karlsruhe	401	1336	
+402	C4Ã¼			401	Berlin	Karlsruhe	401	1336	
+402	C4Ã¼			401	Berlin	Karlsruhe	401	1336	
+402	C4Ã¼			401	Berlin	Karlsruhe	401	1336	
 402	WLAB 301			1	Berlin	Mannheim	91	1452	
-479	Pw4ü			579	Buchloe	Berlin	480	295	
-479	BC4ü			579	Lindau	Berlin	480	296	
-479	C4ü			179	Oberstdorf	Berlin	480	291	
-479	ABC4ü			179	Oberstdorf	Berlin	480	291	
+479	Pw4Ã¼			579	Buchloe	Berlin	480	295	
+479	BC4Ã¼			579	Lindau	Berlin	480	296	
+479	C4Ã¼			179	Oberstdorf	Berlin	480	291	
+479	ABC4Ã¼			179	Oberstdorf	Berlin	480	291	
 479	WR			480	Augsburg	Berlin	480	1484	
-479	C4ü			480	Augsburg	Berlin	480	293	
-480	Pw4ü			479	Berlin	Buchloe	580	295	
-480	BC4ü			479	Berlin	Lindau	580	296	
-480	ABC4ü			479	Berlin	Oberstdorf	180	291	
-480	C4ü			479	Berlin	Oberstdorf	180	291	
+479	C4Ã¼			480	Augsburg	Berlin	480	293	
+480	Pw4Ã¼			479	Berlin	Buchloe	580	295	
+480	BC4Ã¼			479	Berlin	Lindau	580	296	
+480	ABC4Ã¼			479	Berlin	Oberstdorf	180	291	
+480	C4Ã¼			479	Berlin	Oberstdorf	180	291	
 480	WR			479	Berlin	Augsburg	479	1484	
-480	C4ü			479	Berlin	Augsburg	479	293	
-551	B12KVT	B12KVT	B12KVT	1551	Stuttgart	Berlin	552	282	je 102 Plätze
-551	B12KVT	B12KVT	B12KVT	552	München	Berlin	552	281	ü Nürnberg
-552	B12KVT	B12KVT	B12KVT	551	Berlin	München	551	281	je 102 Plätze
-552	B12KVT	B12KVT	B12KVT	551	Berlin	Stuttgart	1552	282	ü Nuürnberg
-571	B6iVT	B6iVT	B6iVT	572	Karlsruhe	Berlin	572	280	77 Plätze
-572	B6iVT	B6iVT	B6iVT	571	Berlin	Karlsruhe	571	280	77 Plätze
-591	C4ü			592	Oberstdorf	Berlin	592	298	Bedarf
-591	C4ü			592	Oberstdorf	Berlin	592	298	
-591	ABC4ü			592	Oberstdorf	Berlin	592	298	
+480	C4Ã¼			479	Berlin	Augsburg	479	293	
+551	B12KVT			1551	Stuttgart	Berlin	552	282	je 102 PlÃ¤tze
+551	B12KVT			552	MÃ¼nchen	Berlin	552	281	Ã¼ NÃ¼rnberg
+552	B12KVT			551	Berlin	MÃ¼nchen	551	281	je 102 PlÃ¤tze
+552	B12KVT			551	Berlin	Stuttgart	1552	282	Ã¼ NÃ¼rnberg
+571	B6iVT			572	Karlsruhe	Berlin	572	280	77 PlÃ¤tze
+572	B6iVT			571	Berlin	Karlsruhe	571	280	77 PlÃ¤tze
+591	C4Ã¼			592	Oberstdorf	Berlin	592	298	Bedarf
+591	C4Ã¼			592	Oberstdorf	Berlin	592	298	
+591	ABC4Ã¼			592	Oberstdorf	Berlin	592	298	
 591	WLC 331			592	Oberstdorf	Berlin	592	1480	
-591	Pw4ü			592	Oberstdorf	Berlin	592	298	
-592	Pw4ü			591	Berlin	Oberstdorf	591	298	
+591	Pw4Ã¼			592	Oberstdorf	Berlin	592	298	
+592	Pw4Ã¼			591	Berlin	Oberstdorf	591	298	
 592	WLC 331			591	Berlin	Oberstdorf	591	1480	
-592	ABC4ü			591	Berlin	Oberstdorf	591	298	
-592	C4ü			591	Berlin	Oberstdorf	591	298	
-592	C4ü			591	Berlin	Oberstdorf	591	298	Bedarf
+592	ABC4Ã¼			591	Berlin	Oberstdorf	591	298	
+592	C4Ã¼			591	Berlin	Oberstdorf	591	298	
+592	C4Ã¼			591	Berlin	Oberstdorf	591	298	Bedarf
 1145	Pw4			1146	Wittenberg	Berlin	4146	1183	
 1145	C4i			1146	Dessau	Berlin	4146	1183	
 1145	BC4i			1146	Wittenberg	Berlin	4146	1183	
@@ -872,11 +872,11 @@ ZugNr	GattungZp	GattungReal	GattungModell	VonZug	VonBf	NachBf	NachZug	Umlaufplan
 1145	C4i			1146	Wittenberg	Berlin	4146	1183	
 1145	C4i			1146	Wittenberg	Berlin	4146	1183	
 1145	C4i			1146	Wittenberg	Berlin	4146	1183	
-1244	Pw4ü			31	Berlin	Halle (S)	31	1185	
-1244	C4ü			31	Berlin	Halle (S)	31	1185	
-1244	C4ü			31	Berlin	Halle (S)	31	1185	
-1244	C4ü			31	Berlin	Halle (S)	31	1185	
-1244	AB4ü			31	Berlin	Halle (S)	31	1185	
-1244	C4ü			31	Berlin	Halle (S)	31	1185	
-1244	C4ü			31	Berlin	Halle (S)	31	1185	
-1244	C4ü			31	Berlin	Halle (S)	31	1185	
+1244	Pw4Ã¼			31	Berlin	Halle (S)	31	1185	
+1244	C4Ã¼			31	Berlin	Halle (S)	31	1185	
+1244	C4Ã¼			31	Berlin	Halle (S)	31	1185	
+1244	C4Ã¼			31	Berlin	Halle (S)	31	1185	
+1244	AB4Ã¼			31	Berlin	Halle (S)	31	1185	
+1244	C4Ã¼			31	Berlin	Halle (S)	31	1185	
+1244	C4Ã¼			31	Berlin	Halle (S)	31	1185	
+1244	C4Ã¼			31	Berlin	Halle (S)	31	1185	

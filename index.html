@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,8 +16,9 @@
             --signal-green: #4cff4c;
             --preview-scale: 1;
         }
-        
-        body, html {
+
+        body,
+        html {
             margin: 0;
             padding: 0;
             width: 100%;
@@ -54,7 +56,8 @@
             flex-grow: 1;
             transform-origin: top left;
             position: relative;
-            overflow: auto; /* Allow scrolling if zoomed */
+            overflow: auto;
+            /* Allow scrolling if zoomed */
         }
 
         #resizer-top {
@@ -140,9 +143,17 @@
             overflow: hidden;
         }
 
-        .col-header-row1.space-between { justify-content: space-between; }
-        .col-header-row1.flex-end      { justify-content: flex-end; }
-        .col-header-row1.center        { justify-content: center; }
+        .col-header-row1.space-between {
+            justify-content: space-between;
+        }
+
+        .col-header-row1.flex-end {
+            justify-content: flex-end;
+        }
+
+        .col-header-row1.center {
+            justify-content: center;
+        }
 
         .col-header-row2 {
             display: flex;
@@ -154,7 +165,9 @@
             min-height: 24px;
         }
 
-        .col-header-row2.flex-end { justify-content: flex-end; }
+        .col-header-row2.flex-end {
+            justify-content: flex-end;
+        }
 
         .col-tab {
             padding: 3px 8px;
@@ -170,7 +183,7 @@
             background-color: #fff;
             border-color: #888;
             font-weight: bold;
-            box-shadow: 0 0 4px rgba(0,0,0,0.1);
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
         }
 
         .col-content {
@@ -196,12 +209,30 @@
             background: #eee;
             font-weight: bold;
         }
-        .gat-btn:hover { filter: brightness(0.9); }
-        .gat-btn.active { outline: 2px solid #333; }
-        .gat-fd  { color: #800080; }
-        .gat-d   { color: #d32f2f; }
-        .gat-e   { color: #1976d2; }
-        .gat-p   { color: #555; }
+
+        .gat-btn:hover {
+            filter: brightness(0.9);
+        }
+
+        .gat-btn.active {
+            outline: 2px solid #333;
+        }
+
+        .gat-fd {
+            color: #800080;
+        }
+
+        .gat-d {
+            color: #d32f2f;
+        }
+
+        .gat-e {
+            color: #1976d2;
+        }
+
+        .gat-p {
+            color: #555;
+        }
 
         .station-filter-input {
             font-size: 12px;
@@ -218,24 +249,25 @@
             border-collapse: collapse;
             font-size: 13px;
         }
-        
-        .fahrplan-table th, .fahrplan-table td {
+
+        .fahrplan-table th,
+        .fahrplan-table td {
             border-bottom: 1px solid #ccc;
             padding: 4px;
             text-align: left;
         }
-        
+
         .fahrplan-table th {
             background-color: #f0f0f0;
             position: sticky;
             top: -10px;
             z-index: 5;
         }
-        
+
         .fahrplan-table tbody tr:nth-child(even) {
             background-color: #f9f9f9;
         }
-        
+
         .fahrplan-table tbody tr:nth-child(odd) {
             background-color: #ffffff;
         }
@@ -251,18 +283,31 @@
         .fahrplan-table tbody tr.selected {
             background-color: #cceeff !important;
         }
-        
+
         .fahrplan-table tbody tr.next-train {
             background-color: #fffacd !important;
         }
 
         .fahrplan-table tbody tr.next-train.selected {
-            background-color: #cceeff !important; /* Selection overrides next-train color */
+            background-color: #cceeff !important;
+            /* Selection overrides next-train color */
         }
 
-        .gattung-fd { color: #800080; } /* Lila */
-        .gattung-d { color: #d32f2f; } /* Rot */
-        .gattung-e { color: #1976d2; } /* Blau */
+        .gattung-fd {
+            color: #800080;
+        }
+
+        /* Lila */
+        .gattung-d {
+            color: #d32f2f;
+        }
+
+        /* Rot */
+        .gattung-e {
+            color: #1976d2;
+        }
+
+        /* Blau */
 
         #resizer {
             height: 10px;
@@ -305,15 +350,19 @@
             flex-shrink: 0;
             border-bottom: 1px solid #bbb;
         }
-        .controls-left, .controls-right {
+
+        .controls-left,
+        .controls-right {
             display: flex;
             gap: 15px;
             align-items: center;
             flex: 1;
         }
+
         .controls-right {
             justify-content: flex-end;
         }
+
         .controls-center {
             display: flex;
             gap: 25px;
@@ -321,15 +370,18 @@
             font-size: 22px;
             flex-shrink: 0;
         }
+
         .clock-part {
             cursor: ns-resize;
             display: inline-block;
             padding: 0 2px;
             border-radius: 3px;
         }
+
         .clock-part:hover {
-            background-color: rgba(0,0,0,0.1);
+            background-color: rgba(0, 0, 0, 0.1);
         }
+
         .fw-bold {
             font-weight: bold;
         }
@@ -345,7 +397,8 @@
         .track-container {
             position: relative;
             width: 100%;
-            height: calc(60px * var(--preview-scale)); /* Space for train */
+            height: calc(60px * var(--preview-scale));
+            /* Space for train */
         }
 
         .track {
@@ -359,7 +412,8 @@
         /* Signals */
         .signal {
             position: absolute;
-            bottom: -13.5px; /* Centered on track (track is 3px at bottom 0, signal is 30px high) */
+            bottom: -13.5px;
+            /* Centered on track (track is 3px at bottom 0, signal is 30px high) */
             width: 30px;
             height: 30px;
             cursor: pointer;
@@ -378,8 +432,13 @@
             clip-path: polygon(100% 50%, 0 0, 0 100%);
         }
 
-        .halt { background-color: var(--signal-red); }
-        .fahrt { background-color: var(--signal-green); }
+        .halt {
+            background-color: var(--signal-red);
+        }
+
+        .fahrt {
+            background-color: var(--signal-green);
+        }
 
         /* Route Labels & Countdowns */
         .route-label {
@@ -389,7 +448,22 @@
             color: #333;
             font-weight: 500;
             white-space: nowrap;
+            cursor: pointer;
+            border-radius: 3px;
+            padding: 1px 3px;
+            transition: background-color 0.15s;
+            z-index: 30;
+            /* Ensure it is above other elements to be clickable */
         }
+
+        .route-label:hover {
+            background-color: rgba(0, 0, 0, 0.08);
+        }
+
+        .route-label:active {
+            background-color: rgba(0, 0, 0, 0.16);
+        }
+
         .countdown-label {
             position: absolute;
             bottom: -20px;
@@ -399,37 +473,64 @@
             font-style: italic;
             white-space: nowrap;
         }
+
         /* Top track: apex at left:80px — route to the right, countdown to the left */
         #route-top {
             left: 96px;
             text-align: left;
         }
+
         #countdown-top {
             right: calc(100% - 64px);
             text-align: right;
         }
+
         /* Bottom track: apex at right:80px — route to the left, countdown to the right */
         #route-bottom {
             right: 96px;
             text-align: right;
         }
+
         #countdown-bottom {
             left: calc(100% - 64px);
             text-align: left;
         }
 
 
-        .sig-gat-fd { color: #800080; }
-        .sig-gat-d  { color: #d32f2f; }
-        .sig-gat-e  { color: #1976d2; }
-        .sig-gat-p  { color: #222; }
+        .sig-gat-fd {
+            color: #800080;
+        }
+
+        .sig-gat-d {
+            color: #d32f2f;
+        }
+
+        .sig-gat-e {
+            color: #1976d2;
+        }
+
+        .sig-gat-p {
+            color: #222;
+        }
 
         /* Zugstandort-Indikator im Laufweg */
         @keyframes pulse-dot {
-            0%   { transform: scale(1);   opacity: 1; }
-            50%  { transform: scale(1.7); opacity: 0.5; }
-            100% { transform: scale(1);   opacity: 1; }
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            50% {
+                transform: scale(1.7);
+                opacity: 0.5;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
         }
+
         .zug-pos-dot {
             display: inline-block;
             width: 10px;
@@ -440,6 +541,7 @@
             margin-right: 5px;
             flex-shrink: 0;
         }
+
         .zug-pos-dot.pulsing {
             animation: pulse-dot 1.2s ease-in-out infinite;
         }
@@ -447,11 +549,13 @@
         /* Trains */
         .train {
             position: absolute;
-            bottom: 3px; /* On track (track is 3px high) */
+            bottom: 3px;
+            /* On track (track is 3px high) */
             display: flex;
             align-items: flex-end;
             white-space: nowrap;
-            z-index: 10; /* Behind signals (z-index 20) */
+            z-index: 10;
+            /* Behind signals (z-index 20) */
         }
 
         .vehicle {
@@ -476,7 +580,8 @@
         }
 
         .train img {
-            height: calc(40px * var(--preview-scale)); /* Adjust based on image aspect ratio later */
+            height: calc(40px * var(--preview-scale));
+            /* Adjust based on image aspect ratio later */
             display: block;
             margin: 0;
             padding: 0;
@@ -489,15 +594,44 @@
             transform-origin: center bottom;
         }
 
+        /* --- Kontextmenü --- */
+        #ctx-menu {
+            position: fixed;
+            z-index: 9999;
+            background: #fff;
+            border: 1px solid #bbb;
+            border-radius: 5px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+            min-width: 180px;
+            padding: 4px 0;
+            display: none;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 13px;
+        }
+        #ctx-menu.visible {
+            display: block;
+        }
+        .ctx-item {
+            padding: 7px 16px;
+            cursor: pointer;
+            white-space: nowrap;
+            color: #222;
+        }
+        .ctx-item:hover {
+            background: #e8f0fe;
+            color: #1a56db;
+        }
     </style>
 </head>
+
 <body>
 
     <div id="stellwerk-area">
         <div id="stellwerk-controls">
             <div style="flex: 1; display: flex; align-items: center;"><strong>Stellwerk</strong></div>
             <div style="flex: 1; display: flex; justify-content: center;">
-                <button id="fullscreen-btn" style="padding: 3px 12px; cursor: pointer; border: 1px solid #aaa; border-radius: 4px; background: #e8e8e8;">Vollbild</button>
+                <button id="fullscreen-btn"
+                    style="padding: 3px 12px; cursor: pointer; border: 1px solid #aaa; border-radius: 4px; background: #e8e8e8;">Vollbild</button>
             </div>
             <div style="flex: 1; display: flex; justify-content: flex-end; align-items: center;">
                 <label>Zoom: <input type="range" id="stellwerk-zoom" min="0.1" max="3" step="0.1" value="1"></label>
@@ -527,7 +661,8 @@
                     <div class="col-header-row1">
                         <span class="col-tab active" data-tab="laufweg" onclick="switchTab(2, 'laufweg')">Laufweg</span>
                         <span class="col-tab" data-tab="zp" onclick="switchTab(2, 'zp')">Zp</span>
-                        <span id="info-col2" style="font-weight:normal;font-size:12px;color:#444;margin-left:6px;white-space:nowrap;overflow:hidden;"></span>
+                        <span id="info-col2"
+                            style="font-weight:normal;font-size:12px;color:#444;margin-left:6px;white-space:nowrap;overflow:hidden;"></span>
                     </div>
                 </div>
                 <div class="col-content"></div>
@@ -547,7 +682,8 @@
             <div class="col-pane" id="col4">
                 <div class="col-header">
                     <div class="col-header-row1 flex-end">
-                        <span id="info-col4" style="font-weight:normal;font-size:12px;color:#444;margin-right:6px;white-space:nowrap;overflow:hidden;"></span>
+                        <span id="info-col4"
+                            style="font-weight:normal;font-size:12px;color:#444;margin-right:6px;white-space:nowrap;overflow:hidden;"></span>
                         <span class="col-tab" data-tab="zp" onclick="switchTab(4, 'zp')">Zp</span>
                         <span class="col-tab active" data-tab="laufweg" onclick="switchTab(4, 'laufweg')">Laufweg</span>
                     </div>
@@ -575,19 +711,39 @@
                 <label><input type="radio" name="view-mode" value="real"> Realzug</label>
                 <label><input type="radio" name="view-mode" value="model"> Modellzug</label>
             </div>
-            
+
             <div class="controls-center">
                 <select id="station-select" style="margin-right: 15px; font-size: 14px; padding: 2px;">
                     <option value="Berlin Anhalter Bf">Berlin Anhalter Bf</option>
                     <option value="Berlin-Lichterfelde Ost" selected>Berlin-Lichterfelde Ost</option>
                 </select>
                 <div id="clock-widget" style="display: flex; align-items: center; gap: 5px;">
-                    <svg id="icon-clock" style="cursor: pointer;" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                    <span><span class="clock-part fw-bold" id="clock-h">12</span>.<span class="clock-part fw-bold" id="clock-m">00</span>:<span class="clock-part" id="clock-s">00</span></span>
+                    <svg id="icon-clock" style="cursor: pointer;" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    <span title="Mit Mausrad ändern"><span class="clock-part fw-bold" id="clock-h"
+                            title="Mit Mausrad ändern">12</span>.<span class="clock-part fw-bold" id="clock-m"
+                            title="Mit Mausrad ändern">00</span>:<span class="clock-part" id="clock-s">00</span></span>
+                    <span title="Nächste Zugfahrt" style="display: flex; align-items: center;">
+                        <svg id="skip-next" style="cursor: pointer; margin-left: 5px;" width="20" height="20"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="5 4 15 12 5 20 5 4"></polygon>
+                            <line x1="19" y1="5" x2="19" y2="19"></line>
+                        </svg>
+                    </span>
                 </div>
-                <div id="multiplier-widget" style="display: flex; align-items: center; gap: 5px;">
-                    <svg id="icon-mul" style="cursor: pointer;" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 19 22 12 13 5 13 19"></polygon><polygon points="2 19 11 12 2 5 2 19"></polygon></svg>
-                    <span>Faktor <span class="clock-part" id="mul-container">1:<span id="clock-mul">1</span></span></span>
+                <div id="multiplier-widget" style="display: flex; align-items: center; gap: 5px;"
+                    title="Mit Mausrad ändern">
+                    <svg id="icon-mul" style="cursor: pointer;" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="13 19 22 12 13 5 13 19"></polygon>
+                        <polygon points="2 19 11 12 2 5 2 19"></polygon>
+                    </svg>
+                    <span>Faktor <span class="clock-part" id="mul-container">1:<span
+                                id="clock-mul">1</span></span></span>
                 </div>
             </div>
 
@@ -605,7 +761,7 @@
                 <div id="rangierlok-top" class="train" style="display:none;"></div>
                 <div id="zuglok-top" class="train" style="display:none;"></div>
             </div>
-            
+
             <div class="track-container" id="track-bottom-container">
                 <div id="countdown-bottom" class="countdown-label"></div>
                 <div class="track"></div>
@@ -616,6 +772,11 @@
                 <div id="zuglok-bottom" class="train" style="display:none;"></div>
             </div>
         </div>
+    </div>
+
+    <!-- Kontextmenü -->
+    <div id="ctx-menu">
+        <div class="ctx-item" id="ctx-item-jumptime">&#9201; Zeit auf diesen Zug</div>
     </div>
 
     <script>
@@ -677,19 +838,69 @@
             updateClockDisplay();
         });
 
+        function jumpToNearestTrainEvent(forward) {
+            const currentSec = clockH * 3600 + clockM * 60 + clockS;
+            let nearestDiff = forward ? Infinity : -Infinity;
+            let nearestSec = null;
+            const currentStation = document.getElementById('station-select').value;
+
+            const allZuege = (window._nachAhbZuege || []).concat(window._nachHalleZuege || []);
+            allZuege.forEach(z => {
+                const rows = (window._fahrplanMap || {})[z.rawZugNr] || [];
+                const row = rows.find(r => r.bahnhof === currentStation);
+                if (!row) return;
+
+                const parseTime = (tStr) => {
+                    if (!tStr) return null;
+                    const parts = tStr.split('.');
+                    if (parts.length !== 2) return null;
+                    return parseInt(parts[0], 10) * 3600 + parseInt(parts[1], 10) * 60;
+                };
+
+                const events = [parseTime(row.ankunft), parseTime(row.abfahrt)];
+                events.forEach(evSec => {
+                    if (evSec === null) return;
+
+                    let diff = evSec - currentSec;
+                    if (forward) {
+                        if (diff <= 0) diff += 24 * 3600;
+                        if (diff < nearestDiff) {
+                            nearestDiff = diff;
+                            nearestSec = evSec;
+                        }
+                    } else {
+                        if (diff >= 0) diff -= 24 * 3600;
+                        if (diff > nearestDiff) {
+                            nearestDiff = diff;
+                            nearestSec = evSec;
+                        }
+                    }
+                });
+            });
+
+            if (nearestSec !== null) {
+                clockH = Math.floor(nearestSec / 3600) % 24;
+                clockM = Math.floor((nearestSec % 3600) / 60);
+                clockS = nearestSec % 60;
+                updateClockDisplay();
+            }
+        }
+
+        document.getElementById('skip-next').addEventListener('click', () => jumpToNearestTrainEvent(true));
+
         let lastTime = performance.now();
         let remainderMs = 0;
 
         function tickSimulation(now) {
             const deltaMs = now - lastTime;
             lastTime = now;
-            
+
             remainderMs += deltaMs * timeMul;
-            
+
             if (remainderMs >= 1000) {
                 const secsToadd = Math.floor(remainderMs / 1000);
                 remainderMs -= secsToadd * 1000;
-                
+
                 clockS += secsToadd;
                 if (clockS >= 60) {
                     clockM += Math.floor(clockS / 60);
@@ -904,18 +1115,24 @@
         let signalBottomState = 'fahrt';
 
         signalTop.addEventListener('click', () => {
-            signalTopState = signalTopState === 'halt' ? 'fahrt' : 'halt';
-            signalTop.className = `signal ${signalTopState}`;
+            if (animTop) {
+                animTop.manualSigOverride = true;
+                animTop.sigState = animTop.sigState === 'halt' ? 'fahrt' : 'halt';
+                signalTop.className = `signal ${animTop.sigState}`;
+            }
         });
 
         signalBottom.addEventListener('click', () => {
-            signalBottomState = signalBottomState === 'halt' ? 'fahrt' : 'halt';
-            signalBottom.className = `signal ${signalBottomState}`;
+            if (animBottom) {
+                animBottom.manualSigOverride = true;
+                animBottom.sigState = animBottom.sigState === 'halt' ? 'fahrt' : 'halt';
+                signalBottom.className = `signal ${animBottom.sigState}`;
+            }
         });
 
         const infoCheckbox = document.getElementById('info-checkbox');
         infoCheckbox.addEventListener('change', (e) => {
-            if(e.target.checked) {
+            if (e.target.checked) {
                 document.body.classList.add('show-info');
             } else {
                 document.body.classList.remove('show-info');
@@ -933,35 +1150,63 @@
                     document.getElementById('train-bottom').dataset.zugNr = '';
                     window.updateSignalTrainInfo();
                 }
+                // Aktuelles Kontext-Tab (Laufweg/Zp) aktualisieren
+                document.querySelectorAll('.fahrplan-table tr.selected').forEach(tr => tr.click());
             });
         });
 
         function renderSchematicTrain(container, z, isTopTrack) {
+            const viewModeSchematic = document.querySelector('input[name="view-mode"]:checked')?.value;
             container.innerHTML = '';
-            container.style.gap = '5px';
-            container.style.bottom = '5px'; // leichter Abstand zum Gleis
-            
+            container.style.gap = viewModeSchematic === 'schematic' ? '5px' : '0';
+            container.style.bottom = viewModeSchematic === 'schematic' ? '5px' : '3px'; // 3px ist exakt auf der Schiene
+
             if (!isTopTrack) {
-                 container.style.flexDirection = 'row-reverse';
+                container.style.flexDirection = 'row-reverse';
             } else {
-                 container.style.flexDirection = 'row';
+                container.style.flexDirection = 'row';
             }
 
-            const zpList = (window._zpaMap && window._zpaMap[z.rawZugNr]) || [];
-            
-            if (zpList.length === 0) return;
+            let zpList = (window._zpaMap && window._zpaMap[z.rawZugNr]) || [];
+            let isDefault = false;
+
+            if (zpList.length === 0) {
+                isDefault = true;
+                zpList = [
+                    { gattung: 'C' }, { gattung: 'C' }, { gattung: 'C' },
+                    { gattung: 'BC' }, { gattung: 'BC' },
+                    { gattung: 'C' }, { gattung: 'C' }, { gattung: 'C' }
+                ];
+            }
 
             // Lokomotive am Anfang
-            const lokDiv = document.createElement('div');
-            lokDiv.className = 'vehicle';
-            const lokImg = document.createElement('img');
-            lokImg.src = './data/img/pwagen/lok.png';
-            if (!isTopTrack) {
-                // Wenn der Zug nach rechts fährt, muss nur die Lok gespiegelt werden
-                lokImg.style.transform = 'scaleX(-1)';
+            const lokString = window._lokMap && window._lokMap[z.rawZugNr] ? window._lokMap[z.rawZugNr] : '';
+            if (lokString !== '-') {
+                const lokDiv = document.createElement('div');
+                lokDiv.className = 'vehicle';
+                const lokImg = document.createElement('img');
+                if (viewModeSchematic === 'real') {
+                    if (lokString) {
+                        lokImg.src = `./data/img/loks/${lokString}.png`;
+                    } else {
+                        lokImg.src = './data/img/pwagen/lok.png';
+                    }
+                    lokImg.onerror = function() { this.onerror = null; this.src = './data/img/pwagen/Unbekannt.png'; };
+                } else {
+                    if (lokString) {
+                        lokImg.src = `./data/img/loks/${lokString}.png`;
+                    } else {
+                        lokImg.src = isDefault ? './data/img/schematisch/plok.png' : './data/img/schematisch/lok.png';
+                    }
+                    lokImg.onerror = function() { this.onerror = null; this.src = isDefault ? './data/img/schematisch/plok.png' : './data/img/schematisch/lok.png'; };
+                }
+                if (!isTopTrack) {
+                    // Wenn der Zug nach rechts fährt, muss nur die Lok gespiegelt werden
+                    lokImg.style.transform = 'scaleX(-1)';
+                }
+                lokDiv.appendChild(lokImg);
+                container.appendChild(lokDiv);
             }
-            lokDiv.appendChild(lokImg);
-            container.appendChild(lokDiv);
 
             // Wagen anfügen (1, 2, 3...)
             zpList.forEach((wagen) => {
@@ -969,22 +1214,42 @@
                 vehicleDiv.className = 'vehicle';
 
                 const img = document.createElement('img');
-                // Step 1: strip everything from first space (e.g. "WLAB 301" -> "WLAB")
-                let baseName = wagen.gattung.split(' ')[0];
-                // Step 2: strip from "ue", "ü", "?", "i" or "-" onwards (e.g. "C4ü" -> "C4", "AB4ue" -> "AB4", "Pw4i" -> "Pw4")
-                baseName = baseName.split(/ue|ü|\?|-|(?<=[0-9])[a-z]/i)[0];
-                // Step 3: ensure we have a valid non-empty string
-                if (!baseName) baseName = 'Unbekannt';
-                img.src = `./data/img/pwagen/${baseName}.png`;
-                img.onerror = function() { 
-                    this.onerror = null; 
-                    this.src = './data/img/pwagen/Unbekannt.png'; 
-                };
+                if (viewModeSchematic === 'real') {
+                    // Realzug: GattungZp-GattungReal.png aus img/pwagen
+                    const realFileName = wagen.gattungReal ? `${wagen.gattung}-${wagen.gattungReal}.png` : `${wagen.gattung}.png`;
+                    img.src = `./data/img/pwagen/${realFileName}`;
+                    img.onerror = function () {
+                        this.onerror = null;
+                        this.src = './data/img/pwagen/Unbekannt.png';
+                    };
+                } else {
+                    // Step 1: strip everything from first space (e.g. "WLAB 301" -> "WLAB")
+                    let fullName = wagen.gattung.split(' ')[0] || 'Unbekannt';
+                    // Step 2: stripped name: remove suffix from "ue", "ü", "?", "-" or lowercase letter after digit
+                    let baseName = fullName.split(/ue|ü|\?|-|(?<=[0-9])[a-z]/i)[0] || 'Unbekannt';
+                    // Try full name first (e.g. WR4ü.png), then stripped (e.g. WR4.png), then Unbekannt
+                    img.src = `./data/img/schematisch/${fullName}.png`;
+                    img.onerror = function () {
+                        this.onerror = null;
+                        this.src = `./data/img/schematisch/${baseName}.png`;
+                        this.onerror = function () {
+                            this.onerror = null;
+                            this.src = './data/img/schematisch/Unbekannt.png';
+                        };
+                    };
+                }
 
                 const label = document.createElement('div');
                 label.className = 'info-label';
-                label.textContent = wagen.gattung;
+                let labelText = wagen.gattungReal ? `${wagen.gattung}-${wagen.gattungReal}` : wagen.gattung;
+                if (wagen.vonBf || wagen.nachBf) {
+                    const von = wagen.vonBf || '?';
+                    const nach = wagen.nachBf || '?';
+                    labelText += `
+${von} – ${nach}`;
+                }
 
+                label.textContent = labelText;
                 vehicleDiv.appendChild(img);
                 vehicleDiv.appendChild(label);
                 container.appendChild(vehicleDiv);
@@ -1006,7 +1271,7 @@
                 }
             }
         });
-        
+
         document.addEventListener('fullscreenchange', () => {
             if (document.fullscreenElement) {
                 fullscreenBtn.textContent = 'Vollbild beenden';
@@ -1017,10 +1282,10 @@
 
         // --- Tab State ---
         const tabState = { 2: 'laufweg', 4: 'laufweg' };
-        window.switchTab = function(area, tabName) {
+        window.switchTab = function (area, tabName) {
             tabState[area] = tabName;
             const colId = area === 2 ? 'col2' : 'col4';
-            
+
             document.querySelectorAll(`#${colId} .col-tab`).forEach(el => {
                 if (el.dataset.tab === tabName) el.classList.add('active');
                 else el.classList.remove('active');
@@ -1043,13 +1308,13 @@
                     fetch('data/fahrplan/abfahrten.csv'),
                     fetch('data/fahrplan/zpa.csv')
                 ]);
-                
+
                 if (!zuegeRes.ok || !abfahrtenRes.ok || !zpaRes.ok) {
                     throw new Error("Fahrplandaten konnten nicht geladen werden.");
                 }
 
-                // Decode as ISO-8859-1 / Windows-1252 to fix Umlauts
-                const decoder = new TextDecoder('windows-1252');
+                // Decode as UTF-8
+                const decoder = new TextDecoder('utf-8');
                 const zuegeBuffer = await zuegeRes.arrayBuffer();
                 const abfahrtenBuffer = await abfahrtenRes.arrayBuffer();
                 const zpaBuffer = await zpaRes.arrayBuffer();
@@ -1061,14 +1326,19 @@
                 // Parse zuege.csv
                 const zuegeLines = zuegeText.split('\n');
                 const zuegeMap = {};
+                const lokMap = {};
                 for (let i = 1; i < zuegeLines.length; i++) {
                     const line = zuegeLines[i].trim();
                     if (!line) continue;
                     const cols = line.split('\t');
                     if (cols.length >= 2) {
                         zuegeMap[cols[1].trim()] = cols[0].trim();
+                        if (cols.length >= 6) {
+                            lokMap[cols[1].trim()] = cols[5].trim();
+                        }
                     }
                 }
+                window._lokMap = lokMap;
 
                 // Parse abfahrten.csv
                 const abfahrtenLines = abfahrtenText.split('\n');
@@ -1102,6 +1372,7 @@
                         if (!zpaMap[zugNr]) zpaMap[zugNr] = [];
                         zpaMap[zugNr].push({
                             gattung: cols[1].trim(),
+                            gattungReal: (cols[2] || '').trim(),
                             vonZug: (cols[4] || '').trim(),
                             vonBf: (cols[5] || '').trim(),
                             nachBf: (cols[6] || '').trim(),
@@ -1122,7 +1393,7 @@
                 for (const zugNr in fahrplanMap) {
                     const rows = fahrplanMap[zugNr];
                     if (rows.length === 0) continue;
-                    
+
                     const firstRow = rows[0];
                     const lastRow = rows[rows.length - 1];
                     const gattung = zuegeMap[zugNr] || '';
@@ -1186,21 +1457,28 @@
                         if (z.gattung === 'FD' || z.gattung === 'FDt') colorClass = 'gattung-fd';
                         else if (z.gattung === 'D') colorClass = 'gattung-d';
                         else if (z.gattung === 'E') colorClass = 'gattung-e';
-                        
+
                         let displayTime = z.zeit;
                         let isDurchfahrt = false;
                         const rows = window._fahrplanMap ? (window._fahrplanMap[z.rawZugNr] || []) : [];
                         let curStationRow = rows.find(r => r.bahnhof === station);
                         if (!curStationRow) curStationRow = rows.find(r => r.bahnhof === 'Berlin Anhalter Bf');
                         if (curStationRow) {
-                            const timeStrForCalc = (station === 'Berlin Anhalter Bf' && area === 1) ? (curStationRow.abfahrt || curStationRow.ankunft) : (curStationRow.ankunft || curStationRow.abfahrt);
-                            if (timeStrForCalc) displayTime = timeStrForCalc;
                             isDurchfahrt = (curStationRow.haelt === 'D');
+                            const ank = curStationRow.ankunft;
+                            const abf = curStationRow.abfahrt;
+                            if (!isDurchfahrt && ank && abf) {
+                                // Haltender Zug: Ankunft - Abfahrt als Paar anzeigen
+                                displayTime = `${ank}\u00a0–\u00a0${abf}`;
+                            } else {
+                                const timeStrForCalc = (station === 'Berlin Anhalter Bf' && area === 1) ? (abf || ank) : (ank || abf);
+                                if (timeStrForCalc) displayTime = timeStrForCalc;
+                            }
                         }
-                        
+
                         const finalTimeHtml = isDurchfahrt ? `<i>(${displayTime})</i>` : displayTime;
-                        
-                        html += `<tr class="${colorClass}" data-zugnr="${z.rawZugNr}" onclick="window.selectTrain('${z.rawZugNr}', ${area}, this)">
+
+                        html += `<tr class="${colorClass}" data-zugnr="${z.rawZugNr}" onclick="window.selectTrain('${z.rawZugNr}', ${area}, this)" oncontextmenu="window.showCtxMenu(event, '${z.rawZugNr}', ${area})">
                             <td>${z.zug}</td>
                             <td>${finalTimeHtml}</td>
                             <td style="text-align:${area === 1 ? 'left' : 'right'};">${z.vonNach}</td>
@@ -1214,7 +1492,7 @@
                 document.querySelector('#col1 .col-content').innerHTML = window._createTable(nachHalleZuege, 1);
                 document.querySelector('#col5 .col-content').innerHTML = window._createTable(nachAhbZuege, 5);
 
-                window.selectTrain = function(zugNr, area, trElement) {
+                window.selectTrain = function (zugNr, area, trElement) {
                     const tbody = trElement.closest('tbody');
                     tbody.querySelectorAll('tr').forEach(tr => tr.classList.remove('selected'));
                     trElement.classList.add('selected');
@@ -1243,54 +1521,79 @@
                     // Laufweg HTML
                     let lwHtml = `<div class="content-laufweg" style="display:${tState === 'laufweg' ? 'block' : 'none'}">`;
                     lwHtml += '<table class="fahrplan-table">';
-                    lwHtml += '<thead><tr><th>Ankunft</th><th>Abfahrt</th><th>Bahnhof</th></tr></thead><tbody>';
+                    lwHtml += '<thead><tr><th style="text-align: right; padding-right: 15px;">Ankunft</th><th style="text-align: right; padding-right: 15px;">Abfahrt</th><th>Bahnhof</th></tr></thead><tbody>';
                     const sel = document.getElementById('station-select');
                     const currentStation = sel ? sel.value : 'Berlin-Lichterfelde Ost';
-                    
+
                     // Current time in minutes
                     const nowMin = clockH * 60 + clockM + clockS / 60;
-                    
+
                     const tToMin = (t) => {
                         if (!t) return null;
                         const p = t.trim().split('.');
                         return p.length === 2 ? parseInt(p[0]) * 60 + parseInt(p[1]) : null;
                     };
-                    
+
                     // Determine posRow and pulsing state: handled live by _updateLaufwegDot()
-                    
+
                     for (let i = 0; i < rows.length; i++) {
                         const r = rows[i];
                         let rowStyle = "";
                         if (r.haelt === 'D') rowStyle += "font-style: italic;";
                         if (r.bahnhof === currentStation) rowStyle += " background-color: #ffeba1;";
-                        
+
                         const styleAttr = rowStyle ? ` style="${rowStyle.trim()}"` : "";
-                        
+
                         if (r.haelt === 'D') {
                             const time = r.abfahrt || r.ankunft;
                             lwHtml += `<tr${styleAttr}><td colspan="2" style="text-align: center; font-style: italic; color: #555;">(<i>${time}</i>)</td><td>${r.bahnhof}</td></tr>`;
-                        } else if (r.ankunft && r.abfahrt) {
-                            lwHtml += `<tr${styleAttr}><td>${r.ankunft}</td><td>${r.abfahrt}</td><td>${r.bahnhof}</td></tr>`;
                         } else {
-                            const singleTime = r.ankunft || r.abfahrt || '';
-                            lwHtml += `<tr${styleAttr}><td colspan="2" style="text-align: center;">${singleTime}</td><td>${r.bahnhof}</td></tr>`;
+                            lwHtml += `<tr${styleAttr}><td style="text-align: right; padding-right: 15px;">${r.ankunft || ''}</td><td style="text-align: right; padding-right: 15px;">${r.abfahrt || ''}</td><td>${r.bahnhof}</td></tr>`;
                         }
                     }
                     lwHtml += '</tbody></table></div>';
 
                     // Zp HTML
-                    const zpRows = window._zpaMap[zugNr] || [];
-                    let zpHtml = `<div class="content-zp" style="display:${tState === 'zp' ? 'block' : 'none'}; height:100%;">`;
+                    let zpRows = window._zpaMap[zugNr] || [];
                     if (zpRows.length === 0) {
-                        zpHtml += '<div style="display:flex; justify-content:center; align-items:center; height:100%; font-style:italic; color:#888;">kein Zp vorhanden</div>';
-                    } else {
-                        zpHtml += '<table class="fahrplan-table" style="font-size:11px;">';
-                        zpHtml += '<thead><tr><th>#</th><th>Gattung</th><th>von Zug</th><th>von Bf</th><th>nach Zug</th><th>nach Bf</th><th>Uml.Pl</th><th>Anmerkung</th></tr></thead><tbody>';
-                        zpRows.forEach((r, i) => {
-                            zpHtml += `<tr><td>${i+1}</td><td>${r.gattung}</td><td>${r.vonZug}</td><td>${r.vonBf}</td><td>${r.nachZug}</td><td>${r.nachBf}</td><td>${r.umlPl}</td><td>${r.anmerkung}</td></tr>`;
-                        });
-                        zpHtml += '</tbody></table>';
+                        zpRows = [
+                            { gattung: 'C', vonZug: '', vonBf: '', nachZug: '', nachBf: '', umlPl: '', anmerkung: '' },
+                            { gattung: 'C', vonZug: '', vonBf: '', nachZug: '', nachBf: '', umlPl: '', anmerkung: '' },
+                            { gattung: 'C', vonZug: '', vonBf: '', nachZug: '', nachBf: '', umlPl: '', anmerkung: '' },
+                            { gattung: 'BC', vonZug: '', vonBf: '', nachZug: '', nachBf: '', umlPl: '', anmerkung: '' },
+                            { gattung: 'BC', vonZug: '', vonBf: '', nachZug: '', nachBf: '', umlPl: '', anmerkung: '' },
+                            { gattung: 'C', vonZug: '', vonBf: '', nachZug: '', nachBf: '', umlPl: '', anmerkung: '' },
+                            { gattung: 'C', vonZug: '', vonBf: '', nachZug: '', nachBf: '', umlPl: '', anmerkung: '' },
+                            { gattung: 'C', vonZug: '', vonBf: '', nachZug: '', nachBf: '', umlPl: '', anmerkung: '' }
+                        ];
                     }
+                    let zpHtml = `<div class="content-zp" style="display:${tState === 'zp' ? 'block' : 'none'}; height:100%;">`;
+                    zpHtml += '<table class="fahrplan-table" style="font-size:11px;">';
+                    const viewMode = document.querySelector('input[name="view-mode"]:checked')?.value || 'schematic';
+                    zpHtml += '<thead><tr><th>#</th><th>Gattung</th><th>von Zug</th><th>von Bf</th><th>nach Zug</th><th>nach Bf</th><th>Uml.Pl</th><th>Anmerkung</th></tr></thead><tbody>';
+                    zpRows.forEach((r, i) => {
+                        let imgHtml = '';
+                        let displayGat = r.gattung;
+                        if (viewMode !== 'model') {
+                            let src = '';
+                            let fallback = '';
+                            if (viewMode === 'real') {
+                                const realFileName = r.gattungReal ? `${r.gattung}-${r.gattungReal}.png` : `${r.gattung}.png`;
+                                src = `./data/img/pwagen/${realFileName}`;
+                                fallback = './data/img/pwagen/Unbekannt.png';
+                                displayGat = r.gattungReal ? `${r.gattung}-${r.gattungReal}` : r.gattung;
+                            } else {
+                                let fullName = r.gattung.split(' ')[0] || 'Unbekannt';
+                                let baseName = fullName.split(/ue|ü|\?|-|(?<=[0-9])[a-z]/i)[0] || 'Unbekannt';
+                                src = `./data/img/schematisch/${fullName}.png`;
+                                fallback = `./data/img/schematisch/${baseName}.png`;
+                            }
+                            imgHtml = `<br><img src="${src}" onerror="this.onerror=null; this.src='${fallback}'; this.onerror=function(){this.onerror=null; this.src='./data/img/schematisch/Unbekannt.png';};" style="height:20px; vertical-align:middle; margin-top:3px;">`;
+
+                        }
+                        zpHtml += `<tr><td>${i + 1}</td><td>${displayGat}${imgHtml}</td><td>${r.vonZug || ''}</td><td>${r.vonBf || ''}</td><td>${r.nachZug || ''}</td><td>${r.nachBf || ''}</td><td>${r.umlPl || ''}</td><td>${r.anmerkung || ''}</td></tr>`;
+                    });
+                    zpHtml += '</tbody></table>';
                     zpHtml += '</div>';
 
                     const finalHtml = lwHtml + zpHtml;
@@ -1309,7 +1612,7 @@
                 document.querySelector('#col5 .col-content').innerHTML = errorMsg;
             }
         }
-        
+
         window._currentNextTrain = { 1: null, 5: null };
 
         loadFahrplan().then(() => {
@@ -1318,7 +1621,7 @@
             }
         });
 
-        window.autoSelectNextTrain = function() {
+        window.autoSelectNextTrain = function () {
             const sel = document.getElementById('station-select');
             const station = sel ? sel.value : 'Berlin-Lichterfelde Ost';
             const currentTimeSec = (clockH * 60 + clockM) * 60 + clockS;
@@ -1334,7 +1637,7 @@
                     : (r.ankunft || r.abfahrt);
                 return window.timeToMin(timeStr);
             };
-            
+
             const findNext = (zuege, area) => {
                 // Find train with smallest positive time diff, allowing up to 3 min in past
                 let nextZug = null;
@@ -1350,21 +1653,21 @@
                     }
                 }
                 if (!nextZug && zuege.length > 0) nextZug = zuege[0];
-                
+
                 if (nextZug) {
                     const colId = area === 1 ? 'col1' : 'col5';
                     const tr = document.querySelector(`#${colId} tr[data-zugnr="${nextZug.rawZugNr}"]`);
-                    
+
                     if (tr) {
                         document.querySelectorAll(`#${colId} tr.next-train`).forEach(el => el.classList.remove('next-train'));
                         tr.classList.add('next-train');
-                        
+
                         if (window._currentNextTrain[area] !== nextZug.rawZugNr) {
                             window._currentNextTrain[area] = nextZug.rawZugNr;
-                            
+
                             // Select it in area 2/4
                             selectTrain(nextZug.rawZugNr, area, tr);
-                            
+
                             // Scroll it to top (approx 30px offset for the sticky header)
                             const container = document.querySelector(`#${colId} .col-content`);
                             container.scrollTo({
@@ -1379,7 +1682,7 @@
             if (window._nachAhbZuege) findNext(window._nachAhbZuege, 5);
             if (window._nachHalleZuege) findNext(window._nachHalleZuege, 1);
         };
-        
+
         document.getElementById('station-select').addEventListener('change', () => {
             const sel1 = document.querySelector('#col1 tr.selected');
             const z1 = sel1 ? sel1.getAttribute('data-zugnr') : null;
@@ -1401,7 +1704,7 @@
 
         // --- Signal Train Info ---
         // --- Train Animation & Signal Logic ---
-        window.updateSignalTrainInfo = function() {
+        window.updateSignalTrainInfo = function () {
             // UI info update is now handled in the animation loop to ensure smooth countdowns
         };
 
@@ -1413,25 +1716,26 @@
                 this.routeEl = document.getElementById(routeId);
                 this.countdownEl = document.getElementById(countdownId);
                 this.area = area;
-                
+
                 this.frontX = isTopTrack ? window.innerWidth + 100 : -100;
                 this.speed = 0;
                 this.maxSpeed = 2; // px per frame
                 this.acceleration = 0.02;
                 this.currentZugNr = null;
                 this.sigState = 'fahrt';
+                this.manualSigOverride = false; // cleared per-train-change
                 this.width = 100;
                 // Shunting elements (only used at Berlin Anhalter Bf)
                 this.rangierlokEl = document.getElementById(isTopTrack ? 'rangierlok-top' : 'rangierlok-bottom');
-                this.zugLokEl    = document.getElementById(isTopTrack ? 'zuglok-top'    : 'zuglok-bottom');
+                this.zugLokEl = document.getElementById(isTopTrack ? 'zuglok-top' : 'zuglok-bottom');
                 // Shunting state machine
-                this.shuntPhase  = 'IDLE'; // IDLE | DEPART_IN | DEPART_SHUNTER_OUT | DEPART_LOK_PAUSE | DEPART_LOK_IN | DEPART_READY | DEPARTING
-                                           //      | ARRIVE_SHUNTER_IN | ARRIVE_PULLING | ARRIVE_LOK_FOLLOWS | ARRIVE_DONE
-                this.shuntTimer  = 0;  // real ms timer for current phase
-                this.rlX         = 0;  // rangierlok left-edge position
-                this.rlWidth     = 0;  // rangierlok width (px)
-                this.zlX         = 0;  // zuglok left-edge position
-                this.zlWidth     = 0;  // zuglok width
+                this.shuntPhase = 'IDLE'; // IDLE | DEPART_IN | DEPART_SHUNTER_OUT | DEPART_LOK_PAUSE | DEPART_LOK_IN | DEPART_READY | DEPARTING
+                //      | ARRIVE_SHUNTER_IN | ARRIVE_PULLING | ARRIVE_LOK_FOLLOWS | ARRIVE_DONE
+                this.shuntTimer = 0;  // real ms timer for current phase
+                this.rlX = 0;  // rangierlok left-edge position
+                this.rlWidth = 0;  // rangierlok width (px)
+                this.zlX = 0;  // zuglok left-edge position
+                this.zlWidth = 0;  // zuglok width
                 this.shuntTrainX = 0;  // train left-edge when shunting controls positioning
             }
 
@@ -1445,47 +1749,89 @@
             // ── Shunting helpers ─────────────────────────────────────────────────
             _hideShuntElements() {
                 if (this.rangierlokEl) this.rangierlokEl.style.display = 'none';
-                if (this.zugLokEl)    this.zugLokEl.style.display = 'none';
+                if (this.zugLokEl) this.zugLokEl.style.display = 'none';
             }
 
-            _imgEl(src, mirror = false) {
+            _imgEl(src, mirror = false, fallbackSrc = null) {
                 const div = document.createElement('div');
                 div.className = 'vehicle';
                 const img = document.createElement('img');
                 img.src = src;
+                if (fallbackSrc) {
+                    img.onerror = function() { this.onerror = null; this.src = fallbackSrc; };
+                }
                 if (mirror) img.style.transform = 'scaleX(-1)';
                 div.appendChild(img);
                 return div;
             }
 
             _buildRangierlok(el, mirror = false) {
+                const viewModeAnim = document.querySelector('input[name="view-mode"]:checked')?.value;
                 el.innerHTML = '';
-                el.style.gap = '0'; el.style.bottom = '5px'; el.style.flexDirection = 'row';
+                el.style.gap = '0'; el.style.bottom = viewModeAnim === 'schematic' ? '5px' : '3px'; el.style.flexDirection = 'row';
                 el.appendChild(this._imgEl('./data/img/loks/rangierlok.gif', mirror));
                 el.style.display = 'flex';
                 el.getBoundingClientRect(); // force layout
                 this.rlWidth = el.getBoundingClientRect().width || 50;
             }
 
-            _buildZugLok(el, mirror = false) {
+            _buildZugLok(el, zugNr, mirror = false) {
+                const lokString = window._lokMap && window._lokMap[zugNr] ? window._lokMap[zugNr] : '';
+                if (lokString === '-') {
+                    el.style.display = 'none';
+                    this.zlWidth = 0;
+                    return;
+                }
+                const viewModeAnim = document.querySelector('input[name="view-mode"]:checked')?.value;
                 el.innerHTML = '';
-                el.style.gap = '0'; el.style.bottom = '5px'; el.style.flexDirection = 'row';
-                el.appendChild(this._imgEl('./data/img/pwagen/lok.png', mirror));
+                el.style.gap = '0'; el.style.bottom = viewModeAnim === 'schematic' ? '5px' : '3px'; el.style.flexDirection = 'row';
+                
+                if (viewModeAnim === 'real') {
+                    if (lokString) {
+                        el.appendChild(this._imgEl(`./data/img/loks/${lokString}.png`, mirror, './data/img/pwagen/Unbekannt.png'));
+                    } else {
+                        el.appendChild(this._imgEl('./data/img/pwagen/lok.png', mirror, './data/img/pwagen/Unbekannt.png'));
+                    }
+                } else {
+                    if (lokString) {
+                        el.appendChild(this._imgEl(`./data/img/loks/${lokString}.png`, mirror, './data/img/schematisch/lok.png'));
+                    } else {
+                        el.appendChild(this._imgEl('./data/img/schematisch/lok.png', mirror));
+                    }
+                }
+                
                 el.style.display = 'flex';
                 el.getBoundingClientRect();
                 this.zlWidth = el.getBoundingClientRect().width || 60;
             }
 
             _buildCarsOnly(el, zugNr, reverse = false) {
-                const zpList = (window._zpaMap && window._zpaMap[zugNr]) || [];
+                let zpList = (window._zpaMap && window._zpaMap[zugNr]) || [];
+                if (zpList.length === 0) {
+                    zpList = [
+                        { gattung: 'C' }, { gattung: 'C' }, { gattung: 'C' },
+                        { gattung: 'BC' }, { gattung: 'BC' },
+                        { gattung: 'C' }, { gattung: 'C' }, { gattung: 'C' }
+                    ];
+                }
+                const viewModeAnim = document.querySelector('input[name="view-mode"]:checked')?.value;
                 el.innerHTML = '';
-                el.style.gap = '5px'; el.style.bottom = '5px';
+                el.style.gap = viewModeAnim === 'schematic' ? '5px' : '0';
+                el.style.bottom = viewModeAnim === 'schematic' ? '5px' : '3px';
                 el.style.flexDirection = reverse ? 'row-reverse' : 'row';
                 zpList.forEach(w => {
-                    let base = w.gattung.split(' ')[0].split(/ue|ü|\?|-|(?<=[0-9])[a-z]/i)[0] || 'Unbekannt';
                     const img = document.createElement('img');
-                    img.src = `./data/img/pwagen/${base}.png`;
-                    img.onerror = function() { this.onerror = null; this.src = './data/img/pwagen/Unbekannt.png'; };
+                    if (viewModeAnim === 'real') {
+                        // Realzug: GattungZp-GattungReal.png aus img/pwagen
+                        const realFileName = w.gattungReal ? `${w.gattung}-${w.gattungReal}.png` : `${w.gattung}.png`;
+                        img.src = `./data/img/pwagen/${realFileName}`;
+                        img.onerror = function () { this.onerror = null; this.src = './data/img/pwagen/Unbekannt.png'; };
+                    } else {
+                        let fullName = w.gattung.split(' ')[0] || 'Unbekannt';
+                        let base = fullName.split(/ue|ü|\?|-|(?<=[0-9])[a-z]/i)[0] || 'Unbekannt';
+                        img.src = `./data/img/schematisch/${fullName}.png`;
+                        img.onerror = function () { this.onerror = null; this.src = `./data/img/schematisch/${base}.png`; this.onerror = function () { this.onerror = null; this.src = './data/img/schematisch/Unbekannt.png'; }; };
+                    }
                     const div = document.createElement('div'); div.className = 'vehicle'; div.appendChild(img);
                     el.appendChild(div);
                 });
@@ -1531,7 +1877,7 @@
                                 this._buildRangierlok(this.rangierlokEl, true); // mirrored: facing right to push
                                 // Start positions: off-screen left
                                 this.shuntTrainX = -this.width - this.rlWidth - 80;
-                                this.rlX          = -this.rlWidth - 80;
+                                this.rlX = -this.rlWidth - 80;
                                 this.trainEl.style.left = `${this.shuntTrainX}px`;
                                 this.rangierlokEl.style.left = `${this.rlX}px`;
                                 this._shuntSpeed = 0;
@@ -1543,7 +1889,7 @@
                         case 'DEPART_IN': {
                             // Move right: cars stop at trainTargetX = signalX, rl just behind
                             const carTarget = signalX;
-                            const atTarget  = Math.abs(this.shuntTrainX - carTarget) < 0.5;
+                            const atTarget = Math.abs(this.shuntTrainX - carTarget) < 0.5;
                             if (!atTarget) {
                                 const next = moveToward(this.shuntTrainX, carTarget);
                                 const delta = next - this.shuntTrainX;
@@ -1566,7 +1912,7 @@
                             if (this.shuntTimer < 1200) return true; // 1.2s pause
                             this._shuntSpeed = 0;
                             this.shuntPhase = 'DEPART_RL_OUT';
-                            // fall through
+                        // fall through
                         case 'DEPART_RL_OUT':
                             this.rlX = moveLeft(this.rlX);
                             this.rangierlokEl.style.left = `${this.rlX}px`;
@@ -1581,7 +1927,7 @@
                         case 'DEPART_LOK_PAUSE':
                             this.shuntTimer += dt;
                             if (this.shuntTimer >= 10000) { // 10 real seconds
-                                this._buildZugLok(this.zugLokEl, false); // lok facing left to depart
+                                this._buildZugLok(this.zugLokEl, z.rawZugNr, false); // lok facing left to depart
                                 this.zlX = -this.zlWidth - 50; // start off-screen left
                                 this.zugLokEl.style.left = `${this.zlX}px`;
                                 this._shuntSpeed = 0;
@@ -1618,7 +1964,7 @@
                             this.zlX -= sp * ts;
                             this.shuntTrainX -= sp * ts;
                             this.zugLokEl.style.left = `${this.zlX}px`;
-                            this.trainEl.style.left  = `${this.shuntTrainX}px`;
+                            this.trainEl.style.left = `${this.shuntTrainX}px`;
                             if (this.shuntTrainX + this.width < -100) {
                                 this.trainEl.style.display = 'none';
                                 this.zugLokEl.style.display = 'none';
@@ -1645,7 +1991,7 @@
                                 this.trainEl.style.left = `${this.shuntTrainX}px`;
 
                                 // Zuglok at the right end (where it would have been)
-                                this._buildZugLok(this.zugLokEl, true); // mirrored: facing right (arrived from right)
+                                this._buildZugLok(this.zugLokEl, z.rawZugNr, true); // mirrored: facing right (arrived from right)
                                 this.zlX = signalX - this.zlWidth;
                                 this.zugLokEl.style.left = `${this.zlX}px`;
 
@@ -1689,7 +2035,7 @@
                             this.rlX -= sp * ts;
                             this.shuntTrainX -= sp * ts;
                             this.rangierlokEl.style.left = `${this.rlX}px`;
-                            this.trainEl.style.left      = `${this.shuntTrainX}px`;
+                            this.trainEl.style.left = `${this.shuntTrainX}px`;
                             // When train is halfway off-screen left, start Zuglok
                             if (this.shuntTrainX + this.width / 2 < 0) {
                                 this.shuntPhase = 'ARRIVE_LOK_FOLLOWS';
@@ -1704,8 +2050,8 @@
                             this.shuntTrainX -= sp * ts;
                             this.zlX -= sp * ts;
                             this.rangierlokEl.style.left = `${this.rlX}px`;
-                            this.trainEl.style.left      = `${this.shuntTrainX}px`;
-                            this.zugLokEl.style.left     = `${this.zlX}px`;
+                            this.trainEl.style.left = `${this.shuntTrainX}px`;
+                            this.zugLokEl.style.left = `${this.zlX}px`;
                             if (this.shuntTrainX + this.width < -100 && this.zlX + this.zlWidth < -100) {
                                 this.trainEl.style.display = 'none';
                                 this._hideShuntElements();
@@ -1723,10 +2069,10 @@
             update(dt, currentTimeSec) {
                 const zuegeList = this.area === 5 ? window._nachAhbZuege : window._nachHalleZuege;
                 if (!zuegeList || zuegeList.length === 0) return;
-                
+
                 const sel = document.getElementById('station-select');
                 const station = sel ? sel.value : 'Berlin-Lichterfelde Ost';
-                
+
                 // Helper to get time at selected station for a train
                 const getTrainTimeAtStation = (zug) => {
                     const rows = window._fahrplanMap ? (window._fahrplanMap[zug.rawZugNr] || []) : [];
@@ -1736,21 +2082,28 @@
                     const timeStr = (station === 'Berlin Anhalter Bf' && this.area === 1) ? (r.abfahrt || r.ankunft) : (r.ankunft || r.abfahrt);
                     return window.timeToMin(timeStr);
                 };
-                
-                let bestTrain = null;
-                let minDiff = Infinity;
-                for (const t of zuegeList) {
-                    const tMin = getTrainTimeAtStation(t);
-                    let diff = tMin * 60 - currentTimeSec;
-                    if (diff < -12 * 3600) diff += 24 * 3600;
-                    if (diff > 12 * 3600) diff -= 24 * 3600;
-                    if (diff >= -180 && diff < minDiff) {
-                        minDiff = diff;
-                        bestTrain = t;
-                    }
+
+                let z = null;
+                if (window._forceZugNr) {
+                    z = zuegeList.find(t => t.rawZugNr === window._forceZugNr);
                 }
-                let z = bestTrain || zuegeList[0];
-                
+
+                if (!z) {
+                    let bestTrain = null;
+                    let minDiff = Infinity;
+                    for (const t of zuegeList) {
+                        const tMin = getTrainTimeAtStation(t);
+                        let diff = tMin * 60 - currentTimeSec;
+                        if (diff < -12 * 3600) diff += 24 * 3600;
+                        if (diff > 12 * 3600) diff -= 24 * 3600;
+                        if (diff >= -180 && diff < minDiff) {
+                            minDiff = diff;
+                            bestTrain = t;
+                        }
+                    }
+                    z = bestTrain || zuegeList[0];
+                }
+
                 if (!z) {
                     this.trainEl.style.display = 'none';
                     this.routeEl.innerHTML = '';
@@ -1761,126 +2114,107 @@
                 const rows = window._fahrplanMap ? (window._fahrplanMap[z.rawZugNr] || []) : [];
                 let curStationRow = rows.find(r => r.bahnhof === station);
                 if (!curStationRow) curStationRow = rows.find(r => r.bahnhof === 'Berlin Anhalter Bf');
-                
-                let tMin = z.zeitMin;
+
+                let tMinArr = z.zeitMin;
+                let tMinDep = z.zeitMin;
                 let isDurchfahrt = false;
                 let displayTime = z.zeit;
-                
-                if (curStationRow) {
-                    const timeStrForCalc = (station === 'Berlin Anhalter Bf' && this.area === 1) ? (curStationRow.abfahrt || curStationRow.ankunft) : (curStationRow.ankunft || curStationRow.abfahrt);
-                    tMin = window.timeToMin(timeStrForCalc);
-                    isDurchfahrt = (curStationRow.haelt === 'D');
-                    displayTime = timeStrForCalc;
-                }
-                
-                const T_sec = tMin * 60;
-                let diffSec = T_sec - currentTimeSec; // positive means in future
-                if (diffSec > 12 * 3600) diffSec -= 24 * 3600;
-                if (diffSec < -12 * 3600) diffSec += 24 * 3600;
 
-                // Update Route & Countdown UI
+                if (curStationRow) {
+                    const timeStrArr = (station === 'Berlin Anhalter Bf' && this.area === 1) ? (curStationRow.abfahrt || curStationRow.ankunft) : (curStationRow.ankunft || curStationRow.abfahrt);
+                    const timeStrDep = (station === 'Berlin Anhalter Bf' && this.area === 5) ? (curStationRow.ankunft || curStationRow.abfahrt) : (curStationRow.abfahrt || curStationRow.ankunft);
+                    tMinArr = window.timeToMin(timeStrArr);
+                    tMinDep = window.timeToMin(timeStrDep);
+                    isDurchfahrt = (curStationRow.haelt === 'D');
+
+                    const ank = curStationRow.ankunft;
+                    const abf = curStationRow.abfahrt;
+                    if (!isDurchfahrt && ank && abf) {
+                        displayTime = `${ank}\u00a0–\u00a0${abf}`;
+                    } else {
+                        displayTime = timeStrArr;
+                    }
+                }
+
+                const Arr_sec = tMinArr * 60;
+                let diffArrSec = Arr_sec - currentTimeSec;
+                if (diffArrSec > 12 * 3600) diffArrSec -= 24 * 3600;
+                if (diffArrSec < -12 * 3600) diffArrSec += 24 * 3600;
+
+                const Dep_sec = tMinDep * 60;
+
+                // Update Route UI
                 const g = z.gattung || '';
                 const cls = this.gatClass(g);
-                
-                // Find next stop from Laufweg
-                // (sel, station, rows already declared above)
                 let stopLabel = '';
                 if (rows.length > 0) {
                     const ahbName = 'Berlin Anhalter Bf';
                     const liName = 'Berlin-Lichterfelde Ost';
                     const curStation = (station === 'Berlin Anhalter Bf') ? ahbName : liName;
                     let curIdx = rows.findIndex(r => r.bahnhof === curStation);
-                    if (curIdx < 0) {
-                        curIdx = rows.findIndex(r => r.bahnhof === ahbName);
-                    }
-                    
+                    if (curIdx < 0) curIdx = rows.findIndex(r => r.bahnhof === ahbName);
+
                     if (this.area === 1) {
-                        // area 1: away from Ahb (nach Halle)
-                        if (curIdx >= 0 && curIdx + 1 < rows.length) {
-                            stopLabel = ` (nächster Halt: ${rows[curIdx + 1].bahnhof})`;
-                        }
+                        if (curIdx >= 0 && curIdx + 1 < rows.length) stopLabel = ` (nächster Halt: ${rows[curIdx + 1].bahnhof})`;
                     } else {
-                        // area 5: towards Ahb (aus Halle)
-                        if (curIdx > 0) {
-                            stopLabel = ` (letzter Halt: ${rows[curIdx - 1].bahnhof})`;
-                        }
+                        if (curIdx > 0) stopLabel = ` (vorheriger Halt: ${rows[curIdx - 1].bahnhof})`;
                     }
                 }
-                
+
                 let vonNachPrefix = this.area === 5 ? 'aus ' : '';
                 const timeDisplay = isDurchfahrt ? `<i>(${displayTime})</i>` : displayTime;
                 this.routeEl.innerHTML = `${timeDisplay}&nbsp;<span class="${cls}"><strong>${z.zug}</strong></span>&nbsp;${vonNachPrefix}${z.vonNach}${stopLabel ? `<span style="color:#aaa;font-size:0.9em">${stopLabel}</span>` : ''}`;
-                
+
                 const screenW = window.innerWidth;
                 const signalX = this.isTopTrack ? 80 : screenW - 80;
                 const travelDist = screenW + 20;
-                const realTravelTime = travelDist / 120; // 120px per sec
+                const realTravelTime = travelDist / 120;
                 const simTravelTime = realTravelTime * timeMul;
-                
+
                 let stopping = false;
                 if (rows.length > 0) {
-                    const ahbName = 'Berlin Anhalter Bf';
-                    const liName = 'Berlin-Lichterfelde Ost';
-                    const curStation = (station === 'Berlin Anhalter Bf') ? ahbName : liName;
+                    const curStation = (station === 'Berlin Anhalter Bf') ? 'Berlin Anhalter Bf' : 'Berlin-Lichterfelde Ost';
                     let localCurIdx = rows.findIndex(r => r.bahnhof === curStation);
-                    if (localCurIdx < 0) localCurIdx = rows.findIndex(r => r.bahnhof === ahbName);
-                    
-                    if (localCurIdx >= 0) {
-                        stopping = (rows[localCurIdx].haelt !== 'D');
-                    } else {
-                        stopping = (g === 'P');
-                    }
+                    if (localCurIdx < 0) localCurIdx = rows.findIndex(r => r.bahnhof === 'Berlin Anhalter Bf');
+                    stopping = localCurIdx >= 0 ? (rows[localCurIdx].haelt !== 'D') : (g === 'P');
                 } else {
                     stopping = (g === 'P');
                 }
-                
-                const waitSimTime = stopping ? 60 : 0; // stop for 60 simulated seconds
-                const spawnDiffSec = simTravelTime + waitSimTime;
-                
+
+                const actualDepSec = (stopping && Dep_sec <= Arr_sec) ? Arr_sec + 60 : Dep_sec;
+                let diffDepSec = actualDepSec - currentTimeSec;
+                if (diffDepSec > 12 * 3600) diffDepSec -= 24 * 3600;
+                if (diffDepSec < -12 * 3600) diffDepSec += 24 * 3600;
+
+                const spawnDiffSec = simTravelTime;
                 let isKopfbahnhofDepart = (station === 'Berlin Anhalter Bf' && this.isTopTrack);
                 let isKopfbahnhofArrive = (station === 'Berlin Anhalter Bf' && !this.isTopTrack);
+
                 let shouldBeActive = false;
                 if (isKopfbahnhofDepart) {
-                    shouldBeActive = (diffSec <= 180 && diffSec >= -120);
+                    shouldBeActive = (diffDepSec <= 180 && diffDepSec >= -120);
                 } else if (isKopfbahnhofArrive) {
-                    shouldBeActive = (diffSec <= spawnDiffSec && diffSec >= -180);
+                    shouldBeActive = (diffArrSec <= spawnDiffSec && diffArrSec >= -180);
                 } else {
-                    shouldBeActive = (diffSec <= spawnDiffSec && diffSec >= -120);
+                    shouldBeActive = (diffArrSec <= spawnDiffSec && diffDepSec >= -120);
                 }
 
-                // Countdown Logic (Real time until train front reaches the signal)
-                let realTimeToSignal = 0;
-                let showCountdown = false;
+                if (window._forceZugNr === z.rawZugNr && !shouldBeActive) {
+                    window._forceZugNr = null; // Force aufheben, sobald der Zug fertig/inaktiv ist
+                }
 
-                if (this.currentZugNr) {
-                    let distToSignal = this.isTopTrack ? (this.frontX - signalX) : (signalX - this.frontX);
-                    if (distToSignal > 2) {
-                        realTimeToSignal = distToSignal / 120;
-                        showCountdown = true;
-                    } else if (isKopfbahnhofDepart && diffSec > 0) {
-                        realTimeToSignal = diffSec / timeMul;
-                        showCountdown = true;
-                    }
-                } else if (diffSec > 0 && diffSec < 12 * 3600) {
-                    if (isKopfbahnhofDepart) {
-                        realTimeToSignal = diffSec / timeMul;
-                        showCountdown = true;
-                    } else {
-                        let simTimeUntilSpawn = diffSec - spawnDiffSec;
-                        if (simTimeUntilSpawn > 0) {
-                            realTimeToSignal = (simTimeUntilSpawn / timeMul) + realTravelTime;
-                            showCountdown = true;
-                        } else {
-                            realTimeToSignal = realTravelTime;
-                            showCountdown = true;
-                        }
-                    }
+                // Countdown Logic (Simulated time until arrival)
+                let simTimeToSignal = 0;
+                let showCountdown = false;
+                if (diffArrSec > 0 && diffArrSec <= 12 * 3600 && (!isKopfbahnhofDepart || diffDepSec <= 180)) {
+                    simTimeToSignal = diffArrSec;
+                    showCountdown = true;
                 }
 
                 if (showCountdown) {
-                    const m = Math.floor(realTimeToSignal / 60);
-                    const s = Math.floor(realTimeToSignal % 60);
-                    this.countdownEl.textContent = `${m}:${s.toString().padStart(2,'0')}`;
+                    const m = Math.floor(simTimeToSignal / 60);
+                    const s = Math.floor(simTimeToSignal % 60);
+                    this.countdownEl.textContent = `${m}:${s.toString().padStart(2, '0')}`;
                     this.countdownEl.style.display = 'block';
                 } else {
                     this.countdownEl.style.display = 'none';
@@ -1888,12 +2222,11 @@
 
                 if (z.rawZugNr !== this.currentZugNr) {
                     if (shouldBeActive) {
-                        // Reset shunting when new train comes
                         if (this.shuntPhase !== 'IDLE') this._hideShuntElements();
                         this.shuntPhase = 'IDLE';
                         this._shuntSpeed = 0;
                         this.currentZugNr = z.rawZugNr;
-                        
+
                         if (isKopfbahnhofDepart) {
                             // shuntUpdate() will handle everything
                             this.frontX = signalX;
@@ -1906,36 +2239,68 @@
                             this.trainEl.style.opacity = '1';
                             this.trainEl.style.transition = '';
                             const viewMode = document.querySelector('input[name="view-mode"]:checked')?.value;
-                            if (viewMode === 'schematic') renderSchematicTrain(this.trainEl, z, this.isTopTrack);
+                            if (viewMode !== 'model') renderSchematicTrain(this.trainEl, z, this.isTopTrack);
                             else this.trainEl.innerHTML = '';
                         } else {
                             this.frontX = this.isTopTrack ? screenW + 100 : -100;
                             this.trainEl.style.opacity = '1';
                             this.trainEl.style.transition = '';
+                            if (station === 'Berlin Anhalter Bf' && this.isTopTrack) {
+                                this.frontX = signalX;
+                                this.speed = 0;
+                            } else {
+                                let spawnX = this.isTopTrack ? screenW + 100 : -100;
+
+                                if (diffArrSec > 0) {
+                                    // Approaching
+                                    let elapsedSim = spawnDiffSec - diffArrSec;
+                                    let elapsedReal = Math.max(0, elapsedSim) / timeMul;
+                                    if (this.isTopTrack) {
+                                        this.frontX = Math.max(signalX, spawnX - (elapsedReal * 120));
+                                    } else {
+                                        this.frontX = Math.min(signalX, spawnX + (elapsedReal * 120));
+                                    }
+                                    this.speed = this.maxSpeed;
+                                } else if (diffDepSec >= 0) {
+                                    // Waiting at station
+                                    this.frontX = signalX;
+                                    this.speed = 0;
+                                } else {
+                                    // Departed
+                                    let elapsedSimAfterDep = -diffDepSec;
+                                    let elapsedRealAfterDep = Math.max(0, elapsedSimAfterDep) / timeMul;
+                                    if (this.isTopTrack) {
+                                        this.frontX = signalX - (elapsedRealAfterDep * 120);
+                                    } else {
+                                        this.frontX = signalX + (elapsedRealAfterDep * 120);
+                                    }
+                                    this.speed = this.maxSpeed;
+                                }
+                            }
                             const viewMode = document.querySelector('input[name="view-mode"]:checked')?.value;
-                            if (viewMode === 'schematic') renderSchematicTrain(this.trainEl, z, this.isTopTrack);
+                            if (viewMode !== 'model') renderSchematicTrain(this.trainEl, z, this.isTopTrack);
                             else this.trainEl.innerHTML = '';
                         }
-                        this.speed = (isKopfbahnhofDepart) ? 0 : this.maxSpeed;
                     } else {
                         this.trainEl.style.display = 'none';
-                        if (diffSec < 0) this.routeEl.innerHTML = '';
+                        if (diffDepSec < 0) this.routeEl.innerHTML = '';
                         return;
                     }
                 }
-                
+
                 this.width = this.trainEl.getBoundingClientRect().width || 100;
-                
+
                 // ── Shunting takes full control at Berlin Anhalter Bf ──────────
                 if (station === 'Berlin Anhalter Bf' && (isKopfbahnhofDepart || isKopfbahnhofArrive)) {
-                    const shuntHandled = this.shuntUpdate(dt, diffSec, z, signalX, screenW);
+                    let diffSecForShunt = isKopfbahnhofDepart ? diffDepSec : diffArrSec;
+                    const shuntHandled = this.shuntUpdate(dt, diffSecForShunt, z, signalX, screenW);
                     if (shuntHandled) {
-                        // shuntUpdate sets trainEl.style.left directly; just ensure it's visible
                         this.trainEl.style.display = 'flex';
                         this.signalEl.style.display = isKopfbahnhofArrive ? 'none' : 'block';
-                        // Signal: Halt until shunt DEPARTING or DONE
                         const shuntDeparting = this.shuntPhase === 'DEPARTING' || this.shuntPhase === 'ARRIVE_LOK_FOLLOWS';
-                        this.sigState = (isKopfbahnhofDepart && shuntDeparting) ? 'fahrt' : 'halt';
+                        if (!this.manualSigOverride) {
+                            this.sigState = (isKopfbahnhofDepart && shuntDeparting) ? 'fahrt' : 'halt';
+                        }
                         this.signalEl.className = `signal ${this.sigState}`;
                         return;
                     }
@@ -1943,14 +2308,15 @@
 
                 let backX = this.isTopTrack ? this.frontX + this.width : this.frontX - this.width;
                 let isOffScreen = this.isTopTrack ? (backX < -100) : (backX > screenW + 100);
-                
+
                 if (!shouldBeActive && isOffScreen) {
                     this.trainEl.style.display = 'none';
                     this.currentZugNr = null;
-                    if (diffSec < 0) this.routeEl.innerHTML = '';
+                    this.manualSigOverride = false;
+                    if (diffDepSec < 0) this.routeEl.innerHTML = '';
                     return;
                 }
-                
+
                 this.trainEl.style.display = 'flex';
 
                 if (station === 'Berlin Anhalter Bf' && !this.isTopTrack) {
@@ -1959,19 +2325,24 @@
                     this.signalEl.style.display = 'block';
                 }
 
-                if (isKopfbahnhofArrive || (stopping && diffSec > 0)) {
-                    this.sigState = 'halt';
-                } else {
-                    this.sigState = 'fahrt';
+                if (this.currentZugNr !== z.rawZugNr) {
+                    this.manualSigOverride = false; // new train: reset manual override
+                }
+                if (!this.manualSigOverride) {
+                    if (isKopfbahnhofArrive || (stopping && diffDepSec > 0)) {
+                        this.sigState = 'halt';
+                    } else {
+                        this.sigState = 'fahrt';
+                    }
                 }
                 this.signalEl.className = `signal ${this.sigState}`;
-                
+
                 let timeScale = dt / 16.66;
-                if (timeScale > 5) timeScale = 5; 
-                
+                if (timeScale > 5) timeScale = 5;
+
                 let targetX = signalX;
 
-                if (this.isTopTrack) { 
+                if (this.isTopTrack) {
                     if (this.sigState === 'halt' && this.frontX >= targetX) {
                         if (this.frontX > targetX) {
                             let dist = this.frontX - targetX;
@@ -1989,7 +2360,7 @@
                         if (this.speed > this.maxSpeed) this.speed = this.maxSpeed;
                     }
                     this.frontX -= this.speed * timeScale;
-                } else { 
+                } else {
                     if (this.sigState === 'halt' && this.frontX <= targetX) {
                         if (this.frontX < targetX) {
                             let dist = targetX - this.frontX;
@@ -2017,9 +2388,40 @@
         const animTop = new TrainAnimator(true, 'train-top', 'signal-top', 'route-top', 'countdown-top', 1);
         const animBottom = new TrainAnimator(false, 'train-bottom', 'signal-bottom', 'route-bottom', 'countdown-bottom', 5);
 
+        // Setzt beide Animatoren zurück, damit nach einem Zeitsprung die Position neu berechnet wird
+        window._resetAnimators = function () {
+            [animTop, animBottom].forEach(a => {
+                a.currentZugNr = null;
+                a.shuntPhase = 'IDLE';
+                a._hideShuntElements();
+                a.trainEl.style.display = 'none';
+            });
+        };
+
+        // Click on route-label → select that train in the table and show Laufweg in col2/col4
+        function selectTrainFromGleis(anim, area) {
+            const zugNr = anim.currentZugNr;
+            if (!zugNr) return;
+            const colId = area === 1 ? 'col1' : 'col5';
+            const tr = document.querySelector(`#${colId} tr[data-zugnr="${zugNr}"]`);
+            if (tr) {
+                // Highlight in table
+                const tbody = tr.closest('tbody');
+                tbody.querySelectorAll('tr').forEach(r => r.classList.remove('selected'));
+                tr.classList.add('selected');
+                // Scroll into view
+                const container = document.querySelector(`#${colId} .col-content`);
+                if (container) container.scrollTo({ top: Math.max(0, tr.offsetTop - 30), behavior: 'smooth' });
+                // Show Laufweg in col2/col4
+                if (typeof window.selectTrain === 'function') window.selectTrain(zugNr, area, tr);
+            }
+        }
+        document.getElementById('route-top').addEventListener('click', () => selectTrainFromGleis(animTop, 1));
+        document.getElementById('route-bottom').addEventListener('click', () => selectTrainFromGleis(animBottom, 5));
+
         // Live update of the Laufweg position dot when clock changes
         window._laufwegStates = {};
-        window._updateLaufwegDot = function() {
+        window._updateLaufwegDot = function () {
             if (!window._laufwegStates) return;
             const nowMin = clockH * 60 + clockM + clockS / 60;
             const tToMin = (t) => {
@@ -2067,14 +2469,14 @@
         function animationLoop(now) {
             let dt = now - lastAnimTime;
             lastAnimTime = now;
-            
+
             const currentTimeMin = clockH * 60 + clockM;
             const currentTimeSec = currentTimeMin * 60 + clockS;
 
             animTop.update(dt, currentTimeSec);
             animBottom.update(dt, currentTimeSec);
             window._updateLaufwegDot();
-            
+
             requestAnimationFrame(animationLoop);
         }
         requestAnimationFrame(animationLoop);
@@ -2089,8 +2491,9 @@
         function trainMatches(z) {
             if (activeGattungen.size > 0) {
                 const g = z.gattung;
-                // FDt button is grouped with FD
-                const matchFD = (g === 'FD' || g === 'FDt') && activeGattungen.has('FD');
+                // FDt button is grouped with FD. Züge 53, 54, 57, 58 match also with FD.
+                const isSpecialFD = ['53', '54', '57', '58'].includes(z.rawZugNr);
+                const matchFD = (g === 'FD' || g === 'FDt' || isSpecialFD) && activeGattungen.has('FD');
                 const matchOther = activeGattungen.has(g);
                 if (!matchFD && !matchOther) return false;
             }
@@ -2118,9 +2521,9 @@
         function buildFilterRows() {
             const gattungen = [
                 { key: 'FD', label: 'FD', cls: 'gat-fd' },
-                { key: 'D',  label: 'D',  cls: 'gat-d'  },
-                { key: 'E',  label: 'E',  cls: 'gat-e'  },
-                { key: 'P',  label: 'P',  cls: 'gat-p'  }
+                { key: 'D', label: 'D', cls: 'gat-d' },
+                { key: 'E', label: 'E', cls: 'gat-e' },
+                { key: 'P', label: 'P', cls: 'gat-p' }
             ];
 
             [1, 5].forEach(n => {
@@ -2147,21 +2550,21 @@
         }
         buildFilterRows();
 
-        window.toggleGattung = function(g) {
+        window.toggleGattung = function (g) {
             if (activeGattungen.has(g)) activeGattungen.delete(g);
             else activeGattungen.add(g);
             // sync all text inputs (keep same value)
             applyFilters();
         };
 
-        window.setStationFilter = function(val) {
+        window.setStationFilter = function (val) {
             stationFilterText = val.trim();
             // Sync all station filter inputs
             document.querySelectorAll('.station-filter-input').forEach(inp => { inp.value = val; });
             applyFilters();
         };
 
-        window.resetAllFilters = function() {
+        window.resetAllFilters = function () {
             activeGattungen.clear();
             stationFilterText = '';
             document.querySelectorAll('.station-filter-input').forEach(inp => { inp.value = ''; });
@@ -2170,6 +2573,86 @@
 
         // Remove old direction filter code (replaced by gattung/text filter above)
 
+        // --- Kontextmenü ---
+        // ctxZugNr/ctxArea als Modulvariablen; getElementById lazy (div ist bereits im DOM vor diesem Script)
+        let _ctxZugNr = null;
+
+        window.showCtxMenu = function (e, zugNr, area) {
+            e.preventDefault();
+            _ctxZugNr = zugNr;
+            const menu = document.getElementById('ctx-menu');
+            const menuW = menu.offsetWidth || 200;
+            const menuH = menu.offsetHeight || 40;
+            let x = e.clientX, y = e.clientY;
+            if (x + menuW > window.innerWidth)  x = window.innerWidth  - menuW - 4;
+            if (y + menuH > window.innerHeight) y = window.innerHeight - menuH - 4;
+            menu.style.left = x + 'px';
+            menu.style.top  = y + 'px';
+            menu.classList.add('visible');
+        };
+
+        // Menü schließen bei Klick irgendwo außerhalb oder Escape
+        document.addEventListener('click', (e) => {
+            const menu = document.getElementById('ctx-menu');
+            if (!menu.contains(e.target)) menu.classList.remove('visible');
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') document.getElementById('ctx-menu').classList.remove('visible');
+        });
+
+        // Aktion: "Zeit auf diesen Zug"
+        document.getElementById('ctx-item-jumptime').addEventListener('click', () => {
+            document.getElementById('ctx-menu').classList.remove('visible');
+            if (!_ctxZugNr) return;
+
+            const sel = document.getElementById('station-select');
+            const station = sel ? sel.value : 'Berlin-Lichterfelde Ost';
+            const rows = (window._fahrplanMap || {})[_ctxZugNr] || [];
+
+            // Aktuell gewählter Bahnhof, Fallback auf Anhalter Bf
+            let stRow = rows.find(r => r.bahnhof === station);
+            if (!stRow) stRow = rows.find(r => r.bahnhof === 'Berlin Anhalter Bf');
+            if (!stRow) return;
+
+            // Alle Zeitevents (Ankunft und/oder Abfahrt) sammeln
+            const parseTimeSec = (t) => {
+                if (!t) return null;
+                const p = t.trim().split('.');
+                if (p.length !== 2) return null;
+                return parseInt(p[0], 10) * 3600 + parseInt(p[1], 10) * 60;
+            };
+
+            const events = [];
+            const ank = parseTimeSec(stRow.ankunft);
+            const abf = parseTimeSec(stRow.abfahrt);
+            if (ank !== null) events.push(ank);
+            if (abf !== null && abf !== ank) events.push(abf);
+            if (events.length === 0) return;
+
+            // Nächstes Event relativ zur aktuellen Simulationszeit finden
+            const nowSec = clockH * 3600 + clockM * 60 + clockS;
+            let targetSec = null;
+            for (const ev of events.slice().sort((a, b) => a - b)) {
+                let diff = ev - nowSec;
+                if (diff < -12 * 3600) diff += 24 * 3600;
+                if (diff > 12 * 3600) diff -= 24 * 3600;
+                if (diff >= 0) { targetSec = ev; break; }
+            }
+            // Wenn alle Events in der Vergangenheit, nimm das früheste
+            if (targetSec === null) targetSec = events.slice().sort((a, b) => a - b)[0];
+
+            // Auf exakte Zeit springen und Animatoren zurücksetzen
+            clockH = Math.floor(targetSec / 3600) % 24;
+            clockM = Math.floor((targetSec % 3600) / 60);
+            clockS = targetSec % 60;
+            
+            window._forceZugNr = _ctxZugNr; // Erzwinge diesen Zug für die Animation
+            
+            if (typeof window._resetAnimators === 'function') window._resetAnimators();
+            updateClockDisplay();
+        });
+
     </script>
 </body>
+
 </html>

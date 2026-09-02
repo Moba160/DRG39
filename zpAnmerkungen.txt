@@ -1,4 +1,5 @@
-﻿1 Fr 2. u 3. Kl
+# NICHT MEHR BENÖTIGT – alle Einträge sind vollständig in doc/Verkehrstageschema.md übersetzt und als VkTage-Schema kodiert. Diese Datei bleibt als originale Quelldokumentation erhalten.
+1 Fr 2. u 3. Kl
 1 Fr 3. Kl
 1 Wagenzug
 1./2.X.-13./14.XII., 15./16.IV. bis 13./14.V.
