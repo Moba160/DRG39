@@ -30,26 +30,99 @@
             flex-direction: column;
         }
 
-        #stellwerk-area {
-            height: 50vh;
-            min-height: 100px;
-            background-color: #e8e8e8;
-            position: relative;
-            box-sizing: border-box;
+        /* ── Unified Tab-View ─────────────────────────────────────── */
+        #tab-view {
+            flex: 1 1 0;
+            min-height: 0;
             display: flex;
             flex-direction: column;
             overflow: hidden;
         }
 
-        #stellwerk-controls {
-            padding: 5px 20px;
-            background-color: #d0d0d0;
+        #tab-bar {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 14px;
-            flex-shrink: 0;
+            align-items: stretch;
+            background-color: #d0d0d0;
             border-bottom: 1px solid #bbb;
+            flex-shrink: 0;
+            user-select: none;
+        }
+
+        .main-tab {
+            padding: 6px 18px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: normal;
+            border: none;
+            background: transparent;
+            border-right: 1px solid #bbb;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            transition: background 0.12s;
+            color: #333;
+        }
+
+        .main-tab:hover {
+            background: #c4c4c4;
+        }
+
+        .main-tab.active {
+            background: #f4f4f4;
+            font-weight: bold;
+            border-bottom: 2px solid #555;
+        }
+
+        #tab-bar-spacer {
+            flex: 1;
+        }
+
+        #fullscreen-btn {
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border: none;
+            background: transparent;
+            border-left: 1px solid #bbb;
+            padding: 0;
+            flex-shrink: 0;
+            transition: background 0.12s;
+            position: relative;
+        }
+
+        #fullscreen-btn:hover {
+            background: #c4c4c4;
+        }
+
+        #fullscreen-btn svg {
+            pointer-events: none;
+        }
+
+        /* Tab Panels */
+        #tab-panels {
+            flex: 1 1 0;
+            min-height: 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tab-panel {
+            position: absolute;
+            inset: 0;
+            display: none;
+        }
+
+        .tab-panel.active {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Stellwerk Panel */
+        #panel-stellwerk {
+            background-color: #e8e8e8;
         }
 
         #stellwerk-content {
@@ -57,35 +130,11 @@
             transform-origin: top left;
             position: relative;
             overflow: auto;
-            /* Allow scrolling if zoomed */
         }
 
-        #resizer-top {
-            height: 10px;
-            background-color: var(--resizer-color);
-            cursor: ns-resize;
-            border-top: 1px solid #aaa;
-            border-bottom: 1px solid #aaa;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 10;
-            flex-shrink: 0;
-        }
-
-        #resizer-top::before {
-            content: "|||";
-            font-size: 8px;
-            color: #666;
-            transform: rotate(90deg);
-            letter-spacing: 1px;
-        }
-
-        #main-area {
-            flex: 1 1 0;
+        /* Bereiche Panel */
+        #panel-bereiche {
             background-color: #ffffff;
-            min-height: 50px;
-            display: flex;
         }
 
         #four-cols-container {
@@ -626,80 +675,109 @@
 
 <body>
 
-    <div id="stellwerk-area">
-        <div id="stellwerk-controls">
-            <div style="flex: 1; display: flex; align-items: center;"><strong>Stellwerk</strong></div>
-            <div style="flex: 1; display: flex; justify-content: center;">
-                <button id="fullscreen-btn"
-                    style="padding: 3px 12px; cursor: pointer; border: 1px solid #aaa; border-radius: 4px; background: #e8e8e8;">Vollbild</button>
-            </div>
-            <div style="flex: 1; display: flex; justify-content: flex-end; align-items: center;">
-                <label>Zoom: <input type="range" id="stellwerk-zoom" min="0.1" max="3" step="0.1" value="1"></label>
-            </div>
+    <!-- Unified Tab-View: fills all space above preview-area -->
+    <div id="tab-view">
+        <!-- Tab Bar -->
+        <div id="tab-bar">
+            <button class="main-tab" id="tab-btn-stellwerk"
+                onclick="switchMainTab('stellwerk')"
+                title="Stellwerk anzeigen">Stellwerk</button>
+            <button class="main-tab active" id="tab-btn-bereiche"
+                onclick="switchMainTab('bereiche')"
+                title="Fahrpläne und Zugbildungspläne anzeigen">Fpl und Zp</button>
+            <div id="tab-bar-spacer"></div>
+            <button id="fullscreen-btn" title="Vollbild">
+                <!-- Diagonal double-arrow icon: expand -->
+                <svg id="fs-icon-expand" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                    viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <polyline points="9 21 3 21 3 15"></polyline>
+                    <line x1="21" y1="3" x2="14" y2="10"></line>
+                    <line x1="3" y1="21" x2="10" y2="14"></line>
+                </svg>
+                <!-- Diagonal double-arrow icon: compress (shown in fullscreen) -->
+                <svg id="fs-icon-compress" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                    viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+                    <polyline points="4 14 10 14 10 20"></polyline>
+                    <polyline points="20 10 14 10 14 4"></polyline>
+                    <line x1="10" y1="14" x2="3" y2="21"></line>
+                    <line x1="21" y1="3" x2="14" y2="10"></line>
+                </svg>
+            </button>
         </div>
-        <div id="stellwerk-content">
-            <!-- Stellwerk Inhalt -->
-        </div>
-    </div>
-    <div id="resizer-top"></div>
-    <div id="main-area">
-        <div id="four-cols-container">
-            <!-- Bereich 1: v/n Halle (Ankunft) -->
-            <div class="col-pane" id="col1">
-                <div class="col-header">
-                    <div class="col-header-row1 space-between">
-                        <span>&larr; nach Halle</span>
-                    </div>
-                    <div class="col-header-row2" id="filter-row-1"></div>
-                </div>
-                <div class="col-content"></div>
-            </div>
-            <div class="col-resizer" id="res1"></div>
-            <!-- Bereich 2: Laufweg/Zp links -->
-            <div class="col-pane" id="col2">
-                <div class="col-header">
-                    <div class="col-header-row1">
-                        <span class="col-tab active" data-tab="laufweg" onclick="switchTab(2, 'laufweg')">Laufweg</span>
-                        <span class="col-tab" data-tab="zp" onclick="switchTab(2, 'zp')">Zp</span>
-                        <span id="info-col2"
-                            style="font-weight:normal;font-size:12px;color:#444;margin-left:6px;white-space:nowrap;overflow:hidden;"></span>
-                    </div>
-                </div>
-                <div class="col-content"></div>
-            </div>
-            <div class="col-resizer" id="res2"></div>
-            <!-- Bereich 3: Karte -->
-            <div class="col-pane" id="col3">
-                <div class="col-header">
-                    <div class="col-header-row1 center"><strong>Karte</strong></div>
-                </div>
-                <div class="col-content" style="padding:0;">
-                    <div id="col3-map"></div>
+
+        <!-- Tab Panels -->
+        <div id="tab-panels">
+            <!-- Panel: Stellwerk -->
+            <div class="tab-panel" id="panel-stellwerk">
+                <div id="stellwerk-content">
+                    <!-- Stellwerk Inhalt -->
                 </div>
             </div>
-            <div class="col-resizer" id="res3"></div>
-            <!-- Bereich 4: Laufweg/Zp rechts -->
-            <div class="col-pane" id="col4">
-                <div class="col-header">
-                    <div class="col-header-row1 flex-end">
-                        <span id="info-col4"
-                            style="font-weight:normal;font-size:12px;color:#444;margin-right:6px;white-space:nowrap;overflow:hidden;"></span>
-                        <span class="col-tab" data-tab="zp" onclick="switchTab(4, 'zp')">Zp</span>
-                        <span class="col-tab active" data-tab="laufweg" onclick="switchTab(4, 'laufweg')">Laufweg</span>
+
+            <!-- Panel: Bereiche 1–5 -->
+            <div class="tab-panel active" id="panel-bereiche">
+                <div id="four-cols-container">
+                    <!-- Bereich 1: v/n Halle (Ankunft) -->
+                    <div class="col-pane" id="col1">
+                        <div class="col-header">
+                            <div class="col-header-row1 space-between">
+                                <span>&larr; nach Halle</span>
+                            </div>
+                            <div class="col-header-row2" id="filter-row-1"></div>
+                        </div>
+                        <div class="col-content"></div>
+                    </div>
+                    <div class="col-resizer" id="res1"></div>
+                    <!-- Bereich 2: Laufweg/Zp links -->
+                    <div class="col-pane" id="col2">
+                        <div class="col-header">
+                            <div class="col-header-row1">
+                                <span class="col-tab active" data-tab="laufweg" onclick="switchTab(2, 'laufweg')">Laufweg</span>
+                                <span class="col-tab" data-tab="zp" onclick="switchTab(2, 'zp')">Zp</span>
+                                <span id="info-col2"
+                                    style="font-weight:normal;font-size:12px;color:#444;margin-left:6px;white-space:nowrap;overflow:hidden;"></span>
+                            </div>
+                        </div>
+                        <div class="col-content"></div>
+                    </div>
+                    <div class="col-resizer" id="res2"></div>
+                    <!-- Bereich 3: Karte -->
+                    <div class="col-pane" id="col3">
+                        <div class="col-header">
+                            <div class="col-header-row1 center"><strong>Karte</strong></div>
+                        </div>
+                        <div class="col-content" style="padding:0;">
+                            <div id="col3-map"></div>
+                        </div>
+                    </div>
+                    <div class="col-resizer" id="res3"></div>
+                    <!-- Bereich 4: Laufweg/Zp rechts -->
+                    <div class="col-pane" id="col4">
+                        <div class="col-header">
+                            <div class="col-header-row1 flex-end">
+                                <span id="info-col4"
+                                    style="font-weight:normal;font-size:12px;color:#444;margin-right:6px;white-space:nowrap;overflow:hidden;"></span>
+                                <span class="col-tab" data-tab="zp" onclick="switchTab(4, 'zp')">Zp</span>
+                                <span class="col-tab active" data-tab="laufweg" onclick="switchTab(4, 'laufweg')">Laufweg</span>
+                            </div>
+                        </div>
+                        <div class="col-content"></div>
+                    </div>
+                    <div class="col-resizer" id="res4"></div>
+                    <!-- Bereich 5: v/n Ahb (Abfahrt) -->
+                    <div class="col-pane" id="col5">
+                        <div class="col-header">
+                            <div class="col-header-row1 flex-end">
+                                <span>nach Ahb &rarr;</span>
+                            </div>
+                            <div class="col-header-row2 flex-end" id="filter-row-5"></div>
+                        </div>
+                        <div class="col-content"></div>
                     </div>
                 </div>
-                <div class="col-content"></div>
-            </div>
-            <div class="col-resizer" id="res4"></div>
-            <!-- Bereich 5: v/n Ahb (Abfahrt) -->
-            <div class="col-pane" id="col5">
-                <div class="col-header">
-                    <div class="col-header-row1 flex-end">
-                        <span>nach Ahb &rarr;</span>
-                    </div>
-                    <div class="col-header-row2 flex-end" id="filter-row-5"></div>
-                </div>
-                <div class="col-content"></div>
             </div>
         </div>
     </div>
@@ -916,44 +994,22 @@
         }
         requestAnimationFrame(tickSimulation);
 
-        // --- Unified Mouse Handlers for all resizers ---
-        let isResizingTop = false;
-        let isResizingBottom = false;
-        let isResizingCol = false;
-
-        const resizerTop = document.getElementById('resizer-top');
-        const stellwerkArea = document.getElementById('stellwerk-area');
-
-        resizerTop.addEventListener('mousedown', (e) => {
-            isResizingTop = true;
-            document.body.style.cursor = 'ns-resize';
-            e.preventDefault();
-        });
-
-        window.addEventListener('mousemove', (e) => {
-            if (isResizingTop) {
-                const newHeight = e.clientY;
-                if (newHeight > 50 && newHeight < window.innerHeight - 100) {
-                    stellwerkArea.style.height = newHeight + 'px';
-                    if (window._orm_map) window._orm_map.invalidateSize();
+        // --- Main Tab switching ---
+        window.switchMainTab = function(name) {
+            document.querySelectorAll('.main-tab').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.tab-panel').forEach(panel => panel.classList.remove('active'));
+            document.getElementById('tab-btn-' + name).classList.add('active');
+            document.getElementById('panel-' + name).classList.add('active');
+            if (name === 'bereiche') {
+                // Init map on first visit (was hidden, Leaflet couldn't measure size)
+                if (!window._orm_map) {
+                    setTimeout(initMap, 50);
+                } else {
+                    setTimeout(() => window._orm_map.invalidateSize(), 50);
                 }
             }
-        });
+        };
 
-        window.addEventListener('mouseup', () => {
-            if (isResizingTop) {
-                isResizingTop = false;
-                document.body.style.cursor = 'default';
-            }
-        });
-
-        // --- Stellwerk Zoom Logic ---
-        const stellwerkZoom = document.getElementById('stellwerk-zoom');
-        const stellwerkContent = document.getElementById('stellwerk-content');
-        stellwerkZoom.addEventListener('input', (e) => {
-            const scale = e.target.value;
-            stellwerkContent.style.transform = `scale(${scale})`;
-        });
 
         // --- 5 Columns Logic ---
         // Layout: col1 | res1 | col2 | res2 | col3(Karte) | res3 | col4 | res4 | col5
@@ -1072,7 +1128,7 @@
             });
         }
 
-        // Init map after layout settles
+        // Map panel is active on load – init after layout settles.
         setTimeout(initMap, 300);
 
 
@@ -1144,12 +1200,9 @@
 
         document.querySelectorAll('input[name="view-mode"]').forEach(radio => {
             radio.addEventListener('change', () => {
-                if (typeof window.updateSignalTrainInfo === 'function') {
-                    // force redraw of trains
-                    document.getElementById('train-top').dataset.zugNr = '';
-                    document.getElementById('train-bottom').dataset.zugNr = '';
-                    window.updateSignalTrainInfo();
-                }
+                if (window.animTop) window.animTop.rebuildVisuals();
+                if (window.animBottom) window.animBottom.rebuildVisuals();
+                
                 // Aktuelles Kontext-Tab (Laufweg/Zp) aktualisieren
                 document.querySelectorAll('.fahrplan-table tr.selected').forEach(tr => tr.click());
             });
@@ -1215,16 +1268,22 @@
 
                 const img = document.createElement('img');
                 if (viewModeSchematic === 'real') {
-                    // Realzug: GattungZp-GattungReal.png aus img/pwagen
-                    const realFileName = wagen.gattungReal ? `${wagen.gattung}-${wagen.gattungReal}.png` : `${wagen.gattung}.png`;
+                    // Realzug: Erstes Wort der GattungZp plus GattungReal
+                    let firstName = wagen.gattung.split(' ')[0] || 'Unbekannt';
+                    firstName = firstName.replace('-K', '');
+                    const realFileName = wagen.gattungReal ? `${firstName}-${wagen.gattungReal}.png` : `${firstName}.png`;
                     img.src = `./data/img/pwagen/${realFileName}`;
                     img.onerror = function () {
                         this.onerror = null;
                         this.src = './data/img/pwagen/Unbekannt.png';
+                        this.title = `Erwartet: ${realFileName}`;
                     };
                 } else {
                     // Step 1: strip everything from first space (e.g. "WLAB 301" -> "WLAB")
                     let fullName = wagen.gattung.split(' ')[0] || 'Unbekannt';
+                    if (fullName.startsWith('WR') || fullName.startsWith('WL')) {
+                        fullName = fullName.replace('4', '');
+                    }
                     // Step 2: stripped name: remove suffix from "ue", "ü", "?", "-" or lowercase letter after digit
                     let baseName = fullName.split(/ue|ü|\?|-|(?<=[0-9])[a-z]/i)[0] || 'Unbekannt';
                     // Try full name first (e.g. WR4ü.png), then stripped (e.g. WR4.png), then Unbekannt
@@ -1235,13 +1294,20 @@
                         this.onerror = function () {
                             this.onerror = null;
                             this.src = './data/img/schematisch/Unbekannt.png';
+                            this.title = `Erwartet: ${fullName}.png oder ${baseName}.png`;
                         };
                     };
                 }
 
                 const label = document.createElement('div');
                 label.className = 'info-label';
-                let labelText = wagen.gattungReal ? `${wagen.gattung}-${wagen.gattungReal}` : wagen.gattung;
+                let labelText = '';
+                if (viewModeSchematic === 'real') {
+                    let firstName = wagen.gattung.split(' ')[0] || 'Unbekannt';
+                    labelText = wagen.gattungReal ? `${firstName}-${wagen.gattungReal}` : firstName;
+                } else {
+                    labelText = wagen.gattung;
+                }
                 if (wagen.vonBf || wagen.nachBf) {
                     const von = wagen.vonBf || '?';
                     const nach = wagen.nachBf || '?';
@@ -1260,6 +1326,9 @@ ${von} – ${nach}`;
 
         // --- Fullscreen Logic ---
         const fullscreenBtn = document.getElementById('fullscreen-btn');
+        const fsIconExpand = document.getElementById('fs-icon-expand');
+        const fsIconCompress = document.getElementById('fs-icon-compress');
+
         fullscreenBtn.addEventListener('click', () => {
             if (!document.fullscreenElement) {
                 document.documentElement.requestFullscreen().catch(err => {
@@ -1274,9 +1343,13 @@ ${von} – ${nach}`;
 
         document.addEventListener('fullscreenchange', () => {
             if (document.fullscreenElement) {
-                fullscreenBtn.textContent = 'Vollbild beenden';
+                fsIconExpand.style.display = 'none';
+                fsIconCompress.style.display = 'block';
+                fullscreenBtn.title = 'Vollbild beenden';
             } else {
-                fullscreenBtn.textContent = 'Vollbild';
+                fsIconExpand.style.display = 'block';
+                fsIconCompress.style.display = 'none';
+                fullscreenBtn.title = 'Vollbild';
             }
         });
 
@@ -1303,10 +1376,11 @@ ${von} – ${nach}`;
         // --- Fahrplan Logic ---
         async function loadFahrplan() {
             try {
-                const [zuegeRes, abfahrtenRes, zpaRes] = await Promise.all([
+                const [zuegeRes, abfahrtenRes, zpaRes, photosRes] = await Promise.all([
                     fetch('data/fahrplan/zuege.csv'),
                     fetch('data/fahrplan/abfahrten.csv'),
-                    fetch('data/fahrplan/zpa.csv')
+                    fetch('data/fahrplan/zpa.csv'),
+                    fetch('data/img/vorbild/train_photos.json').catch(() => null)
                 ]);
 
                 if (!zuegeRes.ok || !abfahrtenRes.ok || !zpaRes.ok) {
@@ -1339,6 +1413,16 @@ ${von} – ${nach}`;
                     }
                 }
                 window._lokMap = lokMap;
+                
+                // Parse train_photos.json
+                window._trainPhotos = {};
+                if (photosRes && photosRes.ok) {
+                    try {
+                        window._trainPhotos = await photosRes.json();
+                    } catch(e) {
+                        console.warn("Failed to parse train_photos.json", e);
+                    }
+                }
 
                 // Parse abfahrten.csv
                 const abfahrtenLines = abfahrtenText.split('\n');
@@ -1478,8 +1562,13 @@ ${von} – ${nach}`;
 
                         const finalTimeHtml = isDurchfahrt ? `<i>(${displayTime})</i>` : displayTime;
 
+                        let photoBtn = '';
+                        if (window._photoFilterActive && window._trainPhotos && window._trainPhotos[z.rawZugNr]) {
+                            photoBtn = `<button class="gat-btn" style="display: block; margin-bottom: 3px; padding: 0 4px; font-size: 10px;" title="Vorbildfotos anzeigen" onclick="event.stopPropagation(); window.showPhotoPopup('${z.rawZugNr}')">📷</button>`;
+                        }
+
                         html += `<tr class="${colorClass}" data-zugnr="${z.rawZugNr}" onclick="window.selectTrain('${z.rawZugNr}', ${area}, this)" oncontextmenu="window.showCtxMenu(event, '${z.rawZugNr}', ${area})">
-                            <td>${z.zug}</td>
+                            <td>${photoBtn}${z.zug}</td>
                             <td>${finalTimeHtml}</td>
                             <td style="text-align:${area === 1 ? 'left' : 'right'};">${z.vonNach}</td>
                         </tr>`;
@@ -1578,18 +1667,23 @@ ${von} – ${nach}`;
                             let src = '';
                             let fallback = '';
                             if (viewMode === 'real') {
-                                const realFileName = r.gattungReal ? `${r.gattung}-${r.gattungReal}.png` : `${r.gattung}.png`;
+                                let firstName = r.gattung.split(' ')[0] || 'Unbekannt';
+                                firstName = firstName.replace('-K', '');
+                                const realFileName = r.gattungReal ? `${firstName}-${r.gattungReal}.png` : `${firstName}.png`;
                                 src = `./data/img/pwagen/${realFileName}`;
                                 fallback = './data/img/pwagen/Unbekannt.png';
-                                displayGat = r.gattungReal ? `${r.gattung}-${r.gattungReal}` : r.gattung;
+                                displayGat = r.gattungReal ? `${firstName}-${r.gattungReal}` : firstName;
+                                imgHtml = `<br><img src="${src}" onerror="this.onerror=null; this.src='${fallback}'; this.title='Erwartet: ${realFileName}';" style="height:20px; vertical-align:middle; margin-top:3px;">`;
                             } else {
                                 let fullName = r.gattung.split(' ')[0] || 'Unbekannt';
+                                if (fullName.startsWith('WR') || fullName.startsWith('WL')) {
+                                    fullName = fullName.replace('4', '');
+                                }
                                 let baseName = fullName.split(/ue|ü|\?|-|(?<=[0-9])[a-z]/i)[0] || 'Unbekannt';
                                 src = `./data/img/schematisch/${fullName}.png`;
                                 fallback = `./data/img/schematisch/${baseName}.png`;
+                                imgHtml = `<br><img src="${src}" onerror="this.onerror=null; this.src='${fallback}'; this.onerror=function(){this.onerror=null; this.src='./data/img/schematisch/Unbekannt.png'; this.title='Erwartet: ${fullName}.png oder ${baseName}.png';};" style="height:20px; vertical-align:middle; margin-top:3px;">`;
                             }
-                            imgHtml = `<br><img src="${src}" onerror="this.onerror=null; this.src='${fallback}'; this.onerror=function(){this.onerror=null; this.src='./data/img/schematisch/Unbekannt.png';};" style="height:20px; vertical-align:middle; margin-top:3px;">`;
-
                         }
                         zpHtml += `<tr><td>${i + 1}</td><td>${displayGat}${imgHtml}</td><td>${r.vonZug || ''}</td><td>${r.vonBf || ''}</td><td>${r.nachZug || ''}</td><td>${r.nachBf || ''}</td><td>${r.umlPl || ''}</td><td>${r.anmerkung || ''}</td></tr>`;
                     });
@@ -1746,6 +1840,32 @@ ${von} – ${nach}`;
                 return 'sig-gat-p';
             }
 
+            rebuildVisuals() {
+                if (!this.currentZugNr) return;
+                
+                const zuegeList = this.area === 5 ? window._nachAhbZuege : window._nachHalleZuege;
+                if (!zuegeList) return;
+                const z = zuegeList.find(t => t.rawZugNr === this.currentZugNr);
+                if (!z) return;
+
+                if (this.shuntPhase === 'IDLE') {
+                    const viewMode = document.querySelector('input[name="view-mode"]:checked')?.value;
+                    if (viewMode !== 'model') renderSchematicTrain(this.trainEl, z, this.isTopTrack);
+                    else this.trainEl.innerHTML = '';
+                } else {
+                    const isKopfbahnhofArrive = this.shuntPhase.startsWith('ARRIVE');
+                    if (isKopfbahnhofArrive) {
+                        this._buildCarsOnly(this.trainEl, z.rawZugNr, true);
+                        this._buildZugLok(this.zugLokEl, z.rawZugNr, true);
+                        this._buildRangierlok(this.rangierlokEl, false);
+                    } else {
+                        this._buildCarsOnly(this.trainEl, z.rawZugNr, false);
+                        this._buildZugLok(this.zugLokEl, z.rawZugNr, false);
+                        this._buildRangierlok(this.rangierlokEl, true);
+                    }
+                }
+            }
+
             // ── Shunting helpers ─────────────────────────────────────────────────
             _hideShuntElements() {
                 if (this.rangierlokEl) this.rangierlokEl.style.display = 'none';
@@ -1758,7 +1878,13 @@ ${von} – ${nach}`;
                 const img = document.createElement('img');
                 img.src = src;
                 if (fallbackSrc) {
-                    img.onerror = function() { this.onerror = null; this.src = fallbackSrc; };
+                    img.onerror = function() { 
+                        this.onerror = null; 
+                        this.src = fallbackSrc; 
+                        if (fallbackSrc.includes('Unbekannt.png')) {
+                            this.title = 'Erwartet: ' + src.split('/').pop();
+                        }
+                    };
                 }
                 if (mirror) img.style.transform = 'scaleX(-1)';
                 div.appendChild(img);
@@ -1822,15 +1948,20 @@ ${von} – ${nach}`;
                 zpList.forEach(w => {
                     const img = document.createElement('img');
                     if (viewModeAnim === 'real') {
-                        // Realzug: GattungZp-GattungReal.png aus img/pwagen
-                        const realFileName = w.gattungReal ? `${w.gattung}-${w.gattungReal}.png` : `${w.gattung}.png`;
+                        // Realzug: Erstes Wort der Gattung
+                        let firstName = w.gattung.split(' ')[0] || 'Unbekannt';
+                        firstName = firstName.replace('-K', '');
+                        const realFileName = w.gattungReal ? `${firstName}-${w.gattungReal}.png` : `${firstName}.png`;
                         img.src = `./data/img/pwagen/${realFileName}`;
-                        img.onerror = function () { this.onerror = null; this.src = './data/img/pwagen/Unbekannt.png'; };
+                        img.onerror = function () { this.onerror = null; this.src = './data/img/pwagen/Unbekannt.png'; this.title = `Erwartet: ${realFileName}`; };
                     } else {
                         let fullName = w.gattung.split(' ')[0] || 'Unbekannt';
+                        if (fullName.startsWith('WR') || fullName.startsWith('WL')) {
+                            fullName = fullName.replace('4', '');
+                        }
                         let base = fullName.split(/ue|ü|\?|-|(?<=[0-9])[a-z]/i)[0] || 'Unbekannt';
                         img.src = `./data/img/schematisch/${fullName}.png`;
-                        img.onerror = function () { this.onerror = null; this.src = `./data/img/schematisch/${base}.png`; this.onerror = function () { this.onerror = null; this.src = './data/img/schematisch/Unbekannt.png'; }; };
+                        img.onerror = function () { this.onerror = null; this.src = `./data/img/schematisch/${base}.png`; this.onerror = function () { this.onerror = null; this.src = './data/img/schematisch/Unbekannt.png'; this.title = `Erwartet: ${fullName}.png oder ${base}.png`; }; };
                     }
                     const div = document.createElement('div'); div.className = 'vehicle'; div.appendChild(img);
                     el.appendChild(div);
@@ -2387,6 +2518,8 @@ ${von} – ${nach}`;
 
         const animTop = new TrainAnimator(true, 'train-top', 'signal-top', 'route-top', 'countdown-top', 1);
         const animBottom = new TrainAnimator(false, 'train-bottom', 'signal-bottom', 'route-bottom', 'countdown-bottom', 5);
+        window.animTop = animTop;
+        window.animBottom = animBottom;
 
         // Setzt beide Animatoren zurück, damit nach einem Zeitsprung die Position neu berechnet wird
         window._resetAnimators = function () {
@@ -2487,6 +2620,7 @@ ${von} – ${nach}`;
         // --- Global Filter State ---
         const activeGattungen = new Set(); // empty = all pass
         let stationFilterText = '';
+        window._photoFilterActive = false;
 
         function trainMatches(z) {
             if (activeGattungen.size > 0) {
@@ -2502,6 +2636,9 @@ ${von} – ${nach}`;
                 const t = stationFilterText.toLowerCase();
                 if (!rows.some(r => r.bahnhof.toLowerCase().includes(t))) return false;
             }
+            if (window._photoFilterActive) {
+                if (!window._trainPhotos || !window._trainPhotos[z.rawZugNr]) return false;
+            }
             return true;
         }
 
@@ -2515,7 +2652,15 @@ ${von} – ${nach}`;
                 const g = btn.dataset.gattung;
                 btn.classList.toggle('active', activeGattungen.has(g));
             });
+            document.querySelectorAll('.photo-btn').forEach(btn => {
+                btn.classList.toggle('active', window._photoFilterActive);
+            });
         }
+
+        window.togglePhotoFilter = function() {
+            window._photoFilterActive = !window._photoFilterActive;
+            applyFilters();
+        };
 
         // Build filter rows for all 5 areas
         function buildFilterRows() {
@@ -2534,6 +2679,7 @@ ${von} – ${nach}`;
                 let html = '';
                 if (!isRight) {
                     html += `<button class="filter-reset" onclick="resetAllFilters()" title="Filter zurücksetzen">&#10006;</button>`;
+                    html += `<button class="gat-btn photo-btn" onclick="togglePhotoFilter()" title="Nur Züge mit Fotos anzeigen">📷</button>`;
                     gattungen.forEach(g => {
                         html += `<button class="gat-btn ${g.cls}" data-gattung="${g.key}" onclick="toggleGattung('${g.key}')">${g.label}</button>`;
                     });
@@ -2543,6 +2689,7 @@ ${von} – ${nach}`;
                     gattungen.forEach(g => {
                         html += `<button class="gat-btn ${g.cls}" data-gattung="${g.key}" onclick="toggleGattung('${g.key}')">${g.label}</button>`;
                     });
+                    html += `<button class="gat-btn photo-btn" onclick="togglePhotoFilter()" title="Nur Züge mit Fotos anzeigen">📷</button>`;
                     html += `<button class="filter-reset" onclick="resetAllFilters()" title="Filter zurücksetzen">&#10006;</button>`;
                 }
                 row.innerHTML = html;
@@ -2567,6 +2714,7 @@ ${von} – ${nach}`;
         window.resetAllFilters = function () {
             activeGattungen.clear();
             stationFilterText = '';
+            window._photoFilterActive = false;
             document.querySelectorAll('.station-filter-input').forEach(inp => { inp.value = ''; });
             applyFilters();
         };
@@ -2597,7 +2745,37 @@ ${von} – ${nach}`;
             if (!menu.contains(e.target)) menu.classList.remove('visible');
         });
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') document.getElementById('ctx-menu').classList.remove('visible');
+            if (e.key === 'Escape') {
+                const ctxMenu = document.getElementById('ctx-menu');
+                if (ctxMenu.classList.contains('visible')) {
+                    ctxMenu.classList.remove('visible');
+                    return;
+                }
+                const detail = document.getElementById('photo-popup-detail');
+                if (detail && detail.classList.contains('fullscreen-mode')) {
+                    detail.classList.remove('fullscreen-mode');
+                    return;
+                }
+                document.getElementById('photo-popup').classList.remove('visible');
+            } else if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
+                const popup = document.getElementById('photo-popup');
+                if (popup.classList.contains('visible')) {
+                    const grid = document.getElementById('photo-popup-grid');
+                    const imgs = Array.from(grid.querySelectorAll('img'));
+                    if (imgs.length > 1) {
+                        let idx = imgs.findIndex(img => img.classList.contains('selected'));
+                        if (idx === -1) idx = 0;
+                        if (e.key === 'ArrowLeft') {
+                            idx = (idx - 1 + imgs.length) % imgs.length;
+                        } else {
+                            idx = (idx + 1) % imgs.length;
+                        }
+                        imgs[idx].click();
+                        // Scroll thumbnail into view
+                        imgs[idx].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'nearest' });
+                    }
+                }
+            }
         });
 
         // Aktion: "Zeit auf diesen Zug"
@@ -2652,7 +2830,205 @@ ${von} – ${nach}`;
             updateClockDisplay();
         });
 
+        // --- Foto Popup ---
+        window.showPhotoPopup = function(zugNr) {
+            const photos = window._trainPhotos ? window._trainPhotos[zugNr] : null;
+            if (!photos || photos.length === 0) return;
+
+            const popup = document.getElementById('photo-popup');
+            const title = document.getElementById('photo-popup-title');
+            const grid = document.getElementById('photo-popup-grid');
+            const detailView = document.getElementById('photo-popup-detail');
+            const detailImg = document.getElementById('photo-popup-img');
+            const detailCaption = document.getElementById('photo-popup-caption');
+
+            const gattung = window._zuegeMap[zugNr] || '';
+            const zugName = `${gattung} ${zugNr}`.trim();
+            const searchStrings = `${gattung} ${zugNr}/${gattung}${zugNr}`;
+            const tooltipStr = `Es wird nach ${searchStrings} gesucht. Da Zugnummern mehrfach vergeben waren, können auch Bilder von anderen Zügen angezeigt werden, die nicht auf der Anhalter/Dresdner Bahn verkehrten.`;
+            title.innerHTML = `Vorbildfotos für ${zugName} <span style="font-size:16px; font-weight:normal; color:#aaa;">(Verlinkt auf: eisenbahnstiftung.de)</span> <span title="${tooltipStr}" style="cursor:help; font-size:14px; display:inline-block; border-radius:50%; border:1px solid #aaa; width:18px; height:18px; text-align:center; line-height:16px; color:#aaa; margin-left:5px;">i</span>`;
+            grid.innerHTML = '';
+            detailView.style.display = 'none';
+
+            // Highlighting match helper
+            const zugRegex = new RegExp(`(?<![A-Za-z0-9])(${gattung}\\s*${zugNr})(?![0-9])`, 'gi');
+            const dateRegex = /\b((?:(?:\d{2}\.)?\d{2}\.)?19\d{2})\b/g;
+            const photoRegex = /Foto:\s*([^<]+)/gi;
+            const highlightCaption = (caption) => {
+                let res = caption.replace(zugRegex, '<mark style="background-color: yellow; color: black; font-weight: bold; padding: 0 2px; border-radius: 2px;">$1</mark>');
+                res = res.replace(dateRegex, '<mark style="background-color: #ddd; color: #111; font-weight: bold; padding: 0 4px; border-radius: 3px;">$1</mark>');
+                res = res.replace(photoRegex, (match, namesStr) => {
+                    const makeLink = (part) => {
+                        const trimmed = part.trim();
+                        if (!trimmed) return part;
+                        const tlower = trimmed.toLowerCase();
+                        if (tlower === 'privat' || tlower === 'privatfoto') return part;
+                        
+                        const encoded = encodeURIComponent(trimmed);
+                        const link = `<a href="https://de.wikipedia.org/w/index.php?search=${encoded}" target="_blank" style="color:#88f; text-decoration:none;" title="Auf Wikipedia nach '${trimmed}' suchen">${trimmed}</a>`;
+                        return part.replace(trimmed, link);
+                    };
+                    
+                    const linked = namesStr.replace(/([^(),/]+)/g, makeLink);
+                    return `Foto: ${linked}`;
+                });
+                return res;
+            };
+
+            if (photos.length === 1) {
+                // Nur 1 Foto -> Thumbnails überspringen
+                detailImg.src = photos[0].detail_url;
+                detailCaption.innerHTML = highlightCaption(photos[0].caption);
+                detailView.style.display = 'block';
+                detailView.style.borderTop = 'none';
+            } else {
+                detailView.style.borderTop = '1px solid #444';
+                photos.forEach(p => {
+                    const thumb = document.createElement('img');
+                    thumb.src = p.thumbnail_url;
+                    thumb.title = p.title;
+                    thumb.onclick = () => {
+                        detailImg.src = p.detail_url;
+                        detailCaption.innerHTML = highlightCaption(p.caption); // caption may contain HTML like <i>
+                        detailView.style.display = 'block';
+                        grid.querySelectorAll('img').forEach(img => img.classList.remove('selected'));
+                        thumb.classList.add('selected');
+                    };
+                    grid.appendChild(thumb);
+                });
+                // Automatically select the first photo
+                if (grid.firstChild) grid.firstChild.click();
+            }
+
+            popup.classList.add('visible');
+        };
+
+        window._togglePhotoFullscreen = function() {
+            document.getElementById('photo-popup-detail').classList.toggle('fullscreen-mode');
+        };
+
+        window.closePhotoPopup = function() {
+            document.getElementById('photo-popup').classList.remove('visible');
+            document.getElementById('photo-popup-detail').classList.remove('fullscreen-mode');
+        };
+
     </script>
+
+    <!-- Foto Popup HTML -->
+    <div id="photo-popup">
+        <div id="photo-popup-content">
+            <span id="photo-popup-close" onclick="window.closePhotoPopup()">&times;</span>
+            <h2 id="photo-popup-title">Vorbildfotos</h2>
+            <div id="photo-popup-grid"></div>
+            <div id="photo-popup-detail" style="display:none;">
+                <img id="photo-popup-img" src="" alt="Detail" onclick="window._togglePhotoFullscreen()" />
+                <p id="photo-popup-caption"></p>
+            </div>
+        </div>
+    </div>
+    
+    <style>
+        #photo-popup {
+            display: none;
+            position: fixed;
+            z-index: 10000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+        }
+        #photo-popup.visible {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #photo-popup-content {
+            background-color: #222;
+            color: #ddd;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 90vw;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+        #photo-popup-close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        #photo-popup-close:hover {
+            color: #fff;
+        }
+        #photo-popup-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+            margin-top: 10px;
+        }
+        #photo-popup-grid img {
+            height: 80px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            border-radius: 4px;
+        }
+        #photo-popup-grid img:hover {
+            border-color: #666;
+        }
+        #photo-popup-grid img.selected {
+            border-color: #4CAF50;
+        }
+        #photo-popup-detail {
+            border-top: 1px solid #444;
+            padding-top: 15px;
+            text-align: center;
+        }
+        #photo-popup-img {
+            max-width: 100%;
+            max-height: 50vh;
+            border-radius: 4px;
+            cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7' stroke='black' stroke-width='4'/%3E%3Cpath d='M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7' stroke='white' stroke-width='2'/%3E%3C/svg%3E") 16 16, zoom-in;
+        }
+        #photo-popup-caption {
+            margin-top: 10px;
+            font-size: 14px;
+            line-height: 1.4;
+            text-align: left;
+        }
+        /* Fullscreen Mode for Details */
+        #photo-popup-detail.fullscreen-mode {
+            position: fixed;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            background: rgba(0,0,0,0.95);
+            z-index: 100000;
+            display: flex !important;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-top: none;
+            padding: 0;
+        }
+        #photo-popup-detail.fullscreen-mode #photo-popup-img {
+            max-width: 100vw;
+            max-height: calc(100vh - 80px);
+            object-fit: contain;
+            cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24' fill='none' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 14h6v6M20 10h-6V4M10 14l-7 7M14 10l7-7' stroke='black' stroke-width='4'/%3E%3Cpath d='M4 14h6v6M20 10h-6V4M10 14l-7 7M14 10l7-7' stroke='white' stroke-width='2'/%3E%3C/svg%3E") 16 16, zoom-out;
+        }
+        #photo-popup-detail.fullscreen-mode #photo-popup-caption {
+            margin: 10px 0 0 0;
+            padding: 0 20px;
+            color: #ddd;
+            text-align: center;
+            max-width: 900px;
+        }
+    </style>
 </body>
 
 </html>

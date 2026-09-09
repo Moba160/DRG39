@@ -344,17 +344,17 @@ ZugNr	GattungZp	GattungReal	GattungModell	VonZug	VonBf	NachBf	NachZug	Umlaufplan
 55	Pw4ü			56	Dresden	Berlin	56	1083	
 55	C4i			56	Dresden	Berlin	56	1083	
 55	C4i			56	Dresden	Berlin	56	1083	
-55	B4i			56	Dresden	Berlin	56	1083	
+55	B4i	30		56	Dresden	Berlin	56	1083	
 55	C4i			56	Dresden	Berlin	56	1083	
-55	BC4i			79	Chemnitz	Berlin	56	1083	ü Elsterwerda
+55	BC4i	37		79	Chemnitz	Berlin	56	1083	ü Elsterwerda
 55	C4i			79	Chemnitz	Berlin	56	1085	ü Elsterwerda
 56	Pw4i			55	Berlin	Dresden	55	1083	
 56	C4i			55	Berlin	Dresden	55	1083	
-56	B4i			55	Berlin	Dresden	55	1083	
+56	B4i	30		55	Berlin	Dresden	55	1083	
 56	C4i			55	Berlin	Dresden	55	1083	
 56	C4i			55	Berlin	Dresden	55	1083	
 56	C4i			55	Berlin	Chemnitz	80	1085	ü Elsterwerda
-56	BC4i			55	Berlin	Chemnitz	80	1085	ü Elsterwerda
+56	BC4i	37		55	Berlin	Chemnitz	80	1085	ü Elsterwerda
 57	SWRPwPost4ü	35		54	Dresden	Berlin	58	1108	
 57	SBC4ü	35		54	Dresden	Berlin	58	1108	
 57	SBC4ü	35		54	Dresden	Berlin	58	1108	
@@ -421,19 +421,19 @@ ZugNr	GattungZp	GattungReal	GattungModell	VonZug	VonBf	NachBf	NachZug	Umlaufplan
 64	B4ü			63	Berlin	Dresden	63	201	
 64	C4ü			63	Berlin	Dresden	63	201	
 64	C4ü			63	Berlin	Dresden	63	201	
-67	Pw4i-K			68	Dresden	Berlin	68	1098	
-67	C4i			68	Dresden	Berlin	68	1098	vS, S u nS
-67	C4i			68	Dresden	Berlin	68	1098	
-67	B4i			68	Dresden	Berlin	68	1098	
-67	C4i			68	Dresden	Berlin	68	1098	
-67	C4i			68	Dresden	Berlin	68	1098	
+67	Pw4i-K	33		68	Dresden	Berlin	68	1098	
+67	C4i	36		68	Dresden	Berlin	68	1098	vS, S u nS
+67	C4i	36		68	Dresden	Berlin	68	1098	
+67	B4i	30		68	Dresden	Berlin	68	1098	
+67	C4i	36		68	Dresden	Berlin	68	1098	
+67	C4i	36		68	Dresden	Berlin	68	1098	
 68	Pw4i-K			67	Berlin	Dresden	67	1098	
-68	C4i			67	Berlin	Dresden	67	1098	
-68	C4i			67	Berlin	Dresden	67	1098	
-68	B4i			67	Berlin	Dresden	67	1098	
-68	C4i			67	Berlin	Dresden	67	1098	
-68	C4i			67	Berlin	Dresden	67	1098	vS, S u nS
-69	Pw4ü Expr			1004	Chemnitz	Berlin	52	227	
+68	C4i	36		67	Berlin	Dresden	67	1098	
+68	C4i	36		67	Berlin	Dresden	67	1098	
+68	B4i	30		67	Berlin	Dresden	67	1098	
+68	C4i	36		67	Berlin	Dresden	67	1098	
+68	C4i	36		67	Berlin	Dresden	67	1098	vS, S u nS
+69	Pw4ü Expr	33		1004	Chemnitz	Berlin	52	227	
 69	Pw4ü			74	Chemnitz	Berlin	76	1090	
 69	C4ü			74	Chemnitz	Berlin	76	1090	
 69	B4ü			74	Chemnitz	Berlin	76	1090	
@@ -504,18 +504,18 @@ ZugNr	GattungZp	GattungReal	GattungModell	VonZug	VonBf	NachBf	NachZug	Umlaufplan
 76	C4ü			69	Berlin	Chemnitz	73	1090	
 76	B4ü			69	Berlin	Chemnitz	73	1090	
 76	C4ü			69	Berlin	Chemnitz	73	1090	
-77	Pw4ü-K			78	Chemnitz	Berlin	78	1100	
-77	C4i			78	Chemnitz	Berlin	78	1100	nur vS u S
-77	C4i			78	Chemnitz	Berlin	78	1100	
+77	Pw4ü-K	29		78	Chemnitz	Berlin	78	1100	
+77	C4i	36		78	Chemnitz	Berlin	78	1100	nur vS u S
+77	C4i	36		78	Chemnitz	Berlin	78	1100	
 77	B4i			78	Chemnitz	Berlin	78	1100	
-77	C4i			78	Chemnitz	Berlin	78	1100	
-77	C4i			78	Chemnitz	Berlin	78	1100	
-78	Pw4ü-K			77	Berlin	Chemnitz	77	1100	
-78	C4i			77	Berlin	Chemnitz	77	1100	
-78	C4i			77	Berlin	Chemnitz	77	1100	
-78	B4i			77	Berlin	Chemnitz	77	1100	
-78	C4i			77	Berlin	Chemnitz	77	1100	vS u S
-78	C4i			77	Berlin	Chemnitz	77	1100	
+77	C4i	36		78	Chemnitz	Berlin	78	1100	
+77	C4i	36		78	Chemnitz	Berlin	78	1100	
+78	Pw4ü-K	33		77	Berlin	Chemnitz	77	1100	
+78	C4i	36		77	Berlin	Chemnitz	77	1100	
+78	C4i	36		77	Berlin	Chemnitz	77	1100	
+78	B4i	30		77	Berlin	Chemnitz	77	1100	
+78	C4i	36		77	Berlin	Chemnitz	77	1100	vS u S
+78	C4i	36		77	Berlin	Chemnitz	77	1100	
 79	Pw4ü	34		80	München	Berlin	80	1611	
 79	AB4ü	28		80	München	Berlin	80	1611	
 79	AB4ü	28		80	München	Berlin	80	1611	
@@ -528,18 +528,18 @@ ZugNr	GattungZp	GattungReal	GattungModell	VonZug	VonBf	NachBf	NachZug	Umlaufplan
 80	AB4ü	28		79	Berlin	München	79	1611	
 80	AB4ü	28		79	Berlin	München	79	1611	
 80	Pw4ü	34		79	Berlin	München	79	1611	
-87	Pw4i-K			68	Dresden	Berlin	68	1098	wie E67
-87	C4i			68	Dresden	Berlin	68	1098	vS, S u nS
-87	C4i			68	Dresden	Berlin	68	1098	
-87	B4i			68	Dresden	Berlin	68	1098	
-87	C4i			68	Dresden	Berlin	68	1098	
-87	C4i			68	Dresden	Berlin	68	1098	
-88	Pw4i-K			67	Berlin	Dresden	67	1098	wie E68
-88	C4i			67	Berlin	Dresden	67	1098	
-88	C4i			67	Berlin	Dresden	67	1098	
-88	B4i			67	Berlin	Dresden	67	1098	
-88	C4i			67	Berlin	Dresden	67	1098	
-88	C4i			67	Berlin	Dresden	67	1098	vS, S u nS
+87	Pw4i-K	33		68	Dresden	Berlin	68	1098	wie E67
+87	C4i	36		68	Dresden	Berlin	68	1098	vS, S u nS
+87	C4i	36		68	Dresden	Berlin	68	1098	
+87	B4i	30		68	Dresden	Berlin	68	1098	
+87	C4i	36		68	Dresden	Berlin	68	1098	
+87	C4i	36		68	Dresden	Berlin	68	1098	
+88	Pw4i-K	33		67	Berlin	Dresden	67	1098	wie E68
+88	C4i	36		67	Berlin	Dresden	67	1098	
+88	C4i	36		67	Berlin	Dresden	67	1098	
+88	B4i	30		67	Berlin	Dresden	67	1098	
+88	C4i	36		67	Berlin	Dresden	67	1098	
+88	C4i	36		67	Berlin	Dresden	67	1098	vS, S u nS
 91	Pw4ü			191	Garmisch	Berlin	92	97	
 91	C4ü			191	Innsbruck	Berlin	92	98	
 91	BC4ü			191	Innsbruck	Berlin	92	98	16./17. VI. bis 11./12.IX. u 15./16.XII. bis 15./16.IV
@@ -597,31 +597,31 @@ ZugNr	GattungZp	GattungReal	GattungModell	VonZug	VonBf	NachBf	NachZug	Umlaufplan
 114	Pw4ü			241	Berlin	Stuttgart	113	107	1 Wagenzug
 114	Pw4ü Expr Bln 36			113	Berlin	Stuttgart	113	108	Di/Mi bis Fr/Sa
 120	Post4ü			827	Berlin	Leipzig	398	Feb 20	nS
-120	Pw4i			121	Berlin	Leipzig	121	278	
-120	C4i			121	Berlin	Leipzig	121	278	
-120	C4i			121	Berlin	Leipzig	121	278	
-120	B4i			121	Berlin	Leipzig	121	278	
-120	C4i			121	Berlin	Leipzig	121	278	
-120	C4i			121	Berlin	Leipzig	121	278	
-120	BC4i			121	Berlin	Leipzig	121	278	vS
-120	C4i			121	Berlin	Leipzig	121	278	nS
-120	C4i			121	Berlin	Leipzig	121	278	nS
-120	C4i			121	Berlin	Leipzig	121	278	nS
-120	C4i			121	Berlin	Leipzig	121	278	nS
-120	C4i			121	Berlin	Leipzig	121	1192	nS
+120	Pw4i	33		121	Berlin	Leipzig	121	278	
+120	C4i	36		121	Berlin	Leipzig	121	278	
+120	C4i	36		121	Berlin	Leipzig	121	278	
+120	B4i	30		121	Berlin	Leipzig	121	278	
+120	C4i	36		121	Berlin	Leipzig	121	278	
+120	C4i	36		121	Berlin	Leipzig	121	278	
+120	BC4i	37		121	Berlin	Leipzig	121	278	vS
+120	C4i	36		121	Berlin	Leipzig	121	278	nS
+120	C4i	36		121	Berlin	Leipzig	121	278	nS
+120	C4i	36		121	Berlin	Leipzig	121	278	nS
+120	C4i	36		121	Berlin	Leipzig	121	278	nS
+120	C4i	36		121	Berlin	Leipzig	121	1192	nS
 121	PwPost4ü			119	Leipzig	Berlin	848	Feb 31	nS
-121	Pw4i			120	Leipzig	Berlin	120	278	
-121	C4i			120	Leipzig	Berlin	120	1192	vS
-121	C4i			120	Leipzig	Berlin	120	1192	vS
-121	C4i			120	Leipzig	Berlin	120	1192	vS
-121	C4i			120	Leipzig	Berlin	120	1192	vS
-121	C4i			120	Leipzig	Berlin	120	1192	vS
-121	BC4i			120	Leipzig	Berlin	120	278	vS
-121	C4i			120	Leipzig	Berlin	120	278	
-121	C4i			120	Leipzig	Berlin	120	278	
-121	B4i			120	Leipzig	Berlin	120	278	
-121	C4i			120	Leipzig	Berlin	120	278	
-121	C4i			120	Leipzig	Berlin	120	278	
+121	Pw4i	33		120	Leipzig	Berlin	120	278	
+121	C4i	36		120	Leipzig	Berlin	120	1192	vS
+121	C4i	36		120	Leipzig	Berlin	120	1192	vS
+121	C4i	36		120	Leipzig	Berlin	120	1192	vS
+121	C4i	36		120	Leipzig	Berlin	120	1192	vS
+121	C4i	36		120	Leipzig	Berlin	120	1192	vS
+121	BC4i	37		120	Leipzig	Berlin	120	278	vS
+121	C4i	36		120	Leipzig	Berlin	120	278	
+121	C4i	36		120	Leipzig	Berlin	120	278	
+121	B4i	30		120	Leipzig	Berlin	120	278	
+121	C4i	36		120	Leipzig	Berlin	120	278	
+121	C4i	36		120	Leipzig	Berlin	120	278	
 125	C4ü-K			126	Nürnberg	Berlin	126	172	
 125	BC4ü			126	Nürnberg	Berlin	126	172	
 125	ABC4ü			126	Nürnberg	Berlin	26	173	
@@ -867,7 +867,7 @@ ZugNr	GattungZp	GattungReal	GattungModell	VonZug	VonBf	NachBf	NachZug	Umlaufplan
 592	C4ü			591	Berlin	Oberstdorf	591	298	Bedarf
 1145	Pw4			1146	Wittenberg	Berlin	4146	1183	
 1145	C4i			1146	Dessau	Berlin	4146	1183	
-1145	BC4i			1146	Wittenberg	Berlin	4146	1183	
+1145	BC4i	37		1146	Wittenberg	Berlin	4146	1183	
 1145	C4i			1146	Wittenberg	Berlin	4146	1183	
 1145	C4i			1146	Wittenberg	Berlin	4146	1183	
 1145	C4i			1146	Wittenberg	Berlin	4146	1183	

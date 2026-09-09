@@ -1,166 +1,166 @@
-﻿Gattung	ZugNr	GegenZugNr	Reisegeschwindigkeit	Zuglaufl?ge	Lok
-D	1	2	62	877	39 204
-D	2	1	66	877	39 204
-D	3	4	71	539	39 204
-D	4	3	76	539	39 204
-FD	5	6	86	539	03 062
-FD	6	5	84	539	03 062
-FD	7	8	74	652	03 062
-FD	8	7	70	652	03 062
-D	9	10	64	830	39 204
-D	10	9	68	916	39 204
-D	13	14	61	921	39 204
-D	14	13	53	850	39 204
-D	15	16	59	652	39 204
-D	16	15	58	652	39 204
-D	21	22	67	652	39 204
-D	22	21	68	652	39 204
-D	23	24	70	652	39 204
-D	24	23	66	652	39 204
-D	25	26	63	652	39 204
-D	26	25	64	652	39 204
-D	29	30	69	652	39 204
-D	30	29	66	652	39 204
-D	31	-	79	162	39 204
-FDt	33	34	100	882	-
-FDt	34	33	98	877	-
-D	37	38	78	164	39 204
-D	38	37	83	164	39 204
-D	39	40	72	675	39 204
-D	40	39	67	675	39 204
-D	41	42	69	888	39 204
-D	42	41	64	877	39 204
-D	43	44	67	877	39 204
-D	44	43	66	877	39 204
-D	45	46	63	580	39 204
-D	46	45	64	580	39 204
-D	49	50	68	675	39 204
-D	50	49	68	675	39 204
-D	51	52	52	722	39 204
-D	52	51	54	722	39 204
-D	53	54	99	180	61 001
-D	54	53	93	180	61 001
-D	55	56	60	388	39 204
-D	56	55	72	388	39 204
-D	57	58	92	180	39 204
-D	58	57	95	180	39 204
-D	59	60	74	192	39 204
-D	60	59	76	192	39 204
-D	61	62	53	440	39 204
-D	62	61	57	453	39 204
-D	63	64	59	384	39 204
-D	64	63	50	371	39 204
-E	67	68	58	180	39 204
-E	68	67	69	180	39 204
-D	69	72	65	213	39 204
-D	70	71	63	675	39 204
-D	71	70	70	674	39 204
-D	72	69	59	213	39 204
-D	73	74	73	210	39 204
-D	74	73	67	213	39 204
-D	75	76	79	210	39 204
-D	76	75	64	213	39 204
-E	77	78	62	213	39 204
-E	78	77	61	213	39 204
-FD	79	80	85	674	03 062
-FD	80	79	100	825	03 062
-E	87	88	56	180	39 204
-E	88	87	59	180	39 204
-D	91	92	58	806	39 204
-D	92	91	70	894	39 204
-D	107	108	64	430	39 204
-D	108	107	76	536	39 204
-D	113	114	62	652	39 204
-D	114	113	58	652	39 204
-E	120	121	67	164	39 204
-E	121	120	70	164	39 204
-D	125	126	72	487	39 204
-D	126	125	67	487	39 204
-D	139	140	75	674	39 204
-D	140	139	71	674	39 204
-D	147	148	63	768	39 204
-D	148	147	63	768	39 204
-D	149	150	70	674	39 204
-D	150	149	73	674	39 204
-D	155	156	66	926	39 204
-D	156	155	66	926	39 204
-D	185	186	56	388	39 204
-D	186	185	54	388	39 204
-D	226	227	57	730	39 204
-D	227	226	56	730	39 204
-D	237	238	58	677	39 204
-D	238	237	56	677	39 204
-D	239	240	72	675	39 204
-D	240	239	64	675	39 204
-D	241	244	63	628	39 204
-D	244	241	69	628	39 204
-D	245	246	69	877	39 204
-D	246	245	71	877	39 204
-P	281	-	35	112	39 204
-P	285	286	48	161	39 204
-P	286	285	45	192	39 204
-P	292	-	42	112	39 204
-P	309	310	37	62	39 204
-P	310	309	38	62	39 204
-P	311	312	36	180	39 204
-P	312	311	43	180	39 204
-P	313	314	50	122	39 204
-P	314	313	44	180	39 204
-P	315	316	39	180	39 204
-P	316	315	44	189	39 204
-P	317	318	38	149	39 204
-P	318	317	46	197	39 204
-P	319	320	61	180	39 204
-P	320	319	53	242	39 204
-P	321	-	44	103	39 204
-D	322	323	61	730	39 204
-D	323	322	59	730	39 204
-P	330	-	38	103	39 204
-D	401	402	61	734	39 204
-D	402	401	64	734	39 204
-D	479	480	72	612	39 204
-D	480	479	70	613	39 204
-P	501	502	44	63	39 204
-P	502	501	45	63	39 204
-P	505	-	44	63	39 204
-P	507	508	44	63	39 204
-P	508	507	50	63	39 204
-P	515	-	42	63	39 204
-P	518	-	52	63	39 204
-P	525	-	37	63	39 204
-P	527	528	36	63	39 204
-P	528	527	45	63	39 204
-FDt	551	552	102	685	-
-FDt	552	551	97	685	-
-FDt	571	572	104	693	-
-FDt	572	571	107	699	-
-D	591	592	66	847	39 204
-D	592	591	66	847	39 204
-P	800	-	36	63	39 204
-P	803	-	43	162	39 204
-P	816	-	48	63	39 204
-P	818	-	40	162	39 204
-P	827	-	42	270	39 204
-P	829	-	40	95	39 204
-P	833	-	47	162	39 204
-P	847	848	65	63	39 204
-P	848	847	51	743	39 204
-P	849	850	64	164	39 204
-P	850	849	68	164	39 204
-P	855	-	65	164	39 204
-P	862	-	38	63	39 204
-P	866	-	55	63	39 204
-P	868	869	60	162	39 204
-P	869	868	41	539	39 204
-P	897	-	43	63	39 204
-P	901	-	49	63	39 204
-P	904	905	41	63	39 204
-P	905	904	39	63	39 204
-P	1041	1042	58	70	39 204
-P	1042	1041	58	70	39 204
-P	1047	-	68	164	39 204
-E	1145	-	66	132	39 204
-D	1244	-	74	327	39 204
-P	1835	-	57	70	39 204
-P	1850	-	68	164	39 204
-P	5242	-	42	164	39 204
+﻿Gattung	ZugNr	GegenZugNr	Reisegeschwindigkeit	Zuglaufl?ge	Lok	Fotos
+D	1	2	62	877	39 204	https://eisenbahnstiftung.de/images/bildergalerie/108228.jpg|https://eisenbahnstiftung.de/images/bildergalerie/105782.jpg|https://eisenbahnstiftung.de/images/bildergalerie/90748.jpg|https://eisenbahnstiftung.de/images/bildergalerie/85089.jpg|https://eisenbahnstiftung.de/images/bildergalerie/82834.jpg|https://eisenbahnstiftung.de/images/bildergalerie/82422.jpg|https://eisenbahnstiftung.de/images/bildergalerie/78006.jpg|https://eisenbahnstiftung.de/images/bildergalerie/34795.jpg|https://eisenbahnstiftung.de/images/bildergalerie/32268.jpg|https://eisenbahnstiftung.de/images/bildergalerie/20759.jpg
+D	2	1	66	877	39 204	https://eisenbahnstiftung.de/images/bildergalerie/108217.jpg|https://eisenbahnstiftung.de/images/bildergalerie/96096.jpg|https://eisenbahnstiftung.de/images/bildergalerie/90301.jpg|https://eisenbahnstiftung.de/images/bildergalerie/43279.jpg|https://eisenbahnstiftung.de/images/bildergalerie/36917.jpg|https://eisenbahnstiftung.de/images/bildergalerie/17726.jpg|https://eisenbahnstiftung.de/images/bildergalerie/13459.jpg
+D	3	4	71	539	39 204	https://eisenbahnstiftung.de/images/bildergalerie/81965.jpg|https://eisenbahnstiftung.de/images/bildergalerie/64991.jpg|https://eisenbahnstiftung.de/images/bildergalerie/50412.jpg|https://eisenbahnstiftung.de/images/bildergalerie/45563.jpg|https://eisenbahnstiftung.de/images/bildergalerie/42543.jpg|https://eisenbahnstiftung.de/images/bildergalerie/36611.jpg|https://eisenbahnstiftung.de/images/bildergalerie/32237.jpg
+D	4	3	76	539	39 204	https://eisenbahnstiftung.de/images/bildergalerie/109913.jpg|https://eisenbahnstiftung.de/images/bildergalerie/108662.jpg|https://eisenbahnstiftung.de/images/bildergalerie/107283.jpg|https://eisenbahnstiftung.de/images/bildergalerie/103695.jpg|https://eisenbahnstiftung.de/images/bildergalerie/101595.jpg|https://eisenbahnstiftung.de/images/bildergalerie/93068.jpg|https://eisenbahnstiftung.de/images/bildergalerie/92020.jpg|https://eisenbahnstiftung.de/images/bildergalerie/90492.jpg|https://eisenbahnstiftung.de/images/bildergalerie/84445.jpg|https://eisenbahnstiftung.de/images/bildergalerie/54954.jpg|https://eisenbahnstiftung.de/images/bildergalerie/54874.jpg|https://eisenbahnstiftung.de/images/bildergalerie/54875.jpg|https://eisenbahnstiftung.de/images/bildergalerie/54606.jpg|https://eisenbahnstiftung.de/images/bildergalerie/54407.jpg|https://eisenbahnstiftung.de/images/bildergalerie/34640.jpg|https://eisenbahnstiftung.de/images/bildergalerie/34653.jpg|https://eisenbahnstiftung.de/images/bildergalerie/34657.jpg|https://eisenbahnstiftung.de/images/bildergalerie/20749.jpg|https://eisenbahnstiftung.de/images/bildergalerie/15794.jpg
+FD	5	6	86	539	03 062	https://eisenbahnstiftung.de/images/bildergalerie/95981.jpg
+FD	6	5	84	539	03 062	https://eisenbahnstiftung.de/images/bildergalerie/20750.jpg
+FD	7	8	74	652	03 062	
+FD	8	7	70	652	03 062	
+D	9	10	64	830	39 204	https://eisenbahnstiftung.de/images/bildergalerie/65474.jpg|https://eisenbahnstiftung.de/images/bildergalerie/13728.jpg
+D	10	9	68	916	39 204	https://eisenbahnstiftung.de/images/bildergalerie/103869.jpg|https://eisenbahnstiftung.de/images/bildergalerie/42578.jpg|https://eisenbahnstiftung.de/images/bildergalerie/25212.jpg
+D	13	14	61	921	39 204	https://eisenbahnstiftung.de/images/bildergalerie/76041.jpg|https://eisenbahnstiftung.de/images/bildergalerie/65380.jpg|https://eisenbahnstiftung.de/images/bildergalerie/27862.jpg|https://eisenbahnstiftung.de/images/bildergalerie/13954.jpg
+D	14	13	53	850	39 204	https://eisenbahnstiftung.de/images/bildergalerie/67336.jpg|https://eisenbahnstiftung.de/images/bildergalerie/46724.jpg|https://eisenbahnstiftung.de/images/bildergalerie/46033.jpg|https://eisenbahnstiftung.de/images/bildergalerie/42581.jpg|https://eisenbahnstiftung.de/images/bildergalerie/32965.jpg
+D	15	16	59	652	39 204	
+D	16	15	58	652	39 204	https://eisenbahnstiftung.de/images/bildergalerie/29947.jpg|https://eisenbahnstiftung.de/images/bildergalerie/18137.jpg|https://eisenbahnstiftung.de/images/bildergalerie/5293.jpg
+D	21	22	67	652	39 204	
+D	22	21	68	652	39 204	https://eisenbahnstiftung.de/images/bildergalerie/45236.jpg
+D	23	24	70	652	39 204	https://eisenbahnstiftung.de/images/bildergalerie/104712.jpg|https://eisenbahnstiftung.de/images/bildergalerie/64381.jpg|https://eisenbahnstiftung.de/images/bildergalerie/64141.jpg|https://eisenbahnstiftung.de/images/bildergalerie/54878.jpg|https://eisenbahnstiftung.de/images/bildergalerie/54879.jpg|https://eisenbahnstiftung.de/images/bildergalerie/54881.jpg|https://eisenbahnstiftung.de/images/bildergalerie/54883.jpg|https://eisenbahnstiftung.de/images/bildergalerie/54884.jpg|https://eisenbahnstiftung.de/images/bildergalerie/54885.jpg|https://eisenbahnstiftung.de/images/bildergalerie/54886.jpg|https://eisenbahnstiftung.de/images/bildergalerie/41340.jpg|https://eisenbahnstiftung.de/images/bildergalerie/15448.jpg
+D	24	23	66	652	39 204	https://eisenbahnstiftung.de/images/bildergalerie/84444.jpg|https://eisenbahnstiftung.de/images/bildergalerie/47399.jpg|https://eisenbahnstiftung.de/images/bildergalerie/43615.jpg|https://eisenbahnstiftung.de/images/bildergalerie/40942.jpg|https://eisenbahnstiftung.de/images/bildergalerie/34365.jpg|https://eisenbahnstiftung.de/images/bildergalerie/32238.jpg|https://eisenbahnstiftung.de/images/bildergalerie/20952.jpg|https://eisenbahnstiftung.de/images/bildergalerie/20488.jpg|https://eisenbahnstiftung.de/images/bildergalerie/1640.jpg|https://eisenbahnstiftung.de/images/bildergalerie/1641.jpg
+D	25	26	63	652	39 204	
+D	26	25	64	652	39 204	https://eisenbahnstiftung.de/images/bildergalerie/2358.jpg
+D	29	30	69	652	39 204	https://eisenbahnstiftung.de/images/bildergalerie/110571.jpg|https://eisenbahnstiftung.de/images/bildergalerie/42218.jpg
+D	30	29	66	652	39 204	https://eisenbahnstiftung.de/images/bildergalerie/101338.jpg
+D	31	-	79	162	39 204	https://eisenbahnstiftung.de/images/bildergalerie/104708.jpg|https://eisenbahnstiftung.de/images/bildergalerie/64989.jpg|https://eisenbahnstiftung.de/images/bildergalerie/61501.jpg|https://eisenbahnstiftung.de/images/bildergalerie/42583.jpg|https://eisenbahnstiftung.de/images/bildergalerie/34246.jpg
+FDt	33	34	100	882	-	https://eisenbahnstiftung.de/images/bildergalerie/73352.jpg
+FDt	34	33	98	877	-	
+D	37	38	78	164	39 204	
+D	38	37	83	164	39 204	
+D	39	40	72	675	39 204	https://eisenbahnstiftung.de/images/bildergalerie/98083.jpg|https://eisenbahnstiftung.de/images/bildergalerie/77753.jpg|https://eisenbahnstiftung.de/images/bildergalerie/73710.jpg|https://eisenbahnstiftung.de/images/bildergalerie/64377.jpg|https://eisenbahnstiftung.de/images/bildergalerie/43695.jpg|https://eisenbahnstiftung.de/images/bildergalerie/33355.jpg
+D	40	39	67	675	39 204	https://eisenbahnstiftung.de/images/bildergalerie/109931.jpg|https://eisenbahnstiftung.de/images/bildergalerie/105561.jpg|https://eisenbahnstiftung.de/images/bildergalerie/96508.jpg|https://eisenbahnstiftung.de/images/bildergalerie/93902.jpg|https://eisenbahnstiftung.de/images/bildergalerie/90351.jpg|https://eisenbahnstiftung.de/images/bildergalerie/88972.jpg|https://eisenbahnstiftung.de/images/bildergalerie/86792.jpg|https://eisenbahnstiftung.de/images/bildergalerie/79779.jpg|https://eisenbahnstiftung.de/images/bildergalerie/76386.jpg|https://eisenbahnstiftung.de/images/bildergalerie/75469.jpg|https://eisenbahnstiftung.de/images/bildergalerie/75470.jpg|https://eisenbahnstiftung.de/images/bildergalerie/75472.jpg|https://eisenbahnstiftung.de/images/bildergalerie/75473.jpg|https://eisenbahnstiftung.de/images/bildergalerie/75474.jpg|https://eisenbahnstiftung.de/images/bildergalerie/69732.jpg|https://eisenbahnstiftung.de/images/bildergalerie/32771.jpg|https://eisenbahnstiftung.de/images/bildergalerie/32772.jpg|https://eisenbahnstiftung.de/images/bildergalerie/30552.jpg|https://eisenbahnstiftung.de/images/bildergalerie/20760.jpg|https://eisenbahnstiftung.de/images/bildergalerie/20687.jpg|https://eisenbahnstiftung.de/images/bildergalerie/20688.jpg|https://eisenbahnstiftung.de/images/bildergalerie/20740.jpg|https://eisenbahnstiftung.de/images/bildergalerie/10124.jpg|https://eisenbahnstiftung.de/images/bildergalerie/3753.jpg
+D	41	42	69	888	39 204	https://eisenbahnstiftung.de/images/bildergalerie/69309.jpg|https://eisenbahnstiftung.de/images/bildergalerie/20685.jpg
+D	42	41	64	877	39 204	https://eisenbahnstiftung.de/images/bildergalerie/115467.jpg|https://eisenbahnstiftung.de/images/bildergalerie/115468.jpg|https://eisenbahnstiftung.de/images/bildergalerie/115469.jpg|https://eisenbahnstiftung.de/images/bildergalerie/92872.jpg
+D	43	44	67	877	39 204	https://eisenbahnstiftung.de/images/bildergalerie/53003.jpg|https://eisenbahnstiftung.de/images/bildergalerie/34032.jpg|https://eisenbahnstiftung.de/images/bildergalerie/33995.jpg|https://eisenbahnstiftung.de/images/bildergalerie/17730.jpg|https://eisenbahnstiftung.de/images/bildergalerie/5090.jpg|https://eisenbahnstiftung.de/images/bildergalerie/5091.jpg
+D	44	43	66	877	39 204	
+D	45	46	63	580	39 204	
+D	46	45	64	580	39 204	https://eisenbahnstiftung.de/images/bildergalerie/64380.jpg|https://eisenbahnstiftung.de/images/bildergalerie/53005.jpg|https://eisenbahnstiftung.de/images/bildergalerie/52115.jpg
+D	49	50	68	675	39 204	https://eisenbahnstiftung.de/images/bildergalerie/92803.jpg
+D	50	49	68	675	39 204	
+D	51	52	52	722	39 204	
+D	52	51	54	722	39 204	https://eisenbahnstiftung.de/images/bildergalerie/85270.jpg
+D	53	54	99	180	61 001	https://eisenbahnstiftung.de/images/bildergalerie/106703.jpg|https://eisenbahnstiftung.de/images/bildergalerie/89800.jpg|https://eisenbahnstiftung.de/images/bildergalerie/85270.jpg|https://eisenbahnstiftung.de/images/bildergalerie/76019.jpg|https://eisenbahnstiftung.de/images/bildergalerie/20442.jpg
+D	54	53	93	180	61 001	https://eisenbahnstiftung.de/images/bildergalerie/108670.jpg|https://eisenbahnstiftung.de/images/bildergalerie/104179.jpg|https://eisenbahnstiftung.de/images/bildergalerie/85270.jpg|https://eisenbahnstiftung.de/images/bildergalerie/76018.jpg
+D	55	56	60	388	39 204	
+D	56	55	72	388	39 204	
+D	57	58	92	180	61 001	https://eisenbahnstiftung.de/images/bildergalerie/102960.jpg|https://eisenbahnstiftung.de/images/bildergalerie/75995.jpg|https://eisenbahnstiftung.de/images/bildergalerie/73698.jpg|https://eisenbahnstiftung.de/images/bildergalerie/61499.jpg|https://eisenbahnstiftung.de/images/bildergalerie/43779.jpg|https://eisenbahnstiftung.de/images/bildergalerie/20782.jpg
+D	58	57	95	180	61 001	https://eisenbahnstiftung.de/images/bildergalerie/112499.jpg|https://eisenbahnstiftung.de/images/bildergalerie/103022.jpg|https://eisenbahnstiftung.de/images/bildergalerie/65384.jpg|https://eisenbahnstiftung.de/images/bildergalerie/43778.jpg|https://eisenbahnstiftung.de/images/bildergalerie/20692.jpg|https://eisenbahnstiftung.de/images/bildergalerie/13081.jpg
+D	59	60	74	192	39 204	
+D	60	59	76	192	39 204	
+D	61	62	53	440	39 204	https://eisenbahnstiftung.de/images/bildergalerie/20757.jpg
+D	62	61	57	453	39 204	https://eisenbahnstiftung.de/images/bildergalerie/115483.jpg|https://eisenbahnstiftung.de/images/bildergalerie/103698.jpg|https://eisenbahnstiftung.de/images/bildergalerie/102962.jpg|https://eisenbahnstiftung.de/images/bildergalerie/50865.jpg
+D	63	64	59	384	39 204	https://eisenbahnstiftung.de/images/bildergalerie/47391.jpg
+D	64	63	50	371	39 204	https://eisenbahnstiftung.de/images/bildergalerie/92802.jpg
+E	67	68	58	180	39 204	
+E	68	67	69	180	39 204	
+D	69	72	65	213	39 204	
+D	70	71	63	675	39 204	
+D	71	70	70	674	39 204	
+D	72	69	59	213	39 204	https://eisenbahnstiftung.de/images/bildergalerie/36926.jpg
+D	73	74	73	210	39 204	https://eisenbahnstiftung.de/images/bildergalerie/110571.jpg|https://eisenbahnstiftung.de/images/bildergalerie/26193.jpg
+D	74	73	67	213	39 204	https://eisenbahnstiftung.de/images/bildergalerie/37190.jpg|https://eisenbahnstiftung.de/images/bildergalerie/34778.jpg|https://eisenbahnstiftung.de/images/bildergalerie/26198.jpg
+D	75	76	79	210	39 204	https://eisenbahnstiftung.de/images/bildergalerie/104172.jpg
+D	76	75	64	213	39 204	https://eisenbahnstiftung.de/images/bildergalerie/91087.jpg|https://eisenbahnstiftung.de/images/bildergalerie/64379.jpg
+E	77	78	62	213	39 204	https://eisenbahnstiftung.de/images/bildergalerie/94157.jpg|https://eisenbahnstiftung.de/images/bildergalerie/23991.jpg
+E	78	77	61	213	39 204	
+FD	79	80	85	674	03 062	https://eisenbahnstiftung.de/images/bildergalerie/107095.jpg|https://eisenbahnstiftung.de/images/bildergalerie/103705.jpg|https://eisenbahnstiftung.de/images/bildergalerie/98086.jpg|https://eisenbahnstiftung.de/images/bildergalerie/91447.jpg|https://eisenbahnstiftung.de/images/bildergalerie/90369.jpg|https://eisenbahnstiftung.de/images/bildergalerie/64268.jpg|https://eisenbahnstiftung.de/images/bildergalerie/54409.jpg|https://eisenbahnstiftung.de/images/bildergalerie/20687.jpg|https://eisenbahnstiftung.de/images/bildergalerie/7030.jpg
+FD	80	79	100	825	03 062	https://eisenbahnstiftung.de/images/bildergalerie/103027.jpg|https://eisenbahnstiftung.de/images/bildergalerie/72038.jpg|https://eisenbahnstiftung.de/images/bildergalerie/65476.jpg|https://eisenbahnstiftung.de/images/bildergalerie/27310.jpg|https://eisenbahnstiftung.de/images/bildergalerie/18133.jpg|https://eisenbahnstiftung.de/images/bildergalerie/13458.jpg|https://eisenbahnstiftung.de/images/bildergalerie/10495.jpg
+E	87	88	56	180	39 204	https://eisenbahnstiftung.de/images/bildergalerie/80214.jpg
+E	88	87	59	180	39 204	
+D	91	92	58	806	39 204	https://eisenbahnstiftung.de/images/bildergalerie/109747.jpg|https://eisenbahnstiftung.de/images/bildergalerie/26193.jpg|https://eisenbahnstiftung.de/images/bildergalerie/20837.jpg
+D	92	91	70	894	39 204	https://eisenbahnstiftung.de/images/bildergalerie/36926.jpg
+D	107	108	64	430	39 204	
+D	108	107	76	536	39 204	https://eisenbahnstiftung.de/images/bildergalerie/46039.jpg|https://eisenbahnstiftung.de/images/bildergalerie/14362.jpg
+D	113	114	62	652	39 204	https://eisenbahnstiftung.de/images/bildergalerie/52821.jpg
+D	114	113	58	652	39 204	
+E	120	121	67	164	39 204	
+E	121	120	70	164	39 204	
+D	125	126	72	487	39 204	https://eisenbahnstiftung.de/images/bildergalerie/36913.jpg
+D	126	125	67	487	39 204	
+D	139	140	75	674	39 204	
+D	140	139	71	674	39 204	
+D	147	148	63	768	39 204	https://eisenbahnstiftung.de/images/bildergalerie/41881.jpg
+D	148	147	63	768	39 204	https://eisenbahnstiftung.de/images/bildergalerie/99175.jpg|https://eisenbahnstiftung.de/images/bildergalerie/96951.jpg|https://eisenbahnstiftung.de/images/bildergalerie/42770.jpg|https://eisenbahnstiftung.de/images/bildergalerie/40094.jpg|https://eisenbahnstiftung.de/images/bildergalerie/17865.jpg|https://eisenbahnstiftung.de/images/bildergalerie/13216.jpg
+D	149	150	70	674	39 204	
+D	150	149	73	674	39 204	
+D	155	156	66	926	39 204	
+D	156	155	66	926	39 204	https://eisenbahnstiftung.de/images/bildergalerie/22830.jpg|https://eisenbahnstiftung.de/images/bildergalerie/20778.jpg
+D	185	186	56	388	39 204	https://eisenbahnstiftung.de/images/bildergalerie/34799.jpg|https://eisenbahnstiftung.de/images/bildergalerie/21288.jpg
+D	186	185	54	388	39 204	https://eisenbahnstiftung.de/images/bildergalerie/65393.jpg
+D	226	227	57	730	39 204	
+D	227	226	56	730	39 204	https://eisenbahnstiftung.de/images/bildergalerie/110718.jpg
+D	237	238	58	677	39 204	
+D	238	237	56	677	39 204	
+D	239	240	72	675	39 204	
+D	240	239	64	675	39 204	https://eisenbahnstiftung.de/images/bildergalerie/80722.jpg
+D	241	244	63	628	39 204	
+D	244	241	69	628	39 204	
+D	245	246	69	877	39 204	
+D	246	245	71	877	39 204	https://eisenbahnstiftung.de/images/bildergalerie/117838.jpg
+P	281	-	35	112	39 204	
+P	285	286	48	161	39 204	
+P	286	285	45	192	39 204	https://eisenbahnstiftung.de/images/bildergalerie/110719.jpg
+P	292	-	42	112	39 204	https://eisenbahnstiftung.de/images/bildergalerie/49638.jpg
+P	309	310	37	62	39 204	https://eisenbahnstiftung.de/images/bildergalerie/64385.jpg
+P	310	309	38	62	39 204	
+P	311	312	36	180	39 204	
+P	312	311	43	180	39 204	
+P	313	314	50	122	39 204	https://eisenbahnstiftung.de/images/bildergalerie/49785.jpg
+P	314	313	44	180	39 204	https://eisenbahnstiftung.de/images/bildergalerie/58652.jpg|https://eisenbahnstiftung.de/images/bildergalerie/43669.jpg
+P	315	316	39	180	39 204	https://eisenbahnstiftung.de/images/bildergalerie/45244.jpg
+P	316	315	44	189	39 204	
+P	317	318	38	149	39 204	
+P	318	317	46	197	39 204	
+P	319	320	61	180	39 204	https://eisenbahnstiftung.de/images/bildergalerie/91838.jpg|https://eisenbahnstiftung.de/images/bildergalerie/25293.jpg
+P	320	319	53	242	39 204	
+P	321	-	44	103	39 204	
+D	322	323	61	730	39 204	
+D	323	322	59	730	39 204	
+P	330	-	38	103	39 204	
+D	401	402	61	734	39 204	
+D	402	401	64	734	39 204	
+D	479	480	72	612	39 204	
+D	480	479	70	613	39 204	
+P	501	502	44	63	39 204	
+P	502	501	45	63	39 204	
+P	505	-	44	63	39 204	
+P	507	508	44	63	39 204	
+P	508	507	50	63	39 204	https://eisenbahnstiftung.de/images/bildergalerie/20775.jpg
+P	515	-	42	63	39 204	
+P	518	-	52	63	39 204	
+P	525	-	37	63	39 204	
+P	527	528	36	63	39 204	
+P	528	527	45	63	39 204	
+FDt	551	552	102	685	-	https://eisenbahnstiftung.de/images/bildergalerie/105484.jpg|https://eisenbahnstiftung.de/images/bildergalerie/92871.jpg|https://eisenbahnstiftung.de/images/bildergalerie/91291.jpg|https://eisenbahnstiftung.de/images/bildergalerie/73342.jpg|https://eisenbahnstiftung.de/images/bildergalerie/69604.jpg|https://eisenbahnstiftung.de/images/bildergalerie/40814.jpg|https://eisenbahnstiftung.de/images/bildergalerie/40815.jpg
+FDt	552	551	97	685	-	https://eisenbahnstiftung.de/images/bildergalerie/81970.jpg
+FDt	571	572	104	693	-	https://eisenbahnstiftung.de/images/bildergalerie/95113.jpg|https://eisenbahnstiftung.de/images/bildergalerie/73351.jpg|https://eisenbahnstiftung.de/images/bildergalerie/31849.jpg|https://eisenbahnstiftung.de/images/bildergalerie/31850.jpg|https://eisenbahnstiftung.de/images/bildergalerie/4311.jpg
+FDt	572	571	107	699	-	
+D	591	592	66	847	39 204	
+D	592	591	66	847	39 204	
+P	800	-	36	63	39 204	
+P	803	-	43	162	39 204	
+P	816	-	48	63	39 204	https://eisenbahnstiftung.de/images/bildergalerie/103324.jpg
+P	818	-	40	162	39 204	https://eisenbahnstiftung.de/images/bildergalerie/90737.jpg
+P	827	-	42	270	39 204	
+P	829	-	40	95	39 204	
+P	833	-	47	162	39 204	
+P	847	848	65	63	39 204	https://eisenbahnstiftung.de/images/bildergalerie/98081.jpg
+P	848	847	51	743	39 204	
+P	849	850	64	164	39 204	
+P	850	849	68	164	39 204	https://eisenbahnstiftung.de/images/bildergalerie/93066.jpg|https://eisenbahnstiftung.de/images/bildergalerie/65649.jpg|https://eisenbahnstiftung.de/images/bildergalerie/52752.jpg|https://eisenbahnstiftung.de/images/bildergalerie/52761.jpg
+P	855	-	65	164	39 204	
+P	862	-	38	63	39 204	
+P	866	-	55	63	39 204	
+P	868	869	60	162	39 204	
+P	869	868	41	539	39 204	
+P	897	-	43	63	39 204	
+P	901	-	49	63	39 204	
+P	904	905	41	63	39 204	
+P	905	904	39	63	39 204	
+P	1041	1042	58	70	39 204	https://eisenbahnstiftung.de/images/bildergalerie/102974.jpg
+P	1042	1041	58	70	39 204	https://eisenbahnstiftung.de/images/bildergalerie/51160.jpg
+P	1047	-	68	164	39 204	
+E	1145	-	66	132	39 204	
+D	1244	-	74	327	39 204	
+P	1835	-	57	70	39 204	https://eisenbahnstiftung.de/images/bildergalerie/37580.jpg
+P	1850	-	68	164	39 204	
+P	5242	-	42	164	39 204	

@@ -1,0 +1,11 @@
+Im Animationsbereich gibt es die Optionen Schematisch, Realzug und Modellzug.
+Ein Umschalten bewirkt eine Änderung der Zugdarstellungen im Animationsbereich und in den Zugbildungsplänen der Bereiche 2 und 4.
+Das Umschalten soll eine augenblickliche Anpassung bewirken.
+
+Bei /Schematisch/ sollen die Symbolbilder benutzt werden, die unter img/schematisch gespeichert sind. Die Dateinamen bestimmen sich aus der Spalte GattungZp (hier nur das erste Wort benutzen, Bsp. Bei "WLC 302" wird "WLC" benutzt) von ZpA.csv
+Schneide auch ein "ü" oder "i" ab, um das schematische Bild zu finden. Bei mit WR und WL beginnenden Gattungen suche nach WR.png, nicht nach WR4.png - schneide hier die 4 in GattunZp ab vor Suche nach dem Dateinamen.
+Trotz aller Abschneidungen soll als Label (im Zp als auch im Animationsbereich) die unabgeschnittene Gattungsbezeichnung benutzt werden, also GattungZp vollständig.
+
+Bei /Realzug/ sollen die Bilder benutzt werden, die unter img/loks bzw. img/pwagen gespeichert sind. Wird kein passendes Bild gefunden, soll Unbekannt.png verwendet werden. Die Dateinamen bestimmen sich aus der Spalte GattungZp (hier wieder das erste Wort, aber kein Abschneiden von "ü" oder "i") aber Abschneiden von "-K" plus "-" plus GattungReal von ZpA.csv
+Als Label soll im Zp wie im Animationsbereich die verkettete Gattung ohne .png dargestellt werden.
+
