@@ -241,6 +241,8 @@
             overflow: auto;
             padding: 10px;
             box-sizing: border-box;
+            min-height: 0;
+            min-width: 0;
         }
 
         #col3-map {
@@ -670,6 +672,221 @@
             background: #e8f0fe;
             color: #1a56db;
         }
+
+        /* ── Wagen-View ──────────────────────────────────── */
+        #wagen-filter-bar {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 4px;
+            padding: 5px 8px;
+            background: #d8d8d8;
+            border-bottom: 1px solid #bbb;
+            flex-shrink: 0;
+        }
+
+        #wagen-text-filter {
+            font-size: 12px;
+            border: 1px solid #aaa;
+            border-radius: 3px;
+            padding: 2px 5px;
+            width: 90px;
+        }
+
+        .wagen-gat-btn {
+            font-size: 11px;
+            padding: 1px 5px;
+            border-radius: 3px;
+            border: 1px solid #aaa;
+            cursor: pointer;
+            background: #eee;
+            font-weight: bold;
+            user-select: none;
+            white-space: nowrap;
+        }
+
+        .wagen-gat-btn:hover { filter: brightness(0.9); }
+
+        .wagen-gat-btn.active {
+            background: #666;
+            color: #fff;
+            border-color: #444;
+        }
+
+        #wagen-reset-btn {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 2px;
+            display: flex;
+            align-items: center;
+            color: #555;
+            border-radius: 3px;
+        }
+        #wagen-reset-btn:hover { background: rgba(0,0,0,0.1); }
+
+        #wagen-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            padding: 10px 8px;
+            overflow-y: auto;
+            flex: 1;
+        }
+
+        .wagen-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 3px;
+            position: relative;
+        }
+
+        .wagen-badge {
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 9px;
+            font-weight: bold;
+            color: #fff;
+            background: #0066cc;
+            border: 1px solid #004499;
+            border-radius: 2px;
+            padding: 0 2px;
+            line-height: 1.4;
+            white-space: nowrap;
+            z-index: 1;
+        }
+
+        .wagen-item img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .wagen-caption {
+            font-size: 11px;
+            color: #333;
+            text-align: center;
+            word-break: break-word;
+            line-height: 1.3;
+        }
+
+        .wagen-caption .wagen-meta {
+            font-weight: normal;
+            color: #777;
+        }
+
+        #rm-wagen-view {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        .garnitur-row {
+            display: flex;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            background: #fff;
+        }
+        .garnitur-control {
+            width: 80px;
+            min-width: 80px;
+            background: #eee;
+            border-right: 1px solid #ccc;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 5px;
+            gap: 5px;
+        }
+        .garnitur-name {
+            width: 100%;
+            font-size: 10px;
+            color: #222;
+            text-align: center;
+            word-break: break-word;
+            outline: none;
+            cursor: text;
+            min-height: 1em;
+            border-bottom: 1px solid transparent;
+        }
+        .garnitur-name:hover, .garnitur-name:focus {
+            border-bottom-color: #999;
+        }
+        .garnitur-name[data-empty="true"]::before {
+            content: 'Namen vergeben';
+            color: #aaa;
+            font-style: italic;
+            pointer-events: none;
+        }
+        .garnitur-id {
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .garnitur-dir-btn, .garnitur-del-btn {
+            cursor: pointer;
+            padding: 2px 5px;
+            border: 1px solid #ccc;
+            background: #fff;
+            font-size: 12px;
+            border-radius: 2px;
+        }
+        .garnitur-track {
+            flex: 1;
+            display: flex;
+            align-items: flex-end;
+            border-bottom: none;
+            padding: 5px 5px 0 5px;
+            gap: 0;
+            min-height: 80px;
+            min-width: 0;
+            overflow-x: auto;
+            background: linear-gradient(#555, #555);
+            background-size: 1px 2px;
+            background-position: left bottom 12px;
+            background-repeat: repeat-x;
+        }
+        .garnitur-item {
+            cursor: grab;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .garnitur-item img {
+            max-height: 60px;
+            display: block;
+        }
+        .garnitur-item-label {
+            font-size: 9px;
+            color: #333;
+            text-align: center;
+            white-space: nowrap;
+            line-height: 12px;
+            height: 14px;
+            padding: 2px 2px 0 2px;
+        }
+        .garnitur-flash {
+            position: absolute;
+            bottom: 110%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #cc2200;
+            color: #fff;
+            font-size: 11px;
+            padding: 3px 8px;
+            border-radius: 3px;
+            white-space: nowrap;
+            pointer-events: none;
+            z-index: 100;
+            animation: garnitur-flash-fade 2s forwards;
+        }
+        @keyframes garnitur-flash-fade {
+            0%   { opacity: 1; }
+            70%  { opacity: 1; }
+            100% { opacity: 0; }
+        }
     </style>
 </head>
 
@@ -685,6 +902,9 @@
             <button class="main-tab active" id="tab-btn-bereiche"
                 onclick="switchMainTab('bereiche')"
                 title="Fahrpläne und Zugbildungspläne anzeigen">Fpl und Zp</button>
+            <button class="main-tab" id="tab-btn-rollmaterial"
+                onclick="switchMainTab('rollmaterial')"
+                title="Rollmaterial anzeigen">Rollmaterial</button>
             <div id="tab-bar-spacer"></div>
             <button id="fullscreen-btn" title="Vollbild">
                 <!-- Diagonal double-arrow icon: expand -->
@@ -776,6 +996,87 @@
                             <div class="col-header-row2 flex-end" id="filter-row-5"></div>
                         </div>
                         <div class="col-content"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel: Rollmaterial -->
+            <div class="tab-panel" id="panel-rollmaterial">
+                <div id="rollmaterial-container" style="display: flex; width: 100%; height: 100%; overflow: hidden; background-color: #fff;">
+                    <!-- Fahrzeuge Bereich -->
+                    <div class="col-pane" id="rm-col-fahrzeuge" style="width: 15%;">
+                        <div class="col-header">
+                            <div class="col-header-row1">
+                                <span class="col-tab active" id="rm-tab-loks" onclick="switchRmTab('loks')">Loks</span>
+                                <span class="col-tab" id="rm-tab-wagen" onclick="switchRmTab('wagen')">Wagen</span>
+                            </div>
+                        </div>
+                        <div class="col-content" id="rm-content-fahrzeuge" style="padding:0; display:flex; flex-direction:column; overflow:hidden;">
+                            <div id="rm-loks-view" style="display: block; padding:10px;">Loks Inhalt</div>
+                            <div id="rm-wagen-view">
+                                <!-- Filter-Bar -->
+                                <div id="wagen-filter-bar">
+                                    <input type="text" id="wagen-text-filter" placeholder="Suche…" title="Freitext-Filter" oninput="wagenApplyFilter()">
+                                    <select id="wagen-garnitur-filter" onchange="wagenApplyFilter()" style="font-size:11px; margin-right:5px; height: 20px;">
+                                        <option value="all">Egal (Alle)</option>
+                                        <option value="in">In Garnitur</option>
+                                        <option value="out">Nicht in Garnitur</option>
+                                    </select>
+                                    <button class="wagen-gat-btn" data-gat="A"    onclick="wagenToggleGat(this)">A</button>
+                                    <button class="wagen-gat-btn" data-gat="B"    onclick="wagenToggleGat(this)">B</button>
+                                    <button class="wagen-gat-btn" data-gat="BC"   onclick="wagenToggleGat(this)">BC</button>
+                                    <button class="wagen-gat-btn" data-gat="C"    onclick="wagenToggleGat(this)">C</button>
+                                    <button class="wagen-gat-btn" data-gat="ABC"  onclick="wagenToggleGat(this)">ABC</button>
+                                    <button class="wagen-gat-btn" data-gat="Pw"   onclick="wagenToggleGat(this)">Pw</button>
+                                    <button class="wagen-gat-btn" data-gat="Post" onclick="wagenToggleGat(this)">Post</button>
+                                    <button class="wagen-gat-btn" data-gat="WR"   onclick="wagenToggleGat(this)">WR</button>
+                                    <button class="wagen-gat-btn" data-gat="WL"   onclick="wagenToggleGat(this)">WL</button>
+                                    <button class="wagen-gat-btn" data-gat="i"    onclick="wagenToggleGat(this)">i</button>
+                                    <button class="wagen-gat-btn" data-gat="ü"    onclick="wagenToggleGat(this)">ü</button>
+                                    <button class="wagen-gat-btn" data-gat="6"    onclick="wagenToggleGat(this)">6</button>
+                                    <button class="wagen-gat-btn" data-gat="4"    onclick="wagenToggleGat(this)">4</button>
+                                    <button class="wagen-gat-btn" data-gat="3"    onclick="wagenToggleGat(this)">3</button>
+                                    <button class="wagen-gat-btn" data-gat="2"    onclick="wagenToggleGat(this)">2</button>
+                                    <button class="wagen-gat-btn" data-gat="pr"   onclick="wagenToggleGat(this)">pr</button>
+                                    <button class="wagen-gat-btn" data-gat="wü"   onclick="wagenToggleGat(this)">wü</button>
+                                    <button class="wagen-gat-btn" data-gat="bay"  onclick="wagenToggleGat(this)">bay</button>
+                                    <button class="wagen-gat-btn" data-gat="Einh" onclick="wagenToggleGat(this)">Einh</button>
+                                    <button id="wagen-sort-btn" class="wagen-gat-btn" onclick="wagenToggleSort()" title="Bekannte Bilder zuerst sortieren">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                            <line x1="8" y1="6" x2="21" y2="6"></line>
+                                            <line x1="8" y1="12" x2="21" y2="12"></line>
+                                            <line x1="8" y1="18" x2="21" y2="18"></line>
+                                            <polyline points="3 6 4 7 6 4"></polyline>
+                                            <polyline points="3 12 4 13 6 10"></polyline>
+                                            <polyline points="3 18 4 19 6 16"></polyline>
+                                        </svg>
+                                    </button>
+                                    <button id="wagen-reset-btn" onclick="wagenResetFilter()" title="Filter zurücksetzen">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="1 4 1 10 7 10"></polyline>
+                                            <path d="M3.51 15a9 9 0 1 0 .49-3.5"></path>
+                                        </svg>
+                                    </button>
+                                    <span id="wagen-count" style="font-size:11px;color:#555;white-space:nowrap;margin-left:2px;"></span>
+                                </div>
+                                <!-- Wagenliste -->
+                                <div id="wagen-grid"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-resizer" id="rm-resizer"></div>
+                    <!-- Züge Bereich -->
+                    <div class="col-pane" id="rm-col-zuege" style="width: 85%;">
+                        <div class="col-header">
+                            <div class="col-header-row1 center">
+                                <strong>Modellzuggarnituren</strong>
+                                <button onclick="addGarnitur()" title="Garnitur hinzufügen" style="margin-left:10px; cursor:pointer;">+</button>
+                                <button onclick="downloadGarnituren()" title="Garnituren herunterladen" style="margin-left:5px; cursor:pointer;">⬇</button>
+                            </div>
+                        </div>
+                        <div class="col-content" id="rm-content-zuege">
+                            <!-- Garnituren werden hier generiert -->
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1000,6 +1301,7 @@
             document.querySelectorAll('.tab-panel').forEach(panel => panel.classList.remove('active'));
             document.getElementById('tab-btn-' + name).classList.add('active');
             document.getElementById('panel-' + name).classList.add('active');
+            
             if (name === 'bereiche') {
                 // Init map on first visit (was hidden, Leaflet couldn't measure size)
                 if (!window._orm_map) {
@@ -1007,9 +1309,574 @@
                 } else {
                     setTimeout(() => window._orm_map.invalidateSize(), 50);
                 }
+            } else if (name === 'rollmaterial') {
+                // Garnituren brauchen die Wagen-Daten. Wenn noch nicht geladen, lade Wagen (welche danach Garnituren laden)
+                if (!window._wagenLoaded) {
+                    wagenLoadCSV();
+                } else if (!window._garniturLoaded) {
+                    window._garniturLoaded = true;
+                    loadGarnituren();
+                }
             }
         };
 
+
+        // --- Rollmaterial Logic ---
+        window.switchRmTab = function(tab) {
+            document.getElementById('rm-tab-loks').classList.remove('active');
+            document.getElementById('rm-tab-wagen').classList.remove('active');
+            document.getElementById('rm-loks-view').style.display = 'none';
+            document.getElementById('rm-wagen-view').style.display = 'none';
+
+            if (tab === 'loks') {
+                document.getElementById('rm-tab-loks').classList.add('active');
+                document.getElementById('rm-loks-view').style.display = 'block';
+            } else {
+                document.getElementById('rm-tab-wagen').classList.add('active');
+                document.getElementById('rm-wagen-view').style.display = 'flex';
+                if (!window._wagenLoaded) wagenLoadCSV();
+            }
+        };
+
+        // --- Wagen-Liste ---
+        const PWAGEN_IMG_PATH = 'data/img/pwagen/';
+        let _wagenData   = [];          // alle Einträge aus p.csv
+        let _wagenGatFilter = new Set(); // aktive Token
+        let _wagenSortKnown = false;    // Sortierung: bekannte Bilder zuerst
+
+        // Cache welche Bildnamen existieren (wird beim ersten Laden befüllt)
+        const _wagenImgCache = {};   // gattung -> true/false/undefined(pending)
+
+        async function wagenImgExists(gattung) {
+            if (_wagenImgCache[gattung] !== undefined) return _wagenImgCache[gattung];
+            return new Promise(resolve => {
+                const img = new Image();
+                img.onload  = () => { _wagenImgCache[gattung] = true;  resolve(true); };
+                img.onerror = () => { _wagenImgCache[gattung] = false; resolve(false); };
+                img.src = PWAGEN_IMG_PATH + gattung + '.png';
+            });
+        }
+
+        async function wagenLoadCSV() {
+            window._wagenLoaded = true;
+            try {
+                const resp = await fetch('data/rollmaterial/p.csv');
+                const buf  = await resp.arrayBuffer();
+                const dec  = new TextDecoder('windows-1252');
+                const text = dec.decode(buf);
+                const lines = text.split(/\r?\n/);
+                const header = lines[0].split('\t').map(h => h.trim());
+                const idxGat = header.indexOf('Gattung');
+                const idxId  = header.indexOf('Id');
+                const idxHer = header.indexOf('Hersteller');
+                const idxArt = header.indexOf('Artikelnummer');
+                _wagenData = [];
+                for (let i = 1; i < lines.length; i++) {
+                    const cols = lines[i].split('\t');
+                    if (cols.length < 2) continue;
+                    const gattung = (cols[idxGat] || '').trim();
+                    if (!gattung) continue;
+                    _wagenData.push({
+                        gattung,
+                        id:  (cols[idxId]  || '').trim(),
+                        her: (cols[idxHer] || '').trim(),
+                        art: (cols[idxArt] || '').trim(),
+                    });
+                }
+                // Bilder vorab prüfen für Sortierung
+                const uniqueGat = [...new Set(_wagenData.map(e => e.gattung))];
+                await Promise.all(uniqueGat.map(g => wagenImgExists(g)));
+                if (!window._garniturLoaded) {
+                    window._garniturLoaded = true;
+                    await loadGarnituren();
+                }
+                wagenRender();
+            } catch(e) {
+                document.getElementById('wagen-grid').textContent = 'Fehler beim Laden: ' + e.message;
+            }
+        }
+
+        // Prüft ob Token tok auf Gattung g zutrifft
+        function wagenTokenMatches(tok, g) {
+            switch (tok) {
+                // einfaches case-sensitives Enthalten, aber mit Ausschluss der anderen Klassen
+                case 'A':    return g.includes('A') && !g.includes('B') && !g.includes('C');
+                case 'B':    return g.includes('B') && !g.includes('A') && !g.includes('C');
+                case 'C':    return g.includes('C') && !g.includes('A') && !g.includes('B');
+                case 'BC':   return g.includes('B') && g.includes('C') && !g.includes('A');
+                case 'ABC':  return g.includes('A') && g.includes('B') && g.includes('C');
+                case 'Pw':   return g.includes('Pw');
+                case 'Post': return g.includes('Post');
+                case 'WR':   return g.includes('WR');
+                case 'WL':   return g.includes('WL');
+                case 'i':    return g.includes('i-');
+                case 'ü':    return g.includes('ü-');
+                case 'pr':   return g.includes('pr');
+                case 'wü':   return g.includes('wü');
+                case 'bay':  return g.includes('bay');
+                // 6: Ziffer 6 unmittelbar vor ü oder i
+                case '6':    return /6[üi]/.test(g);
+                // 4: Ziffer 4 unmittelbar vor ü oder i
+                case '4':    return /4[üi]/.test(g);
+                // 3: Ziffer 3 unmittelbar vor ü oder i
+                case '3':    return /3[üi]/.test(g);
+                // 2: Ziffer 2 unmittelbar vor ü oder i
+                case '2':    return /2[üi]/.test(g);
+                // Einh: weder Post noch pr/wü/bay
+                case 'Einh': return !g.includes('Post') &&
+                                    !g.includes('pr')   &&
+                                    !g.includes('wü')   &&
+                                    !g.includes('bay');
+                default: return true;
+            }
+        }
+
+        function wagenMatchesFilter(entry) {
+            const g    = entry.gattung;   // case-sensitiv!
+            const full = (entry.gattung + ' ' + entry.id + ' ' + entry.her + ' ' + entry.art).toLowerCase();
+
+            // Textfilter (case-insensitiv)
+            const txt = document.getElementById('wagen-text-filter').value.trim().toLowerCase();
+            if (txt && !full.includes(txt)) return false;
+            
+            // Garnitur Filter
+            const gFilter = document.getElementById('wagen-garnitur-filter').value;
+            const inG = wagenInGarnitur(entry);
+            if (gFilter === 'in' && !inG) return false;
+            if (gFilter === 'out' && inG) return false;
+
+            // Gattungsbutton-Filter (alle UND-verknüpft, case-sensitiv)
+            for (const tok of _wagenGatFilter) {
+                if (!wagenTokenMatches(tok, g)) return false;
+            }
+            return true;
+        }
+
+        function wagenRender() {
+            const grid = document.getElementById('wagen-grid');
+            grid.innerHTML = '';
+            let visible = _wagenData.filter(wagenMatchesFilter);
+
+            if (_wagenSortKnown) {
+                visible = [
+                    ...visible.filter(e => _wagenImgCache[e.gattung] === true),
+                    ...visible.filter(e => _wagenImgCache[e.gattung] !== true),
+                ];
+            }
+
+            document.getElementById('wagen-count').textContent = visible.length + '\u00a0Treffer';
+
+            if (visible.length === 0) {
+                grid.textContent = 'Keine Wagen gefunden.';
+                return;
+            }
+            for (const entry of visible) {
+                const item = document.createElement('div');
+                item.className = 'wagen-item';
+                
+                const inG = wagenInGarnitur(entry);
+                if (inG) {
+                    // Badge zeigen, aber Wagen bleibt draggable
+                    const badge = document.createElement('div');
+                    badge.className = 'wagen-badge';
+                    badge.textContent = `${inG.id}.${inG.pos}`;
+                    item.appendChild(badge);
+                }
+
+                item.draggable = true;
+                item.ondragstart = (e) => {
+                    _dragSource = { type: 'wagen', entry: entry, garniturId: null, vIndex: null, sourceItem: item };
+                    e.dataTransfer.setData('text/plain', 'wagen-item');
+                };
+
+                const imgSrc = PWAGEN_IMG_PATH + entry.gattung + '.png';
+                const img = document.createElement('img');
+                img.alt = entry.gattung;
+                img.src = imgSrc;
+                img.onerror = function() {
+                    if (!this._fallback) {
+                        this._fallback = true;
+                        this.title = 'Bild nicht gefunden: ' + imgSrc;
+                        this.src   = PWAGEN_IMG_PATH + 'Unbekannt.png';
+                        _wagenImgCache[entry.gattung] = false;
+                    }
+                };
+                img.onload = function() {
+                    if (this._fallback) return;
+                    _wagenImgCache[entry.gattung] = true;
+                };
+
+                const cap = document.createElement('div');
+                cap.className = 'wagen-caption';
+                const bold = document.createElement('strong');
+                bold.textContent = entry.gattung;
+                cap.appendChild(bold);
+                const meta = [entry.her, entry.art].filter(Boolean).join('\u00a0');
+                if (meta) {
+                    const span = document.createElement('span');
+                    span.className = 'wagen-meta';
+                    span.textContent = '\u00a0(' + meta + ')';
+                    cap.appendChild(span);
+                }
+
+                item.appendChild(img);
+                item.appendChild(cap);
+                grid.appendChild(item);
+            }
+        }
+
+        window.wagenApplyFilter = function() { wagenRender(); };
+
+        window.wagenToggleGat = function(btn) {
+            const tok = btn.dataset.gat;
+            if (_wagenGatFilter.has(tok)) {
+                _wagenGatFilter.delete(tok);
+                btn.classList.remove('active');
+            } else {
+                const removeTokens = (list) => {
+                    list.forEach(t => {
+                        _wagenGatFilter.delete(t);
+                        const b = document.querySelector(`.wagen-gat-btn[data-gat="${t}"]`);
+                        if (b) b.classList.remove('active');
+                    });
+                };
+                
+                const passenger = ['A', 'B', 'BC', 'C', 'ABC'];
+                
+                if (['WL', 'WR'].includes(tok)) removeTokens(['WL', 'WR']);
+                else if (['6', '2', '3', '4'].includes(tok)) removeTokens(['6', '2', '3', '4']);
+                else if (['ü', 'i'].includes(tok)) removeTokens(['ü', 'i']);
+                else if (['pr', 'wü', 'bay', 'Einh'].includes(tok)) removeTokens(['pr', 'wü', 'bay', 'Einh']);
+                else if (passenger.includes(tok)) removeTokens([...passenger, 'Pw', 'Post']);
+                else if (['Pw', 'Post'].includes(tok)) removeTokens(['Pw', 'Post', ...passenger]);
+
+                _wagenGatFilter.add(tok);
+                btn.classList.add('active');
+            }
+            wagenRender();
+        };
+
+        window.wagenToggleSort = function() {
+            _wagenSortKnown = !_wagenSortKnown;
+            document.getElementById('wagen-sort-btn').classList.toggle('active', _wagenSortKnown);
+            wagenRender();
+        };
+
+        window.wagenResetFilter = function() {
+            document.getElementById('wagen-text-filter').value = '';
+            document.getElementById('wagen-garnitur-filter').value = 'all';
+            _wagenGatFilter.clear();
+            _wagenSortKnown = false;
+            document.querySelectorAll('.wagen-gat-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById('wagen-sort-btn').classList.remove('active');
+            wagenRender();
+        };
+
+        // --- Modellzuggarnituren ---
+        let _garnituren = [];
+        let _dragSource = null;
+
+        async function loadGarnituren() {
+            try {
+                const resp = await fetch('data/rollmaterial/garnituren.csv');
+                if (!resp.ok) return;
+                const text = await resp.text();
+                const lines = text.split(/\r?\n/);
+                _garnituren = [];
+                for (let i = 1; i < lines.length; i++) {
+                    const line = lines[i].trim();
+                    if (!line) continue;
+                    const cols = line.split('\t');
+                    if (cols.length < 3) continue;
+                    const gid      = cols[0].trim();
+                    const dir      = cols[1].trim();
+                    
+                    let g = _garnituren.find(x => x.id === gid);
+                    if (!g) {
+                        g = { id: gid, direction: dir, name: '', vehicles: [] };
+                        _garnituren.push(g);
+                    }
+                    // Name ist in cols[2] des neuen Formats
+                    if (cols[2] && cols[2].trim() !== 'wagen' && cols[2].trim() !== '') {
+                        g.name = cols[2].trim();
+                    }
+                    const type       = cols[3] ? cols[3].trim() : '';
+                    const fahrzeugId = cols[4] ? cols[4].trim() : null;
+                    if (type === 'wagen' && fahrzeugId) {
+                        const entry = _wagenData.find(w => w.id === fahrzeugId);
+                        if (entry) {
+                            g.vehicles.push({ type: 'wagen', entry });
+                        }
+                    }
+                }
+            } catch(e) {
+                console.log("Fehler beim Laden der garnituren.csv", e);
+            }
+            renderGarnituren();
+        }
+
+        window.downloadGarnituren = function() {
+            // Normalisiertes Format: GarniturId, Direction, Name, Type, FahrzeugId
+            let csv = "GarniturId\tDirection\tName\tType\tFahrzeugId\n";
+            for (const g of _garnituren) {
+                const name = (g.name || '').replace(/\t/g, ' ');
+                if (g.vehicles.length === 0) {
+                    csv += `${g.id}\t${g.direction}\t${name}\t\t\n`;
+                } else {
+                    for (const v of g.vehicles) {
+                        if (v.type === 'wagen') {
+                            csv += `${g.id}\t${g.direction}\t${name}\twagen\t${v.entry.id}\n`;
+                        }
+                    }
+                }
+            }
+            const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'garnituren.csv';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        };
+
+        window.addGarnitur = function() {
+            window._garniturLoaded = true; // verhindert, dass loadGarnituren() den State überschreibt
+            let num = 1;
+            while (_garnituren.some(g => g.id === 'M' + String(num).padStart(2, '0'))) {
+                num++;
+            }
+            const newId = 'M' + String(num).padStart(2, '0');
+            _garnituren.push({ id: newId, direction: 'left', name: '', vehicles: [] });
+            renderGarnituren();
+            wagenRender();
+        };
+
+        window.deleteGarnitur = function(gid) {
+            _garnituren = _garnituren.filter(g => g.id !== gid);
+            renderGarnituren();
+            wagenRender();
+        };
+
+        window.toggleGarniturDir = function(gid) {
+            const g = _garnituren.find(x => x.id === gid);
+            if (g) {
+                g.direction = g.direction === 'left' ? 'right' : 'left';
+                renderGarnituren();
+            }
+        };
+
+        function wagenInGarnitur(entry) {
+            for (const g of _garnituren) {
+                const idx = g.vehicles.findIndex(v => v.type === 'wagen' && v.entry === entry);
+                if (idx !== -1) return { id: g.id, pos: idx + 1 };
+            }
+            return null;
+        }
+
+        function handleGarniturDrop(e, targetGid, targetVIndex = null) {
+            e.preventDefault();
+            if (!_dragSource) return;
+            
+            const gTarget = _garnituren.find(g => g.id === targetGid);
+            if (!gTarget) return;
+
+            // Fahrzeug, das bereits in einer anderen Garnitur ist, nicht einfügen
+            if (!_dragSource.garniturId) {
+                const alreadyIn = wagenInGarnitur(_dragSource.entry);
+                if (alreadyIn) {
+                    // Flash-Meldung auf dem Source-Item in der linken Liste
+                    const srcItem = _dragSource.sourceItem;
+                    if (srcItem) {
+                        const flash = document.createElement('div');
+                        flash.className = 'garnitur-flash';
+                        flash.style.bottom = 'auto';
+                        flash.style.top = '50%';
+                        flash.style.transform = 'translate(-50%, -50%)';
+                        flash.textContent = `Bereits in ${alreadyIn.id} an ${alreadyIn.pos}. Stelle`;
+                        srcItem.appendChild(flash);
+                        setTimeout(() => flash.remove(), 2100);
+                    }
+                    _dragSource = null;
+                    return;
+                }
+            }
+
+            if (_dragSource.garniturId) {
+                const gSource = _garnituren.find(g => g.id === _dragSource.garniturId);
+                if (gSource) {
+                    gSource.vehicles.splice(_dragSource.vIndex, 1);
+                }
+            }
+            
+            let insertIndex = gTarget.vehicles.length;
+            if (targetVIndex !== null) {
+                insertIndex = targetVIndex;
+            }
+
+            // Lok-Regel: Ein Wagen darf richtungsbezogen nicht vor die Lok (wird ergänzt, wenn Loks implementiert sind)
+            
+            gTarget.vehicles.splice(insertIndex, 0, { type: _dragSource.type, entry: _dragSource.entry });
+            
+            _dragSource = null;
+            renderGarnituren();
+            wagenRender(); 
+        }
+
+        function renderGarnituren() {
+            const container = document.getElementById('rm-content-zuege');
+            container.innerHTML = '';
+            container.style.display = 'flex';
+            container.style.flexDirection = 'column';
+            container.style.gap = '10px';
+            container.style.padding = '10px';
+            
+            for (const g of _garnituren) {
+                const row = document.createElement('div');
+                row.className = 'garnitur-row';
+                
+                const ctrl = document.createElement('div');
+                ctrl.className = 'garnitur-control';
+
+                // Namens-Label (contenteditable, direkt anklicken)
+                const nameDiv = document.createElement('div');
+                nameDiv.className = 'garnitur-name';
+                nameDiv.contentEditable = 'true';
+                nameDiv.textContent = g.name || '';
+                if (!g.name) {
+                    nameDiv.dataset.empty = 'true';
+                }
+                nameDiv.oninput = () => {
+                    g.name = nameDiv.textContent.trim();
+                    nameDiv.dataset.empty = g.name ? '' : 'true';
+                };
+                nameDiv.ondragstart = (e) => e.stopPropagation();
+                ctrl.appendChild(nameDiv);
+
+                // ID, Richtung, Löschen
+                const idDiv = document.createElement('div');
+                idDiv.className = 'garnitur-id';
+                idDiv.textContent = g.id;
+                ctrl.appendChild(idDiv);
+
+                const dirBtn = document.createElement('button');
+                dirBtn.className = 'garnitur-dir-btn';
+                dirBtn.title = 'Fahrtrichtung umschalten';
+                dirBtn.textContent = g.direction === 'left' ? '◄' : '►';
+                dirBtn.onclick = () => toggleGarniturDir(g.id);
+                ctrl.appendChild(dirBtn);
+
+                const delBtn = document.createElement('button');
+                delBtn.className = 'garnitur-del-btn';
+                delBtn.title = 'Garnitur löschen';
+                delBtn.textContent = '🗑';
+                delBtn.onclick = () => deleteGarnitur(g.id);
+                ctrl.appendChild(delBtn);
+                
+                const track = document.createElement('div');
+                track.className = 'garnitur-track';
+                track.dataset.gid = g.id;
+                track.ondragover = (e) => { e.preventDefault(); };
+                track.ondrop = (e) => handleGarniturDrop(e, g.id);
+                
+                let vehiclesToRender = g.direction === 'right' ? [...g.vehicles].reverse() : g.vehicles;
+                vehiclesToRender.forEach((v, displayIndex) => {
+                    const actualIndex = g.direction === 'right' ? g.vehicles.length - 1 - displayIndex : displayIndex;
+                    const item = document.createElement('div');
+                    item.className = 'garnitur-item';
+                    item.draggable = true;
+                    item.ondragstart = (e) => {
+                        _dragSource = { type: v.type, entry: v.entry, garniturId: g.id, vIndex: actualIndex };
+                        e.dataTransfer.setData('text/plain', 'garnitur-item');
+                    };
+                    item.ondragover = (e) => { e.preventDefault(); };
+                    item.ondrop = (e) => {
+                        e.stopPropagation(); 
+                        handleGarniturDrop(e, g.id, actualIndex);
+                    };
+                    
+                    const imgSrc = v.type === 'wagen' ? PWAGEN_IMG_PATH + v.entry.gattung + '.png' : '';
+                    const img = document.createElement('img');
+                    img.src = imgSrc;
+                    img.onerror = function() {
+                        if (!this._fallback) {
+                            this._fallback = true;
+                            this.src = PWAGEN_IMG_PATH + 'Unbekannt.png';
+                        }
+                    };
+                    item.appendChild(img);
+                    const lbl = document.createElement('div');
+                    lbl.className = 'garnitur-item-label';
+                    lbl.textContent = v.entry ? v.entry.gattung : '';
+                    item.appendChild(lbl);
+                    track.appendChild(item);
+                });
+                
+                row.appendChild(ctrl);
+                row.appendChild(track);
+                container.appendChild(row);
+            }
+        }
+
+        const _rmFahrzeuge = document.getElementById('rm-col-fahrzeuge');
+        const _rmZuege = document.getElementById('rm-col-zuege');
+        const _rmResizer = document.getElementById('rm-resizer');
+
+        // Globale Drag/Drop-Listener um zu verhindern, dass der Browser Bilder (Wagen) öffnet 
+        // und dabei die Seite verlässt (wodurch der ungespeicherte State verloren geht).
+        window.addEventListener('dragover', function(e) { e.preventDefault(); });
+        window.addEventListener('drop', function(e) { e.preventDefault(); });
+
+        // Handler um Fahrzeuge aus einer Zuggarnitur zu löschen, wenn sie in den linken Bereich gezogen werden
+        _rmFahrzeuge.addEventListener('dragover', (e) => { e.preventDefault(); });
+        _rmFahrzeuge.addEventListener('drop', (e) => {
+            e.preventDefault();
+            if (_dragSource && _dragSource.garniturId) {
+                const g = _garnituren.find(x => x.id === _dragSource.garniturId);
+                if (g) {
+                    g.vehicles.splice(_dragSource.vIndex, 1);
+                    _dragSource = null;
+                    renderGarnituren();
+                    wagenRender();
+                }
+            }
+        });
+        
+        let rmA1 = 15; // Fahrzeuge width %
+        let rmStartX = 0;
+        let rmStartA1 = 15;
+        let rmActiveResizer = false;
+
+        function updateRmCols() {
+            _rmFahrzeuge.style.width = rmA1 + '%';
+            _rmZuege.style.width = (100 - rmA1) + '%';
+        }
+
+        _rmResizer.addEventListener('mousedown', e => {
+            rmActiveResizer = true;
+            rmStartX = e.clientX;
+            rmStartA1 = rmA1;
+            document.body.style.cursor = 'ew-resize';
+            e.preventDefault();
+        });
+
+        window.addEventListener('mousemove', e => {
+            if (!rmActiveResizer) return;
+            const cw = document.getElementById('rollmaterial-container').clientWidth;
+            const d = ((e.clientX - rmStartX) / cw) * 100;
+            const MIN = 5;
+            
+            let n1 = Math.max(MIN, Math.min(rmStartA1 + d, 95));
+            rmA1 = n1;
+            updateRmCols();
+        });
+
+        window.addEventListener('mouseup', () => {
+            if (rmActiveResizer) {
+                rmActiveResizer = false;
+                document.body.style.cursor = 'default';
+            }
+        });
 
         // --- 5 Columns Logic ---
         // Layout: col1 | res1 | col2 | res2 | col3(Karte) | res3 | col4 | res4 | col5
