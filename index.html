@@ -101,6 +101,42 @@
             pointer-events: none;
         }
 
+        /* Settings Icon & Popup */
+        #settings-btn {
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border: none;
+            background: transparent;
+            border-left: 1px solid #bbb;
+            padding: 0;
+            flex-shrink: 0;
+            transition: background 0.12s;
+        }
+        #settings-btn:hover { background: #c4c4c4; }
+
+        #settings-popup {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.5); z-index: 10000;
+            display: none; justify-content: center; align-items: center;
+        }
+        #settings-popup.visible { display: flex; }
+        .settings-content {
+            background: #fff; padding: 20px; border-radius: 5px; width: 350px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+        }
+        .settings-content h3 { margin-top: 0; margin-bottom: 15px; }
+        .settings-row { margin-bottom: 12px; display: flex; flex-direction: column; }
+        .settings-row label { margin-bottom: 5px; font-weight: 500; font-size: 13px; }
+        .settings-row select { padding: 4px; font-size: 13px; border: 1px solid #ccc; border-radius: 3px; }
+        .settings-actions { margin-top: 20px; display: flex; justify-content: space-between; align-items: center; }
+        .settings-actions button { padding: 5px 10px; cursor: pointer; border: 1px solid #aaa; background: #eee; border-radius: 3px; font-size: 13px; }
+        .settings-actions button:hover { background: #ddd; }
+
         /* Tab Panels */
         #tab-panels {
             flex: 1 1 0;
@@ -783,6 +819,54 @@
             height: 100%;
             overflow: hidden;
         }
+
+        /* ── Loks-View ──────────────────────────────────── */
+        #rm-loks-view {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        #loks-filter-bar {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 4px;
+            padding: 5px 8px;
+            background: #d8d8d8;
+            border-bottom: 1px solid #bbb;
+            flex-shrink: 0;
+        }
+
+        #loks-text-filter {
+            font-size: 12px;
+            border: 1px solid #aaa;
+            border-radius: 3px;
+            padding: 2px 5px;
+            width: 90px;
+        }
+
+        #loks-reset-btn {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 2px;
+            display: flex;
+            align-items: center;
+            color: #555;
+            border-radius: 3px;
+        }
+        #loks-reset-btn:hover { background: rgba(0,0,0,0.1); }
+
+        #loks-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            padding: 10px 8px;
+            overflow-y: auto;
+            flex: 1;
+        }
         
         .garnitur-row {
             display: flex;
@@ -843,10 +927,17 @@
             min-height: 80px;
             min-width: 0;
             overflow-x: auto;
+            scrollbar-width: none;
             background: linear-gradient(#555, #555);
             background-size: 1px 2px;
-            background-position: left bottom 12px;
+            background-position: left bottom 16px;
             background-repeat: repeat-x;
+        }
+        .garnitur-track.active {
+            cursor: ew-resize !important;
+        }
+        .garnitur-track::-webkit-scrollbar {
+            display: none;
         }
         .garnitur-item {
             cursor: grab;
@@ -887,6 +978,74 @@
             70%  { opacity: 1; }
             100% { opacity: 0; }
         }
+
+        /* ── Rollmaterial Inventar-Tabelle ──────────────────────────── */
+        .inv-filter-bar {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 5px;
+            padding: 5px 8px;
+            background: #d8d8d8;
+            border-bottom: 1px solid #bbb;
+            flex-shrink: 0;
+        }
+        .inv-filter-bar input[type="text"] {
+            font-size: 12px;
+            border: 1px solid #aaa;
+            border-radius: 3px;
+            padding: 2px 5px;
+            width: 120px;
+        }
+        .inv-her-btns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3px;
+        }
+        .inv-her-btn {
+            font-size: 11px;
+            padding: 1px 6px;
+            border-radius: 3px;
+            border: 1px solid #aaa;
+            cursor: pointer;
+            background: #eee;
+            white-space: nowrap;
+        }
+        .inv-her-btn:hover { filter: brightness(0.9); }
+        .inv-her-btn.active { background: #555; color: #fff; border-color: #333; }
+        .inv-reset-btn {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 2px 4px;
+            display: flex;
+            align-items: center;
+            color: #555;
+            border-radius: 3px;
+        }
+        .inv-reset-btn:hover { background: rgba(0,0,0,0.1); }
+        .inv-count { font-size: 11px; color: #555; white-space: nowrap; margin-left: 4px; }
+        .inv-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+        .inv-table th, .inv-table td {
+            border-bottom: 1px solid #e0e0e0;
+            padding: 4px 8px;
+            text-align: left;
+            vertical-align: middle;
+        }
+        .inv-table th {
+            background: #f0f0f0;
+            position: sticky;
+            top: 0;
+            z-index: 5;
+            font-weight: bold;
+        }
+        .inv-table tbody tr:nth-child(even) { background: #f9f9f9; }
+        .inv-table tbody tr:hover { background: #e8f0fe !important; }
+        .inv-img-cell img { max-height: 40px; display: block; }
     </style>
 </head>
 
@@ -902,10 +1061,16 @@
             <button class="main-tab active" id="tab-btn-bereiche"
                 onclick="switchMainTab('bereiche')"
                 title="Fahrpläne und Zugbildungspläne anzeigen">Fpl und Zp</button>
+            <button class="main-tab" id="tab-btn-modellgarnituren"
+                onclick="switchMainTab('modellgarnituren')"
+                title="Modellgarnituren anzeigen">Modellgarnituren</button>
             <button class="main-tab" id="tab-btn-rollmaterial"
                 onclick="switchMainTab('rollmaterial')"
-                title="Rollmaterial anzeigen">Rollmaterial</button>
+                title="Rollmaterial-Inventar anzeigen">Rollmaterial</button>
             <div id="tab-bar-spacer"></div>
+            <button id="settings-btn" title="Einstellungen" onclick="openSettings()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+            </button>
             <button id="fullscreen-btn" title="Vollbild">
                 <!-- Diagonal double-arrow icon: expand -->
                 <svg id="fs-icon-expand" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
@@ -1000,19 +1165,48 @@
                 </div>
             </div>
 
-            <!-- Panel: Rollmaterial -->
-            <div class="tab-panel" id="panel-rollmaterial">
+            <!-- Panel: Modellgarnituren (ehem. Rollmaterial) -->
+            <div class="tab-panel" id="panel-modellgarnituren">
                 <div id="rollmaterial-container" style="display: flex; width: 100%; height: 100%; overflow: hidden; background-color: #fff;">
                     <!-- Fahrzeuge Bereich -->
                     <div class="col-pane" id="rm-col-fahrzeuge" style="width: 15%;">
                         <div class="col-header">
                             <div class="col-header-row1">
-                                <span class="col-tab active" id="rm-tab-loks" onclick="switchRmTab('loks')">Loks</span>
-                                <span class="col-tab" id="rm-tab-wagen" onclick="switchRmTab('wagen')">Wagen</span>
+                                <span class="col-tab active" id="rm-tab-loks" onclick="switchMgTab('loks')">Loks</span>
+                                <span class="col-tab" id="rm-tab-wagen" onclick="switchMgTab('wagen')">Wagen</span>
                             </div>
                         </div>
                         <div class="col-content" id="rm-content-fahrzeuge" style="padding:0; display:flex; flex-direction:column; overflow:hidden;">
-                            <div id="rm-loks-view" style="display: block; padding:10px;">Loks Inhalt</div>
+                            <div id="rm-loks-view" style="display: none; padding:0; display:none; flex-direction:column; overflow:hidden;">
+                                <!-- Loks Filter-Bar -->
+                                <div id="loks-filter-bar">
+                                    <input type="text" id="loks-text-filter" placeholder="Suche…" title="Freitext-Filter" oninput="loksApplyFilter()">
+                                    <select id="loks-garnitur-filter" onchange="loksApplyFilter()" style="font-size:11px; margin-right:5px; height: 20px;">
+                                        <option value="all">Egal (Alle)</option>
+                                        <option value="in">In Garnitur</option>
+                                        <option value="out">Nicht in Garnitur</option>
+                                    </select>
+                                    <button id="loks-sort-btn" class="wagen-gat-btn" onclick="loksToggleSort()" title="Bekannte Bilder zuerst sortieren">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                            <line x1="8" y1="6" x2="21" y2="6"></line>
+                                            <line x1="8" y1="12" x2="21" y2="12"></line>
+                                            <line x1="8" y1="18" x2="21" y2="18"></line>
+                                            <polyline points="3 6 4 7 6 4"></polyline>
+                                            <polyline points="3 12 4 13 6 10"></polyline>
+                                            <polyline points="3 18 4 19 6 16"></polyline>
+                                        </svg>
+                                    </button>
+                                    <button id="loks-reset-btn" onclick="loksResetFilter()" title="Filter zurücksetzen">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="1 4 1 10 7 10"></polyline>
+                                            <path d="M3.51 15a9 9 0 1 0 .49-3.5"></path>
+                                        </svg>
+                                    </button>
+                                    <span id="loks-count" style="font-size:11px;color:#555;white-space:nowrap;margin-left:2px;"></span>
+                                </div>
+                                <!-- Lokliste -->
+                                <div id="loks-grid"></div>
+                            </div>
                             <div id="rm-wagen-view">
                                 <!-- Filter-Bar -->
                                 <div id="wagen-filter-bar">
@@ -1064,9 +1258,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-resizer" id="rm-resizer"></div>
+                    <div class="col-resizer" id="mg-resizer"></div>
                     <!-- Züge Bereich -->
-                    <div class="col-pane" id="rm-col-zuege" style="width: 85%;">
+                    <div class="col-pane" id="mg-col-zuege" style="width: 85%;">
                         <div class="col-header">
                             <div class="col-header-row1 center">
                                 <strong>Modellzuggarnituren</strong>
@@ -1074,14 +1268,70 @@
                                 <button onclick="downloadGarnituren()" title="Garnituren herunterladen" style="margin-left:5px; cursor:pointer;">⬇</button>
                             </div>
                         </div>
-                        <div class="col-content" id="rm-content-zuege">
+                        <div class="col-content" id="mg-content-zuege">
                             <!-- Garnituren werden hier generiert -->
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+
+            <!-- Panel: Rollmaterial (Inventar-Tabelle) -->
+            <div class="tab-panel" id="panel-rollmaterial">
+                <div id="inv-container" style="display:flex; flex-direction:column; width:100%; height:100%; overflow:hidden; background:#fff;">
+                    <!-- Untertab-Bar -->
+                    <div style="display:flex; align-items:center; background:#d0d0d0; border-bottom:1px solid #bbb; flex-shrink:0; padding:4px 8px; gap:6px;">
+                        <span class="col-tab active" id="inv-tab-loks" onclick="switchInvTab('loks')">Loks</span>
+                        <span class="col-tab" id="inv-tab-wagen" onclick="switchInvTab('wagen')">Wagen</span>
+                    </div>
+                    <!-- Filter-Bar Loks -->
+                    <div id="inv-loks-filter" class="inv-filter-bar">
+                        <input type="text" id="inv-loks-id-filter" placeholder="ID…" oninput="invLoksRender()">
+                        <input type="text" id="inv-loks-art-filter" placeholder="Artikelnummer…" oninput="invLoksRender()">
+                        <div id="inv-loks-her-btns" class="inv-her-btns"></div>
+                        <button class="inv-reset-btn" onclick="invLoksReset()" title="Filter zurücksetzen">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 .49-3.5"></path></svg>
+                        </button>
+                        <span id="inv-loks-count" class="inv-count"></span>
+                    </div>
+                    <!-- Filter-Bar Wagen -->
+                    <div id="inv-wagen-filter" class="inv-filter-bar" style="display:none;">
+                        <input type="text" id="inv-wagen-id-filter" placeholder="ID…" oninput="invWagenRender()">
+                        <input type="text" id="inv-wagen-art-filter" placeholder="Artikelnummer…" oninput="invWagenRender()">
+                        <div id="inv-wagen-her-btns" class="inv-her-btns"></div>
+                        <button class="inv-reset-btn" onclick="invWagenReset()" title="Filter zurücksetzen">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 .49-3.5"></path></svg>
+                        </button>
+                        <span id="inv-wagen-count" class="inv-count"></span>
+                    </div>
+                    <!-- Tabellen -->
+                    <div id="inv-loks-view" style="flex:1; overflow-y:auto;">
+                        <table class="inv-table" id="inv-loks-table">
+                            <thead><tr>
+                                <th>ID</th>
+                                <th onclick="invSort('loks', 'gattung')" style="cursor:pointer; user-select:none; color:#333;" title="Sortieren">Betriebs-Nr./Gattung<span class="sort-arrow" id="sort-loks-gattung" style="color:#888;"> ↕</span></th>
+                                <th>Bild</th>
+                                <th onclick="invSort('loks', 'her')" style="cursor:pointer; user-select:none; color:#333;" title="Sortieren">Hersteller<span class="sort-arrow" id="sort-loks-her" style="color:#888;"> ↕</span></th>
+                                <th onclick="invSort('loks', 'art')" style="cursor:pointer; user-select:none; color:#333;" title="Sortieren">Artikelnummer<span class="sort-arrow" id="sort-loks-art" style="color:#888;"> ↕</span></th>
+                            </tr></thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                    <div id="inv-wagen-view" style="flex:1; overflow-y:auto; display:none;">
+                        <table class="inv-table" id="inv-wagen-table">
+                            <thead><tr>
+                                <th>ID</th>
+                                <th onclick="invSort('wagen', 'gattung')" style="cursor:pointer; user-select:none; color:#333;" title="Sortieren">Betriebs-Nr./Gattung<span class="sort-arrow" id="sort-wagen-gattung" style="color:#888;"> ↕</span></th>
+                                <th>Bild</th>
+                                <th onclick="invSort('wagen', 'her')" style="cursor:pointer; user-select:none; color:#333;" title="Sortieren">Hersteller<span class="sort-arrow" id="sort-wagen-her" style="color:#888;"> ↕</span></th>
+                                <th onclick="invSort('wagen', 'art')" style="cursor:pointer; user-select:none; color:#333;" title="Sortieren">Artikelnummer<span class="sort-arrow" id="sort-wagen-art" style="color:#888;"> ↕</span></th>
+                            </tr></thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
     </div>
+
     <div id="resizer"></div>
     <div id="preview-area">
         <div id="controls-bar">
@@ -1309,8 +1559,28 @@
                 } else {
                     setTimeout(() => window._orm_map.invalidateSize(), 50);
                 }
+            } else if (name === 'modellgarnituren') {
+                switchMgTab(window._mgActiveTab || 'wagen');
             } else if (name === 'rollmaterial') {
-                // Garnituren brauchen die Wagen-Daten. Wenn noch nicht geladen, lade Wagen (welche danach Garnituren laden)
+                switchInvTab(window._invActiveTab || 'loks');
+            }
+        };
+
+        // --- Modellgarnituren Logic (ehem. Rollmaterial) ---
+        window.switchMgTab = function(tab) {
+            window._mgActiveTab = tab;
+            document.getElementById('rm-tab-loks').classList.remove('active');
+            document.getElementById('rm-tab-wagen').classList.remove('active');
+            document.getElementById('rm-loks-view').style.display = 'none';
+            document.getElementById('rm-wagen-view').style.display = 'none';
+
+            if (tab === 'loks') {
+                document.getElementById('rm-tab-loks').classList.add('active');
+                document.getElementById('rm-loks-view').style.display = 'flex';
+                if (!window._loksLoaded) loksLoadCSV();
+            } else {
+                document.getElementById('rm-tab-wagen').classList.add('active');
+                document.getElementById('rm-wagen-view').style.display = 'flex';
                 if (!window._wagenLoaded) {
                     wagenLoadCSV();
                 } else if (!window._garniturLoaded) {
@@ -1320,22 +1590,168 @@
             }
         };
 
+        // --- Loks-Liste ---
+        const LOKS_IMG_PATH = 'data/img/loks/';
+        let _loksData = [];          // alle Einträge aus loks.csv
+        let _loksImgCache = {};      // gattung -> true/false
+        let _loksSortKnown = false;  // Sortierung: bekannte Bilder zuerst
 
-        // --- Rollmaterial Logic ---
-        window.switchRmTab = function(tab) {
-            document.getElementById('rm-tab-loks').classList.remove('active');
-            document.getElementById('rm-tab-wagen').classList.remove('active');
-            document.getElementById('rm-loks-view').style.display = 'none';
-            document.getElementById('rm-wagen-view').style.display = 'none';
-
-            if (tab === 'loks') {
-                document.getElementById('rm-tab-loks').classList.add('active');
-                document.getElementById('rm-loks-view').style.display = 'block';
-            } else {
-                document.getElementById('rm-tab-wagen').classList.add('active');
-                document.getElementById('rm-wagen-view').style.display = 'flex';
-                if (!window._wagenLoaded) wagenLoadCSV();
+        async function loksLoadCSV() {
+            window._loksLoaded = true;
+            try {
+                const resp = await fetch('data/rollmaterial/loks.csv');
+                const buf  = await resp.arrayBuffer();
+                const dec  = new TextDecoder('windows-1252');
+                const text = dec.decode(buf);
+                const lines = text.split(/\r?\n/);
+                const header = lines[0].split('\t').map(h => h.trim());
+                const idxId  = header.indexOf('Id');
+                const idxGat = header.indexOf('Gattung');
+                const idxHer = header.indexOf('Hersteller');
+                const idxArt = header.indexOf('Artikelnummer');
+                _loksData = [];
+                for (let i = 1; i < lines.length; i++) {
+                    const cols = lines[i].split('\t');
+                    if (cols.length < 2) continue;
+                    const id = (cols[idxId] || '').trim();
+                    if (!id) continue;
+                    _loksData.push({
+                        id,
+                        gattung: (cols[idxGat] || '').trim(),
+                        her: (cols[idxHer] || '').trim(),
+                        art: (cols[idxArt] || '').trim(),
+                    });
+                }
+                // Bilder vorab prüfen für Sortierung
+                const uniqueGat = [...new Set(_loksData.map(e => e.gattung).filter(Boolean))];
+                await Promise.all(uniqueGat.map(g => new Promise(resolve => {
+                    if (_loksImgCache[g] !== undefined) return resolve();
+                    const img = new Image();
+                    img.onload  = () => { _loksImgCache[g] = true;  resolve(); };
+                    img.onerror = () => { _loksImgCache[g] = false; resolve(); };
+                    img.src = LOKS_IMG_PATH + g + '.png';
+                })));
+                if (!window._garniturLoaded) {
+                    window._garniturLoaded = true;
+                    if (!window._wagenLoaded) {
+                        await wagenLoadCSV();
+                    } else {
+                        await loadGarnituren();
+                    }
+                }
+                loksRender();
+            } catch(e) {
+                document.getElementById('loks-grid').textContent = 'Fehler beim Laden: ' + e.message;
             }
+        }
+
+        function loksMatchesFilter(entry) {
+            const gattungLower = (entry.gattung || '').toLowerCase();
+            const txt = document.getElementById('loks-text-filter').value.trim().toLowerCase();
+            if (txt && !gattungLower.includes(txt)) return false;
+            const gFilter = document.getElementById('loks-garnitur-filter').value;
+            const inG = loksInGarnitur(entry);
+            if (gFilter === 'in'  && !inG) return false;
+            if (gFilter === 'out' &&  inG) return false;
+            return true;
+        }
+
+        function loksInGarnitur(entry) {
+            for (const g of _garnituren) {
+                const idx = g.vehicles.findIndex(v => v.type === 'lok' && v.entry === entry);
+                if (idx !== -1) return { id: g.id, pos: idx + 1 };
+            }
+            return null;
+        }
+
+        function loksRender() {
+            const grid = document.getElementById('loks-grid');
+            grid.innerHTML = '';
+            let visible = _loksData.filter(loksMatchesFilter);
+
+            visible.sort((a, b) => {
+                if (_loksSortKnown) {
+                    const knownA = _loksImgCache[a.gattung] === true;
+                    const knownB = _loksImgCache[b.gattung] === true;
+                    if (knownA && !knownB) return -1;
+                    if (!knownA && knownB) return 1;
+                }
+                return (a.gattung || '').localeCompare(b.gattung || '');
+            });
+
+            document.getElementById('loks-count').textContent = visible.length + '\u00a0Treffer';
+            if (visible.length === 0) {
+                grid.textContent = 'Keine Loks gefunden.';
+                return;
+            }
+            for (const entry of visible) {
+                const item = document.createElement('div');
+                item.className = 'wagen-item';
+
+                const inG = loksInGarnitur(entry);
+                if (inG) {
+                    const badge = document.createElement('div');
+                    badge.className = 'wagen-badge';
+                    badge.textContent = `${inG.id}.${inG.pos}`;
+                    item.appendChild(badge);
+                }
+
+                item.draggable = true;
+                item.ondragstart = (e) => {
+                    _dragSource = { type: 'lok', entry: entry, garniturId: null, vIndex: null, sourceItem: item };
+                    e.dataTransfer.setData('text/plain', 'lok-item');
+                };
+
+                const imgSrc = LOKS_IMG_PATH + entry.gattung + '.png';
+                const img = document.createElement('img');
+                img.alt = entry.gattung || entry.id;
+                img.src = imgSrc;
+                img.onerror = function() {
+                    if (!this._fallback) {
+                        this._fallback = true;
+                        this.title = 'Bild nicht gefunden: ' + imgSrc;
+                        _loksImgCache[entry.gattung] = false;
+                        this.src = PWAGEN_IMG_PATH + 'Unbekannt.png';
+                    }
+                };
+                img.onload = function() {
+                    if (this._fallback) return;
+                    _loksImgCache[entry.gattung] = true;
+                };
+
+                const cap = document.createElement('div');
+                cap.className = 'wagen-caption';
+                const bold = document.createElement('strong');
+                bold.textContent = entry.gattung || entry.id;
+                cap.appendChild(bold);
+                const parts = [entry.her, entry.art].filter(Boolean).join('\u00a0');
+                if (parts) {
+                    const span = document.createElement('span');
+                    span.className = 'wagen-meta';
+                    span.textContent = '\u00a0(' + parts + ')';
+                    cap.appendChild(span);
+                }
+
+                item.appendChild(img);
+                item.appendChild(cap);
+                grid.appendChild(item);
+            }
+        }
+
+        window.loksApplyFilter = function() { loksRender(); };
+
+        window.loksToggleSort = function() {
+            _loksSortKnown = !_loksSortKnown;
+            document.getElementById('loks-sort-btn').classList.toggle('active', _loksSortKnown);
+            loksRender();
+        };
+
+        window.loksResetFilter = function() {
+            document.getElementById('loks-text-filter').value = '';
+            document.getElementById('loks-garnitur-filter').value = 'all';
+            _loksSortKnown = false;
+            document.getElementById('loks-sort-btn').classList.remove('active');
+            loksRender();
         };
 
         // --- Wagen-Liste ---
@@ -1391,6 +1807,8 @@
                     await loadGarnituren();
                 }
                 wagenRender();
+                // Loks-Liste ebenfalls aktualisieren, falls schon geladen
+                if (window._loksLoaded) loksRender();
             } catch(e) {
                 document.getElementById('wagen-grid').textContent = 'Fehler beim Laden: ' + e.message;
             }
@@ -1433,11 +1851,11 @@
 
         function wagenMatchesFilter(entry) {
             const g    = entry.gattung;   // case-sensitiv!
-            const full = (entry.gattung + ' ' + entry.id + ' ' + entry.her + ' ' + entry.art).toLowerCase();
+            const gattungLower = (entry.gattung || '').toLowerCase();
 
             // Textfilter (case-insensitiv)
             const txt = document.getElementById('wagen-text-filter').value.trim().toLowerCase();
-            if (txt && !full.includes(txt)) return false;
+            if (txt && !gattungLower.includes(txt)) return false;
             
             // Garnitur Filter
             const gFilter = document.getElementById('wagen-garnitur-filter').value;
@@ -1457,12 +1875,15 @@
             grid.innerHTML = '';
             let visible = _wagenData.filter(wagenMatchesFilter);
 
-            if (_wagenSortKnown) {
-                visible = [
-                    ...visible.filter(e => _wagenImgCache[e.gattung] === true),
-                    ...visible.filter(e => _wagenImgCache[e.gattung] !== true),
-                ];
-            }
+            visible.sort((a, b) => {
+                if (_wagenSortKnown) {
+                    const knownA = _wagenImgCache[a.gattung] === true;
+                    const knownB = _wagenImgCache[b.gattung] === true;
+                    if (knownA && !knownB) return -1;
+                    if (!knownA && knownB) return 1;
+                }
+                return (a.gattung || '').localeCompare(b.gattung || '');
+            });
 
             document.getElementById('wagen-count').textContent = visible.length + '\u00a0Treffer';
 
@@ -1607,6 +2028,11 @@
                         if (entry) {
                             g.vehicles.push({ type: 'wagen', entry });
                         }
+                    } else if (type === 'lok' && fahrzeugId) {
+                        const entry = _loksData.find(l => l.id === fahrzeugId);
+                        if (entry) {
+                            g.vehicles.push({ type: 'lok', entry });
+                        }
                     }
                 }
             } catch(e) {
@@ -1626,6 +2052,8 @@
                     for (const v of g.vehicles) {
                         if (v.type === 'wagen') {
                             csv += `${g.id}\t${g.direction}\t${name}\twagen\t${v.entry.id}\n`;
+                        } else if (v.type === 'lok') {
+                            csv += `${g.id}\t${g.direction}\t${name}\tlok\t${v.entry.id}\n`;
                         }
                     }
                 }
@@ -1683,7 +2111,9 @@
 
             // Fahrzeug, das bereits in einer anderen Garnitur ist, nicht einfügen
             if (!_dragSource.garniturId) {
-                const alreadyIn = wagenInGarnitur(_dragSource.entry);
+                const alreadyIn = _dragSource.type === 'lok'
+                    ? loksInGarnitur(_dragSource.entry)
+                    : wagenInGarnitur(_dragSource.entry);
                 if (alreadyIn) {
                     // Flash-Meldung auf dem Source-Item in der linken Liste
                     const srcItem = _dragSource.sourceItem;
@@ -1720,11 +2150,12 @@
             
             _dragSource = null;
             renderGarnituren();
-            wagenRender(); 
+            wagenRender();
+            if (window._loksLoaded) loksRender(); 
         }
 
         function renderGarnituren() {
-            const container = document.getElementById('rm-content-zuege');
+            const container = document.getElementById('mg-content-zuege');
             container.innerHTML = '';
             container.style.display = 'flex';
             container.style.flexDirection = 'column';
@@ -1778,6 +2209,42 @@
                 track.dataset.gid = g.id;
                 track.ondragover = (e) => { e.preventDefault(); };
                 track.ondrop = (e) => handleGarniturDrop(e, g.id);
+
+                let isDown = false;
+                let startX;
+                let scrollLeft;
+
+                track.addEventListener('mouseenter', () => {
+                    if (track.scrollWidth > track.clientWidth) {
+                        track.style.cursor = 'ew-resize';
+                    } else {
+                        track.style.cursor = 'default';
+                    }
+                });
+
+                track.addEventListener('mousedown', (e) => {
+                    if (track.scrollWidth <= track.clientWidth) return;
+                    if (e.target.closest('.garnitur-item')) return;
+                    isDown = true;
+                    track.classList.add('active');
+                    startX = e.pageX - track.offsetLeft;
+                    scrollLeft = track.scrollLeft;
+                });
+                track.addEventListener('mouseleave', () => {
+                    isDown = false;
+                    track.classList.remove('active');
+                });
+                track.addEventListener('mouseup', () => {
+                    isDown = false;
+                    track.classList.remove('active');
+                });
+                track.addEventListener('mousemove', (e) => {
+                    if (!isDown) return;
+                    e.preventDefault();
+                    const x = e.pageX - track.offsetLeft;
+                    const walk = (x - startX) * 1.5;
+                    track.scrollLeft = scrollLeft - walk;
+                });
                 
                 let vehiclesToRender = g.direction === 'right' ? [...g.vehicles].reverse() : g.vehicles;
                 vehiclesToRender.forEach((v, displayIndex) => {
@@ -1795,19 +2262,23 @@
                         handleGarniturDrop(e, g.id, actualIndex);
                     };
                     
-                    const imgSrc = v.type === 'wagen' ? PWAGEN_IMG_PATH + v.entry.gattung + '.png' : '';
+                    let imgSrc = '';
+                    if (v.type === 'wagen') imgSrc = PWAGEN_IMG_PATH + v.entry.gattung + '.png';
+                    else if (v.type === 'lok') imgSrc = LOKS_IMG_PATH + v.entry.gattung + '.png';
                     const img = document.createElement('img');
                     img.src = imgSrc;
                     img.onerror = function() {
                         if (!this._fallback) {
                             this._fallback = true;
-                            this.src = PWAGEN_IMG_PATH + 'Unbekannt.png';
+                            this.src = v.type === 'lok'
+                                ? LOKS_IMG_PATH + 'rangierlok.gif'
+                                : PWAGEN_IMG_PATH + 'Unbekannt.png';
                         }
                     };
                     item.appendChild(img);
                     const lbl = document.createElement('div');
                     lbl.className = 'garnitur-item-label';
-                    lbl.textContent = v.entry ? v.entry.gattung : '';
+                    lbl.textContent = v.entry ? (v.type === 'lok' ? v.entry.id : v.entry.gattung) : '';
                     item.appendChild(lbl);
                     track.appendChild(item);
                 });
@@ -1819,8 +2290,8 @@
         }
 
         const _rmFahrzeuge = document.getElementById('rm-col-fahrzeuge');
-        const _rmZuege = document.getElementById('rm-col-zuege');
-        const _rmResizer = document.getElementById('rm-resizer');
+        const _rmZuege = document.getElementById('mg-col-zuege');
+        const _rmResizer = document.getElementById('mg-resizer');
 
         // Globale Drag/Drop-Listener um zu verhindern, dass der Browser Bilder (Wagen) öffnet 
         // und dabei die Seite verlässt (wodurch der ungespeicherte State verloren geht).
@@ -1838,6 +2309,7 @@
                     _dragSource = null;
                     renderGarnituren();
                     wagenRender();
+                    if (window._loksLoaded) loksRender();
                 }
             }
         });
@@ -1862,7 +2334,7 @@
 
         window.addEventListener('mousemove', e => {
             if (!rmActiveResizer) return;
-            const cw = document.getElementById('rollmaterial-container').clientWidth;
+            const cw = document.getElementById('mg-container').clientWidth || document.getElementById('panel-modellgarnituren').clientWidth;
             const d = ((e.clientX - rmStartX) / cw) * 100;
             const MIN = 5;
             
@@ -2113,12 +2585,11 @@
                     }
                     lokImg.onerror = function() { this.onerror = null; this.src = './data/img/pwagen/Unbekannt.png'; };
                 } else {
-                    if (lokString) {
-                        lokImg.src = `./data/img/loks/${lokString}.png`;
-                    } else {
-                        lokImg.src = isDefault ? './data/img/schematisch/plok.png' : './data/img/schematisch/lok.png';
-                    }
-                    lokImg.onerror = function() { this.onerror = null; this.src = isDefault ? './data/img/schematisch/plok.png' : './data/img/schematisch/lok.png'; };
+                    const g = (z.gattung || '').trim();
+                    const isSchnellzug = ['FD', 'FDt', 'D', 'L', 'E'].includes(g);
+                    const schematischLok = isSchnellzug ? 'lok.png' : 'plok.png';
+                    lokImg.src = `./data/img/schematisch/${schematischLok}`;
+                    lokImg.onerror = function() { this.onerror = null; this.src = './data/img/schematisch/lok.png'; };
                 }
                 if (!isTopTrack) {
                     // Wenn der Zug nach rechts fährt, muss nur die Lok gespiegelt werden
@@ -2786,11 +3257,10 @@ ${von} – ${nach}`;
                         el.appendChild(this._imgEl('./data/img/pwagen/lok.png', mirror, './data/img/pwagen/Unbekannt.png'));
                     }
                 } else {
-                    if (lokString) {
-                        el.appendChild(this._imgEl(`./data/img/loks/${lokString}.png`, mirror, './data/img/schematisch/lok.png'));
-                    } else {
-                        el.appendChild(this._imgEl('./data/img/schematisch/lok.png', mirror));
-                    }
+                    const gattung = (window._zuegeMap ? (window._zuegeMap[zugNr] || '') : '').trim();
+                    const isSchnellzug = ['FD', 'FDt', 'D', 'L', 'E'].includes(gattung);
+                    const schematischLok = isSchnellzug ? 'lok.png' : 'plok.png';
+                    el.appendChild(this._imgEl(`./data/img/schematisch/${schematischLok}`, mirror, './data/img/schematisch/lok.png'));
                 }
                 
                 el.style.display = 'flex';
@@ -3779,6 +4249,254 @@ ${von} – ${nach}`;
             document.getElementById('photo-popup-detail').classList.remove('fullscreen-mode');
         };
 
+        // --- Einstellungen ---
+        window.openSettings = function() {
+            document.getElementById('settings-popup').classList.add('visible');
+        };
+        window.closeSettings = function() {
+            document.getElementById('settings-popup').classList.remove('visible');
+        };
+        window.saveSettings = function() {
+            const set = {
+                startTab: document.getElementById('set-start-tab').value,
+                fplZpTab: document.getElementById('set-fplzp-tab').value,
+                mgTab: document.getElementById('set-mg-tab').value,
+                invTab: document.getElementById('set-inv-tab').value
+            };
+            localStorage.setItem('drg39_settings', JSON.stringify(set));
+            document.cookie = "drg39_settings=" + encodeURIComponent(JSON.stringify(set)) + "; max-age=31536000; path=/";
+            closeSettings();
+        };
+        window.downloadSettings = function() {
+            const set = {
+                startTab: document.getElementById('set-start-tab').value,
+                fplZpTab: document.getElementById('set-fplzp-tab').value,
+                mgTab: document.getElementById('set-mg-tab').value,
+                invTab: document.getElementById('set-inv-tab').value
+            };
+            const blob = new Blob([JSON.stringify(set, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'settings.json';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        };
+        window.loadSettings = function() {
+            let set = null;
+            try {
+                const ls = localStorage.getItem('drg39_settings');
+                if (ls) set = JSON.parse(ls);
+                else {
+                    const match = document.cookie.match(new RegExp('(^| )drg39_settings=([^;]+)'));
+                    if (match) set = JSON.parse(decodeURIComponent(match[2]));
+                }
+            } catch(e) {}
+            if (set) {
+                if (set.startTab) document.getElementById('set-start-tab').value = set.startTab;
+                if (set.fplZpTab) document.getElementById('set-fplzp-tab').value = set.fplZpTab;
+                if (set.mgTab) document.getElementById('set-mg-tab').value = set.mgTab;
+                if (set.invTab) document.getElementById('set-inv-tab').value = set.invTab;
+            }
+            return set;
+        };
+        window.applySettings = function(set) {
+            if (set) {
+                if (set.startTab) switchMainTab(set.startTab);
+                if (set.fplZpTab) {
+                    switchTab(2, set.fplZpTab);
+                    switchTab(4, set.fplZpTab);
+                }
+                if (set.mgTab) switchMgTab(set.mgTab);
+                if (set.invTab) { window._invActiveTab = set.invTab; }
+            }
+        };
+
+        // --- Rollmaterial Inventar-Tabelle ---
+        let _invLoksHerFilter = new Set();
+        let _invWagenHerFilter = new Set();
+        window._invActiveTab = 'loks';
+
+        window._herstellerUrls = {};
+        window._herstellerNames = {};
+        window._herstellerLoaded = false;
+        async function loadHerstellerCSV() {
+            if (window._herstellerLoaded) return;
+            window._herstellerLoaded = true;
+            try {
+                const resp = await fetch('data/rollmaterial/hersteller.csv');
+                const buf = await resp.arrayBuffer();
+                const text = new TextDecoder('windows-1252').decode(buf);
+                const lines = text.split(/\r?\n/);
+                for (let i = 1; i < lines.length; i++) {
+                    const cols = lines[i].split(',');
+                    if (cols.length >= 3) {
+                        const kuerzel = cols[0].trim();
+                        window._herstellerNames[kuerzel] = cols[1].trim();
+                        window._herstellerUrls[kuerzel] = cols[2].trim();
+                    }
+                }
+            } catch(e) { console.error('Error loading hersteller.csv', e); }
+        }
+
+        window.switchInvTab = function(tab) {
+            window._invActiveTab = tab;
+            document.getElementById('inv-tab-loks').classList.toggle('active', tab === 'loks');
+            document.getElementById('inv-tab-wagen').classList.toggle('active', tab === 'wagen');
+            document.getElementById('inv-loks-filter').style.display = tab === 'loks' ? '' : 'none';
+            document.getElementById('inv-wagen-filter').style.display = tab === 'wagen' ? '' : 'none';
+            document.getElementById('inv-loks-view').style.display = tab === 'loks' ? 'block' : 'none';
+            document.getElementById('inv-wagen-view').style.display = tab === 'wagen' ? 'block' : 'none';
+            
+            const pHer = window._herstellerLoaded ? Promise.resolve() : loadHerstellerCSV();
+            if (tab === 'loks') {
+                const pData = window._loksLoaded ? Promise.resolve() : loksLoadCSV();
+                Promise.all([pData, pHer]).then(() => { _invBuildLoksHerBtns(); invLoksRender(); });
+            } else {
+                const pData = window._wagenLoaded ? Promise.resolve() : wagenLoadCSV();
+                Promise.all([pData, pHer]).then(() => { _invBuildWagenHerBtns(); invWagenRender(); });
+            }
+        };
+
+        function _invBuildHerBtns(data, containerId, filterSet, renderFn) {
+            const container = document.getElementById(containerId);
+            const hers = [...new Set(data.map(e => (e.her || '').trim()).filter(Boolean))].sort();
+            container.innerHTML = '';
+            hers.forEach(her => {
+                const btn = document.createElement('button');
+                btn.className = 'inv-her-btn' + (filterSet.has(her) ? ' active' : '');
+                btn.textContent = her;
+                btn.onclick = () => {
+                    if (filterSet.has(her)) filterSet.delete(her);
+                    else filterSet.add(her);
+                    btn.classList.toggle('active', filterSet.has(her));
+                    renderFn();
+                };
+                container.appendChild(btn);
+            });
+        }
+
+        function _invBuildLoksHerBtns() {
+            _invBuildHerBtns(_loksData, 'inv-loks-her-btns', _invLoksHerFilter, invLoksRender);
+        }
+        function _invBuildWagenHerBtns() {
+            _invBuildHerBtns(_wagenData, 'inv-wagen-her-btns', _invWagenHerFilter, invWagenRender);
+        }
+
+        window._invLoksSort = { col: '', asc: true };
+        window._invWagenSort = { col: '', asc: true };
+        
+        window.invSort = function(tab, col) {
+            const sortState = tab === 'loks' ? window._invLoksSort : window._invWagenSort;
+            if (sortState.col === col) {
+                sortState.asc = !sortState.asc;
+            } else {
+                sortState.col = col;
+                sortState.asc = true;
+            }
+            const tableId = tab === 'loks' ? 'inv-loks-table' : 'inv-wagen-table';
+            document.querySelectorAll(`#${tableId} thead th span.sort-arrow`).forEach(el => {
+                el.textContent = ' ↕';
+                el.style.color = '#888';
+            });
+            const arrow = sortState.asc ? ' ▲' : ' ▼';
+            const thSpan = document.getElementById(`sort-${tab}-${col}`);
+            if (thSpan) {
+                thSpan.textContent = arrow;
+                thSpan.style.color = '#000';
+            }
+
+            if (tab === 'loks') invLoksRender();
+            else invWagenRender();
+        };
+
+        function _invRender(data, imgBasePath, tableId, countId, herFilter, idFilterId, artFilterId, sortState) {
+            const idTxt = (document.getElementById(idFilterId).value || '').trim().toLowerCase();
+            const artTxt = (document.getElementById(artFilterId).value || '').trim().toLowerCase();
+            const tbody = document.querySelector('#' + tableId + ' tbody');
+            tbody.innerHTML = '';
+            
+            let filtered = [];
+            data.forEach(entry => {
+                const idVal = (entry.id || '').trim();
+                const gattung = (entry.gattung || '').trim();
+                const art = (entry.art || '').toLowerCase();
+                const her = (entry.her || '').trim();
+                if (idTxt && !idVal.toLowerCase().includes(idTxt)) return;
+                if (artTxt && !art.includes(artTxt)) return;
+                if (herFilter.size > 0 && !herFilter.has(her)) return;
+                filtered.push({ entry, idVal, gattung, art, her });
+            });
+
+            if (sortState && sortState.col) {
+                filtered.sort((a, b) => {
+                    let valA = a[sortState.col] || '';
+                    let valB = b[sortState.col] || '';
+                    // num sort for art if possible, else string sort
+                    if (sortState.col === 'art') {
+                        const numA = parseFloat(valA.replace(/[^\d.]/g, ''));
+                        const numB = parseFloat(valB.replace(/[^\d.]/g, ''));
+                        if (!isNaN(numA) && !isNaN(numB)) {
+                            return sortState.asc ? numA - numB : numB - numA;
+                        }
+                    }
+                    if (valA < valB) return sortState.asc ? -1 : 1;
+                    if (valA > valB) return sortState.asc ? 1 : -1;
+                    return 0;
+                });
+            }
+
+            let count = 0;
+            filtered.forEach(item => {
+                const { entry, idVal, gattung, her } = item;
+                count++;
+                let herDisplay = her;
+                let fullName = her;
+                if (window._herstellerUrls && window._herstellerUrls[her]) {
+                    herDisplay += ` <a href="${window._herstellerUrls[her]}" target="_blank" title="Zu ${her}" style="text-decoration:none; margin-left:4px;">🔗</a>`;
+                }
+                if (window._herstellerNames && window._herstellerNames[her]) {
+                    fullName = window._herstellerNames[her];
+                }
+                let artDisplay = entry.art || '';
+                if (artDisplay && fullName) {
+                    const searchUrl = `https://www.spurweite-n.de/ncontent/ndb/ndb-artdetails.asp?DoLog=0&Sel_Hersteller_VString=${encodeURIComponent(fullName)}&MSel_ArtikelNr_VString=${encodeURIComponent(artDisplay)}&ToShow=0&MaxCount=1`;
+                    artDisplay += ` <a href="${searchUrl}" target="_blank" title="Auf spurweite-n.de öffnen" style="text-decoration:none; margin-left:4px;">🔗</a>`;
+                }
+                const tr = document.createElement('tr');
+                tr.innerHTML = `<td>${idVal}</td><td>${gattung}</td><td class="inv-img-cell"><img src="${imgBasePath}${encodeURIComponent(gattung)}.png" alt="" onerror="this.style.display='none'"></td><td>${herDisplay}</td><td>${artDisplay}</td>`;
+                tbody.appendChild(tr);
+            });
+            document.getElementById(countId).textContent = count + '\u00a0Treffer';
+        }
+
+        window.invLoksRender = function() {
+            _invRender(_loksData, 'data/img/loks/', 'inv-loks-table', 'inv-loks-count', _invLoksHerFilter, 'inv-loks-id-filter', 'inv-loks-art-filter', window._invLoksSort);
+        };
+        window.invWagenRender = function() {
+            _invRender(_wagenData, 'data/img/pwagen/', 'inv-wagen-table', 'inv-wagen-count', _invWagenHerFilter, 'inv-wagen-id-filter', 'inv-wagen-art-filter', window._invWagenSort);
+        };
+        window.invLoksReset = function() {
+            document.getElementById('inv-loks-id-filter').value = '';
+            document.getElementById('inv-loks-art-filter').value = '';
+            _invLoksHerFilter.clear();
+            document.querySelectorAll('#inv-loks-her-btns .inv-her-btn').forEach(b => b.classList.remove('active'));
+            invLoksRender();
+        };
+        window.invWagenReset = function() {
+            document.getElementById('inv-wagen-id-filter').value = '';
+            document.getElementById('inv-wagen-art-filter').value = '';
+            _invWagenHerFilter.clear();
+            document.querySelectorAll('#inv-wagen-her-btns .inv-her-btn').forEach(b => b.classList.remove('active'));
+            invWagenRender();
+        };
+        
+        setTimeout(() => {
+            const set = loadSettings();
+            applySettings(set);
+        }, 50);
+
     </script>
 
     <!-- Foto Popup HTML -->
@@ -3896,6 +4614,50 @@ ${von} – ${nach}`;
             max-width: 900px;
         }
     </style>
+
+    <!-- Settings Popup -->
+    <div id="settings-popup">
+        <div class="settings-content">
+            <h3>Einstellungen</h3>
+            <div class="settings-row">
+                <label>Start-Tab</label>
+                <select id="set-start-tab">
+                    <option value="stellwerk">Stellwerk</option>
+                    <option value="bereiche" selected>Fpl und Zp</option>
+                    <option value="modellgarnituren">Modellgarnituren</option>
+                    <option value="rollmaterial">Rollmaterial</option>
+                </select>
+            </div>
+            <div class="settings-row">
+                <label>Start-Untertab in Fpl und Zp</label>
+                <select id="set-fplzp-tab">
+                    <option value="laufweg" selected>Laufweg</option>
+                    <option value="zp">Zp</option>
+                </select>
+            </div>
+            <div class="settings-row">
+                <label>Start-Untertab in Modellgarnituren</label>
+                <select id="set-mg-tab">
+                    <option value="loks">Loks</option>
+                    <option value="wagen" selected>Wagen</option>
+                </select>
+            </div>
+            <div class="settings-row">
+                <label>Start-Untertab in Rollmaterial</label>
+                <select id="set-inv-tab">
+                    <option value="loks" selected>Loks</option>
+                    <option value="wagen">Wagen</option>
+                </select>
+            </div>
+            <div class="settings-actions">
+                <button onclick="downloadSettings()" title="Einstellungen als JSON herunterladen">Download .json</button>
+                <div>
+                    <button onclick="closeSettings()">Abbrechen</button>
+                    <button onclick="saveSettings()" style="font-weight:bold; margin-left:8px;">Speichern</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
