@@ -156,6 +156,68 @@
             flex-direction: column;
         }
 
+        /* KBS Panel */
+        #panel-kbs {
+            flex-direction: row;
+        }
+        #kbs-col-left {
+            width: 15%;
+            border-right: 1px solid #bbb;
+            display: flex;
+            flex-direction: column;
+            background: #eee;
+        }
+        #kbs-col-mid {
+            width: 25%;
+            border-right: 1px solid #bbb;
+            display: flex;
+            flex-direction: column;
+            background: #fff;
+        }
+        #kbs-col-right {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            background: #f8f8f8;
+            overflow: hidden;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .kbs-header {
+            padding: 8px;
+            background: #d8d8d8;
+            font-weight: bold;
+            font-size: 13px;
+            border-bottom: 1px solid #bbb;
+            text-align: center;
+        }
+        .kbs-list {
+            flex: 1;
+            overflow-y: auto;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        .kbs-list-item {
+            padding: 6px 12px;
+            cursor: pointer;
+            border-bottom: 1px solid #ddd;
+            font-size: 13px;
+        }
+        .kbs-list-item:hover {
+            background: #e4e4e4;
+        }
+        .kbs-list-item.active {
+            background: #cce0ff;
+            font-weight: bold;
+        }
+        #kbs-map-img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
         /* Stellwerk Panel */
         #panel-stellwerk {
             background-color: #e8e8e8;
@@ -1029,6 +1091,7 @@
             width: 100%;
             border-collapse: collapse;
             font-size: 13px;
+            table-layout: fixed;
         }
         .inv-table th, .inv-table td {
             border-bottom: 1px solid #e0e0e0;
@@ -1061,6 +1124,9 @@
             <button class="main-tab active" id="tab-btn-bereiche"
                 onclick="switchMainTab('bereiche')"
                 title="Fahrpläne und Zugbildungspläne anzeigen">Fpl und Zp</button>
+            <button class="main-tab" id="tab-btn-kbs"
+                onclick="switchMainTab('kbs')"
+                title="Kursbuchstrecken anzeigen">KBS</button>
             <button class="main-tab" id="tab-btn-modellgarnituren"
                 onclick="switchMainTab('modellgarnituren')"
                 title="Modellgarnituren anzeigen">Modellgarnituren</button>
@@ -1097,8 +1163,13 @@
         <div id="tab-panels">
             <!-- Panel: Stellwerk -->
             <div class="tab-panel" id="panel-stellwerk">
-                <div id="stellwerk-content">
-                    <!-- Stellwerk Inhalt -->
+                <div id="stellwerk-content" style="display:flex; justify-content:center; align-items:center; height:100%; width:100%;">
+                    <!-- Baustellenschild Stellwerk Lichterfelde Ost -->
+                    <div style="background: #ffeb3b; border: 4px double #d32f2f; color: #111; padding: 25px 40px; border-radius: 8px; text-align: center; box-shadow: 0 6px 18px rgba(0,0,0,0.25); font-family: 'Segoe UI', Arial, sans-serif; max-width: 500px;">
+                        <div style="font-size: 16px; font-weight: bold; text-transform: uppercase; color: #d32f2f; letter-spacing: 1px; margin-bottom: 8px;">Hier entsteht</div>
+                        <div style="font-size: 22px; font-weight: 900; line-height: 1.3; margin-bottom: 12px; color: #000;">DAS STELLWERK LICHTERFELDE OST</div>
+                        <div style="font-size: 14px; font-weight: 600; color: #444; border-top: 2px dashed #999; padding-top: 10px;">Bauherr: RBauD Berlin</div>
+                    </div>
                 </div>
             </div>
 
@@ -1134,7 +1205,7 @@
                         <div class="col-header">
                             <div class="col-header-row1 center"><strong>Karte</strong></div>
                         </div>
-                        <div class="col-content" style="padding:0;">
+                        <div class="col-content" style="padding:0; position:relative;">
                             <div id="col3-map"></div>
                         </div>
                     </div>
@@ -1161,6 +1232,30 @@
                             <div class="col-header-row2 flex-end" id="filter-row-5"></div>
                         </div>
                         <div class="col-content"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel: KBS -->
+            <div class="tab-panel" id="panel-kbs">
+                <div id="kbs-col-left">
+                    <div class="kbs-header">Kursbuchstrecken</div>
+                    <ul class="kbs-list" id="kbs-list-container"></ul>
+                </div>
+                <div id="kbs-col-mid">
+                    <div class="kbs-header" id="kbs-stations-header">Bahnhöfe</div>
+                    <ul class="kbs-list" id="kbs-stations-container"></ul>
+                </div>
+                <div id="kbs-col-right">
+                    <div class="col-header" style="width: 100%; border-bottom: 1px solid #bbb;">
+                        <div class="col-header-row1" style="justify-content: center; display: flex;">
+                            <span class="col-tab active" id="kbs-tab-orm" onclick="switchKbsMapTab('orm')">Karte</span>
+                            <span class="col-tab" id="kbs-tab-img" onclick="switchKbsMapTab('img')">KBS-Karte</span>
+                        </div>
+                    </div>
+                    <div style="flex: 1; width: 100%; position: relative; display: flex; justify-content: center; align-items: center; overflow: hidden;">
+                        <img id="kbs-map-img" src="" style="display:none;" onerror="this.onerror=null; this.src='data/karten/KBSFehlt.jpg';">
+                        <div id="kbs-orm-map" style="display:block; width:100%; height:100%;"></div>
                     </div>
                 </div>
             </div>
@@ -1283,16 +1378,6 @@
                         <span class="col-tab active" id="inv-tab-loks" onclick="switchInvTab('loks')">Loks</span>
                         <span class="col-tab" id="inv-tab-wagen" onclick="switchInvTab('wagen')">Wagen</span>
                     </div>
-                    <!-- Filter-Bar Loks -->
-                    <div id="inv-loks-filter" class="inv-filter-bar">
-                        <input type="text" id="inv-loks-id-filter" placeholder="ID…" oninput="invLoksRender()">
-                        <input type="text" id="inv-loks-art-filter" placeholder="Artikelnummer…" oninput="invLoksRender()">
-                        <div id="inv-loks-her-btns" class="inv-her-btns"></div>
-                        <button class="inv-reset-btn" onclick="invLoksReset()" title="Filter zurücksetzen">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 .49-3.5"></path></svg>
-                        </button>
-                        <span id="inv-loks-count" class="inv-count"></span>
-                    </div>
                     <!-- Filter-Bar Wagen -->
                     <div id="inv-wagen-filter" class="inv-filter-bar" style="display:none;">
                         <input type="text" id="inv-wagen-id-filter" placeholder="ID…" oninput="invWagenRender()">
@@ -1306,13 +1391,57 @@
                     <!-- Tabellen -->
                     <div id="inv-loks-view" style="flex:1; overflow-y:auto;">
                         <table class="inv-table" id="inv-loks-table">
-                            <thead><tr>
-                                <th>ID</th>
-                                <th onclick="invSort('loks', 'gattung')" style="cursor:pointer; user-select:none; color:#333;" title="Sortieren">Betriebs-Nr./Gattung<span class="sort-arrow" id="sort-loks-gattung" style="color:#888;"> ↕</span></th>
-                                <th>Bild</th>
-                                <th onclick="invSort('loks', 'her')" style="cursor:pointer; user-select:none; color:#333;" title="Sortieren">Hersteller<span class="sort-arrow" id="sort-loks-her" style="color:#888;"> ↕</span></th>
-                                <th onclick="invSort('loks', 'art')" style="cursor:pointer; user-select:none; color:#333;" title="Sortieren">Artikelnummer<span class="sort-arrow" id="sort-loks-art" style="color:#888;"> ↕</span></th>
-                            </tr></thead>
+                            <colgroup>
+                                <col style="width: 50px;">  <!-- ID -->
+                                <col style="width: 75px;">  <!-- Baureihe -->
+                                <col style="width: 105px;"> <!-- Betriebs-Nr. -->
+                                <col style="width: 80px;">  <!-- RBD -->
+                                <col style="width: 80px;">  <!-- BW -->
+                                <col style="width: 120px;"> <!-- Bild -->
+                                <col style="width: 65px;">  <!-- DCC-Adr. -->
+                                <col style="width: 75px;">  <!-- Decoder -->
+                                <col style="width: 85px;">  <!-- Schnittstelle -->
+                                <col style="width: 180px;"> <!-- Hersteller -->
+                                <col style="width: 95px;">  <!-- Artikelnummer -->
+                                <col style="width: 55px;">  <!-- LüP -->
+                            </colgroup>
+                            <thead>
+                                <tr id="inv-loks-filter-row" style="background:#e8e8e8;">
+                                    <th><input type="text" id="inv-loks-id-filter" placeholder="ID…" oninput="invLoksRender()" style="width:90%; font-size:11px;"></th>
+                                    <th></th>
+                                    <th><input type="text" id="inv-loks-gat-filter" placeholder="Betriebs-Nr.…" oninput="invLoksRender()" style="width:90%; font-size:11px;"></th>
+                                    <th><input type="text" id="inv-loks-rbd-filter" placeholder="RBD…" oninput="invLoksRender()" style="width:90%; font-size:11px;"></th>
+                                    <th><input type="text" id="inv-loks-bw-filter" placeholder="BW…" oninput="invLoksRender()" style="width:90%; font-size:11px;"></th>
+                                    <th style="vertical-align:middle;">
+                                        <div style="display:flex; align-items:center; gap:4px;">
+                                            <button class="inv-reset-btn" onclick="invLoksReset()" title="Filter zurücksetzen">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 .49-3.5"></path></svg>
+                                            </button>
+                                            <span id="inv-loks-count" class="inv-count"></span>
+                                        </div>
+                                    </th>
+                                    <th><input type="text" id="inv-loks-dcc-filter" placeholder="DCC…" oninput="invLoksRender()" style="width:90%; font-size:11px;"></th>
+                                    <th><input type="text" id="inv-loks-dec-filter" placeholder="Decoder…" oninput="invLoksRender()" style="width:90%; font-size:11px;"></th>
+                                    <th><input type="text" id="inv-loks-sch-filter" placeholder="Schnittstelle…" oninput="invLoksRender()" style="width:90%; font-size:11px;"></th>
+                                    <th style="text-align:left;"><div id="inv-loks-her-btns" class="inv-her-btns"></div></th>
+                                    <th><input type="text" id="inv-loks-art-filter" placeholder="Artikelnummer…" oninput="invLoksRender()" style="width:90%; font-size:11px;"></th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <th onclick="invSort('loks', 'idVal')" style="cursor:pointer; user-select:none; color:#333;" title="Sortieren">ID<span class="sort-arrow" id="sort-loks-idVal" style="color:#888;"> ↕</span></th>
+                                    <th onclick="invSort('loks', 'baureihe')" style="cursor:pointer; user-select:none; color:#333;" title="Sortieren">Baureihe<span class="sort-arrow" id="sort-loks-baureihe" style="color:#888;"> ↕</span></th>
+                                    <th onclick="invSort('loks', 'gattung')" style="cursor:pointer; user-select:none; color:#333;" title="Sortieren">Betriebs-Nr.<span class="sort-arrow" id="sort-loks-gattung" style="color:#888;"> ↕</span></th>
+                                    <th onclick="invSort('loks', 'rbd')" style="cursor:pointer; user-select:none; color:#333;" title="Sortieren">RBD<span class="sort-arrow" id="sort-loks-rbd" style="color:#888;"> ↕</span></th>
+                                    <th onclick="invSort('loks', 'bw')" style="cursor:pointer; user-select:none; color:#333;" title="Sortieren">BW<span class="sort-arrow" id="sort-loks-bw" style="color:#888;"> ↕</span></th>
+                                    <th>Bild</th>
+                                    <th onclick="invSort('loks', 'dcc')" style="cursor:pointer; user-select:none; color:#333;" title="Sortieren">DCC-Adr.<span class="sort-arrow" id="sort-loks-dcc" style="color:#888;"> ↕</span></th>
+                                    <th onclick="invSort('loks', 'decoder')" style="cursor:pointer; user-select:none; color:#333;" title="Sortieren">Decoder<span class="sort-arrow" id="sort-loks-decoder" style="color:#888;"> ↕</span></th>
+                                    <th onclick="invSort('loks', 'schnittstelle')" style="cursor:pointer; user-select:none; color:#333;" title="Sortieren">Schnittstelle<span class="sort-arrow" id="sort-loks-schnittstelle" style="color:#888;"> ↕</span></th>
+                                    <th onclick="invSort('loks', 'her')" style="cursor:pointer; user-select:none; color:#333;" title="Sortieren">Hersteller<span class="sort-arrow" id="sort-loks-her" style="color:#888;"> ↕</span></th>
+                                    <th onclick="invSort('loks', 'art')" style="cursor:pointer; user-select:none; color:#333;" title="Sortieren">Artikelnummer<span class="sort-arrow" id="sort-loks-art" style="color:#888;"> ↕</span></th>
+                                    <th onclick="invSort('loks', 'luemp')" style="cursor:pointer; user-select:none; color:#333;" title="Sortieren">LüP<span class="sort-arrow" id="sort-loks-luemp" style="color:#888;"> ↕</span></th>
+                                </tr>
+                            </thead>
                             <tbody></tbody>
                         </table>
                     </div>
@@ -1378,9 +1507,18 @@
 
             <div class="controls-right">
                 <label><input type="checkbox" id="info-checkbox" checked> Wageninformation</label>
+                <label style="margin-left:15px;" title="Obwohl weder Anhalter noch Dresdner Bahn elektrifiziert waren, dennoch E-Loks fahren lassen, sofern diese Option gewählt ist."><input type="checkbox" id="etraktion-checkbox"> E-Traktion</label>
             </div>
         </div>
-        <div id="tracks-area">
+        <div id="tracks-area" style="position: relative;">
+            <!-- Kompaktes Baustellenschild Overlay für Berlin Anhalter Bf -->
+            <div id="baustelle-anhalter-overlay" style="display: none; position: absolute; inset: 0; background: rgba(244, 244, 244, 0.92); z-index: 100; justify-content: center; align-items: center;">
+                <div style="background: #ffeb3b; border: 3px double #d32f2f; color: #111; padding: 10px 20px; border-radius: 6px; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.2); font-family: 'Segoe UI', Arial, sans-serif;">
+                    <div style="font-size: 12px; font-weight: bold; text-transform: uppercase; color: #d32f2f; letter-spacing: 0.5px; margin-bottom: 2px;">Hier entsteht</div>
+                    <div style="font-size: 15px; font-weight: 900; color: #000; margin-bottom: 4px;">die Zuganimation Berlin Anh Bf</div>
+                    <div style="font-size: 11px; font-weight: 600; color: #444; border-top: 1px dashed #888; padding-top: 4px;">Bauherr: RBauD Berlin</div>
+                </div>
+            </div>
             <div class="track-container" id="track-top-container">
                 <div id="countdown-top" class="countdown-label"></div>
                 <div class="track"></div>
@@ -1406,6 +1544,38 @@
     <!-- Kontextmenü -->
     <div id="ctx-menu">
         <div class="ctx-item" id="ctx-item-jumptime">&#9201; Zeit auf diesen Zug</div>
+    </div>
+
+    <!-- Einstellungen Modal Popup -->
+    <div id="settings-popup">
+        <div class="settings-content">
+            <h3>Einstellungen</h3>
+            <div class="settings-row">
+                <label for="setting-default-main-tab">Standard Haupt-Tab beim Start:</label>
+                <select id="setting-default-main-tab" onchange="onSettingMainTabChange()">
+                    <option value="stellwerk">Stellwerk</option>
+                    <option value="bereiche">Fpl und Zp</option>
+                    <option value="modellgarnituren">Modellgarnituren</option>
+                    <option value="rollmaterial">Rollmaterial</option>
+                </select>
+            </div>
+            <div class="settings-row" id="setting-sub-tab-row">
+                <label for="setting-default-sub-tab">Standard Unter-Tab beim Start:</label>
+                <select id="setting-default-sub-tab"></select>
+            </div>
+            <div class="settings-row">
+                <label for="setting-default-view">Standard Animationsart (Zugdarstellung):</label>
+                <select id="setting-default-view">
+                    <option value="schematic">Schematisch</option>
+                    <option value="real">Realzug</option>
+                    <option value="model">Modellzug</option>
+                </select>
+            </div>
+            <div class="settings-actions">
+                <button onclick="closeSettings()">Abbrechen</button>
+                <button onclick="saveSettings()" style="background:#1a56db; color:#fff; border:none; font-weight:bold;">Speichern</button>
+            </div>
+        </div>
     </div>
 
     <script>
@@ -1546,6 +1716,152 @@
         requestAnimationFrame(tickSimulation);
 
         // --- Main Tab switching ---
+        function initKbsTab() {
+            const container = document.getElementById('kbs-list-container');
+            if (!container) return;
+            container.innerHTML = '';
+            if (window._kbsMap) {
+                const kbsKeys = Object.keys(window._kbsMap).sort();
+                for (const kbsId of kbsKeys) {
+                    const li = document.createElement('li');
+                    li.className = 'kbs-list-item';
+                    li.textContent = 'KBS ' + kbsId;
+                    li.onclick = () => selectKbsForView(kbsId, li);
+                    container.appendChild(li);
+                }
+            }
+        }
+
+        function switchKbsMapTab(tab) {
+            const tabOrm = document.getElementById('kbs-tab-orm');
+            const tabImg = document.getElementById('kbs-tab-img');
+            if (tabOrm) tabOrm.classList.toggle('active', tab === 'orm');
+            if (tabImg) tabImg.classList.toggle('active', tab === 'img');
+            
+            const ormMap = document.getElementById('kbs-orm-map');
+            const img = document.getElementById('kbs-map-img');
+            
+            if (tab === 'orm') {
+                if (ormMap) ormMap.style.display = 'block';
+                if (img) img.style.display = 'none';
+                if (window._kbs_orm_map) {
+                    window._kbs_orm_map.invalidateSize();
+                }
+            } else {
+                if (ormMap) ormMap.style.display = 'none';
+                if (img) img.style.display = 'block';
+            }
+        }
+
+        function selectKbsForView(kbsId, liElement) {
+            // Update active state in list
+            const container = document.getElementById('kbs-list-container');
+            const items = container.querySelectorAll('.kbs-list-item');
+            items.forEach(it => it.classList.remove('active'));
+            if (liElement) liElement.classList.add('active');
+
+            // Populate stations
+            const stationsContainer = document.getElementById('kbs-stations-container');
+            stationsContainer.innerHTML = '';
+            const header = document.getElementById('kbs-stations-header');
+            header.textContent = 'Bahnhöfe KBS ' + kbsId;
+
+            const stations = window._kbsMap[kbsId] || [];
+            // Sort by km
+            stations.sort((a, b) => a.km - b.km);
+            
+            for (const st of stations) {
+                const li = document.createElement('li');
+                li.className = 'kbs-list-item';
+                li.style.cursor = 'pointer';
+                li.textContent = st.km.toFixed(1).replace('.', ',') + ' km - ' + st.bahnhof;
+                li.onclick = () => showKbsStationMap(st.bahnhof, li);
+                stationsContainer.appendChild(li);
+            }
+
+            // Draw route on ORM map
+            if (!window._kbs_orm_map) {
+                initKbsOrmMap();
+            }
+            if (!window._kbs_orm_layerGroup) {
+                window._kbs_orm_layerGroup = L.layerGroup().addTo(window._kbs_orm_map);
+            }
+            window._kbs_orm_layerGroup.clearLayers();
+            window._kbs_orm_markers = {}; // reset markers map
+
+            const latlngs = [];
+            for (const st of stations) {
+                const geo = window._geoMap[st.bahnhof];
+                if (geo) {
+                    const ll = [geo.lat, geo.lon];
+                    latlngs.push(ll);
+                    const marker = L.circleMarker(ll, {radius: 6, color: '#d32f2f', fillColor: '#fff', fillOpacity: 1, weight: 2})
+                     .bindPopup(`<b>${st.bahnhof}</b> (${st.km.toFixed(1).replace('.', ',')} km)`)
+                     .addTo(window._kbs_orm_layerGroup);
+                    window._kbs_orm_markers[st.bahnhof] = marker;
+                }
+            }
+
+            if (latlngs.length > 0) {
+                L.polyline(latlngs, {color: '#d32f2f', weight: 4, opacity: 0.8}).addTo(window._kbs_orm_layerGroup);
+                window._kbs_orm_map.fitBounds(L.latLngBounds(latlngs), {padding: [30, 30]});
+            }
+
+            // Update Image src
+            const img = document.getElementById('kbs-map-img');
+            if (img) img.src = 'data/karten/KBS' + kbsId + '.jpg';
+            
+            // Switch to ORM map tab
+            switchKbsMapTab('orm');
+        }
+
+        function initKbsOrmMap() {
+            if (window._kbs_orm_map) return;
+            const mapEl = document.getElementById('kbs-orm-map');
+            if (!mapEl) return;
+            
+            // default center Berlin
+            const map = L.map('kbs-orm-map', {
+                center: [52.52, 13.40],
+                zoom: 14,
+                zoomControl: true
+            });
+            window._kbs_orm_map = map;
+            window._kbs_orm_marker = null;
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; OpenStreetMap',
+                maxZoom: 19
+            }).addTo(map);
+
+            L.tileLayer('https://{s}.tile.openrailwaymap.org/standard/{z}/{x}/{y}.png', {
+                attribution: '&copy; OpenRailwayMap',
+                maxZoom: 19,
+                opacity: 0.8
+            }).addTo(map);
+        }
+
+        function showKbsStationMap(bfName, liElement) {
+            // Update active state in stations list
+            const container = document.getElementById('kbs-stations-container');
+            const items = container.querySelectorAll('.kbs-list-item');
+            items.forEach(it => it.classList.remove('active'));
+            if (liElement) liElement.classList.add('active');
+
+            switchKbsMapTab('orm');
+            
+            if (!window._kbs_orm_map) return;
+            
+            // Re-center map to the station if marker exists
+            if (window._kbs_orm_markers && window._kbs_orm_markers[bfName]) {
+                const marker = window._kbs_orm_markers[bfName];
+                window._kbs_orm_map.setView(marker.getLatLng(), 15);
+                marker.openPopup();
+            } else {
+                console.warn("No marker/geo data for", bfName);
+            }
+        }
+
         window.switchMainTab = function(name) {
             document.querySelectorAll('.main-tab').forEach(btn => btn.classList.remove('active'));
             document.querySelectorAll('.tab-panel').forEach(panel => panel.classList.remove('active'));
@@ -1607,8 +1923,15 @@
                 const header = lines[0].split('\t').map(h => h.trim());
                 const idxId  = header.indexOf('Id');
                 const idxGat = header.indexOf('Gattung');
+                const idxBau = header.indexOf('Baureihe');
+                const idxDcc = header.indexOf('DCC-Adr.');
+                const idxDec = header.indexOf('Decoder');
+                const idxSch = header.indexOf('Schnittstelle');
                 const idxHer = header.indexOf('Hersteller');
                 const idxArt = header.indexOf('Artikelnummer');
+                const idxRbd = header.indexOf('RBD');
+                const idxBw  = header.indexOf('BW');
+                const idxLup = header.findIndex(h => h.includes('L') && h.includes('P'));
                 _loksData = [];
                 for (let i = 1; i < lines.length; i++) {
                     const cols = lines[i].split('\t');
@@ -1618,8 +1941,15 @@
                     _loksData.push({
                         id,
                         gattung: (cols[idxGat] || '').trim(),
+                        baureihe: idxBau !== -1 ? (cols[idxBau] || '').trim() : '',
+                        dcc: idxDcc !== -1 ? (cols[idxDcc] || '').trim() : '',
+                        decoder: idxDec !== -1 ? (cols[idxDec] || '').trim() : '',
+                        schnittstelle: idxSch !== -1 ? (cols[idxSch] || '').trim() : '',
                         her: (cols[idxHer] || '').trim(),
                         art: (cols[idxArt] || '').trim(),
+                        rbd: idxRbd !== -1 ? (cols[idxRbd] || '').trim() : '',
+                        bw: idxBw !== -1 ? (cols[idxBw] || '').trim() : '',
+                        luemp: idxLup !== -1 ? (cols[idxLup] || '').trim() : ''
                     });
                 }
                 // Bilder vorab prüfen für Sortierung
@@ -2537,6 +2867,128 @@
         infoCheckbox.checked = true;
         document.body.classList.add('show-info');
 
+        // Settings Popup Logic & LocalStorage Configuration
+        const subTabOptionsMap = {
+            'stellwerk': [],
+            'bereiche': [
+                { value: 'laufweg', label: 'Laufweg' },
+                { value: 'zp', label: 'Zp' }
+            ],
+            'modellgarnituren': [
+                { value: 'wagen', label: 'Wagen' },
+                { value: 'loks', label: 'Loks' }
+            ],
+            'rollmaterial': [
+                { value: 'loks', label: 'Loks' },
+                { value: 'wagen', label: 'Wagen' }
+            ]
+        };
+
+        window.onSettingMainTabChange = function(selectedSubTabVal) {
+            const mainTab = document.getElementById('setting-default-main-tab').value;
+            const subRow = document.getElementById('setting-sub-tab-row');
+            const subSelect = document.getElementById('setting-default-sub-tab');
+            const opts = subTabOptionsMap[mainTab] || [];
+            
+            subSelect.innerHTML = '';
+            if (opts.length > 0) {
+                subRow.style.display = 'flex';
+                opts.forEach(opt => {
+                    const el = document.createElement('option');
+                    el.value = opt.value;
+                    el.textContent = opt.label;
+                    subSelect.appendChild(el);
+                });
+                if (selectedSubTabVal) {
+                    subSelect.value = selectedSubTabVal;
+                }
+            } else {
+                subRow.style.display = 'none';
+            }
+        };
+
+        window.openSettings = function() {
+            const savedMainTab = localStorage.getItem('drg39_default_main_tab') || 'bereiche';
+            const savedSubTab = localStorage.getItem('drg39_default_sub_tab') || (savedMainTab === 'bereiche' ? 'laufweg' : (savedMainTab === 'modellgarnituren' ? 'wagen' : 'loks'));
+            const savedView = localStorage.getItem('drg39_default_view_mode') || 'schematic';
+            
+            const mainSelect = document.getElementById('setting-default-main-tab');
+            if (mainSelect) mainSelect.value = savedMainTab;
+            
+            onSettingMainTabChange(savedSubTab);
+            
+            const viewSelect = document.getElementById('setting-default-view');
+            if (viewSelect) viewSelect.value = savedView;
+            
+            document.getElementById('settings-popup').classList.add('visible');
+        };
+
+        window.closeSettings = function() {
+            document.getElementById('settings-popup').classList.remove('visible');
+        };
+
+        window.saveSettings = function() {
+            const mainTab = document.getElementById('setting-default-main-tab')?.value || 'bereiche';
+            const subTab = document.getElementById('setting-default-sub-tab')?.value || '';
+            const viewMode = document.getElementById('setting-default-view')?.value || 'schematic';
+
+            localStorage.setItem('drg39_default_main_tab', mainTab);
+            localStorage.setItem('drg39_default_sub_tab', subTab);
+            localStorage.setItem('drg39_default_view_mode', viewMode);
+
+            // Apply view mode immediately
+            const targetRadio = document.querySelector(`input[name="view-mode"][value="${viewMode}"]`);
+            if (targetRadio && !targetRadio.checked) {
+                targetRadio.checked = true;
+                targetRadio.dispatchEvent(new Event('change'));
+            }
+
+            closeSettings();
+        };
+
+        // Boot-up initialization from Settings
+        window.addEventListener('DOMContentLoaded', () => {
+            const defaultMainTab = localStorage.getItem('drg39_default_main_tab') || 'bereiche';
+            const defaultSubTab = localStorage.getItem('drg39_default_sub_tab');
+            const defaultViewMode = localStorage.getItem('drg39_default_view_mode') || 'schematic';
+
+            // Set initial radio
+            const initialRadio = document.querySelector(`input[name="view-mode"][value="${defaultViewMode}"]`);
+            if (initialRadio) {
+                initialRadio.checked = true;
+            }
+
+            // Switch to default main tab
+            if (window.switchMainTab) {
+                window.switchMainTab(defaultMainTab);
+            }
+
+            // Apply sub tab if relevant
+            if (defaultSubTab) {
+                if (defaultMainTab === 'bereiche') {
+                    window.switchTab(2, defaultSubTab);
+                    window.switchTab(4, defaultSubTab);
+                } else if (defaultMainTab === 'modellgarnituren') {
+                    window.switchMgTab(defaultSubTab);
+                } else if (defaultMainTab === 'rollmaterial') {
+                    window.switchInvTab(defaultSubTab);
+                }
+            }
+        });
+
+        // Anhalter Bf Baustellenschild Overlay toggle logic
+        const stationSelect = document.getElementById('station-select');
+        const baustelleOverlay = document.getElementById('baustelle-anhalter-overlay');
+        function updateStationOverlay() {
+            if (stationSelect && baustelleOverlay) {
+                baustelleOverlay.style.display = (stationSelect.value === 'Berlin Anhalter Bf') ? 'flex' : 'none';
+            }
+        }
+        if (stationSelect) {
+            stationSelect.addEventListener('change', updateStationOverlay);
+            updateStationOverlay();
+        }
+
         document.querySelectorAll('input[name="view-mode"]').forEach(radio => {
             radio.addEventListener('change', () => {
                 if (window.animTop) window.animTop.rebuildVisuals();
@@ -2572,7 +3024,7 @@
             }
 
             // Lokomotive am Anfang
-            const lokString = window._lokMap && window._lokMap[z.rawZugNr] ? window._lokMap[z.rawZugNr] : '';
+            const lokString = window._getRandomLok ? window._getRandomLok(z.rawZugNr) : (window._lokMap && window._lokMap[z.rawZugNr] ? window._lokMap[z.rawZugNr] : '');
             if (lokString !== '-') {
                 const lokDiv = document.createElement('div');
                 lokDiv.className = 'vehicle';
@@ -2714,10 +3166,12 @@ ${von} – ${nach}`;
         // --- Fahrplan Logic ---
         async function loadFahrplan() {
             try {
-                const [zuegeRes, abfahrtenRes, zpaRes, photosRes] = await Promise.all([
+                const [zuegeRes, abfahrtenRes, zpaRes, kbsRes, geoRes, photosRes] = await Promise.all([
                     fetch('data/fahrplan/zuege.csv'),
                     fetch('data/fahrplan/abfahrten.csv'),
                     fetch('data/fahrplan/zpa.csv'),
+                    fetch('data/fahrplan/kbs.csv').catch(() => null),
+                    fetch('data/fahrplan/geo.csv').catch(() => null),
                     fetch('data/img/vorbild/train_photos.json').catch(() => null)
                 ]);
 
@@ -2735,6 +3189,59 @@ ${von} – ${nach}`;
                 const abfahrtenText = decoder.decode(abfahrtenBuffer);
                 const zpaText = decoder.decode(zpaBuffer);
 
+                // Parse geo.csv (Bahnhof -> {lat, lon})
+                window._geoMap = {};
+                if (geoRes && geoRes.ok) {
+                    const geoBuf = await geoRes.arrayBuffer();
+                    const geoText = decoder.decode(geoBuf);
+                    const geoLines = geoText.split(/\r?\n/);
+                    for (let i = 1; i < geoLines.length; i++) {
+                        const line = geoLines[i].trim();
+                        if (!line) continue;
+                        const cols = line.split('\t');
+                        if (cols.length >= 3) {
+                            const name = cols[0].trim();
+                            const latStr = cols[1].trim().replace(',', '.');
+                            const lonStr = cols[2].trim().replace(',', '.');
+                            const lat = parseFloat(latStr);
+                            const lon = parseFloat(lonStr);
+                            if (!isNaN(lat) && !isNaN(lon)) {
+                                window._geoMap[name] = { lat, lon };
+                            }
+                        }
+                    }
+                }
+
+                // Parse kbs.csv (KBS -> array of {km, bahnhof})
+                // kbs.csv is Windows-1252 encoded (not UTF-8!)
+                window._kbsMap = {};
+                window._stationKbsSetMap = {}; // Bahnhof -> Set(kbsName)
+                if (kbsRes && kbsRes.ok) {
+                    const kbsBuf = await kbsRes.arrayBuffer();
+                    const kbsDecoder1252 = new TextDecoder('windows-1252');
+                    const kbsText = kbsDecoder1252.decode(kbsBuf);
+                    const kbsLines = kbsText.split(/\r?\n/);
+                    for (let i = 1; i < kbsLines.length; i++) {
+                        const line = kbsLines[i].trim();
+                        if (!line) continue;
+                        const cols = line.split('\t');
+                        if (cols.length >= 3) {
+                            const kbsName = cols[0].trim();
+                            const kmStr = cols[1].trim().replace(',', '.');
+                            const bfName = cols[2].trim();
+                            const km = parseFloat(kmStr);
+                            if (!window._kbsMap[kbsName]) window._kbsMap[kbsName] = [];
+                            window._kbsMap[kbsName].push({ km: isNaN(km) ? 0 : km, bahnhof: bfName });
+
+                            if (!window._stationKbsSetMap[bfName]) window._stationKbsSetMap[bfName] = new Set();
+                            window._stationKbsSetMap[bfName].add(kbsName);
+                        }
+                    }
+                }
+
+                // init KBS tab
+                initKbsTab();
+
                 // Parse zuege.csv
                 const zuegeLines = zuegeText.split('\n');
                 const zuegeMap = {};
@@ -2751,6 +3258,23 @@ ${von} – ${nach}`;
                     }
                 }
                 window._lokMap = lokMap;
+
+                window._getRandomLok = function(zugNr) {
+                    const rawLok = window._lokMap && window._lokMap[zugNr] ? window._lokMap[zugNr] : '';
+                    if (!rawLok || rawLok === '-') return rawLok;
+                    const cb = document.getElementById('etraktion-checkbox');
+                    const isETraktion = cb ? cb.checked : false;
+                    
+                    const parts = rawLok.split(';');
+                    let listStr = parts[0];
+                    if (isETraktion && parts.length > 1) {
+                        listStr = parts[1];
+                    }
+                    
+                    const loks = listStr.split(',').map(s => s.trim()).filter(Boolean);
+                    if (loks.length === 0) return '';
+                    return loks[Math.floor(Math.random() * loks.length)];
+                };
                 
                 // Parse train_photos.json
                 window._trainPhotos = {};
@@ -2776,7 +3300,8 @@ ${von} – ${nach}`;
                             ankunft: cols[1].trim(),
                             abfahrt: cols[2].trim(),
                             haelt: cols[3].trim(),
-                            bahnhof: cols[4].trim()
+                            bahnhof: cols[4].trim(),
+                            kbsHinweis: cols[5] ? cols[5].trim() : ''
                         });
                     }
                 }
@@ -2941,6 +3466,94 @@ ${von} – ${nach}`;
                     } else if (area === 5) {
                         // nach Ahb: Zug kommt von Halle
                         document.getElementById('info-col4').textContent = `${zugName} von ${firstRow.bahnhof}`;
+                    }
+
+                    // --- Zeichne ausgewählten Zuglauf auf der Karte ---
+                    if (window._orm_map) {
+                        const map = window._orm_map;
+                        // Vorheriges Layer entfernen
+                        if (window._trainRouteLayer) {
+                            map.removeLayer(window._trainRouteLayer);
+                        }
+                        const layerGroup = L.layerGroup();
+                        window._trainRouteLayer = layerGroup;
+
+                        // Vollständigen Weg inklusive Zwischenstationen über KBS berechnen
+                        const fullPathStations = [];
+                        for (let i = 0; i < rows.length; i++) {
+                            const curRow = rows[i];
+                            const curBf = curRow.bahnhof;
+
+                            if (fullPathStations.length === 0) {
+                                fullPathStations.push({ name: curBf, isHalt: curRow.haelt !== 'D' });
+                            } else {
+                                const prevBf = fullPathStations[fullPathStations.length - 1].name;
+                                const kbsSetPrev = window._stationKbsSetMap ? (window._stationKbsSetMap[prevBf] || new Set()) : new Set();
+                                const kbsSetCur  = window._stationKbsSetMap ? (window._stationKbsSetMap[curBf] || new Set()) : new Set();
+
+                                let commonKbs = [...kbsSetPrev].filter(k => kbsSetCur.has(k));
+                                if (commonKbs.length > 1 && curRow.kbsHinweis && window._kbsMap[curRow.kbsHinweis]) {
+                                    commonKbs = [curRow.kbsHinweis];
+                                }
+
+                                if (commonKbs.length > 0) {
+                                    const chosenKbs = commonKbs[0];
+                                    const kbsElements = window._kbsMap[chosenKbs] || [];
+                                    const idxPrev = kbsElements.findIndex(e => e.bahnhof === prevBf);
+                                    const idxCur  = kbsElements.findIndex(e => e.bahnhof === curBf);
+
+                                    if (idxPrev !== -1 && idxCur !== -1) {
+                                        const step = idxPrev <= idxCur ? 1 : -1;
+                                        for (let k = idxPrev + step; k !== idxCur + step; k += step) {
+                                            const intermediateBf = kbsElements[k].bahnhof;
+                                            fullPathStations.push({
+                                                name: intermediateBf,
+                                                isHalt: (intermediateBf === curBf) ? (curRow.haelt !== 'D') : false
+                                            });
+                                        }
+                                    } else {
+                                        fullPathStations.push({ name: curBf, isHalt: curRow.haelt !== 'D' });
+                                    }
+                                } else {
+                                    fullPathStations.push({ name: curBf, isHalt: curRow.haelt !== 'D' });
+                                }
+                            }
+                        }
+
+                        // Geo-Koordinaten auflösen
+                        const latLngs = [];
+                        fullPathStations.forEach(s => {
+                            const geo = window._geoMap ? window._geoMap[s.name] : null;
+                            if (geo) {
+                                latLngs.push({ lat: geo.lat, lng: geo.lon, name: s.name, isHalt: s.isHalt });
+                            }
+                        });
+
+                        if (latLngs.length > 0) {
+                            // Linie zeichnen
+                            const polyline = L.polyline(latLngs.map(p => [p.lat, p.lng]), {
+                                color: '#d32f2f',
+                                weight: 4,
+                                opacity: 0.85
+                            }).addTo(layerGroup);
+
+                            // Stationen als Marker mit Tooltip / Popup markieren
+                            latLngs.forEach((p, idx) => {
+                                const isEnd = (idx === 0 || idx === latLngs.length - 1);
+                                const radius = isEnd ? 7 : (p.isHalt ? 5 : 3);
+                                const circle = L.circleMarker([p.lat, p.lng], {
+                                    radius: radius,
+                                    fillColor: isEnd ? '#d32f2f' : (p.isHalt ? '#1a56db' : '#888'),
+                                    color: '#fff',
+                                    weight: 1.5,
+                                    fillOpacity: 0.9
+                                }).bindTooltip(`<b>${p.name}</b>`, { permanent: false, direction: 'top' });
+                                circle.addTo(layerGroup);
+                            });
+
+                            layerGroup.addTo(map);
+                            map.fitBounds(polyline.getBounds(), { padding: [30, 30] });
+                        }
                     }
 
                     const tState = tabState[targetArea];
@@ -3240,7 +3853,7 @@ ${von} – ${nach}`;
             }
 
             _buildZugLok(el, zugNr, mirror = false) {
-                const lokString = window._lokMap && window._lokMap[zugNr] ? window._lokMap[zugNr] : '';
+                const lokString = window._getRandomLok ? window._getRandomLok(zugNr) : (window._lokMap && window._lokMap[zugNr] ? window._lokMap[zugNr] : '');
                 if (lokString === '-') {
                     el.style.display = 'none';
                     this.zlWidth = 0;
@@ -4344,8 +4957,8 @@ ${von} – ${nach}`;
             window._invActiveTab = tab;
             document.getElementById('inv-tab-loks').classList.toggle('active', tab === 'loks');
             document.getElementById('inv-tab-wagen').classList.toggle('active', tab === 'wagen');
-            document.getElementById('inv-loks-filter').style.display = tab === 'loks' ? '' : 'none';
-            document.getElementById('inv-wagen-filter').style.display = tab === 'wagen' ? '' : 'none';
+            const wagenFilter = document.getElementById('inv-wagen-filter');
+            if (wagenFilter) wagenFilter.style.display = tab === 'wagen' ? '' : 'none';
             document.getElementById('inv-loks-view').style.display = tab === 'loks' ? 'block' : 'none';
             document.getElementById('inv-wagen-view').style.display = tab === 'wagen' ? 'block' : 'none';
             
@@ -4451,10 +5064,10 @@ ${von} – ${nach}`;
             filtered.forEach(item => {
                 const { entry, idVal, gattung, her } = item;
                 count++;
-                let herDisplay = her;
-                let fullName = her;
+                let fullName = (window._herstellerNames && window._herstellerNames[her]) ? window._herstellerNames[her] : her;
+                let herDisplay = fullName;
                 if (window._herstellerUrls && window._herstellerUrls[her]) {
-                    herDisplay += ` <a href="${window._herstellerUrls[her]}" target="_blank" title="Zu ${her}" style="text-decoration:none; margin-left:4px;">🔗</a>`;
+                    herDisplay += ` <a href="${window._herstellerUrls[her]}" target="_blank" title="Zu ${fullName}" style="text-decoration:none; margin-left:4px;">🔗</a>`;
                 }
                 if (window._herstellerNames && window._herstellerNames[her]) {
                     fullName = window._herstellerNames[her];
@@ -4472,14 +5085,102 @@ ${von} – ${nach}`;
         }
 
         window.invLoksRender = function() {
-            _invRender(_loksData, 'data/img/loks/', 'inv-loks-table', 'inv-loks-count', _invLoksHerFilter, 'inv-loks-id-filter', 'inv-loks-art-filter', window._invLoksSort);
+            const idTxt = (document.getElementById('inv-loks-id-filter')?.value || '').trim().toLowerCase();
+            const gatTxt = (document.getElementById('inv-loks-gat-filter')?.value || '').trim().toLowerCase();
+            const rbdTxt = (document.getElementById('inv-loks-rbd-filter')?.value || '').trim().toLowerCase();
+            const bwTxt  = (document.getElementById('inv-loks-bw-filter')?.value || '').trim().toLowerCase();
+            const dccTxt = (document.getElementById('inv-loks-dcc-filter')?.value || '').trim().toLowerCase();
+            const decTxt = (document.getElementById('inv-loks-dec-filter')?.value || '').trim().toLowerCase();
+            const schTxt = (document.getElementById('inv-loks-sch-filter')?.value || '').trim().toLowerCase();
+            const artTxt = (document.getElementById('inv-loks-art-filter')?.value || '').trim().toLowerCase();
+            
+            const tbody = document.querySelector('#inv-loks-table tbody');
+            tbody.innerHTML = '';
+            
+            let filtered = [];
+            _loksData.forEach(entry => {
+                const idVal = (entry.id || '').trim();
+                const gattung = (entry.gattung || '').trim();
+                const baureihe = (entry.baureihe || '').trim();
+                const dcc = (entry.dcc || '').trim();
+                const decoder = (entry.decoder || '').trim();
+                const schnittstelle = (entry.schnittstelle || '').trim();
+                const her = (entry.her || '').trim();
+                const art = (entry.art || '').trim();
+                const rbd = (entry.rbd || '').trim();
+                const bw = (entry.bw || '').trim();
+                const luemp = (entry.luemp || '').trim();
+
+                if (idTxt  && !idVal.toLowerCase().includes(idTxt)) return;
+                if (gatTxt && !gattung.toLowerCase().includes(gatTxt)) return;
+                if (rbdTxt && !rbd.toLowerCase().includes(rbdTxt)) return;
+                if (bwTxt  && !bw.toLowerCase().includes(bwTxt)) return;
+                if (dccTxt && !dcc.toLowerCase().includes(dccTxt)) return;
+                if (decTxt && !decoder.toLowerCase().includes(decTxt)) return;
+                if (schTxt && !schnittstelle.toLowerCase().includes(schTxt)) return;
+                if (artTxt && !art.toLowerCase().includes(artTxt)) return;
+                if (_invLoksHerFilter.size > 0 && !_invLoksHerFilter.has(her)) return;
+
+                filtered.push({ entry, idVal, gattung, baureihe, dcc, decoder, schnittstelle, her, art, rbd, bw, luemp });
+            });
+
+            const sortState = window._invLoksSort;
+            if (sortState && sortState.col) {
+                filtered.sort((a, b) => {
+                    let valA = a[sortState.col] || '';
+                    let valB = b[sortState.col] || '';
+                    if (['art', 'dcc', 'luemp'].includes(sortState.col)) {
+                        const numA = parseFloat(valA.replace(/[^\d.]/g, ''));
+                        const numB = parseFloat(valB.replace(/[^\d.]/g, ''));
+                        if (!isNaN(numA) && !isNaN(numB)) {
+                            return sortState.asc ? numA - numB : numB - numA;
+                        }
+                    }
+                    if (valA < valB) return sortState.asc ? -1 : 1;
+                    if (valA > valB) return sortState.asc ? 1 : -1;
+                    return 0;
+                });
+            }
+
+            let count = 0;
+            filtered.forEach(item => {
+                const { entry, idVal, gattung, baureihe, dcc, decoder, schnittstelle, her, art, rbd, bw, luemp } = item;
+                count++;
+                
+                // Formatiere Baureihe mit ^ als Hochstellung <sup>
+                let bauHtml = baureihe;
+                if (bauHtml.includes('^')) {
+                    const parts = bauHtml.split('^');
+                    bauHtml = parts[0] + '<sup>' + parts.slice(1).join('^') + '</sup>';
+                }
+
+                let fullName = (window._herstellerNames && window._herstellerNames[her]) ? window._herstellerNames[her] : her;
+                let herDisplay = fullName;
+                if (window._herstellerUrls && window._herstellerUrls[her]) {
+                    herDisplay += ` <a href="${window._herstellerUrls[her]}" target="_blank" title="Zu ${fullName}" style="text-decoration:none; margin-left:4px;">🔗</a>`;
+                }
+                if (window._herstellerNames && window._herstellerNames[her]) {
+                    fullName = window._herstellerNames[her];
+                }
+                let artDisplay = art || '';
+                if (artDisplay && fullName) {
+                    const searchUrl = `https://www.spurweite-n.de/ncontent/ndb/ndb-artdetails.asp?DoLog=0&Sel_Hersteller_VString=${encodeURIComponent(fullName)}&MSel_ArtikelNr_VString=${encodeURIComponent(artDisplay)}&ToShow=0&MaxCount=1`;
+                    artDisplay += ` <a href="${searchUrl}" target="_blank" title="Auf spurweite-n.de öffnen" style="text-decoration:none; margin-left:4px;">🔗</a>`;
+                }
+                const tr = document.createElement('tr');
+                tr.innerHTML = `<td>${idVal}</td><td>${bauHtml}</td><td>${gattung}</td><td>${rbd}</td><td>${bw}</td><td class="inv-img-cell"><img src="data/img/loks/${encodeURIComponent(gattung)}.png" alt="" onerror="this.style.display='none'"></td><td>${dcc}</td><td>${decoder}</td><td>${schnittstelle}</td><td>${herDisplay}</td><td>${artDisplay}</td><td>${luemp}</td>`;
+                tbody.appendChild(tr);
+            });
+            document.getElementById('inv-loks-count').textContent = count + '\u00a0Treffer';
         };
         window.invWagenRender = function() {
             _invRender(_wagenData, 'data/img/pwagen/', 'inv-wagen-table', 'inv-wagen-count', _invWagenHerFilter, 'inv-wagen-id-filter', 'inv-wagen-art-filter', window._invWagenSort);
         };
         window.invLoksReset = function() {
-            document.getElementById('inv-loks-id-filter').value = '';
-            document.getElementById('inv-loks-art-filter').value = '';
+            ['inv-loks-id-filter', 'inv-loks-gat-filter', 'inv-loks-rbd-filter', 'inv-loks-bw-filter', 'inv-loks-dcc-filter', 'inv-loks-dec-filter', 'inv-loks-sch-filter', 'inv-loks-art-filter'].forEach(id => {
+                const el = document.getElementById(id);
+                if (el) el.value = '';
+            });
             _invLoksHerFilter.clear();
             document.querySelectorAll('#inv-loks-her-btns .inv-her-btn').forEach(b => b.classList.remove('active'));
             invLoksRender();

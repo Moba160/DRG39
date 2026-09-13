@@ -246,7 +246,7 @@ KBS	km	Bahnhof	Anmerkung
 146	168,3	Hof Hp		
 146	170,6	Hof Hbf		
 152	0	Aschersleben		
-152	4,1	Groß Schierstedt		
+152	4,1	Gro? Schierstedt		
 152	7,8	Giersleben		
 152	11,8	Güsten		
 152	15,5	Ilberstedt		
@@ -371,7 +371,7 @@ KBS	km	Bahnhof	Anmerkung
 161	16,7	Leipzig-Knauthain		
 161	19,9	Bösdorf (Elster)		
 161	21,8	Eythra		
-161	25	Groß-Dalzig		
+161	25	Gro?-Dalzig		
 161	30,2	Pegau		
 161	35,2	Profen		
 161	37,7	Reuden (Kr Zeitz)		
@@ -576,14 +576,14 @@ KBS	km	Bahnhof	Anmerkung
 254	10,4	Lufthafen Rhein-Main		
 254	14,7	Walldorf (Hess)		
 254	17,4	Nörfelden		
-254	26,6	Groß Gerau-Dornberg		
+254	26,6	Gro? Gerau-Dornberg		
 254	30,5	Dornheim		
 254	33	Leeheim-Wolfskehlen		
 254	35,3	Goddelau-Erfelden		
 254	38,3	Stockstadt (Rhein)		
 254	41,5	Biebesheim		
 254	44,7	Gernsheim		
-254	49,5	Groß Rohrheim		
+254	49,5	Gro? Rohrheim		
 254	52,9	Biblis		
 254	56	Bobstadt		
 254	58	Bürstadt		
@@ -959,7 +959,7 @@ KBS	km	Bahnhof	Anmerkung
 405	124,8	Betzigau		
 405	130,8	Kempten (Allgäu) Hbf		
 405/6	124,8	Betzigau		
-405/6	127,8	Kempten-Hegge	"40x gibt es nicht: 405a hilft auch nicht weiter; da es Querpass über Kopfbahnhof Kempten (Hbf) Allgäu gibt, 3km sind geschätzt"	
+405/6	127,8	Kempten-Hegge	40x gibt es nicht: 405a hilft auch nicht weiter; da es Querpass über Kopfbahnhof Kempten (Hbf) Allgäu gibt, 3km sind geschätzt	
 406	130,8	Kempten (Allgäu) Hbf		
 406	134,3	Kempten-Hegge		
 406	137,4	Waltenhofen		
@@ -1197,7 +1197,7 @@ KBS	km	Bahnhof	Anmerkung
 417	169,6	Waigolshausen		
 417	173,2	Eßleben		
 417	178,7	Bergtheim		
-417	184,2	Seligenstadt (b Wü)		
+417	184,2	Seligenstadt (b W?)		
 417	193,5	Rottendorf		
 417	201,5	Würzburg Hbf		
 421	0	Nürnberg Hbf		
@@ -1342,7 +1342,7 @@ KBS	km	Bahnhof	Anmerkung
 428a	17,5	Piding		
 428a	21,6	Bad Reichenhall		
 428a	23,3	Bad Reichenhall-Kirchberg		
-428a	25	Bayer, Gmain		
+428a	25	Bayer. Gmain		
 428a	29	Hallthurm		
 428a	31,8	Winkl		
 428a	35,2	Bischofswiesen		
@@ -1416,7 +1416,7 @@ KBS	km	Bahnhof	Anmerkung
 457	66	Friesing		
 457	68,7	Prinzersdorf		
 457	70,9	Markersdorf a d Pielach		
-457	73,4	Groß Sirning		
+457	73,4	Gro? Sirning		
 457	78,1	Loosdorf		
 457	84,7	Melk		
 457	93,9	Pöchlarn		
@@ -1485,7 +1485,7 @@ KBS	km	Bahnhof	Anmerkung
 461	13,9	Kritzendorf		
 461	16,6	Höflein (Donau)		
 461	19,2	Greifenstein-Altenberg		
-461	21,8	St Andrä-Wördern		
+461	21,8	St Andr?-Wördern		
 461	24,5	Zeiselmauer-Königstetten		
 461	28,5	Langenlebarn		
 461	33	Tülln		
@@ -1493,7 +1493,7 @@ KBS	km	Bahnhof	Anmerkung
 461	43,9	Absdorf-Hippersdorf		
 461	46,3	Absberg		
 461	48,9	Tiefental (Wagram)		
-461	52,4	Groß Welkersdorf		
+461	52,4	Gro? Welkersdorf		
 461	57,1	Glaubendorf-Wetzdorf		
 461	60,4	Ziersdorf		
 461	64,4	Ravelsbach		
@@ -1646,7 +1646,7 @@ KBS	km	Bahnhof	Anmerkung
 719	144	Brandeis a d Adler		
 719	154	Wildenschwert		
 719	155	Wildenschwert Stadt		
-719	164	Böhm, Trübau		
+719	164	Böhm. Trübau		
 719	181	Zwittau		
 719	207	Lettowitz		
 719	216	Skalitz-Boskowitz		
