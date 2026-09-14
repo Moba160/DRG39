@@ -1243,8 +1243,13 @@
                     <ul class="kbs-list" id="kbs-list-container"></ul>
                 </div>
                 <div id="kbs-col-mid">
-                    <div class="kbs-header" id="kbs-stations-header">Bahnhöfe</div>
-                    <ul class="kbs-list" id="kbs-stations-container"></ul>
+                    <div id="kbs-stations-header" class="kbs-header">Bahnhöfe</div>
+                    <div style="overflow-y: auto; flex: 1;">
+                        <table id="kbs-stations-container" class="kbs-stations-table">
+                            <thead><tr><th>km</th><th>Bahnhof</th></tr></thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
                 </div>
                 <div id="kbs-col-right">
                     <div class="col-header" style="width: 100%; border-bottom: 1px solid #bbb;">
@@ -1715,6 +1720,66 @@
         }
         requestAnimationFrame(tickSimulation);
 
+        // --- Toggle-Control für Bahnhöfe ohne Zughalt (global, für alle Karten) ---
+        window.addNonStopToggleControl = function(m, renderCb) {
+            if (m.nonStopToggleControl) return;
+            const ToggleControl = L.Control.extend({
+                options: { position: 'topright' },
+                onAdd: function () {
+                    const container = L.DomUtil.create('div', 'leaflet-bar leaflet-control leaflet-control-custom');
+                    container.style.backgroundColor = 'white';
+                    container.style.padding = '5px 8px';
+                    container.style.cursor = 'pointer';
+                    container.style.display = 'flex';
+                    container.style.alignItems = 'center';
+                    container.title = 'Bahnh\u00f6fe ohne Zughalt einblenden';
+
+                    const cb = document.createElement('input');
+                    cb.type = 'checkbox';
+                    cb.id = 'toggle-nonstop-' + L.Util.stamp(container);
+                    cb.checked = window._showNonStopStations || false;
+                    cb.style.marginRight = '6px';
+                    cb.style.cursor = 'pointer';
+
+                    const label = document.createElement('label');
+                    label.htmlFor = cb.id;
+                    label.textContent = 'Ohne Zughalt';
+                    label.style.cursor = 'pointer';
+                    label.style.fontSize = '12px';
+                    label.style.fontFamily = 'Arial, sans-serif';
+                    label.style.fontWeight = 'bold';
+                    label.style.userSelect = 'none';
+
+                    container.appendChild(cb);
+                    container.appendChild(label);
+                    L.DomEvent.disableClickPropagation(container);
+
+                    cb.addEventListener('change', (e) => {
+                        window._showNonStopStations = e.target.checked;
+                        renderCb();
+                    });
+                    return container;
+                }
+            });
+            m.nonStopToggleControl = new ToggleControl();
+            m.addControl(m.nonStopToggleControl);
+        };
+
+        window._triggerTooltip = function(mapName, bfName, isOpen) {
+            let markerMap;
+            if (mapName === 'kbs') markerMap = window._kbs_orm_markers;
+            if (mapName === 'train') markerMap = window._train_orm_markers;
+            
+            if (markerMap && markerMap[bfName]) {
+                const marker = markerMap[bfName];
+                if (isOpen) {
+                    marker.openTooltip();
+                } else {
+                    marker.closeTooltip();
+                }
+            }
+        };
+
         // --- Main Tab switching ---
         function initKbsTab() {
             const container = document.getElementById('kbs-list-container');
@@ -1753,7 +1818,7 @@
             }
         }
 
-        function selectKbsForView(kbsId, liElement) {
+        function selectKbsForView(kbsId, liElement, skipFitBounds) {
             // Update active state in list
             const container = document.getElementById('kbs-list-container');
             const items = container.querySelectorAll('.kbs-list-item');
@@ -1762,7 +1827,8 @@
 
             // Populate stations
             const stationsContainer = document.getElementById('kbs-stations-container');
-            stationsContainer.innerHTML = '';
+            const tbody = stationsContainer.querySelector('tbody');
+            tbody.innerHTML = '';
             const header = document.getElementById('kbs-stations-header');
             header.textContent = 'Bahnhöfe KBS ' + kbsId;
 
@@ -1771,12 +1837,22 @@
             stations.sort((a, b) => a.km - b.km);
             
             for (const st of stations) {
-                const li = document.createElement('li');
-                li.className = 'kbs-list-item';
-                li.style.cursor = 'pointer';
-                li.textContent = st.km.toFixed(1).replace('.', ',') + ' km - ' + st.bahnhof;
-                li.onclick = () => showKbsStationMap(st.bahnhof, li);
-                stationsContainer.appendChild(li);
+                const tr = document.createElement('tr');
+                tr.className = 'kbs-list-item';
+                tr.style.cursor = 'pointer';
+                const tdKm = document.createElement('td');
+                tdKm.textContent = st.km.toFixed(1).replace('.', ',');
+                tdKm.style.textAlign = 'right';
+                tdKm.style.paddingRight = '10px';
+                tdKm.style.fontVariantNumeric = 'tabular-nums';
+                const tdBf = document.createElement('td');
+                tdBf.textContent = st.bahnhof;
+                tr.appendChild(tdKm);
+                tr.appendChild(tdBf);
+                tr.onclick = () => showKbsStationMap(st.bahnhof, tr);
+                tr.onmouseenter = () => window._triggerTooltip('kbs', st.bahnhof, true);
+                tr.onmouseleave = () => window._triggerTooltip('kbs', st.bahnhof, false);
+                tbody.appendChild(tr);
             }
 
             // Draw route on ORM map
@@ -1790,21 +1866,44 @@
             window._kbs_orm_markers = {}; // reset markers map
 
             const latlngs = [];
+            const stationsList = [];
             for (const st of stations) {
                 const geo = window._geoMap[st.bahnhof];
                 if (geo) {
-                    const ll = [geo.lat, geo.lon];
-                    latlngs.push(ll);
-                    const marker = L.circleMarker(ll, {radius: 6, color: '#d32f2f', fillColor: '#fff', fillOpacity: 1, weight: 2})
-                     .bindPopup(`<b>${st.bahnhof}</b> (${st.km.toFixed(1).replace('.', ',')} km)`)
-                     .addTo(window._kbs_orm_layerGroup);
-                    window._kbs_orm_markers[st.bahnhof] = marker;
+                    latlngs.push([geo.lat, geo.lon]);
+                    stationsList.push({ st, geo });
                 }
             }
 
             if (latlngs.length > 0) {
                 L.polyline(latlngs, {color: '#d32f2f', weight: 4, opacity: 0.8}).addTo(window._kbs_orm_layerGroup);
-                window._kbs_orm_map.fitBounds(L.latLngBounds(latlngs), {padding: [30, 30]});
+
+                stationsList.forEach(({ st, geo }, idx) => {
+                    const ll = [geo.lat, geo.lon];
+                    const isEnd = (idx === 0 || idx === stationsList.length - 1);
+                    const isHalt = window._stationsWithStops && window._stationsWithStops.has(st.bahnhof);
+
+                    if (!isEnd && !isHalt && !window._showNonStopStations) return;
+
+                    const fillColor = isEnd ? '#d32f2f' : (isHalt ? '#1a56db' : '#888');
+                    const radius = isEnd ? 7 : (isHalt ? 5 : 3);
+
+                    const marker = L.circleMarker(ll, {
+                        radius: radius,
+                        color: '#fff',
+                        weight: 1.5,
+                        fillColor: fillColor,
+                        fillOpacity: 0.9
+                    })
+                    .bindTooltip(`<b>${st.bahnhof}</b> km ${st.km.toFixed(1).replace('.', ',')}`, { direction: 'top', sticky: true })
+                    .bindPopup(`<b>${st.bahnhof}</b> km ${st.km.toFixed(1).replace('.', ',')}`)  
+                    .addTo(window._kbs_orm_layerGroup);
+                    window._kbs_orm_markers[st.bahnhof] = marker;
+                });
+
+                if (!skipFitBounds) {
+                    window._kbs_orm_map.fitBounds(L.latLngBounds(latlngs), {padding: [30, 30]});
+                }
             }
 
             // Update Image src
@@ -1839,6 +1938,15 @@
                 maxZoom: 19,
                 opacity: 0.8
             }).addTo(map);
+
+            window.addNonStopToggleControl(map, () => {
+                const activeLi = document.querySelector('#kbs-list-container .kbs-list-item.active');
+                if (activeLi) {
+                    const kbsText = activeLi.textContent;
+                    const kbsId = kbsText.replace('KBS ', '').trim();
+                    selectKbsForView(kbsId, activeLi, true);
+                }
+            });
         }
 
         function showKbsStationMap(bfName, liElement) {
@@ -1875,6 +1983,18 @@
                 } else {
                     setTimeout(() => window._orm_map.invalidateSize(), 50);
                 }
+            } else if (name === 'kbs') {
+                // KBS map: init + invalidateSize after tab reveal so tiles render correctly
+                setTimeout(() => {
+                    if (window._kbs_orm_map) {
+                        window._kbs_orm_map.invalidateSize();
+                    }
+                    // Auto-select first KBS if none selected yet
+                    const firstLi = document.querySelector('#kbs-list-container .kbs-list-item');
+                    if (firstLi && !document.querySelector('#kbs-list-container .kbs-list-item.active')) {
+                        firstLi.click();
+                    }
+                }, 100);
             } else if (name === 'modellgarnituren') {
                 switchMgTab(window._mgActiveTab || 'wagen');
             } else if (name === 'rollmaterial') {
@@ -2788,6 +2908,14 @@
                 opacity: 0.8
             }).addTo(map);
 
+            window.addNonStopToggleControl(map, () => {
+                // re-render the train map
+                const trainSelect = document.getElementById('train-select');
+                if (trainSelect && trainSelect.value) {
+                    selectTrain(trainSelect.value);
+                }
+            });
+
             // After tiles load, pan so station appears at ~20% from top ("oben")
             map.whenReady(() => {
                 const mapH = mapEl.clientHeight;
@@ -3289,6 +3417,7 @@ ${von} – ${nach}`;
                 // Parse abfahrten.csv
                 const abfahrtenLines = abfahrtenText.split('\n');
                 const fahrplanMap = {};
+                window._stationsWithStops = new Set();
                 for (let i = 1; i < abfahrtenLines.length; i++) {
                     const line = abfahrtenLines[i].trim();
                     if (!line) continue;
@@ -3296,11 +3425,14 @@ ${von} – ${nach}`;
                     if (cols.length >= 5) {
                         const zugNr = cols[0].trim();
                         if (!fahrplanMap[zugNr]) fahrplanMap[zugNr] = [];
+                        const haelt = cols[3].trim();
+                        const bahnhof = cols[4].trim();
+                        if (haelt !== 'D') window._stationsWithStops.add(bahnhof);
                         fahrplanMap[zugNr].push({
                             ankunft: cols[1].trim(),
                             abfahrt: cols[2].trim(),
-                            haelt: cols[3].trim(),
-                            bahnhof: cols[4].trim(),
+                            haelt: haelt,
+                            bahnhof: bahnhof,
                             kbsHinweis: cols[5] ? cols[5].trim() : ''
                         });
                     }
@@ -3485,7 +3617,7 @@ ${von} – ${nach}`;
                             const curBf = curRow.bahnhof;
 
                             if (fullPathStations.length === 0) {
-                                fullPathStations.push({ name: curBf, isHalt: curRow.haelt !== 'D' });
+                                fullPathStations.push({ name: curBf, isHalt: curRow.haelt !== 'D', ankunft: curRow.ankunft, abfahrt: curRow.abfahrt, haelt: curRow.haelt });
                             } else {
                                 const prevBf = fullPathStations[fullPathStations.length - 1].name;
                                 const kbsSetPrev = window._stationKbsSetMap ? (window._stationKbsSetMap[prevBf] || new Set()) : new Set();
@@ -3506,16 +3638,20 @@ ${von} – ${nach}`;
                                         const step = idxPrev <= idxCur ? 1 : -1;
                                         for (let k = idxPrev + step; k !== idxCur + step; k += step) {
                                             const intermediateBf = kbsElements[k].bahnhof;
+                                            const isThisCur = (intermediateBf === curBf);
                                             fullPathStations.push({
                                                 name: intermediateBf,
-                                                isHalt: (intermediateBf === curBf) ? (curRow.haelt !== 'D') : false
+                                                isHalt: isThisCur ? (curRow.haelt !== 'D') : false,
+                                                ankunft: isThisCur ? curRow.ankunft : null,
+                                                abfahrt: isThisCur ? curRow.abfahrt : null,
+                                                haelt: isThisCur ? curRow.haelt : 'D'
                                             });
                                         }
                                     } else {
-                                        fullPathStations.push({ name: curBf, isHalt: curRow.haelt !== 'D' });
+                                        fullPathStations.push({ name: curBf, isHalt: curRow.haelt !== 'D', ankunft: curRow.ankunft, abfahrt: curRow.abfahrt, haelt: curRow.haelt });
                                     }
                                 } else {
-                                    fullPathStations.push({ name: curBf, isHalt: curRow.haelt !== 'D' });
+                                    fullPathStations.push({ name: curBf, isHalt: curRow.haelt !== 'D', ankunft: curRow.ankunft, abfahrt: curRow.abfahrt, haelt: curRow.haelt });
                                 }
                             }
                         }
@@ -3525,11 +3661,18 @@ ${von} – ${nach}`;
                         fullPathStations.forEach(s => {
                             const geo = window._geoMap ? window._geoMap[s.name] : null;
                             if (geo) {
-                                latLngs.push({ lat: geo.lat, lng: geo.lon, name: s.name, isHalt: s.isHalt });
+                                latLngs.push({ lat: geo.lat, lng: geo.lon, name: s.name, isHalt: s.isHalt, ankunft: s.ankunft || null, abfahrt: s.abfahrt || null, haelt: s.haelt || 'D' });
                             }
                         });
 
+                        // Hilfsfunktion: Zeitstring normalisieren ("8.05" -> "8:05")
+                        function fmtTime(t) {
+                            if (!t || t.trim() === '') return null;
+                            return t.trim().replace('.', ':');
+                        }
+
                         if (latLngs.length > 0) {
+                            window._train_orm_markers = {};
                             // Linie zeichnen
                             const polyline = L.polyline(latLngs.map(p => [p.lat, p.lng]), {
                                 color: '#d32f2f',
@@ -3540,15 +3683,39 @@ ${von} – ${nach}`;
                             // Stationen als Marker mit Tooltip / Popup markieren
                             latLngs.forEach((p, idx) => {
                                 const isEnd = (idx === 0 || idx === latLngs.length - 1);
+                                const isFirst = (idx === 0);
+                                const isLast = (idx === latLngs.length - 1);
+                                const isGlobalHalt = window._stationsWithStops && window._stationsWithStops.has(p.name);
+                                if (!isEnd && !isGlobalHalt && !window._showNonStopStations) return;
                                 const radius = isEnd ? 7 : (p.isHalt ? 5 : 3);
+
+                                // Tooltip aufbauen
+                                let ttText;
+                                const ab = fmtTime(p.abfahrt);
+                                const an = fmtTime(p.ankunft);
+                                if (isFirst) {
+                                    ttText = `<b>${p.name}</b>${ab ? ' ' + ab + ' ab' : ''}`;
+                                } else if (isLast) {
+                                    ttText = `<b>${p.name}</b>${an ? ' ' + an + ' an' : ''}`;
+                                } else if (p.isHalt) {
+                                    if (an && ab && an !== ab) {
+                                        ttText = `<b>${p.name}</b> ${an} - ${ab}`;
+                                    } else {
+                                        ttText = `<b>${p.name}</b>${an ? ' ' + an : (ab ? ' ' + ab : '')}`;
+                                    }
+                                } else {
+                                    ttText = `<b>${p.name}</b> (kein Halt)`;
+                                }
+
                                 const circle = L.circleMarker([p.lat, p.lng], {
                                     radius: radius,
                                     fillColor: isEnd ? '#d32f2f' : (p.isHalt ? '#1a56db' : '#888'),
                                     color: '#fff',
                                     weight: 1.5,
                                     fillOpacity: 0.9
-                                }).bindTooltip(`<b>${p.name}</b>`, { permanent: false, direction: 'top' });
+                                }).bindTooltip(ttText, { permanent: false, direction: 'top', sticky: true });
                                 circle.addTo(layerGroup);
+                                window._train_orm_markers[p.name] = circle;
                             });
 
                             layerGroup.addTo(map);
@@ -3583,12 +3750,14 @@ ${von} – ${nach}`;
                         if (r.bahnhof === currentStation) rowStyle += " background-color: #ffeba1;";
 
                         const styleAttr = rowStyle ? ` style="${rowStyle.trim()}"` : "";
+                        const escBf = r.bahnhof.replace(/'/g, "\\'");
+                        const hoverEvents = `onmouseenter="window._triggerTooltip('train', '${escBf}', true)" onmouseleave="window._triggerTooltip('train', '${escBf}', false)"`;
 
                         if (r.haelt === 'D') {
                             const time = r.abfahrt || r.ankunft;
-                            lwHtml += `<tr${styleAttr}><td colspan="2" style="text-align: center; font-style: italic; color: #555;">(<i>${time}</i>)</td><td>${r.bahnhof}</td></tr>`;
+                            lwHtml += `<tr${styleAttr} ${hoverEvents}><td colspan="2" style="text-align: center; font-style: italic; color: #555;">(<i>${time}</i>)</td><td>${r.bahnhof}</td></tr>`;
                         } else {
-                            lwHtml += `<tr${styleAttr}><td style="text-align: right; padding-right: 15px;">${r.ankunft || ''}</td><td style="text-align: right; padding-right: 15px;">${r.abfahrt || ''}</td><td>${r.bahnhof}</td></tr>`;
+                            lwHtml += `<tr${styleAttr} ${hoverEvents}><td style="text-align: right; padding-right: 15px;">${r.ankunft || ''}</td><td style="text-align: right; padding-right: 15px;">${r.abfahrt || ''}</td><td>${r.bahnhof}</td></tr>`;
                         }
                     }
                     lwHtml += '</tbody></table></div>';
