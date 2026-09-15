@@ -1,11 +1,22 @@
 GarniturId	Direction	Name	Type	FahrzeugId
+M01	left		lok	L4
 M01	left		wagen	P143
 M01	left		wagen	P144
 M01	left		wagen	P145
 M01	left		wagen	P157
 M01	left		wagen	P146
 M01	left		wagen	P147
-M02	left		wagen	P63
-M03	left		wagen	P65
-M04	left			
-M05	left			
+M02	left		lok	L3
+M02	left		wagen	P169
+M02	left		wagen	P184
+M02	left		wagen	P185
+M02	left		wagen	P186
+M02	left		wagen	P189
+M02	left		wagen	P187
+M02	left		wagen	P188
+M03	left		lok	L72
+M03	left		wagen	P204
+M03	left		wagen	P200
+M03	left		wagen	P201
+M03	left		wagen	P202
+M03	left		wagen	P203

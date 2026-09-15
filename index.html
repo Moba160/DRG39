@@ -1386,6 +1386,7 @@
                     <!-- Filter-Bar Wagen -->
                     <div id="inv-wagen-filter" class="inv-filter-bar" style="display:none;">
                         <input type="text" id="inv-wagen-id-filter" placeholder="ID…" oninput="invWagenRender()">
+                        <input type="text" id="inv-wagen-gat-filter" placeholder="Gattung…" oninput="invWagenRender()">
                         <input type="text" id="inv-wagen-art-filter" placeholder="Artikelnummer…" oninput="invWagenRender()">
                         <div id="inv-wagen-her-btns" class="inv-her-btns"></div>
                         <button class="inv-reset-btn" onclick="invWagenReset()" title="Filter zurücksetzen">
@@ -1886,17 +1887,36 @@
                     if (!isEnd && !isHalt && !window._showNonStopStations) return;
 
                     const fillColor = isEnd ? '#d32f2f' : (isHalt ? '#1a56db' : '#888');
-                    const radius = isEnd ? 7 : (isHalt ? 5 : 3);
+                    const radius = isEnd ? 7 : (isHalt ? 5 : 4);
 
+                    // Label-Richtung: dominante Achse zum Nachbarn, Label zeigt weg davon
+                    let labelDir = 'top';
+                    if (isEnd) {
+                        const neighborIdx = idx === 0 ? 1 : stationsList.length - 2;
+                        const nb = stationsList[neighborIdx];
+                        if (nb) {
+                            const dLat = geo.lat - nb.geo.lat;
+                            const dLng = geo.lon - nb.geo.lon;
+                            if (Math.abs(dLat) >= Math.abs(dLng)) {
+                                labelDir = dLat >= 0 ? 'top' : 'bottom';
+                            } else {
+                                labelDir = dLng >= 0 ? 'right' : 'left';
+                            }
+                        }
+                    }
+                    const tooltipOptions = isEnd
+                        ? { permanent: true, direction: labelDir, opacity: 0.95, className: 'bf-label' }
+                        : { permanent: false, direction: 'top', sticky: true };
+                    const ttText = `<b>${st.bahnhof}</b> km ${st.km.toFixed(1).replace('.', ',')}`;
                     const marker = L.circleMarker(ll, {
                         radius: radius,
-                        color: '#fff',
-                        weight: 1.5,
+                        color: 'transparent',
+                        weight: 0,
                         fillColor: fillColor,
                         fillOpacity: 0.9
                     })
-                    .bindTooltip(`<b>${st.bahnhof}</b> km ${st.km.toFixed(1).replace('.', ',')}`, { direction: 'top', sticky: true })
-                    .bindPopup(`<b>${st.bahnhof}</b> km ${st.km.toFixed(1).replace('.', ',')}`)  
+                    .bindTooltip(ttText, tooltipOptions)
+                    .bindPopup(ttText)
                     .addTo(window._kbs_orm_layerGroup);
                     window._kbs_orm_markers[st.bahnhof] = marker;
                 });
@@ -2037,7 +2057,7 @@
             try {
                 const resp = await fetch('data/rollmaterial/loks.csv');
                 const buf  = await resp.arrayBuffer();
-                const dec  = new TextDecoder('windows-1252');
+                const dec  = new TextDecoder('utf-8');
                 const text = dec.decode(buf);
                 const lines = text.split(/\r?\n/);
                 const header = lines[0].split('\t').map(h => h.trim());
@@ -2228,7 +2248,7 @@
             try {
                 const resp = await fetch('data/rollmaterial/p.csv');
                 const buf  = await resp.arrayBuffer();
-                const dec  = new TextDecoder('windows-1252');
+                const dec  = new TextDecoder('utf-8');
                 const text = dec.decode(buf);
                 const lines = text.split(/\r?\n/);
                 const header = lines[0].split('\t').map(h => h.trim());
@@ -3346,7 +3366,7 @@ ${von} – ${nach}`;
                 window._stationKbsSetMap = {}; // Bahnhof -> Set(kbsName)
                 if (kbsRes && kbsRes.ok) {
                     const kbsBuf = await kbsRes.arrayBuffer();
-                    const kbsDecoder1252 = new TextDecoder('windows-1252');
+                    const kbsDecoder1252 = new TextDecoder('utf-8');
                     const kbsText = kbsDecoder1252.decode(kbsBuf);
                     const kbsLines = kbsText.split(/\r?\n/);
                     for (let i = 1; i < kbsLines.length; i++) {
@@ -3685,9 +3705,8 @@ ${von} – ${nach}`;
                                 const isEnd = (idx === 0 || idx === latLngs.length - 1);
                                 const isFirst = (idx === 0);
                                 const isLast = (idx === latLngs.length - 1);
-                                const isGlobalHalt = window._stationsWithStops && window._stationsWithStops.has(p.name);
-                                if (!isEnd && !isGlobalHalt && !window._showNonStopStations) return;
-                                const radius = isEnd ? 7 : (p.isHalt ? 5 : 3);
+                                if (!isEnd && !p.isHalt && !window._showNonStopStations) return;
+                                const radius = isEnd ? 7 : (p.isHalt ? 5 : 4);
 
                                 // Tooltip aufbauen
                                 let ttText;
@@ -3707,13 +3726,32 @@ ${von} – ${nach}`;
                                     ttText = `<b>${p.name}</b> (kein Halt)`;
                                 }
 
+                                // Label-Richtung: dominante Achse zum Nachbarn, Label zeigt weg davon
+                                let labelDir = 'top';
+                                if (isEnd) {
+                                    const neighborIdx = isFirst ? 1 : latLngs.length - 2;
+                                    const nb = latLngs[neighborIdx];
+                                    if (nb) {
+                                        const dLat = p.lat - nb.lat;
+                                        const dLng = p.lng - nb.lng;
+                                        if (Math.abs(dLat) >= Math.abs(dLng)) {
+                                            labelDir = dLat >= 0 ? 'top' : 'bottom';
+                                        } else {
+                                            labelDir = dLng >= 0 ? 'right' : 'left';
+                                        }
+                                    }
+                                }
+                                const tooltipOptions = isEnd
+                                    ? { permanent: true, direction: labelDir, opacity: 0.95, className: 'bf-label' }
+                                    : { permanent: false, direction: 'top', sticky: true };
+
                                 const circle = L.circleMarker([p.lat, p.lng], {
                                     radius: radius,
                                     fillColor: isEnd ? '#d32f2f' : (p.isHalt ? '#1a56db' : '#888'),
-                                    color: '#fff',
-                                    weight: 1.5,
+                                    color: 'transparent',
+                                    weight: 0,
                                     fillOpacity: 0.9
-                                }).bindTooltip(ttText, { permanent: false, direction: 'top', sticky: true });
+                                }).bindTooltip(ttText, tooltipOptions);
                                 circle.addTo(layerGroup);
                                 window._train_orm_markers[p.name] = circle;
                             });
@@ -5109,7 +5147,7 @@ ${von} – ${nach}`;
             try {
                 const resp = await fetch('data/rollmaterial/hersteller.csv');
                 const buf = await resp.arrayBuffer();
-                const text = new TextDecoder('windows-1252').decode(buf);
+                const text = new TextDecoder('utf-8').decode(buf);
                 const lines = text.split(/\r?\n/);
                 for (let i = 1; i < lines.length; i++) {
                     const cols = lines[i].split(',');
@@ -5193,9 +5231,10 @@ ${von} – ${nach}`;
             else invWagenRender();
         };
 
-        function _invRender(data, imgBasePath, tableId, countId, herFilter, idFilterId, artFilterId, sortState) {
-            const idTxt = (document.getElementById(idFilterId).value || '').trim().toLowerCase();
-            const artTxt = (document.getElementById(artFilterId).value || '').trim().toLowerCase();
+        function _invRender(data, imgBasePath, tableId, countId, herFilter, idFilterId, artFilterId, gatFilterId, sortState) {
+            const idTxt = (document.getElementById(idFilterId)?.value || '').trim().toLowerCase();
+            const artTxt = (document.getElementById(artFilterId)?.value || '').trim().toLowerCase();
+            const gatTxt = (gatFilterId && document.getElementById(gatFilterId)?.value) ? document.getElementById(gatFilterId).value.trim().toLowerCase() : '';
             const tbody = document.querySelector('#' + tableId + ' tbody');
             tbody.innerHTML = '';
             
@@ -5207,6 +5246,7 @@ ${von} – ${nach}`;
                 const her = (entry.her || '').trim();
                 if (idTxt && !idVal.toLowerCase().includes(idTxt)) return;
                 if (artTxt && !art.includes(artTxt)) return;
+                if (gatTxt && !gattung.toLowerCase().includes(gatTxt)) return;
                 if (herFilter.size > 0 && !herFilter.has(her)) return;
                 filtered.push({ entry, idVal, gattung, art, her });
             });
@@ -5343,7 +5383,7 @@ ${von} – ${nach}`;
             document.getElementById('inv-loks-count').textContent = count + '\u00a0Treffer';
         };
         window.invWagenRender = function() {
-            _invRender(_wagenData, 'data/img/pwagen/', 'inv-wagen-table', 'inv-wagen-count', _invWagenHerFilter, 'inv-wagen-id-filter', 'inv-wagen-art-filter', window._invWagenSort);
+            _invRender(_wagenData, 'data/img/pwagen/', 'inv-wagen-table', 'inv-wagen-count', _invWagenHerFilter, 'inv-wagen-id-filter', 'inv-wagen-art-filter', 'inv-wagen-gat-filter', window._invWagenSort);
         };
         window.invLoksReset = function() {
             ['inv-loks-id-filter', 'inv-loks-gat-filter', 'inv-loks-rbd-filter', 'inv-loks-bw-filter', 'inv-loks-dcc-filter', 'inv-loks-dec-filter', 'inv-loks-sch-filter', 'inv-loks-art-filter'].forEach(id => {
@@ -5356,6 +5396,7 @@ ${von} – ${nach}`;
         };
         window.invWagenReset = function() {
             document.getElementById('inv-wagen-id-filter').value = '';
+            document.getElementById('inv-wagen-gat-filter').value = '';
             document.getElementById('inv-wagen-art-filter').value = '';
             _invWagenHerFilter.clear();
             document.querySelectorAll('#inv-wagen-her-btns .inv-her-btn').forEach(b => b.classList.remove('active'));
@@ -5483,6 +5524,9 @@ ${von} – ${nach}`;
             text-align: center;
             max-width: 900px;
         }
+        /* Pfeilloses Label für Start-/Endbf auf Karten */
+        .bf-label::before { display: none !important; }
+        .bf-label { font-size: 11px; white-space: nowrap; padding: 2px 5px; }
     </style>
 
     <!-- Settings Popup -->
