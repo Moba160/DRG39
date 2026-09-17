@@ -25,3 +25,36 @@ wieder weg ist (kommt zwischenzeitlich ein weiterer Zug in diesem Vorschaufenste
 ausgefahren, soll der Zeitraffer wieder aktiv werden; er holt also den nächsten Zug zeitlich näher heran. Wir hatten schon,
 dass der Countdown 1:1 läuft, das bleibt. Wenn ich den Zeitraffer auf der GUI ändere, gilt das für die nächste zugfreie Zeit. Wenn
 also gerade Zugverkehr ist, bleibt es bei 1:1, der Zeitraffer wird aber immer in seiner Zielgröße korrekt dargestellt.
+
+
+Für die Zukunft: Excel VBA
+Damit auch dein VBA weiterhin korrekte Dateien schreibt, musst du UTF-8 BOM als Encoding ausgeben. Ersetze einfach deine bisherige Open ... For Output Logik durch:
+
+vba
+Sub ExportUTF8BOM(path As String, content As String)
+    Dim stream As Object
+    Set stream = CreateObject("ADODB.Stream")
+    stream.Type = 2           ' Text
+    stream.Charset = "UTF-8"
+    stream.Open
+    ' BOM manuell voranstellen:
+    stream.WriteText Chr(239) & Chr(187) & Chr(191) & content
+    stream.SaveToFile path, 2 ' 2 = Überschreiben
+    stream.Close
+    Set stream = Nothing
+End Sub
+Oder alternativ – noch einfacher – mit ADODB.Stream direkt:
+
+vba
+With CreateObject("ADODB.Stream")
+    .Type = 2         ' adTypeText
+    .Charset = "UTF-8"
+    .Open
+    .WriteText Join(rows, vbCrLf)
+    .SaveToFile "C:\pfad\datei.csv", 2
+    .Close
+End With
+IMPORTANT
+
+utf-8 BOM
+ADODB.Stream mit Charset = "UTF-8" schreibt automatisch das BOM. Du kannst deinen bestehenden VBA-Code also direkt auf diese Methode umstellen – kein Open path For Output mehr.

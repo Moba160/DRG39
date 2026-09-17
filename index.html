@@ -1269,8 +1269,35 @@
             </div>
             
             <!-- Panel: Netz -->
-            <div class="tab-panel" id="panel-netz">
-                <canvas id="netz-canvas" style="flex:1; width:100%; height:100%; display:block;"></canvas>
+            <div class="tab-panel" id="panel-netz" style="flex-direction:column;">
+                <!-- Netz-Toolbar -->
+                <div id="netz-toolbar" style="display:flex;align-items:center;gap:10px;padding:4px 10px;background:#d8d8d8;border-bottom:1px solid #bbb;flex-shrink:0;font-size:13px;">
+                    <label style="display:flex;align-items:center;gap:4px;cursor:pointer;">
+                        <input type="checkbox" id="netz-show-zuege" checked> Zugstandorte
+                    </label>
+                    <label style="display:flex;align-items:center;gap:4px;cursor:pointer;">
+                        <input type="checkbox" id="netz-show-alle-kbs" checked> Alle KBS-Abschnitte
+                    </label>
+                    <label style="display:flex;align-items:center;gap:4px;">
+                        Gattung:
+                        <select id="netz-gattung-filter" style="font-size:12px;padding:1px 4px;border:1px solid #aaa;border-radius:3px;">
+                            <option value="alle">Alle</option>
+                            <option value="FD">FD/FDt</option>
+                            <option value="D">D</option>
+                            <option value="E">E</option>
+                            <option value="P">P</option>
+                            <option value="Ng">Ng</option>
+                        </select>
+                    </label>
+                    <label style="display:flex;align-items:center;gap:4px;">
+                        Zug:
+                        <input type="text" id="netz-filter-zug" placeholder="Nr. filtern" style="width:80px;font-size:12px;padding:1px 4px;border:1px solid #aaa;border-radius:3px;">
+                    </label>
+                    <button id="netz-zoom-fit" title="Karte einpassen" style="font-size:12px;padding:2px 8px;border:1px solid #aaa;border-radius:3px;background:#eee;cursor:pointer;">&#8982; Fit</button>
+                    <span id="netz-status" style="margin-left:auto;font-size:11px;color:#555;"></span>
+                </div>
+                <!-- Leaflet-Karte -->
+                <div id="netz-map" style="flex:1;width:100%;min-height:0;"></div>
             </div>
 
             <!-- Panel: Modellgarnituren (ehem. Rollmaterial) -->
@@ -1998,171 +2025,452 @@
             }
         }
 
+        // ─────────────────────────────────────────────────────────────────────
+        // NETZ-KARTE mit animierten Zugstandorten
+        // ─────────────────────────────────────────────────────────────────────
+
+        // Hilfsfunktion: "HH.MM" -> Minuten seit Mitternacht
+        function netzTimeToMin(tStr) {
+            if (!tStr || typeof tStr !== 'string') return null;
+            const t = tStr.trim();
+            const m = t.match(/^\s*(\d+)[.:](\d+)/);
+            if (!m) return null;
+            return parseInt(m[1], 10) * 60 + parseInt(m[2], 10);
+        }
+
+        // Farbgebung nach Gattung
+        function netzGattungColor(gattung) {
+            const g = (gattung || '').trim();
+            if (g === 'FD' || g === 'FDt') return '#7b1fa2';
+            if (g === 'D')  return '#1565c0';
+            if (g === 'E')  return '#2e7d32';
+            if (g === 'P')  return '#558b2f';
+            if (g === 'Ng' || g === 'G') return '#e65100';
+            return '#555';
+        }
+
+        // Gattungsfilter: passt die gewählte Gattung zum Zug?
+        function netzGattungMatch(gattung, filter) {
+            if (filter === 'alle') return true;
+            const g = (gattung || '').trim();
+            if (filter === 'FD') return g === 'FD' || g === 'FDt';
+            return g === filter;
+        }
+
+        // Zugposition für simTime (Minuten) berechnen
+        // Rückgabe: {lat, lon, bf1, bf2, anteil, gattung} oder null
+        function getZugPosition(zugNr, simMin) {
+            const rows = window._fahrplanMap ? window._fahrplanMap[zugNr] : null;
+            if (!rows || rows.length === 0) return null;
+
+            for (let i = 0; i < rows.length; i++) {
+                const r = rows[i];
+                const bfName = r.bahnhof;
+
+                // Aufenthalt im Bahnhof
+                const ank = netzTimeToMin(r.ankunft);
+                const abf = netzTimeToMin(r.abfahrt);
+
+                if (ank !== null && abf !== null) {
+                    const lo = Math.min(ank, abf), hi = Math.max(ank, abf);
+                    // Mitternachtsübergang: modulo-Vergleich
+                    const inStation = (simMin >= lo && simMin <= hi)
+                        || (lo > hi && (simMin >= lo || simMin <= hi));
+                    if (inStation) {
+                        const geo = window._geoMap ? window._geoMap[bfName] : null;
+                        if (!geo) return null;
+                        return { lat: geo.lat, lon: geo.lon, bf1: bfName, bf2: null, anteil: 0 };
+                    }
+                }
+
+                // Zwischen diesem und dem nächsten Halt
+                if (i < rows.length - 1) {
+                    const r2 = rows[i + 1];
+                    const dep = netzTimeToMin(r.abfahrt || r.ankunft);
+                    const arr = netzTimeToMin(r2.ankunft || r2.abfahrt);
+                    if (dep === null || arr === null) continue;
+
+                    // Fahrtdauer (Mitternachtsübergang beachten)
+                    let dauer = arr - dep;
+                    if (dauer <= 0) dauer += 1440;
+
+                    let elapsed = simMin - dep;
+                    if (elapsed < 0) elapsed += 1440;
+
+                    if (elapsed >= 0 && elapsed <= dauer) {
+                        const anteil = dauer > 0 ? elapsed / dauer : 0;
+                        const prevBf = r.bahnhof;
+                        const curBf = r2.bahnhof;
+                        const geo1 = window._geoMap ? window._geoMap[prevBf] : null;
+                        const geo2 = window._geoMap ? window._geoMap[curBf] : null;
+                        if (!geo1 || !geo2) return null;
+
+                        let validStations = [];
+                        const kbsSetPrev = window._stationKbsSetMap ? (window._stationKbsSetMap[prevBf] || new Set()) : new Set();
+                        const kbsSetCur  = window._stationKbsSetMap ? (window._stationKbsSetMap[curBf] || new Set()) : new Set();
+                        let commonKbs = [...kbsSetPrev].filter(k => kbsSetCur.has(k));
+                        if (commonKbs.length > 1 && r.kbsHinweis && window._kbsMap[r.kbsHinweis]) {
+                            commonKbs = [r.kbsHinweis];
+                        }
+                        
+                        if (commonKbs.length > 0) {
+                            const chosenKbs = commonKbs[0];
+                            const kbsEls = window._kbsMap[chosenKbs] || [];
+                            const idxP = kbsEls.findIndex(e => e.bahnhof === prevBf);
+                            const idxC = kbsEls.findIndex(e => e.bahnhof === curBf);
+                            if (idxP !== -1 && idxC !== -1) {
+                                const step = idxP <= idxC ? 1 : -1;
+                                for (let k = idxP; k !== idxC + step; k += step) {
+                                    if (window._geoMap && window._geoMap[kbsEls[k].bahnhof]) {
+                                        validStations.push(kbsEls[k]);
+                                    }
+                                }
+                            }
+                        }
+
+                        if (validStations.length < 2) {
+                            return {
+                                lat: geo1.lat + (geo2.lat - geo1.lat) * anteil,
+                                lon: geo1.lon + (geo2.lon - geo1.lon) * anteil,
+                                bf1: prevBf, bf2: curBf, anteil
+                            };
+                        }
+
+                        let totalDist = 0;
+                        for(let k = 0; k < validStations.length - 1; k++) {
+                            totalDist += Math.abs(validStations[k+1].km - validStations[k].km);
+                        }
+
+                        if (totalDist === 0) {
+                            return {
+                                lat: geo1.lat + (geo2.lat - geo1.lat) * anteil,
+                                lon: geo1.lon + (geo2.lon - geo1.lon) * anteil,
+                                bf1: prevBf, bf2: curBf, anteil
+                            };
+                        }
+
+                        const targetDist = totalDist * anteil;
+                        let accumDist = 0;
+                        for (let k = 0; k < validStations.length - 1; k++) {
+                            const d = Math.abs(validStations[k+1].km - validStations[k].km);
+                            if (accumDist + d >= targetDist || k === validStations.length - 2) {
+                                const subAnteil = d === 0 ? 0 : (targetDist - accumDist) / d;
+                                const geoA = window._geoMap[validStations[k].bahnhof];
+                                const geoB = window._geoMap[validStations[k+1].bahnhof];
+                                return {
+                                    lat: geoA.lat + (geoB.lat - geoA.lat) * subAnteil,
+                                    lon: geoA.lon + (geoB.lon - geoA.lon) * subAnteil,
+                                    bf1: prevBf, bf2: curBf, anteil
+                                };
+                            }
+                            accumDist += d;
+                        }
+                    }
+                }
+            }
+            return null;
+        }
+
+        // Strecken-Layer (statisch, wird bei renderNetzStrecken neu aufgebaut)
+        window._netz_streckenLayer = null;
+        // Zug-Marker-Map: ZugNr -> {marker, lastPos}
+        window._netz_zugMarkers = {};
+
+        // Tooltip-Text für einen Zug
+        function buildNetzZugTooltip(zugNr, pos, gattung) {
+            const g = (gattung || '').trim();
+            let tt = '<b>' + g + ' ' + zugNr + '</b>';
+            if (pos.bf2) {
+                const pct = Math.round(pos.anteil * 100);
+                tt += '<br>' + pos.bf1 + '&nbsp;&#8594;&nbsp;' + pos.bf2;
+                tt += '<br>' + pct + '% gefahren';
+            } else {
+                tt += '<br>in ' + pos.bf1;
+            }
+            return tt;
+        }
+
+        // Zeichnet alle KBS-Streckensegmente neu
+        function renderNetzStrecken() {
+            if (!window._netz_map) return;
+            if (window._netz_streckenLayer) {
+                window._netz_streckenLayer.clearLayers();
+            } else {
+                window._netz_streckenLayer = L.layerGroup().addTo(window._netz_map);
+            }
+
+            if (!window._kbsMap || !window._geoMap) return;
+
+            const showAlle = document.getElementById('netz-show-alle-kbs')
+                ? document.getElementById('netz-show-alle-kbs').checked : false;
+            const gattFilter = document.getElementById('netz-gattung-filter')
+                ? document.getElementById('netz-gattung-filter').value : 'alle';
+            const zugFilter = (document.getElementById('netz-filter-zug')
+                ? document.getElementById('netz-filter-zug').value.trim().toLowerCase() : '');
+
+            // Welche KBS-Segmente werden von passenden Zügen benutzt?
+            const usedEdges = new Set();
+            const usedStations = new Set();
+
+            if (window._fahrplanMap && window._kbsMap) {
+                for (const zugNr in window._fahrplanMap) {
+                    const gattung = window._zuegeMap ? (window._zuegeMap[zugNr] || '') : '';
+                    if (!netzGattungMatch(gattung, gattFilter)) continue;
+                    if (zugFilter && !zugNr.toLowerCase().includes(zugFilter)) continue;
+
+                    const rows = window._fahrplanMap[zugNr];
+                    const fullPath = [];
+
+                    for (let i = 0; i < rows.length; i++) {
+                        const curBf = rows[i].bahnhof;
+                        if (fullPath.length === 0) {
+                            fullPath.push(curBf);
+                        } else {
+                            const prevBf = fullPath[fullPath.length - 1];
+                            const kbsSetPrev = window._stationKbsSetMap ? (window._stationKbsSetMap[prevBf] || new Set()) : new Set();
+                            const kbsSetCur  = window._stationKbsSetMap ? (window._stationKbsSetMap[curBf] || new Set()) : new Set();
+                            let commonKbs = [...kbsSetPrev].filter(k => kbsSetCur.has(k));
+                            if (commonKbs.length > 1 && rows[i].kbsHinweis && window._kbsMap[rows[i].kbsHinweis]) {
+                                commonKbs = [rows[i].kbsHinweis];
+                            }
+                            if (commonKbs.length > 0) {
+                                const chosenKbs = commonKbs[0];
+                                const kbsEls = window._kbsMap[chosenKbs] || [];
+                                const idxP = kbsEls.findIndex(e => e.bahnhof === prevBf);
+                                const idxC = kbsEls.findIndex(e => e.bahnhof === curBf);
+                                if (idxP !== -1 && idxC !== -1) {
+                                    const step = idxP <= idxC ? 1 : -1;
+                                    for (let k = idxP + step; k !== idxC + step; k += step) {
+                                        fullPath.push(kbsEls[k].bahnhof);
+                                    }
+                                } else {
+                                    fullPath.push(curBf);
+                                }
+                            } else {
+                                fullPath.push(curBf);
+                            }
+                        }
+                    }
+                    for (let i = 0; i < fullPath.length; i++) {
+                        usedStations.add(fullPath[i]);
+                        if (i > 0) {
+                            usedEdges.add(fullPath[i-1] + '|||' + fullPath[i]);
+                            usedEdges.add(fullPath[i] + '|||' + fullPath[i-1]);
+                        }
+                    }
+                }
+            }
+
+            // KBS-Farben (zyklisch)
+            const kbsColors = ['#c62828','#1565c0','#2e7d32','#e65100','#6a1b9a','#00838f','#ad1457','#37474f','#827717','#4527a0'];
+            let colorIdx = 0;
+            const bounds = L.latLngBounds();
+            const markersDone = {};
+
+            const kbsKeys = Object.keys(window._kbsMap).sort();
+            for (const kbsId of kbsKeys) {
+                const stations = (window._kbsMap[kbsId] || []).slice().sort((a, b) => a.km - b.km);
+                const pts = [];
+                for (const st of stations) {
+                    const geo = window._geoMap[st.bahnhof];
+                    if (geo) pts.push({ bahnhof: st.bahnhof, ll: [geo.lat, geo.lon] });
+                }
+                if (pts.length < 2) { colorIdx++; continue; }
+
+                const color = kbsColors[colorIdx % kbsColors.length];
+                colorIdx++;
+
+                for (let i = 0; i < pts.length - 1; i++) {
+                    const isUsed = usedStations.has(pts[i].bahnhof) && usedStations.has(pts[i+1].bahnhof);
+                    if (!isUsed && !showAlle) continue;
+                    L.polyline([pts[i].ll, pts[i+1].ll], {
+                        color: isUsed ? color : '#ccc',
+                        weight: isUsed ? 3 : 1,
+                        opacity: isUsed ? 0.85 : 0.5
+                    }).bindTooltip('KBS ' + kbsId, { sticky: true, opacity: 0.8 })
+                      .addTo(window._netz_streckenLayer);
+                }
+
+                // Bahnhof-Marker: unsichtbar, aber Tooltip erscheint beim Hover
+                pts.forEach(({ bahnhof, ll }) => {
+                    if (markersDone[bahnhof]) return;
+                    // Unsichtbarer Marker – nur für Tooltip-Interaktion
+                    L.circleMarker(ll, {
+                        radius: 6,
+                        color: 'transparent',
+                        weight: 0,
+                        fillColor: 'transparent',
+                        fillOpacity: 0,
+                        interactive: true
+                    }).bindTooltip('<b>' + bahnhof + '</b>', { sticky: true, opacity: 0.95 })
+                      .addTo(window._netz_streckenLayer);
+                    markersDone[bahnhof] = true;
+                    bounds.extend(ll);
+                });
+            }
+
+            if (bounds.isValid()) {
+                window._netz_fitBounds = bounds;
+            }
+        }
+
+        // Aktualisiert Zugmarker ohne die Streckenlayer neu zu zeichnen
+        function updateNetzZugMarkers() {
+            if (!window._netz_map || !window._fahrplanMap || !window._geoMap) return;
+            const showZuege = document.getElementById('netz-show-zuege')
+                ? document.getElementById('netz-show-zuege').checked : true;
+            const gattFilter = document.getElementById('netz-gattung-filter')
+                ? document.getElementById('netz-gattung-filter').value : 'alle';
+            const zugFilter = (document.getElementById('netz-filter-zug')
+                ? document.getElementById('netz-filter-zug').value.trim().toLowerCase() : '');
+
+            const simMin = clockH * 60 + clockM;
+            let activeCount = 0;
+
+            // Zugmarker-Layer anlegen wenn nötig
+            if (!window._netz_zugLayer) {
+                window._netz_zugLayer = L.layerGroup().addTo(window._netz_map);
+            }
+
+            const seenZuege = new Set();
+
+            if (showZuege) {
+                for (const zugNr in window._fahrplanMap) {
+                    const gattung = window._zuegeMap ? (window._zuegeMap[zugNr] || '') : '';
+                    if (!netzGattungMatch(gattung, gattFilter)) continue;
+                    if (zugFilter && !zugNr.toLowerCase().includes(zugFilter)) continue;
+
+                    const pos = getZugPosition(zugNr, simMin);
+                    seenZuege.add(zugNr);
+
+                    if (pos) {
+                        activeCount++;
+                        const color = netzGattungColor(gattung);
+                        const tt = buildNetzZugTooltip(zugNr, pos, gattung);
+
+                        // Fahrtrichtung berechnen: Winkel zwischen bf1 und bf2 (oder pos.heading)
+                        let heading = 0;
+                        if (pos.bf1 && pos.bf2 && window._geoMap) {
+                            const g1 = window._geoMap[pos.bf1];
+                            const g2 = window._geoMap[pos.bf2];
+                            if (g1 && g2) {
+                                const dx = g2.lon - g1.lon;
+                                const dy = g2.lat - g1.lat;
+                                heading = Math.atan2(dx, dy) * 180 / Math.PI;
+                            }
+                        }
+
+                        if (window._netz_zugMarkers[zugNr]) {
+                            const existing = window._netz_zugMarkers[zugNr];
+                            existing.setLatLng([pos.lat, pos.lon]);
+                            existing.setTooltipContent(tt);
+                            // Dreieck rotieren
+                            const iconEl = existing.getElement();
+                            if (iconEl) {
+                                const svg = iconEl.querySelector('svg');
+                                if (svg) svg.style.transform = 'rotate(' + heading + 'deg)';
+                            }
+                        } else {
+                            // Gleichschenkliges fast gleichseitiges Dreieck als SVG DivIcon
+                            const s = 14; // halbe Seitenlänge
+                            const svgIcon = L.divIcon({
+                                className: '',
+                                iconSize: [s * 2, s * 2],
+                                iconAnchor: [s, s],
+                                html: '<svg width="' + (s*2) + '" height="' + (s*2) + '" viewBox="-1 -1 ' + (s*2+2) + ' ' + (s*2+2) + '" style="transform:rotate(' + heading + 'deg);overflow:visible;">'
+                                    + '<polygon points="' + s + ',0 ' + (s*2-2) + ',' + (s*1.9) + ' 2,' + (s*1.9) + '"'
+                                    + ' fill="' + color + '" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/>'
+                                    + '</svg>'
+                            });
+                            const m = L.marker([pos.lat, pos.lon], { icon: svgIcon })
+                                .bindTooltip(tt, { sticky: true, opacity: 0.95 });
+                            m.on('click', () => {
+                                if (typeof showZugDetails === 'function') showZugDetails(zugNr);
+                            });
+                            m.addTo(window._netz_zugLayer);
+                            window._netz_zugMarkers[zugNr] = m;
+                        }
+                    } else {
+                        // Zug gerade nicht aktiv → Marker entfernen
+                        if (window._netz_zugMarkers[zugNr]) {
+                            window._netz_zugMarkers[zugNr].remove();
+                            delete window._netz_zugMarkers[zugNr];
+                        }
+                    }
+                }
+            }
+
+            // Marker entfernen für Züge die nicht mehr im Filter sind
+            for (const zugNr in window._netz_zugMarkers) {
+                if (!seenZuege.has(zugNr)) {
+                    window._netz_zugMarkers[zugNr].remove();
+                    delete window._netz_zugMarkers[zugNr];
+                }
+            }
+
+            // Status
+            const statusEl = document.getElementById('netz-status');
+            if (statusEl) statusEl.textContent = activeCount + ' Züge aktiv';
+        }
+
         function initNetzMap() {
             if (window._netz_map) return;
             const mapEl = document.getElementById('netz-map');
             if (!mapEl) return;
-            
+
             window._netz_map = L.map('netz-map', {
                 center: [51.5, 10.5],
                 zoom: 6,
                 zoomControl: true,
                 attributionControl: false
             });
-            
-            mapEl.style.backgroundColor = '#f4f4f4';
-            
-            window._netz_layerGroup = L.layerGroup().addTo(window._netz_map);
-            
-            // Permanent labels only for these two stations
-            const PERMANENT_LABEL_STATIONS = new Set([
-                'Berlin Anhalter Bf',
-                'Berlin-Lichterfelde Ost'
-            ]);
 
-            // Compute the network strictly from the union of all train routes.
-            // Uses the same logic as showZugDetails to connect timetable stops along KBS.
-            function buildTrainPathEdges() {
-                const usedEdges = new Set();
-                const usedStations = new Set();
+            // Kein Kartenhintergrund mehr gewünscht
+            mapEl.style.backgroundColor = '#f0f0f0';
 
-                if (!window._fahrplanMap || !window._kbsMap) return { usedEdges, usedStations };
+            window._netz_zugLayer = L.layerGroup().addTo(window._netz_map);
+            window._netz_zugMarkers = {};
 
-                for (const zugNr in window._fahrplanMap) {
-                    const gattung = window._zuegeMap ? window._zuegeMap[zugNr] : '';
-                    if (gattung !== 'FD' && gattung !== 'FDt') continue;
+            // Toolbar-Events
+            const cbZuege = document.getElementById('netz-show-zuege');
+            const cbAlleKbs = document.getElementById('netz-show-alle-kbs');
+            const selGattung = document.getElementById('netz-gattung-filter');
+            const inpZug = document.getElementById('netz-filter-zug');
+            const btnFit = document.getElementById('netz-zoom-fit');
 
-                    const rows = window._fahrplanMap[zugNr];
-                    const fullPathStations = [];
-
-                    for (let i = 0; i < rows.length; i++) {
-                        const curRow = rows[i];
-                        const curBf = curRow.bahnhof;
-
-                        if (fullPathStations.length === 0) {
-                            fullPathStations.push(curBf);
-                        } else {
-                            const prevBf = fullPathStations[fullPathStations.length - 1];
-                            const kbsSetPrev = window._stationKbsSetMap ? (window._stationKbsSetMap[prevBf] || new Set()) : new Set();
-                            const kbsSetCur  = window._stationKbsSetMap ? (window._stationKbsSetMap[curBf] || new Set()) : new Set();
-
-                            let commonKbs = [...kbsSetPrev].filter(k => kbsSetCur.has(k));
-                            if (commonKbs.length > 1 && curRow.kbsHinweis && window._kbsMap[curRow.kbsHinweis]) {
-                                commonKbs = [curRow.kbsHinweis];
-                            }
-
-                            if (commonKbs.length > 0) {
-                                const chosenKbs = commonKbs[0];
-                                const kbsElements = window._kbsMap[chosenKbs] || [];
-                                const idxPrev = kbsElements.findIndex(e => e.bahnhof === prevBf);
-                                const idxCur  = kbsElements.findIndex(e => e.bahnhof === curBf);
-
-                                if (idxPrev !== -1 && idxCur !== -1) {
-                                    const step = idxPrev <= idxCur ? 1 : -1;
-                                    for (let k = idxPrev + step; k !== idxCur + step; k += step) {
-                                        fullPathStations.push(kbsElements[k].bahnhof);
-                                    }
-                                } else {
-                                    fullPathStations.push(curBf);
-                                }
-                            } else {
-                                fullPathStations.push(curBf);
-                            }
-                        }
+            if (cbZuege)    cbZuege.addEventListener('change', updateNetzZugMarkers);
+            if (cbAlleKbs)  cbAlleKbs.addEventListener('change', () => { renderNetzStrecken(); updateNetzZugMarkers(); });
+            if (selGattung) selGattung.addEventListener('change', () => { renderNetzStrecken(); updateNetzZugMarkers(); });
+            if (inpZug)     inpZug.addEventListener('input', () => { renderNetzStrecken(); updateNetzZugMarkers(); });
+            if (btnFit) {
+                btnFit.addEventListener('click', () => {
+                    if (window._netz_fitBounds && window._netz_fitBounds.isValid()) {
+                        window._netz_map.fitBounds(window._netz_fitBounds, { padding: [5, 5] });
                     }
-
-                    // Add to sets
-                    for (let i = 0; i < fullPathStations.length; i++) {
-                        usedStations.add(fullPathStations[i]);
-                        if (i > 0) {
-                            const a = fullPathStations[i - 1];
-                            const b = fullPathStations[i];
-                            usedEdges.add(a + '|||' + b);
-                            usedEdges.add(b + '|||' + a);
-                        }
-                    }
-                }
-                return { usedEdges, usedStations };
+                });
             }
 
-            function renderNetzMap() {
-                window._netz_layerGroup.clearLayers();
-                const bounds = L.latLngBounds();
-                const colors = ['#d32f2f', '#1976d2', '#388e3c', '#f57c00', '#8e24aa', '#0288d1', '#c2185b', '#00796b', '#afb42b', '#5d4037'];
-                let colorIdx = 0;
-                const markersCache = {};
-                
-                const { usedEdges, usedStations } = buildTrainPathEdges();
+            // Streckennetz zeichnen (statisch)
+            renderNetzStrecken();
 
-                if (window._kbsMap && window._geoMap) {
-                    const kbsKeys = Object.keys(window._kbsMap).sort();
-                    for (const kbsId of kbsKeys) {
-                        const stations = window._kbsMap[kbsId].slice().sort((a, b) => a.km - b.km);
-                        const stationsList = [];
-                        
-                        // Extract coords
-                        for (const st of stations) {
-                            const geo = window._geoMap[st.bahnhof];
-                            if (geo) {
-                                stationsList.push({ st, ll: [geo.lat, geo.lon], geo });
-                            }
-                        }
-                        
-                        if (stationsList.length > 0) {
-                            const color = colors[colorIdx % colors.length];
-                            colorIdx++;
+            // Initiale Zugmarker
+            updateNetzZugMarkers();
 
-                            // Only draw edges traversed by trains
-                            for (let i = 0; i < stationsList.length - 1; i++) {
-                                const a = stationsList[i];
-                                const b = stationsList[i + 1];
-                                const segKey = a.st.bahnhof + '|||' + b.st.bahnhof;
-                                if (usedEdges.has(segKey)) {
-                                    L.polyline([a.ll, b.ll], { color: color, weight: 4, opacity: 0.85 }).addTo(window._netz_layerGroup);
-                                }
-                            }
-                            
-                            stationsList.forEach(({ st, ll, geo }, idx) => {
-                                if (markersCache[st.bahnhof]) return;
-                                if (!usedStations.has(st.bahnhof)) return;
-                                
-                                const isHalt = window._stationsWithStops && window._stationsWithStops.has(st.bahnhof);
-                                const isPermanent = PERMANENT_LABEL_STATIONS.has(st.bahnhof);
-
-                                if (!isPermanent && !isHalt && !window._showNonStopStations) return;
-
-                                const fillColor = isPermanent ? '#333' : (isHalt ? '#1a56db' : '#888');
-                                const radius = isPermanent ? 6 : (isHalt ? 4 : 3);
-                                
-                                const tooltipOptions = isPermanent
-                                    ? { permanent: true, direction: 'top', opacity: 0.95, className: 'bf-label' }
-                                    : { permanent: false, direction: 'top', sticky: true };
-                                
-                                const ttText = `<b>${st.bahnhof}</b>`;
-                                L.circleMarker(ll, {
-                                    radius: radius,
-                                    color: isPermanent ? '#000' : 'transparent',
-                                    weight: isPermanent ? 1 : 0,
-                                    fillColor: fillColor,
-                                    fillOpacity: 0.9
-                                })
-                                .bindTooltip(ttText, tooltipOptions)
-                                .bindPopup(ttText)
-                                .addTo(window._netz_layerGroup);
-                                
-                                markersCache[st.bahnhof] = true;
-                                bounds.extend(ll);
-                            });
-                        }
-                    }
-                }
-                if (bounds.isValid()) {
-                    window._netz_map.fitBounds(bounds, { padding: [30, 30] });
-                }
+            // Karte einpassen
+            if (window._netz_fitBounds && window._netz_fitBounds.isValid()) {
+                window._netz_map.fitBounds(window._netz_fitBounds, { padding: [5, 5] });
             }
-            
-            window.addNonStopToggleControl(window._netz_map, renderNetzMap);
-            renderNetzMap();
+
+            // Hook in updateClockDisplay: Zugmarker bei jedem Sekunden-Tick aktualisieren
+            const _origUpdateClock = updateClockDisplay;
+            window._netz_clockHooked = true;
+            updateClockDisplay = function() {
+                _origUpdateClock();
+                if (window._netz_map && document.getElementById('panel-netz') &&
+                    document.getElementById('panel-netz').classList.contains('active')) {
+                    updateNetzZugMarkers();
+                }
+            };
         }
 
         window.switchMainTab = function(name) {
@@ -3549,7 +3857,7 @@ ${von} – ${nach}`;
                 }
 
                 // Parse kbs.csv (KBS -> array of {km, bahnhof})
-                // kbs.csv is Windows-1252 encoded (not UTF-8!)
+                // kbs.csv ist jetzt UTF-8 mit BOM (wie alle anderen CSVs)
                 window._kbsMap = {};
                 window._stationKbsSetMap = {}; // Bahnhof -> Set(kbsName)
                 if (kbsRes && kbsRes.ok) {
