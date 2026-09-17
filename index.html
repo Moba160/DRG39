@@ -1127,6 +1127,9 @@
             <button class="main-tab" id="tab-btn-kbs"
                 onclick="switchMainTab('kbs')"
                 title="Kursbuchstrecken anzeigen">KBS</button>
+            <button class="main-tab" id="tab-btn-netz"
+                onclick="switchMainTab('netz')"
+                title="Netzplan anzeigen">Netz</button>
             <button class="main-tab" id="tab-btn-modellgarnituren"
                 onclick="switchMainTab('modellgarnituren')"
                 title="Modellgarnituren anzeigen">Modellgarnituren</button>
@@ -1263,6 +1266,11 @@
                         <div id="kbs-orm-map" style="display:block; width:100%; height:100%;"></div>
                     </div>
                 </div>
+            </div>
+            
+            <!-- Panel: Netz -->
+            <div class="tab-panel" id="panel-netz">
+                <canvas id="netz-canvas" style="flex:1; width:100%; height:100%; display:block;"></canvas>
             </div>
 
             <!-- Panel: Modellgarnituren (ehem. Rollmaterial) -->
@@ -1990,6 +1998,173 @@
             }
         }
 
+        function initNetzMap() {
+            if (window._netz_map) return;
+            const mapEl = document.getElementById('netz-map');
+            if (!mapEl) return;
+            
+            window._netz_map = L.map('netz-map', {
+                center: [51.5, 10.5],
+                zoom: 6,
+                zoomControl: true,
+                attributionControl: false
+            });
+            
+            mapEl.style.backgroundColor = '#f4f4f4';
+            
+            window._netz_layerGroup = L.layerGroup().addTo(window._netz_map);
+            
+            // Permanent labels only for these two stations
+            const PERMANENT_LABEL_STATIONS = new Set([
+                'Berlin Anhalter Bf',
+                'Berlin-Lichterfelde Ost'
+            ]);
+
+            // Compute the network strictly from the union of all train routes.
+            // Uses the same logic as showZugDetails to connect timetable stops along KBS.
+            function buildTrainPathEdges() {
+                const usedEdges = new Set();
+                const usedStations = new Set();
+
+                if (!window._fahrplanMap || !window._kbsMap) return { usedEdges, usedStations };
+
+                for (const zugNr in window._fahrplanMap) {
+                    const gattung = window._zuegeMap ? window._zuegeMap[zugNr] : '';
+                    if (gattung !== 'FD' && gattung !== 'FDt') continue;
+
+                    const rows = window._fahrplanMap[zugNr];
+                    const fullPathStations = [];
+
+                    for (let i = 0; i < rows.length; i++) {
+                        const curRow = rows[i];
+                        const curBf = curRow.bahnhof;
+
+                        if (fullPathStations.length === 0) {
+                            fullPathStations.push(curBf);
+                        } else {
+                            const prevBf = fullPathStations[fullPathStations.length - 1];
+                            const kbsSetPrev = window._stationKbsSetMap ? (window._stationKbsSetMap[prevBf] || new Set()) : new Set();
+                            const kbsSetCur  = window._stationKbsSetMap ? (window._stationKbsSetMap[curBf] || new Set()) : new Set();
+
+                            let commonKbs = [...kbsSetPrev].filter(k => kbsSetCur.has(k));
+                            if (commonKbs.length > 1 && curRow.kbsHinweis && window._kbsMap[curRow.kbsHinweis]) {
+                                commonKbs = [curRow.kbsHinweis];
+                            }
+
+                            if (commonKbs.length > 0) {
+                                const chosenKbs = commonKbs[0];
+                                const kbsElements = window._kbsMap[chosenKbs] || [];
+                                const idxPrev = kbsElements.findIndex(e => e.bahnhof === prevBf);
+                                const idxCur  = kbsElements.findIndex(e => e.bahnhof === curBf);
+
+                                if (idxPrev !== -1 && idxCur !== -1) {
+                                    const step = idxPrev <= idxCur ? 1 : -1;
+                                    for (let k = idxPrev + step; k !== idxCur + step; k += step) {
+                                        fullPathStations.push(kbsElements[k].bahnhof);
+                                    }
+                                } else {
+                                    fullPathStations.push(curBf);
+                                }
+                            } else {
+                                fullPathStations.push(curBf);
+                            }
+                        }
+                    }
+
+                    // Add to sets
+                    for (let i = 0; i < fullPathStations.length; i++) {
+                        usedStations.add(fullPathStations[i]);
+                        if (i > 0) {
+                            const a = fullPathStations[i - 1];
+                            const b = fullPathStations[i];
+                            usedEdges.add(a + '|||' + b);
+                            usedEdges.add(b + '|||' + a);
+                        }
+                    }
+                }
+                return { usedEdges, usedStations };
+            }
+
+            function renderNetzMap() {
+                window._netz_layerGroup.clearLayers();
+                const bounds = L.latLngBounds();
+                const colors = ['#d32f2f', '#1976d2', '#388e3c', '#f57c00', '#8e24aa', '#0288d1', '#c2185b', '#00796b', '#afb42b', '#5d4037'];
+                let colorIdx = 0;
+                const markersCache = {};
+                
+                const { usedEdges, usedStations } = buildTrainPathEdges();
+
+                if (window._kbsMap && window._geoMap) {
+                    const kbsKeys = Object.keys(window._kbsMap).sort();
+                    for (const kbsId of kbsKeys) {
+                        const stations = window._kbsMap[kbsId].slice().sort((a, b) => a.km - b.km);
+                        const stationsList = [];
+                        
+                        // Extract coords
+                        for (const st of stations) {
+                            const geo = window._geoMap[st.bahnhof];
+                            if (geo) {
+                                stationsList.push({ st, ll: [geo.lat, geo.lon], geo });
+                            }
+                        }
+                        
+                        if (stationsList.length > 0) {
+                            const color = colors[colorIdx % colors.length];
+                            colorIdx++;
+
+                            // Only draw edges traversed by trains
+                            for (let i = 0; i < stationsList.length - 1; i++) {
+                                const a = stationsList[i];
+                                const b = stationsList[i + 1];
+                                const segKey = a.st.bahnhof + '|||' + b.st.bahnhof;
+                                if (usedEdges.has(segKey)) {
+                                    L.polyline([a.ll, b.ll], { color: color, weight: 4, opacity: 0.85 }).addTo(window._netz_layerGroup);
+                                }
+                            }
+                            
+                            stationsList.forEach(({ st, ll, geo }, idx) => {
+                                if (markersCache[st.bahnhof]) return;
+                                if (!usedStations.has(st.bahnhof)) return;
+                                
+                                const isHalt = window._stationsWithStops && window._stationsWithStops.has(st.bahnhof);
+                                const isPermanent = PERMANENT_LABEL_STATIONS.has(st.bahnhof);
+
+                                if (!isPermanent && !isHalt && !window._showNonStopStations) return;
+
+                                const fillColor = isPermanent ? '#333' : (isHalt ? '#1a56db' : '#888');
+                                const radius = isPermanent ? 6 : (isHalt ? 4 : 3);
+                                
+                                const tooltipOptions = isPermanent
+                                    ? { permanent: true, direction: 'top', opacity: 0.95, className: 'bf-label' }
+                                    : { permanent: false, direction: 'top', sticky: true };
+                                
+                                const ttText = `<b>${st.bahnhof}</b>`;
+                                L.circleMarker(ll, {
+                                    radius: radius,
+                                    color: isPermanent ? '#000' : 'transparent',
+                                    weight: isPermanent ? 1 : 0,
+                                    fillColor: fillColor,
+                                    fillOpacity: 0.9
+                                })
+                                .bindTooltip(ttText, tooltipOptions)
+                                .bindPopup(ttText)
+                                .addTo(window._netz_layerGroup);
+                                
+                                markersCache[st.bahnhof] = true;
+                                bounds.extend(ll);
+                            });
+                        }
+                    }
+                }
+                if (bounds.isValid()) {
+                    window._netz_map.fitBounds(bounds, { padding: [30, 30] });
+                }
+            }
+            
+            window.addNonStopToggleControl(window._netz_map, renderNetzMap);
+            renderNetzMap();
+        }
+
         window.switchMainTab = function(name) {
             document.querySelectorAll('.main-tab').forEach(btn => btn.classList.remove('active'));
             document.querySelectorAll('.tab-panel').forEach(panel => panel.classList.remove('active'));
@@ -2013,6 +2188,14 @@
                     const firstLi = document.querySelector('#kbs-list-container .kbs-list-item');
                     if (firstLi && !document.querySelector('#kbs-list-container .kbs-list-item.active')) {
                         firstLi.click();
+                    }
+                }, 100);
+            } else if (name === 'netz') {
+                setTimeout(() => {
+                    if (!window._netz_map) {
+                        initNetzMap();
+                    } else {
+                        window._netz_map.invalidateSize();
                     }
                 }, 100);
             } else if (name === 'modellgarnituren') {
