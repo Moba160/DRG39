@@ -8,9 +8,13 @@ M01	left		wagen	P146
 M01	left		wagen	P147
 M02	left		lok	L3
 M02	left		wagen	P169
-M02	left		wagen	P184
+M02	left		wagen	P180
 M02	left		wagen	P185
 M02	left		wagen	P186
+M02	left		wagen	P181
+M02	left		wagen	P182
+M02	left		wagen	P191
+M02	left		wagen	P184
 M02	left		wagen	P189
 M02	left		wagen	P187
 M02	left		wagen	P188
@@ -20,3 +24,36 @@ M03	left		wagen	P200
 M03	left		wagen	P201
 M03	left		wagen	P202
 M03	left		wagen	P203
+M04	left	Riviera-Express	lok	L1
+M04	left	Riviera-Express	wagen	P136
+M04	left	Riviera-Express	wagen	P138
+M04	left	Riviera-Express	wagen	P140
+M04	left	Riviera-Express	wagen	P139
+M04	left	Riviera-Express	wagen	P137
+M05	left		lok	L13
+M05	left		wagen	P38
+M05	left		wagen	P95
+M05	left		wagen	P101
+M05	left		wagen	P85
+M05	left		wagen	P89
+M05	left		wagen	P88
+M05	left		wagen	P87
+M05	left		wagen	P100
+M05	left		wagen	P86
+M05	left		wagen	P84
+M05	left		wagen	P99
+M05	left		wagen	P96
+M05	left		wagen	P97
+M05	left		wagen	P98
+M06	left	RSV rot	lok	L37
+M06	left	RSV rot	wagen	P103
+M06	left	RSV rot	wagen	P104
+M06	left	RSV rot	wagen	P102
+M06	left	RSV rot	wagen	P105
+M06	left	RSV rot	wagen	P106
+M07	left	RSV lila	lok	L38
+M07	left	RSV lila	wagen	P108
+M07	left	RSV lila	wagen	P109
+M07	left	RSV lila	wagen	P107
+M07	left	RSV lila	wagen	P111
+M07	left	RSV lila	wagen	P110

@@ -2239,7 +2239,8 @@
                 const img = new Image();
                 img.onload  = () => { _wagenImgCache[gattung] = true;  resolve(true); };
                 img.onerror = () => { _wagenImgCache[gattung] = false; resolve(false); };
-                img.src = PWAGEN_IMG_PATH + gattung + '.png';
+                const fileGattung = gattung.replace(/\//g, '');
+                img.src = PWAGEN_IMG_PATH + fileGattung + '.png';
             });
         }
 
@@ -2264,6 +2265,8 @@
                     if (!gattung) continue;
                     _wagenData.push({
                         gattung,
+                        gattungFile: gattung.replace(/\//g, ''),
+                        gattungDisplay: gattung.split(';')[0],
                         id:  (cols[idxId]  || '').trim(),
                         her: (cols[idxHer] || '').trim(),
                         art: (cols[idxArt] || '').trim(),
@@ -2380,9 +2383,11 @@
                     e.dataTransfer.setData('text/plain', 'wagen-item');
                 };
 
-                const imgSrc = PWAGEN_IMG_PATH + entry.gattung + '.png';
+                const fileGattung = entry.gattungFile || entry.gattung.replace(/\//g, '');
+                const displayGattung = entry.gattungDisplay || entry.gattung.split(';')[0];
+                const imgSrc = PWAGEN_IMG_PATH + fileGattung + '.png';
                 const img = document.createElement('img');
-                img.alt = entry.gattung;
+                img.alt = displayGattung;
                 img.src = imgSrc;
                 img.onerror = function() {
                     if (!this._fallback) {
@@ -2400,7 +2405,7 @@
                 const cap = document.createElement('div');
                 cap.className = 'wagen-caption';
                 const bold = document.createElement('strong');
-                bold.textContent = entry.gattung;
+                bold.textContent = displayGattung;
                 cap.appendChild(bold);
                 const meta = [entry.her, entry.art].filter(Boolean).join('\u00a0');
                 if (meta) {
@@ -2733,7 +2738,7 @@
                     };
                     
                     let imgSrc = '';
-                    if (v.type === 'wagen') imgSrc = PWAGEN_IMG_PATH + v.entry.gattung + '.png';
+                    if (v.type === 'wagen') imgSrc = PWAGEN_IMG_PATH + (v.entry.gattungFile || v.entry.gattung.replace(/\//g, '')) + '.png';
                     else if (v.type === 'lok') imgSrc = LOKS_IMG_PATH + v.entry.gattung + '.png';
                     const img = document.createElement('img');
                     img.src = imgSrc;
@@ -2748,7 +2753,7 @@
                     item.appendChild(img);
                     const lbl = document.createElement('div');
                     lbl.className = 'garnitur-item-label';
-                    lbl.textContent = v.entry ? (v.type === 'lok' ? v.entry.id : v.entry.gattung) : '';
+                    lbl.textContent = v.entry ? (v.type === 'lok' ? v.entry.id : (v.entry.gattungDisplay || v.entry.gattung.split(';')[0])) : '';
                     item.appendChild(lbl);
                     track.appendChild(item);
                 });
@@ -5286,8 +5291,10 @@ ${von} – ${nach}`;
                     const searchUrl = `https://www.spurweite-n.de/ncontent/ndb/ndb-artdetails.asp?DoLog=0&Sel_Hersteller_VString=${encodeURIComponent(fullName)}&MSel_ArtikelNr_VString=${encodeURIComponent(artDisplay)}&ToShow=0&MaxCount=1`;
                     artDisplay += ` <a href="${searchUrl}" target="_blank" title="Auf spurweite-n.de öffnen" style="text-decoration:none; margin-left:4px;">🔗</a>`;
                 }
+                let displayGattung = entry.gattungDisplay || gattung;
+                let fileGattung = entry.gattungFile || gattung;
                 const tr = document.createElement('tr');
-                tr.innerHTML = `<td>${idVal}</td><td>${gattung}</td><td class="inv-img-cell"><img src="${imgBasePath}${encodeURIComponent(gattung)}.png" alt="" onerror="this.style.display='none'"></td><td>${herDisplay}</td><td>${artDisplay}</td>`;
+                tr.innerHTML = `<td>${idVal}</td><td>${displayGattung}</td><td class="inv-img-cell"><img src="${imgBasePath}${encodeURI(fileGattung)}.png" alt="" onerror="this.style.display='none'"></td><td>${herDisplay}</td><td>${artDisplay}</td>`;
                 tbody.appendChild(tr);
             });
             document.getElementById(countId).textContent = count + '\u00a0Treffer';
