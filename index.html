@@ -1041,6 +1041,7 @@
             border-radius: 2px;
         }
         .garnitur-track {
+            position: relative;
             flex: 1;
             display: flex;
             align-items: stretch;
@@ -1051,10 +1052,17 @@
             min-width: 0;
             overflow-x: auto;
             scrollbar-width: none;
-            background: linear-gradient(#555, #555);
-            background-size: 1px 2px;
-            background-position: left bottom 16px;
-            background-repeat: repeat-x;
+        }
+        .garnitur-track::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 16px;
+            height: 2px;
+            background: #555;
+            pointer-events: none;
+            z-index: 5;
         }
         .garnitur-track.active {
             cursor: ew-resize !important;
@@ -1481,7 +1489,7 @@
                                     placeholder="Gattung Lok / Wagen…"
                                     oninput="window._garniturVehicleFilter = this.value; renderGarnituren();"
                                     title="Filtert Garnituren, die eine Lok oder einen Wagen dieser Gattung enthalten"
-                                    style="flex:1; box-sizing:border-box; font-size:11px; padding:2px 5px; border:1px solid #bbb; border-radius:3px;"
+                                    style="width:160px; box-sizing:border-box; font-size:11px; padding:2px 5px; border:1px solid #bbb; border-radius:3px;"
                                 >
                                 <button
                                     onclick="resetGarniturFilter()"
@@ -3575,10 +3583,17 @@
                     });
                 } else {
                     const q = rawFilter.toLowerCase();
-                    filteredGarnituren = filteredGarnituren.filter(g =>
-                        g.id.toLowerCase().includes(q) ||
-                        (g.name || '').toLowerCase().includes(q)
-                    );
+                    filteredGarnituren = filteredGarnituren.filter(g => {
+                        if (g.id.toLowerCase().includes(q) || (g.name || '').toLowerCase().includes(q)) return true;
+                        return g.vehicles.some(v => {
+                            if (v.type === 'wagen') {
+                                return v.entry.id.toLowerCase().includes(q) || (v.entry.gattung || '').toLowerCase().includes(q);
+                            } else if (v.type === 'lok' && v.entries) {
+                                return v.entries.some(e => e.id.toLowerCase().includes(q) || (e.gattung || '').toLowerCase().includes(q));
+                            }
+                            return false;
+                        });
+                    });
                 }
             }
 
@@ -3813,7 +3828,7 @@
                     if (v.type === 'lok' && v.entries && v.entries.length > 1) {
                         const icon = document.createElement('div');
                         icon.className = 'lok-alt-btn';
-                        icon.innerHTML = '&#9660;';
+                        icon.innerHTML = 'Alternativlok &#9660;';
                         icon.title = 'Alternative Lok wählen';
                         icon.onclick = (ev) => {
                             ev.stopPropagation();
