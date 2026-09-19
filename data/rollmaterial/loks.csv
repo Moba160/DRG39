@@ -1,94 +1,94 @@
-﻿Id	Gattung	Baureihe	DCC-Adr.	Decoder	Schnittstelle	Hersteller	Artikelnummer	RBD	BW	LüP
-L1	01 004	01^0-2	2	DCX75	NEM651	Tr	12276	Essen	Hamm	150
-L2	01 235	01^0-2	1	DCX75	Ohne	Ar	2521	Regensburg	Hof	149
-L3	01 1059	01^10	4	DHL160	Ohne	Fl	7174	Halle	Halle P	158
-L4	03 062	03^0-2	3	DCX75	Ohne	Tr	12830	Nürnberg	Nürnberg	150
-L5	05 002				Ohne	Ar	2217			164
-L6	14 141	14^1			Löt	Tr	12232	München	München Hbf	123
-L7	17 253	17^2			Ohne	Tr	12831	Münster	Osnabrück	132
-L8	17 419	17^4	17	N025	NEM651	Tr	12222	Nürnberg	Nürnberg	123
-L9	18 535	18^5	18	DCX75	NEM651	HN	2007	Mainz	Mainz	133
-L10	24 047	24			Ohne	Fl	7141			106
-L11	36 446	36^4			Ohne	Ar	2545	Nürnberg	Nürnberg Hbf	71,04
-L12	38 2025	38^10-40			Ohne	Fl	7818	Essen	Oberhausen	122
-L13	38 2025	38^10-40			Ohne	Fl	7818	Essen	Oberhausen	122
-L14	39 105	39			Ohne	Fl	7827	Berlin	Berlin Ahb	144
-L15	39 109	39			Ohne	Fl	7912	Erfurt	Erfurt	144
-L16	39 204	39			Ohne	Fl	7139	Stuttgart	Stuttgart	144
-L17	39 204	39			Ohne	Fl	7139	Stuttgart	Stuttgart	144
-L18	41 014	41			Ohne	Tr	12000	Essen	Göttingen	150
-L19	44 141	44		Noch einbauen	Next18	Fl	714403	Nürnberg	Treuchtlingen	141
-L20	45 026	45			NEM651	Tr	12309			160
-L21	50 002	50			Ohne	Fl	7180	Halle	Leipzig-Wahren	144
-L22	53 7752	53^7	53	N025	Ohne	Fl	7124	Danzig	Danzig Rdz	103
-L23	54 1658	54^15			NEM651	Tr	12308	Nürnberg	Nürnberg	112
-L24	55 4536	55^25-26		DCX75	Ohne	Fl	7154	Wuppertal	Opladen	116
-L25	56 376	56^2-8	54	Ja, welcher?	Next18	Li	161560	Köln	Köln Bbf	114
-L26	56 1113	56^8-11			Ohne	Tr	2923	München	Treuchtlingen	117
-L27	56 2264	56^20-29			Ohne	Fl	7900-1	Cassel	Göttingen	111
-L28	56 2048	56^20-29		U73400	Ohne	Fl	7156	Mainz	Mainz-Bisch	111
-L29	56 2048	56^20-29			Ohne	Fl	7156	Mainz	Mainz-Bisch	111
-L30	58 1437	58^10-21		Gold mini	NEM651	Tr	12716	Dresden		114
-L31	61 001	61			Ohne	Ar	0166.0			124
-L32	62 010	62		DCX76	Ohne	Fl	7053	Erfurt	Meiningen	107
-L33	64 365	64		DCX75	Ohne	Fl	7063	Frankfurt	Frankfurt	78
-L34	70 066	70		DCX76z	Löt	Fl	7071	München	Rosenheim	58
-L35	74 1230	74^4-13			Ohne	Ar	2284	Berlin	Wustermark	74
-L36	75 1109	75^10-11			Ohne	Ar	0155	Karlsruhe	Waldheim?	79
-L37	78 017	78^0-5			Ohne	Fl	7079	Mainz	Alzey	93
-L38	78 017	78^0-5			Ohne	Fl	7887	Mainz	Alzey	93
-L39	80 018	80^0			Ohne	Fl	7027	Köln	Köln Bbf	60
-L40	81 001	81^0			Ohne	Fl	7035	Magdeburg	Vienenburg	69
-L41	85 001	85			?	Tr	11455.0	Karlsruhe	Freiburg	102
-L42	86 436	86			Ohne	Fl	781101			97
-L43	89 707	89^7	89	DCX76z	Ohne	Tr	11422.0	München	München Hbf	60
-L44	89 7493	89^74-75			Ohne	Ar	2220	Stettin	Stettin	54
-L45	92 1004	92^5-10	92	DCX76	NEM651	Fl	709201	Altona	Altona	69
-L46	92 2048	92^20	93	DH10B	Platine	Tr	11631			69
-L47	93 400	93^5-12			Ohne	Ar	2292	Berlin	Tempelhof	90
-L48	98 303	98^3			Ohne	Tr	12212			45
-L49	94 733	94^5-17			Ohne	Fl	7091	Mainz	Darmstadt-Kranichstatt	79
-L50	94 956	94^5-17			Ohne	Fl	7093	Breslau	Sommerfeld	79
-L51	95 003	95			Ohne	HN	2419	Nürnberg	Saalfeld	95
-L52	96 022	96			Ohne	Ar	2278	Nürnberg	Pressig-Rothenkirchen	111
-L53	98 731	98^7			Ohne	Tr	12700	Regensburg	Passau	64
-L54	98 811	98^8			Ohne	Fl	7098	München	München Hbf	58
-L55	98 811	98^8			Ohne	Fl	7098	München	München Hbf	58
-L56	DW 6	CidT			Ohne	Ar	2923			71,5
-L57	V 16 101	V16		?	NEM651	Tr	12800			90
-L58	VT 851	VT851		DRG	Ohne	Tr	12841			131
-L59	VT 135 009		135	Trix	Platine	Tr	12388			156
-L60	VT 137 251 + VS 145 173			DCX76	NEM651	HT	2680			270
-L61	SVT 137 155			geplant U73410	NEM651	HT	2630			436
-L62	SVT 877a/b		12	N025	Ohne	Ka	10707	Berlin	Lehrter Bf	263
-L63	SVT 137 149a+b		11	68530	Ohne	Ka	10711	Berlin	Lehrter Bf	277
-L64	SVT 137 853 a+b+c			N025	Ohne	HT	16061	Berlin	Berlin Ahb	297
-L65	SVT 137 853 a+b+c			Ohne Motor	Ohne	HT	16061	Berlin	Berlin Ahb	297
-L66	E 04 05	E04		geplant U73410	NEM651	HN	2134	Halle	Leipzig-West	95
-L67	E 17 113	E17		DH18A	Next18	HT	2890			100
-L68	E 18 39	E18		DH18A	Plux12	Pi	40303			106
-L69	E 19 02	E19.0		ESU...	NEM651	Fl	877914	Nürnberg	Nürnberg Hbf	106
-L70	E 19 11	E19.1			Ohne	Ar	2491	Nürnberg	Nürnberg Hbf	116
-L71	E 32 108	E32		geplant U73410	NEM651	Fl	737001			81
-L72	E 36 01	E36		DH10C	NEM651	Tr	12462	München	Freilassing	77
-L73	E 44 103	E44.5		DH18A	Next18	Li	162540			86
-L74	E 44 019	E44		DH18A	Next18	Br	63100			95,6
-L75	E 69 05	E69		685503	NEM651	Fl	737101			54
-L76	E 75 06	E75		DCX76	Löt	Tr	12537			96
-L77	E 77 28	E77			Löt	Br	63003	München	München	102
-L78	E 91 102	E91		Hat einen, welcher?	Next18	Pi	40544			104
-L79	E 93 01	E93			NEM651	Tr	12752	Stuttgart	Kornwestheim	111
-L80	E 94 058	E94		ESU 54687	NEM651	Fl	739401	Erfurt	Probstzella	116
-L81	C4esT-29 + BC4esS-29		65	DCX75	Ohne	RR	5525001			220
-L82	C4esT-29 + BC4esS-29		66	DCX76	Ohne	RR	5525001			220
-L83	C4esT-29 + BC4es-29			Ohne Motor	Ohne	Ar	0189			220
-L84	C4esT-29 + BC4es-29			Ohne Motor	Ohne	Ar	0189			220
-L85	C4esT-29 + BC4es-29			Ohne Motor	Ohne	RR	RR 5525001 + Ar 0189			220
-L86	C4esT-29 + BC4esS-29			Ohne Motor	Ohne	RR	5525001			220
-L87	C4esT-29 + BC4esS-29			Ohne Motor	Ohne	RR	5525001			220
-L88	C4esT-29 + BC4esS-29			Ohne Motor	Ohne	RR	5525001			220
-L89	elT 1130	ET85		Ohne Motor	Ohne	Ro	23001			256
-L90	 elT 1130	ET25			Ohne	Ka	10709			273
-L91	AT3 375+376	AT3			Ohne	Ro	23012			162
-L92	AT3 295+296	AT3		DCX76	Ohne	HT	15772			161
-L93	AT3 405+406	AT3		N045	Ohne	Ro	23390	Mainz		162
+Id	Gattung	Baureihe	DCC-Adr.	Decoder	Schnittstelle	Hersteller	Artikelnummer	RBD	BW	LüP	SVT 877a+b
+L1	01 004	01^0-2	2	DCX75	NEM651	Tr	12276	Essen	Hamm	150	
+L2	01 235	01^0-2	1	DCX75	Ohne	Ar	2521	Regensburg	Hof	149	
+L3	01 1059	01^10	4	DHL160	Ohne	Fl	7174	Halle	Halle P	158	
+L4	03 062	03^0-2	3	DCX75	Ohne	Tr	12830	Nürnberg	Nürnberg	150	
+L5	05 002				Ohne	Ar	2217			164	
+L6	14 141	14^1			Löt	Tr	12232	München	München Hbf	123	
+L7	17 253	17^2			Ohne	Tr	12831	Münster	Osnabrück	132	
+L8	17 419	17^4	17	N025	NEM651	Tr	12222	Nürnberg	Nürnberg	123	
+L9	18 535	18^5	18	DCX75	NEM651	HN	2007	Mainz	Mainz	133	
+L10	24 047	24			Ohne	Fl	7141			106	
+L11	36 446	36^4			Ohne	Ar	2545	Nürnberg	Nürnberg Hbf	71,04	
+L12	38 2025	38^10-40			Ohne	Fl	7818	Essen	Oberhausen	122	
+L13	38 2025	38^10-40			Ohne	Fl	7818	Essen	Oberhausen	122	
+L14	39 105	39			Ohne	Fl	7827	Berlin	Berlin Ahb	144	
+L15	39 109	39			Ohne	Fl	7912	Erfurt	Erfurt	144	
+L16	39 204	39			Ohne	Fl	7139	Stuttgart	Stuttgart	144	
+L17	39 204	39			Ohne	Fl	7139	Stuttgart	Stuttgart	144	
+L18	41 014	41			Ohne	Tr	12000	Essen	Göttingen	150	
+L19	44 141	44		Noch einbauen	Next18	Fl	714403	Nürnberg	Treuchtlingen	141	
+L20	45 026	45			NEM651	Tr	12309			160	
+L21	50 002	50			Ohne	Fl	7180	Halle	Leipzig-Wahren	144	
+L22	53 7752	53^7	53	N025	Ohne	Fl	7124	Danzig	Danzig Rdz	103	
+L23	54 1658	54^15			NEM651	Tr	12308	Nürnberg	Nürnberg	112	
+L24	55 4536	55^25-26		DCX75	Ohne	Fl	7154	Wuppertal	Opladen	116	
+L25	56 376	56^2-8	54	Ja, welcher?	Next18	Li	161560	Köln	Köln Bbf	114	
+L26	56 1113	56^8-11			Ohne	Tr	2923	München	Treuchtlingen	117	
+L27	56 2264	56^20-29			Ohne	Fl	7900-1	Cassel	Göttingen	111	
+L28	56 2048	56^20-29		U73400	Ohne	Fl	7156	Mainz	Mainz-Bisch	111	
+L29	56 2048	56^20-29			Ohne	Fl	7156	Mainz	Mainz-Bisch	111	
+L30	58 1437	58^10-21		Gold mini	NEM651	Tr	12716	Dresden		114	
+L31	61 001	61			Ohne	Ar	0166.0			124	
+L32	62 010	62		DCX76	Ohne	Fl	7053	Erfurt	Meiningen	107	
+L33	64 365	64		DCX75	Ohne	Fl	7063	Frankfurt	Frankfurt	78	
+L34	70 066	70		DCX76z	Löt	Fl	7071	München	Rosenheim	58	
+L35	74 1230	74^4-13			Ohne	Ar	2284	Berlin	Wustermark	74	
+L36	75 1109	75^10-11			Ohne	Ar	0155	Karlsruhe	Waldheim?	79	
+L37	78 017	78^0-5			Ohne	Fl	7079	Mainz	Alzey	93	
+L38	78 017	78^0-5			Ohne	Fl	7887	Mainz	Alzey	93	
+L39	80 018	80^0			Ohne	Fl	7027	Köln	Köln Bbf	60	
+L40	81 001	81^0			Ohne	Fl	7035	Magdeburg	Vienenburg	69	
+L41	85 001	85			?	Tr	11455.0	Karlsruhe	Freiburg	102	
+L42	86 436	86			Ohne	Fl	781101			97	
+L43	89 707	89^7	89	DCX76z	Ohne	Tr	11422.0	München	München Hbf	60	
+L44	89 7493	89^74-75			Ohne	Ar	2220	Stettin	Stettin	54	
+L45	92 1004	92^5-10	92	DCX76	NEM651	Fl	709201	Altona	Altona	69	
+L46	92 2048	92^20	93	DH10B	Platine	Tr	11631			69	
+L47	93 400	93^5-12			Ohne	Ar	2292	Berlin	Tempelhof	90	
+L48	98 303	98^3			Ohne	Tr	12212			45	
+L49	94 733	94^5-17			Ohne	Fl	7091	Mainz	Darmstadt-Kranichstatt	79	
+L50	94 956	94^5-17			Ohne	Fl	7093	Breslau	Sommerfeld	79	
+L51	95 003	95			Ohne	HN	2419	Nürnberg	Saalfeld	95	
+L52	96 022	96			Ohne	Ar	2278	Nürnberg	Pressig-Rothenkirchen	111	
+L53	98 731	98^7			Ohne	Tr	12700	Regensburg	Passau	64	
+L54	98 811	98^8			Ohne	Fl	7098	München	München Hbf	58	
+L55	98 811	98^8			Ohne	Fl	7098	München	München Hbf	58	
+L56	DW 6	CidT			Ohne	Ar	2923			71,5	
+L57	V 16 101	V16		?	NEM651	Tr	12800			90	
+L58	VT 851	VT851		DRG	Ohne	Tr	12841			131	
+L59	VT 135 009		135	Trix	Platine	Tr	12388			156	
+L60	VT 137 251 + VS 145 173			DCX76	NEM651	HT	2680			270	
+L61	SVT 137 155			geplant U73410	NEM651	HT	2630			436	
+L62	SVT 877a+b		12	N025	Ohne	Ka	10707	Berlin	Lehrter Bf	263	
+L63	SVT 137 149a+b		11	68530	Ohne	Ka	10711	Berlin	Lehrter Bf	277	
+L64	SVT 137 853a+b+c			N025	Ohne	HT	16061	Berlin	Berlin Ahb	297	
+L65	SVT 137 853a+b+c			Ohne Motor	Ohne	HT	16061	Berlin	Berlin Ahb	297	
+L66	E 04 05	E04		geplant U73410	NEM651	HN	2134	Halle	Leipzig-West	95	
+L67	E 17 113	E17		DH18A	Next18	HT	2890			100	
+L68	E 18 39	E18		DH18A	Plux12	Pi	40303			106	
+L69	E 19 02	E19.0		ESU...	NEM651	Fl	877914	Nürnberg	Nürnberg Hbf	106	
+L70	E 19 11	E19.1			Ohne	Ar	2491	Nürnberg	Nürnberg Hbf	116	
+L71	E 32 108	E32		geplant U73410	NEM651	Fl	737001			81	
+L72	E 36 01	E36		DH10C	NEM651	Tr	12462	München	Freilassing	77	
+L73	E 44 103	E44.5		DH18A	Next18	Li	162540			86	
+L74	E 44 019	E44		DH18A	Next18	Br	63100			95,6	
+L75	E 69 05	E69		685503	NEM651	Fl	737101			54	
+L76	E 75 06	E75		DCX76	Löt	Tr	12537			96	
+L77	E 77 28	E77			Löt	Br	63003	München	München	102	
+L78	E 91 102	E91		Hat einen, welcher?	Next18	Pi	40544			104	
+L79	E 93 01	E93			NEM651	Tr	12752	Stuttgart	Kornwestheim	111	
+L80	E 94 058	E94		ESU 54687	NEM651	Fl	739401	Erfurt	Probstzella	116	
+L81	C4esT-29 + BC4esS-29		65	DCX75	Ohne	RR	5525001			220	
+L82	C4esT-29 + BC4esS-29		66	DCX76	Ohne	RR	5525001			220	
+L83	C4esT-29 + BC4es-29			Ohne Motor	Ohne	Ar	0189			220	
+L84	C4esT-29 + BC4es-29			Ohne Motor	Ohne	Ar	0189			220	
+L85	C4esT-29 + BC4es-29			Ohne Motor	Ohne	RR	RR 5525001 + Ar 0189			220	
+L86	C4esT-29 + BC4esS-29			Ohne Motor	Ohne	RR	5525001			220	
+L87	C4esT-29 + BC4esS-29			Ohne Motor	Ohne	RR	5525001			220	
+L88	C4esT-29 + BC4esS-29			Ohne Motor	Ohne	RR	5525001			220	
+L89	elT 1130	ET85		Ohne Motor	Ohne	Ro	23001			256	
+L90	 elT 1130	ET25			Ohne	Ka	10709			273	
+L91	AT3 375+376	AT3			Ohne	Ro	23012			162	
+L92	AT3 295+296	AT3		DCX76	Ohne	HT	15772			161	
+L93	AT3 405+406	AT3		N045	Ohne	Ro	23390	Mainz		162	

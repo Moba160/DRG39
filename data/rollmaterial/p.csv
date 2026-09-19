@@ -1,4 +1,4 @@
-﻿Excel-Zeile	Id	Gattung	Hersteller	Artikelnummer
+Excel-Zeile	Id	Gattung	Hersteller	Artikelnummer
 4	P1	Post4-a/15-38	Di	010118
 5	P2	Hz4ü-44	HT	23901
 6	P3	Hz3i-pr05	Fl	8382
@@ -115,7 +115,7 @@
 179	P161	SWRPwPost4ü-35	Ar	0166.1
 180	P162	SBC4ü-35	Ar	0166.2
 181	P163	SBC4ü-35	Ar	0166.3
-182	P164	SBC4ü-35	Ar	0166.4
+182	P164	SBC4ü-35e	Ar	0166.4
 184	P165	AB4ü-35	Fl	863102
 185	P166	C4ü-35	Fl	863203
 186	P167	C4ü-35	Fl	863204
