@@ -997,6 +997,13 @@
             border: 1px solid #ccc;
             background: #fff;
         }
+        /* Im Zoom-out-Modus: gesamte Zeile inkl. Fahrzeuge als klickbar markieren */
+        .mg-zoomed-out .garnitur-row {
+            cursor: pointer;
+        }
+        .mg-zoomed-out .garnitur-item {
+            cursor: pointer;
+        }
         .garnitur-control {
             width: 80px;
             min-width: 80px;
@@ -1044,7 +1051,7 @@
             position: relative;
             flex: 1;
             display: flex;
-            align-items: stretch;
+            align-items: flex-end;
             border-bottom: none;
             padding: 5px 5px 0 5px;
             gap: 0;
@@ -1472,6 +1479,7 @@
                                     <input type="checkbox" id="garnitur-etraktion" onchange="applyETraktion(this.checked)">
                                     E-Traktion
                                 </label>
+                                <span id="mg-zoom-indicator" title="Zoom (Ctrl+Mausrad zum Zoomen, Klick auf Zug = 100%)" style="display:none; margin-left:10px; font-size:11px; font-weight:normal; background:#555; color:#fff; padding:1px 6px; border-radius:3px; cursor:default;"></span>
                             </div>
                             <!-- Filterzeile, ausgerichtet an Garnitur-Kopf und -Track -->
                             <div style="display:flex; align-items:center; gap:4px; padding:4px 5px 4px; background:#e0e0e0; border-top:1px solid #ccc;">
@@ -2628,16 +2636,12 @@
             if (tab === 'loks') {
                 document.getElementById('rm-tab-loks').classList.add('active');
                 document.getElementById('rm-loks-view').style.display = 'flex';
-                if (!window._loksLoaded) loksLoadCSV();
+                loksLoadCSV();
             } else {
                 document.getElementById('rm-tab-wagen').classList.add('active');
                 document.getElementById('rm-wagen-view').style.display = 'flex';
-                if (!window._wagenLoaded) {
-                    wagenLoadCSV();
-                } else if (!window._garniturLoaded) {
-                    window._garniturLoaded = true;
-                    loadGarnituren();
-                }
+                // Wagen-Tab lädt auch Garnituren
+                loadGarnituren();
             }
         };
 
@@ -2647,7 +2651,13 @@
         let _loksImgCache = {};      // gattung -> true/false
         let _loksFilterNotUsed = false;  // Nur nicht verwendete Loks anzeigen
 
-        async function loksLoadCSV() {
+        let _loksLoadPromise = null;
+        function loksLoadCSV() {
+            if (!_loksLoadPromise) _loksLoadPromise = _loksLoadCSV_internal();
+            return _loksLoadPromise;
+        }
+
+        async function _loksLoadCSV_internal() {
             window._loksLoaded = true;
             try {
                 const resp = await fetch('data/rollmaterial/loks.csv');
@@ -2696,14 +2706,6 @@
                     img.onerror = () => { _loksImgCache[g] = false; resolve(); };
                     img.src = LOKS_IMG_PATH + g + '.png';
                 })));
-                if (!window._garniturLoaded) {
-                    window._garniturLoaded = true;
-                    if (!window._wagenLoaded) {
-                        await wagenLoadCSV();
-                    } else {
-                        await loadGarnituren();
-                    }
-                }
                 loksRender();
             } catch(e) {
                 document.getElementById('loks-grid').textContent = 'Fehler beim Laden: ' + e.message;
@@ -2833,7 +2835,13 @@
             });
         }
 
-        async function wagenLoadCSV() {
+        let _wagenLoadPromise = null;
+        function wagenLoadCSV() {
+            if (!_wagenLoadPromise) _wagenLoadPromise = _wagenLoadCSV_internal();
+            return _wagenLoadPromise;
+        }
+
+        async function _wagenLoadCSV_internal() {
             window._wagenLoaded = true;
             try {
                 const resp = await fetch('data/rollmaterial/p.csv');
@@ -2864,10 +2872,6 @@
                 // Bilder vorab prüfen für Sortierung
                 const uniqueGat = [...new Set(_wagenData.map(e => e.gattung))];
                 await Promise.all(uniqueGat.map(g => wagenImgExists(g)));
-                if (!window._garniturLoaded) {
-                    window._garniturLoaded = true;
-                    await loadGarnituren();
-                }
                 wagenRender();
                 // Loks-Liste ebenfalls aktualisieren, falls schon geladen
                 if (window._loksLoaded) loksRender();
@@ -2965,6 +2969,15 @@
                 item.ondragstart = (e) => {
                     _dragSource = { type: 'wagen', entry: entry, garniturId: null, vIndex: null, sourceItem: item };
                     e.dataTransfer.setData('text/plain', 'wagen-item');
+                    // Scrollpositionen vor Browser-Autoscroll sichern
+                    const cnt = document.getElementById('mg-content-zuege');
+                    if (cnt) {
+                        window._mgPreDragScrollTop = cnt.scrollTop;
+                        window._mgPreDragTrackScrolls = {};
+                        cnt.querySelectorAll('.garnitur-track').forEach(t => {
+                            if (t.dataset.gid) window._mgPreDragTrackScrolls[t.dataset.gid] = t.scrollLeft;
+                        });
+                    }
                 };
 
                 const fileGattung = entry.gattungFile || entry.gattung.replace(/\//g, '');
@@ -3091,7 +3104,16 @@
             renderGarnituren();
         };
 
-        async function loadGarnituren() {
+        let _garniturenLoadPromise = null;
+        function loadGarnituren() {
+            if (!_garniturenLoadPromise) _garniturenLoadPromise = _loadGarnituren_internal();
+            return _garniturenLoadPromise;
+        }
+
+        async function _loadGarnituren_internal() {
+            await loksLoadCSV();
+            await wagenLoadCSV();
+            window._garniturLoaded = true;
             try {
                 const resp = await fetch('data/rollmaterial/garnituren.csv');
                 if (!resp.ok) return;
@@ -3141,6 +3163,8 @@
                 console.log("Fehler beim Laden der garnituren.csv", e);
             }
             renderGarnituren();
+            loksRender();
+            wagenRender();
         }
 
         // ── Garnituren speichern (File System Access API + IndexedDB-Fallback) ─────
@@ -3541,8 +3565,248 @@
             menu.classList.add('visible');
         }
 
+        // ── Zoom-State für Modellgarnituren ──────────────────────────────
+        let _mgZoom = 1.0;  // aktueller Zoom (1.0 = 100%)
+        let _mgMinZoom = 0.1; // gecachter Mindest-Zoom (wird nach renderGarnituren aktualisiert)
+
+        function _mgApplyZoom() {
+            const sizer = document.getElementById('mg-zuege-zoom-sizer');
+            const wrap = document.getElementById('mg-zuege-zoom-wrap');
+            const container = document.getElementById('mg-content-zuege');
+            if (!wrap || !container || !sizer) return;
+            
+            if (_mgZoom >= 1.0) {
+                wrap.style.transform = '';
+                wrap.style.width = '100%';
+                wrap.style.height = '';
+                sizer.style.width = '';
+                sizer.style.height = '';
+                sizer.style.overflow = '';
+                container.style.overflow = 'auto';
+                container.classList.remove('mg-zoomed-out');
+            } else {
+                wrap.style.transformOrigin = 'top left';
+                wrap.style.transform = `scale(${_mgZoom})`;
+                
+                const cw = container.clientWidth;
+                const ch = container.clientHeight;
+                const natW = Math.max(cw, _mgCachedMaxRowW);
+                const natH = Math.max(ch, _mgCachedNaturalH);
+                
+                wrap.style.width = natW + 'px';
+                wrap.style.height = natH + 'px';
+                
+                sizer.style.width = (natW * _mgZoom) + 'px';
+                sizer.style.height = (natH * _mgZoom) + 'px';
+                sizer.style.overflow = 'hidden'; // Isoliert das Layout
+                
+                container.classList.add('mg-zoomed-out');
+                container.style.overflow = 'auto';
+            }
+        }
+
+        // Ctrl+Mausrad-Handler auf mg-content-zuege
+        // Wird einmalig nach dem ersten Rendern registriert
+        let _mgWheelListenerSet = false;
+        let _mgKeyListenerSet = false;
+        let _mgHoveredRow = null;  // Zeigt auf die garnitur-row, über der die Maus schwebt
+        let _mgMouseX = 0;         // Maus-X relativ zum Container für Zoom-Zentrum
+        let _mgMouseY = 0;         // Maus-Y relativ zum Container für Zoom-Zentrum
+
+        // Gecachte natürliche Dimensionen (werden nach renderGarnituren() gesetzt)
+        let _mgCachedNaturalH = 0;     // Gesamthöhe aller Rows
+        let _mgCachedMaxRowW = 0;      // Breiteste Row (natural)
+
+        // Einmalig nach renderGarnituren() aufrufen – misst ohne Transform/Inflation
+        function _mgCacheNaturalDimensions() {
+            const wrap = document.getElementById('mg-zuege-zoom-wrap');
+            const container = document.getElementById('mg-content-zuege');
+            if (!wrap || !container) return;
+
+            _mgCachedNaturalH = wrap.scrollHeight;
+            _mgCachedMaxRowW = 0;
+            wrap.querySelectorAll('.garnitur-row').forEach(row => {
+                const track = row.querySelector('.garnitur-track');
+                const ctrl  = row.querySelector('.garnitur-control');
+                let trackNatW = 0;
+                if (track) {
+                    track.querySelectorAll('.garnitur-item').forEach(item => {
+                        trackNatW += item.offsetWidth;
+                    });
+                }
+                const natW = (ctrl ? ctrl.offsetWidth : 0) + trackNatW + 20; // 20px Padding-Puffer
+                row.dataset.naturalW = natW;
+                if (natW > _mgCachedMaxRowW) _mgCachedMaxRowW = natW;
+            });
+
+            const cw = container.clientWidth;
+            const ch = container.clientHeight;
+            if (_mgCachedNaturalH > 0 && _mgCachedMaxRowW > 0 && cw > 0 && ch > 0) {
+                const minZoomH = ch / _mgCachedNaturalH;
+                const minZoomW = cw / _mgCachedMaxRowW;
+                _mgMinZoom = Math.min(Math.min(minZoomH, minZoomW), 1.0);
+            } else {
+                _mgMinZoom = 1.0;
+            }
+        }
+        function _mgEnsureWheelListener() {
+            if (_mgWheelListenerSet) return;
+            _mgWheelListenerSet = true;
+            const container = document.getElementById('mg-content-zuege');
+            if (!container) return;
+
+            container.addEventListener('mousemove', (e) => {
+                const rect = container.getBoundingClientRect();
+                _mgMouseX = e.clientX - rect.left;
+                _mgMouseY = e.clientY - rect.top;
+            });
+
+            container.addEventListener('wheel', function(e) {
+                if (!e.ctrlKey) return;
+                e.preventDefault();
+                const step = 0.05;
+
+                const oldZoom = _mgZoom;
+                if (e.deltaY > 0) {
+                    _mgZoom = Math.max(_mgZoom - step, _mgMinZoom);  // gecachter Wert
+                } else {
+                    _mgZoom = Math.min(_mgZoom + step, 1.0);
+                }
+
+                if (oldZoom === _mgZoom) return;
+
+                const rect = container.getBoundingClientRect();
+                const clientX = e.clientX - rect.left;
+                const clientY = e.clientY - rect.top;
+                const contentX = (container.scrollLeft + clientX) / oldZoom;
+                const contentY = (container.scrollTop + clientY) / oldZoom;
+
+                _mgApplyZoom();
+                _mgUpdateZoomIndicator();
+
+                container.scrollLeft = (contentX * _mgZoom) - clientX;
+                container.scrollTop  = (contentY * _mgZoom) - clientY;
+            }, { passive: false });
+        }
+
+        function _mgEnsureKeyListener() {
+            if (_mgKeyListenerSet) return;
+            _mgKeyListenerSet = true;
+            document.addEventListener('keydown', function(e) {
+                if (!e.ctrlKey) return;
+                if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+                // Nur wenn der Garnitur-Bereich sichtbar ist
+                const container = document.getElementById('mg-content-zuege');
+                if (!container || container.offsetParent === null) return;
+                e.preventDefault();
+
+                const oldZoom = _mgZoom;
+                let targetZoom = oldZoom;
+
+                const wrap = document.getElementById('mg-zuege-zoom-wrap');
+                if (!wrap) return;
+                const targetRow = _mgHoveredRow || wrap.querySelector('.garnitur-row');
+                if (!targetRow) return;
+
+                if (e.key === 'ArrowLeft') {
+                    targetZoom = 1.0;
+                } else {
+                    // Ctrl+Right: Zugbreite unter Cursor auf Viewport-Breite zoomen
+                    const naturalRowW = parseFloat(targetRow.dataset.naturalW) || _mgCachedMaxRowW;
+                    const cw = container.clientWidth;
+                    if (naturalRowW > 0 && cw > 0) {
+                        const fitZoom = Math.min(cw / naturalRowW, 1.0);
+                        targetZoom = Math.max(fitZoom, _mgGetMinZoom());
+                    }
+                }
+
+                if (targetZoom === oldZoom) return;
+
+                // Anker-Punkt: Die Mitte der betroffenen Row (sichtbare Pixel)
+                const rowRect = targetRow.getBoundingClientRect();
+                const containerRect = container.getBoundingClientRect();
+                const visualCenterX = rowRect.left - containerRect.left + (rowRect.width / 2);
+                const visualCenterY = rowRect.top - containerRect.top + (rowRect.height / 2);
+
+                const contentX = (container.scrollLeft + visualCenterX) / oldZoom;
+                const contentY = (container.scrollTop + visualCenterY) / oldZoom;
+
+                _mgZoom = targetZoom;
+                _mgApplyZoom();
+                _mgUpdateZoomIndicator();
+
+                container.scrollLeft = (contentX * _mgZoom) - visualCenterX;
+                container.scrollTop  = (contentY * _mgZoom) - visualCenterY;
+            });
+        }
+
+        function _mgGetMinZoom() {
+            // Gibt nur den gecachten Wert zurück – keine DOM-Manipulation!
+            // Cache wird in _mgCacheNaturalDimensions() nach renderGarnituren() gesetzt.
+            return _mgMinZoom;
+        }
+
+        // Auf 100% zurückspringen und Zug (garnitur-row) vertikal zentrieren
+        function _mgZoomToRow(rowEl) {
+            _mgZoom = 1.0;
+            const wrap = document.getElementById('mg-zuege-zoom-wrap');
+            const sizer = document.getElementById('mg-zuege-zoom-sizer');
+            if (wrap) {
+                wrap.style.transform = '';
+                wrap.style.width = '100%';
+            }
+            if (sizer) {
+                sizer.style.width = '';
+                sizer.style.height = '';
+                sizer.style.overflow = '';
+            }
+            const container = document.getElementById('mg-content-zuege');
+            if (container) container.style.overflow = 'auto';
+            _mgUpdateZoomIndicator();
+            if (!container || !rowEl) return;
+            // Warte einen Frame damit Layout neu berechnet wird
+            requestAnimationFrame(() => {
+                // Position der Row relativ zum Container (scrollOffset einbeziehen)
+                const containerRect = container.getBoundingClientRect();
+                const rowRect = rowEl.getBoundingClientRect();
+                const rowRelTop = rowRect.top - containerRect.top + container.scrollTop;
+                const rowH = rowEl.offsetHeight;
+                const containerH = container.clientHeight;
+                // Scroll so dass die Row vertikal zentriert ist
+                const targetScrollTop = rowRelTop - (containerH / 2) + (rowH / 2);
+                container.scrollTo({ top: Math.max(0, targetScrollTop), behavior: 'smooth' });
+            });
+        }
+
+        function _mgUpdateZoomIndicator() {
+            const el = document.getElementById('mg-zoom-indicator');
+            if (!el) return;
+            if (_mgZoom >= 1.0) {
+                el.textContent = '';
+                el.style.display = 'none';
+            } else {
+                el.textContent = Math.round(_mgZoom * 100) + '%';
+                el.style.display = 'inline';
+            }
+        }
+
         function renderGarnituren() {
             const container = document.getElementById('mg-content-zuege');
+            // Scrollpositionen aus dem Pre-Drag-Snapshot übernehmen (falls Drag läuft),
+            // sonst aus dem aktuellen DOM-Zustand lesen.
+            const savedContainerScrollTop = (window._mgPreDragScrollTop !== undefined)
+                ? window._mgPreDragScrollTop
+                : container.scrollTop;
+            if (!window._mgTrackScrollStates) window._mgTrackScrollStates = {};
+            if (window._mgPreDragTrackScrolls) {
+                Object.assign(window._mgTrackScrollStates, window._mgPreDragTrackScrolls);
+            } else {
+                container.querySelectorAll('.garnitur-track').forEach(t => {
+                    if (t.dataset.gid) window._mgTrackScrollStates[t.dataset.gid] = t.scrollLeft;
+                });
+            }
+            window._mgPreDragScrollTop = undefined;
+            window._mgPreDragTrackScrolls = undefined;
             container.innerHTML = '';
 
             // ── Filter ────────────────────────────────────────────────────
@@ -3604,21 +3868,52 @@
                     : _garnituren.length) + ' Modellzuggarnituren';
             }
 
-            container.style.display = 'flex';
-            container.style.flexDirection = 'column';
-            container.style.gap = '10px';
-            container.style.padding = '10px';
+            // ── Zoom-Wrapper anlegen ──────────────────────────────────────
+            // Der Wrapper nimmt den Transform an; container bleibt scrollbar
+            container.style.padding = '0';
+            container.style.display = 'block';
+
+            const sizer = document.createElement('div');
+            sizer.id = 'mg-zuege-zoom-sizer';
+
+            const wrap = document.createElement('div');
+            wrap.id = 'mg-zuege-zoom-wrap';
+            wrap.style.display = 'flex';
+            wrap.style.flexDirection = 'column';
+            wrap.style.gap = '10px';
+            wrap.style.padding = '10px';
+            wrap.style.boxSizing = 'border-box';
+            wrap.style.transformOrigin = 'top left';
+            
+            sizer.appendChild(wrap);
+            container.appendChild(sizer);
+            _mgEnsureWheelListener();
+            _mgEnsureKeyListener();
+            // Zoom wird NACH dem Befüllen der Rows und dem Laden der Bilder angewendet
             
             for (const g of filteredGarnituren) {
                 const row = document.createElement('div');
                 row.className = 'garnitur-row';
+                row.addEventListener('mouseenter', () => { _mgHoveredRow = row; });
+                row.addEventListener('mouseleave', () => { if (_mgHoveredRow === row) _mgHoveredRow = null; });
                 row.dataset.gid = g.id;
+
+                // Klick auf die Zeile → auf 100% zurückzoomen + zentrieren (nur im Zoom-out-Modus)
+                row.addEventListener('click', function(e) {
+                    if (_mgZoom >= 1.0) return;  // nur im Zoom-out-Modus aktiv
+                    // Buttons und direkt interaktive Elemente ausschließen
+                    if (e.target.closest('button, input, [contenteditable], .lok-alt-btn')) return;
+                    _mgZoomToRow(row);
+                });
 
                 // ── Drag & Drop der ganzen Garnitur-Zeile ──
                 row.draggable = true;
                 row.addEventListener('dragstart', (e) => {
-                    // Nur auslösen, wenn man auf dem ctrl-Bereich zieht, nicht auf Fahrzeug-Items
-                    if (e.target.closest('.garnitur-item')) return;
+                    // Nur auslösen, wenn man auf dem ctrl-Bereich zieht
+                    if (!e.target.closest('.garnitur-control')) {
+                        e.preventDefault();
+                        return;
+                    }
                     _rowDragGid = g.id;
                     e.dataTransfer.setData('text/plain', 'garnitur-row');
                     e.dataTransfer.effectAllowed = 'move';
@@ -3798,6 +4093,15 @@
                         _dragSource = { type: v.type, entry: activeEntry, garniturId: g.id, vIndex: actualIndex };
                         e.dataTransfer.setData('text/plain', 'garnitur-item');
                         e.stopPropagation();
+                        // Scrollpositionen vor Browser-Autoscroll sichern
+                        const cnt = document.getElementById('mg-content-zuege');
+                        if (cnt) {
+                            window._mgPreDragScrollTop = cnt.scrollTop;
+                            window._mgPreDragTrackScrolls = {};
+                            cnt.querySelectorAll('.garnitur-track').forEach(t => {
+                                if (t.dataset.gid) window._mgPreDragTrackScrolls[t.dataset.gid] = t.scrollLeft;
+                            });
+                        }
                     };
                     item.ondragover = (e) => {
                         if (_rowDragGid) return;
@@ -3847,8 +4151,45 @@
                 
                 row.appendChild(ctrl);
                 row.appendChild(track);
-                container.appendChild(row);
+                wrap.appendChild(row);
+                
+                if (window._mgTrackScrollStates && window._mgTrackScrollStates[g.id]) {
+                    const savedScroll = window._mgTrackScrollStates[g.id];
+                    track.scrollLeft = savedScroll;
+                    setTimeout(() => track.scrollLeft = savedScroll, 10);
+                    track.querySelectorAll('img').forEach(img => {
+                        img.addEventListener('load', () => track.scrollLeft = savedScroll);
+                    });
+                }
             }
+
+            // Sobald alle Bilder geladen sind, messen und zoomen
+            Promise.all(Array.from(wrap.querySelectorAll('img')).map(img => {
+                if (img.complete) return Promise.resolve();
+                return new Promise(resolve => {
+                    img.addEventListener('load', resolve);
+                    img.addEventListener('error', resolve);
+                });
+            })).then(() => {
+                // Abbrechen wenn in der Zwischenzeit neu gerendert wurde
+                if (document.getElementById('mg-zuege-zoom-wrap') !== wrap) return;
+                _mgCacheNaturalDimensions();
+                _mgApplyZoom();
+                // Scroll-Positionen wiederherstellen und für mehrere Frames sperren,
+                // damit nachgelagerte Browser-Events (z.B. Klick nach Drag) sie nicht überschreiben
+                const _lockTop = savedContainerScrollTop;
+                const _lockTracks = Object.assign({}, window._mgTrackScrollStates || {});
+                let _lockFrames = 12; // ~200ms @ 60fps
+                function _applyScrollLock() {
+                    container.scrollTop = _lockTop;
+                    Object.entries(_lockTracks).forEach(([gid, sl]) => {
+                        const t = container.querySelector(`.garnitur-track[data-gid="${gid}"]`);
+                        if (t) t.scrollLeft = sl;
+                    });
+                    if (--_lockFrames > 0) requestAnimationFrame(_applyScrollLock);
+                }
+                _applyScrollLock();
+            });
         }
 
         const _rmFahrzeuge = document.getElementById('rm-col-fahrzeuge');
@@ -4689,6 +5030,7 @@ ${von} – ${nach}`;
                 document.querySelector('#col5 .col-content').innerHTML = window._createTable(nachAhbZuege, 5);
 
                 window.selectTrain = function (zugNr, area, trElement) {
+                    try {
                     const tbody = trElement.closest('tbody');
                     tbody.querySelectorAll('tr').forEach(tr => tr.classList.remove('selected'));
                     trElement.classList.add('selected');
@@ -4946,6 +5288,10 @@ ${von} – ${nach}`;
                         document.querySelector('#col2 .col-content').innerHTML = finalHtml;
                     } else if (area === 5) {
                         document.querySelector('#col4 .col-content').innerHTML = finalHtml;
+                    }
+                    } catch (e) {
+                        console.error(e);
+                        document.getElementById(area === 1 ? 'info-col2' : 'info-col4').textContent = "ERROR: " + e.message;
                     }
                 };
 
@@ -5542,9 +5888,8 @@ ${von} – ${nach}`;
                 }
 
                 let vonNachPrefix = this.area === 5 ? 'aus ' : '';
-                const timeDisplay = isDurchfahrt ? `<i>(${displayTime})</i>` : displayTime;
-                this.routeEl.innerHTML = `${timeDisplay}&nbsp;<span class="${cls}"><strong>${z.zug}</strong></span>&nbsp;${vonNachPrefix}${z.vonNach}${stopLabel ? `<span style="color:#aaa;font-size:0.9em">${stopLabel}</span>` : ''}`;
-
+                this.routeEl.innerHTML = `<span class="${cls}"><strong>${z.zug}</strong></span>&nbsp;${vonNachPrefix}${z.vonNach}${stopLabel ? `<span style="color:#aaa;font-size:0.9em">${stopLabel}</span>` : ''}`;
+                
                 const screenW = window.innerWidth;
                 const signalX = this.isTopTrack ? 80 : screenW - 80;
                 const travelDist = screenW + 20;
@@ -5811,25 +6156,80 @@ ${von} – ${nach}`;
                 const p = t.trim().split('.');
                 return p.length === 2 ? parseInt(p[0]) * 60 + parseInt(p[1]) : null;
             };
+
             for (const [areaKey, rows] of Object.entries(window._laufwegStates)) {
                 if (!rows) continue;
                 const laufwegTable = document.querySelector(`#col${areaKey} .content-laufweg table tbody`);
                 if (!laufwegTable) continue;
-                let posRow = -1;
-                let dotPulsing = false;
-                for (let i = 0; i < rows.length; i++) {
-                    const r = rows[i];
-                    const ank = tToMin(r.ankunft);
-                    const abf = tToMin(r.abfahrt);
-                    const arrMin = ank !== null ? ank : abf;
-                    const depMin = abf !== null ? abf : ank;
-                    if (arrMin === null) continue;
-                    if (nowMin < arrMin) break; // not yet reached – dot stays at last departed
-                    if (nowMin >= arrMin && (depMin === null || nowMin < depMin + 1)) { posRow = i; dotPulsing = true; break; }
-                    // departed → tentatively here (static), continue to next
-                    posRow = i; dotPulsing = false;
+                
+                // 1. Timeline aufbauen und Mitternachts-Sprünge glätten
+                const timeline = [];
+                let journeyStart = null;
+                let lastMin = 0;
+                for (const r of rows) {
+                    let ank = tToMin(r.ankunft);
+                    let abf = tToMin(r.abfahrt);
+                    
+                    if (ank !== null) {
+                        if (journeyStart === null) journeyStart = ank;
+                        if (ank < lastMin - 300) ank += 1440;
+                        lastMin = ank;
+                    }
+                    if (abf !== null) {
+                        if (journeyStart === null) journeyStart = abf;
+                        if (abf < lastMin - 300) abf += 1440;
+                        lastMin = abf;
+                    }
+                    timeline.push({ ank, abf });
                 }
-                // Remove existing dots and place new one
+
+                if (timeline.length === 0) continue;
+
+                // 2. nowMin an den Zug anpassen (falls wir kurz vor Mitternacht sind, aber der Zug morgen fährt)
+                let adjNowMin = nowMin;
+                if (journeyStart !== null) {
+                    if (adjNowMin < journeyStart && (journeyStart - adjNowMin) > 720) {
+                        adjNowMin += 1440;
+                    } else if (adjNowMin > journeyStart && (adjNowMin - journeyStart) > 1000) {
+                        adjNowMin -= 1440;
+                    }
+                }
+
+                // 3. Position ermitteln
+                let posRow = -1;
+                let state = ''; // 'at' oder 'between'
+                const firstEvt = timeline[0].ank !== null ? timeline[0].ank : timeline[0].abf;
+                const lastEvt = timeline[timeline.length - 1].abf !== null ? timeline[timeline.length - 1].abf : timeline[timeline.length - 1].ank;
+
+                if (firstEvt !== null && lastEvt !== null && adjNowMin >= firstEvt && adjNowMin <= lastEvt) {
+                    // Zug ist unterwegs
+                    for (let i = 0; i < timeline.length; i++) {
+                        const t = timeline[i];
+                        const arr = t.ank !== null ? t.ank : t.abf;
+                        const dep = t.abf !== null ? t.abf : t.ank;
+                        
+                        // Ist er genau IN diesem Bahnhof?
+                        if (adjNowMin >= arr && adjNowMin <= dep) {
+                            posRow = i;
+                            state = 'at';
+                            break;
+                        }
+                        
+                        // Ist er zwischen diesem und dem nächsten Bahnhof?
+                        if (i < timeline.length - 1) {
+                            const nextT = timeline[i+1];
+                            const nextArr = nextT.ank !== null ? nextT.ank : nextT.abf;
+                            // Zwischen Abfahrt hier und Ankunft beim nächsten
+                            if (adjNowMin > dep && adjNowMin < nextArr) {
+                                posRow = i + 1; // Pfeil beim NÄCHSTEN Bahnhof
+                                state = 'between';
+                                break;
+                            }
+                        }
+                    }
+                }
+
+                // 4. Dot zeichnen / entfernen
                 laufwegTable.querySelectorAll('.zug-pos-dot').forEach(el => el.remove());
                 if (posRow >= 0) {
                     const trs = laufwegTable.querySelectorAll('tr');
@@ -5837,8 +6237,22 @@ ${von} – ${nach}`;
                         const bahnhofTd = trs[posRow].lastElementChild;
                         if (bahnhofTd) {
                             const dot = document.createElement('span');
-                            dot.className = dotPulsing ? 'zug-pos-dot pulsing' : 'zug-pos-dot';
-                            dot.style.marginRight = '4px';
+                            dot.className = 'zug-pos-dot'; // wird als Basisklasse für die Lösch-Logik benutzt
+                            if (state === 'between') {
+                                // Dreieck weisend auf den nächsten Bahnhof
+                                dot.style.display = 'inline-block';
+                                dot.style.width = '0';
+                                dot.style.height = '0';
+                                dot.style.backgroundColor = 'transparent';
+                                dot.style.borderTop = '5px solid transparent';
+                                dot.style.borderBottom = '5px solid transparent';
+                                dot.style.borderLeft = '10px solid #e53935'; // rotes Dreieck
+                                dot.style.borderRadius = '0';
+                            } else {
+                                // Pulsierender Kreis am Bahnhof
+                                dot.classList.add('pulsing');
+                            }
+                            dot.style.marginRight = '6px';
                             dot.style.verticalAlign = 'middle';
                             bahnhofTd.prepend(dot);
                         }
@@ -6381,7 +6795,7 @@ ${von} – ${nach}`;
                 let displayGattung = entry.gattungDisplay || gattung;
                 let fileGattung = entry.gattungFile || gattung;
                 const tr = document.createElement('tr');
-                tr.innerHTML = `<td>${idVal}</td><td>${displayGattung}</td><td class="inv-img-cell"><img src="${imgBasePath}${encodeURI(fileGattung)}.png" alt="" onerror="this.style.display='none'"></td><td>${herDisplay}</td><td>${artDisplay}</td>`;
+                tr.innerHTML = `<td>${idVal}</td><td>${displayGattung}</td><td class="inv-img-cell"><img src="${imgBasePath}${fileGattung}.png" alt="" onerror="this.style.display='none'"></td><td>${herDisplay}</td><td>${artDisplay}</td>`;
                 tbody.appendChild(tr);
             });
             document.getElementById(countId).textContent = count + '\u00a0Treffer';
@@ -6471,7 +6885,7 @@ ${von} – ${nach}`;
                     artDisplay += ` <a href="${searchUrl}" target="_blank" title="Auf spurweite-n.de öffnen" style="text-decoration:none; margin-left:4px;">🔗</a>`;
                 }
                 const tr = document.createElement('tr');
-                tr.innerHTML = `<td>${idVal}</td><td>${bauHtml}</td><td>${gattung}</td><td>${rbd}</td><td>${bw}</td><td class="inv-img-cell"><img src="data/img/loks/${encodeURIComponent(gattung)}.png" alt="" onerror="this.style.display='none'"></td><td>${dcc}</td><td>${decoder}</td><td>${schnittstelle}</td><td>${herDisplay}</td><td>${artDisplay}</td><td>${luemp}</td>`;
+                tr.innerHTML = `<td>${idVal}</td><td>${bauHtml}</td><td>${gattung}</td><td>${rbd}</td><td>${bw}</td><td class="inv-img-cell"><img src="data/img/loks/${gattung}.png" alt="" onerror="this.style.display='none'"></td><td>${dcc}</td><td>${decoder}</td><td>${schnittstelle}</td><td>${herDisplay}</td><td>${artDisplay}</td><td>${luemp}</td>`;
                 tbody.appendChild(tr);
             });
             document.getElementById('inv-loks-count').textContent = count + '\u00a0Treffer';
