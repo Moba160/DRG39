@@ -73,6 +73,33 @@
             border-bottom: 2px solid #555;
         }
 
+        /* Pin-Symbol im Tab */
+        .tab-pin {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 6px;
+            width: 16px;
+            height: 16px;
+            opacity: 0.35;
+            cursor: pointer;
+            flex-shrink: 0;
+            transition: opacity 0.15s, color 0.15s;
+            color: #555;
+            vertical-align: middle;
+        }
+        .tab-pin:hover {
+            opacity: 1;
+            color: #1a56db;
+        }
+        .tab-pin.pinned {
+            opacity: 1;
+            color: #c0392b;
+        }
+        .tab-pin svg {
+            pointer-events: none;
+        }
+
         #tab-bar-spacer {
             flex: 1;
         }
@@ -101,41 +128,7 @@
             pointer-events: none;
         }
 
-        /* Settings Icon & Popup */
-        #settings-btn {
-            width: 36px;
-            height: 36px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            border: none;
-            background: transparent;
-            border-left: 1px solid #bbb;
-            padding: 0;
-            flex-shrink: 0;
-            transition: background 0.12s;
-        }
-        #settings-btn:hover { background: #c4c4c4; }
 
-        #settings-popup {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0,0,0,0.5); z-index: 10000;
-            display: none; justify-content: center; align-items: center;
-        }
-        #settings-popup.visible { display: flex; }
-        .settings-content {
-            background: #fff; padding: 20px; border-radius: 5px; width: 350px;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
-        }
-        .settings-content h3 { margin-top: 0; margin-bottom: 15px; }
-        .settings-row { margin-bottom: 12px; display: flex; flex-direction: column; }
-        .settings-row label { margin-bottom: 5px; font-weight: 500; font-size: 13px; }
-        .settings-row select { padding: 4px; font-size: 13px; border: 1px solid #ccc; border-radius: 3px; }
-        .settings-actions { margin-top: 20px; display: flex; justify-content: space-between; align-items: center; }
-        .settings-actions button { padding: 5px 10px; cursor: pointer; border: 1px solid #aaa; background: #eee; border-radius: 3px; font-size: 13px; }
-        .settings-actions button:hover { background: #ddd; }
 
         /* Tab Panels */
         #tab-panels {
@@ -724,7 +717,7 @@
             display: none;
         }
 
-        body.show-info .info-label {
+        .info-label {
             display: block;
         }
 
@@ -766,16 +759,16 @@
         /* --- Lok Alternativen Menü --- */
         .lok-alt-btn {
             position: absolute;
-            top: 2px;
+            top: -22px;
             left: 50%;
             transform: translateX(-50%);
             cursor: pointer;
-            background: rgba(255, 255, 255, 0.85);
+            background: rgba(255, 255, 255, 0.95);
             border: 1px solid #aaa;
             border-radius: 3px;
             font-size: 10px;
             line-height: 1;
-            padding: 2px 5px;
+            padding: 3px 6px;
             z-index: 10;
             white-space: nowrap;
         }
@@ -820,6 +813,42 @@
         .lok-alt-menu-item span {
             font-size: 11px;
             white-space: nowrap;
+        }
+        /* --- Magazin-Popup-Menü --- */
+        #magazin-menu {
+            position: fixed;
+            z-index: 9999;
+            background: #fff;
+            border: 1px solid #bbb;
+            border-radius: 5px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+            padding: 4px 0;
+            max-height: 260px;
+            overflow-y: auto;
+            display: none;
+            flex-direction: column;
+            min-width: 140px;
+        }
+        #magazin-menu.visible { display: flex; }
+        .magazin-menu-item {
+            padding: 5px 14px;
+            cursor: pointer;
+            font-size: 11px;
+            white-space: nowrap;
+            color: #222;
+        }
+        .magazin-menu-item:hover  { background: #e8f0fe; color: #1a56db; }
+        .magazin-menu-item.active { font-weight: bold; }
+        .magazin-menu-item.used   { font-style: italic; color: #999; }
+        .magazin-menu-item.short  { color: #bbb; cursor: default; }
+        .magazin-menu-sep  { border: none; border-top: 1px solid #ddd; margin: 3px 0; }
+        .magazin-id-label {
+            font-size: 14px;
+            font-weight: bold;
+            color: #111;
+            min-height: 12px;
+            text-align: center;
+            margin-top: 5px;
         }
         .ctx-item {
             padding: 7px 16px;
@@ -1208,26 +1237,23 @@
         <div id="tab-bar">
             <button class="main-tab" id="tab-btn-stellwerk"
                 onclick="switchMainTab('stellwerk')"
-                title="Stellwerk anzeigen">Stellwerk</button>
+                title="Stellwerk anzeigen">Stellwerk<span class="tab-pin" id="pin-stellwerk" title="Anpinnen, um diesen Tab beim Neustart standardmäßig zu öffnen" onclick="event.stopPropagation(); toggleTabPin('stellwerk');"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17 4a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h1v5.586l-1.707 1.707A1 1 0 0 0 8 15h3v5a1 1 0 0 0 2 0v-5h3a1 1 0 0 0 .707-1.707L15 11.586V7h1a1 1 0 0 0 1-1V4z"/></svg></span></button>
             <button class="main-tab active" id="tab-btn-bereiche"
                 onclick="switchMainTab('bereiche')"
-                title="Fahrpläne und Zugbildungspläne anzeigen">Fpl und Zp</button>
+                title="Fahrpläne und Zugbildungspläne anzeigen">Fpl und Zp<span class="tab-pin" id="pin-bereiche" title="Anpinnen, um diesen Tab beim Neustart standardmäßig zu öffnen" onclick="event.stopPropagation(); toggleTabPin('bereiche');"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17 4a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h1v5.586l-1.707 1.707A1 1 0 0 0 8 15h3v5a1 1 0 0 0 2 0v-5h3a1 1 0 0 0 .707-1.707L15 11.586V7h1a1 1 0 0 0 1-1V4z"/></svg></span></button>
             <button class="main-tab" id="tab-btn-kbs"
                 onclick="switchMainTab('kbs')"
-                title="Kursbuchstrecken anzeigen">KBS</button>
+                title="Kursbuchstrecken anzeigen">KBS<span class="tab-pin" id="pin-kbs" title="Anpinnen, um diesen Tab beim Neustart standardmäßig zu öffnen" onclick="event.stopPropagation(); toggleTabPin('kbs');"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17 4a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h1v5.586l-1.707 1.707A1 1 0 0 0 8 15h3v5a1 1 0 0 0 2 0v-5h3a1 1 0 0 0 .707-1.707L15 11.586V7h1a1 1 0 0 0 1-1V4z"/></svg></span></button>
             <button class="main-tab" id="tab-btn-netz"
                 onclick="switchMainTab('netz')"
-                title="Netzplan anzeigen">Netz</button>
+                title="Netzplan anzeigen">Netz<span class="tab-pin" id="pin-netz" title="Anpinnen, um diesen Tab beim Neustart standardmäßig zu öffnen" onclick="event.stopPropagation(); toggleTabPin('netz');"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17 4a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h1v5.586l-1.707 1.707A1 1 0 0 0 8 15h3v5a1 1 0 0 0 2 0v-5h3a1 1 0 0 0 .707-1.707L15 11.586V7h1a1 1 0 0 0 1-1V4z"/></svg></span></button>
             <button class="main-tab" id="tab-btn-modellgarnituren"
                 onclick="switchMainTab('modellgarnituren')"
-                title="Modellgarnituren anzeigen">Modellgarnituren</button>
+                title="Modellgarnituren anzeigen">Modellgarnituren<span class="tab-pin" id="pin-modellgarnituren" title="Anpinnen, um diesen Tab beim Neustart standardmäßig zu öffnen" onclick="event.stopPropagation(); toggleTabPin('modellgarnituren');"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17 4a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h1v5.586l-1.707 1.707A1 1 0 0 0 8 15h3v5a1 1 0 0 0 2 0v-5h3a1 1 0 0 0 .707-1.707L15 11.586V7h1a1 1 0 0 0 1-1V4z"/></svg></span></button>
             <button class="main-tab" id="tab-btn-rollmaterial"
                 onclick="switchMainTab('rollmaterial')"
-                title="Rollmaterial-Inventar anzeigen">Rollmaterial</button>
+                title="Rollmaterial-Inventar anzeigen">Rollmaterial<span class="tab-pin" id="pin-rollmaterial" title="Anpinnen, um diesen Tab beim Neustart standardmäßig zu öffnen" onclick="event.stopPropagation(); toggleTabPin('rollmaterial');"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17 4a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h1v5.586l-1.707 1.707A1 1 0 0 0 8 15h3v5a1 1 0 0 0 2 0v-5h3a1 1 0 0 0 .707-1.707L15 11.586V7h1a1 1 0 0 0 1-1V4z"/></svg></span></button>
             <div id="tab-bar-spacer"></div>
-            <button id="settings-btn" title="Einstellungen" onclick="openSettings()">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
-            </button>
             <button id="fullscreen-btn" title="Vollbild">
                 <!-- Diagonal double-arrow icon: expand -->
                 <svg id="fs-icon-expand" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
@@ -1283,7 +1309,9 @@
                         <div class="col-header">
                             <div class="col-header-row1">
                                 <span class="col-tab active" data-tab="laufweg" onclick="switchTab(2, 'laufweg')">Laufweg</span>
+                                <span class="tab-pin" id="pin-sub-fplzp-laufweg" title="Anpinnen, um diesen Tab beim Neustart standardmäßig zu öffnen" onclick="toggleSubTabPin('fplzp','laufweg');"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M17 4a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h1v5.586l-1.707 1.707A1 1 0 0 0 8 15h3v5a1 1 0 0 0 2 0v-5h3a1 1 0 0 0 .707-1.707L15 11.586V7h1a1 1 0 0 0 1-1V4z"/></svg></span>
                                 <span class="col-tab" data-tab="zp" onclick="switchTab(2, 'zp')">Zp</span>
+                                <span class="tab-pin" id="pin-sub-fplzp-zp" title="Anpinnen, um diesen Tab beim Neustart standardmäßig zu öffnen" onclick="toggleSubTabPin('fplzp','zp');"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M17 4a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h1v5.586l-1.707 1.707A1 1 0 0 0 8 15h3v5a1 1 0 0 0 2 0v-5h3a1 1 0 0 0 .707-1.707L15 11.586V7h1a1 1 0 0 0 1-1V4z"/></svg></span>
                                 <span id="info-col2"
                                     style="font-weight:normal;font-size:12px;color:#444;margin-left:6px;white-space:nowrap;overflow:hidden;"></span>
                             </div>
@@ -1346,7 +1374,9 @@
                     <div class="col-header" style="width: 100%; border-bottom: 1px solid #bbb;">
                         <div class="col-header-row1" style="justify-content: center; display: flex;">
                             <span class="col-tab active" id="kbs-tab-orm" onclick="switchKbsMapTab('orm')">Karte</span>
+                            <span class="tab-pin" id="pin-sub-kbs-orm" title="Anpinnen, um diesen Tab beim Neustart standardmäßig zu öffnen" onclick="toggleSubTabPin('kbs','orm');"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M17 4a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h1v5.586l-1.707 1.707A1 1 0 0 0 8 15h3v5a1 1 0 0 0 2 0v-5h3a1 1 0 0 0 .707-1.707L15 11.586V7h1a1 1 0 0 0 1-1V4z"/></svg></span>
                             <span class="col-tab" id="kbs-tab-img" onclick="switchKbsMapTab('img')">KBS-Karte</span>
+                            <span class="tab-pin" id="pin-sub-kbs-img" title="Anpinnen, um diesen Tab beim Neustart standardmäßig zu öffnen" onclick="toggleSubTabPin('kbs','img');"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M17 4a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h1v5.586l-1.707 1.707A1 1 0 0 0 8 15h3v5a1 1 0 0 0 2 0v-5h3a1 1 0 0 0 .707-1.707L15 11.586V7h1a1 1 0 0 0 1-1V4z"/></svg></span>
                         </div>
                     </div>
                     <div style="flex: 1; width: 100%; position: relative; display: flex; justify-content: center; align-items: center; overflow: hidden;">
@@ -1396,7 +1426,9 @@
                         <div class="col-header">
                             <div class="col-header-row1">
                                 <span class="col-tab active" id="rm-tab-loks" onclick="switchMgTab('loks')">Loks</span>
+                                <span class="tab-pin" id="pin-sub-mg-loks" title="Anpinnen, um diesen Tab beim Neustart standardmäßig zu öffnen" onclick="toggleSubTabPin('mg','loks');"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M17 4a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h1v5.586l-1.707 1.707A1 1 0 0 0 8 15h3v5a1 1 0 0 0 2 0v-5h3a1 1 0 0 0 .707-1.707L15 11.586V7h1a1 1 0 0 0 1-1V4z"/></svg></span>
                                 <span class="col-tab" id="rm-tab-wagen" onclick="switchMgTab('wagen')">Wagen</span>
+                                <span class="tab-pin" id="pin-sub-mg-wagen" title="Anpinnen, um diesen Tab beim Neustart standardmäßig zu öffnen" onclick="toggleSubTabPin('mg','wagen');"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M17 4a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h1v5.586l-1.707 1.707A1 1 0 0 0 8 15h3v5a1 1 0 0 0 2 0v-5h3a1 1 0 0 0 .707-1.707L15 11.586V7h1a1 1 0 0 0 1-1V4z"/></svg></span>
                             </div>
                         </div>
                         <div class="col-content" id="rm-content-fahrzeuge" style="padding:0; display:flex; flex-direction:column; overflow:hidden;">
@@ -1472,17 +1504,20 @@
                     <div class="col-pane" id="mg-col-zuege" style="width: 85%;">
                         <div class="col-header">
                             <div class="col-header-row1 center">
+                                <button id="mg-mode-toggle-btn" onclick="toggleMgMode()" title="Zwischen Zügen und Magazinen umschalten" style="margin-right:10px; cursor:pointer; font-size:11px; padding:2px 4px;">&#8644; Magazine</button>
                                 <strong id="garnituren-title">Modellzuggarnituren</strong>
-                                <button onclick="addGarnitur()" title="Garnitur hinzufügen" style="margin-left:10px; cursor:pointer;">+</button>
-                                <button id="garnitur-save-btn" onclick="saveGarnituren()" title="Garnituren speichern" style="margin-left:5px; cursor:pointer;">⬇</button>
-                                <label title="E-Loks aus Lokstapeln bevorzugen" style="margin-left:10px; font-size:11px; cursor:pointer; user-select:none; display:flex; align-items:center; gap:3px;">
-                                    <input type="checkbox" id="garnitur-etraktion" onchange="applyETraktion(this.checked)">
-                                    E-Traktion
-                                </label>
+                                <span id="mg-garnituren-controls" style="display:flex; align-items:center;">
+                                    <button onclick="addGarnitur()" title="Garnitur hinzufügen" style="margin-left:10px; cursor:pointer;">+</button>
+                                    <button id="garnitur-save-btn" onclick="saveGarnituren()" title="Garnituren speichern" style="margin-left:5px; cursor:pointer;">⬇</button>
+                                    <label title="E-Loks aus Lokstapeln bevorzugen" style="margin-left:10px; font-size:11px; cursor:pointer; user-select:none; display:flex; align-items:center; gap:3px;">
+                                        <input type="checkbox" id="garnitur-etraktion" onchange="applyETraktion(this.checked)">
+                                        E-Traktion
+                                    </label>
+                                </span>
                                 <span id="mg-zoom-indicator" title="Zoom (Ctrl+Mausrad zum Zoomen, Klick auf Zug = 100%)" style="display:none; margin-left:10px; font-size:11px; font-weight:normal; background:#555; color:#fff; padding:1px 6px; border-radius:3px; cursor:default;"></span>
                             </div>
                             <!-- Filterzeile, ausgerichtet an Garnitur-Kopf und -Track -->
-                            <div style="display:flex; align-items:center; gap:4px; padding:4px 5px 4px; background:#e0e0e0; border-top:1px solid #ccc;">
+                            <div id="mg-garnituren-filter-bar" style="display:flex; align-items:center; gap:4px; padding:4px 5px 4px; background:#e0e0e0; border-top:1px solid #ccc;">
                                 <input
                                     type="text"
                                     id="garnituren-filter"
@@ -1509,6 +1544,19 @@
                         <div class="col-content" id="mg-content-zuege">
                             <!-- Garnituren werden hier generiert -->
                         </div>
+                        <div class="col-content" id="mg-content-magazine" style="display:none; padding:10px; overflow-y:auto; flex-direction:column; background:#fff;">
+                            <table id="magazine-table" class="inv-table" style="width:100%; border-collapse:collapse; font-size:12px;">
+                                <thead>
+                                    <tr>
+                                        <th style="width:1%; white-space:nowrap;">Magazin</th>
+                                        <th style="text-align:right; width:1%; white-space:nowrap;">Länge</th>
+                                        <th style="text-align:right; width:1%; white-space:nowrap;">Zuglänge</th>
+                                        <th style="width:97%;">Zugvorschau</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1519,7 +1567,9 @@
                     <!-- Untertab-Bar -->
                     <div style="display:flex; align-items:center; background:#d0d0d0; border-bottom:1px solid #bbb; flex-shrink:0; padding:4px 8px; gap:6px;">
                         <span class="col-tab active" id="inv-tab-loks" onclick="switchInvTab('loks')">Loks</span>
+                        <span class="tab-pin" id="pin-sub-inv-loks" title="Anpinnen, um diesen Tab beim Neustart standardmäßig zu öffnen" onclick="toggleSubTabPin('inv','loks');"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M17 4a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h1v5.586l-1.707 1.707A1 1 0 0 0 8 15h3v5a1 1 0 0 0 2 0v-5h3a1 1 0 0 0 .707-1.707L15 11.586V7h1a1 1 0 0 0 1-1V4z"/></svg></span>
                         <span class="col-tab" id="inv-tab-wagen" onclick="switchInvTab('wagen')">Wagen</span>
+                        <span class="tab-pin" id="pin-sub-inv-wagen" title="Anpinnen, um diesen Tab beim Neustart standardmäßig zu öffnen" onclick="toggleSubTabPin('inv','wagen');"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M17 4a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h1v5.586l-1.707 1.707A1 1 0 0 0 8 15h3v5a1 1 0 0 0 2 0v-5h3a1 1 0 0 0 .707-1.707L15 11.586V7h1a1 1 0 0 0 1-1V4z"/></svg></span>
                     </div>
                     <!-- Filter-Bar Wagen -->
                     <div id="inv-wagen-filter" class="inv-filter-bar" style="display:none;">
@@ -1597,6 +1647,7 @@
                                 <th>Bild</th>
                                 <th onclick="invSort('wagen', 'her')" style="cursor:pointer; user-select:none; color:#333;" title="Sortieren">Hersteller<span class="sort-arrow" id="sort-wagen-her" style="color:#888;"> ↕</span></th>
                                 <th onclick="invSort('wagen', 'art')" style="cursor:pointer; user-select:none; color:#333;" title="Sortieren">Artikelnummer<span class="sort-arrow" id="sort-wagen-art" style="color:#888;"> ↕</span></th>
+                                <th onclick="invSort('wagen', 'luemp')" style="cursor:pointer; user-select:none; color:#333;" title="Sortieren">LüP (mm)<span class="sort-arrow" id="sort-wagen-luemp" style="color:#888;"> ↕</span></th>
                             </tr></thead>
                             <tbody></tbody>
                         </table>
@@ -1650,8 +1701,7 @@
             </div>
 
             <div class="controls-right">
-                <label><input type="checkbox" id="info-checkbox" checked> Wageninformation</label>
-                <label style="margin-left:15px;" title="Obwohl weder Anhalter noch Dresdner Bahn elektrifiziert waren, dennoch E-Loks fahren lassen, sofern diese Option gewählt ist."><input type="checkbox" id="etraktion-checkbox" onchange="applyETraktion(this.checked)"> E-Traktion</label>
+                <label title="Obwohl weder Anhalter noch Dresdner Bahn elektrifiziert waren, dennoch E-Loks fahren lassen, sofern diese Option gewählt ist."><input type="checkbox" id="etraktion-checkbox" onchange="applyETraktion(this.checked)"> E-Traktion</label>
             </div>
         </div>
         <div id="tracks-area" style="position: relative;">
@@ -1698,38 +1748,9 @@
 
     <!-- Lok Alternativen Menü -->
     <div id="lok-alt-menu"></div>
+    <!-- Magazin-Zuordnungs-Menü -->
+    <div id="magazin-menu"></div>
 
-    <!-- Einstellungen Modal Popup -->
-    <div id="settings-popup">
-        <div class="settings-content">
-            <h3>Einstellungen</h3>
-            <div class="settings-row">
-                <label for="setting-default-main-tab">Standard Haupt-Tab beim Start:</label>
-                <select id="setting-default-main-tab" onchange="onSettingMainTabChange()">
-                    <option value="stellwerk">Stellwerk</option>
-                    <option value="bereiche">Fpl und Zp</option>
-                    <option value="modellgarnituren">Modellgarnituren</option>
-                    <option value="rollmaterial">Rollmaterial</option>
-                </select>
-            </div>
-            <div class="settings-row" id="setting-sub-tab-row">
-                <label for="setting-default-sub-tab">Standard Unter-Tab beim Start:</label>
-                <select id="setting-default-sub-tab"></select>
-            </div>
-            <div class="settings-row">
-                <label for="setting-default-view">Standard Animationsart (Zugdarstellung):</label>
-                <select id="setting-default-view">
-                    <option value="schematic">Schematisch</option>
-                    <option value="real">Realzug</option>
-                    <option value="model">Modellzug</option>
-                </select>
-            </div>
-            <div class="settings-actions">
-                <button onclick="closeSettings()">Abbrechen</button>
-                <button onclick="saveSettings()" style="background:#1a56db; color:#fff; border:none; font-weight:bold;">Speichern</button>
-            </div>
-        </div>
-    </div>
 
     <script>
         // --- Clock Logic ---
@@ -2585,6 +2606,8 @@
             };
         }
 
+        window._subTabsSession = window._subTabsSession || {};
+
         window.switchMainTab = function(name) {
             document.querySelectorAll('.main-tab').forEach(btn => btn.classList.remove('active'));
             document.querySelectorAll('.tab-panel').forEach(panel => panel.classList.remove('active'));
@@ -2592,36 +2615,48 @@
             document.getElementById('panel-' + name).classList.add('active');
             
             if (name === 'bereiche') {
-                // Init map on first visit (was hidden, Leaflet couldn't measure size)
                 if (!window._orm_map) {
                     setTimeout(initMap, 50);
                 } else {
                     setTimeout(() => window._orm_map.invalidateSize(), 50);
                 }
+                if (!window._subTabsSession['fplzp']) {
+                    window._subTabsSession['fplzp'] = true;
+                    const pinned = localStorage.getItem('drg39_subtab_pin_fplzp');
+                    if (pinned && window.switchTab) { window.switchTab(2, pinned); window.switchTab(4, pinned); }
+                }
             } else if (name === 'kbs') {
-                // KBS map: init + invalidateSize after tab reveal so tiles render correctly
                 setTimeout(() => {
-                    if (window._kbs_orm_map) {
-                        window._kbs_orm_map.invalidateSize();
-                    }
-                    // Auto-select first KBS if none selected yet
+                    if (window._kbs_orm_map) window._kbs_orm_map.invalidateSize();
                     const firstLi = document.querySelector('#kbs-list-container .kbs-list-item');
-                    if (firstLi && !document.querySelector('#kbs-list-container .kbs-list-item.active')) {
-                        firstLi.click();
-                    }
+                    if (firstLi && !document.querySelector('#kbs-list-container .kbs-list-item.active')) firstLi.click();
                 }, 100);
+                if (!window._subTabsSession['kbs']) {
+                    window._subTabsSession['kbs'] = true;
+                    const pinned = localStorage.getItem('drg39_subtab_pin_kbs');
+                    if (pinned && typeof switchKbsMapTab === 'function') switchKbsMapTab(pinned);
+                }
             } else if (name === 'netz') {
                 setTimeout(() => {
-                    if (!window._netz_map) {
-                        initNetzMap();
-                    } else {
-                        window._netz_map.invalidateSize();
-                    }
+                    if (!window._netz_map) initNetzMap();
+                    else window._netz_map.invalidateSize();
                 }, 100);
             } else if (name === 'modellgarnituren') {
-                switchMgTab(window._mgActiveTab || 'wagen');
+                if (!window._subTabsSession['mg']) {
+                    window._subTabsSession['mg'] = true;
+                    const pinned = localStorage.getItem('drg39_subtab_pin_mg');
+                    switchMgTab(pinned || 'wagen');
+                } else {
+                    switchMgTab(window._mgActiveTab || 'wagen');
+                }
             } else if (name === 'rollmaterial') {
-                switchInvTab(window._invActiveTab || 'loks');
+                if (!window._subTabsSession['inv']) {
+                    window._subTabsSession['inv'] = true;
+                    const pinned = localStorage.getItem('drg39_subtab_pin_inv');
+                    switchInvTab(pinned || 'loks');
+                } else {
+                    switchInvTab(window._invActiveTab || 'loks');
+                }
             }
         };
 
@@ -2636,13 +2671,14 @@
             if (tab === 'loks') {
                 document.getElementById('rm-tab-loks').classList.add('active');
                 document.getElementById('rm-loks-view').style.display = 'flex';
-                loksLoadCSV();
             } else {
                 document.getElementById('rm-tab-wagen').classList.add('active');
                 document.getElementById('rm-wagen-view').style.display = 'flex';
-                // Wagen-Tab lädt auch Garnituren
-                loadGarnituren();
             }
+            
+            // Beide Tabs benötigen die Garnituren für die Anzeige auf der rechten Seite,
+            // loadGarnituren lädt intern auch loksLoadCSV und wagenLoadCSV mit.
+            loadGarnituren();
         };
 
         // --- Loks-Liste ---
@@ -2854,6 +2890,7 @@
                 const idxId  = header.indexOf('Id');
                 const idxHer = header.indexOf('Hersteller');
                 const idxArt = header.indexOf('Artikelnummer');
+                const idxLup = header.findIndex(h => h.includes('LüP') || (h.includes('L') && h.includes('P')));
                 _wagenData = [];
                 for (let i = 1; i < lines.length; i++) {
                     const cols = lines[i].split('\t');
@@ -2867,6 +2904,7 @@
                         id:  (cols[idxId]  || '').trim(),
                         her: (cols[idxHer] || '').trim(),
                         art: (cols[idxArt] || '').trim(),
+                        luemp: idxLup !== -1 ? (cols[idxLup] || '').trim() : ''
                     });
                 }
                 // Bilder vorab prüfen für Sortierung
@@ -3104,6 +3142,126 @@
             renderGarnituren();
         };
 
+        window.toggleMgMode = function() {
+            const zuegeView = document.getElementById('mg-content-zuege');
+            const magView = document.getElementById('mg-content-magazine');
+            const controls = document.getElementById('mg-garnituren-controls');
+            const filterBar = document.getElementById('mg-garnituren-filter-bar');
+            const title = document.getElementById('garnituren-title');
+            const btn = document.getElementById('mg-mode-toggle-btn');
+
+            if (magView.style.display === 'none') {
+                zuegeView.style.display = 'none';
+                controls.style.display = 'none';
+                filterBar.style.display = 'none';
+                magView.style.display = 'flex';
+                title.textContent = 'Magazine';
+                if (btn) btn.innerHTML = '&#8644; Zuggarnituren';
+                loadMagazine();
+            } else {
+                magView.style.display = 'none';
+                zuegeView.style.display = 'block';
+                controls.style.display = 'flex';
+                filterBar.style.display = 'flex';
+                title.textContent = (_garnituren ? _garnituren.length : '0') + ' Modellzuggarnituren';
+                if (btn) btn.innerHTML = '&#8644; Magazine';
+                renderGarnituren();
+            }
+        };
+
+        window._magazineData = [];
+
+        async function loadMagazine() {
+            try {
+                const resp = await fetch('data/rollmaterial/magazine.csv');
+                if (!resp.ok) return;
+                const buf = await resp.arrayBuffer();
+                const dec = new TextDecoder('utf-8');
+                const text = dec.decode(buf);
+                const lines = text.split(/\r?\n/);
+                window._magazineData = [];
+                for (let i = 1; i < lines.length; i++) {
+                    const line = lines[i].trim();
+                    if (!line) continue;
+                    const cols = line.split(/\s+/);
+                    if (cols.length < 2) continue;
+                    window._magazineData.push({ id: cols[0], lenMm: parseInt(cols[1], 10) });
+                }
+                _renderMagazineTable();
+            } catch (e) {
+                console.error("Error loading magazine.csv", e);
+            }
+        }
+
+        function _garniturLenMm(g) {
+            let mm = 0;
+            for (const v of (g.vehicles || [])) {
+                const ae = v.type === 'lok' ? (v.entries && v.entries[v.activeIndex || 0]) : v.entry;
+                if (ae && ae.luemp) {
+                    const l = parseFloat(ae.luemp.replace(',', '.'));
+                    if (!isNaN(l)) mm += l;
+                }
+            }
+            return mm;
+        }
+
+        function _renderMagazineTable() {
+            const tbody = document.querySelector('#magazine-table tbody');
+            if (!tbody) return;
+            tbody.innerHTML = '';
+            // Build map: magazineId -> garnitur
+            const magToG = {};
+            for (const g of (_garnituren || [])) {
+                if (g.magazine) magToG[g.magazine] = g;
+            }
+            for (const mag of window._magazineData) {
+                const g = magToG[mag.id];
+                const gLenMm = g ? Math.round(_garniturLenMm(g)) : 0;
+                const tr = document.createElement('tr');
+                // col 1: magazin ID
+                const td1 = document.createElement('td'); td1.textContent = mag.id; tr.appendChild(td1);
+                // col 2: magazine length in mm
+                const td2 = document.createElement('td'); td2.style.textAlign = 'right'; td2.textContent = mag.lenMm + ' mm'; tr.appendChild(td2);
+                // col 3: assigned train length in mm
+                const td3 = document.createElement('td'); 
+                td3.style.textAlign = 'right'; 
+                if (g) {
+                    const ungenutzt = mag.lenMm - gLenMm;
+                    td3.textContent = `${gLenMm} mm (+${ungenutzt} mm)`;
+                } else {
+                    td3.textContent = '';
+                }
+                tr.appendChild(td3);
+                
+                // col 4: visual train preview
+                const td4 = document.createElement('td');
+                td4.style.whiteSpace = 'nowrap';
+                td4.style.overflow = 'hidden';
+                td4.style.maxWidth = '0';
+                if (g) {
+                    for (const v of g.vehicles) {
+                        const ae = v.type === 'lok' ? (v.entries && v.entries[v.activeIndex || 0]) : v.entry;
+                        if (!ae) continue;
+                        const img = document.createElement('img');
+                        img.style.height = '28px';
+                        img.style.verticalAlign = 'bottom';
+                        img.style.margin = '0';
+                        if (v.type === 'lok') {
+                            img.src = LOKS_IMG_PATH + (ae.gattung || '') + '.png';
+                            img.onerror = function() { if (!this._fb) { this._fb=true; this.src = LOKS_IMG_PATH + 'rangierlok.gif'; } };
+                        } else {
+                            img.src = PWAGEN_IMG_PATH + (ae.gattungFile || ae.gattung.replace(/\//g,'')) + '.png';
+                            img.onerror = function() { if (!this._fb) { this._fb=true; this.src = PWAGEN_IMG_PATH + 'Unbekannt.png'; } };
+                        }
+                        if (v.mirrored) img.style.transform = 'scaleX(-1)';
+                        td4.appendChild(img);
+                    }
+                }
+                tr.appendChild(td4);
+                tbody.appendChild(tr);
+            }
+        }
+
         let _garniturenLoadPromise = null;
         function loadGarnituren() {
             if (!_garniturenLoadPromise) _garniturenLoadPromise = _loadGarnituren_internal();
@@ -3113,6 +3271,23 @@
         async function _loadGarnituren_internal() {
             await loksLoadCSV();
             await wagenLoadCSV();
+            // also preload magazine data for dropdowns
+            if (window._magazineData.length === 0) {
+                try {
+                    const mr = await fetch('data/rollmaterial/magazine.csv');
+                    if (mr.ok) {
+                        const mb = await mr.arrayBuffer();
+                        const mt = new TextDecoder('utf-8').decode(mb);
+                        window._magazineData = [];
+                        mt.split(/\r?\n/).slice(1).forEach(l => {
+                            l = l.trim();
+                            if (!l) return;
+                            const cs = l.split(/\s+/);
+                            if (cs.length >= 2) window._magazineData.push({ id: cs[0], lenMm: parseInt(cs[1], 10) });
+                        });
+                    }
+                } catch(e) {}
+            }
             window._garniturLoaded = true;
             try {
                 const resp = await fetch('data/rollmaterial/garnituren.csv');
@@ -3136,6 +3311,10 @@
                     // Name ist in cols[2] des neuen Formats
                     if (cols[2] && cols[2].trim() !== 'wagen' && cols[2].trim() !== '') {
                         g.name = cols[2].trim();
+                    }
+                    // Magazine-Zuordnung lesen (Spalte 6, optional)
+                    if (cols[6] && cols[6].trim()) {
+                        g.magazine = cols[6].trim();
                     }
                     const type       = cols[3] ? cols[3].trim() : '';
                     const fahrzeugId = cols[4] ? cols[4].trim() : null;
@@ -3171,19 +3350,20 @@
 
         // Baut den CSV-Text aus dem aktuellen _garnituren-Array
         function buildGarniturCsv() {
-            let csv = "GarniturId\tDirection\tName\tType\tFahrzeugId\tMirrored\n";
+            let csv = "GarniturId\tDirection\tName\tType\tFahrzeugId\tMirrored\tMagazin\n";
             for (const g of _garnituren) {
                 const name = (g.name || '').replace(/\t/g, ' ');
+                const mag = g.magazine || '';
                 if (g.vehicles.length === 0) {
-                    csv += `${g.id}\t${g.direction}\t${name}\t\t\t\n`;
+                    csv += `${g.id}\t${g.direction}\t${name}\t\t\t\t${mag}\n`;
                 } else {
                     for (const v of g.vehicles) {
                         const mir = v.mirrored ? '1' : '0';
                         if (v.type === 'wagen') {
-                            csv += `${g.id}\t${g.direction}\t${name}\twagen\t${v.entry.id}\t${mir}\n`;
+                            csv += `${g.id}\t${g.direction}\t${name}\twagen\t${v.entry.id}\t${mir}\t${mag}\n`;
                         } else if (v.type === 'lok') {
                             const idStr = v.entries.map(e => e.id).join(',') + ':' + (v.activeIndex || 0);
-                            csv += `${g.id}\t${g.direction}\t${name}\tlok\t${idStr}\t${mir}\n`;
+                            csv += `${g.id}\t${g.direction}\t${name}\tlok\t${idStr}\t${mir}\t${mag}\n`;
                         }
                     }
                 }
@@ -3362,10 +3542,10 @@
         window.addGarnitur = function() {
             window._garniturLoaded = true; // verhindert, dass loadGarnituren() den State überschreibt
             let num = 1;
-            while (_garnituren.some(g => g.id === 'M' + String(num).padStart(2, '0'))) {
+            while (_garnituren.some(g => g.id === 'Z' + String(num).padStart(2, '0'))) {
                 num++;
             }
-            const newId = 'M' + String(num).padStart(2, '0');
+            const newId = 'Z' + String(num).padStart(2, '0');
             _garnituren.push({ id: newId, direction: 'left', name: '', vehicles: [] });
             renderGarnituren();
             wagenRender();
@@ -3498,8 +3678,8 @@
         function insertGarnitur(referenceGid, position) {
             hideGarniturCtxMenu();
             let num = 1;
-            while (_garnituren.some(g => g.id === 'M' + String(num).padStart(2, '0'))) num++;
-            const newId = 'M' + String(num).padStart(2, '0');
+            while (_garnituren.some(g => g.id === 'Z' + String(num).padStart(2, '0'))) num++;
+            const newId = 'Z' + String(num).padStart(2, '0');
             const newG  = { id: newId, direction: 'left', name: '', vehicles: [] };
             const refIdx = _garnituren.findIndex(g => g.id === referenceGid);
             if (refIdx === -1) {
@@ -3521,16 +3701,98 @@
         });
 
         // Menü schließen bei Klick außerhalb oder Rechtsklick außerhalb
-        document.addEventListener('click',       (e) => { 
+        document.addEventListener('click', (e) => {
             if (!e.target.closest('#garnitur-ctx-menu')) hideGarniturCtxMenu();
             if (!e.target.closest('#lok-alt-menu') && !e.target.closest('.lok-alt-btn')) hideLokAltMenu();
+            if (!e.target.closest('#magazin-menu') && !e.target.closest('[data-mag-btn]')) hideMagazinMenu();
         });
-        document.addEventListener('contextmenu', (e) => { 
-            if (!e.target.closest('#garnitur-ctx-menu') && !e.target.closest('.garnitur-control')) hideGarniturCtxMenu(); 
+        document.addEventListener('contextmenu', (e) => {
+            if (!e.target.closest('#garnitur-ctx-menu') && !e.target.closest('.garnitur-control')) hideGarniturCtxMenu();
         });
 
         function hideLokAltMenu() {
             document.getElementById('lok-alt-menu').classList.remove('visible');
+        }
+
+        function hideMagazinMenu() {
+            const m = document.getElementById('magazin-menu');
+            if (m) m.classList.remove('visible');
+        }
+
+        function showMagazinMenu(x, y, g, ctrl, magLabel) {
+            const menu = document.getElementById('magazin-menu');
+            if (!menu) return;
+            hideMagazinMenu(); // schließe vorher falls offen
+            menu.innerHTML = '';
+
+            const lenMm = (() => {
+                let mm = 0;
+                for (const v of (g.vehicles || [])) {
+                    const ae = v.type === 'lok' ? (v.entries && v.entries[v.activeIndex || 0]) : v.entry;
+                    if (ae && ae.luemp) { const l = parseFloat(ae.luemp.replace(',','.')); if (!isNaN(l)) mm += l; }
+                }
+                return mm;
+            })();
+
+            const usedMags = new Set(
+                (_garnituren || []).filter(x => x.id !== g.id && x.magazine).map(x => x.magazine)
+            );
+
+            // — kein Magazin —
+            const noneItem = document.createElement('div');
+            noneItem.className = 'magazin-menu-item' + (!g.magazine ? ' active' : '');
+            noneItem.textContent = '— kein Magazin —';
+            noneItem.onclick = () => {
+                g.magazine = undefined;
+                ctrl.style.background = '';
+                magLabel.textContent = '';
+                hideMagazinMenu();
+                const mv = document.getElementById('mg-content-magazine');
+                if (mv && mv.style.display !== 'none') _renderMagazineTable();
+            };
+            menu.appendChild(noneItem);
+
+            const mags = (window._magazineData || []).slice();
+            const fitting = mags.filter(m => m.lenMm >= lenMm)
+                .sort((a, b) => (a.lenMm - lenMm) - (b.lenMm - lenMm));
+            const tooShort = mags.filter(m => m.lenMm < lenMm);
+
+            if (fitting.length) {
+                const sep = document.createElement('hr'); sep.className = 'magazin-menu-sep'; menu.appendChild(sep);
+            }
+            for (const m of fitting) {
+                const isUsed = usedMags.has(m.id);
+                const item = document.createElement('div');
+                item.className = 'magazin-menu-item' + (g.magazine === m.id ? ' active' : '') + (isUsed ? ' used' : '');
+                item.textContent = `${m.id}  –  ${Math.round(m.lenMm/10)} cm${isUsed ? '  (belegt)' : ''}`;
+                item.onclick = () => {
+                    g.magazine = m.id;
+                    ctrl.style.background = '#e6ffe6';
+                    magLabel.textContent = m.id;
+                    hideMagazinMenu();
+                    const mv = document.getElementById('mg-content-magazine');
+                    if (mv && mv.style.display !== 'none') _renderMagazineTable();
+                };
+                menu.appendChild(item);
+            }
+            if (tooShort.length) {
+                const sep2 = document.createElement('hr'); sep2.className = 'magazin-menu-sep'; menu.appendChild(sep2);
+                for (const m of tooShort) {
+                    const item = document.createElement('div');
+                    item.className = 'magazin-menu-item short';
+                    item.textContent = `${m.id}  –  ${Math.round(m.lenMm/10)} cm  (zu kurz)`;
+                    menu.appendChild(item);
+                }
+            }
+
+            menu.style.left = x + 'px';
+            menu.style.top  = y + 'px';
+            menu.classList.add('visible');
+            requestAnimationFrame(() => {
+                const rect = menu.getBoundingClientRect();
+                if (rect.bottom > window.innerHeight - 10)
+                    menu.style.top = (parseFloat(menu.style.top) - rect.height) + 'px';
+            });
         }
 
         function showLokAltMenu(x, y, vObj, gid) {
@@ -3837,8 +4099,9 @@
                     filteredGarnituren = filteredGarnituren.filter(g => {
                         let lenMm = 0;
                         for (const v of g.vehicles) {
-                            if (v.type === 'lok' && v.entries && v.entries[v.activeIndex || 0]) {
-                                const l = parseFloat((v.entries[v.activeIndex || 0].luemp || '').replace(',', '.'));
+                            const activeEntry = v.type === 'lok' ? (v.entries && v.entries[v.activeIndex || 0]) : v.entry;
+                            if (activeEntry && activeEntry.luemp) {
+                                const l = parseFloat(activeEntry.luemp.replace(',', '.'));
                                 if (!isNaN(l)) lenMm += l;
                             }
                         }
@@ -3863,9 +4126,12 @@
 
             const titleEl = document.getElementById('garnituren-title');
             if (titleEl) {
-                titleEl.textContent = (rawFilter
-                    ? filteredGarnituren.length + ' / ' + _garnituren.length
-                    : _garnituren.length) + ' Modellzuggarnituren';
+                const magView = document.getElementById('mg-content-magazine');
+                if (!magView || magView.style.display === 'none') {
+                    titleEl.textContent = (rawFilter
+                        ? filteredGarnituren.length + ' / ' + _garnituren.length
+                        : _garnituren.length) + ' Modellzuggarnituren';
+                }
             }
 
             // ── Zoom-Wrapper anlegen ──────────────────────────────────────
@@ -3957,6 +4223,7 @@
 
                 const ctrl = document.createElement('div');
                 ctrl.className = 'garnitur-control';
+                if (g.magazine) ctrl.style.background = '#e6ffe6';
 
                 // Rechtsklick-Menü auf dem Kontrollbereich
                 ctrl.addEventListener('contextmenu', (e) => {
@@ -3980,15 +4247,16 @@
                 nameDiv.ondragstart = (e) => e.stopPropagation();
                 ctrl.appendChild(nameDiv);
 
-                // ID, Länge, Richtung, Löschen
+                // ID, Länge, Magazin-Dropdown, Richtung, Löschen
+                // ID-Bereich: Zuglänge + Magazin-Label
                 const idDiv = document.createElement('div');
                 idDiv.className = 'garnitur-id';
-                idDiv.textContent = g.id;
-                
+
                 let lenMm = 0;
                 for (const v of g.vehicles) {
-                    if (v.type === 'lok' && v.entries && v.entries[v.activeIndex || 0] && v.entries[v.activeIndex || 0].luemp) {
-                        const l = parseFloat(v.entries[v.activeIndex || 0].luemp.replace(',', '.'));
+                    const activeEntry = v.type === 'lok' ? (v.entries && v.entries[v.activeIndex || 0]) : v.entry;
+                    if (activeEntry && activeEntry.luemp) {
+                        const l = parseFloat(activeEntry.luemp.replace(',', '.'));
                         if (!isNaN(l)) lenMm += l;
                     }
                 }
@@ -3997,15 +4265,32 @@
                     const lenSpan = document.createElement('span');
                     lenSpan.style.fontSize = '0.8em';
                     lenSpan.style.fontWeight = 'normal';
-                    lenSpan.textContent = ` (${lenCm} cm)`;
+                    lenSpan.textContent = `${lenCm} cm`;
                     idDiv.appendChild(lenSpan);
                 }
-                
+                // Magazin-ID-Label
+                const magLabel = document.createElement('div');
+                magLabel.className = 'magazin-id-label';
+                magLabel.textContent = g.magazine || '';
+                idDiv.appendChild(magLabel);
+
                 ctrl.appendChild(idDiv);
 
                 const btnRow = document.createElement('div');
                 btnRow.style.display = 'flex';
                 btnRow.style.gap = '5px';
+
+                // Magazin-Zuordnungs-Button
+                const magBtn = document.createElement('button');
+                magBtn.className = 'garnitur-dir-btn';
+                magBtn.title = 'Magazin zuordnen';
+                magBtn.textContent = '📦';
+                magBtn.style.fontSize = '11px';
+                magBtn.onclick = (ev) => {
+                    ev.stopPropagation();
+                    showMagazinMenu(ev.clientX, ev.clientY, g, ctrl, magLabel);
+                };
+                btnRow.appendChild(magBtn);
 
                 const dirBtn = document.createElement('button');
                 dirBtn.className = 'garnitur-dir-btn';
@@ -4436,126 +4721,87 @@
             }
         });
 
-        const infoCheckbox = document.getElementById('info-checkbox');
-        infoCheckbox.addEventListener('change', (e) => {
-            if (e.target.checked) {
-                document.body.classList.add('show-info');
-            } else {
-                document.body.classList.remove('show-info');
-            }
-        });
-        // Ensure default state is active on load
-        infoCheckbox.checked = true;
+        // --- Wageninformation immer anzeigen ---
         document.body.classList.add('show-info');
 
-        // Settings Popup Logic & LocalStorage Configuration
-        const subTabOptionsMap = {
-            'stellwerk': [],
-            'bereiche': [
-                { value: 'laufweg', label: 'Laufweg' },
-                { value: 'zp', label: 'Zp' }
-            ],
-            'modellgarnituren': [
-                { value: 'wagen', label: 'Wagen' },
-                { value: 'loks', label: 'Loks' }
-            ],
-            'rollmaterial': [
-                { value: 'loks', label: 'Loks' },
-                { value: 'wagen', label: 'Wagen' }
-            ]
-        };
+        // --- view-mode: beim Ändern sofort in localStorage speichern ---
+        (function initViewMode() {
+            const saved = localStorage.getItem('drg39_view_mode') || 'schematic';
+            const radio = document.querySelector(`input[name="view-mode"][value="${saved}"]`);
+            if (radio) radio.checked = true;
+        })();
 
-        window.onSettingMainTabChange = function(selectedSubTabVal) {
-            const mainTab = document.getElementById('setting-default-main-tab').value;
-            const subRow = document.getElementById('setting-sub-tab-row');
-            const subSelect = document.getElementById('setting-default-sub-tab');
-            const opts = subTabOptionsMap[mainTab] || [];
-            
-            subSelect.innerHTML = '';
-            if (opts.length > 0) {
-                subRow.style.display = 'flex';
-                opts.forEach(opt => {
-                    const el = document.createElement('option');
-                    el.value = opt.value;
-                    el.textContent = opt.label;
-                    subSelect.appendChild(el);
-                });
-                if (selectedSubTabVal) {
-                    subSelect.value = selectedSubTabVal;
-                }
-            } else {
-                subRow.style.display = 'none';
-            }
-        };
-
-        window.openSettings = function() {
-            const savedMainTab = localStorage.getItem('drg39_default_main_tab') || 'bereiche';
-            const savedSubTab = localStorage.getItem('drg39_default_sub_tab') || (savedMainTab === 'bereiche' ? 'laufweg' : (savedMainTab === 'modellgarnituren' ? 'wagen' : 'loks'));
-            const savedView = localStorage.getItem('drg39_default_view_mode') || 'schematic';
-            
-            const mainSelect = document.getElementById('setting-default-main-tab');
-            if (mainSelect) mainSelect.value = savedMainTab;
-            
-            onSettingMainTabChange(savedSubTab);
-            
-            const viewSelect = document.getElementById('setting-default-view');
-            if (viewSelect) viewSelect.value = savedView;
-            
-            document.getElementById('settings-popup').classList.add('visible');
-        };
-
-        window.closeSettings = function() {
-            document.getElementById('settings-popup').classList.remove('visible');
-        };
-
-        window.saveSettings = function() {
-            const mainTab = document.getElementById('setting-default-main-tab')?.value || 'bereiche';
-            const subTab = document.getElementById('setting-default-sub-tab')?.value || '';
-            const viewMode = document.getElementById('setting-default-view')?.value || 'schematic';
-
-            localStorage.setItem('drg39_default_main_tab', mainTab);
-            localStorage.setItem('drg39_default_sub_tab', subTab);
-            localStorage.setItem('drg39_default_view_mode', viewMode);
-
-            // Apply view mode immediately
-            const targetRadio = document.querySelector(`input[name="view-mode"][value="${viewMode}"]`);
-            if (targetRadio && !targetRadio.checked) {
-                targetRadio.checked = true;
-                targetRadio.dispatchEvent(new Event('change'));
-            }
-
-            closeSettings();
-        };
-
-        // Boot-up initialization from Settings
-        window.addEventListener('DOMContentLoaded', () => {
-            const defaultMainTab = localStorage.getItem('drg39_default_main_tab') || 'bereiche';
-            const defaultSubTab = localStorage.getItem('drg39_default_sub_tab');
-            const defaultViewMode = localStorage.getItem('drg39_default_view_mode') || 'schematic';
-
-            // Set initial radio
-            const initialRadio = document.querySelector(`input[name="view-mode"][value="${defaultViewMode}"]`);
-            if (initialRadio) {
-                initialRadio.checked = true;
-            }
-
-            // Switch to default main tab
-            if (window.switchMainTab) {
-                window.switchMainTab(defaultMainTab);
-            }
-
-            // Apply sub tab if relevant
-            if (defaultSubTab) {
-                if (defaultMainTab === 'bereiche') {
-                    window.switchTab(2, defaultSubTab);
-                    window.switchTab(4, defaultSubTab);
-                } else if (defaultMainTab === 'modellgarnituren') {
-                    window.switchMgTab(defaultSubTab);
-                } else if (defaultMainTab === 'rollmaterial') {
-                    window.switchInvTab(defaultSubTab);
-                }
-            }
+        document.querySelectorAll('input[name="view-mode"]').forEach(radio => {
+            radio.addEventListener('change', () => {
+                localStorage.setItem('drg39_view_mode', radio.value);
+            });
         });
+
+        // --- Pin-System für Haupt-Tabs ---
+        const PIN_KEY = 'drg39_pinned_tab';
+        const PINNABLE_TABS = ['stellwerk', 'bereiche', 'kbs', 'netz', 'modellgarnituren', 'rollmaterial'];
+
+        function applyPinState() {
+            const pinned = localStorage.getItem(PIN_KEY) || '';
+            PINNABLE_TABS.forEach(tab => {
+                const el = document.getElementById('pin-' + tab);
+                if (el) {
+                    el.classList.toggle('pinned', tab === pinned);
+                }
+            });
+        }
+
+        window.toggleTabPin = function(tab) {
+            const current = localStorage.getItem(PIN_KEY) || '';
+            if (current === tab) {
+                localStorage.removeItem(PIN_KEY);
+            } else {
+                localStorage.setItem(PIN_KEY, tab);
+            }
+            applyPinState();
+        };
+
+        applyPinState();
+
+        // --- Sub-Tab-Pin-System ---
+        // localStorage-Schlüssel: 'drg39_subtab_pin_<gruppe>'
+        // Sitzungs-Tracking: welche Haupt-Tabs wurden in dieser Sitzung schon geöffnet
+
+
+        const SUB_PIN_GROUPS = {
+            'fplzp': { tabs: ['laufweg', 'zp'], pinIdPrefix: 'pin-sub-fplzp-' },
+            'kbs':   { tabs: ['orm', 'img'],     pinIdPrefix: 'pin-sub-kbs-'   },
+            'mg':    { tabs: ['loks', 'wagen'],  pinIdPrefix: 'pin-sub-mg-'    },
+            'inv':   { tabs: ['loks', 'wagen'],  pinIdPrefix: 'pin-sub-inv-'   }
+        };
+
+        function applySubPinState(group) {
+            const cfg = SUB_PIN_GROUPS[group];
+            if (!cfg) return;
+            const pinned = localStorage.getItem('drg39_subtab_pin_' + group) || '';
+            cfg.tabs.forEach(tab => {
+                const el = document.getElementById(cfg.pinIdPrefix + tab);
+                if (el) el.classList.toggle('pinned', tab === pinned);
+            });
+        }
+
+        window.toggleSubTabPin = function(group, tab) {
+            const key = 'drg39_subtab_pin_' + group;
+            const current = localStorage.getItem(key) || '';
+            if (current === tab) {
+                localStorage.removeItem(key);
+            } else {
+                localStorage.setItem(key, tab);
+            }
+            applySubPinState(group);
+        };
+
+        // Gepinnten Sub-Tab beim ersten Öffnen des zugehörigen Haupt-Tabs anwenden
+        // Die Apply-Logik ist nun direkt in switchMainTab integriert
+
+        // Sub-Pin-Zustände sofort visuell anzeigen
+        Object.keys(SUB_PIN_GROUPS).forEach(g => applySubPinState(g));
+
 
         // Anhalter Bf Baustellenschild Overlay toggle logic
         const stationSelect = document.getElementById('station-select');
@@ -4572,6 +4818,7 @@
 
         document.querySelectorAll('input[name="view-mode"]').forEach(radio => {
             radio.addEventListener('change', () => {
+                localStorage.setItem('drg39_view_mode', radio.value);
                 if (window.animTop) window.animTop.rebuildVisuals();
                 if (window.animBottom) window.animBottom.rebuildVisuals();
                 
@@ -6575,69 +6822,6 @@ ${von} – ${nach}`;
             document.getElementById('photo-popup-detail').classList.remove('fullscreen-mode');
         };
 
-        // --- Einstellungen ---
-        window.openSettings = function() {
-            document.getElementById('settings-popup').classList.add('visible');
-        };
-        window.closeSettings = function() {
-            document.getElementById('settings-popup').classList.remove('visible');
-        };
-        window.saveSettings = function() {
-            const set = {
-                startTab: document.getElementById('set-start-tab').value,
-                fplZpTab: document.getElementById('set-fplzp-tab').value,
-                mgTab: document.getElementById('set-mg-tab').value,
-                invTab: document.getElementById('set-inv-tab').value
-            };
-            localStorage.setItem('drg39_settings', JSON.stringify(set));
-            document.cookie = "drg39_settings=" + encodeURIComponent(JSON.stringify(set)) + "; max-age=31536000; path=/";
-            closeSettings();
-        };
-        window.downloadSettings = function() {
-            const set = {
-                startTab: document.getElementById('set-start-tab').value,
-                fplZpTab: document.getElementById('set-fplzp-tab').value,
-                mgTab: document.getElementById('set-mg-tab').value,
-                invTab: document.getElementById('set-inv-tab').value
-            };
-            const blob = new Blob([JSON.stringify(set, null, 2)], { type: 'application/json' });
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'settings.json';
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-        };
-        window.loadSettings = function() {
-            let set = null;
-            try {
-                const ls = localStorage.getItem('drg39_settings');
-                if (ls) set = JSON.parse(ls);
-                else {
-                    const match = document.cookie.match(new RegExp('(^| )drg39_settings=([^;]+)'));
-                    if (match) set = JSON.parse(decodeURIComponent(match[2]));
-                }
-            } catch(e) {}
-            if (set) {
-                if (set.startTab) document.getElementById('set-start-tab').value = set.startTab;
-                if (set.fplZpTab) document.getElementById('set-fplzp-tab').value = set.fplZpTab;
-                if (set.mgTab) document.getElementById('set-mg-tab').value = set.mgTab;
-                if (set.invTab) document.getElementById('set-inv-tab').value = set.invTab;
-            }
-            return set;
-        };
-        window.applySettings = function(set) {
-            if (set) {
-                if (set.startTab) switchMainTab(set.startTab);
-                if (set.fplZpTab) {
-                    switchTab(2, set.fplZpTab);
-                    switchTab(4, set.fplZpTab);
-                }
-                if (set.mgTab) switchMgTab(set.mgTab);
-                if (set.invTab) { window._invActiveTab = set.invTab; }
-            }
-        };
 
         // --- Rollmaterial Inventar-Tabelle ---
         let _invLoksHerFilter = new Set();
@@ -6750,19 +6934,20 @@ ${von} – ${nach}`;
                 const gattung = (entry.gattung || '').trim();
                 const art = (entry.art || '').toLowerCase();
                 const her = (entry.her || '').trim();
+                const luemp = (entry.luemp || '').trim();
                 if (idTxt && !idVal.toLowerCase().includes(idTxt)) return;
                 if (artTxt && !art.includes(artTxt)) return;
                 if (gatTxt && !gattung.toLowerCase().includes(gatTxt)) return;
                 if (herFilter.size > 0 && !herFilter.has(her)) return;
-                filtered.push({ entry, idVal, gattung, art, her });
+                filtered.push({ entry, idVal, gattung, art, her, luemp });
             });
 
             if (sortState && sortState.col) {
                 filtered.sort((a, b) => {
                     let valA = a[sortState.col] || '';
                     let valB = b[sortState.col] || '';
-                    // num sort for art if possible, else string sort
-                    if (sortState.col === 'art') {
+                    // num sort for art and luemp if possible, else string sort
+                    if (['art', 'luemp'].includes(sortState.col)) {
                         const numA = parseFloat(valA.replace(/[^\d.]/g, ''));
                         const numB = parseFloat(valB.replace(/[^\d.]/g, ''));
                         if (!isNaN(numA) && !isNaN(numB)) {
@@ -6777,7 +6962,7 @@ ${von} – ${nach}`;
 
             let count = 0;
             filtered.forEach(item => {
-                const { entry, idVal, gattung, her } = item;
+                const { entry, idVal, gattung, her, luemp } = item;
                 count++;
                 let fullName = (window._herstellerNames && window._herstellerNames[her]) ? window._herstellerNames[her] : her;
                 let herDisplay = fullName;
@@ -6795,7 +6980,7 @@ ${von} – ${nach}`;
                 let displayGattung = entry.gattungDisplay || gattung;
                 let fileGattung = entry.gattungFile || gattung;
                 const tr = document.createElement('tr');
-                tr.innerHTML = `<td>${idVal}</td><td>${displayGattung}</td><td class="inv-img-cell"><img src="${imgBasePath}${fileGattung}.png" alt="" onerror="this.style.display='none'"></td><td>${herDisplay}</td><td>${artDisplay}</td>`;
+                tr.innerHTML = `<td>${idVal}</td><td>${displayGattung}</td><td class="inv-img-cell"><img src="${imgBasePath}${fileGattung}.png" alt="" onerror="this.style.display='none'"></td><td>${herDisplay}</td><td>${artDisplay}</td><td>${luemp}</td>`;
                 tbody.appendChild(tr);
             });
             document.getElementById(countId).textContent = count + '\u00a0Treffer';
@@ -6912,8 +7097,13 @@ ${von} – ${nach}`;
         };
         
         setTimeout(() => {
-            const set = loadSettings();
-            applySettings(set);
+            const pinnedTab = localStorage.getItem('drg39_pinned_tab') || 'bereiche';
+            switchMainTab(pinnedTab);
+            
+            // view-mode aus localStorage wiederherstellen
+            const savedView = localStorage.getItem('drg39_view_mode') || 'schematic';
+            const vr = document.querySelector(`input[name="view-mode"][value="${savedView}"]`);
+            if (vr && !vr.checked) { vr.checked = true; vr.dispatchEvent(new Event('change')); }
         }, 50);
 
     </script>
@@ -7037,49 +7227,7 @@ ${von} – ${nach}`;
         .bf-label { font-size: 11px; white-space: nowrap; padding: 2px 5px; }
     </style>
 
-    <!-- Settings Popup -->
-    <div id="settings-popup">
-        <div class="settings-content">
-            <h3>Einstellungen</h3>
-            <div class="settings-row">
-                <label>Start-Tab</label>
-                <select id="set-start-tab">
-                    <option value="stellwerk">Stellwerk</option>
-                    <option value="bereiche" selected>Fpl und Zp</option>
-                    <option value="modellgarnituren">Modellgarnituren</option>
-                    <option value="rollmaterial">Rollmaterial</option>
-                </select>
-            </div>
-            <div class="settings-row">
-                <label>Start-Untertab in Fpl und Zp</label>
-                <select id="set-fplzp-tab">
-                    <option value="laufweg" selected>Laufweg</option>
-                    <option value="zp">Zp</option>
-                </select>
-            </div>
-            <div class="settings-row">
-                <label>Start-Untertab in Modellgarnituren</label>
-                <select id="set-mg-tab">
-                    <option value="loks">Loks</option>
-                    <option value="wagen" selected>Wagen</option>
-                </select>
-            </div>
-            <div class="settings-row">
-                <label>Start-Untertab in Rollmaterial</label>
-                <select id="set-inv-tab">
-                    <option value="loks" selected>Loks</option>
-                    <option value="wagen">Wagen</option>
-                </select>
-            </div>
-            <div class="settings-actions">
-                <button onclick="downloadSettings()" title="Einstellungen als JSON herunterladen">Download .json</button>
-                <div>
-                    <button onclick="closeSettings()">Abbrechen</button>
-                    <button onclick="saveSettings()" style="font-weight:bold; margin-left:8px;">Speichern</button>
-                </div>
-            </div>
-        </div>
-    </div>
+
 </body>
 
 </html>
