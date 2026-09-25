@@ -1230,6 +1230,7 @@
 </head>
 
 <body>
+    <div id="custom-tooltip" style="position: absolute; display: none; background: #333; color: white; padding: 4px 8px; border-radius: 4px; font-size: 11px; z-index: 10000; pointer-events: none; white-space: nowrap; box-shadow: 0 2px 5px rgba(0,0,0,0.2);"></div>
 
     <!-- Unified Tab-View: fills all space above preview-area -->
     <div id="tab-view">
@@ -1504,8 +1505,16 @@
                     <div class="col-pane" id="mg-col-zuege" style="width: 85%;">
                         <div class="col-header">
                             <div class="col-header-row1 center">
-                                <button id="mg-mode-toggle-btn" onclick="toggleMgMode()" title="Zwischen Zügen und Magazinen umschalten" style="margin-right:10px; cursor:pointer; font-size:11px; padding:2px 4px;">&#8644; Magazine</button>
-                                <strong id="garnituren-title">Modellzuggarnituren</strong>
+                                <button id="filter-no-mag-btn" onclick="toggleNoMagFilter()" title="Züge ohne Magazin zeigen" style="margin-right:5px; cursor:pointer; font-size:11px; padding:2px 4px; display:inline-flex; align-items:center; background:transparent; border:1px solid #ccc; border-radius:3px; vertical-align:middle;">
+                                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path>
+                                        <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                        <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                                        <line x1="3" y1="3" x2="21" y2="21" stroke="#d93025" stroke-width="3"></line>
+                                    </svg>
+                                </button>
+                                <button id="mg-mode-toggle-btn" onclick="toggleMgMode()" title="Zwischen Zügen und Magazinen umschalten" style="margin-right:10px; cursor:pointer; font-size:11px; padding:2px 4px; vertical-align:middle;">&#8644; Magazine</button>
+                                <strong id="garnituren-title" style="vertical-align:middle;">Modellzuggarnituren</strong>
                                 <span id="mg-garnituren-controls" style="display:flex; align-items:center;">
                                     <button onclick="addGarnitur()" title="Garnitur hinzufügen" style="margin-left:10px; cursor:pointer;">+</button>
                                     <button id="garnitur-save-btn" onclick="saveGarnituren()" title="Garnituren speichern" style="margin-left:5px; cursor:pointer;">⬇</button>
@@ -3142,6 +3151,14 @@
             renderGarnituren();
         };
 
+        window._garniturFilterNoMag = false;
+        window.toggleNoMagFilter = function() {
+            const btn = document.getElementById('filter-no-mag-btn');
+            if (btn && btn.disabled) return;
+            window._garniturFilterNoMag = !window._garniturFilterNoMag;
+            renderGarnituren();
+        };
+
         window.toggleMgMode = function() {
             const zuegeView = document.getElementById('mg-content-zuege');
             const magView = document.getElementById('mg-content-magazine');
@@ -3315,6 +3332,8 @@
                     // Magazine-Zuordnung lesen (Spalte 6, optional)
                     if (cols[6] && cols[6].trim()) {
                         g.magazine = cols[6].trim();
+                    } else if (g.magazine === undefined) {
+                        g.magazine = undefined; // explizit kein Magazin
                     }
                     const type       = cols[3] ? cols[3].trim() : '';
                     const fahrzeugId = cols[4] ? cols[4].trim() : null;
@@ -3466,6 +3485,40 @@
 
         // Rechtsklick auf den Speichern-Button → Handle trennen
         document.addEventListener('DOMContentLoaded', () => {
+            document.addEventListener('mouseover', function(e) {
+                const el = e.target.closest('[data-custom-tooltip]');
+                if (el) {
+                    const tt = document.getElementById('custom-tooltip');
+                    if (tt) {
+                        tt.textContent = el.getAttribute('data-custom-tooltip');
+                        if (el.getAttribute('data-tooltip-fallback') === 'true') {
+                            tt.style.background = '#ffcccc';
+                            tt.style.color = '#000';
+                            tt.style.border = '1px solid #ff9999';
+                        } else {
+                            tt.style.background = '#333';
+                            tt.style.color = '#fff';
+                            tt.style.border = 'none';
+                        }
+                        tt.style.display = 'block';
+                    }
+                }
+            });
+            document.addEventListener('mousemove', function(e) {
+                const tt = document.getElementById('custom-tooltip');
+                if (tt && tt.style.display === 'block') {
+                    tt.style.left = (e.pageX + 10) + 'px';
+                    tt.style.top = (e.pageY + 10) + 'px';
+                }
+            });
+            document.addEventListener('mouseout', function(e) {
+                const el = e.target.closest('[data-custom-tooltip]');
+                if (el) {
+                    const tt = document.getElementById('custom-tooltip');
+                    if (tt) tt.style.display = 'none';
+                }
+            });
+
             const btn = document.getElementById('garnitur-save-btn');
             if (btn) {
                 btn.addEventListener('contextmenu', async (e) => {
@@ -3729,7 +3782,14 @@
                 let mm = 0;
                 for (const v of (g.vehicles || [])) {
                     const ae = v.type === 'lok' ? (v.entries && v.entries[v.activeIndex || 0]) : v.entry;
-                    if (ae && ae.luemp) { const l = parseFloat(ae.luemp.replace(',','.')); if (!isNaN(l)) mm += l; }
+                    if (ae && ae.luemp) { 
+                        const l = parseFloat(ae.luemp.replace(',','.')); 
+                        if (!isNaN(l)) mm += l; 
+                    } else if (v.type === 'wagen') {
+                        mm += 160;
+                    } else if (v.type === 'lok') {
+                        mm += 100;
+                    }
                 }
                 return mm;
             })();
@@ -3766,24 +3826,19 @@
                 item.className = 'magazin-menu-item' + (g.magazine === m.id ? ' active' : '') + (isUsed ? ' used' : '');
                 item.textContent = `${m.id}  –  ${Math.round(m.lenMm/10)} cm${isUsed ? '  (belegt)' : ''}`;
                 item.onclick = () => {
+                    if (isUsed) {
+                        const oldG = _garnituren.find(x => x.id !== g.id && x.magazine === m.id);
+                        if (oldG) oldG.magazine = undefined;
+                    }
                     g.magazine = m.id;
-                    ctrl.style.background = '#e6ffe6';
-                    magLabel.textContent = m.id;
                     hideMagazinMenu();
+                    renderGarnituren();
                     const mv = document.getElementById('mg-content-magazine');
                     if (mv && mv.style.display !== 'none') _renderMagazineTable();
                 };
                 menu.appendChild(item);
             }
-            if (tooShort.length) {
-                const sep2 = document.createElement('hr'); sep2.className = 'magazin-menu-sep'; menu.appendChild(sep2);
-                for (const m of tooShort) {
-                    const item = document.createElement('div');
-                    item.className = 'magazin-menu-item short';
-                    item.textContent = `${m.id}  –  ${Math.round(m.lenMm/10)} cm  (zu kurz)`;
-                    menu.appendChild(item);
-                }
-            }
+            // Zu kurze Magazine werden nicht mehr angezeigt
 
             menu.style.left = x + 'px';
             menu.style.top  = y + 'px';
@@ -4076,6 +4131,25 @@
             const vehFilter  = (window._garniturVehicleFilter || '').trim().toLowerCase();
             let filteredGarnituren = _garnituren;
 
+            const noMagBtn = document.getElementById('filter-no-mag-btn');
+            if (noMagBtn) {
+                const hasAnyWithMag = _garnituren.some(g => g.magazine);
+                const allHaveMag    = _garnituren.length > 0 && _garnituren.every(g => g.magazine);
+                if (allHaveMag) {
+                    noMagBtn.disabled = true;
+                    noMagBtn.style.opacity = '0.3';
+                    window._garniturFilterNoMag = false;
+                } else {
+                    noMagBtn.disabled = false;
+                    noMagBtn.style.opacity = window._garniturFilterNoMag ? '1' : '0.6';
+                    noMagBtn.style.background = window._garniturFilterNoMag ? '#cce5ff' : 'transparent';
+                }
+            }
+
+            if (window._garniturFilterNoMag) {
+                filteredGarnituren = filteredGarnituren.filter(g => !g.magazine);
+            }
+
             // Fahrzeug-Gattungsfilter
             if (vehFilter) {
                 filteredGarnituren = filteredGarnituren.filter(g =>
@@ -4128,8 +4202,10 @@
             if (titleEl) {
                 const magView = document.getElementById('mg-content-magazine');
                 if (!magView || magView.style.display === 'none') {
-                    titleEl.textContent = (rawFilter
-                        ? filteredGarnituren.length + ' / ' + _garnituren.length
+                    const anyFilter = rawFilter || vehFilter || window._garniturFilterNoMag;
+                    const isFiltered = anyFilter && filteredGarnituren.length !== _garnituren.length;
+                    titleEl.textContent = (isFiltered
+                        ? filteredGarnituren.length + ' von ' + _garnituren.length
                         : _garnituren.length) + ' Modellzuggarnituren';
                 }
             }
@@ -4258,6 +4334,10 @@
                     if (activeEntry && activeEntry.luemp) {
                         const l = parseFloat(activeEntry.luemp.replace(',', '.'));
                         if (!isNaN(l)) lenMm += l;
+                    } else if (v.type === 'wagen') {
+                        lenMm += 160;
+                    } else if (v.type === 'lok') {
+                        lenMm += 100;
                     }
                 }
                 if (lenMm > 0) {
@@ -4373,6 +4453,26 @@
 
                     const item = document.createElement('div');
                     item.className = 'garnitur-item';
+                    
+                    let vLen = 0;
+                    let isFallback = false;
+                    if (activeEntry && activeEntry.luemp) {
+                        const l = parseFloat(activeEntry.luemp.replace(',', '.'));
+                        if (!isNaN(l)) vLen = l;
+                    }
+                    if (vLen === 0) {
+                        isFallback = true;
+                        if (v.type === 'wagen') vLen = 160;
+                        else if (v.type === 'lok') vLen = 100;
+                    }
+                    
+                    if (isFallback) {
+                        item.dataset.customTooltip = `Keine Angabe, ${vLen} mm angenommen`;
+                        item.dataset.tooltipFallback = 'true';
+                    } else {
+                        item.dataset.customTooltip = `${vLen} mm`;
+                    }
+
                     item.draggable = true;
                     item.ondragstart = (e) => {
                         _dragSource = { type: v.type, entry: activeEntry, garniturId: g.id, vIndex: actualIndex };
@@ -6974,7 +7074,8 @@ ${von} – ${nach}`;
                 }
                 let artDisplay = entry.art || '';
                 if (artDisplay && fullName) {
-                    const searchUrl = `https://www.spurweite-n.de/ncontent/ndb/ndb-artdetails.asp?DoLog=0&Sel_Hersteller_VString=${encodeURIComponent(fullName)}&MSel_ArtikelNr_VString=${encodeURIComponent(artDisplay)}&ToShow=0&MaxCount=1`;
+                    const searchArt = artDisplay.replace(/[\.\-]\d+$/, '');
+                    const searchUrl = `https://www.spurweite-n.de/ncontent/ndb/ndb-artdetails.asp?DoLog=0&Sel_Hersteller_VString=${encodeURIComponent(fullName)}&MSel_ArtikelNr_VString=${encodeURIComponent(searchArt)}&ToShow=0&MaxCount=1`;
                     artDisplay += ` <a href="${searchUrl}" target="_blank" title="Auf spurweite-n.de öffnen" style="text-decoration:none; margin-left:4px;">🔗</a>`;
                 }
                 let displayGattung = entry.gattungDisplay || gattung;
@@ -7066,7 +7167,8 @@ ${von} – ${nach}`;
                 }
                 let artDisplay = art || '';
                 if (artDisplay && fullName) {
-                    const searchUrl = `https://www.spurweite-n.de/ncontent/ndb/ndb-artdetails.asp?DoLog=0&Sel_Hersteller_VString=${encodeURIComponent(fullName)}&MSel_ArtikelNr_VString=${encodeURIComponent(artDisplay)}&ToShow=0&MaxCount=1`;
+                    const searchArt = artDisplay.replace(/[\.\-]\d+$/, '');
+                    const searchUrl = `https://www.spurweite-n.de/ncontent/ndb/ndb-artdetails.asp?DoLog=0&Sel_Hersteller_VString=${encodeURIComponent(fullName)}&MSel_ArtikelNr_VString=${encodeURIComponent(searchArt)}&ToShow=0&MaxCount=1`;
                     artDisplay += ` <a href="${searchUrl}" target="_blank" title="Auf spurweite-n.de öffnen" style="text-decoration:none; margin-left:4px;">🔗</a>`;
                 }
                 const tr = document.createElement('tr');

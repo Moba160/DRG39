@@ -1,255 +1,255 @@
-﻿GarniturId	Direction	Name	Type	FahrzeugId	Mirrored
-Z11	left	Fliegender Hamburger	lok	L62:0	0
-Z12	left	SVT 137 BA Hamburg	lok	L63:0	0
-Z13	left	SVT 137 BA Köln	lok	L64:0	0
-Z13	left	SVT 137 BA Köln	lok	L65:0	0
-Z16	left		lok	L31:0	0
-Z16	left		wagen	P164	0
-Z16	left		wagen	P163	0
-Z16	left		wagen	P162	0
-Z16	left		wagen	P161	0
-Z14	left	SVT Kruckenberg	lok	L61:0	0
-Z04	left	Riviera-Express	lok	L1:0	0
-Z04	left	Riviera-Express	wagen	P136	0
-Z04	left	Riviera-Express	wagen	P138	0
-Z04	left	Riviera-Express	wagen	P140	0
-Z04	left	Riviera-Express	wagen	P139	0
-Z04	left	Riviera-Express	wagen	P137	0
-Z17	left	Rheingold	lok	L9:0	0
-Z17	left	Rheingold	wagen	P121	0
-Z17	left	Rheingold	wagen	P122	0
-Z17	left	Rheingold	wagen	P123	0
-Z17	left	Rheingold	wagen	P124	0
-Z17	left	Rheingold	wagen	P125	0
-Z32	left		wagen	P126	0
-Z32	left		wagen	P127	0
-Z32	left		wagen	P128	0
-Z32	left		wagen	P129	0
-Z32	left		wagen	P130	0
-Z28	left	Karwendelexpress	lok	L73:0	0
-Z28	left	Karwendelexpress	wagen	P131	0
-Z28	left	Karwendelexpress	wagen	P135	0
-Z28	left	Karwendelexpress	wagen	P132	0
-Z28	left	Karwendelexpress	wagen	P133	0
-Z28	left	Karwendelexpress	wagen	P134	0
-Z30	left	Dsl	lok	L15:0	0
-Z30	left	Dsl	wagen	P68	0
-Z30	left	Dsl	wagen	P70	0
-Z30	left	Dsl	wagen	P72	0
-Z30	left	Dsl	wagen	P73	0
-Z30	left	Dsl	wagen	P69	0
-Z30	left	Dsl	wagen	P120	0
-Z30	left	Dsl	wagen	P190	0
-Z30	left	Dsl	wagen	P71	0
-Z41	left	Post	lok	L11:0	0
-Z41	left	Post	wagen	P142	0
-Z41	left	Post	wagen	P248	0
-Z41	left	Post	wagen	P249	0
-Z41	left	Post	wagen	P250	0
-Z41	left	Post	wagen	P251	0
-Z41	left	Post	wagen	P1	0
-Z01	left	FD 28er	lok	L4:0	0
-Z01	left	FD 28er	wagen	P143	0
-Z01	left	FD 28er	wagen	P144	0
-Z01	left	FD 28er	wagen	P145	0
-Z01	left	FD 28er	wagen	P157	0
-Z01	left	FD 28er	wagen	P146	0
-Z01	left	FD 28er	wagen	P147	0
-Z42	left	FD 35er	lok	L68:0	0
-Z42	left	FD 35er	wagen	P179	0
-Z42	left	FD 35er	wagen	P165	0
-Z42	left	FD 35er	wagen	P171	0
-Z42	left	FD 35er	wagen	P168	0
-Z42	left	FD 35er	wagen	P172	0
-Z02	left		lok	L3,L69:1	0
-Z02	left		wagen	P169	0
-Z02	left		wagen	P180	0
-Z02	left		wagen	P183	0
-Z02	left		wagen	P185	0
-Z02	left		wagen	P186	0
-Z02	left		wagen	P181	0
-Z02	left		wagen	P192	0
-Z02	left		wagen	P182	0
-Z02	left		wagen	P191	0
-Z02	left		wagen	P184	0
-Z02	left		wagen	P189	0
-Z02	left		wagen	P187	0
-Z02	left		wagen	P188	0
-Z31	left		lok	L32:0	0
-Z31	left		wagen	P170	0
-Z31	left		wagen	P193	0
-Z31	left		wagen	P178	0
-Z31	left		wagen	P166	0
-Z31	left		wagen	P160	0
-Z31	left		wagen	P177	0
-Z31	left		wagen	P176	0
-Z31	left		wagen	P175	0
-Z31	left		wagen	P174	0
-Z31	left		wagen	P167	0
-Z31	left		wagen	P173	0
-Z24	left		lok	L2:0	0
-Z24	left		wagen	P141	0
-Z24	left		wagen	P156	0
-Z24	left		wagen	P152	0
-Z24	left		wagen	P155	0
-Z24	left		wagen	P151	0
-Z24	left		wagen	P158	0
-Z24	left		wagen	P154	0
-Z24	left		wagen	P153	0
-Z24	left		wagen	P149	0
-Z24	left		wagen	P150	0
-Z24	left		wagen	P148	0
-Z36	left		lok	L14:0	0
-Z36	left		wagen	P112	0
-Z36	left		wagen	P113	0
-Z36	left		wagen	P114	0
-Z36	left		wagen	P119	0
-Z36	left		wagen	P118	0
-Z36	left		wagen	P115	0
-Z36	left		wagen	P117	0
-Z36	left		wagen	P116	0
-Z36	left		wagen	P159	0
-Z25	left		lok	L6:0	0
-Z25	left		wagen	P21	0
-Z25	left		wagen	P26	0
-Z25	left		wagen	P27	0
-Z25	left		wagen	P23	0
-Z25	left		wagen	P57	0
-Z25	left		wagen	P31	0
-Z25	left		wagen	P32	0
-Z25	left		wagen	P33	0
-Z26	left		lok	L8:0	0
-Z26	left		wagen	P6	0
-Z26	left		wagen	P19	0
-Z26	left		wagen	P11	0
-Z26	left		wagen	P10	0
-Z26	left		wagen	P17	0
-Z26	left		wagen	P18	0
-Z26	left		wagen	P55	0
-Z26	left		wagen	P67	0
-Z26	left		wagen	P66	0
-Z26	left		wagen	P49	0
-Z29	left		lok	L7:0	0
-Z29	left		wagen	P37	0
-Z29	left		wagen	P48	0
-Z29	left		wagen	P63	0
-Z29	left		wagen	P64	0
-Z29	left		wagen	P51	0
-Z29	left		wagen	P50	0
-Z29	left		wagen	P56	0
-Z29	left		wagen	P65	0
-Z29	left		wagen	P52	0
-Z03	left		lok	L72:0	0
-Z03	left		wagen	P204	0
-Z03	left		wagen	P200	0
-Z03	left		wagen	P201	0
-Z03	left		wagen	P202	0
-Z03	left		wagen	P203	0
-Z37	left		lok	L16:0	0
-Z37	left		wagen	P194	0
-Z37	left		wagen	P197	0
-Z37	left		wagen	P196	0
-Z37	left		wagen	P195	0
-Z37	left		wagen	P198	0
-Z37	left		wagen	P199	0
-Z05	left		lok	L13:0	0
-Z05	left		wagen	P38	0
-Z05	left		wagen	P95	0
-Z05	left		wagen	P78	0
-Z05	left		wagen	P101	0
-Z05	left		wagen	P85	0
-Z05	left		wagen	P89	0
-Z05	left		wagen	P88	0
-Z05	left		wagen	P87	0
-Z05	left		wagen	P100	0
-Z05	left		wagen	P86	0
-Z05	left		wagen	P84	0
-Z05	left		wagen	P99	0
-Z05	left		wagen	P96	0
-Z05	left		wagen	P97	0
-Z05	left		wagen	P98	0
-Z33	left		lok	L35:0	0
-Z33	left		wagen	P260	0
-Z33	left		wagen	P275	0
-Z33	left		wagen	P274	0
-Z33	left		wagen	P273	0
-Z33	left		wagen	P272	0
-Z33	left		wagen	P277	0
-Z33	left		wagen	P276	0
-Z38	left		wagen	P247	0
-Z38	left		wagen	P252	0
-Z38	left		wagen	P253	0
-Z38	left		wagen	P256	0
-Z38	left		wagen	P254	0
-Z38	left		wagen	P255	0
-Z38	left		wagen	P237	0
-Z38	left		wagen	P238	0
-Z38	left		wagen	P257	0
-Z38	left		wagen	P231	0
-Z27	left		lok	L10:0	0
-Z27	left		wagen	P284	0
-Z27	left		wagen	P285	0
-Z27	left		wagen	P286	0
-Z27	left		wagen	P293	0
-Z27	left		wagen	P287	0
-Z27	left		wagen	P288	0
-Z27	left		wagen	P289	0
-Z27	left		wagen	P291	0
-Z27	left		wagen	P290	0
-Z27	left		wagen	P292	0
-Z34	left		lok	L36:0	0
-Z34	left		wagen	P219	0
-Z34	left		wagen	P220	0
-Z34	left		wagen	P221	0
-Z34	left		wagen	P218	0
-Z34	left		wagen	P217	0
-Z34	left		wagen	P216	0
-Z34	left		wagen	P215	0
-Z34	left		wagen	P214	0
-Z34	left		wagen	P213	0
-Z40	left		lok	L55:0	0
-Z40	left		wagen	P223	0
-Z40	left		wagen	P227	0
-Z40	left		wagen	P224	0
-Z39	left		lok	L42:0	0
-Z39	left		wagen	P279	0
-Z39	left		wagen	P281	0
-Z39	left		wagen	P282	0
-Z39	left		wagen	P283	0
-Z39	left		wagen	P280	0
-Z39	left		wagen	P278	0
-Z35	left		lok	L34:0	0
-Z35	left		wagen	P206	0
-Z35	left		wagen	P205	0
-Z35	left		wagen	P209	0
-Z35	left		wagen	P210	0
-Z35	left		wagen	P212	0
-Z06	left	RSV rot	lok	L37:0	0
-Z06	left	RSV rot	wagen	P103	0
-Z06	left	RSV rot	wagen	P104	0
-Z06	left	RSV rot	wagen	P102	0
-Z06	left	RSV rot	wagen	P105	0
-Z06	left	RSV rot	wagen	P106	0
-Z07	left	RSV lila	lok	L38:0	0
-Z07	left	RSV lila	wagen	P108	0
-Z07	left	RSV lila	wagen	P109	0
-Z07	left	RSV lila	wagen	P107	0
-Z07	left	RSV lila	wagen	P111	0
-Z07	left	RSV lila	wagen	P110	0
-Z20	left	Kittel	lok	L56:0	0
-Z08	left	AT3	lok	L92:0	0
-Z15	left	AT3	lok	L91:0	0
-Z23	left	AT3	lok	L58:0	0
-Z18	left	AT3	lok	L93:0	0
-Z21	left		lok	L59:0	0
-Z22	left		lok	L60:0	0
-Z19	left		lok	L90:0	0
-Z43	left		lok	L89:0	0
-Z09	left		lok	L85:0	0
-Z09	left		lok	L83:0	0
-Z09	left		lok	L84:0	0
-Z09	left		lok	L81:0	0
-Z10	left		lok	L82:0	0
-Z10	left		lok	L86:0	0
-Z10	left		lok	L87:0	0
-Z10	left		lok	L88:0	0
+GarniturId	Direction	Name	Type	FahrzeugId	Mirrored	Magazin
+Z11	left	Fliegender Hamburger	lok	L62:0	0	M02
+Z12	left	SVT 137 BA Hamburg	lok	L63:0	0	M07
+Z13	left	SVT 137 BA Köln	lok	L64:0	0	M05
+Z13	left	SVT 137 BA Köln	lok	L65:0	0	M05
+Z16	left		lok	L31:0	0	M01li
+Z16	left		wagen	P164	0	M01li
+Z16	left		wagen	P163	0	M01li
+Z16	left		wagen	P162	0	M01li
+Z16	left		wagen	P161	0	M01li
+Z14	left	SVT Kruckenberg	lok	L61:0	0	M01re
+Z04	left	Riviera-Express	lok	L1:0	0	M02li
+Z04	left	Riviera-Express	wagen	P136	0	M02li
+Z04	left	Riviera-Express	wagen	P138	0	M02li
+Z04	left	Riviera-Express	wagen	P140	0	M02li
+Z04	left	Riviera-Express	wagen	P139	0	M02li
+Z04	left	Riviera-Express	wagen	P137	0	M02li
+Z17	left	Rheingold	lok	L9:0	0	M02re
+Z17	left	Rheingold	wagen	P121	0	M02re
+Z17	left	Rheingold	wagen	P122	0	M02re
+Z17	left	Rheingold	wagen	P123	0	M02re
+Z17	left	Rheingold	wagen	P124	0	M02re
+Z17	left	Rheingold	wagen	P125	0	M02re
+Z32	left		wagen	P126	0	
+Z32	left		wagen	P127	0	
+Z32	left		wagen	P128	0	
+Z32	left		wagen	P129	0	
+Z32	left		wagen	P130	0	
+Z28	left	Karwendelexpress	lok	L73:0	0	M03li
+Z28	left	Karwendelexpress	wagen	P131	0	M03li
+Z28	left	Karwendelexpress	wagen	P135	0	M03li
+Z28	left	Karwendelexpress	wagen	P132	0	M03li
+Z28	left	Karwendelexpress	wagen	P133	0	M03li
+Z28	left	Karwendelexpress	wagen	P134	0	M03li
+Z30	left	Dsl	lok	L15:0	0	M01
+Z30	left	Dsl	wagen	P68	0	M01
+Z30	left	Dsl	wagen	P70	0	M01
+Z30	left	Dsl	wagen	P72	0	M01
+Z30	left	Dsl	wagen	P73	0	M01
+Z30	left	Dsl	wagen	P69	0	M01
+Z30	left	Dsl	wagen	P120	0	M01
+Z30	left	Dsl	wagen	P190	0	M01
+Z30	left	Dsl	wagen	P71	0	M01
+Z41	left	Post	lok	L11:0	0	M05li
+Z41	left	Post	wagen	P142	0	M05li
+Z41	left	Post	wagen	P248	0	M05li
+Z41	left	Post	wagen	P249	0	M05li
+Z41	left	Post	wagen	P250	0	M05li
+Z41	left	Post	wagen	P251	0	M05li
+Z41	left	Post	wagen	P1	0	M05li
+Z01	left	FD 28er	lok	L4:0	0	M05re
+Z01	left	FD 28er	wagen	P143	0	M05re
+Z01	left	FD 28er	wagen	P144	0	M05re
+Z01	left	FD 28er	wagen	P145	0	M05re
+Z01	left	FD 28er	wagen	P157	0	M05re
+Z01	left	FD 28er	wagen	P146	0	M05re
+Z01	left	FD 28er	wagen	P147	0	M05re
+Z42	left	FD 35er	lok	L68:0	0	M03re
+Z42	left	FD 35er	wagen	P179	0	M03re
+Z42	left	FD 35er	wagen	P165	0	M03re
+Z42	left	FD 35er	wagen	P171	0	M03re
+Z42	left	FD 35er	wagen	P168	0	M03re
+Z42	left	FD 35er	wagen	P172	0	M03re
+Z02	left		lok	L3,L69:1	0	
+Z02	left		wagen	P169	0	
+Z02	left		wagen	P180	0	
+Z02	left		wagen	P183	0	
+Z02	left		wagen	P185	0	
+Z02	left		wagen	P186	0	
+Z02	left		wagen	P181	0	
+Z02	left		wagen	P192	0	
+Z02	left		wagen	P182	0	
+Z02	left		wagen	P191	0	
+Z02	left		wagen	P184	0	
+Z02	left		wagen	P189	0	
+Z02	left		wagen	P187	0	
+Z02	left		wagen	P188	0	
+Z31	left		lok	L32:0	0	
+Z31	left		wagen	P170	0	
+Z31	left		wagen	P193	0	
+Z31	left		wagen	P178	0	
+Z31	left		wagen	P166	0	
+Z31	left		wagen	P160	0	
+Z31	left		wagen	P177	0	
+Z31	left		wagen	P176	0	
+Z31	left		wagen	P175	0	
+Z31	left		wagen	P174	0	
+Z31	left		wagen	P167	0	
+Z31	left		wagen	P173	0	
+Z24	left		lok	L2:0	0	
+Z24	left		wagen	P141	0	
+Z24	left		wagen	P156	0	
+Z24	left		wagen	P152	0	
+Z24	left		wagen	P155	0	
+Z24	left		wagen	P151	0	
+Z24	left		wagen	P158	0	
+Z24	left		wagen	P154	0	
+Z24	left		wagen	P153	0	
+Z24	left		wagen	P149	0	
+Z24	left		wagen	P150	0	
+Z24	left		wagen	P148	0	
+Z36	left		lok	L14:0	0	M03
+Z36	left		wagen	P112	0	M03
+Z36	left		wagen	P113	0	M03
+Z36	left		wagen	P114	0	M03
+Z36	left		wagen	P119	0	M03
+Z36	left		wagen	P118	0	M03
+Z36	left		wagen	P115	0	M03
+Z36	left		wagen	P117	0	M03
+Z36	left		wagen	P116	0	M03
+Z36	left		wagen	P159	0	M03
+Z25	left		lok	L6:0	0	M06
+Z25	left		wagen	P21	0	M06
+Z25	left		wagen	P26	0	M06
+Z25	left		wagen	P27	0	M06
+Z25	left		wagen	P23	0	M06
+Z25	left		wagen	P57	0	M06
+Z25	left		wagen	P31	0	M06
+Z25	left		wagen	P32	0	M06
+Z25	left		wagen	P33	0	M06
+Z26	left		lok	L8:0	0	M09
+Z26	left		wagen	P6	0	M09
+Z26	left		wagen	P19	0	M09
+Z26	left		wagen	P11	0	M09
+Z26	left		wagen	P10	0	M09
+Z26	left		wagen	P17	0	M09
+Z26	left		wagen	P18	0	M09
+Z26	left		wagen	P55	0	M09
+Z26	left		wagen	P67	0	M09
+Z26	left		wagen	P66	0	M09
+Z26	left		wagen	P49	0	M09
+Z29	left		lok	L7:0	0	M08
+Z29	left		wagen	P37	0	M08
+Z29	left		wagen	P48	0	M08
+Z29	left		wagen	P63	0	M08
+Z29	left		wagen	P64	0	M08
+Z29	left		wagen	P51	0	M08
+Z29	left		wagen	P50	0	M08
+Z29	left		wagen	P56	0	M08
+Z29	left		wagen	P65	0	M08
+Z29	left		wagen	P52	0	M08
+Z03	left		lok	L72:0	0	M06li
+Z03	left		wagen	P204	0	M06li
+Z03	left		wagen	P200	0	M06li
+Z03	left		wagen	P201	0	M06li
+Z03	left		wagen	P202	0	M06li
+Z03	left		wagen	P203	0	M06li
+Z37	left		lok	L16:0	0	M06re
+Z37	left		wagen	P194	0	M06re
+Z37	left		wagen	P197	0	M06re
+Z37	left		wagen	P196	0	M06re
+Z37	left		wagen	P195	0	M06re
+Z37	left		wagen	P198	0	M06re
+Z37	left		wagen	P199	0	M06re
+Z05	left		lok	L13:0	0	
+Z05	left		wagen	P38	0	
+Z05	left		wagen	P95	0	
+Z05	left		wagen	P78	0	
+Z05	left		wagen	P101	0	
+Z05	left		wagen	P85	0	
+Z05	left		wagen	P89	0	
+Z05	left		wagen	P88	0	
+Z05	left		wagen	P87	0	
+Z05	left		wagen	P100	0	
+Z05	left		wagen	P86	0	
+Z05	left		wagen	P84	0	
+Z05	left		wagen	P99	0	
+Z05	left		wagen	P96	0	
+Z05	left		wagen	P97	0	
+Z05	left		wagen	P98	0	
+Z33	left		lok	L35:0	0	M04li
+Z33	left		wagen	P260	0	M04li
+Z33	left		wagen	P275	0	M04li
+Z33	left		wagen	P274	0	M04li
+Z33	left		wagen	P273	0	M04li
+Z33	left		wagen	P272	0	M04li
+Z33	left		wagen	P277	0	M04li
+Z33	left		wagen	P276	0	M04li
+Z38	left		wagen	P247	0	M04re
+Z38	left		wagen	P252	0	M04re
+Z38	left		wagen	P253	0	M04re
+Z38	left		wagen	P256	0	M04re
+Z38	left		wagen	P254	0	M04re
+Z38	left		wagen	P255	0	M04re
+Z38	left		wagen	P237	0	M04re
+Z38	left		wagen	P238	0	M04re
+Z38	left		wagen	P257	0	M04re
+Z38	left		wagen	P231	0	M04re
+Z27	left		lok	L10:0	0	M07li
+Z27	left		wagen	P284	0	M07li
+Z27	left		wagen	P285	0	M07li
+Z27	left		wagen	P286	0	M07li
+Z27	left		wagen	P293	0	M07li
+Z27	left		wagen	P287	0	M07li
+Z27	left		wagen	P288	0	M07li
+Z27	left		wagen	P289	0	M07li
+Z27	left		wagen	P291	0	M07li
+Z27	left		wagen	P290	0	M07li
+Z27	left		wagen	P292	0	M07li
+Z34	left		lok	L36:0	0	M07re
+Z34	left		wagen	P219	0	M07re
+Z34	left		wagen	P220	0	M07re
+Z34	left		wagen	P221	0	M07re
+Z34	left		wagen	P218	0	M07re
+Z34	left		wagen	P217	0	M07re
+Z34	left		wagen	P216	0	M07re
+Z34	left		wagen	P215	0	M07re
+Z34	left		wagen	P214	0	M07re
+Z34	left		wagen	P213	0	M07re
+Z40	left		lok	L55:0	0	M08li
+Z40	left		wagen	P223	0	M08li
+Z40	left		wagen	P227	0	M08li
+Z40	left		wagen	P224	0	M08li
+Z39	left		lok	L42:0	0	M08re
+Z39	left		wagen	P279	0	M08re
+Z39	left		wagen	P281	0	M08re
+Z39	left		wagen	P282	0	M08re
+Z39	left		wagen	P283	0	M08re
+Z39	left		wagen	P280	0	M08re
+Z39	left		wagen	P278	0	M08re
+Z35	left		lok	L34:0	0	M09li
+Z35	left		wagen	P206	0	M09li
+Z35	left		wagen	P205	0	M09li
+Z35	left		wagen	P209	0	M09li
+Z35	left		wagen	P210	0	M09li
+Z35	left		wagen	P212	0	M09li
+Z06	left	RSV rot	lok	L37:0	0	M09re
+Z06	left	RSV rot	wagen	P103	0	M09re
+Z06	left	RSV rot	wagen	P104	0	M09re
+Z06	left	RSV rot	wagen	P102	0	M09re
+Z06	left	RSV rot	wagen	P105	0	M09re
+Z06	left	RSV rot	wagen	P106	0	M09re
+Z07	left	RSV lila	lok	L38:0	0	M10li
+Z07	left	RSV lila	wagen	P108	0	M10li
+Z07	left	RSV lila	wagen	P109	0	M10li
+Z07	left	RSV lila	wagen	P107	0	M10li
+Z07	left	RSV lila	wagen	P111	0	M10li
+Z07	left	RSV lila	wagen	P110	0	M10li
+Z20	left	Kittel	lok	L56:0	0	M11li
+Z08	left	AT3	lok	L92:0	0	M10re
+Z15	left	AT3	lok	L91:0	0	M11re
+Z23	left	AT3	lok	L58:0	0	M12li
+Z18	left	AT3	lok	L93:0	0	M12re
+Z21	left		lok	L59:0	0	M13li
+Z22	left		lok	L60:0	0	M13re
+Z19	left		lok	L90:0	0	M04
+Z43	left		lok	L89:0	0	
+Z09	left		lok	L85:0	0	
+Z09	left		lok	L83:0	0	
+Z09	left		lok	L84:0	0	
+Z09	left		lok	L81:0	0	
+Z10	left		lok	L82:0	0	
+Z10	left		lok	L86:0	0	
+Z10	left		lok	L87:0	0	
+Z10	left		lok	L88:0	0	
