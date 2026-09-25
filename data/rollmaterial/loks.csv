@@ -1,94 +1,199 @@
-Id	Gattung	Baureihe	DCC-Adr.	Decoder	Schnittstelle	Hersteller	Artikelnummer	RBD	BW	LÃ¼P	SVT 877a+b
-L1	01 004	01^0-2	2	DCX75	NEM651	Tr	12276	Essen	Hamm	150	
-L2	01 235	01^0-2	1	DCX75	Ohne	Ar	2521	Regensburg	Hof	149	
-L3	01 1059	01^10	4	DHL160	Ohne	Fl	7174	Halle	Halle P	158	
-L4	03 062	03^0-2	3	DCX75	Ohne	Tr	12830	NÃ¼rnberg	NÃ¼rnberg	150	
-L5	05 002				Ohne	Ar	2217			164	
-L6	14 141	14^1			LÃ¶t	Tr	12232	MÃ¼nchen	MÃ¼nchen Hbf	123	
-L7	17 253	17^2			Ohne	Tr	12831	MÃ¼nster	OsnabrÃ¼ck	132	
-L8	17 419	17^4	17	N025	NEM651	Tr	12222	NÃ¼rnberg	NÃ¼rnberg	123	
-L9	18 535	18^5	18	DCX75	NEM651	HN	2007	Mainz	Mainz	133	
-L10	24 047	24			Ohne	Fl	7141			106	
-L11	36 446	36^4			Ohne	Ar	2545	NÃ¼rnberg	NÃ¼rnberg Hbf	71,04	
-L12	38 2025	38^10-40			Ohne	Fl	7818	Essen	Oberhausen	122	
-L13	38 2025	38^10-40			Ohne	Fl	7818	Essen	Oberhausen	122	
-L14	39 105	39			Ohne	Fl	7827	Berlin	Berlin Ahb	144	
-L15	39 109	39			Ohne	Fl	7912	Erfurt	Erfurt	144	
-L16	39 204	39			Ohne	Fl	7139	Stuttgart	Stuttgart	144	
-L17	39 204	39			Ohne	Fl	7139	Stuttgart	Stuttgart	144	
-L18	41 014	41			Ohne	Tr	12000	Essen	GÃ¶ttingen	150	
-L19	44 141	44		Noch einbauen	Next18	Fl	714403	NÃ¼rnberg	Treuchtlingen	141	
-L20	45 026	45			NEM651	Tr	12309			160	
-L21	50 002	50			Ohne	Fl	7180	Halle	Leipzig-Wahren	144	
-L22	53 7752	53^7	53	N025	Ohne	Fl	7124	Danzig	Danzig Rdz	103	
-L23	54 1658	54^15			NEM651	Tr	12308	NÃ¼rnberg	NÃ¼rnberg	112	
-L24	55 4536	55^25-26		DCX75	Ohne	Fl	7154	Wuppertal	Opladen	116	
-L25	56 376	56^2-8	54	Ja, welcher?	Next18	Li	161560	KÃ¶ln	KÃ¶ln Bbf	114	
-L26	56 1113	56^8-11			Ohne	Tr	2923	MÃ¼nchen	Treuchtlingen	117	
-L27	56 2264	56^20-29			Ohne	Fl	7900-1	Cassel	GÃ¶ttingen	111	
-L28	56 2048	56^20-29		U73400	Ohne	Fl	7156	Mainz	Mainz-Bisch	111	
-L29	56 2048	56^20-29			Ohne	Fl	7156	Mainz	Mainz-Bisch	111	
-L30	58 1437	58^10-21		Gold mini	NEM651	Tr	12716	Dresden		114	
-L31	61 001	61			Ohne	Ar	0166.0			124	
-L32	62 010	62		DCX76	Ohne	Fl	7053	Erfurt	Meiningen	107	
-L33	64 365	64		DCX75	Ohne	Fl	7063	Frankfurt	Frankfurt	78	
-L34	70 066	70		DCX76z	LÃ¶t	Fl	7071	MÃ¼nchen	Rosenheim	58	
-L35	74 1230	74^4-13			Ohne	Ar	2284	Berlin	Wustermark	74	
-L36	75 1109	75^10-11			Ohne	Ar	0155	Karlsruhe	Waldheim?	79	
-L37	78 017	78^0-5			Ohne	Fl	7079	Mainz	Alzey	93	
-L38	78 017	78^0-5			Ohne	Fl	7887	Mainz	Alzey	93	
-L39	80 018	80^0			Ohne	Fl	7027	KÃ¶ln	KÃ¶ln Bbf	60	
-L40	81 001	81^0			Ohne	Fl	7035	Magdeburg	Vienenburg	69	
-L41	85 001	85			?	Tr	11455.0	Karlsruhe	Freiburg	102	
-L42	86 436	86			Ohne	Fl	781101			97	
-L43	89 707	89^7	89	DCX76z	Ohne	Tr	11422.0	MÃ¼nchen	MÃ¼nchen Hbf	60	
-L44	89 7493	89^74-75			Ohne	Ar	2220	Stettin	Stettin	54	
-L45	92 1004	92^5-10	92	DCX76	NEM651	Fl	709201	Altona	Altona	69	
-L46	92 2048	92^20	93	DH10B	Platine	Tr	11631			69	
-L47	93 400	93^5-12			Ohne	Ar	2292	Berlin	Tempelhof	90	
-L48	98 303	98^3			Ohne	Tr	12212			45	
-L49	94 733	94^5-17			Ohne	Fl	7091	Mainz	Darmstadt-Kranichstatt	79	
-L50	94 956	94^5-17			Ohne	Fl	7093	Breslau	Sommerfeld	79	
-L51	95 003	95			Ohne	HN	2419	NÃ¼rnberg	Saalfeld	95	
-L52	96 022	96			Ohne	Ar	2278	NÃ¼rnberg	Pressig-Rothenkirchen	111	
-L53	98 731	98^7			Ohne	Tr	12700	Regensburg	Passau	64	
-L54	98 811	98^8			Ohne	Fl	7098	MÃ¼nchen	MÃ¼nchen Hbf	58	
-L55	98 811	98^8			Ohne	Fl	7098	MÃ¼nchen	MÃ¼nchen Hbf	58	
-L56	DW 6	CidT			Ohne	Ar	2923			71,5	
-L57	V 16 101	V16		?	NEM651	Tr	12800			90	
-L58	VT 851	VT851		DRG	Ohne	Tr	12841			131	
-L59	VT 135 009		135	Trix	Platine	Tr	12388			156	
-L60	VT 137 251 + VS 145 173			DCX76	NEM651	HT	2680			270	
-L61	SVT 137 155			geplant U73410	NEM651	HT	2630			436	
-L62	SVT 877a+b		12	N025	Ohne	Ka	10707	Berlin	Lehrter Bf	263	
-L63	SVT 137 149a+b		11	68530	Ohne	Ka	10711	Berlin	Lehrter Bf	277	
-L64	SVT 137 853a+b+c			N025	Ohne	HT	16061	Berlin	Berlin Ahb	297	
-L65	SVT 137 853a+b+c			Ohne Motor	Ohne	HT	16061	Berlin	Berlin Ahb	297	
-L66	E 04 05	E04		geplant U73410	NEM651	HN	2134	Halle	Leipzig-West	95	
-L67	E 17 113	E17		DH18A	Next18	HT	2890			100	
-L68	E 18 39	E18		DH18A	Plux12	Pi	40303			106	
-L69	E 19 02	E19.0		ESU...	NEM651	Fl	877914	NÃ¼rnberg	NÃ¼rnberg Hbf	106	
-L70	E 19 11	E19.1			Ohne	Ar	2491	NÃ¼rnberg	NÃ¼rnberg Hbf	116	
-L71	E 32 108	E32		geplant U73410	NEM651	Fl	737001			81	
-L72	E 36 01	E36		DH10C	NEM651	Tr	12462	MÃ¼nchen	Freilassing	77	
-L73	E 44 103	E44.5		DH18A	Next18	Li	162540			86	
-L74	E 44 019	E44		DH18A	Next18	Br	63100			95,6	
-L75	E 69 05	E69		685503	NEM651	Fl	737101			54	
-L76	E 75 06	E75		DCX76	LÃ¶t	Tr	12537			96	
-L77	E 77 28	E77			LÃ¶t	Br	63003	MÃ¼nchen	MÃ¼nchen	102	
-L78	E 91 102	E91		Hat einen, welcher?	Next18	Pi	40544			104	
-L79	E 93 01	E93			NEM651	Tr	12752	Stuttgart	Kornwestheim	111	
-L80	E 94 058	E94		ESU 54687	NEM651	Fl	739401	Erfurt	Probstzella	116	
-L81	C4esT-29 + BC4esS-29		65	DCX75	Ohne	RR	5525001			220	
-L82	C4esT-29 + BC4esS-29		66	DCX76	Ohne	RR	5525001			220	
-L83	C4esT-29 + BC4es-29			Ohne Motor	Ohne	Ar	0189			220	
-L84	C4esT-29 + BC4es-29			Ohne Motor	Ohne	Ar	0189			220	
-L85	C4esT-29 + BC4es-29			Ohne Motor	Ohne	RR	RR 5525001 + Ar 0189			220	
-L86	C4esT-29 + BC4esS-29			Ohne Motor	Ohne	RR	5525001			220	
-L87	C4esT-29 + BC4esS-29			Ohne Motor	Ohne	RR	5525001			220	
-L88	C4esT-29 + BC4esS-29			Ohne Motor	Ohne	RR	5525001			220	
-L89	elT 1130	ET85		Ohne Motor	Ohne	Ro	23001			256	
-L90	 elT 1130	ET25			Ohne	Ka	10709			273	
-L91	AT3 375+376	AT3			Ohne	Ro	23012			162	
-L92	AT3 295+296	AT3		DCX76	Ohne	HT	15772			161	
-L93	AT3 405+406	AT3		N045	Ohne	Ro	23390	Mainz		162	
+z	Ep	BV	Adr	Dec	SS	KD	GAM	Puf	NMZ	Gattung neu	Gattung alt	ID	Ordnungsnummer	RBD oder Bezirk	BW	Hst	Artikelnummer	Set	LüP	Datum	Ohne OVP	Zust	Kaufpreis	Quelle	Anmerkung
+;Dampfloks
+	II	DRG	2	DCX75	NEM651	-	-	-	-	01^0-2		L1	01 004	Essen	Hamm	Tr	12276		150	24.07.2011		neu	175,98	ebay	
+	II	DRG	1	DCX75	Ohne	-	-	-	-	01^0-2		L2	01 235	Regensburg	Hof	Ar	2521		149	02.02.1998		neuw	94,5889980213004	MBFm	
+	II	DRG	4	DHL160	Ohne	x	-	-	-	01^10		L3	01 1059	Halle	Halle P	Fl	7174		158	18.03.2016		gebr	79,7	1zu160	
+	IV	DR			Ohne	-	-	-	-	01^10		L94	01 513	Erfurt	Erfurt-P	Ar	2525		149	21.08.2026		gebr	126,27	ebay	Ölfeuerung, Boxbok, Umlaufschürze, kegelförmige Rauchkammertür. Ohne OVP
+	IV	DR			Ohne	-	-	-	-	01.5		L95	01 1531-1	Erfurt	Saalfeld	Ar	0348.0	0348	149	12.10.2024		neuw	117,48	Modellbahn Rhein-Main	Kohlefeuerung. Im Set, Wagen mit je 30€ bewertet
+	IV	DR		DH05C	NEM651	-	-	-	-	02		L96	02 0201-0	Halle	Halle-G	HN	2428		180	01.09.2020		neu	155,99	SpMax	
+	II	DRG	3	DCX75	Ohne	-	x	-	-	03^0-2		L4	03 062	Nürnberg	Nürnberg	Tr	12830		150	10.11.1997		neuw	96,6341655460853	MBW	
+x	II	DRG			Ohne	-	-	-	-			L5	05 002			Ar	2217		164	13.07.1905		gebr	114,99	ebay	
+	II	DRG			Löt	-	-	-	-	14^1	S2/5	L6	14 141	München	München Hbf	Tr	12232		123	12.01.2020		neuw	114,75	ebay	Schon 1927 ausgemustert
+	II	DRG			Ohne	-	-	-	-	17^2	S102	L7	17 253	Münster	Osnabrück	Tr	12831		132	11.06.2020		gebr	68,38	ebay	Selten: Brüniert, Ms-Beschriftung, nur so im Set
+	II	DRG	17	N025	NEM651	-	-	-	-	17^4	S3/5	L8	17 419	Nürnberg	Nürnberg	Tr	12222		123	09.12.2018		neuw	117,64	ebay	
+	II	DRG	18	DCX75	NEM651	-	-	-	-	18^5	S3/6	L9	18 535	Mainz	Mainz	HN	2007		133	11.06.2009		neu	94,74	Kramm	
+	II	DRG			Ohne	-	-	-	-	24		L10	24 047			Fl	7141		106	10.11.2015		neuw	105	1zu160	
+	II	DRG			Ohne	-	-	-	-	36^4	P42	L11	36 446	Nürnberg	Nürnberg Hbf	Ar	2545		71,04	13.06.2021		gebr	71,04	ebay	Mit brünierten Rädern
+	I	KPEV			Ohne	-	-	-	-		P8	L97	2510	Breslau		Fl	7829	7899	122	04.01.2022		neuw	107,335	ebay	Wagen mit je 20€ bewertet
+	II	DRG			Ohne	-	-	-	-	38^10-40		L12	38 2025	Essen	Oberhausen	Fl	7818		122	12.12.1994		neu	89,777741419244	SpMax	Ruhrschnellverkehr
+	II	DRG			Ohne	-	-	-	-	38^10-40		L13	38 2025	Essen	Oberhausen	Fl	7818	7888	122	15.06.2015		neuw	80	ebay	Ruhrschnellverkehr, im Set erworben und mit 80€ bewertet
+	II	DRG			Ohne	-	-	-	-	39		L14	39 105	Berlin	Berlin Ahb	Fl	7827		144	23.05.2007		neuw	104,9	ebay	Grün, später Fahrwerkstausch mit P10, dadurch brünierte Räder
+	II	DRG			Ohne	-	-	-	-	39		L15	39 109	Erfurt	Erfurt	Fl	7912	7912	144	24.03.2023		neuw	65	ebay	Im Set 7912 (Pleitegeier) und zwei Ergänzungswagen (je 20€ bewertet)
+	II	DRG			Ohne	-	-	-	-	39		L16	39 204	Stuttgart	Stuttgart	Fl	7139		144	22.02.1996		neu	123,732635249485	Spitzner	
+x	II	DRG			Ohne	-	-	-	-	39		L17	39 204	Stuttgart	Stuttgart	Fl	7139		144	26.09.2008		gebr	63,9	ebay	Blanke Räder, abstoßen
+	II	DRG			Ohne	-	-	-	-	41		L18	41 014	Essen	Göttingen	Tr	12000		150	02.05.2006		neu	122,198759605896	Spitzner	
+	II	DRG		Noch einbauen	Next18	-	-	-	-	44		L19	44 141	Nürnberg	Treuchtlingen	Fl	714403		141	13.09.2024		neuw	194,95	ebay	
+x	IV	DR		Zimo?	Next18	x	-	-	-	44.0		L98	44 0592-4			Fl	714472		141	26.07.2020		neu	289,99	ebay	Sound
+	II	DRG			NEM651	-	-	-	-	45		L20	45 026			Tr	12309		160	24.04.2025		neuw	184,95	ebay	
+	II	DRG			Ohne	-	-	-	-	50		L21	50 002	Halle	Leipzig-Wahren	Fl	7180		144	18.09.2012		gebr	90	1zu160	
+	III	DR			Ohne	-	-	-	-	50		L99	50 849			Fl	7181		144	27.01.2024		neuw	99,5	1zu160	Mit Ersatzgriffstange Tender
+x	III	DR		N025	NEM651	-	-	-	-	52		L100	52 705			Fl	715208		144	12.02.2017		neu	114,71	ebay	
+	I	KPEV			Ohne	-	-	-	-		G4.3	L101	3910	Stettin		Fl	7902-1	7902	103	05.01.2021		neuw	76,535	1zu160	Aus Set, Wagen mit je 20€ bewertet
+	II	DRG	53	N025	Ohne	x	-	-	-	53^7	G4.3	L22	53 7752	Danzig	Danzig Rdz	Fl	7124		103	01.01.2020		gebr	62	1zu160	
+	II	DRG			NEM651	-	-	-	-	54^15	G3/4H	L23	54 1658	Nürnberg	Nürnberg	Tr	12308		112	23.11.2020		neuw	71,84	ebay	
+	I	KPEV			Ohne	-	-	-	-		G8.1	L102	4914	Hannover		Fl	780901	780901	116	20.04.2023		neuw	72,5	ebay	Aus Set, Wagen mit je 15/20€ bewertet
+	II	DRG		DCX75	Ohne	-	-	-	-	55^25-26	G8.1	L24	55 4536	Wuppertal	Opladen	Fl	7154		116	26.08.1998		neuw	81,806700991395	Rudow	
+	I	KPEV			Ohne	-	-	-	-		G8.2	L103	5351	Erfurt		Fl	781210	781212	117	26.07.2022		neu	100	dm-toys	Aus Set, Wagen bewertet mit je 15/20€
+	II	DRG	54	Ja, welcher?	Next18	-	-	-	-	56^2-8	G8.2	L25	56 376	Köln	Köln Bbf	Li	161560		114	10.05.2020		neuw	143,01	ebay	
+x	II	DRG			Ohne	-	-	-	-	56^8-11	G4/5H	L26	56 1113	München	Treuchtlingen	Tr	2923		117	08.11.2021		gebr	64,92	ebay	
+	II	DRG			Ohne	-	-	-	-	56^20-29	G8.2	L27	56 2264	Cassel	Göttingen	Fl	7900-1	7900	111	23.11.2023		neu	75	ebay	Grün. Im Set, Wagen mit je 15€ bewertet
+	II	DRG		U73400	Ohne	x	-	-	-	56^20-29	G8.2	L28	56 2048	Mainz	Mainz-Bisch	Fl	7156		111	05.09.2018		gebr	100	1zu160	Brünierte Räder
+x	II	DRG			Ohne	-	-	-	-	56^20-29	G8.2	L29	56 2048	Mainz	Mainz-Bisch	Fl	7156		111	1993		neu	117,085840793934	Pietsch	Zerlegt
+	I	KPEV			NEM651	-	-	-	-		G10	L104	5446			Tr	12248		119	22.11.2024		gebr	145	1zu160	Ohne Kolbenschutzrohre
+x	III	DRG		N025	NEM651	-	x	-	-	57^10-37	G10	L105	57 2801	Schwerin	Güstrow	Tr	12247		119	16.12.2018		gebr	145,99	ebay	
+	I	KPEV			NEM651	-	x	-	-		G12	L106	5593	Erfurt		Tr	12608		114	06.10.2023		gebr	132,49	ebay	
+	II	DRG		Gold mini	NEM651	x	x	-	-	58^10-21	G12	L30	58 1437	Dresden		Tr	12716		114	24.03.2023		gebr	151	ebay	
+	II	DRG			Ohne	-	-	-	-	61		L31	61 001			Ar	0166.0	0166	124	15.06.2002		gebr	70	MBFm	Im Set, mit 70€ bewertet
+	II	DRG		DCX76	Ohne	-	-	-	-	62		L32	62 010	Erfurt	Meiningen	Fl	7053		107	17.12.2005		neu	149	ebay	
+	II	DRG		DCX75	Ohne	-	-	-	-	64		L33	64 365	Frankfurt	Frankfurt	Fl	7063		78	07.04.2000		neu	94,5634334272406	SMDV	
+	IV	DR			Ohne	-	-	-	-	65^10		L107	65 1049-9	Magdeburg	Güsten	Br	1610		110	15.11.2025		gebr	125,19	ebay	-20€ ebay Plus, das extra bezahlt. Am Jahresende prüfen, ob Vorteile den Preis aufgewogen haben
+x	I	KBayStsB		MX617	Löt	x	-	-	-		Pt2/3	L108	6050			Fl	707085		58	17.07.2024		neuw	151,49	ebay	
+	II	DRG		DCX76z	Löt	-	-	-	-	70	Pt2/3	L34	70 066	München	Rosenheim	Fl	7071		58	28.10.2014		neuw	118	ebay	
+	II	DRG			Ohne	-	-	-	-	74^4-13	T121	L35	74 1230	Berlin	Wustermark	Ar	2284		74	31.12.1996		neu	85,6413901003666	Spitzner	
+	II	DRG			Ohne	-	-	-	-	75^10-11	Vic	L36	75 1109	Karlsruhe	Waldheim?	Ar	0155	0155	79	12.10.2021		gebr	70	1zu160	
+x	I	KPEV			Ohne	-	-	-	-		T18	L109	8957	Essen		Fl	7820	7890	93	03.05.2022		neuw	75,998	ebay	Mittelgrün. Im Set, Wagen mit je 15€ bewertet
+	I	KPEV			Ohne	-	-	-	-		T18	L110	8428	Stettin		Fl	867913		93	14.12.2023		neuw	101,89	Catawiki	Dunkelgrün. Im Set, Wagen mit je 28€ bewertet
+	II	DRG			Ohne	-	-	-	-	78^0-5	T18	L37	78 017	Mainz	Alzey	Fl	7079		93	14.04.1999		gebr	76,6937821794328	MBW	
+	II	DRG			Ohne	-	-	-	-	78^0-5	T18	L38	78 017	Mainz	Alzey	Fl	7887	7887	93	14.04.1999		gebr	60	ebay	Im RSV-Set
+	II	DRG			Ohne	-	-	-	-	80^0		L39	80 018	Köln	Köln Bbf	Fl	7027		60	04.09.2017		gebr	53,8	ebay	mit N025, ausgelötet, da wohl Motorproblem
+	II	DRG			Ohne	-	-	-	-	81^0		L40	81 001	Magdeburg	Vienenburg	Fl	7035		69	27.09.2025	¨	gebr	45	ebay	
+	II	DRG			?	-	-	-	-	85		L41	85 001	Karlsruhe	Freiburg	Tr	11455.0	11455	102	01.10.2019		neuw	83,575	ebay	Im Schwarzwald-Set mit Figuren, Wagen mit je 20€ bewertet
+	II	DRG			Ohne	-	x	-	-	86		L42	86 436			Fl	781101		97	26.10.2022		neuw	166,8	1zu160	Eigentlich DB-Lok Flm 7086. Erworben mit Faulhaber, dann Gehäusewechsel 70€ zur DRB-Lok
+x	III	DR			Ohne	-	-	-	-	86		L111	86 184	Dresden	Riesa	Fl	F7087		87	31.12.2015		gebr	90,5	ebay	
+	IV	DR			Ohne	-	-	-	-	86		L112	86 1001-6			Fl	931002	931002	87	07.11.2024		gebr	90,49	ebay	Aus Set 
+x	I	KBayStsB	33	DH…	Ohne	x	-	-	-		R3/3	L113	4769			Tr	12255		60	22.07.2022		neuw	99,5	1zu160	Werksseitiger Decoder
+	II	DRG	89	DCX76z	Ohne	-	-	-	-	89^7	R3/3	L43	89 707	München	München Hbf	Tr	11422.0	11422	60	24.11.2019		neuw	44,3775	ebay	Im Set, Wagen mit je 12€ bewertet
+	II	DRG			Ohne	-	-	-	-	89^74-75	T3	L44	89 7493	Stettin	Stettin	Ar	2220		54	27.09.1999		gebr	48,5727287136408	MBW	Motorlose Zweitlok: 20DM
+x	I	KPEV			Ohne	-	-	-	-		T93	L114	7337	Berlin		Fl	781202	781202	68	14.03.2025		neuw	64,1866666666667	ebay	Dunkelgrün, brünierte Steuerung. Im Set, 3 Wagen mit je 22€ bewertet und einer verkauft
+x	I	KPEV			Ohne	-	-	-	-		T93	L115	7294	Altona		Fl	7898-1	7898	68	12.12.2020		neuw	80,89	ebay	Im Set, Wagen mit je 15€ bewertet
+x	I	KPEV			Ohne	-	-	-	-		T93	L116	7337	Altona		Fl	7898-1	7898	68	14.07.2024		neuw	30	ebay	Im Set, Wagen mit je 15€ bewertet
+	III	DR			Ohne	-	-	-	-	91^3-18	T93	L117	91 1001			Fl	7030		68	27.06.2020		gebr	49,5	ebay	Handbrünierte Steuerung/Räder
+	I	KPEV			NEM651	-	-	-	-		T13	L118	7909			Fl	781503	781503	69	13.03.2025		neuw	70,4066666666667	ebay	Im Set, 2 Wagen mit je 22€ bewertet und 2 für je 21,68 verkauft
+	II	DRG	92	DCX76	NEM651	-	-	-	-	92^5-10	T13	L45	92 1004	Altona	Altona	Fl	709201		69	18.08.2013		neu	143,99	MSL	
+	II	DRG	93	DH10B	Platine	x	-	-	-	92^20	R4/4	L46	92 2048			Tr	11631	11631	69	10.11.2019		neuw	102,666666666667	ebay	Im Set, ohne kurzen Kühlwagen, Wagen mit je 10/15€ bewertet
+	II	DRG			Ohne	-	-	-	-	93^5-12	T141	L47	93 400	Berlin	Tempelhof	Ar	2292		90	19.05.2022		neuw	90,39	ebay	
+	I	KPEV			Ohne	-	-	-	-		T12	L119	6081	Altona		Tr	12005		45	04.07.2023		gebr	78	ebay	
+	II	DRG			Ohne	-	-	-	-	98^3	PtL2/2	L48	98 303			Tr	12212		45	21.07.2018		neuw	80,4	ebay	
+	I	KPEV	94	DCX76	Ohne	-	x	x	-		T161	L120	8177	Trier		Fl	7823	7893	79	31.05.2022		neuw	53,35	ebay	Mit Staco Im Set, Wagen bewertet. 
+x	I	KPEV			Ohne	-	-	-	-		T161	L121	8177	Trier		Fl	7823	7893	79	03.05.2024		neuw	70	ebay	Im Set. Mit 70€ bewertet
+x	I	KPEV			Ohne	-	-	-	-		T161	L122	8177	Trier		Fl	7823	7893	79	24.10.2024		neuw	39,95	ebay	Im Set, Wagen mit je 10€ bewertet
+	I	KPEV			Ohne	x	-	-	-		T161	L123	8169			Fl	709483		79	16.09.2024		gebr	61	ebay	Dunkelgrün. Fallschäden, zu reparieren
+	II	DRG			Ohne	-	-	-	-	94^5-17	T161	L49	94 733	Mainz	Darmstadt-Kranichstatt	Fl	7091		79	04.09.2021		neuw	94,99	ebay	
+x	II	DRG			Ohne	-	-	-	-	94^5-17	T161	L50	94 956	Breslau	Sommerfeld	Fl	7093		79	13.10.1995		neu	92,4364592014643	SpMax	Zerlegt
+	II	DRG			Ohne	-	-	-	-	95	T20	L51	95 003	Nürnberg	Saalfeld	HN	2419		95	08.07.2020		neu	117	ebay	dm-Toys-Exemplar. Steuerung gerichtet (Überschlag). Gehäuse nicht stramm aufgeschraubt, sonst leidet Kontakt bei Vorwärtsfahrt. Schnarren könnte an Motoraufhängung liegen. Kleineren Decoder als N25 nehmen, der passt nicht zwischen die beiden spulenartigen Widerstände und trägt zu strammem Gehäuse bei.
+	IV	DR		N025	NEM651	-	-	-	-	95	pr T20	L124	95 0009-1	Erfurt	Probstzella	HN	2186		95	22.06.2019		neu	139,99	Elriwa	
+	II	DRG			Ohne	-	-	-	-	96	Gt 2x4/4	L52	96 022	Nürnberg	Pressig-Rothenkirchen	Ar	2278		111	11.11.2021		gebr	140	1zu160	Brüniert
+x	I	KBayStsB			Ohne	-	-	-	-		BBII	L125	2502			Tr	11604-1	11604	64	20.03.2021		gebr	96,99	ebay	Im Set, Wagen mit je 20€ bewertet
+	II	DRG			Ohne	-	-	-	-	98^7	BBII	L53	98 731	Regensburg	Passau	Tr	12700		64	11.09.2022		gebr	127,29	ebay	
+x	II	DRG			Ohne	-	-	-	-	98^8	GtL4/4	L54	98 811	München	München Hbf	Fl	7098		58	18.03.1995		neu	73,6158050546315	spMax	
+	II	DRG			Ohne	-	-	-	-	98^8	GtL4/4	L55	98 811	München	München Hbf	Fl	7098		58	30.10.2018		gebr	55	1zu160	
+;Dampftriebwagen
+	II	DRG			Ohne	-	-	-	-	CidT		L56	DW 6			Ar	2923		71,5	28.11.2021		gebr	40,4	ebay	ohne Motor! Dieser wäre, mit Schnecken 2923-20, Betriebsnummer Karlsruhe 6
+;Dieselloks
+x	II	DRG		?	NEM651	x	-	-	-	V16		L57	V 16 101			Tr	12800		90	30.06.2022		gebr	99,99	ebay	
+	IV	DR		DH18A	Next18	-	-	-	-	V60.0-1		L126	106 094-6	Greifswald	Pasewalk	HN	2267		68	29.01.2025		neu	115,49	ebay	Rot/grau
+	IV	DR		DH18A	Next18	-	-	-	-	V60.0-1		L127	106 030-0	Schwerin	Wittenberge	HN	2356		68	10.09.2020		neu	87,7213445378151	dm-Toys	
+	IV	DR		DCX76	Ohne	-	-	-	-	V60.12		L128	106 530-9	Magdeburg	Stendal	Fl	722209		68	10.12.2012		neu	129,99	Pietsch	
+x	IV	DB		?	NEM651	-	x	-	-	V60		L129	261 626-6			Tr	12620		68	27.11.2022		gebr	78,5	ebay	
+	IV	DR		Ja, welcher?	NEM651	-	-	-	-	V100		L130	111 032-9			Fl	5170001-1	5170001	87	09.12.2023		neu	67,69	Ars Tecnica	Mit Decoder. Preis aus 2 Sets - Verkaufserlös Rest - 3*15€ (Güterwagenbewertung)
+	IV	DR		DCX76	NEM651	-	-	-	-	V100		L131	110 226-8	Dresden	Reichenbach	Fl	721001		87	03.01.2013		neu	89,1	MSL	
+	IV	DR		Zimo	NEM651	-	-	-	-	V100		L132	115 328-7	Erfurt	Saalfeld	Fl	931405-1		87	21.11.2014		neu	72,02	1zu160	
+x	IV	DB			Ohne	-	-	-	-	V100		L133	211 092-2	Stuttgart	Tübingen	Fl	7228		78	17.11.2022		gebr	54,49	ebay	
+	IV	DR		N045	Next18	-	-	-	-	V180		L134	118 640-2	Magdeburg	Magdeburg	Fl	721301		121	06.08.2019		neu	146,97	MBS	
+	IV	DR		Dummy!	Next18	-	-	-	-	V180		L135	118 616-4	Magdeburg 	Brandenburg 	Fl	721404		121	09.07.2025		gebr	72,5	1zu160	ohne Innenleben; Sparlack
+x	IV	DR				-	-	-	-	V180		L136	229 168-1			Fl	721402		121	29.01.2026		neuw	170,75	ebay 	DB-Gehäuse, noch mit Lok Zeile vorher tauschen und dann verkaufen
+	IV	DR		Noch einbauen	Next18	-	-	-	-	V180		L137	118 104-9			Fl	7360028		121	21.05.2026		neuw	157,95	ebay 	
+	IV	DR		N025	Ohne	-	-	-	-	119		L138	119 006-5	Erfurt	Probstzella	Br	1400		122	07.10.2015		neuw	71,9	ebay	
+	IV	DR		Ohne Motor	Ohne	-	-	-	-	119		L139	119 191-5	Magdeburg		Br	61123		122	09.05.2018		gebr	55	1zu160	Dummy. Fahrgestell von 119 085, keine Loknummer an einer Stirnseite, Motor
+	IV	DR		Sound	NEM651	-	-	-	-	V200		L140	120 048-4	Erfurt	Gera	Fl	725201		110	02.09.2017		neu	170	1zu160	
+	IV	DR		ohne Motor	NEM651	-	-	-	-	V200		L141	120 292-8	Magdeburg 	Stendal 	Fl	725209		110	09.07.2025		gebr	72,5	1zu160 	ohne Innenleben
+	IV	DR		DH PD18MU	Next18	-	-	-	-	V300		L142	130 047-4	Halle	Halle G	HN	2296		129	17.01.2024		neuw	119,9	ebay	schwarzer Rahmen, rote Schürze, durchgehende Frontgriffstangen
+	IV	DR		SD18A	Next18	x	-	-	-	V300		L143	130 050-8	Berlin	Seddin	HN	2297		129	05.01.2023		neuw	133,68	EKA	
+	IV	DR		SD18A	Next18	-	-	-	-	V300		L144	131 158-8	Erfurt	Weißenfels	HN	2227		129	18.11.2015		gebr	99,5	MBFn	Umbau aus 130 058 (140->100km/h)
+	IV	DR		DH PD18MU	Next18	-	-	-	-	V300		L145	132 483-9	Magdeburg	Halberstadt	HN	2599		130	17.04.2024		neu	162,59	Fischer Modellbau	War auch im Bw Reichenbach
+	IV	DR			Next18	-	-	-	-	V300		L146	142 002-	Greifswald	Stralsund	HN	2600		130	28.08.2026		neu	121,19	ebay 	
+;Dieseltriebwagen
+	II	DRG		DRG	Ohne	-	-	-	-	VT851		L58	VT 851			Tr	12841		131	11.12.2019		gebr	0	ebay	Mainz - Darmstadt Hbf
+	II	DRG	135	Trix	Platine	x	-	-	-		VT  135 009 	L59	VT 135 009			Tr	12388		156	21.11.2018		neuw	115,74	ebay	Zuglauf Fürth i.W. - Regensburg
+	IV	DR		DH10C	Löt	-	-	-	-	172		L147	172 121-6			Br	64314		169,4	11.08.2016		neu	159,9	meinMBS	
+x	IV	DB			Ohne	-	-	-	-	VT/VB95		L148	785 211-2			Fl	7402		83	08.11.2022		neuw	115,9	ebay	und #7403 995 039-5
+x	III	DB			Ohne	-	-	-	-	VT/VB95		L149	VT95 9159	Nürnberg	Ansbach	Fl	7400		83	03.03.2023		gebr	53	1zu160	Loses Tw-Gehäuse, Dachlichter ohne Gehäuse. Mit Beiwagen 7401!
+x	IV	DB		Uhlenbrock	Plux16	-	-	-	-	VT/VS98		L150	798 723-3			Pi	40250		174	02.11.2022		neuw	159,81	ebay	und 998 779-3. Digitalisierung Steuerwagen: https://www.1001-digital.de/pages/basteln-bauen/triebfahrzeugumbauten/piko/vt98-mit-dh16a-und-fh05b.php
+	II	DRG		DCX76	NEM651	-	-	-	-		VT 137
+VS 145	L60	VT 137 251 + VS 145 173			HT	2680		270	01.09.2014		neu	156,88	dm-toys	
+	II	DRG		geplant U73410	NEM651	-	-	-	-		BPwPostK8vT-34	L61	SVT 137 155			HT	2630		436	02.10.2024		neuw	177	1zu160	215 km/h Messfahrt Berlin - Hamburg. Mit Decoder kein Wechsel Front-/Schlusslicht; Beleuchtung dauerhaft an
+	II	DRG	12	N025	Ohne	-	-	-	-		B6i VT	L62	SVT 877a/b	Berlin	Lehrter Bf	Ka	10707		263	01.07.2017		neuw	85	ebay	
+	II	DRG	11	68530	Ohne	-	-	-	-		B6i VT	L63	SVT 137 149a+b	Berlin	Lehrter Bf	Ka	10711		277	25.06.1905		neuw	129	ebay	
+	II	DRG		N025	Ohne	-	-	-	-		B12 KVT	L64	SVT 137 853 a+b+c	Berlin	Berlin Ahb	HT	16061		297			gebr		ebay	
+	II	DRG		Ohne Motor	Ohne	-	-	-	-		B12 KVT	L65	SVT 137 853 a+b+c	Berlin	Berlin Ahb	HT	16061		297	01.03.2013		gebr	82,29	ebay	Motor ausgebaut für Doppeltraktion
+	IV	DR			NEM652	-	-	-	-	SVT175		L151	175 011-6
+175 411-8
+175 311-0
+175 5...-.
+175 012-4	Berlin	Karlshorst	Ka	10745-1		750	25.07.2025		neu	155	Modellbahn Bertram	5teilig. Kauf war 6teilig - Überschuss Verkauf 73213 - 2 Mittelwagen (50€) und 1 Mittelwagen dieses Sets (50€)
+	IV	DR		N025	Ohne	-	-	-	-	SVT175		L152	175 009-0
+175 010-8
+175 309-4
+175 409-2	Berlin	Karlshorst	Ka	73712		606	01.04.2013		neu	141	dm-Toys	4teilg
+;Elloks
+	II	DRG		geplant U73410	NEM651	-	-	-	-	E04		L66	E 04 05	Halle	Leipzig-West	HN	2134		95	28.04.2023		neuw	125,5	1zu160	
+	IV	DR		N025	NEM651	-	-	-	-	E04		L153	204 011-1	Halle	Leipzig Hbf West	HN	2138		95	30.01.2017		neu	94	ebay	
+	II	DRG		DH18A	Next18	-	-	-	-	E17		L67	E 17 113			HT	2890		100	19.08.2021		neuw	153,76	ebay	
+	II	DRG		DH18A	Plux12	-	-	-	-	E18		L68	E 18 39			Pi	40303		106	13.05.2017		neu	102	Lippe	
+	IV	DR		U73340	Plux12	-	-	-	-	E18		L154	218 019-8	Halle	Halle P	Pi	40302		106	20.06.2021		neu	108,99	ebay 	
+	II	DRG		ESU...	NEM651	-	-	-	-	E19.0		L69	E 19 02	Nürnberg	Nürnberg Hbf	Fl	877914		106	01.06.2026		neuw	125,7	ebay	Mit ESU-Decoder (-30€) und 2xKK (-3€)
+	II	DRG			Ohne	-	-	-	-	E19.1		L70	E 19 11	Nürnberg	Nürnberg Hbf	Ar	2491		116	29.08.2023		gebr	89	ebay	
+	II	DRG		geplant U73410	NEM651	-	-	-	-	E32	EP2	L71	E 32 108			Fl	737001		81	15.03.2025		neuw	145,8	ebay	
+	II	DRG		DH10C	NEM651	-	-	-	-	E36	EP3	L72	E 36 01	München	Freilassing	Tr	12462		77	18.11.2021		neu	133,44	ebay	Decoder eingelötet (Wackelschnittstelle). In Packung Analogstecker und "elektronischer" Analogstecker
+	II	DRG		DH18A	Next18	-	-	-	-	E44.5		L73	E 44 103			Li	162540		86	17.07.2021		neuw	104,28	ebay	
+	II	DRG		DH18A	Next18	-	-	-	-	E44		L74	E 44 019			Br	63100		95,6	28.06.2018		neu	143,91	Lokmuseum	
+	II	DRG		685503	NEM651	x	-	-	-	E69		L75	E 69 05			Fl	737101		54	28.03.2023		neuw	115,5	ebay	Verpackung 737171, ist aber 737101, hat aber Decoder Fleischmann
+	IV	DR		Noch einbauen	Next18	-	-	-	-	211		L155	211 036-9	Halle	Leipzig Hbf West	HN	2275.0	2275	102	09.01.2018		neu	139,99	MBFn	
+	IV	DR		Hat einen, welcher?	Next18	-	-	-	-	211		L156	211 048-4			Br	63019		102	17.01.2023		neuw	135,49	ebay	Kombination Arnold-Fahrwerk und Brawa-Gehäuse 63019
+	IV	DR		Ja, welcher?	Next18	x	-	-	-	242		L157	242 005-7	Dresden	Dresden	HN	2524D		102	07.11.2024		neuw	130	1zu160	
+	IV	DR			Ohne	-	-	-	-	242		L158	242 089-1	Erfurt	Erfurt	Br	1201		102	29.01.1999		gebr	74,1373227734517	MBFp	
+	III	DR		DH18A	Next18	-	-	-	-	242		L159	E 42 011	Halle	Halle P	HN	2273		102	12.08.2020		neu	106,9	MSL	
+	IV	DR		ESU	Next18	-	-	-	-	230		L160	230 011-9	Dresden	Dresden	Kü	95024		105	19.10.2023		neu	114,98	dm-toys	
+	IV	DR		N025	NEM651	-	-	-	-	250		L161	250 001-5	Halle	Halle P	HN	2283		123	06.05.2017		neu	84	ebay	
+	IV	DR		N025	NEM651	-	-	-	-	250		L162	250 226-8	Erfurt	Erfurt	HN	2373		123	19.05.2020		neu	109	dm-Toys	
+	IV	DR		N025	NEM651	-	-	-	-	251		L163	251 010-5	Magdeburg	Blankenburg	HN	2285		117	03.02.2017		neu	109,95	ds-automodelle	
+	IV	DR			NEM651	-	-	-	-	212		L164	212 001-2	LEW	LEW	HN	2076		114	02.09.2026		neuw	113,19	1zu160	SoMo Sebnitz 500 Stück; mit Kurzkupplung
+	IV	DR		?	NEM651	x	-	-	-	243		L165	243 599-8			HN	2032		104	17.09.2017		gebr	65	1zu160	
+x	V	DB			Ohne	-	-	-	-	143		L166	143 573-4	Erfurt	Erfurt	Ro	23276		104	ca. 1999		gebr	49,5953124760332	MBFm	
+	II	DRG		DCX76	Löt	-	-	-	-	E75		L76	E 75 06			Tr	12537		96	07.08.2021		gebr	86,9	ebay	
+	II	DRG			Löt	-	-	-	-	E77		L77	E 77 28	München	München	Br	63003		102	28.04.2023		neuw	145,5	1zu160	
+x	III	DR			Löt	-	-	-	-	E77		L167	E 77 10			Br	1250		102	11.08.2021		neu	122,56	ebay	
+	II	DRG		Hat einen, welcher?	Next18	-	-	-	-	E91		L78	E 91 102			Pi	40544		104	07.11.2024		neuw	185,99	ebay	
+	II	DRG			NEM651	-	-	-	-	E93		L79	E 93 01	Stuttgart	Kornwestheim	Tr	12752		111	30.10.2018		gebr	84,495	ebay	mit Profikupplungen und Trix-Decoder!
+	II	DRG		ESU 54687	NEM651	x	-	-	-	E94		L80	E 94 058	Erfurt	Probstzella	Fl	739401		116	05.01.2023		neuw	126,3	ebay	
+x	III	DR			NEM651	-	-	-	-	E94		L168	E 94 069	Halle	Halle P	Fl	739403		116	26.01.2020		gebr	80	ebay	leichte Fehler (Kratzer, Laternen angeklebt)
+	IV	DR		MX622N 	NEM651	x	-	-	-	E94		L169	254 110-0			Fl	739410		116	25.06.2025		neuw	102,19	ebay	
+	III	DR			Ohne	-	-	-	-	E95		L170	E 95 02			Br	1210		132	16.02.2022		gebr	104,8	ebay	mit Profikupplungen
+;Elektr. Triebwagen
+	II	DRG	65	DCX75	Ohne	-	x	-	-		C4esT-29
+BC4esS-29	L81	C4esT-29 + BC4esS-29			RR	5525001		220	18.06.1995		neu	117,085840793934	TöffTöff	In spw-n-Datenbank keine Details, Gattung geraten anhand 0189, wo die Details in der DB drin sind. Prüfen ...
+	II	DRG	66	DCX76	Ohne	-	x	-	-		C4esT-29
+BC4esS-29	L82	C4esT-29 + BC4esS-29			RR	5525001		220	2005		gebr	110	ebay	
+	II	DRG		Ohne Motor	Ohne	-	-	-	-		C4esT-29
+BC4es-29	L83	C4esT-29 + BC4es-29			Ar	0189		220	18.06.1995		neu	65,9566526743122	TöffTöff	C4esT-29 3662 und BC4es-29 6121
+	II	DRG		Ohne Motor	Ohne	-	-	-	-		C4esT-29
+BC4es-29	L84	C4esT-29 + BC4es-29			Ar	0189		220	16.11.2008		neuw	99,99	ebay	
+	II	DRG		Ohne Motor	Ohne	-	-	-	-		BC4 ET
+C4 ET	L85	C4esT-29 + BC4es-29			RR	RR 5525001 + Ar 0189		220	03.11.2007		gebr	42,2	ebay	RR/Arnold gemischt
+	II	DRG		Ohne Motor	Ohne	-	-	-	-		C4esT-29
+BC4esS-29	L86	C4esT-29 + BC4esS-29			RR	5525001		220	09.10.2007		gebr	65	ebay	
+	II	DRG		Ohne Motor	Ohne	-	-	-	-		C4esT-29
+BC4esS-29	L87	C4esT-29 + BC4esS-29			RR	5525001		220	16.11.2008		gebr	93	ebay	
+	II	DRG		Ohne Motor	Ohne	-	-	-	-		C4esT-29
+BC4esS-29	L88	C4esT-29 + BC4esS-29			RR	5525001		220	16.11.2008		gebr	93	ebay	
+	II	DRG		Ohne Motor	Ohne	-	-	-	-	ET85		L89	elT 1130			Ro	23001		256	02.04.2020		gebr	48,19	ebay	
+	II	DRG			Ohne	-	-	-	-	ET25		L90	 elT 1130			Ka	10709		273	30.03.2014		neuw	73,99	ebay	
+x	VI	DB		DCX75	Ohne	-	-	-	-	ET425		L171	.			Ka	10703		297	29.05.2013		neu	124,99	Lippe	"Generation Zugkunft"
+x	VI	DB		N045	Ohne	-	-	-	-	ET425		L172	.			Ka	10707		297	01.06.2013		neu	121,9	Lippe	"Mittelhessen"
+	I	KPEV			Ohne	-	-	-	-		AT3	L173	435/436			HT	15771		161	16.12.2021		neuw	97,79	ebay	
+	II	DRG			Ohne	-	-	-	-	AT3		L91	AT3 375+376			Ro	23012		162			neu		Laden?	
+	II	DRG		DCX76	Ohne	x	-	-	-	AT3		L92	AT3 295+296			HT	15772		161	07.11.2021		gebr	76	ebay	Zuglauf Mülheim-Styrum - Kettwig
+	II	DRG		N045	Ohne	x	-	-	-	AT3		L93	AT3 405+406	Mainz		Ro	23390		162	27.11.2021		defekt	54,14	ebay	Feder (+6,48€/2) fehlt (ET-Nr. Roco 86208 = H0 Zugfeder für Kupplungsdeichsel)
+;Sonstiges
+;-
+;VI

@@ -1,212 +1,478 @@
-Id	Gattung	Hersteller	Artikelnummer	LÃ¼P
-P1	Post4-a/15-38	Di	010118	102
-P2	Hz4Ã¼-44	HT	23901	106
-P3	Hz3i-pr05	Fl	8382	74
-P4	Cigd-pr91	Fl	8368	63
-P6	Pw4Ã¼-bay06	Tr	15859-06	108
-P10	AB4Ã¼-bay02	Tr	15859-05	119
-P11	AB4Ã¼-bay02	Tr	15859-01	119
-P17	C4Ã¼-bay08	Tr	15859-04	119
-P18	C4Ã¼-bay08	Tr	15701	119
-P19	C4Ã¼-bay08	Tr	11455.2	119
-P21	Pw4Ã¼-pr00	Ar	3353	121
-P23	ABC4Ã¼-wÃ¼12	Ar	3351	121
-P26	BC4Ã¼-wÃ¼09	Ar	3350	121
-P27	BC4Ã¼-wÃ¼09	Ar	3350	121
-P31	C4Ã¼-wÃ¼11	Ar	3352	121
-P32	C4Ã¼-wÃ¼11	Ar	3352	121
-P33	C4Ã¼-wÃ¼11	Ar	3352	121
-P37	Pw4Ã¼-pr04	Fl	8080	116
-P38	Pw4Ã¼-pr04	Fl	8080	116
-P39	Pw4Ã¼-pr07a	Fl	858860	116
-P48	C4Ã¼-pr08	Fl	8083	124
-P49	C4Ã¼-pr08	Fl	8083	124
-P50	C4Ã¼-pr08	Fl	8083	124
-P51	C4Ã¼-pr08	Fl	858863	124
-P52	C4Ã¼-pr08	Fl	858364	124
-P55	WR4Ã¼-pr11	Fl	8081	128
-P56	WR4Ã¼-pr11	Fl	8081	128
-P57	WR4Ã¼-pr11	Fl	858862	128
-P63	AB6Ã¼-pr06	Fl	8079	124
-P64	ABC4Ã¼-pr09	Fl	8082	124
-P65	ABC4Ã¼-pr09	Fl	858861	124
-P66	ABC4Ã¼-pr09	Fl	858861	124
-P67	ABC4Ã¼-pr09	Fl	858861	124
-P68	WL4Ã¼-pr01	Fl	858865	128
-P69	WL4Ã¼-pr01	Fl	8078	128
-P70	WL4Ã¼-pr01	Fl	8078	128
-P71	WL4Ã¼-pr01	Fl	8078	128
-P72	WL6Ã¼-pr01	Fl	807801	128
-P73	WL6Ã¼-pr01	Fl	807801	128
-P75	Pw4-pr04	Fl	8084	116
-P78	Post4-prb/17	Fl	881005	116
-P84	B4-pr04	Fl	8085	116
-P85	BC4-pr04	Fl	8873	116
-P86	BC4-pr04	Fl	8873	116
-P87	BC4-pr04	Fl	8873	116
-P88	BC4-pr04	Fl	8873	116
-P89	BC4-pr04	Fl	8873	116
-P95	C4-pr04	Fl	8874	116
-P96	C4-pr04	Fl	8086	116
-P97	C4-pr04	Fl	8874	116
-P98	C4-pr04	Fl	8874	116
-P99	C4-pr04	Fl	8874	116
-P100	C4-pr04	Fl	8874	116
-P101	C4-pr04	Fl	8874	116
-P102	BC4-pr04;Rot	Fl	7883	116
-P103	C4-pr04;BrRot	Fl	7884	116
-P104	C4-pr04;Rot	Fl	7885	116
-P105	C4-pr04;Rot	Fl	7885	116
-P106	C4-pr04;Rot	Fl	7885	116
-P107	BC4-pr04;Lila	Fl	8873	116
-P108	C4-pr04;BrLila	Fl	8874	116
-P109	C4-pr04;BrLila	Fl	8874	116
-P110	C4-pr04;Lila	Fl	8875	116
-P111	C4-pr04;Lila	Fl	8875	116
-P112	Pw4Ã¼-23	Ro	02062S	117
-P113	Post4Ã¼-b/20	Ro	003875	132
-P114	Post4Ã¼-b/20	Ro	02062S	132
-P115	A4Ã¼-23	Ro	02062S	128
-P116	AB4Ã¼-23	Ro	02062S	128
-P117	AB4Ã¼-23	Ro	02062S	128
-P118	C4Ã¼-22	Ro	02062S	128
-P119	C4Ã¼-22	Ro	02062S	128
-P120	WLC4Ã¼-21	Ro	02062S	133
-P121	SPw4Ã¼-28	Tr	11468.1	122
-P122	SA4Ã¼-28	Tr	11468.2	147
-P123	SA4Ã¼k-28	Tr	11468.3	147
-P124	SB4Ã¼-28	Tr	11468.4	147
-P125	SB4Ã¼k-28	Tr	11468.5	147
-P126	SPw4Ã¼-28	Tr	15784	122
-P127	SA4Ã¼-28	Tr	15780	147
-P128	SA4Ã¼k-28	Tr	15781	147
-P129	SB4Ã¼-28	Tr	15782	147
-P130	SB4Ã¼k-28	Tr	15783	147
-P131	Pw4Ã¼k-29	Li	364550	123
-P132	C4Ã¼-29	Li	364535	130
-P133	C4Ã¼-29	Li	364545	130
-P134	C4Ã¼-29	Li	364534	130
-P135	B4Ã¼-29	Li	364533	130
-P136	F	HN	4001.1	
-P137	F	HN	4001.2	
-P138	Lx	HN	4001.3	
-P139	Lx	HN	4001.4	
-P140	Lx	HN	4001.5	
-P141	PwPost4Ã¼-34	Tr	11432.1	140
-P142	PwPost4Ã¼-34	Tr	11455.1	140
-P143	PwPost4Ã¼-28	Fl	863602	141
-P144	AB4Ã¼-28	Tr	11432.2	136
-P145	AB4Ã¼-28	Tr	15710.3	136
-P146	AB4Ã¼-28	Tr	15710.3	136
-P147	AB4Ã¼-28	Tr	15710.3	136
-P148	C4Ã¼-28	Tr	15859.02	135
-P149	C4Ã¼-28	Tr	15710.1	135
-P150	C4Ã¼-28	Tr	15710.1	135
-P151	C4Ã¼-28	Tr	15710.1	135
-P152	C4Ã¼-28	Tr	15710.2	135
-P153	C4Ã¼-28	Tr	15710.2	135
-P154	C4Ã¼-28	Tr	15710.2	135
-P155	C4Ã¼-28	Tr	11455.3	135
-P156	C4Ã¼-28	Tr	11455.4	135
-P157	WR4Ã¼-29	Tr	15859.4	147
-P158	WR4Ã¼-29	Tr	15710.4	147
-P159	WR4Ã¼-29	Tr	15710.4	147
-P160	WR4Ã¼-29	Tr	15710.4	147
-P161	SWRPwPost4Ã¼-35	Ar	0166.1	136
-P162	SBC4Ã¼-35	Ar	0166.2	132
-P163	SBC4Ã¼-35	Ar	0166.3	132
-P164	SBC4Ã¼-35e	Ar	0166.4	136
-P165	AB4Ã¼-35	Fl	863102	135
-P166	C4Ã¼-35	Fl	863203	135
-P167	C4Ã¼-35	Fl	863204	135
-P168	WR4Ã¼-35	Fl		135
-P169	Pw4Ã¼-37	Fl	878880	135
-P170	Pw4Ã¼-37	Fl	878880	135
-P171	AB4Ã¼-35	Fl	878881	135
-P172	AB4Ã¼-35	Fl	878881	135
-P173	C4Ã¼-35	Fl	878883	135
-P174	C4Ã¼-35	Fl	878883	135
-P175	C4Ã¼-35	Fl	878883	135
-P176	C4Ã¼-35	Fl	878883	135
-P177	C4Ã¼-35	Fl	878884	135
-P178	C4Ã¼-35	Fl	878884	135
-P179	Pw4Ã¼-37	Tr	15801.1	135
-P180	Post4Ã¼-39	Tr	15716	143
-P181	AB4Ã¼-38	Tr	13721.1	133
-P182	AB4Ã¼-38	Tr	15802.1	133
-P183	BC4Ã¼-39	Tr	15802.2	133
-P184	ABC4Ã¼-39	Tr	13721.2	136
-P185	C4Ã¼-38	Tr	15803	133
-P186	C4Ã¼-38	Tr	13721.3	133
-P187	C4Ã¼-38	Tr	15713.1	133
-P188	C4Ã¼-38	Tr	15713.1	133
-P189	C4Ã¼-38	Tr	15713.2	133
-P190	WLAB4Ã¼ 	Tr	13721.4	147
-P191	WR4Ã¼-39	Tr	13721.5	147
-P192	WR4Ã¼-39	Tr	15801.2	147
-P193	B4i-30	Fl	867503	131
-P194	Pw4i-33	Ro	02061.1	131
-P195	BC4i-37	Ro	02061.2	132
-P196	BC4i-37	Ro	02061.3	132
-P197	C4i-36	Ro	02061.4	130
-P198	C4i-36	Ro	02061.5	130
-P199	C4i-36	Ro	02061.6	130
-P200	AB3Ã¼-bay94	Tr	15681.1	85
-P201	C3Ã¼-bay99	Tr	15681.2	85
-P202	C3Ã¼-bay99	Tr	15681.3	85
-P203	C3Ã¼-bay99	Tr	15681.4	85
-P204	Pw3Ã¼-bay95	Tr	15681.5	72
-P205	Post-b/8,5	Di	010136	65
-P206	Pwi-bay07	Fl	8090	66
-P209	BCi-bay10	Fl	809301	71
-P210	BCi-bay10	Fl	8091	71
-P212	Ci-bay10	Fl	8092	75
-P213	Ci-wÃ¼05	Br	1850.1	81
-P214	Ci-wÃ¼05	Br	1850.1	81
-P215	Di-wÃ¼08	Br	1850.2	81
-P216	Di-wÃ¼08	Br	1850.2	81
-P217	Di-wÃ¼98a	Br	1850.3	81
-P218	Di-wÃ¼98a	Br	1850.3	81
-P219	DPPi-wÃ¼98	Br	1873	92
-P220	D4i-wÃ¼99	Br	1870	92
-P221	C4i-wÃ¼98	Br	1871	92
-P223	PwPosti-pr84	Fl	8057	56
-P224	BCi-pr86	Fl	8058	56
-P227	Ci-pr86	Fl	8059	56
-P231	CPwi-pr05b	Fl	8765	68
-P237	CCitr-pr05	Fl	8766	68
-P238	CCitr-pr05	Fl	8766	68
-P247	PwPosti-pr07	Fl	8870	74
-P248	PwPosti-pr07	Fl	8870	74
-P249	PwPosti-pr07	Fl	8870	74
-P250	PwPosti-pr07	Fl	8870	74
-P251	PwPosti-pr07	Fl	8870	74
-P252	CD3itr-pr07	Fl	8871	76
-P253	CD3itr-pr07	Fl	8871	76
-P254	CD3itr-pr07	Fl	8871	76
-P255	CD3itr-pr07	Fl	8871	76
-P256	CD3itr-pr07	Fl	8871	76
-P257	D3itr-pr08	Fl	8875	76
-P260	Pw3-pr11	Fl	806804	80
-P272	C3-pr11	Fl	807005	79
-P273	C3-pr11	Fl	807006	79
-P274	C3-pr11	Fl	807006	79
-P275	C-pr21	Fl	807104	79
-P276	C-pr21	Fl	807104	79
-P277	C-pr21	Fl	807104	79
-P278	Pwi-23	Tr	13745	86
-P279	Pwi-23	Tr	11422.1	86
-P280	Cd-21b	Tr	13744	86
-P281	Cd-21b	Tr	11422.2	86
-P282	BCd-21	Tr	11422.3	86
-P283	BCd-21	Tr	13743	86
-P284	Pwi-28	Fl	8660	87
-P285	Bi-29	Fl	8661	87
-P286	BCi-28	Fl	8663	87
-P287	Ci-28	Fl	8872	87
-P288	Ci-28	Fl	8872	87
-P289	Ci-28	Fl	8872	87
-P290	Ci-28	Fl	8872	87
-P291	Ci-28	Fl	8872	87
-P292	Ci-28	Fl	8662	87
-P293	Cid-27	Fl	8659	87
+z	Korr	Ep	BV	Bel	Gattung	Bezirk	Wagennr.	Id	OVP	Herst	Art.-Nr.	Set	LüP	Datum	KP	Quelle	Zugschluss	Zuglauf	Anmerkung
+;Etc
+		II	RP	-	Post4-a/15-38	Erfurt	5084	P1	¨	Di	010118		102	18.09.2012	15,49	ebay			
+		II	DRG	-	Hz4ü-44	Berlin	736 762	P2		HT	23901		106	28.12.2017	25	1zu160			Bf Berlin Pof
+		II	DRG	-	Hz3i-pr05	Osten	730 003	P3		Fl	8382		74	09.11.2018	20,499	1zu160			
+		II	DRG	-	Cigd-pr91		088 719	P4		Fl	8368		63	09.11.2018	17,499	1zu160			Fakultativwagen
+;Bay. Schnellzugwagen
+	Bild	I	Pfalzbahn	-	PPü 		290	P5		Tr	15709	15709	108	14.12.2024	25	ebay			Im Set Pfalzbahn; einseitig UV-ausgeblichen
+		II	DRG	-	Pw4ü-bay06	München	107 253	P6		Tr	15859-06	15859	108	12.08.2011	14,2583333333333	ebay			Im Set D119
+		I	KBayStsB	-	ABB4ü 	München	21 088	P7		Tr	13715		119	25.07.2023	20,6133333333333	ebay		Rom-München-Hof-Leipzig-Berlin	N-tram-Kuppelstange, mit 2€ bewertet
+		I	KBayStsB	-	ABB4ü 	München	21 088	P8		Tr	13715		119	09.01.2025	16,83	1zu160		Rom-München-Hof-Leipzig-Berlin	
+		I	KBayStsB	-	ABB4ü 	München	21 088	P9		Tr	13715		119	09.01.2025	16,83	1zu160		Rom-München-Hof-Leipzig-Berlin	
+		II	DRG	-	AB4ü-bay02	München	13 190	P10		Tr	15859-05	15859	119	12.08.2011	14,2583333333333	ebay			Im Set D119
+		II	DRG	-	AB4ü-bay02	München	13 191	P11		Tr	15859-01	15859	119	12.08.2011	14,2583333333333	ebay			Im Set D119
+	Bild	I	Pfalzbahn	-	ABCCü 		5062	P12		Tr	15709	15709	119	14.12.2024	25	ebay			Im Set Pfalzbahn; einseitig UV-ausgeblichen
+		I	KBayStsB	-	CC 	München	26 011	P13		Tr	13716		119	25.07.2023	20,6133333333333	ebay		Rom-München-Hof-Leipzig-Berlin	N-tram-Kuppelstange, mit 2€ bewertet
+		I	KBayStsB	-	CC 	München	26 011	P14		Tr	13716		119	09.01.2025	16,83	1zu160		Rom-München-Hof-Leipzig-Berlin	
+	Bild	I	Pfalzbahn	-	CCü 		1732	P15		Tr	15709	15709	119	14.12.2024	25	ebay			Im Set Pfalzbahn; einseitig UV-ausgeblichen
+	Bild	I	Pfalzbahn	-	CCü 		3071	P16		Tr	15709	15709	119	14.12.2024	25	ebay			Im Set Pfalzbahn; einseitig UV-ausgeblichen
+		II	DRG	-	C4ü-bay08	München	17 652	P17		Tr	15859-04	15859	119	12.08.2011	14,2583333333333	ebay			Im Set D119
+x		II	DRG	-	C4ü-bay08	München	17 645	P18		Tr	15701		119	30.04.2003	29	SMDV			
+		II	DRG	x	C4ü-bay08	München	17 647	P19		Tr	11455.2	11455	119	01.10.2019	20	ebay			Im Set Schwarzwaldbahn
+;Württ. Schnellzugwagen
+		I	KWStE	-	PP pr00	Württemberg	6581	P20		Ar	3357		121	19.12.2024	13,99	ebay			
+		II	DRG	-	Pw4ü-pr00	Altona	108 601	P21		Ar	3353		121	06.05.2019	14,225	ebay			
+		I	KWStE	-	ABCCü 		1838	P22		Ar	3355		121	29.07.2023	15	ebay			
+		II	DRG	-	ABC4ü-wü12	Stuttgart	14 936	P23		Ar	3351		121	06.05.2019	14,225	ebay			
+		I	KWStE	-	BCCü 		5807	P24		Ar	3354		121	21.08.2023	17,6333333333333	ebay			
+		I	KWStE	-	BCCü 		5807	P25		Ar	3354		121	04.12.2024	10,4966666666667	ebay			
+		II	DRG	-	BC4ü-wü09	Stuttgart	15 922	P26		Ar	3350		121	2002	25	SMDV			Preis nachträglich geschätzt
+		II	DRG	-	BC4ü-wü09	Stuttgart	15 922	P27		Ar	3350		121	06.05.2019	14,225	ebay			
+		I	KWStE	-	CCü 		6332	P28		Ar	3356		121	21.08.2023	17,6333333333333	ebay			
+		I	KWStE	-	CCü 		6332	P29		Ar	3356		121	04.12.2024	10,4966666666667	ebay			
+		I	KWStE	-	CCü 		6332	P30		Ar	3356		121	04.12.2024	10,4966666666667	ebay			
+x		II	DRG	-	C4ü-wü11	Stuttgart	18 023	P31		Ar	3352		121	06.05.2019	14,225	ebay			
+		II	DRG	-	C4ü-wü11	Stuttgart	18 023	P32		Ar	3352		121	2002	25	SMDV			Preis nachträglich geschätzt
+		II	DRG	-	C4ü-wü11	Stuttgart	18 023	P33		Ar	3352		121	2002	25	SMDV			Preis nachträglich geschätzt
+;Preuß. Schnellzugwagen
+		I	KPEV	-	PP 	Halle	1141	P34		Fl	8840	7894	116	05.04.2023	14,945	ebay		Von Berlin Anh. Bhf. über Leipzig Hof nach München H.B.	
+		I	KPEV	-	PP 	Posen	3107	P35		Fl	808001		116	12.06.2023	12,7475	ebay		Von .... nach Danzig' 	
+		I	KPEV	-	PPü 	Stettin	05241	P36		Fl	868870	7913	116	14.12.2023	28	ebay			Grün!!! Mit 28€ bewertet
+		II	DRG	-	Pw4ü-pr04	Altona	107 303	P37		Fl	8080		116	17.12.2002	17,59	SpMax			
+x		II	DRG	-	Pw4ü-pr04	Altona	107 303	P38		Fl	8080		116	27.07.2024	15,06	1zu160			
+		II	DRG	-	Pw4ü-pr07a	Berlin	107 318	P39		Fl	858860		116	24.03.2023	18	ebay			Geier, mit KK
+		I	KPEV	-	ABCC 	Halle	02731	P40		Fl	8842	7894	124	05.04.2023	14,945	ebay		Von Berlin Anh. Bhf. über Leipzig Hof nach München H.B.	
+		I	KPEV	-	ABCC 	Halle	02731	P41		Fl	8842	7894	124	26.04.2023	9,5	ebay		Von Berlin Anh. Bhf. über Leipzig Hof nach München H.B.	
+		I	KPEV	-	ABCC 	Altona	2902	P42		Fl	781204	781204	124	18.03.2025	20,2	ebay		Von Berlin Anh Bhf über Halle Erfurt Würzburg Singen Stuttgart nach Zürich	Ohne Zierstreifen, mit 25€ bewertet
+		I	KPEV	-	CC 	Halle	03303	P43		Fl	8843	7894	124	05.04.2023	14,945	ebay	?	Von Berlin Anh. Bhf. über Leipzig Hof nach München H.B.	
+		I	KPEV	-	CC 	Halle	03303	P44		Fl	8843	7894	124	26.04.2023	9,5	ebay	?	Von Berlin Anh. Bhf. über Leipzig Hof nach München H.B.	
+		I	KPEV	-	CC 	Halle	03303	P45		Fl	8843	7894	124	26.04.2023	9,5	ebay	?	Von Berlin Anh. Bhf. über Leipzig Hof nach München H.B.	
+		I	KPEV	-	CC 	Halle	03303	P46		Fl	8843	7894	124	26.04.2023	9,5	ebay	?	Von Berlin Anh. Bhf. über Leipzig Hof nach München H.B.	
+		I	KPEV	-	CC 	Altona	03011	P47		Fl	781204	781204	124	18.03.2025	20,2	ebay		Von Berlin Anh Bhf über Halle Erfurt Würzburg Singen Stuttgart nach Zürich	Ohne Zierstreifen, mit 25€ bewertet
+		II	DRG	-	C4ü-pr08	Altona	18 041	P48		Fl	8083		124			Spitzner			
+		II	DRG	-	C4ü-pr08	Altona	18 041	P49		Fl	8083		124						
+		II	DRG	-	C4ü-pr08	Altona	18 041	P50		Fl	8083		124	27.07.2024	15,06	1zu160			
+x		II	DRG	-	C4ü-pr08	Berlin	17 927	P51		Fl	858863	7912	124	24.03.2023	18	ebay		Berlin Ahb - Stuttgart	Geier
+x		II	DRG	-	C4ü-pr08	Berlin		P52		Fl	858364	7912	124	24.03.2023	18	ebay		Berlin Ahb - Stuttgart	Geier
+		I	DESG	-	WR 		792	P53		Fl	8841	7894	128	05.04.2023	14,945	ebay		Von Berlin Anh. Bhf. über Leipzig Hof nach München H.B.	
+x	Bild 6achsig!	I	DESG	-	WR6		777	P54		Fl	868872	7913	128	14.12.2023	28	ebay			Mit 28€ bewertet, 6achsig
+		II	Mitropa	-	WR4ü-pr11	Mitropa	798	P55		Fl	8081		128	26.04.2003	16,01	ebay			
+x		II	Mitropa	-	WR4ü-pr11	Mitropa	798	P56		Fl	8081		128	27.07.2024	15,06	1zu160			
+		II	Mitropa	-	WR4ü-pr11	Mitropa	707	P57		Fl	858862	7912	128	24.03.2023	18	ebay			
+		I	KPEV	-	WL4ü pr01	Mitropa	2023	P58		Fl	868871	7913	128	14.12.2023	28	ebay		Sassnitz - Frankfurt - Basel	
+		I	KPEV	-	WL4ü pr01	Mitropa	2023	P59		Fl	868871	7913	128	09.07.2025	29,1083333333333	ebay		Sassnitz - Frankfurt - Basel	
+		I	KPEV	-	WL6ü pr06	Mitropa	2069	P60		Fl	868874	7913	128	09.07.2025	29,1083333333333	ebay		Sassnitz - Frankfurt - Basel	Ergänzungswagen Set 7913
+		I	KPEV	-	WL6ü pr06	Mitropa	2069	P61		Fl	868874		128	22.06.2023	28	ebay		Sassnitz - Frankfurt - Basel	Ergänzungswagen Set 7913
+		I	KPEV	-	WL6ü pr06	Mitropa	2067	P62		Fl	868873	7913	128	14.12.2023	28	ebay	?	Sassnitz - Frankfurt - Basel	Mit 28€ bewertet
+		II	DRG	-	AB6ü-pr06	Altona	13 305	P63		Fl	8079		124	2014		ebay			
+		II	DRG	-	ABC4ü-pr09	Altona	14 892	P64		Fl	8082		124			Spitzner			
+		II	DRG	-	ABC4ü-pr09	Berlin	14 805	P65		Fl	858861	7912	124	24.03.2023	18	ebay		Berlin Ahb - Stuttgart	Geier
+		II	DRG	-	ABC4ü-pr09	Berlin	14 805	P66		Fl	858861	7912	124	02.05.2020	8	1zu160		Berlin Ahb - Stuttgart	Geier
+		II	DRG	-	ABC4ü-pr09	Berlin	14 805	P67		Fl	858861	7912	124	27.07.2024	15,06	1zu160		Berlin Ahb - Stuttgart	Geier
+		II	Mitropa	-	WL4ü-pr01		20812	P68		Fl	858865		128	24.03.2023	18	ebay			
+		II	Mitropa	-	WL4ü-pr01		20019	P69		Fl	8078		128			Spitzner			
+		II	Mitropa	-	WL4ü-pr01		20019	P70		Fl	8078		128	09.03.2019	20	1zu160			
+		II	Mitropa	-	WL4ü-pr01		20019	P71		Fl	8078		128	27.07.2024	15,06	1zu160			
+		II	Mitropa	-	WL6ü-pr01		20849	P72		Fl	=HYPERLINK("https://www.spur-n-datenbank.de/cb_detail.php?nr=6948";"807801")		128	09.03.2019	20	1zu160		Westerland - Hamburg - Berlin L	
+		II	Mitropa	-	WL6ü-pr01		20849	P73		Fl	807801		128	09.03.2019	20	1zu160		Westerland - Hamburg - Berlin L	
+;Preuß. Eilzugwagen
+		I	KPEV	-	PP	Erfurt	3022	P74		Fl	8800		116	24.01.2022	11,75	ebay		von Erfurt über Sangerhausen-Dessau nach Berlin	Ohne KKK
+;Fehler 2015
+		I	DRP	-	Post4-prb/17	Berlin	2993	P76		Fl	8803		116	24.01.2022	11,75	ebay			Ohne KKK
+		I	DRP	-	Post4-prb/17	Berlin	2993	P77		Fl	8803		116	24.01.2022	11,75	ebay			Ohne KKK
+		II	DRP	-	Post4-prb/17	Hannover	99 524	P78		Fl	881005		116	04.03.2013	17,9333333333333	ebay			
+		I	KPEV	-	ABCC	Erfurt	126	P79		Fl	8891		116	24.01.2022	11,75	ebay		von Eisenach über Erfurt nach Weimar	
+		I	KPEV	-	ABCC	Erfurt	126	P80		Fl	8891		116	24.01.2022	11,75	ebay		von Eisenach über Erfurt nach Weimar	
+		I	KPEV	-	ABCC	Erfurt	126	P81		Fl	8891		116	24.01.2022	11,75	ebay		von Eisenach über Erfurt nach Weimar	
+		I	KPEV	-	ABCC	Erfurt	126	P82		Fl	8891	7890	116	03.05.2022	15	ebay		von Eisenach über Erfurt nach Weimar	Mit 15€ bewertet
+		I	KPEV	-	ABCC	Erfurt	126	P83		Fl	8891		116	12.06.2023	12,7475	ebay		von Eisenach über Erfurt nach Weimar	
+		II	DRG	-	B4-pr04	Altona	20 664	P84		Fl	8085		116	17.12.2002	15,125	ebay			
+		II	DRG	-	BC4-pr04	Halle	61 042	P85		Fl	8873		116	04.03.2013	17,9333333333333	ebay			
+		II	DRG	-	BC4-pr04	Halle	61 042	P86		Fl	8873	7897	116	23.05.2007	18	ebay			
+		II	DRG	-	BC4-pr04	Halle	61 042	P87		Fl	8873	7897	116	11.07.2024	5,2	ebay			
+		II	DRG	-	BC4-pr04	Halle	61 042	P88		Fl	8873	7897	116	14.08.2025	5,238	ebay			
+		II	DRG	-	BC4-pr04	Halle	61 042	P89		Fl	8873		116	30.08.2019	12,995	ebay			MIt Profikupplungen
+		I	KPEV	-	CC	Erfurt	242	P90		Fl	8802		116	24.01.2022	11,75	ebay		von Erfurt über Sangerhausen-Dessau nach Berlin	Ohne KKK
+		I	KPEV	x	CC	Erfurt	262	P91		Fl	8890	7890	116	24.01.2022	11,75	ebay		von Erfurt über Sangerhausen-Dessau nach Berlin	
+		I	KPEV	-	CC	Erfurt	262	P92		Fl	8890	7890	116	03.05.2022	15	ebay		von Eisenach über Erfurt nach Weimar	Mit 15€ bewertet
+		I	KPEV	-	CC	Erfurt	262	P93		Fl	8890		116	12.06.2023	12,7475	ebay			
+		I	KPEV	-	CC	Erfurt	262	P94		Fl	8890		116	12.06.2023	12,7475	ebay		von Eisenach über Erfurt nach Weimar	
+		II	DRG	-	C4-pr04	Halle	62 049	P95		Fl	8874		116	30.08.2019	12,995	ebay	?		MIt Profikupplungen
+		II	DRG	-	C4-pr04	Altona	41 800	P96		Fl	8086		116		12,75				
+		II	DRG	-	C4-pr04	Halle	62 049	P97		Fl	8874		116	07.04.2015	24,4653165152391	SMDV			
+		II	DRG	-	C4-pr04	Halle	62 049	P98		Fl	8874	7897	116	23.05.2007	18	ebay			
+		II	DRG	-	C4-pr04	Halle	62 049	P99		Fl	8874	7897	116	11.07.2024	5,2	ebay			
+		II	DRG	-	C4-pr04	Halle	62 049	P100		Fl	8874	7897	116	14.08.2025	5,238	ebay			
+		II	DRG	-	C4-pr04	Halle	62 049	P101		Fl	8874		116	04.03.2013	17,9333333333333	ebay			
+;Ruhrschnellverkehr (Set "Ruhrschnellverkehr I")
+		II	DRG	-	BC4-pr04;Rot	Essen	30 727	P102		Fl	7883	7887	116	15.06.2015	18,9666666666667	ebay		Essen Hbf - Dortmund Hbf	
+		II	DRG	-	C4-pr04;BrRot	Essen	41 963	P103		Fl	7884	7887	116	15.06.2015	18,9666666666667	ebay		Essen Hbf - Dortmund Hbf	
+		II	DRG	-	C4-pr04;Rot	Essen	41 967	P104		Fl	7885	7887	116	15.06.2015	18,9666666666667	ebay	?	Essen Hbf - Dortmund Hbf	
+		II	DRG	-	C4-pr04;Rot	Essen	41 967	P105		Fl	7885	7887	116	05.05.2025	13,1	ebay		Essen Hbf - Dortmund Hbf	
+		II	DRG	-	C4-pr04;Rot	Essen	41 967	P106		Fl	7885	7887	116	05.05.2025	13,1	ebay		Essen Hbf - Dortmund Hbf	
+;Ruhrschnellverkehr (Set "Ruhrschnellverkehr II")
+		II	DRG	-	BC4-pr04;Lila	Essen	30 597	P107		Fl	8873		116	10.05.2015	19,9975	ebay		Essen Hbf - Dortmund Hbf	
+		II	DRG	-	C4-pr04;BrLila	Essen	41 958	P108		Fl	8874		116	10.05.2015	19,9975	ebay		Essen Hbf - Dortmund Hbf	
+		II	DRG	-	C4-pr04;BrLila	Essen	41 958	P109		Fl	8874		116	10.05.2025	19,9975	ebay		Essen Hbf - Dortmund Hbf	
+		II	DRG	-	C4-pr04;Lila	Essen	41 971	P110		Fl	8875		116	10.05.2015	19,9975	ebay	?	Essen Hbf - Dortmund Hbf	
+		II	DRG	x	C4-pr04;Lila	Essen	41 971	P111		Fl	8875		116	10.05.2025	13,1	ebay		Essen Hbf - Dortmund Hbf	
+;Einheits-Schnellzugwagen Gruppe 23 (Hechtwagen)
+		II	DRG	-	Pw4ü-23	Hannover	105 103	P112		Ro	02062S		117	27.10.2002	10,5975	ebay			Manche Wagen mit Kulisse nachgerüstet, manche mit losen Drehgestellen/Trittbrettern
+		II	DRP	-	Post4ü-b/20	Nürnberg	268	P113		Ro	003875		132	18.09.2012	10,48	ebay			
+		II	DRP	-	Post4ü-b/20	Köln	3936	P114		Ro	02062S		132	27.10.2002	10,5975	ebay			Manche Wagen mit Kulisse nachgerüstet, manche mit losen Drehgestellen/Trittbrettern
+		II	DRG	-	A4ü-23	Hannover	11 005	P115		Ro	02062S		128	27.10.2002	10,5975	ebay			Manche Wagen mit Kulisse nachgerüstet, manche mit losen Drehgestellen/Trittbrettern
+		II	DRG	-	AB4ü-23	Hannover	11 214	P116		Ro	02062S		128	27.10.2002	10,5975	ebay			Manche Wagen mit Kulisse nachgerüstet, manche mit losen Drehgestellen/Trittbrettern
+		II	DRG	-	AB4ü-23	Hannover	11 289	P117		Ro	02062S		128	27.10.2002	10,5975	ebay			Manche Wagen mit Kulisse nachgerüstet, manche mit losen Drehgestellen/Trittbrettern
+		II	DRG	-	C4ü-22	Hannover	16 043	P118		Ro	02062S		128	27.10.2002	10,5975	ebay			Manche Wagen mit Kulisse nachgerüstet, manche mit losen Drehgestellen/Trittbrettern
+		II	DRG	-	C4ü-22	Hannover	16 044	P119		Ro	02062S		128	27.10.2002	10,5975	ebay			Manche Wagen mit Kulisse nachgerüstet, manche mit losen Drehgestellen/Trittbrettern
+		II	Mitropa	-	WLC4ü-21	Mitropa	36 002	P120		Ro	02062S		133	27.10.2002	10,5975	ebay			Manche Wagen mit Kulisse nachgerüstet, manche mit losen Drehgestellen/Trittbrettern
+;Rheingold
+		II	DRG	-	SPw4ü-28	Köln	90 202	P121	¨	Tr	11468.1	11468	122	10.08.2022	24,9	1zu160			
+		II	Mitropa	-	SA4ü-28	Köln	20 504	P122	¨	Tr	11468.2	11468	147	10.08.2022	24,9	1zu160		n. Zürich	
+		II	Mitropa	-	SA4ük-28	Köln	20 501	P123	¨	Tr	11468.3	11468	147	10.08.2022	24,9	1zu160		n. Basel	
+		II	Mitropa	-	SB4ü-28	Köln	24 508	P124	¨	Tr	11468.4	11468	147	10.08.2022	24,9	1zu160		n. Basel	
+		II	Mitropa	-	SB4ük-28	Köln	24 505	P125	¨	Tr	11468.5	11468	147	10.08.2022	24,9	1zu160		n. Zürich	
+;Rheingold
+		II	DRG	-	SPw4ü-28	Köln	105 002	P126	¨	Tr	15784		122	08.12.2013	27,554	ebay			
+		II	Mitropa	-	SA4ü-28	Köln	10 502	P127	¨	Tr	15780		147	08.12.2013	27,554	ebay			
+		II	Mitropa	-	SA4ük-28	Köln	10 503	P128	¨	Tr	15781		147	08.12.2013	27,554	ebay			
+		II	Mitropa	-	SB4ü-28	Köln	10 710	P129	¨	Tr	15782		147	08.12.2013	27,554	ebay			
+		II	Mitropa	-	SB4ük-28	Köln	10 703	P130	¨	Tr	15783		147	08.12.2013	27,554	ebay			
+;Karwendel
+		II	DRG	-	Pw4ük-29	München	105 270	P131	?	Li	364550		123	31.03.2020	30	ebay Michas Bahnhof			
+		II	DRG	-	C4ü-29	München	16 365	P132	?	Li	364535		130	24.05.2020	37,49	ebay			
+		II	DRG	-	C4ü-29	München	16 367	P133	¨	Li	364545		130	07.05.2021	40,31	SMDV			
+		II	DRG	-	C4ü-29	München	16 364	P134	¨	Li	364534		130	07.05.2021	40,31	SMDV			
+		II	DRG	-	B4ü-29	München	15 018	P135	¨	Li	364533		130	07.05.2021	40,31	SMDV			
+;ISG-Wagen
+		II	CIWL	-	F			P136	¨	HN	4001.1	4001		29.11.2013	21,8	ebay			
+		II	CIWL	-	F			P137	¨	HN	4001.2	4001		29.11.2013	21,8	ebay			
+		II	CIWL	-	Lx			P138	¨	HN	4001.3	4001		29.11.2013	21,8	ebay			
+		II	CIWL	-	Lx			P139	¨	HN	4001.4	4001		29.11.2013	21,8	ebay			
+		II	CIWL	-	Lx			P140	¨	HN	4001.5	4001		29.11.2013	21,8	ebay			
+;Einheits-Schnellzugwagen Gruppe 28
+		II	DRG	-	PwPost4ü-34	Hannover	100 021	P141		Tr	11432.1	11432	140	16.10.2011	19,65	ebay			
+x		II	DRG	x	PwPost4ü-34	Karlsruhe	100 022	P142		Tr	11455.1	11455	140	01.10.2011	20	ebay			Im Set Schwarzwaldbahn
+		II	DRG	-	PwPost4ü-28	Altona	100 003	P143		Fl	863602		141	22.05.2013	28,69	MSL			
+		II	DRG	-	AB4ü-28	Hannover	11 343	P144		Tr	11432.2	11432	136	16.10.2011	19,65	ebay			
+		II	DRG	-	AB4ü-28	Köln	21 507	P145		Tr	15710.3	15710	136	09.08.2011	26,7125	ebay 			
+		II	DRG	-	AB4ü-28	Köln	21 507	P146		Tr	15710.3	15710	136	04.12.2011	21,625	ebay			
+		II	DRG	-	AB4ü-28	Köln	21 507	P147		Tr	15710.3	15710	136	07.12.2011	21,8	ebay			
+		II	DRG	-	C4ü-28	München	16 217	P148		Tr	15859.02	15859	136	12.08.2011	14,2583333333333	ebay			
+		II	DRG	-	C4ü-28	Köln	26 529	P149		Tr	15710.1	15710	136	09.08.2011	26,7125	ebay			
+x		II	DRG	-	C4ü-28	Köln	26 529	P150		Tr	15710.1	15710	136	04.12.2011	21,625	ebay			
+x		II	DRG	-	C4ü-28	Köln	26 529	P151		Tr	15710.1	15710	136	07.12.2011	21,8	ebay			
+		II	DRG	-	C4ü-28	Köln	26 534	P152		Tr	15710.2	15710	136	15710.3	26,7125	ebay			
+x		II	DRG	-	C4ü-28	Köln	26 534	P153		Tr	15710.2	15710	136	04.12.2011	21,625	ebay			
+x		II	DRG	-	C4ü-28	Köln	26 534	P154		Tr	15710.2	15710	136	07.12.2011	21,8	ebay			
+		II	DRG	x	C4ü-28	Karlsruhe	16 221	P155		Tr	11455.3	11455	136	01.10.2019	20	ebay			Im Set Schwarzwaldbahn
+		II	DRG	x	C4ü-28	Karlsruhe	16 223	P156		Tr	11455.4	11455	136	01.10.2019	20	ebay			Im Set Schwarzwaldbahn
+		II	Mitropa	-	WR4ü-29		1045	P157		Tr	15859.4	15859	147	12.08.2011	14,2583333333333	ebay			
+		II	Mitropa	-	WR4ü-29		1052	P158		Tr	15710.4	15710	147	09.08.2011	26,7125	ebay			
+x		II	Mitropa	-	WR4ü-29		1052	P159		Tr	15710.4	15710	147	04.12.2011	21,625	ebay			
+x		II	Mitropa	-	WR4ü-29		1052	P160		Tr	15710.4	15710	147	07.12.2011	21,8	ebay			
+;Henschel-Wegmann
+		II	DRG	-	SWRPwPost4ü-35	Berlin	10 401	P161		Ar	0166.1	0166	136	15.06.2002	15	MBFn		Dresden Hbf - Berlin Ahb	Lok mit 70€ bewertet
+		II	DRG	-	SBC4ü-35	Berlin	10 402	P162		Ar	0166.2	0166	132	15.06.2002	15	MBFn		Dresden Hbf - Berlin Ahb	
+		II	DRG	-	SBC4ü-35	Berlin	10 403	P163		Ar	0166.3	0166	132	15.06.2002	15	MBFn		Dresden Hbf - Berlin Ahb	
+		II	DRG	-	SBC4ü-35e	Berlin	10 404	P164		Ar	0166.4	0166	136	15.06.2002	15	MBFn	?	Dresden Hbf - Berlin Ahb	
+;Einheits-Schnellzugwagen Gruppe 35 (braungrün)
+		II	DRG	-	AB4ü-35	München		P165	¨	Fl	863102		135	30.10.2020	32,77	SMDV			
+		II	DRG	-	C4ü-35	München	16587	P166	¨	Fl	863203		135	30.09.2020	29,33	SMDV		Berlin-Leipzig-Hof-Regensburg-München-Berchtesgaden	
+		II	DRG	-	C4ü-35	München	16600	P167	¨	Fl	863204		135	30.09.2020	29,85	SMDV		Berlin-Leipzig-Hof-Regensburg-München-Berchtesgaden	
+		II	DRG	-	WR4ü-35	Mitropa	1130	P168	¨	Fl			135	30.09.2020	30,74	SMDV		Berlin-Halle-Probstzella-Nürnberg-Augsburg-München	
+;Einheits-Schnellzugwagen Gruppe 35 (flaschengrün)
+		II	DRG	-	Pw4ü-37	München	105 731	P169		Fl	878880		135	04.09.2011	30,89	Modellbahn-Kramm			
+x		II	DRG	-	Pw4ü-37	München 	105 731	P170		Fl	878880		135	08.08.2015	20,65	ebay 			
+		II	DRG	-	AB4ü-35	München	11 623	P171		Fl	878881		135	08.08.2015	20,65	ebay			
+		II	DRG	x	AB4ü-35	München	11 623	P172		Fl	878881		135	09.07.2025	8,86333333333334	ebay			Mit Profikupplung (-2€) minus verkaufter Pw4ü-37 (-13€ und dessen KK -2€)
+		II	DRG	-	C4ü-35	München	16 579	P173		Fl	878883		135	29.08.2011	22,9	Lokmuseum	?		
+		II	DRG	-	C4ü-35	München	16 579	P174		Fl	878883		135	29.08.2011	22,9	Lokmuseum	?		
+x		II	DRG	-	C4ü-35	München 	16 579	P175		Fl	878883		135	08.08.2015	20,65	Ebay	?		
+x		II	DRG	-	C4ü-35	München 	16 579	P176		Fl	878883		135	08.08.2015	20,65	Ebay	?		
+x		II	DRG	-	C4ü-35	München	16 582	P177		Fl	878884		135	08.08.2015	20,65	ebay 			
+		II	DRG	-	C4ü-35	München	16 582	P178		Fl	878884		135	08.08.2015	20,65	ebay			
+;Einheits-Schnellzugwagen Gruppe 38 (Schürzenwagen)
+		II	DRG	-	Pw4ü-37	Berlin	105 728	P179		Tr	15801.1	15801	135		3,1225	ebay		 Berlin Leb - Hamburg Altona	 Loch in einer Stirnseite, Kupplungsfederstäbe fehlten
+		II	DRG	-	Post4ü-39	München	4896	P180		Tr	15716		143		25,0533021786147	SMDV			
+		II	DRG	-	AB4ü-38	München	11 699	P181		Tr	13721.1	13721	133		20,3494168716095	idee+spiel Nürnberg		München Hbf - Berlin Ahb	
+		II	DRG	x	AB4ü-38	Berlin	11 703	P182		Tr	15802.1	15802	133		3,1225	ebay		 Berlin Leb - Hamburg Altona	Loch in einer Stirnseite, Trittbrett verbogen
+		II	DRG	-	BC4ü-39	Berlin	215 533	P183		Tr	15802.2	15802	133		3,1225	ebay		 Berlin Leb - Hamburg Altona	Loch in einer Stirnseite, 1 Trittbrett abgebrochen, 2 Trittbretter angebrochen und verbogen, 1 Faltenbalg fehlt
+		II	DRG	-	ABC4ü-39	München	214 016	P184		Tr	13721.2	13721	136		20,3494168716095	idee+spiel Nürnberg		München Hbf - Berlin Ahb	
+		II	DRG	-	C4ü-38	Berlin	19 225	P185		Tr	15803		133		3,1225	ebay		 Berlin Leb - Hamburg Altona	 Loch in einer Stirnseite
+		II	DRG	-	C4ü-38	München	19 347	P186		Tr	13721.3	13721	133		20,3494168716095	idee+spiel Nürnberg		München Hbf - Berlin Ahb	
+		II	DRG	-	C4ü-38	München	19 224	P187		Tr	15713.1	15713	133	01.07.2004	16	MBF Markel		München Hbf - Berlin Ahb	
+		II	DRG	-	C4ü-38	München	19 224	P188		Tr	15713.1	15713	133	13.04.2002	27,605	SpMax		München Hbf - Berlin Ahb	
+		II	DRG	-	C4ü-38	München	19 300	P189		Tr	15713.2	15713	133	13.04.2002	27,605	SpMax		München Hbf - Berlin Ahb	
+		II	Mitropa	-	WLAB4ü 		22 079	P190		Tr	13721.4	13721	147		20,3494168716095	idee+spiel Nürnberg		Berlin - München - Berlin	
+		II	Mitropa	-	WR4ü-39		1215	P191		Tr	13721.5	13721	147		20,3494168716095	idee+spiel Nürnberg		Berlin - München - Berlin	
+x		II	Mitropa	x	WR4ü-39		1213	P192		Tr	15801.2	15801	147		2,498	ebay		 Berlin Leb - Hamburg Altona	Graues Dach statt Gelb bei 13721. Loch in einer Stirnseite
+;Einheits-Eilzugwagen Gruppe 30
+		II	DRG	-	B4i-30	Frankfurt	25 139	P193		Fl	867503		131	20.10.2019	32,65	ebay			Falsch: Faltenbalg (ein eingezogener liegt noch bei) und Seitengang. War: 1+3-Bestuhlung.
+Zuglauf Kassel-Bebra-Fulda-Hanau-Offenbach-Frankfurt/M
+;Einheits-Eilzugwagen Gruppe 36
+		II	DRG	-	Pw4i-33	Köln	112 379	P194		Ro	02061.1	02061S	131		26,6666666666667	ebay			
+		II	DRG	-	BC4i-37	München	33 614	P195		Ro	02061.2	02061S	132		26,6666666666667	ebay			
+		II	DRG	-	BC4i-37	München	33 614	P196		Ro	02061.3	02061S	132		26,6666666666667	ebay			
+		II	DRG	-	C4i-36	München	73 627	P197		Ro	02061.4	02061S	130		26,6666666666667	ebay			
+		II	DRG	-	C4i-36	München	73 627	P198		Ro	02061.5	02061S	130		26,6666666666667	ebay			
+		II	DRG	-	C4i-36	München	73 627	P199		Ro	02061.6	02061S	130		26,6666666666667	ebay			
+;Bay. 3achs. Schnellzugwagen
+		II	DRG	-	AB3ü-bay94	München	29 001	P200		Tr	15681.1	15681	85	08.05.2019	25,9816666666667	ebay			
+		II	DRG	-	C3ü-bay99	München	29 532	P201		Tr	15681.2	15681	85	08.05.2019	25,9816666666667	ebay			
+		II	DRG	-	C3ü-bay99	München	29 533	P202		Tr	15681.3	15681	85	08.05.2019	25,9816666666667	ebay			
+		II	DRG	-	C3ü-bay99	München	29 535	P203		Tr	15681.4	15681	85	08.05.2019	25,9816666666667	ebay			
+		II	DRG	-	Pw3ü-bay95	München	90 503	P204		Tr	15681.5	15681	72	08.05.2019	25,9816666666667	ebay			
+;Bay. Nebenbahnwagen
+		II	DRG	-	Post-b/8,5		24 Au	P205		Di	010136		65	02.01.2017	14,89	MiWuLa		Postumlauf 2027 Nördlingen -> Bernbühl, 2028 Gegenrichtung	
+		II	DRG	-	Pwi-bay07	München	116 663	P206		Fl	8090		66	26.05.2018	24,5166666666667	ebay			
+x		I	KBayStsB	-	PPostL 	Regensburg	21 141	P207		Tr	11604.1	11604	63	20.03.2023	20	ebay			Mit 20€ bewertet
+x		I	KBayStsB	-	BCi 	Regensburg	2721	P208		Tr	11604.2	11604	74	20.03.2023	20	ebay			Mit 20€ bewertet
+		II	DRG	-	BCi-bay10	München	38 441	P209		Fl	809301		71	18.01.2014	16,51	dm-toys			Gefangenenabteil
+		II	DRG	-	BCi-bay10	München	38 452	P210		Fl	8091		71	26.05.2018	24,5166666666667	ebay		Rosenheim - Frasdorf	
+x		I	KBayStsB	-	Ci 	Regensburg	12 213	P211		Tr	11604.3	11604	74	20.03.2023	20	ebay			Mit 20€ bewertet
+		II	DRG	-	Ci-bay10	München	93 968	P212		Fl	8092		75	26.05.2018	24,5166666666667	ebay			
+;Württ. Nebenbahnwagen
+		II	DRG	-	Ci-wü05	Stuttgart	40 015	P213		Br	1850.1	1850	81	16.07.2016	22,3333333333333	zu160			
+		II	DRG	-	Ci-wü05	Stuttgart	40 015	P214		Br	1850.1	1850	81	13.01.2019	17,29	zu160			
+		II	DRG	-	Di-wü08	Stutgart	50 238	P215		Br	1850.2	1850	81	16.07.2016	22,3333333333333	zu160			
+		II	DRG	-	Di-wü08	Stutgart	50 238	P216		Br	1850.2	1850	81	13.01.2019	17,29	zu160			
+		II	DRG	-	Di-wü98a	Stuttgart	50 029	P217		Br	1850.3	1850	81	16.07.2016	22,3333333333333	zu160			
+		II	DRG	-	Di-wü98a	Stuttgart	50 029	P218		Br	1850.3	1850	81	13.01.2019	17,29	zu160			
+		II	DRG	-	DPPi-wü98	41 Stuttgart		P219		Br	1873		92	13.01.2019	17,29	zu160			
+		II	DRG	-	D4i-wü99	Stuttgart 34 114		P220		Br	1870		92	13.01.2019	17,29	zu160			Zuglauf Schorndorf - Welzheim (Nebenbahn!)
+	Bild	II	DRG	-	C4i-wü98	Stuttgart 34 117		P221		Br	1871		92	21.08.2022	28,14	ebay			Zuglauf Schorndorf - Welzheim (Nebenbahn!)
+;Preuß. Lokalbahnwagen
+	Bild	I	KPEV	-	PPosti pr84	Altona	3801	P222		Fl	7898-2	7898	57	12.12.2021	18	ebay			Aus Set, mit Profikupplung
+		II	DRG	-	PwPosti-pr84	Königsberg	099 522	P223		Fl	8057		56	20.11.2015	12	Modell Süd			
+		II	DRG	-	BCi-pr86	Königsberg	037 061	P224		Fl	8058		56	20.11.2015	13	Modell Süd			
+		I	KPEV	-	C 	Halle	1488	P225		Fl	7882	7898	56	13.11.2023	17,078	ebay		Stahnsdorf - Bitterfeld	offene Bühnen
+		I	KPEV	-	C 	Halle	1489	P226		Fl	7882	7898	56	13.11.2023	17,078	ebay		Stahnsdorf - Bitterfeld	geschlossene Bühnen
+		II	DRG	-	Ci-pr86	Königsberg	050 211	P227		Fl	8059		56	20.11.2015	10	Modell Süd			
+		I	KPEV	-	PPost 	Halle	3961	P228		Fl	7882		57	13.11.2023	17,078	ebay			Lok mit 0 bewertet, noch abziehen
+		I	KPEV	-	D 	Halle	2456	P229		Fl	7882	7898	56	13.11.2023	17,078	ebay		Stahnsdorf - Bitterfeld	offene Bühnen
+		I	KPEV	-	CD 	Halle	903	P230		Fl	7882	7898	56	13.11.2023	17,078	ebay		Stahnsdorf - Bitterfeld	offene Bühnen
+;Preuß. zweiachsige Nebenbahnwagen
+x		II	DRG	-	CPwi-pr05b	Altona	92 340x	P231		Fl	8765		68			ebay		Husum - Schleswig	
+	Bild	I	KPEV	-	CDi pr05b	Altona	1959	P232		Fl	7898-3	7898	68	12.12.2021	18	ebay			
+	Bild	I	KPEV	-	Post-b/8,5 	Erfurt	2678	P233		Fl	8811	7881	69	23.07.2022	11,73	ebay			
+	Bild	I	KPEV	-	C pr	Erfurt	2361	P234		Fl	8812	7881	68	23.07.2022	11,73	ebay		Gotha - Leinefelde	
+	Bild	I	KPEV	-	CD pr	Gotha	2522	P235		Fl	8813	7881	68	23.07.2022	11,73	ebay		Gotha - Leinefelde	
+	Bild	I	KPEV	-	CD pr	Erfurt	2532	P236		Fl	8814	7881	68	23.07.2022	11,73	ebay		Gotha - Leinefelde	
+x		II	DRG	-	CCitr-pr05	Breslau	92467	P237		Fl	8766		68	06.12.2018	15	ebay			
+x		II	DRG	-	CCitr-pr05	Breslau	92467	P238		Fl	8766		68		0	Wolfgang Nachbar			
+;Preuß. zwei- und dreiachsige Nebenbahnwagen
+	Bild	I	KPEV	-	PwPosti pr07	Halle	5986	P239		Fl	8894	7899		05.01.2022	18	ebay			Mit Profikupplung
+	Bild	I	KPEV	-	BCi pr07	Halle	706	P240		Fl	8895	7899		05.01.2022	18	ebay			Mit Profikupplung
+	Bild	I	KPEV	-	BCi pr07	Hannover	720	P241		Fl	781202	781202		13.03.2025	22	ebay			
+	Bild	I	KPEV	-	CD3i pr07	Breslau	2282	P242		Fl	8896	7899		05.01.2022	18	ebay			Mit Profikupplung
+	Bild	I	KPEV	-	CD3itr pr07	Breslau	2429	P243		Fl	8897	7899		05.01.2022	18	ebay			Mit Profikupplung
+	Bild	I	KPEV	-	CD3i pr07	Stettin	2747	P244		Fl	7902.4	7902		05.01.2022	18	ebay			Aus Set, mit Profikupplung
+	Bild	I	KPEV	-	Di pr07	Halle	2653	P245		Fl	8898			23.06.2023	17,9	ebay			Ergänzungswagen Set 7899. Fehlende  Mittelachse, mit Profikupplung
+	Bild	I	KPEV	-	Di pr07	Hannover	2641	P246		Fl	781202	781202		13.03.2025	22	ebay			
+x		II	DRG	-	PwPosti-pr07	Berlin	99 511	P247		Fl	8870	7897	74	23.05.2007	18	ebay			
+		II	DRG	-	PwPosti-pr07	Berlin	99 511	P248		Fl	8870	7897	74	11.07.2024	5,2	ebay			
+x		II	DRG	-	PwPosti-pr07	Berlin	99 511	P249		Fl	8870		74	02.02.2001	22,98257005977	Pietsch			
+x		II	DRG	x	PwPosti-pr07	Berlin	99 511	P250		Fl	8870		74	30.07.2021	10,3266666666667	ebay			
+x		II	DRG	-	PwPosti-pr07	Berlin	99 511	P251		Fl	8870	7897	74	14.08.2025	5,238	ebay			
+		II	DRG	-	CD3itr-pr07	Halle	49 001	P252		Fl	8871		76						
+		II	DRG	-	CD3itr-pr07	Halle	49 001	P253		Fl	8871	7897	76	23.05.2007	18	ebay			
+		II	DRG	-	CD3itr-pr07	Halle	49 001	P254		Fl	8871	7897	76	11.07.2024	5,2	ebay			
+		II	DRG	-	CD3itr-pr07	Halle	49 001	P255		Fl	8871	7897	76	30.07.2021	10,3266666666667	ebay			
+		II	DRG	-	CD3itr-pr07	Halle	49 001	P256		Fl	8871	7897	76	14.08.2025	5,238	ebay			
+		II	DRG	-	D3itr-pr08	Halle	50 280	P257		Fl	8875		76						
+;Preuß. zwei-/dreiachsige Abteilwagen
+		I	KPEV	-	Pw3 	Erfurt	3140	P258		Fl	8893	7890	69	03.05.2022	15	ebay			altes Modell, us Set 7890, mit 15€ bewertet,
+		I	KPEV	-	Pw3 	Coeln	3247	P259		Fl	806802		81	19.03.2022	14,25	1zu160			
+		II	DRG	-	Pw3-pr11	Altona	111 037	P260		Fl	806804		80	17.02.2013	26,28	ebay			
+		I	KPEV	-	BC3 pr11	Coeln	1126	P261		Fl	806502		79	19.03.2022	18,25	1zu160		Coeln-Düren-Aachen	mit Bremserhaus
+		I	KPEV	-	BC3 pr11	Coeln	1126	P262		Fl	806502		79					Coeln-Düren-Aachen	mit Bremserhaus
+		I	KPEV	-	BC3 pr11	Berlin	1149	P263		Fl	781202.2	781202	79	13.03.2025	22	ebay			mit 22€ bewertet,Berlinwappen
+		I	KPEV	-	BC3 pr11	Berlin	1153	P264		Fl	781202.3	781202	79	13.03.2025	22	ebay			mit 22€ bewertet, Berlinwappen
+		I	KPEV	-	C3 	Halle	1762	P265		Fl	8892	7890	69	03.05.2022	15	ebay		von Eisenach über Erfurt nach Weimar	altes Modell, mit 15€ bewertet
+		I	KPEV	-	C3 pr11	Berlin	1891	P266		Fl	781202.4	781202	79	13.03.2025	22	ebay			mit 22€ bewertet, Berlinwappen
+		I	KPEV	-	C3 pr11	Coeln	1873	P267		Fl	807003		79					Coeln-Düren-Aachen	mit Bremserhaus
+		I	KPEV	-	C3 pr11	Coeln	1873	P268		Fl	807003		79	19.03.2022	18,25	1zu160		Coeln-Düren-Aachen	mit Bremserhaus
+		I	KPEV	-	C3 pr11	Coeln	1873	P269		Fl	807003		79	22.09.2025	26	1zu160		Coeln-Düren-Aachen	mit Bremserhaus, mit 2 Profikupplungen
+		I	KPEV	-	C3 pr11	Coeln	1879	P270		Fl	807004		79					Coeln-Düren-Aachen	mit Bremserhaus
+		I	KPEV	-	C3 pr11	Coeln	1879	P271		Fl	807004		79	19.03.2022	18,25	1zu160		Coeln-Düren-Aachen	mit Bremserhaus
+		II	DRG	-	C3-pr11	Altona	70 501	P272		Fl	807005		79	08.03.2014	20	ebay			mit Bremserhaus
+		II	DRG	-	C3-pr11	Altona	70 517	P273		Fl	807006		79	08.03.2014	20	ebay			
+		II	DRG	-	C3-pr11	Altona	70 517	P274		Fl	807006		79	08.03.2014	20	ebay			
+		II	DRG	-	C-pr21	Altona	70 544	P275		Fl	807104		79						mit Bremserhaus
+		II	DRG	-	C-pr21	Altona	70 544	P276		Fl	807104		79						mit Bremserhaus
+		II	DRG	-	C-pr21	Altona	70 544	P277		Fl	807104		79						mit Bremserhaus
+;Einheitspersonenwagen (Abteil) für Hauptbahnen
+		II	DRG	-	Pwi-23	Mainz	114 151	P278		Tr	13745		86						
+		II	DRG	-	Pwi-23	München	114 178	P279		Tr	11422.1	11422	86	24.11.2019	12	ebay			
+		II	DRG	-	Cd-21b	Mainz	44 831	P280		Tr	13744		86						
+		II	DRG	-	Cd-21b	Frankfurt	45 424	P281		Tr	11422.2	11422	86	24.11.2019	12	ebay		München-Ingolstadt	
+		II	DRG	-	BCd-21	Mainz	31 040	P282		Tr	11422.3	11422	86	24.11.2019	12	ebay		München-Ingolstadt	
+		II	DRG	-	BCd-21	Mainz	31 036	P283		Tr	13743		86	07.12.2018	12	ebay			
+;EInheitsdurchgangspersonenwagen (Donnerbüchsen)
+		II	DRG	-	Pwi-28	Nürnberg	114 263	P284		Fl	8660		87						
+		II	DRG	-	Bi-29	Nürnberg	28 604	P285		Fl	8661		87						
+		II	DRG	-	BCi-28	Nürnberg	36 441	P286		Fl	8663		87						
+		II	DRG	-	Ci-28	Nürnberg	41 504	P287		Fl	8872		87	25.10.2002	12,5	ebay			
+		II	DRG	-	Ci-28	Nürnberg	41 504	P288		Fl	8872	7897	87	23.05.2007	18	ebay			
+		II	DRG	-	Ci-28	Nürnberg	41 504	P289		Fl	8872	7897	87	11.07.2024	5,2	ebay			
+		II	DRG	-	Ci-28	Nürnberg	41 504	P290		Fl	8872	7897	87	14.08.2025	5,238	ebay			
+		II	DRG	-	Ci-28	Nürnberg	41 504	P291		Fl	8872		87	30.07.2021	10,3266666666667	ebay			
+		II	DRG	-	Ci-28	Nürnberg	84 523	P292		Fl	8662		87						
+		II	DRG	-	Cid-27	Nürnberg	83 072	P293		Fl	8659		87	06.12.2018	21,16	ebay Nann		Nürnberg - Forchheim - Beringersmühle	
+;Städteexpress
+		IV	DR	-	Ame		51 50 10 40 206-0	P294		HN	902151		165		46,375	Modellbahn-Apitz		Ex 170/177 Elbflorenz Dresden-Berlin	
+		IV	DR	-	Ame		51 50 10 40 206-0	P295		HN	902151		165		46,375	Modellbahn-Apitz		Ex 170/177 Elbflorenz Dresden-Berlin	
+		IV	DR	-	Bme		51 50 21 53 005-7	P296		HN	902182		165		46,375	Modellbahn-Apitz		Ex 170/177 Elbflorenz Dresden-Berlin	
+		IV	DR	-	Bme		51 50 21 53 005-7	P297		HN	902182		165		46,375	Modellbahn-Apitz		Ex 170/177 Elbflorenz Dresden-Berlin	
+		IV	DR	-	Bmh		50 50 21 12 004-1	P298		HN	902516		165	17.09.2024	42,11	ebay		Ex 170/177 Elbflorenz Dresden-Berlin	
+		IV	DR	-	Bmh		50 50 21 12 000-9	P299		HN	902547		165	17.09.2024	42,11	ebay		Ex 170/177 Elbflorenz Dresden-Berlin	
+		IV	DR	-	Ame			P300		HN	4435		165	08.01.2025	42,49	MSL			
+		IV	DR	-	Bme			P301		HN	4435		165	08.01.2025	42,49	MSL			
+		IV	Mitropa	-	Wrge			P302		Br	65058		117		50				
+;Internationaler Verkehr (UIC Y, Z)
+		IV	DR	-	BDme		51 50 82 45 007-8	P303		Tr	15965		153	05.10.2015	26,99	ebay		Erfurt - Karl-Marx-Stadt	
+x		IV	DR	-	BDme		51 50 82 45 007-8	P304		Tr	15965		153	11.09.2025	36,5	ebay		Erfurt - Karl-Marx-Stadt	Für etwa 55€ verkaufen, aber Trittstufen! (-10€ dafür)
+		IV	DR	-	Ame			P305		HN	4141		165	18.06.2015	20,54	dm-toys (ebay)			
+		IV	DR	-	Bme		51 50 20-40 129-2	P306		Tr	15964		153	11.09.2025	36,5	ebay		Erfurt - Karl-Marx-Stadt	
+		IV	DR	-	Bme			P307		Tr	15963		153	11.09.2025	36,5	ebay		Erfurt - Karl-Marx-Stadt	
+		IV	DR	-	Bme		51 50 21 53-204-6	P308		Ar	0348.1	0348	165	12.10.2024	30	Modellbahn Rhein-Main			Wagen mit 30€ bewertet
+		IV	DR	-	Bme		51 50 21 53-124-6	P309		Ar	0348.2	0348	165	12.10.2024	30	Modellbahn Rhein-Main			Wagen mit 30€ bewertet
+		IV	DR	-	Bme		51 50 21 53-096-6	P310		Ar	0348.3	0348	165	12.10.2024	30	Modellbahn Rhein-Main			Wagen mit 30€ bewertet
+		IV	DR	-	Bme			P311		HN	4436-2		165	16.01.2024	40,2166666666667	Ars Technica		D242 Paris-Warschau	
+		IV	DR	-	Bme			P312		HN	4436-3		165	16.01.2024	40,2166666666667	Ars Technica		D242 Paris-Warschau	
+		IV	Mitropa	-	WRm			P313		HN	4436-1		165	16.01.2024	40,2166666666667	Ars Technica		D242 Paris-Warschau	
+		IV	DR	-	Am203		51 80 10-40 223-9	P314		HN	4315		165	04.08.2023	24,95	ebay			
+		IV	DR	-	Bm234		51 80 22-41 037-8	P315		HN	4315		165	04.08.2023	24,95	ebay			
+		IV	DR	-	Bm233		51 80 22-40 951-1	P316		HN	4315		165	04.08.2023	24,95	ebay			
+		IV	DB	-				P317		Tr	15639-1		165	22.07.2026	0,446666666666668	ebay 		250 und 15639 verkauft	
+		IV	DB	-				P318		Tr	15639-1		165	22.07.2026	0,446666666666668	ebay 		250 und 15639 verkauft	
+		IV	DB	-				P319		Tr	15639-1		165	22.07.2026	0,446666666666668	ebay 		250 und 15639 verkauft	
+		IV	DB	-				P320		HN			165	22.07.2026	0,446666666666668	ebay 		250 und 15639 verkauft	
+		IV	DB	-				P321		HN			165	22.07.2026	0,446666666666668	ebay 		250 und 15639 verkauft	
+		IV	DB	-				P322		HN			165	22.07.2026	0,446666666666668	ebay 		250 und 15639 verkauft	
+;Binnenverkehr (UIC B)
+		IV	DR	-	B		51 50 20-40 030-2	P323		HN	4483-1		154	20.01.2026	43,9666666666667	MSL		Ohne!	
+		IV	DR	-	B		51 50 20-45 033-1	P324		HN	4483-2		154	20.01.2026	43,9666666666667	MSL		Ohne!	
+		IV	DR	-	WR		51 50 88-40111-9	P325		HN	4483-3		154	20.01.2026	43,9666666666667	MSL		Ohne!	
+		IV	DR	-	ABme		51 50 39-40 061-6	P326		Tr	15766.1		154	19.05.2025	38,3833333333333	ebay		Berlin Stadtb - Hamburg	Interzonenzug frühe Epoche IV
+		IV	DR	-	Bme		51 50 20-40 198-7	P327		Tr	15766.3		154	19.05.2025	38,3833333333333	ebay		Berlin Stadtb - Hamburg	Interzonenzug frühe Epoche IV
+		IV	DR	-	Bme		51 50 20-40 207-6	P328		Tr	15766.2		154	19.05.2025	38,3833333333333	ebay		Berlin Stadtb - Hamburg	Interzonenzug frühe Epoche IV
+		IV	DR	-	Bcme		51 50 59 40 009-0	P329		HN	01.01.4423		154	14.02.2025	39,9666666666667	ebay 			Liegewagen
+		IV	Mitropa	-	WLABm		51 50 70 40 177-5	P330		HN	01.02.4423		154	14.02.2025	39,9666666666667	ebay 			mit Zierstreifen
+		IV	Mitropa	-	WLABm		51 50 70 40 124-2	P331		HN	01.03.4423		154	14.02.2025	39,9666666666667	ebay 			mit Zierstreifen
+		IV	Mitropa	-	WRm		51 50 88 40 103-6	P332		HN	01.01.4424		154	14.02.2025	44,37	Modellbahn-Härtle			mit Zierstreifen
+		IV	DR	-	DDm		51 50 98 80 002-9	P333		HN	4424-2		165	14.02.2025	44,37	Modellbahn-Härtle			Autotransport
+		IV	DR	-	DDm		51 50 98 80 003-7	P334		HN	4424-3		165	14.02.2025	44,37	Modellbahn-Härtle			Autotransport
+;Binnenverkehr (Mitteleinstiegwagen)
+		IV	Mitropa	-	Wrge			P335		Br	65057		116,9	13.09.2017	27,5	MSL			
+		IV	DR	-	Bmhe		51 50 21-40 039-2	P336		Br	65100		165	09.08.2018	17,5	1zu160			
+		IV	DR	-	Bmhe		51 50 21-40 045-9	P337		Br	65101		165	09.08.2018	17,5	1zu160			
+		IV	DR	-	Bmhe		51 50 21-40 071-5	P338		Br	65102		165	09.08.2018	17,5	1zu160			
+		IV	DR	-	Bmhe		51 50 21-40 106-9	P339		Br	65103		165	09.08.2018	17,5	1zu160			
+		IV	DR	-	Bmhe		51 50 21-40 039-2	P340		Br	65100		165	26.05.2015	19,388	Modellbahn Kramm 			
+		IV	DR	-	Bmhe		51 50 21-45 078-5	P341		Br	65104		165	26.05.2015	16,3955	Modellbahn Kramm 			
+		IV	DR	-	Bmhe		51 50 21-45 094-2	P342		Br	65105		165	26.05.2015	16,3955	Modellbahn Kramm 			
+		IV	DR	-	Bmhe		51 50 21-45 101-5	P343		Br	65106		165	26.05.2015	16,3955	Modellbahn Kramm 			
+		IV	DR	-	Bmhe		51 50 21-45 120-5	P344		Br	65107		165	26.05.2015	16,3955	Modellbahn Kramm 			
+;Balt-Orient-Express
+		IV	DR	-	Bme		51 50 20-40 070-8	P345		Tr	15995.1	15995	153	18.09.2020	33,9666666666667	SMDV		Berlin Ost/Bhf - Bad Schandau - Praha stred - Stútovo - Budapest - Bucaresti Nord	
+		IV	DR	-	Ame		51 50 19-80 043-9	P346		Tr	15995.3	15995	153	18.09.2020	33,9666666666667	SMDV		Berlin Ost/Bhf - Bad Schandau - Praha stred - Stútovo - Budapest - Bucaresti Nord	
+		IV	DR	-	Bme		51 50 20-80 218-4	P347		Tr	15995.2	15995	153	18.09.2020	33,9666666666667	SMDV		Berlin Ost/Bhf - Bad Schandau - Praha stred - Stútovo - Budapest - Bucaresti Nord	
+		IV	Mitropa	-	WLAB		51 50 70-40 159-8	P348		Tr	15996.1	15996	153	23.09.2020	49,9666666666667	ebay			
+		IV	CFR	-	WLAB		51 53 70-50 019-8	P349		Tr	15996.2	15996	153	23.09.2020	49,9666666666667	ebay		Berlin Ost/Bhf - Bad Schandau - Praha stred - Stútovo - Budapest - Bucaresti Nord	
+		IV	MAV	-	WLAB		51 55 70-80 002-6	P350		Tr	15996.3	15996	153	23.09.2020	49,9666666666667	ebay		Berlin Ost/Bhf - Bad Schandau - Praha stred - Stútovo - Budapest	
+		IV	CSD	-	Bcm		51 54 59-41 156-4	P351		Tr	15997.1	15997	153	17.09.2020		dmToys		Berlin Ost/Bhf - Bad Schandau - Praha stred - Stútovo - Budapest - Bucaresti Nord	
+		IV	CSD	-	Bm		51 54 20-40 457-3	P352		Tr	15997.2	15997	153	17.09.2020		dmToys		Berlin Ost/Bhf - Bad Schandau - Praha stred - Stútovo - Budapest - Bucaresti Nord	
+		IV	CSD	-	Bm		51 54 20-41 771-6	P353		Tr	15997.3	15997	153	17.09.2020		dmToys		Berlin Ost/Bhf - Bad Schandau - Praha stred - Stútovo - Budapest - Bucaresti Nord	
+;Binneverkehr (Modernisierungswagen)
+		IV	DR	-	Bge		51 50 29 13 026-3	P354		HN	4205.1			03.02.2017	19,9966666666667	dm-toys			
+		IV	DR	-	Bge		51 50 29 45 268-5	P355		HN	4205.2			03.02.2017	19,9966666666667	dm-toys			
+		IV	DR	-	Bgre		51 50 85 45 518-3	P356		HN	4205.3			03.02.2017	19,9966666666667	dm-toys			
+		IV	DR	-	Age		51 50 17 45 061-8	P357		HN	4204.1			03.02.2017	19,9966666666667	dm-toys			
+		IV	DR	-	ABge		51 50 38 45 048-6	P358		HN	4204.2			03.02.2017	19,9966666666667	dm-toys			
+		IV	DR	-	Dgse		51 50 95 40 220-8	P359		HN	4204.3			03.02.2017	19,9966666666667	dm-toys			
+		IV	DR	-	Age		51 50 17 45 061-8	P360		HN	4204.1			17.05.2018	18,6666666666667	1zu160 Bernd Siebel			
+		IV	DR	-	ABge		51 50 38 45 048-6	P361		HN	4204.2			17.05.2018	18,6666666666667	1zu160 Bernd Siebel			
+x		IV	DR	-	Dgse		51 50 95 40 220-8	P362		HN	4204.3			17.05.2018	18,6666666666667	1zu160 Bernd Siebel			
+;Binnenverkehr (Lowa)
+		IV	DR	-	Bghqe		82-14 246-4	P363		HN	4183.1			14.02.2018	46,16	MSL			Steuerwagen, Kühn N025P, Adresse 29
+		IV	DR	-	Bghue		29-14 314-4	P364		HN	4183.2			14.02.2018	33,3	MSL			
+		IV	DR	-	Bghue		29-14 316-9	P365		HN	4192.1			14.02.2018	33,3033333333333	MSL			
+		IV	DR	-	Bghue		29-14 319-3	P366		HN	4192.2			14.02.2018	33,3033333333333	MSL			
+		IV	DR	-	Bghue		29-14 320-1	P367		HN	4192.3			14.02.2018	33,3033333333333	MSL			
+		IV	DR	-	Bghqe		50 50 80 14 200-1	P368		HN	2275.1			09.01.2018	45	MBFn			Steuerwagen
+		IV	DR	-	Bghue		50 50 29 40 025-6	P369		HN	2275.2			09.01.2018	35	MBFn			
+		IV	DR	-	Bghue		50 50 49 14216-1	P370		HN	4182.1			19.01.2018	38,97	dm-toys			
+		IV	DR	-	Bghue		50 50 49 14221-1	P371		HN	4182.2			19.01.2018	38,97	dm-toys			
+		IV	DR	-	Bghue		50 50 49 14230-1	P372		HN	4182.3			19.01.2018	38,97	dm-toys			
+;Binnenverkehr (ex Karwendel)
+x	Bild	III	DR	-	Pw4ü		641-013	P373		Li	364558			09.08.2024	20	1zu160			
+x	Bild	III	DR	-	A4ümp		241-015	P374		Li	364542			18.08.2021	15	ebay			ex Karwendel, 1 Trittstufe fehlt, Rückholfedern KKK fehlen
+x	Bild	III	DR	-	A4ümp		241-015	P375		Li	364542			09.08.2024	20	1zu160			
+x	Bild	III	DR	-	B4ümp		241-213	P376		Li	364543			09.08.2024	20	1zu160			
+x	Bild	III	DR	-	B4ümp		241-215	P377		Li	364544			09.08.2024	20	1zu160			
+;Binnenverkehr (ex Eilzugwagen 30er)
+		IV	DR	-	Düe		51 50 92 43 359-5	P378		Tr	15761.4	15761		21.08.2023	15	1zu160		Leipzig - Dresden - Zittau	
+		IV	DR	-	ABühe		57 50 38 14 652-9	P379		Tr	15761.1	15761		21.08.2023	15	1zu160		Leipzig - Dresden - Zittau	
+		IV	DR	-	ABühe		57 50 38 14 652-9	P380		Tr	15761.1	15761		21.08.2023	15	1zu160		Leipzig - Dresden - Zittau	
+		IV	DR	-	Bühe		57 50 28 14 526-7	P381		Tr	15761.2	15761		21.08.2023	15	1zu160		Leipzig - Dresden - Zittau	
+		IV	DR	-	Bühe		57 50 28 14 526-7	P382		Tr	15761.2	15761		21.08.2023	15	1zu160		Leipzig - Dresden - Zittau	
+		IV	DR	-	Bühe		57 50 28 14 531-4	P383		Tr	15761.3	15761		21.08.2023	15	1zu160		Leipzig - Dresden - Zittau	
+x	Bild	III	DR	-	WLABüe		60 50 70 10 100-7	P384		Tr	13719.4	13719		21.08.2023	15	1zu160		München - Bln Ostbf	Hat der vielleicht KK zum Wechseln?
+x		III	DR	-	WRüe		51 50 88 40 055-8	P385		Tr	13719.3	13719		21.08.2023	15	1zu160		München - Bln Ostbf	
+;Doppelstockeinzelwagen (Anfang 70er)
+		IV	DR	-	DBmqe		50 50 25-13 006-1	P386		Kü	91001		167	16.09.2015	24	Spielemax			
+		IV	DR	-	DBmue		50 50 25-13 039-2	P387		Kü	91003		167	16.09.2015	24	Spielemax			
+		IV	DR	-	DBmue		50 50 25-13 020-2	P388		Kü	91002		167	16.09.2015	24	Spielemax			
+		IV	DR	-	DBmue		50 50 25-13 030-1	P389		Fl	6260042.1	6260042	167	30.11.2024	40,185	SMDV			
+		IV	DR	-	DBmue		50 50 25-13 022-8	P390		Fl	6260042.2	6260042	167	30.11.2024	40,185	SMDV			
+;Doppelstockeinzelwagen (Sputnikverkehr)
+		IV	DR	-	DBmu			P391		Kü	91045		167	26.09.2017	36,83	besserepreise			
+		IV	DR	-	DBmu			P392		Kü	91045		167	26.09.2017	36,83	besserepreise			
+		IV	DR	-	DBmq			P393		Kü	91045		167	26.09.2017	36,83	besserepreise			
+		IV	DR	-	DBmu			P394		Kü	91045		167	26.09.2017	31,87	besserepreise			
+		IV	DR	-	DBmu			P395		Kü	91045		167	26.09.2017	31,87	besserepreise			
+;Doppelstockzüge (DB7, D13)
+		IV	DR	-	DBvx		50 50 26-25 467-0	P396		Tr	13389.1	13389	121	16.11.2012	34,41				
+		IV	DR	-	DBvx		50 50 26-25 468-8	P397		Tr	13389.2	13389	121						
+		IV	DR	-	DBvq		50 50 26-12 085-5	P398		Tr	13392.1	13392	121	18.10.2018	36,25				
+		IV	DR	-	DBva		50 50 26-12 086-3	P399		Tr	13393.1	13392	104,5	18.10.2018	36,25				
+		IV	DR	-	DBva		50 50 26-12 087-1	P400		Tr	13393.2	13392	104,5						
+		IV	DR	-	DBvq		50 50 26-12 088-9	P401		Tr	13392.2	13392	121						
+		IV	DR	-	DBvq			P402		HN	4472.1	4472		09.01.2025	45,975	MSL			
+		IV	DR	-	DBva			P403		HN	4472.2	4472		09.01.2025	45,975	MSL			
+		IV	DR	-	DBva			P404		HN	4472.3	4472		09.01.2025	45,975	MSL			
+		IV	DR	-	DBvq			P405		HN	4473.4	4472		09.01.2025	45,975	MSL			
+;4achs. Rekowagen
+		IV	DR	-	BDghwse			P406		Br	65044		116,9	03.12.2012	39,85	Hünerbein			
+		IV	DR	-	BDghwse			P407	-				117	24.03.2026	34,5333333333333	1zu160 Fabian Goll		Dach rehbraun	
+		IV	DR	-	Bghwe		50 50 28-05 009-2	P408		Br	65043		116,9	27.11.2012	35,91	Exoneit			
+		IV	DR	-	Bghwe		50 50 28-05 009-2	P409		Br	65043		116,9	27.11.2012	35,91	Exoneit			
+		IV	DR	-	Bghwe		57 50 28-14 455-9	P410		Br	65033		116,9	10.06.2018	26,6666666666667	1zu160			
+		IV	DR	-	Bghwe		57 50 28-13 262-0	P411		Br	65034		116,9	10.06.2018	26,6666666666667	1zu160			
+		IV	DR	-	Bghwe		57 50 28-13 262-0	P412	-	Br	65034		116,9	10.06.2018	34,5333333333333	1zu160 Fabian Goll			
+		IV	DR	-	Bghwe		57 50 28-13 262-0	P413	-	Br	65034		116,9	10.06.2018	34,5333333333333	1zu160 Fabian Goll			
+		IV	DR	-	Bghwe		57 50 28-13 262-0	P414	-	Br	65034		116,9	10.06.2018	34,5333333333333	1zu160 Fabian Goll			
+		IV	DR	-	Bghwe		57 50 28-13 420-4	P415		Br	65035		116,9	10.06.2018	26,6666666666667	1zu160			
+		IV	DR	-	Bghwe		57 50 28-13 420-4	P416	-	Br	65035		116,9	10.06.2018	34,5333333333333	1zu160 Fabian Goll			
+		IV	DR	-	Bghwe		57 50 28-13 420-4	P417	-	Br	65035		116,9	10.06.2018	34,5333333333333	1zu160 Fabian Goll			
+;2/3achs. Rekowagen
+		IV	DR	-				P418		HN	4167.1	4167	82	21.11.2014	16,598	MSL			Propangaszug
+		IV	DR	-				P419		HN	4167.2	4167	82	21.11.2014	16,598	MSL			Propangaszug
+		IV	DR	-				P420		HN	4167.3	4167	82	21.11.2014	16,598	MSL			Propangaszug
+		IV	DR	-	Bag		50 50 24-25 371-1	P421		HN	4163.1	4163	82	15.12.2015	20,8666666666667	ds-Automodelle			
+		IV	DR	-	Bag		50 50 23-24 719-8	P422		HN	4163.1	4163	82	15.12.2015	20,8666666666667	ds-Automodelle			
+		IV	DR	-	Baage		50 50 24-15 020-1	P423		HN	4163.2	4163	82	15.12.2015	20,8666666666667	ds-Automodelle			
+		IV	DR	-	Bage		50 50 23-15 296-2	P424		HN	4163.2	4163	82	15.12.2015	20,8666666666667	ds-Automodelle			
+		IV	DR	-	Bage		50 50 23-15 188-7	P425		HN	4163.3	4163	82	15.12.2015	20,8666666666667	ds-Automodelle			
+		IV	DR	-	Dag		50 50 93 50 070-2	P426		HN	4163.3	4163	82	15.12.2015	20,8666666666667	ds-Automodelle			
+		IV	DR	-	Post a		50 50 90 15 871-6	P427		HN	01.01.4164	4164	82	29.09.2018	21,5	1zu160			
+		IV	DR	-	Bagtre		50 50 23 15 351-1	P428		HN	01.02.4164	4164	82	29.09.2018	21,5	1zu160			Traglasten
+;3achs. Umbauwagen
+x		IV	DB	x	BD3yg		99 331 Wt	P429		Fl	8097		83	23.12.2022	16	1zu160		Hagen Westf.-Düsseldrof Hbf	
+x		IV	DB	x	B3yg		86 033 Wt	P430		Fl	8096		83	23.12.2022	16	1zu160		Hagen Westf.-Düsseldrof Hbf	
+x		IV	DB	x	AB3yg		37 003 Wt	P431		Fl	8098		83	23.12.2022	16	1zu160		Hagen Westf.-Düsseldrof Hbf	
+x		IV	DB	x	B3yg		85 862 Wt	P432		Fl	8099		83	23.12.2022	16	1zu160		Hagen Westf.-Düsseldrof Hbf	
+x		IV	DB	x	B3yg		85 862 Wt	P433		Fl	8099		83	23.12.2022	16	1zu160		Hagen Westf.-Düsseldrof Hbf	

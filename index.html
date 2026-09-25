@@ -1226,6 +1226,25 @@
         .inv-table tbody tr:nth-child(even) { background: #f9f9f9; }
         .inv-table tbody tr:hover { background: #e8f0fe !important; }
         .inv-img-cell img { max-height: 40px; display: block; }
+        /* G-Tabelle: Gruppenköpfe und ausgeblendet */
+        .inv-g-group-header td {
+            background: #d4e2f0 !important;
+            font-weight: bold;
+            font-size: 12px;
+            color: #1a3a5c;
+            cursor: pointer;
+            user-select: none;
+            padding: 3px 6px;
+        }
+        .inv-g-group-header:hover td { background: #bdd0e8 !important; }
+        .inv-g-toggle { display:inline-block; width:16px; text-align:center; font-weight:bold; margin-right:4px; }
+        .inv-g-row.g-collapsed { display: none; }
+        /* Zeilen mit z-Spalte == 'x': ausgeblendet-Markierung */
+        .inv-g-row.g-ausgeblendet td:first-child { color: #aaa; }
+        .inv-g-row.g-ausgeblendet { color: #bbb; font-style: italic; }
+        /* Globale Epochen-Buttons */
+        .global-ep-btn { font-size:11px; padding:2px 6px; border:1px solid #999; border-radius:3px; background:#fff; cursor:pointer; }
+        .global-ep-btn.active { background:#1a3a5c; color:#fff; border-color:#1a3a5c; }
     </style>
 </head>
 
@@ -1255,6 +1274,13 @@
                 onclick="switchMainTab('rollmaterial')"
                 title="Rollmaterial-Inventar anzeigen">Rollmaterial<span class="tab-pin" id="pin-rollmaterial" title="Anpinnen, um diesen Tab beim Neustart standardmäßig zu öffnen" onclick="event.stopPropagation(); toggleTabPin('rollmaterial');"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17 4a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h1v5.586l-1.707 1.707A1 1 0 0 0 8 15h3v5a1 1 0 0 0 2 0v-5h3a1 1 0 0 0 .707-1.707L15 11.586V7h1a1 1 0 0 0 1-1V4z"/></svg></span></button>
             <div id="tab-bar-spacer"></div>
+            <div id="global-ep-filter" style="display:flex; gap:2px; margin-right:10px; align-items:center;">
+                <span style="font-size:11px; margin-right:4px;">Epoche:</span>
+                <button class="global-ep-btn" id="global-ep-I"   onclick="globalEpToggle('I')"  >I</button>
+                <button class="global-ep-btn active" id="global-ep-II"  onclick="globalEpToggle('II')" >II</button>
+                <button class="global-ep-btn" id="global-ep-III" onclick="globalEpToggle('III')">III</button>
+                <button class="global-ep-btn" id="global-ep-IV"  onclick="globalEpToggle('IV')" >IV</button>
+            </div>
             <button id="fullscreen-btn" title="Vollbild">
                 <!-- Diagonal double-arrow icon: expand -->
                 <svg id="fs-icon-expand" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
@@ -1428,8 +1454,10 @@
                             <div class="col-header-row1">
                                 <span class="col-tab active" id="rm-tab-loks" onclick="switchMgTab('loks')">Loks</span>
                                 <span class="tab-pin" id="pin-sub-mg-loks" title="Anpinnen, um diesen Tab beim Neustart standardmäßig zu öffnen" onclick="toggleSubTabPin('mg','loks');"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M17 4a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h1v5.586l-1.707 1.707A1 1 0 0 0 8 15h3v5a1 1 0 0 0 2 0v-5h3a1 1 0 0 0 .707-1.707L15 11.586V7h1a1 1 0 0 0 1-1V4z"/></svg></span>
-                                <span class="col-tab" id="rm-tab-wagen" onclick="switchMgTab('wagen')">Wagen</span>
+                                <span class="col-tab" id="rm-tab-wagen" onclick="switchMgTab('wagen')">P</span>
                                 <span class="tab-pin" id="pin-sub-mg-wagen" title="Anpinnen, um diesen Tab beim Neustart standardmäßig zu öffnen" onclick="toggleSubTabPin('mg','wagen');"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M17 4a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h1v5.586l-1.707 1.707A1 1 0 0 0 8 15h3v5a1 1 0 0 0 2 0v-5h3a1 1 0 0 0 .707-1.707L15 11.586V7h1a1 1 0 0 0 1-1V4z"/></svg></span>
+                                <span class="col-tab" id="rm-tab-g" onclick="switchMgTab('g')">G</span>
+                                <span class="tab-pin" id="pin-sub-mg-g" title="Anpinnen, um diesen Tab beim Neustart standardmäßig zu öffnen" onclick="toggleSubTabPin('mg','g');"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M17 4a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h1v5.586l-1.707 1.707A1 1 0 0 0 8 15h3v5a1 1 0 0 0 2 0v-5h3a1 1 0 0 0 .707-1.707L15 11.586V7h1a1 1 0 0 0 1-1V4z"/></svg></span>
                             </div>
                         </div>
                         <div class="col-content" id="rm-content-fahrzeuge" style="padding:0; display:flex; flex-direction:column; overflow:hidden;">
@@ -1497,6 +1525,29 @@
                                 </div>
                                 <!-- Wagenliste -->
                                 <div id="wagen-grid"></div>
+                            </div>
+                            <div id="rm-g-view" style="display: none; padding:0; flex-direction:column; overflow:hidden;">
+                                <!-- G Filter-Bar -->
+                                <div id="g-filter-bar" style="display:flex; align-items:center; gap:5px; padding:5px; background:#f0f0f0; border-bottom:1px solid #ccc;">
+                                    <input type="text" id="g-text-filter" placeholder="Suche…" title="Freitext-Filter" oninput="gApplyFilter()">
+                                    <select id="g-garnitur-filter" onchange="gApplyFilter()" style="font-size:11px; margin-right:5px; height: 20px;">
+                                        <option value="all">Egal (Alle)</option>
+                                        <option value="in">In Garnitur</option>
+                                        <option value="out">Nicht in Garnitur</option>
+                                    </select>
+                                    <button id="g-sort-btn" class="wagen-gat-btn" onclick="gToggleNotUsed()" title="Nur nicht verwendete G-Wagen anzeigen">
+                                        Nicht verw.
+                                    </button>
+                                    <button id="g-reset-btn" onclick="gResetFilter()" title="Filter zurücksetzen">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="1 4 1 10 7 10"></polyline>
+                                            <path d="M3.51 15a9 9 0 1 0 .49-3.5"></path>
+                                        </svg>
+                                    </button>
+                                    <span id="g-count" style="font-size:11px;color:#555;white-space:nowrap;margin-left:2px;"></span>
+                                </div>
+                                <!-- G-Wagenliste -->
+                                <div id="g-grid" style="flex:1; overflow-y:auto; padding:5px; background:#fff;"></div>
                             </div>
                         </div>
                     </div>
@@ -1577,8 +1628,10 @@
                     <div style="display:flex; align-items:center; background:#d0d0d0; border-bottom:1px solid #bbb; flex-shrink:0; padding:4px 8px; gap:6px;">
                         <span class="col-tab active" id="inv-tab-loks" onclick="switchInvTab('loks')">Loks</span>
                         <span class="tab-pin" id="pin-sub-inv-loks" title="Anpinnen, um diesen Tab beim Neustart standardmäßig zu öffnen" onclick="toggleSubTabPin('inv','loks');"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M17 4a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h1v5.586l-1.707 1.707A1 1 0 0 0 8 15h3v5a1 1 0 0 0 2 0v-5h3a1 1 0 0 0 .707-1.707L15 11.586V7h1a1 1 0 0 0 1-1V4z"/></svg></span>
-                        <span class="col-tab" id="inv-tab-wagen" onclick="switchInvTab('wagen')">Wagen</span>
+                        <span class="col-tab" id="inv-tab-wagen" onclick="switchInvTab('wagen')">P</span>
                         <span class="tab-pin" id="pin-sub-inv-wagen" title="Anpinnen, um diesen Tab beim Neustart standardmäßig zu öffnen" onclick="toggleSubTabPin('inv','wagen');"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M17 4a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h1v5.586l-1.707 1.707A1 1 0 0 0 8 15h3v5a1 1 0 0 0 2 0v-5h3a1 1 0 0 0 .707-1.707L15 11.586V7h1a1 1 0 0 0 1-1V4z"/></svg></span>
+                        <span class="col-tab" id="inv-tab-g" onclick="switchInvTab('g')">G</span>
+                        <span class="tab-pin" id="pin-sub-inv-g" title="Anpinnen, um diesen Tab beim Neustart standardmäßig zu öffnen" onclick="toggleSubTabPin('inv','g');"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M17 4a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h1v5.586l-1.707 1.707A1 1 0 0 0 8 15h3v5a1 1 0 0 0 2 0v-5h3a1 1 0 0 0 .707-1.707L15 11.586V7h1a1 1 0 0 0 1-1V4z"/></svg></span>
                     </div>
                     <!-- Filter-Bar Wagen -->
                     <div id="inv-wagen-filter" class="inv-filter-bar" style="display:none;">
@@ -1658,6 +1711,34 @@
                                 <th onclick="invSort('wagen', 'art')" style="cursor:pointer; user-select:none; color:#333;" title="Sortieren">Artikelnummer<span class="sort-arrow" id="sort-wagen-art" style="color:#888;"> ↕</span></th>
                                 <th onclick="invSort('wagen', 'luemp')" style="cursor:pointer; user-select:none; color:#333;" title="Sortieren">LüP (mm)<span class="sort-arrow" id="sort-wagen-luemp" style="color:#888;"> ↕</span></th>
                             </tr></thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                    <!-- G-Güterwagen Inventar -->
+                    <div id="inv-g-filter-bar" style="display:none; align-items:center; gap:6px; padding:4px 8px; background:#e8e8e8; flex-shrink:0; flex-wrap:wrap;">
+                        <input type="text" id="inv-g-id-filter"  placeholder="ID…"       oninput="invGRender()" style="width:55px; font-size:11px; padding:2px 4px; border:1px solid #bbb; border-radius:3px;">
+                        <input type="text" id="inv-g-gat-filter" placeholder="Gattung…"  oninput="invGRender()" style="width:80px;">
+                        <input type="text" id="inv-g-bv-filter"  placeholder="BV…"       oninput="invGRender()" style="width:50px;">
+                        <input type="text" id="inv-g-art-filter" placeholder="Art.-Nr.…" oninput="invGRender()" style="width:70px;">
+                        <div id="inv-g-her-btns" class="inv-her-btns"></div>
+                        <label style="font-size:11px; display:flex; align-items:center; gap:3px;">
+                            <input type="checkbox" id="inv-g-ausgeblendet-cb" onchange="invGRender()"> Ausgeblendet
+                        </label>
+                        <button class="inv-reset-btn" onclick="invGReset()" title="Filter zurücksetzen">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 .49-3.5"></path></svg>
+                        </button>
+                        <span id="inv-g-count" class="inv-count"></span>
+                    </div>
+                    <div id="inv-g-view" style="flex:1; overflow-y:auto; display:none;">
+                        <table class="inv-table" id="inv-g-table" style="table-layout:auto;">
+                            <thead>
+                                <tr id="inv-g-filter-row" style="background:#e8e8e8;">
+                                    <!-- Filterzeile wird per JS gefüllt -->
+                                </tr>
+                                <tr id="inv-g-header-row">
+                                    <!-- Kopfzeile wird per JS gefüllt -->
+                                </tr>
+                            </thead>
                             <tbody></tbody>
                         </table>
                     </div>
@@ -2674,12 +2755,20 @@
             window._mgActiveTab = tab;
             document.getElementById('rm-tab-loks').classList.remove('active');
             document.getElementById('rm-tab-wagen').classList.remove('active');
+            const tabG = document.getElementById('rm-tab-g');
+            if (tabG) tabG.classList.remove('active');
+            
             document.getElementById('rm-loks-view').style.display = 'none';
             document.getElementById('rm-wagen-view').style.display = 'none';
+            const viewG = document.getElementById('rm-g-view');
+            if (viewG) viewG.style.display = 'none';
 
             if (tab === 'loks') {
                 document.getElementById('rm-tab-loks').classList.add('active');
                 document.getElementById('rm-loks-view').style.display = 'flex';
+            } else if (tab === 'g') {
+                if (tabG) tabG.classList.add('active');
+                if (viewG) viewG.style.display = 'flex';
             } else {
                 document.getElementById('rm-tab-wagen').classList.add('active');
                 document.getElementById('rm-wagen-view').style.display = 'flex';
@@ -3112,6 +3201,133 @@
             wagenRender();
         };
 
+        let _gFilterNotUsed = false;
+        function gInGarnitur(entry) {
+            for (const g of _garnituren) {
+                const idx = g.vehicles.findIndex(v => v.type === 'g' && v.entry === entry);
+                if (idx !== -1) return { id: g.id, pos: idx + 1 };
+            }
+            return null;
+        }
+
+        function gMatchesFilter(entry) {
+            if (entry._type !== 'data') return false;
+            if (entry._ausgeblendet) return false;
+            const search = (document.getElementById('g-text-filter')?.value || '').trim().toLowerCase();
+            const inGarniturFilter = document.getElementById('g-garnitur-filter')?.value || 'all';
+            
+            const activeEpBtn = document.querySelector('.global-ep-btn.active');
+            const epTxt = activeEpBtn ? activeEpBtn.textContent.trim().toLowerCase() : '';
+            if (epTxt && (entry['Ep'] || '').toLowerCase() !== epTxt) return false;
+
+            if (_gFilterNotUsed && gInGarnitur(entry)) return false;
+            if (inGarniturFilter === 'in' && !gInGarnitur(entry)) return false;
+            if (inGarniturFilter === 'out' && gInGarnitur(entry)) return false;
+
+            if (search) {
+                const idMatch = (entry['Id'] || '').toLowerCase().includes(search);
+                const gatMatch = (entry['Gattung'] || '').toLowerCase().includes(search);
+                if (!idMatch && !gatMatch) return false;
+            }
+            return true;
+        }
+
+        function gRender() {
+            const grid = document.getElementById('g-grid');
+            if (!grid) return;
+            grid.innerHTML = '';
+            if (!_gData || _gData.length === 0) return;
+            let visible = _gData.filter(gMatchesFilter);
+
+            visible.sort((a, b) => (a['Gattung'] || '').localeCompare(b['Gattung'] || ''));
+
+            const countEl = document.getElementById('g-count');
+            if (countEl) countEl.textContent = visible.length + '\u00a0Treffer';
+
+            if (visible.length === 0) {
+                grid.textContent = 'Keine G-Wagen gefunden.';
+                return;
+            }
+            for (const entry of visible) {
+                const item = document.createElement('div');
+                item.className = 'wagen-item'; 
+                
+                const inG = gInGarnitur(entry);
+                if (inG) {
+                    const badge = document.createElement('div');
+                    badge.className = 'wagen-badge';
+                    badge.textContent = `${inG.id}.${inG.pos}`;
+                    item.appendChild(badge);
+                }
+
+                item.draggable = true;
+                item.ondragstart = (e) => {
+                    _dragSource = { type: 'g', entry: entry, garniturId: null, vIndex: null, sourceItem: item };
+                    e.dataTransfer.setData('text/plain', 'wagen-item');
+                    const cnt = document.getElementById('mg-content-zuege');
+                    if (cnt) {
+                        window._mgPreDragScrollTop = cnt.scrollTop;
+                        window._mgPreDragTrackScrolls = {};
+                        cnt.querySelectorAll('.garnitur-track').forEach(t => {
+                            if (t.dataset.gid) window._mgPreDragTrackScrolls[t.dataset.gid] = t.scrollLeft;
+                        });
+                    }
+                };
+
+                const gattungVal = entry['Gattung'] || '';
+                const gattungbeziVal = entry['Gattungsbezi'] || '';
+                const displayGattung = `${gattungVal} ${gattungbeziVal} ${entry['Wagennummer'] || ''}`.trim();
+                const imgSrc = `data/img/gwagen/${gattungVal}-${gattungbeziVal}.png`;
+                
+                const img = document.createElement('img');
+                img.alt = displayGattung;
+                img.src = imgSrc;
+                img.onerror = function() {
+                    if (!this._fallback) {
+                        this._fallback = true;
+                        this.title = 'Bild nicht gefunden: ' + imgSrc;
+                        this.src   = PWAGEN_IMG_PATH + 'Unbekannt.png'; 
+                    }
+                };
+
+                const cap = document.createElement('div');
+                cap.className = 'wagen-caption';
+                const bold = document.createElement('strong');
+                bold.textContent = displayGattung;
+                cap.appendChild(bold);
+                
+                const meta = [entry['Herst'], entry['Art.-Nr.']].filter(Boolean).join('\u00a0');
+                if (meta) {
+                    const span = document.createElement('span');
+                    span.className = 'wagen-meta';
+                    span.textContent = '\u00a0(' + meta + ')';
+                    cap.appendChild(span);
+                }
+
+                item.appendChild(img);
+                item.appendChild(cap);
+                grid.appendChild(item);
+            }
+        }
+
+        window.gApplyFilter = function() { gRender(); };
+        window.gToggleNotUsed = function() {
+            _gFilterNotUsed = !_gFilterNotUsed;
+            const b = document.getElementById('g-sort-btn');
+            if (b) b.classList.toggle('active', _gFilterNotUsed);
+            gRender();
+        };
+        window.gResetFilter = function() {
+            const t = document.getElementById('g-text-filter');
+            if (t) t.value = '';
+            const f = document.getElementById('g-garnitur-filter');
+            if (f) f.value = 'all';
+            _gFilterNotUsed = false;
+            const b = document.getElementById('g-sort-btn');
+            if (b) b.classList.remove('active');
+            gRender();
+        };
+
         // --- Modellzuggarnituren ---
         let _garnituren = [];
         let _dragSource = null;
@@ -3288,6 +3504,7 @@
         async function _loadGarnituren_internal() {
             await loksLoadCSV();
             await wagenLoadCSV();
+            await gLoadCSV();
             // also preload magazine data for dropdowns
             if (window._magazineData.length === 0) {
                 try {
@@ -3641,9 +3858,8 @@
 
             // Fahrzeug, das bereits in einer anderen Garnitur ist, nicht einfügen
             if (!_dragSource.garniturId) {
-                const alreadyIn = _dragSource.type === 'lok'
-                    ? loksInGarnitur(_dragSource.entry)
-                    : wagenInGarnitur(_dragSource.entry);
+                const alreadyIn = _dragSource.type === 'lok' ? loksInGarnitur(_dragSource.entry)
+                                : (_dragSource.type === 'g' ? gInGarnitur(_dragSource.entry) : wagenInGarnitur(_dragSource.entry));
                 if (alreadyIn) {
                     // Flash-Meldung auf dem Source-Item in der linken Liste
                     const srcItem = _dragSource.sourceItem;
@@ -3686,6 +3902,7 @@
                     _dragSource = null;
                     renderGarnituren();
                     wagenRender();
+                    if (window._gLoaded) gRender();
                     if (window._loksLoaded) loksRender(); 
                     return;
                 }
@@ -3698,7 +3915,7 @@
 
             const newVehicle = _dragSource.type === 'lok' 
                 ? { type: 'lok', entries: [movedLokEntry], activeIndex: 0 } 
-                : { type: 'wagen', entry: _dragSource.entry };
+                : { type: _dragSource.type, entry: _dragSource.entry };
             
             gTarget.vehicles.splice(insertIndex, 0, newVehicle);
             
@@ -3706,6 +3923,7 @@
             renderGarnituren();
             wagenRender();
             if (window._loksLoaded) loksRender(); 
+            if (window._gLoaded) gRender();
         }
 
         // Drag-State für ganze Garnitur-Zeilen
@@ -4461,8 +4679,8 @@
                         if (!isNaN(l)) vLen = l;
                     }
                     if (vLen === 0) {
-                        isFallback = true;
                         if (v.type === 'wagen') vLen = 160;
+                        else if (v.type === 'g') vLen = 160;
                         else if (v.type === 'lok') vLen = 100;
                     }
                     
@@ -4500,7 +4718,8 @@
                     
                     let imgSrc = '';
                     if (v.type === 'wagen') imgSrc = PWAGEN_IMG_PATH + (activeEntry.gattungFile || activeEntry.gattung.replace(/\//g, '')) + '.png';
-                    else if (v.type === 'lok') imgSrc = LOKS_IMG_PATH + activeEntry.gattung + '.png';
+                    else if (v.type === 'g') imgSrc = `data/img/gwagen/${activeEntry['Gattung'] || ''}-${activeEntry['Gattungsbezi'] || ''}.png`;
+                    else if (v.type === 'lok') imgSrc = LOKS_IMG_PATH + (activeEntry.gattung || activeEntry.id) + '.png';
                     const img = document.createElement('img');
                     img.src = imgSrc;
                     if (v.mirrored) img.classList.add('mirrored');
@@ -4528,7 +4747,11 @@
 
                     const lbl = document.createElement('div');
                     lbl.className = 'garnitur-item-label';
-                    lbl.textContent = v.type === 'lok' ? (activeEntry.gattung || activeEntry.id) : (activeEntry.gattungDisplay || activeEntry.gattung.split(';')[0]);
+                    if (v.type === 'g') {
+                        lbl.textContent = `${activeEntry['Gattung'] || ''} ${activeEntry['Gattungsbezi'] || ''} ${activeEntry['Wagennummer'] || ''}`.trim();
+                    } else {
+                        lbl.textContent = v.type === 'lok' ? (activeEntry.gattung || activeEntry.id) : (activeEntry.gattungDisplay || (activeEntry.gattung || '').split(';')[0]);
+                    }
                     item.appendChild(lbl);
 
                     track.appendChild(item);
@@ -4597,6 +4820,7 @@
                     _dragSource = null;
                     renderGarnituren();
                     wagenRender();
+                    if (window._gLoaded) gRender();
                     if (window._loksLoaded) loksRender();
                 }
             }
@@ -4871,8 +5095,8 @@
         const SUB_PIN_GROUPS = {
             'fplzp': { tabs: ['laufweg', 'zp'], pinIdPrefix: 'pin-sub-fplzp-' },
             'kbs':   { tabs: ['orm', 'img'],     pinIdPrefix: 'pin-sub-kbs-'   },
-            'mg':    { tabs: ['loks', 'wagen'],  pinIdPrefix: 'pin-sub-mg-'    },
-            'inv':   { tabs: ['loks', 'wagen'],  pinIdPrefix: 'pin-sub-inv-'   }
+            'mg':    { tabs: ['loks', 'wagen', 'g'], pinIdPrefix: 'pin-sub-mg-'    },
+            'inv':   { tabs: ['loks', 'wagen', 'g'], pinIdPrefix: 'pin-sub-inv-'   }
         };
 
         function applySubPinState(group) {
@@ -6954,18 +7178,33 @@ ${von} – ${nach}`;
             window._invActiveTab = tab;
             document.getElementById('inv-tab-loks').classList.toggle('active', tab === 'loks');
             document.getElementById('inv-tab-wagen').classList.toggle('active', tab === 'wagen');
+            document.getElementById('inv-tab-g').classList.toggle('active', tab === 'g');
             const wagenFilter = document.getElementById('inv-wagen-filter');
             if (wagenFilter) wagenFilter.style.display = tab === 'wagen' ? '' : 'none';
+            const gFilterBar = document.getElementById('inv-g-filter-bar');
+            if (gFilterBar) gFilterBar.style.display = tab === 'g' ? 'flex' : 'none';
             document.getElementById('inv-loks-view').style.display = tab === 'loks' ? 'block' : 'none';
             document.getElementById('inv-wagen-view').style.display = tab === 'wagen' ? 'block' : 'none';
+            document.getElementById('inv-g-view').style.display = tab === 'g' ? 'block' : 'none';
             
             const pHer = window._herstellerLoaded ? Promise.resolve() : loadHerstellerCSV();
             if (tab === 'loks') {
                 const pData = window._loksLoaded ? Promise.resolve() : loksLoadCSV();
                 Promise.all([pData, pHer]).then(() => { _invBuildLoksHerBtns(); invLoksRender(); });
-            } else {
+            } else if (tab === 'wagen') {
                 const pData = window._wagenLoaded ? Promise.resolve() : wagenLoadCSV();
                 Promise.all([pData, pHer]).then(() => { _invBuildWagenHerBtns(); invWagenRender(); });
+            } else if (tab === 'g') {
+                const isFirstOpen = !window._gLoaded;
+                const pData = window._gLoaded ? Promise.resolve() : gLoadCSV();
+                Promise.all([pData, pHer]).then(() => {
+                    if (isFirstOpen) {
+                        const epEl = document.getElementById('inv-g-ep-filter');
+                        if (epEl && !epEl.value) epEl.value = 'II';
+                    }
+                    _invBuildGHerBtns();
+                    invGRender();
+                });
             }
         };
 
@@ -7197,6 +7436,260 @@ ${von} – ${nach}`;
             document.querySelectorAll('#inv-wagen-her-btns .inv-her-btn').forEach(b => b.classList.remove('active'));
             invWagenRender();
         };
+
+        // ============================================================
+        // G-Güterwagen Inventar
+        // ============================================================
+        let _gData = [];          // Alle Zeilen aus g.csv (inkl. Gruppen-Header)
+        let _gHeaders = [];       // Spaltennamen
+        let _gHerFilter = new Set();
+        let _gGroupCollapsed = {}; // groupKey -> true wenn collapsed
+
+        let _gLoadPromise = null;
+        function gLoadCSV() {
+            if (!_gLoadPromise) _gLoadPromise = _gLoadCSV_internal();
+            return _gLoadPromise;
+        }
+
+        async function _gLoadCSV_internal() {
+            window._gLoaded = true;
+            try {
+                const resp = await fetch('data/rollmaterial/g.csv');
+                const buf  = await resp.arrayBuffer();
+                const text = new TextDecoder('utf-8').decode(buf);
+                const lines = text.split(/\r?\n/);
+                _gHeaders = lines[0].split('\t').map(h => h.trim());
+                _gData = [];
+                let currentGroup = null;
+                let groupIdx = 0;
+                for (let i = 1; i < lines.length; i++) {
+                    const raw = lines[i];
+                    if (!raw.trim()) continue;
+                    if (raw.startsWith(';')) {
+                        // Zwischenüberschrift
+                        currentGroup = raw.slice(1).trim();
+                        groupIdx++;
+                        _gData.push({ _type: 'group', label: currentGroup, key: 'g' + groupIdx });
+                    } else {
+                        const cols = raw.split('\t');
+                        const row = {};
+                        _gHeaders.forEach((h, idx) => { row[h] = (cols[idx] || '').trim(); });
+                        row._type = 'data';
+                        row._group = currentGroup;
+                        row._groupKey = currentGroup ? 'g' + groupIdx : null;
+                        // z-Spalte: 'x' = ausgeblendet
+                        row._ausgeblendet = (row['z'] || '').toLowerCase() === 'x';
+                        _gData.push(row);
+                    }
+                }
+                _invBuildGTable();
+            } catch(e) {
+                console.error('Fehler beim Laden von g.csv', e);
+            }
+        }
+
+        function _invBuildGTable() {
+            // Kopfzeile und Filter-Zeile aufbauen
+            const headerRow = document.getElementById('inv-g-header-row');
+            const filterRow = document.getElementById('inv-g-filter-row');
+            if (!headerRow || !filterRow) return;
+            headerRow.innerHTML = '';
+            filterRow.innerHTML = '';
+            // Collapse-Spalte
+            const thCtrl = document.createElement('th');
+            thCtrl.style.cssText = 'width:24px; padding:2px;';
+            headerRow.appendChild(thCtrl);
+            const tfCtrl = document.createElement('th');
+            filterRow.appendChild(tfCtrl);
+            // Datenspalten
+            _gHeaders.forEach(h => {
+                if (h === 'z' || h === 'Ep') return; // z-Spalte (Ausblenden-Flag) & Ep nicht anzeigen
+                // Nach BV: Bild-Spalte einfügen
+                if (h === 'Gattungsbezi') {
+                    const thImg = document.createElement('th');
+                    thImg.textContent = 'Bild';
+                    thImg.style.cssText = 'white-space:nowrap; font-size:12px; width:90px;';
+                    headerRow.appendChild(thImg);
+                    filterRow.appendChild(document.createElement('th'));
+                }
+                const th = document.createElement('th');
+                // Spaltenbezeichnung umbenennen
+                th.textContent = (h === 'Gattungsbezi') ? 'Gattungsbezirk' : h;
+                th.style.cssText = 'white-space:nowrap; font-size:12px;';
+                headerRow.appendChild(th);
+                const tf = document.createElement('th');
+                filterRow.appendChild(tf);
+            });
+        }
+
+        function _invBuildGHerBtns() {
+            const herIdx = _gHeaders.indexOf('Herst');
+            const container = document.getElementById('inv-g-her-btns');
+            if (!container) return;
+            const hers = [...new Set(_gData.filter(r => r._type === 'data').map(r => r['Herst'] || '').filter(Boolean))].sort();
+            container.innerHTML = '';
+            hers.forEach(her => {
+                const btn = document.createElement('button');
+                btn.className = 'inv-her-btn' + (_gHerFilter.has(her) ? ' active' : '');
+                btn.textContent = her;
+                btn.onclick = () => {
+                    if (_gHerFilter.has(her)) _gHerFilter.delete(her);
+                    else _gHerFilter.add(her);
+                    btn.classList.toggle('active', _gHerFilter.has(her));
+                    invGRender();
+                };
+                container.appendChild(btn);
+            });
+        }
+
+        function _gToggleGroup(key) {
+            _gGroupCollapsed[key] = !_gGroupCollapsed[key];
+            // Alle Zeilen dieser Gruppe toggling
+            document.querySelectorAll('.inv-g-row[data-group="' + key + '"]').forEach(tr => {
+                tr.classList.toggle('g-collapsed', !!_gGroupCollapsed[key]);
+            });
+            // Toggle-Symbol aktualisieren
+            const toggle = document.querySelector('.inv-g-toggle[data-group="' + key + '"]');
+            if (toggle) toggle.textContent = _gGroupCollapsed[key] ? '+' : '−';
+        }
+        window._gToggleGroup = _gToggleGroup;
+
+        window.invGRender = function() {
+            const idTxt  = (document.getElementById('inv-g-id-filter')?.value || '').trim().toLowerCase();
+            const gatTxt = (document.getElementById('inv-g-gat-filter')?.value || '').trim().toLowerCase();
+            // Ep-Filter aus Button-Zustand lesen
+            const activeEpBtn = document.querySelector('.global-ep-btn.active');
+            const epTxt = activeEpBtn ? activeEpBtn.textContent.trim().toLowerCase() : '';
+            const bvTxt  = (document.getElementById('inv-g-bv-filter')?.value || '').trim().toLowerCase();
+            const artTxt = (document.getElementById('inv-g-art-filter')?.value || '').trim().toLowerCase();
+            const showAusgeblendet = document.getElementById('inv-g-ausgeblendet-cb')?.checked || false;
+            const tbody = document.querySelector('#inv-g-table tbody');
+            if (!tbody) return;
+            tbody.innerHTML = '';
+
+            // Filterfunktion für Datenzeilen
+            function dataRowVisible(row) {
+                if (row._ausgeblendet && !showAusgeblendet) return false;
+                if (idTxt  && !(row['Id']  || '').toLowerCase().includes(idTxt))  return false;
+                if (gatTxt && !(row['Gattung'] || '').toLowerCase().includes(gatTxt)) return false;
+                if (epTxt  && (row['Ep']  || '').toLowerCase() !== epTxt)  return false;
+                if (bvTxt  && !(row['BV']  || '').toLowerCase().includes(bvTxt))  return false;
+                if (artTxt && !(row['Art.-Nr.'] || '').toLowerCase().includes(artTxt)) return false;
+                if (_gHerFilter.size > 0 && !_gHerFilter.has(row['Herst'] || '')) return false;
+                return true;
+            }
+
+            // Welche Gruppen haben sichtbare Kinder?
+            const visibleGroups = new Set();
+            _gData.forEach(row => {
+                if (row._type === 'data' && dataRowVisible(row) && row._groupKey) {
+                    visibleGroups.add(row._groupKey);
+                }
+            });
+
+            const colCount = _gHeaders.filter(h => h !== 'z').length + 2; // +1 Collapse-Spalte, +1 Bild-Spalte
+            let count = 0;
+            let currentGroupKey = null;
+
+            _gData.forEach(row => {
+                if (row._type === 'group') {
+                    // Nur anzeigen wenn die Gruppe sichtbare Daten hat
+                    if (!visibleGroups.has(row.key)) return;
+                    currentGroupKey = row.key;
+                    const tr = document.createElement('tr');
+                    tr.className = 'inv-g-group-header';
+                    tr.onclick = () => _gToggleGroup(row.key);
+                    const collapsed = !!_gGroupCollapsed[row.key];
+                    tr.innerHTML = `<td colspan="${colCount}"><span class="inv-g-toggle" data-group="${row.key}">${collapsed ? '+' : '−'}</span>${row.label}</td>`;
+                    tbody.appendChild(tr);
+                } else if (row._type === 'data') {
+                    if (!dataRowVisible(row)) return;
+                    count++;
+                    const tr = document.createElement('tr');
+                    tr.className = 'inv-g-row' + (row._ausgeblendet ? ' g-ausgeblendet' : '');
+                    if (row._groupKey) {
+                        tr.dataset.group = row._groupKey;
+                        if (_gGroupCollapsed[row._groupKey]) tr.classList.add('g-collapsed');
+                    }
+                    // Collapse-Zelle
+                    let html = '<td></td>';
+                    const gattungVal = row['Gattung'] || '';
+                    const gattungbeziVal = row['Gattungsbezi'] || '';
+                    _gHeaders.forEach(h => {
+                        if (h === 'z' || h === 'Ep') return;
+                        // Vor Gattungsbezi: Bildzelle einfügen
+                        if (h === 'Gattungsbezi') {
+                            const imgFile = `data/img/gwagen/${gattungVal}-${gattungbeziVal}.png`;
+                            html += `<td class="inv-img-cell"><img src="${imgFile}" alt="" onerror="this.style.display='none'" style="max-height:40px;"></td>`;
+                        }
+                        let val = row[h] || '';
+                        // Boolesche Spalten: x -> Häkchen, sonst leer
+                        if (h === 'OVP' || h === 'KK') {
+                            const check = val.toLowerCase() === 'x';
+                            html += `<td style="text-align:center;">${check ? '<span style="color:#2a7d2a; font-size:14px;">✓</span>' : ''}</td>`;
+                            return;
+                        }
+                        // KP als Eurowert
+                        if (h === 'KP' && val) {
+                            let num = parseFloat(val.replace(',', '.'));
+                            if (!isNaN(num)) {
+                                val = num.toFixed(2).replace('.', ',') + ' €';
+                            }
+                        }
+                        // Art.-Nr. mit spurweite-n.de-Link
+                        if (h === 'Art.-Nr.' && val) {
+                            const herst = row['Herst'] || '';
+                            const fullName = (window._herstellerNames && window._herstellerNames[herst]) ? window._herstellerNames[herst] : herst;
+                            if (fullName) {
+                                const searchArt = val.replace(/[\.\-]\d+$/, '');
+                                const url = `https://www.spurweite-n.de/ncontent/ndb/ndb-artdetails.asp?DoLog=0&Sel_Hersteller_VString=${encodeURIComponent(fullName)}&MSel_ArtikelNr_VString=${encodeURIComponent(searchArt)}&ToShow=0&MaxCount=1`;
+                                val = `${val} <a href="${url}" target="_blank" style="text-decoration:none;" title="spurweite-n.de">🔗</a>`;
+                            }
+                        }
+                        // Herst mit vollem Namen
+                        if (h === 'Herst' && val) {
+                            const fullName = (window._herstellerNames && window._herstellerNames[val]) ? window._herstellerNames[val] : val;
+                            let display = fullName;
+                            if (window._herstellerUrls && window._herstellerUrls[val]) {
+                                display += ` <a href="${window._herstellerUrls[val]}" target="_blank" style="text-decoration:none;">🔗</a>`;
+                            }
+                            html += `<td>${display}</td>`;
+                            return;
+                        }
+                        html += `<td>${val}</td>`;
+                    });
+                    tr.innerHTML = html;
+                    tbody.appendChild(tr);
+                }
+            });
+            const countEl = document.getElementById('inv-g-count');
+            if (countEl) countEl.textContent = count + '\u00a0Treffer';
+        };
+
+        window.globalEpToggle = function(ep) {
+            const btns = document.querySelectorAll('.global-ep-btn');
+            const btn = document.getElementById('global-ep-' + ep);
+            const wasActive = btn && btn.classList.contains('active');
+            btns.forEach(b => b.classList.remove('active'));
+            if (!wasActive && btn) btn.classList.add('active');
+            if (window._invActiveTab === 'g') invGRender();
+            if (window.gRender) gRender();
+        };
+
+        window.invGReset = function() {
+            ['inv-g-id-filter','inv-g-gat-filter','inv-g-bv-filter','inv-g-art-filter'].forEach(id => {
+                const el = document.getElementById(id);
+                if (el) el.value = '';
+            });
+            const cb = document.getElementById('inv-g-ausgeblendet-cb');
+            if (cb) cb.checked = false;
+            // Ep-Buttons deaktivieren
+            document.querySelectorAll('.global-ep-btn').forEach(b => b.classList.remove('active'));
+            _gHerFilter.clear();
+            document.querySelectorAll('#inv-g-her-btns .inv-her-btn').forEach(b => b.classList.remove('active'));
+            invGRender();
+        };
+
         
         setTimeout(() => {
             const pinnedTab = localStorage.getItem('drg39_pinned_tab') || 'bereiche';

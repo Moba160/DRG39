@@ -1,0 +1,466 @@
+z	Ep	BV	Gattung	Id	Gattungsbezi	Wagennummer	OVP	Herst	Art.-Nr.	Set	KK	LüP	Datum	KP	Quelle	Anmerkung
+;Güterzugbegleitwagen
+	I	KPEV	Pg	G1	Stettin			Fl	7902-2		X	53	05.01.2022	18	ebay	
+	I	KPEV	Pg	G2	Frankfurt	5469		Fl	781210	81210	X	53	26.07.2022	20	dm-toys	Mit 20€ bewertet
+	I	KPEV	Pg	G3	Frankfurt	5171		Fl	780901	81210	X	53	26.07.2022	20	dm-toys	Mit 20€ bewertet
+	II	DRG	Pwg	G4	Frankfurt	95 647		Fl	7900-2	7900	X	53	23.11.2023	15	ebay	Mit Profikupplungen, mit 15€ bewertet
+	II	DRG	Pwg	G5	Frankfurt	95 647		Fl	83 8800	900	X	53	14.12.2021	26,95	ebay	
+x	II	DRG	Pwg	G6	Hannover	122 460		Fl	8300			53			MBW	
+	II	DRG	Pwg	G7	Hannover	122 460		Fl	8302		X	53	08.08.2011	20,98	MSL	
+	II	DRG	Pwg	G8	Hannover	122 460		Fl	8302		X	53	27.08.2011	18,99	MSL	
+	II	DRG	Pwg	G9	Hannover	122 460		Fl	8302		X	53	27.08.2011	18,99	MSL	
+	II	DRG	Pwg	G10	Hannover	122 460		Fl	8302		X	53	08.11.2018	20,5	ebay	
+	II	DRG	Pwg	G11	Nürnberg	131 831		Tr	15055		X	53	09.11.2018	14,499	1zu160	
+	IV	DR	Pwgs	G12		30 50 940 0032 - 4		Fl	830151		x	64	15.08.2023	36,07	Lokmuseum	
+;Leig
+	II	DRG	Pwg	G13	Stuttgart	132 781	O	Fl	8305		X	51	24.12.2004	14,295	SpMax 	Leig Teil 1 mit Pwg
+	II	DRG	Glleh	G14	Dresden	6344		Fl	8305		X	73	24.12.2004	14,295	SpMax 	Leig Teil 2
+	II	DRG	Glleh	G15	Dresden	6344		Fl	8305		X	73	03.09.2025	37,855	ebay	Leig Teil 1 mit Brsh - DCC  (Türen, Licht)
+	II	DRG	Glleh	G16	Dresden	6344		Fl	8305		X	73	03.09.2025	37,855	ebay	Leig Teil 2 - DCC (Türen, Licht)
+x	II	DRG	Glleh	G17	Dresden	11 483		Fl	8306		X	80			SMDV	Leig Teil 1 mi Brsh
+x	II	DRG	Glleh	G18	Dresden	11 484		Fl	8306		X	73			SMDV	Leig Teil 2
+	II	DRG	Glleh	G19	Dresden	11 483		Fl	8306		X	80	14.12.2002	12,25	ebay	Leig Teil 1 mi Brsh
+	II	DRG	Glleh	G20	Dresden	11 484		Fl	8306		X	73	14.12.2002	12,25	ebay	Leig Teil 2
+;Hilfszugwagen, Bauwagen
+	II	DRG	Kran	G21	Nürnberg	700 210		Tr	13296			46		15,3387564358866	Pietsch	Kranwagen
+	II	DRG	X	G22	Nürnberg	710 251		Tr	13296			46		15,3387564358866	Pietsch	Kranschutzwagen
+	III	DB	Kran	G23				Fl	859902	859902	x		25.11.2021	21,798	ebay	Ardelt Dampfkran
+	III	DB	Kran	G24				Fl	859902	859902	x		25.11.2021	21,798	ebay	Wagen z. Aufstützen
+	III	DB	Kran	G25				Fl	859902	859902	x		25.11.2021	21,798	ebay	Wagen mit Gewichten
+	III	DB	Kran	G26				Fl	859902	859902	x		25.11.2021	21,798	ebay	Wagen mit Bohlen
+	III	DB	Kran	G27				Fl	859902	859902	x		25.11.2021	21,798	ebay	Begleitwagen
+	II	DRG		G28	Frankfurt	700 004		Fl	818072		X	76	07.12.2006	7,63666666666667	ebay	Arztwagen Hilfszug
+	II	DRG		G29	Frankfurt	701 952		Fl	818072		X	69				Mannschaftswagen Hilfszug 
+	II	DRG		G30	Frankfurt	700 253		Fl	818380		X	68	07.12.2006	7,63666666666667	ebay	Gerätewagen Hilfszug
+	II	DRG		G31	Karlsruhe	700 500		Fl	858307		X	80	20.03.2008	11	SpMax	Brückenprüfungswagen. SoSe 2005
+	I	KPEV	Ni	G32	Stettin	10824		Fl	7902-3		X	62	05.01.2022	18	ebay	Fakultativwagen
+	II	DRG	Gwih	G33	Magdeburg	1700		Fl	8369		X	62	09.04.2009	15	SpMax	Fakultativwagen
+;Gedeckte Wagen
+x	II	DRG	G	G34	München	64 267		Fl	8360			57	15.06.2005		SpMax 	
+	I	KPEV	Nm	G35	Frankfurt	12 530		Fl	8834	7893	X	60	31.05.2022	15	ebay	Mit 15€ bewertet
+	I	KPEV	Nm	G36	Frankfurt	12 530		Fl	8834	7893	X	60	03.12.2023	9,098	ebay	
+	I	KPEV	Nm	G37	Frankfurt	12 530		Fl	8834	7893	X	60	03.05.2024	7,38	ebay	
+	I	KPEV	Nm	G38	Frankfurt	12 530		Fl	8834	7893	X	60	24.10.2024	8	ebay	Aus Set 7893, T16 zu verkaufen (jeder Wagen mit 10€ - Profikupplung angenommen)
+	I	KPEV	Gm	G39	Altona	15 026		Fl	8866	7886		60	11.03.2025	6,868	Kleinanzeigen	
+	I	K. Bay. St.B.	P	G40	P	601 990		Fl	8865	7886		60	11.03.2025	6,868	Kleinanzeigen	"Gbr. Fleischmann Metallwaren Fabrik"
+x	II	DRG	Gm	G41	Hannover	11 057		Tr	3208			60	28.12.2004	9,35	MBF Nbg	
+	I	KPEV		G42	Berlin	16 142		Fl	780901	780901	X	60	20.04.2023	25	eBay	Mit 25€ bewertet
+	I	KPEV	Vn	G43	Berlin	16 127		Fl	880903-1	880903	X	60	05.04.2025	16,5475	eBay	Mit 1 KK, "Spezialwagen Station Nauen mit Luftdruckleitung"
+	I	KPEV	Vn	G44	Berlin	16 127		Fl	880903-1	880903	X	60	25.08.2025	19,7975	eBay	Mit 1 KK, "Spezialwagen Station Nauen mit Luftdruckleitung"
+	II	DRG	Gvwh	G45	Stettin	33 885		Fl	8353		X	53	14.11.2006	19	eBay	
+	II	DRG	Gvwh	G46	Stettin	33 885		Fl	8353		X	53	20.11.2015	13	Modell Süd 	
+	II	DRG	Gvwh	G47	Stettin	33 885		Fl	8353		X	53	09.04.2009	10	SpMax	Hatte ich unten unter Viehwagen - habe ich diese Wagen wirklich?
+	II	DRG	Gvwh	G48	Stettin	33 885		Fl	8353		X	53	09.11.2018	11,499	1zu160 A. Großer	Hatte ich unten unter Viehwagen - habe ich diese Wagen wirklich?
+	II	DRG	Gvwh	G49	Stettin	34 448		Fl	8365		X	55	22.01.2012	13,07	ebay	
+	II	DRG	Gvwh	G50	Stettin	35 448		Fl	8365		X	55	25.01.2012	10,79	ebay	
+	II	DRG	Gvwh	G51	Stettin	35 448		Fl	8365		X	55	09.11.2018	12,499	1zu160 A. Großer	
+	II	DRG	Gvwh	G52	Stettin	35 448		Fl	8365		X	55	25.08.2025	12	ebay	
+	I	KPEV	Nml	G53	Altona	14 527		Fl	8887		X	68	04.01.2022	17,89	ebay	
+	I	KPEV	Nml	G54	Altona	14527		Fl	8887		X	68	30.04.2024	20	ebay	
+	I	KPEV	Nml	G55	Altona 	14527		Fl	8887		X	68	30.04.2024	20	ebay	
+	I	KPEV	Nml	G56	Altona 	14527		Fl	8887		X	68	17.05.2024	14,3	ebay	
+	I	DRG	Nwl	G57	Altona	14 520		Fl	781210	781210	X	68	26.07.2022	20	dm-toys	Mit 20€ bewertet
+	I	DRG	Ghwps	G58	Altona	14 520		Fl	781210		X	68	03.09.2024	9,49666666666667	ebay	
+	II	DRG	Ghwps	G59	Stettin	33856		Fl	8380		X	68			Spitzner	
+	II	DRG	Ghwps	G60	Stettin	33856		Fl	8380		X	68	20.11.2015	15	Modell Süd 	
+	II	DRG	Ghwps	G61	Stettin	33856		Fl	8380		X	68	02.10.2016	19	M+H Leipzig	 "Bahnhofswagen"
+	II	DRG	Ghwps	G62	Stettin	33856		Fl	8380		X	68	30.10.2018	19,995	ebay	 "Bahnhofswagen", mit Profikupplungen
+	II	DRG	Ghwps	G63	Stettin	33856		Fl	8380		X	68	09.11.2018	16,499	1zu160 A. Großer	 "Bahnhofswagen", mit Profikupplungen
+	II	DRG	Ghwps	G64	Stettin	33856		Fl	8380		X	68	03.09.2024	7,49666666666667	ebay	 "Bahnhofswagen", mit Profikupplungen
+	II	DRG	Ghwps	G65	Stettin	33856		Fl	8380		X	68	03.09.2024	7,49666666666667	ebay	 "Bahnhofswagen", mit Profikupplungen
+	II	DRG	Ghwps	G66	Stettin	33856		Fl	8380		X	68	03.09.2024	7,49666666666667	ebay	 "Bahnhofswagen", mit Profikupplungen
+	II	DRG	Ghwps	G67	Stettin	33856		Fl	8380		X	68	03.09.2024	7,49666666666667	ebay	 "Bahnhofswagen", mit Profikupplungen
+	II	DRG	Ghwps	G68	Stettin	33856		Fl	8380		X	68	03.09.2024	7,49666666666667	ebay	 "Bahnhofswagen", mit Profikupplungen
+	I	Meckl-Schwerin	P	G69		600 013		Fl	881012-2	881012	X	68	19.11.2025	12,0225	ebay	weiß, Aufschrift "Verins-Brauerei Mecklenburgischer Wirte" Lübz
+	II	DRG	Gl	G70	Dresden	4040		Tr	13830		X	72	28.12.2005	14	MBF Nbg	
+	II	DRG	Gln	G71	Dresden	4042		Tr	15681-6	15681	X	72	08.05.2019	25,9816666666667	ebay	Aus Set dreiachsige Schnellzugwagen
+	I	KBayStB	Nml	G72	Nürnberg	47 772		Tr	13269			72	25.07.2023	16,5633333333333	ebay	Mit 2 Profikupplungen
+	I	KBayStB		G73		86 561		Tr	13414			57	21.08.2023	15,6333333333333	ebay	Kolonialwarenwagen, einschließlich beiliegender 2 Fässer und zwei Kisten (Originallieferumfang)
+	II	DRG	Gn	G74	Kassel	52 219		Fl	7900-2	7900	X	57	23.11.2023	15	ebay	Mit 15€ bewertet
+	II	DRG	Gl	G75	Dresden	7214		Fl	8308		X	75		14,3161726734941	KaDeWe	
+	II	DRG	Gl	G76	Dresden	7214		Fl	8308		X	75		5,675	ebay	
+	II	DRG	Gl	G77	Dresden	7214		Fl	8308		X	75	22.12.2012	6,325	ebay	
+	II	DRG	Gl	G78	Dresden	7214		Fl	8308		X	75	22.12.2012	6,325	ebay	
+	II	DRG	Gl	G79	Dresden	7214		Fl	8308		X	75	21.01.2012	10,1	ebay	
+	II	DRG	Gl	G80	Dresden	7214		Fl	8308		X	75	28.03.2019	10,6	1zu160	
+	I	KPEV	Gml	G81	Erfurt	8155		Fl	7898-5		X	75	12.12.2021	18	ebay	
+	II	DRG	Gr	G82	Kassel	80 125		Ar	4408			59	08.05.2003	5,675	ebay	
+	II	DRG	Gr	G83	Kassel	80 125		Ar	4408			59	28.12.2004	6,8	MBF Nbg	
+	II	DRG	Gr	G84	Kassel	80 325		Ar	4409			56	28.12.2004	5,1	MBF Nbg	
+	II	DRG	GGvwehs	G85	Dresden	21 005		Fl	8394		X	74	02.01.2009	17	SpMax	Stallungswagen
+	I	KBayStB	Gm	G86		43 596		Tr	15005	15005	X	60	06.07.2023	15,18	ebay	Set 15005
+	I	KBayStB	Gm	G87		43846		Tr	15005	15005	X	60	06.07.2023	15,18	ebay	
+	II	DRG	G	G88	Kassel	14 206		Tr	11631	11631	X	56	10.11.2019	11,6666666666667	ebay	
+	II	DRG	G	G89	Kassel	45 897		Br	67432	67432	X	58	21.06.2017	20,95	elriwa	
+	II	DRG	G	G90	München	8 927		Br	67432	67432	X	58	21.06.2017	20,95	elriwa	
+	I	KPEV	Gm	G91	Essen	19 268		Br	67455		X	60	27.12.2021	24,9	MSL	
+	I	KPEV	Gm	G92	Essen	19 268		Br	67455		X	60	13.11.2024	27,7028571428571	ebay	
+	II	DRG	G	G93	Kassel	24 655		Br	67454		X	60	12.01.2020	21,1633333333333	ebay	
+	II	FS	G	G94		2301		Tr	15122-4	15122	X	58	20.01.2018	17,6525	ebay Nann	
+	II	SBB	K2	G95		31 117		Br	67850		X	52	12.01.2020	21,1633333333333	ebay	mit Federpuffern, schwer
+	II	SBB	K3	G96				HT	24252		X	61	18.01.2022	31,4	dm-toys	
+	II	DRG	Grhs	G97	Oppeln	5698		Ht	24203		X	60	04.03.2022	17,8333333333333	ebay	mit Federpuffern, schwer
+	II	DRG	Grhs	G98	Oppeln	1555		Ht	24203		X	55	04.03.2022	17,8333333333333	ebay	mit Federpuffern, schwer
+	II	DRG	Grhs	G99	Oppeln	17 646		Ht	24203		X	55	04.03.2022	17,8333333333333		
+	II	DRG	Glmhs	G100	Leipzig	2204	X	Tr	15110		X	75	05.04.2025	16,78		
+	II	DRG	Ggths	G101	Bromberg	10 020		Tr	13598		X	112	23.04.2020	14	Fabian Goll 1zu160	
+	II	DRG	Ggths	G102	Bromberg	10 020		Tr	13598		X	112	23.04.2020	14	Fabian Goll 1zu160	
+	I	KPEV	P	G103	Cöln	600 248		Fl	881012-1	881012	X	57	19.11.2025	12,0225	ebay	weiß, Aufschrift "Margarine-Fabrik Wahnschaffe Cleve"
+	II	DRG	P	G104	Münster	579 031		Fl	8349		X	57	02.10.2016	14	M+H Leipzig	Kühlwagen Homann
+;Offene Wagen
+	I	KPEV	Omk[u]	G105	Kgl. Mil. E.	487		Fl	821201-3	821201		41	19.01.2022	10,89	ebay	mit Profikupplung, aus Set dreier mit Kohle beladener Wagen - Exemplar aber ohne Kohle
+	I	KPEV	Omk[u]	G106	Magdeburg	54 713		Fl	8832	7883		41	13.11.2024	10,7028571428571	ebay	
+	I	K. Sachs. St. Eb	Omk[u]	G107		46 882		Fl	8860	7888		41	13.11.2024	10,7028571428571	ebay	
+	I	K. Sachs. St. Eb	Omk[u]	G108		46 137		Tr	15048-1	15048	x	41	20.12.2024	9	1zu160 J. Horn	
+	I	KPEV	Omk[u]	G109	Magdeburg	31 555		Tr	15048-2	15048	x	41	20.12.2024	9	1zu160 J. Horn	
+	I	K. Sachs. St. Eb	Omk[u]	G110		46 882		Fl	8660	7886	x	41	11.03.2025	6,868	Kleinanzeigen	
+	I	KPEV	Omk[u]	G111	Saarbrücken	36 348		Tr	15048-3	15048	x	42	20.12.2024	9	1zu160 J. Horn	
+	I	KPEV	Omk[u]	G112	Saarbrücken	31 830		Tr	15048-4	15048	x	46	20.12.2024	9	1zu160 J. Horn	
+	I	KPEV	Omk[u]	G113	Magdeburg	51 770		Tr	15048-5	15048	x	42	20.12.2024	9	1zu160 J. Horn	
+	I	KPEV	Omk[u]	G114	Saarbrücken	31 910		Tr	15048-6	15048	x	42	20.12.2024	9	1zu160 J. Horn	
+	I	KPEV	Omk[u]	G115	Saarbrücken	34 326		Tr	15048-7	15048	x	42	20.12.2024	9	1zu160 J. Horn	
+	I	Oldenburg	Omk[u]	G116		6162		Tr	15048-8	15048	x	42	20.12.2024	9	1zu160 J. Horn	
+	I	KPEV	Omk[u]	G117	Magdeburg	50 961		Tr	15048-9	15048	x	42	20.12.2024	9	1zu160 J. Horn	
+	I	Meckl-Schwerin	Omk[u]	G118		10 281		Tr	15048-10	15048	x	42	20.12.2024	9	1zu160 J. Horn	
+	I	KPEV	Omnk	G119	Bromberg	86 970		Fl	8830	7893	X	55	31.05.2022	12	ebay	Mit 12€ bwertet
+	I	KPEV	Omnk	G120	Bromberg	86 970		Fl	8830	7893	X	55	03.12.2023	9,098	ebay	
+	I	KPEV	Omnk	G121	Bromberg	86 970		Fl	8830	7893	X	55	03.05.2024	7,38	ebay	
+	I	KPEV	Omnk	G122	Bromberg	86 970		Fl	8830	7893	X	55	21.10.2024	8	ebay	Stirnwand mit Brsh war geklebt; tolerabel für den Preis
+	I	KPEV	Omk	G123	Bromberg	86 970		Fl	8830	7898	X	55	10.02.2020	9,30904761904762	ebay	
+	I	KPEV	Omk	G124	Bromberg	86 970		Fl	7898-4	7898	X	55	10.02.2020	9,30904761904762	ebay	
+	I	KPEV	Omk	G125	Magdeburg	66 887		Fl	8812	7891		55	22.04.2022	7,398	ebay	
+	I	Bad.St.B.	Omk	G126	Baden	50 381		Fl	8862	7886		57	11.03.2025	6,868	Kleinanzeigen	
+	I	KPEV	Onmmku	G127	Kattowitz	32 292		Fl	7902-5		X	61	05.01.2022	18	ebay	
+	I	KPEV	Onmmku	G128	Essen	334 045		Fl	8885		X	61	17.05.2024	8,3	ebay	
+	I	KPEV	Onmmku	G129	Essen	349 781		Fl	8812	7891	X	57	22.04.2022	7,398	ebay	
+	I	KBayStB	Omk	G130		57 601		Tr	15005	15005		58	06.07.2023	15,18	ebay	
+	II	DRG	O	G131	Nürnberg	23 219		Tr	15046		X	42	15.02.2016	12,5	ebay	
+	II	DRG	O	G132	Nürnberg	23 219		Tr	15046		X	42	11.01.2021	6,66666666666667	ebay mmxtra	mit Kohle
+	II	DRG	O	G133	Nürnberg	23 219		Tr	15046		X	42	21.03.2021	13	ebay	
+	II	DRG	O	G134	Schwerin	26 538		Fl	8208			41		6,1261058897403	MBF Markel	
+	II	DRG	O	G135	Schwerin	26 538		Fl	8208			41		7,14712353803035	MBF Markel	mit Kohle
+	II	DRG	O	G136	Schwerin	26 538		Fl	8208			41	11.01.2021	6,66666666666667	ebay	
+	II	DRG	O	G137	Schwerin	25 231		Fl	8212			45	28.12.2004	8,5	MBF Nbg	mit 2 Fässern
+	II	DRG	O	G138	Schwerin	25 231		Fl	8212			45	11.01.2021	8,5	ebay	mit Kohle
+	II	DRG	O	G139	Schwerin	26 538		Fl	8208			41	11.09.2025	6,893	ebay	mit Kohle
+	II	DRG	O	G140	Schwerin	26 538		Fl	8208			41	11.09.2025	6,893	ebay	mit Kohle
+	II	DRG	O	G141	Schwerin	26 538		Fl	8208			41	11.09.2025	6,893	ebay	mit Kohle
+	II	DRG	O	G142	Schwerin	26 538		Fl	8208			41	11.09.2025	6,893	ebay	mit Kohle
+	II	DRG	O	G143	Schwerin	26 538		Fl	8208			41	11.09.2025	6,893	ebay	mit Kohle
+	II	DRG	O	G144	Schwerin	26 538		Fl	8208			41	11.09.2025	6,893	ebay	mit Kohle
+	II	DRG	O	G145	Schwerin	26 538		Fl	8208			41	11.09.2025	6,893	ebay	mit Kohle
+	II	DRG	O	G146	Schwerin	26 538		Fl	8208			41	11.09.2025	6,893	ebay	mit Kohle
+	II	DRG	O	G147	Schwerin	26 538		Fl	8208			41	11.09.2025	6,893	ebay	mit Kohle
+	II	DRG	O	G148	Schwerin	26 538		Fl	8208			41	11.09.2025	6,893	ebay	mit Kohle
+	II	DRG	O	G149	Schwerin	26 538		Fl	8208			41	11.09.2025	6,893	ebay	mit Kohle
+	II	DRG	O	G150	Schwerin	26 538		Fl	8208			41	11.09.2025	6,893	ebay	mit Kohle
+	II	DRG	O	G151	Schwerin	26 538		Fl	8208			41	11.09.2025	6,893	ebay	mit Kohle
+	II	DRG	O	G152	Schwerin	26 538		Fl	8208			41	11.09.2025	6,893	ebay	mit Kohle
+	II	DRG	O	G153	Schwerin	26 538		Fl	8208			41	11.09.2025	6,893	ebay	mit Kohle
+	II	DRG	O	G154	Schwerin	26 538		Fl	8208			41	11.09.2025	6,893	ebay	mit Kohle
+	II	DRG	O	G155	Schwerin	26 538		Fl	8208			41	11.09.2025	6,893	ebay	mit Kohle
+	II	DRG	O	G156	Schwerin	26 538		Fl	8208			41	11.09.2025	6,893	ebay	mit Kohle
+	II	DRG	O	G157	Schwerin	26 538		Fl	8208			41	11.09.2025	6,893	ebay	mit Kohle
+	II	DRG	O	G158	Schwerin	26 538		Fl	8208			41	11.09.2025	6,893	ebay	mit Kohle
+	II	DRG	O	G159	Schwerin	26 538		Fl	8208			41	11.09.2025	6,893	ebay	mit Kohle
+	II	DRG	O	G160	Schwerin	26 538		Fl	8208			41	11.09.2025	6,893	ebay	mit Kohle
+	II	DRG	O	G161	Schwerin	25 231		Fl	8212			45	11.09.2025	6,893	ebay	mit Kohle
+	II	DRG	O	G162	Schwerin	25 231		Fl	8212			45	11.09.2025	6,893	ebay	mit Kohle
+	II	DRG	O	G163	Schwerin	25 231		Fl	8212			45	11.09.2025	6,893	ebay	mit Kohle
+	II	DRG	O	G164	Schwerin	25 231		Fl	8212			45	11.09.2025	6,893	ebay	mit Kohle
+	II	DRG	O	G165	Schwerin	25 231		Fl	8212			45	11.09.2025	6,893	ebay	mit Kohle
+	II	DRG	O	G166	Schwerin	25 231		Fl	8212			45	11.09.2025	6,893	ebay	mit Kohle
+	II	DRG	O	G167	Schwerin	25 231		Fl	8212			45	11.09.2025	6,893	ebay	mit Kohle
+	II	DRG	O	G168	Schwerin	25 231		Fl	8212			45	11.09.2025	6,893	ebay	mit Kohle
+	II	DRG	On	G169	Frankfiurt	60 113		Fl	7900-7		X	55	23.11.2023	15	ebay	Set 7900, Profikupplungen, jeder Wagen mit 15€ bewertet
+	II	DRG	O10	G170	Halle	41 177		Fl	8209			55	22.12.2004	5	MBF Markel	
+	II	DRG	O10	G171	Halle	41 177		Fl	8209			55	22.12.2004	5	MBF Markel	einseitig Drahtkupplung
+	II	DRG	O10	G172	Halle	41 177		Fl	8209			55	18.10.2016	8,9825	ebay	
+	II	DRG	Om	G173	Breslau	62 813		Fl	7900-5		X	57	23.11.2023	15	ebay	Set 7900, Profikupplungen, jeder Wagen mit 15€ bewertet
+	II	DRG	Om	G174	Essen	26 055		Fl	8215		X	57	15.06.1905		SpMax	
+	II	DRG	Om	G175	Essen	26 055		Fl	8215		X	57			MBF Markel	mit Kohle
+	II	DRG	Om	G176	Essen	26 055		Fl	8215		X	57	30.06.2007	11	MBF Markel	
+	II	DRG	Om	G177	Essen	26 055		Fl	8215		X	57	21.01.2012	8,05	ebay	
+	II	DRG	Om	G178	Essen	26 055		Fl	8215		X	57	28.07.2013	9,795	ebay	
+	II	DRG	Om	G179	Essen	26 055		Fl	8215		X	57	28.07.2013	9,795	ebay	
+	II	DRG	Om	G180	Essen	26 055		Fl	8215		X	57	18.10.2016	10,77	ebay	
+	II	DRG	Om	G181	Essen	26 055		Fl	8215		X	57	18.10.2016	8,9825	ebay	
+	II	DRG	Om	G182	Essen	26 055		Fl	8215		X	57	18.10.2016	8,9825	ebay	
+	II	DRG	Om	G183	Essen	26 055		Fl	8215		X	57	20.01.2018	10,7475	ebay	
+	II	DRG	Om	G184	Essen	26 055		Fl	8215		X	57	09.11.2018	10,499	1zu160	
+	II	DRG	Om	G185	Breslau	56 147		Fl	8216		X	61	18.10.2016	8,9825	ebay	
+	II	DRG	Om	G186	Breslau	56 147		Fl	8216		X	61				mit Holz
+	II	DRG	Om	G187	Breslau	56 147		Fl	8216		X	61	30.06.2007	12	MBF Markel	
+	II	DRG	Om	G188	Breslau	56 147		Fl	8216		X	61	10.02.2020	10,3090476190476	ebay	
+	II	DRG	Omk	G189	Württemberg	42 103		Ar	4538			59		5,11291881196219	MBF Pest	Bahnhofswagen
+	II	DRG	O	G190	Würzburg	21 557		Tr	13699			54	28.12.2004	6,8	MBF Nbg	mit Schotter
+;Klappdeckelwagen
+	II	KPEV	Km	G191	Berlin	17 422		Tr	15060-1		X	45	18.10.2016	8,9825	ebay	
+	I	KPEV	Km	G192	Berlin	17 422		Tr	15060-2		X	45	26.12.2021	12,8	ebay	
+	I	K. Bay. St.B.		G193	Ludwigshafen	49 153		Fl	8864			45	11.03.2025	6,868	EKA	Aus Set 7886
+	II	DRG	K	G194	Wuppertal	80 913		Fl	8210			55			KaDeWe	
+	II	Kn	K	G195	Elberfeld	10 348		Fl	7900-6		X	45	23.11.2023	15	ebay	Set 7900, Profikupplungen, jeder Wagen mit 15€ bewertet
+	II	DRG	K	G196	Wuppertal	7576		Fl	8213			41	10.02.2020	7,31380952380952	ebay	
+	I	KPEV	Km	G197	Stettin	17 123		Fl	8834		X	41	13.11.2024	11,7028571428571	ebay	aus Set 7883 Landbote, "Spezialwagen Station Stettin Cgb."
+	I	K. Sächs. St. Eb.	Km	G198		24 924		Tr	15162-4		X	41	13.11.2024	16,7028571428571	ebay	aus Set 15162 Sachsenfracht
+	II	DRG	K	G199	Wuppertal	8944		Fl	8214			45	10.02.2020	7,31380952380952	ebay	
+;Viehwagen
+x	II	DRG	Ov	G200	Würzburg	5658		Tr	13211			58			Pietsch	
+	I	KBayStB	Vomz	G201		65514		Tr	15005		X	60	06.07.2024	15,18	ebay	Set 15005
+	II	DRG	Ov	G202	Frankfurt	6151		Tr	15042		X	58	25.01.2008	8,625	ebay	mit Kohlköpfen, Bild, Bremserwagen?
+	II	DRG	Ov	G203	Frankfurt	6151		Tr	15042		X	58	25.01.2008	8,625	ebay	mit Kohlköpfen
+	II	DRG	Ovw	G204	Würzburg	18 778		Fl	8260		X	53	14.03.2009	14,99	SpMax	
+	II	DRG	Ovw	G205	Würzburg	18 778		Fl	8260		X	53	28.05.2025	12	ebay	
+	I	KPEV	VO	G206	Königsberg	30 164		Fl	780901		X	57	20.04.2023	25	ebay	Aus Set 780901, mit Kühen, mit 25€ bewertet
+	I	KPEV	VO	G207	Magdeburg	34 608		Fl	880903-2		X	57	05.04.2025	16,5475	ebay	Aus Set 880903, mit Pferden und 2x KK
+	I	KPEV	VO	G208	Magdeburg	34 608		Fl	880903-2		X	57	25.08.2025	18,2975	ebay	Aus Set 880903, mit Pferden und 2x KK
+	II	DRG	Ovw	G209	Würzburg	19 528		Fl	8261		X	57	25.01.2012	10,79	ebay	
+	II	DRG	Ovw	G210	Würzburg	19 528		Fl	8261		X	57	09.04.2009	14	SpMax	
+	II	DRG	Ovw	G211	Würzburg	19 528		Fl	8261		X	57	21.04.2007	17,25	Saxonia Ch.	
+	I	DRG	Ven	G212	Stettin	18 831		Fl	781210		X	53	26.07.2022	15	dm-toys	Set 781210, mit 15€ bewertet
+	I	DRG	Ven	G213	Hanover	18 637		Fl	880903-3		X	53	05.04.2025	16,5475	ebay	Set 880903  mit 2 KK, "Spezialwagen Station Celle mit Luftdruckleitung"
+	I	DRG	Ven	G214	Hanover	18 637		Fl	880903-3		X	53	28.08.2025	18,2975	ebay	Set 880903  mit 2 KK, "Spezialwagen Station Celle mit Luftdruckleitung"
+	II	DRG	Vwh	G215	Altona	508		Fl	8352		x	53	20.03.2008	11	SpMax	mit Geflügelabteil unter d. Boden
+	II	DRG	Vwh	G216	Altona	508		Fl	8352		X	53	09.11.2018	12,499	1zu160	Mit Geflügelabteil
+	I	KPEV	Ven	G217	Hannover	18 648		Fl	780901		X	53	20.04.2023	25	ebay	Set 780901, mit 25€ bewertet
+	II	DRG	Vwh	G218	Altona	212		Fl	8361		X	53	20.11.2015	15	Modell Süd	mit Geflügelabteil unter d. Boden
+	II	DRG	Vwh	G219	Altona	212		Fl	8361		X	55	13.04.2006	23,2	Pietsch	mit Geflügelabteil unter d. Boden
+	II	DRG	Vwh	G220	Altona	212		Fl	8361		X	55	11.09.2018	13,499	1zu160	Mit Geflügelabteil
+	II	DRG	Vw	G221	Altona	18 196		Fl	8364			57	18.10.2016	8,9825	ebay	der kurze ohne KKK, dazu auch ein G - wo ist der?
+	II	DRG	V	G222	Altona	6205		Tr	13615			57	28.12.2004	6,8	MBF Nbg	
+	I	KPEV	Venmz	G223	Stettin	16 944		Fl	8841			57	13.11.2024	11,7128571428571	ebay	aus Set 7884 Landbote
+	I	KPEV	Venmz	G224	Stettin	16 835		Fl	8830			59	13.11.2024	11,7128571428571	ebay	aus Set 7883 Landbote
+;Selbstentladewagen
+	II	DRG	OOt	G225	Oldenburg	191		Tr	15153-1		x	89	20.03.2021	27,7	ebay	aus Dreierset
+	II	DRG	OOt	G226	Oldenburg	141		Tr	15153-3		x	89	20.03.2021	27,7	ebay	aus Dreierset
+	II	DRG	OOt	G227	Oldenburg	692		Br	1800		X	63				
+	II	DRG	OOt	G228	Oldenburg	698		Br	1800		X	63				
+	II	DRG	OOt	G229	Oldenburg	705		Br	1800		X	63				
+	II	DRG	OOt	G230	Oldenburg	692		Br	1800		X	63		15	eBay	mit Kohle
+	II	DRG	OOt	G231	Oldenburg	698		Br	1800		X	63		15	eBay	mit Kohle
+	II	DRG	OOt	G232	Oldenburg	734		Br	1801		X	63	20.03.2012	16,1666666666667	eBay	
+	II	DRG	OOt	G233	Oldenburg	738		Br	1801		X	63	20.03.2012	16,1666666666667	eBay	
+	II	DRG	OOt	G234	Oldenburg	832		Br	1801		X	63	20.03.2012	16,1666666666667	ebay	
+	II	DRG	OOt	G235	Oldenburg	734		Br	1801		X	63	20.03.2012	17,27	Amazon	
+	II	DRG	OOt	G236	Oldenburg	738		Br	1801		X	63	20.03.2012	17,27	Amazon	
+	II	DRG	OOt	G237	Oldenburg	832		Br	1801		X	63	20.03.2012	17,27	Amazon	
+	II	DRG	OOt	G238	Oldenburg	734		Br	1801		X	63	07.10.2012	16,4733333333333	ebay	
+	II	DRG	OOt	G239	Oldenburg	738		Br	1801		X	63	07.10.2012	16,4733333333333	ebay	
+	II	DRG	OOt	G240	Oldenburg	832		Br	1801		X	63	07.10.2012	16,4733333333333	ebay	
+	II	DRG	OOt	G241	Oldenburg	734		Br	1801		X	63	09.10.2012	16,4733333333333	ebay	
+	II	DRG	OOt	G242	Oldenburg	738		Br	1801		X	63	09.10.2012	16,4733333333333	ebay	
+	II	DRG	OOt	G243	Oldenburg	832		Br	1801		X	63	09.10.2012	16,4733333333333	ebay	
+	II	DRG	OOt	G244	Oldenburg	734		Br	1801		X	63				
+	II	DRG	OOt	G245	Oldenburg	738		Br	1801		X	63				
+	II	DRG	OOt	G246	Oldenburg	832		Br	1801		X	63				
+	II	DRG	Otm	G247	Regensburg	701 927		Fl	8228			43	13.07.2022	6,48285714285714	ebay	Schotterwagen
+	II	DRG	Otm	G248	Regensburg	701 927		Fl	8228			43	13.07.2022	6,48285714285714	ebay	Schotterwagen
+	II	DRG	Otm	G249	Regensburg	701 927		Fl	8228			43	13.07.2022	6,48285714285714	ebay	Schotterwagen
+	II	DRG	Otm	G250	Regensburg	701 927		Fl	8228			43	13.07.2022	6,48285714285714	ebay	Schotterwagen
+	II	DRG	Otm	G251	Regensburg	701 927		Fl	8228			43	13.07.2022	6,48285714285714	ebay	Schotterwagen
+	II	DRG	Otm	G252	Regensburg	701 927		Fl	8228			43	13.07.2022	6,48285714285714	ebay	Schotterwagen
+	II	DRG	Otm	G253	Regensburg	701 927		Fl	8228			43	13.07.2022	6,48285714285714	ebay	Schotterwagen
+	II	DRG	Otm	G254	Regensburg	701 927		Fl	8228			43				Schotterwagen
+	II	DRG	KKt	G255	Oldenburg	4046		Fl	839601		X	79	18.06.2012	10,79	MSL	Getreidesilowagen 4achs.
+	II	DRG	KKt	G256	Oldenburg	4048		Fl	858396-1		X	79	20.01.2018	18,6625	ebay	Getreidesilowagen 4achs.
+	II	DRG	KKt	G257	Oldenburg	4050		Fl	858396-2		X	79	20.01.2018	18,6625	ebay	Getreidesilowagen 4achs.
+;Niederbord-, Flach-, Rungenwagen
+	II	DRG	SS	G258	Köln	8366		Tr	13263		X	106	16.07.2013	20,91	ebay W. Leitz	mit Plane. Wo ist der zweite Kölner?
+	I	KPEV	Sml	G259	Essen	17 309		Fl	780901		X	90	20.04.2023	25	ebay	Set 780901, mit Leiterwagen, mit 25€ bewertet
+	I	KPEV	Sml	G260	Cöln	21 416	O	Fl	823603	823603	X	90	29.11.2015	16	1zu160	Set, Wagen 1
+	I	KPEV	Sml	G261	Essen	17 307	O	Fl	823603		X	90	29.11.2015	16	1zu160	Set, Wagen 2
+	I	KPEV	SSm	G262	Hannover	37 095		Fl 	8832		X	83	31.05.2022	18	ebay	Aus Set 7893, mit 18€ bewertet
+	I	KPEV	SSm	G263	Hannover	37 095		Fl 	8832		X	83	03.12.2023	9,098	ebay	Aus Set 7893, T16 verkauft
+	I	KPEV	SSm	G264	Hannover	37 095		Fl 	8832		X	83	03.05.2024	7,38	ebay	Aus Set 7893, T16 verkauft (mit 70€ angenommen)
+	I	KPEV	SSm	G265	Hannover	37 095		Fl 	8832		X	83	24.10.2024	8	ebay	Aus Set 7893, T16 zu verkaufen (jeder Wagen mit 10€ - Profikupplung angenommen)
+	II	DRG	SSk	G266	Köln	916		Fl	8285		X	83	09.11.2018	15,499	1zu160	
+x	II	DRG	X	G267	Erfurt			Ar	wie 4532			56		5,11291881196219	MBF Markel	
+	II	DRG	Xf	G268	Erfurt	44 738		Tr	13614		X	63	10.02.2020	3,94541125541126	ebay u.w.e.	Ladung Kessel
+	II	DRG	Xw	G269	Erfurt	6162		Tr	13451		X	58			SMDV	Rungenwagen
+	II	SBB	SS	G270		566 001		Tr	15122-3		X	58	20.01.2018	17,6525	ebay Nann	Gotthardset (SBB) - abgebr. Trittstufe liegt in OVP
+	I	KBayStB	H	G271		9545		Tr	15005		X	58	06.07.2023	15,18	ebay	Set 15005, Rungen
+	II	DRG	Xw	G272	Erfurt	64 354		Tr			X	58	10.11.2017	19,95	ebay	aus Jahrhundertset 2001, beladen mit Metall-Lieferwagen
+	II	DRG	H	G273	Regensburg	19 864/20 275		Fl	8223-1		X	130	17.03.2019	16,3	1zu160	
+	II	DRG	H	G274	Regensburg	19 864/20 275		Fl	8223-1		X	130	17.03.2019	16,3	1zu160	
+	I	KPEV	Hrmmz	G275	Magdeburg/
+Stettin	101 105/45 051		Fl	8814			130	22.04.2022	7,398	ebay	aus Set 7891, 55er für 93€ verkauft
+	II	DRG	SSyms	G276	Köln	14 402		Tr	15109		X	83	29.05.2017	27,6	1zu160 S. Ara	Schwerlastwagen mit Kaelble Zugmaschine
+	II	DRG	SSym	G277		14 519		Tr	15040		X	85	13.01.2019	18,8166666666667	1zu160 B. Heidorn	Schwerlastwagen mit Plane und Rungen, Profikupplung -1€, drei im Set
+	II	DRG	SSym	G278		14 489		Tr	15040		X	85	13.01.2019	18,8166666666667	1zu160 B. Heidorn	Schwerlastwagen mit Plane und Rungen, Profikupplung -1€, drei im Set
+	II	DRG	SSym	G279		14 552		Tr	15040		X	85	13.01.2019	18,8166666666667	1zu160 B. Heidorn	Schwerlastwagen mit Plane und Rungen, Profikupplung -1€, drei im Set
+;Kesselwagen
+	I	K.Bay.St.B		G280				Tr	15464		X		26.04.2025	32,475	bw bahn	Spirituswagen aus Set; einen und OVP für 45€ an G. Pereira verkauft
+	I	K.Bay.St.B		G281				Tr	15464		X		26.04.2025	32,475	bw bahn	Spirituswagen aus Set; einen und OVP für 45€ an G. Pereira verkauft
+	I	DRG	P	G282	Halle	502 578		Fl	781210		X	55	26.07.2022	15	dm-toys	Ammoniakwerk Merseburg, aus Set 781210, mit 15€ bewertet
+	II	DRG	P	G283	Hannover	564 691		Fl	8430		X	55			?	Mobiloel
+	II	DRG	P	G284	Halle	559 897		Fl	8420		X	55	14.12.2001	10,2258376239244	Börse Ullst	Leuna
+	I	DRG	P	G285	Erfurt	502 231		Fl	8847		X	55	29.12.2011	20	MBF Markel	Mineraloel
+	I	KPEV	P	G286	Cöln	502 196		Fl	7902-6		X	55	05.01.2022	18	ebay	
+	I	KPEV	P	G287	Lübeck	502 284		Fl	7898-6		X	55	12.12.2022	18	ebay	
+	I	KPEV	P	G288	Cöln	503 225 [P]		Fl	8813		X	55	22.04.2022	7,398	ebay	aus Set 7891, 55er für 93€ verkauft
+	I	KPEV	P	G289	Elberfeld	502 301		Fl	881012-4	881012	X	55	19.11.2025	12,0225	ebay	blau, Aufschrift "Ernst Chur Chemische Fabrik Dellbrück"
+	II	DRG	P	G290	Essen	501 463		Fl	7900-4		X	57	23.11.2023	15	ebay	Set 7900, Profikupplungen, jeder Wagen mit 15€ bewertet
+	II	DRG	P	G291	Stettin	581 092		Fl	8436		X	55	22.12.2012	6,325	ebay	Rückforth
+	II	DRG	P	G292	Essen	502 856		Fl	8846		X	55	22.12.2012	6,325	ebay	Dapolin
+x	II	DRG	P	G293	Hannover	900 399		Ar	4526			56	22.12.2012	6,325	ebay	grau
+	II	DRG	P	G294	Stettin	581 829		Fl	844201		x	55	15.11.2020	12,705	ebay	Union. Kleinerer Kessel als sonst
+	II	DRG	P	G295	Stettin	581 829		Fl	844201		x	55	15.11.2020	12,705	ebay	Union. Kleinerer Kessel als sonst
+	II	DRG	P	G296	Essen	501 482		Br	1940		X	65,5	18.11.2017	16,63	ebay	Bauart Krupp, für Teer, ab 1922
+	II	DRG	P	G297	Essen	501 483		Br	1940		X	65,5	18.11.2017	16,63	ebay	Bauart Krupp, für Teer, ab 1922
+	II	DRG	P	G298	Essen	501 484		Br	1940		X	65,5	18.11.2017	16,63	ebay	Bauart Krupp, für Teer, ab 1922
+	II	DRG	P	G299	Köln	540 562		Li	265495		X	61	15.12.2017	20,9866666666667	Modellbahn-Licht	Dujardin
+	II	DRG	P	G300	München	518 322		Li	265480		X	61	10.01.2018	24,9	MSL	Shell
+	II	DRG	P	G301	Dresden	550 993		Li	265490		X	61	15.12.2017	22,9866666666667	Modellbahn-Licht	schwarz
+	II	DRG	P	G302	Dresden	550 993		Li	265490		X	61	15.12.2017	22,9866666666667	Modellbahn-Licht	schwarz
+	II	SBB	P	G303		534 215		Tr	15122-2		X	55	20.01.2018	17,6525	ebay Nann	Gotthardset (SBB)
+	II	DRG	P	G304	München	518 131		Tr	11631		X	55	10.11.2019	16,6666666666667	ebay	"MAN", Set 11631 mit BR 92
+;Kühlwagen
+	II	DRG	P	G305	Dresden	555 137		Fl	8307		X	80	21.06.2005		SMDV	Fischtransport Karpfen
+	II	DRG	P	G306	München	513 716		Ar	4128		X	60			SMDV	Bierwagen Leistbräu
+	II	DRG	P	G307	Berlin	2870		HN	6013		X	60	30.09.2017	11,8166666666667	1zu160 Günther	Bierkühlwagen, Sondermodell MBS Sebnitz
+	II	DRG	P	G308	Berlin	600 215		Tr	13643			53	28.12.2004	13,6	MBF Nbg	Meierei Bolle
+	I	KPEV	P	G309	Cöln	600 248		Fl	881012-1	881012	X	57	19.11.2025	12,0225	ebay	weiß, Aufschrift "Margarine-Fabrik Wahnschaffe Cleve"
+	II	DRG	P	G310	Münster	579 031		Fl	8349		X	57	02.10.2016	14	M+H Leipzig	Kühlwagen Homann
+	II	DRG	Gkwh	G311	Berlin	398		Fl	8381		X	68	17.12.2005	21	SpMax	Kühlwagen Seefische
+	I	DRG	P	G312	Münster	600 017		Fl	880903-4		X	68	28.08.2025	18,2975	ebay	Set 880903 mit 2 KK, "Germania-Bier"
+	I	DRG	P	G313	Münster	600 017		Fl	880903-4		X	68	05.04.2019	16,5475	ebay	Set 880903 mit 2 KK, "Germania-Bier"
+	I	KPEV	P	G314	Essen	600 169		Fl	8833		X	61	31.05.2022	12	ebay	Union-Brauerei Dortmund. Aus Set 7893, mit 12€ bewertet
+	I	KPEV	P	G315	Essen	600 169		Fl	8833		X	61	03.12.2023	9,098	ebay	Union-Brauerei Dortmund. Aus Set 7893, T16 verkauft
+	I	KPEV	P	G316	Essen	600 169		Fl	8833		X	61	03.05.2024	7,98	ebay	Union-Brauerei Dortmund. Aus Set 7893, T16 verkauft (mit 70€ angenommen)
+	I	KPEV	P	G317	Essen	600 169		Fl	8833		X	61	24.10.2024	8	ebay	Union-Brauerei Dortmund. Aus Set 7893, T16 zu verkaufen (jeder Wagen mit 10€ - Profikupplung angenommen)
+	II	DRG	Gkh	G318	Berlin	523		Fl	8341		X	57	21.04.2007	15,9	Saxonia Ch.	Kühlwagen Seefische
+	II	DRG	Gkh	G319	Berlin	523		Fl	8341		X	57	10.12.2007	8,63	ebay	Kühlwagen Seefische
+	II	DRG	P	G320	Oldenburg	589 041		Tr	13483		X	55	12.01.2014	10,5	ebay	Seefische Nordsee
+	II	DRG	P	G321	Frankfurt	556 080		Tr	13483		X	55	12.01.2014	10,5	ebay	Kaiser Friedrich Mineralquelle
+	II	DRG	Ghk	G322	Berlin	1678		Fl	8346		X	62	22.12.2012	6,325	ebay	Kühlwagen
+	II	DRG	Ghk	G323	Berlin	1678		Fl	8346		X	62	03.06.2012	11,19	ebay	Kühlwagen
+	I	KPEV	P	G324	Berlin	600 532		Tr	15060/1		X	55	18.10.2016	8,9825	ebay	ehem Patzenhofer, Actien-Brauerei-Gesellschaft (Berlin) Friedrichshöhe
+	I	KPEV	P	G325	Berlin	600 532		Tr	15060/1		X	55	26.12.2021	13,25	ebay	ehem Patzenhofer, Actien-Brauerei-Gesellschaft (Berlin) Friedrichshöhe
+	II	SBB	Pd	G326		533 216		Li	265115		X	56	20.01.2018	22,2375	ebay Nann	Kühlwagen SBB
+	II	DRG	P	G327	Berlin	530 255		Li	265116		X	56	ca-Preis	27	Modellbahnshop Lippe	August Kratz Berlin
+	II	SBB	P	G328		516 309		Tr	15122-1		X	55	20.01.2018	17,6525	ebay Nann	Gotthardset (SBB). Feldschlösschen Rheinfelden
+	II	DRG	Gfkhs	G329	Saarbrücken	11 007		MU	56001		X	73	11.09.2018	18,05	ebay dm-toys	Fährbootkühlwagen
+	II	DRG	Gfkhs	G330	Saarbrücken	11 008		MU	56002		X	73	11.09.2018	16,1	ebay dm-toys	Fährbootkühlwagen
+	I	DRG	P	G331	Altona	600 707		Fl	8837		X	56	10.02.2020	20,3090476190476	ebay	Import westindischer Bananen
+;Sonstige Wagen
+	I	KPEV	P	G332	Essen	505 165		Fl	881012-1	881012	X	55	19.11.2025	12,0225	ebay	weiß, Aufschrift "Chem. Fabrik Goldberg Geramont"
+	II	DRG	P	G333		537 082		Fl	8449		X	55	02.05.2008	15	SpMax	Gedeckter Gaskesselwagen (Chlor)
+	II	DRG	P	G334	München	520 769		Fl	845701		X	51	13.01.2018	24,57	MSL	Weinkesselwagen
+	II	SBB	P	G335		520 753		Fl	845703		X	51	13.01.2018	24,57	MSL	Weinkesselwagen
+	II	DRG	P	G336	Mainz	502 324		Tr	13460		X	50	06.11.2018	30	1zu160	Weinfasswagen
+	I	KPEV	P	G337	Köln	500 043		Fl	8831		X	55	31.05.2022	0	ebay	aus Set 7893, mit 20€ bewertet für andere Setteile, aber 20€ Rückerstattung wg. gebr. Haltenasen und Griffe
+	I	KPEV	P	G338	Köln	500 043		Fl	8831		X	55	03.12.2023	9,098	ebay	aus Set 7893, T16 verkauft
+	I	KPEV	P	G339	Köln	500 043		Fl	8831		X	55	03.05.2024	7,38	ebay	aus Set 7893, T16 verkauft (mit 70€ angenommen)
+	I	KPEV	P	G340	Köln	500 043		Fl	8831		X	55	03.05.2024	8	ebay	Aus Set 7893, T16 zu verkaufen (jeder Wagen mit 10€ - Profikupplung angenommen)
+	I	KPEV	P	G341	Halle	560 569		Fl	781210		X	55	24.10.2024	20	dm-toys	aus Set 781210, mit 20€ bewertet, Farbenfabrik Wolfen
+	II	DRG	P	G342	München	518 324		Fl	8221		X	55				Säuretopfwagen
+	II	DRG	P	G343	München	518 324		Fl	8221		X	55	03.12.2022	12,5	ebay	Säuretopfwagen
+	II	DRG	P	G344				Tr			X	54	05.07.2021	24,04	ebay	Gaskesselwagen
+	II	DRG	Ok	G345	Nürnberg	26 611		NME	201202		X	47,5	27.04.2019	26,985	Kramm	Kokskübelwagen, 2 Behälter
+	II	DRG	Ok	G346	Nürnberg	26 669		NME	201203		X	47,5	27.04.2019	26,985	Kramm	Kokskübelwagen, 3 Behälter
+;Ep III/IV DR und DB
+	IV	DR	Gs	G347		40 50 943 9788-2		HN	6567.1		X	66	16.09.2025	18	1zu160 Sven Kreutzer	Bahndienstwagen (Gerätewagen)
+	IV	DR	-	G348		40 50 944 4227-5		HN	6567.2		X	86	16.09.2025	18	1zu160 Sven Kreutzer	Bahndienstwagen Niederboard mit Schotter-/Sandladung
+	IV	DB	Lbs.598	G349		21 80 411 7 882-1		Fl	8234		X	90	21.09.2015	10	1zu160	
+	IV	DB	Eo	G350		52 80 514 5 724-3		Tr	15041-21		X	61	21.09.2015	10	1zu160 F. Möller	Offener Gw, mit Kohle
+	IV	DB	Eo	G351		52 80 514 5 613-1		Tr	15041-21		X	61	21.09.2015	10	1zu160 F. Möller	Offener Gw, mit Kohle
+	IV	DB	Es	G352		42 80 514 1 113.3		Fl	820531		X	61	29.09.2019	11,5771428571429	Spielemax	
+	IV	DR	El-u	G353		21 50 510 3494-4		HN	6381-1		X	63	29.09.2019	13,0221428571429	Spielemax	
+	IV	DR	El-u	G354		21 50 510 3492-8		HN	6381-2		X	63	29.09.2019	13,0221428571429	Spielemax	
+	IV	DB	E 035	G355		01 80 505 6 612--6		Fl	820513		X	64	29.09.2019	14,8271428571429	Spielemax	
+	IV	DR	E	G356				Fl	931892		X	64	19.12.2020	12,4925	ebay	Set 931892, ohne BR110
+	IV	DB	Es 049	G357		47 35 480 5 517-6		Ar	4789		X	63	01.10.2019	6,575	1zu160 Flottwell	
+	IV	DB	E 035	G358		01 80 508 5 385-4		Tr	13529		X	61	10.02.2020	3,94541125541126	ebay u.w.e.	Schrottladung (schwer!)
+	IV	DB	E 035	G359		01 80 508 5 385-4		Tr	13529		X	61	10.02.2020	3,94541125541126	ebay u.w.e.	Holzladung (aufrecht)
+	III	DB	Om 12	G360		715 248		Fl	8218		X	57	10.02.2020	3,94541125541126	ebay	Kohleladung
+	III	DB	Omm 55	G361		884 262		Fl	9316		X	63	10.02.2020	3,94541125541126	ebay	Holzladung (aufrecht)
+	III	DB	Omm 55	G362		884 262		Fl	9316		X	63	10.02.2020	3,94541125541126	ebay	Kohleladung
+	III	DB	Omm 55	G363		884 262		Fl	9316		X	63	10.02.2020	3,94541125541126	ebay	Kohleladung
+	III	DB	Omm 39	G364		885 008		Fl	8204		X	63	10.02.2020	3,94541125541126	ebay	Holzladung (aufrecht)
+	IV	DB	E 035	G365		01 80 508 1 234-8		Tr	11416		X	61	10.02.2020	3,94541125541126	ebay u.w.e.	Holzladung (aufrecht)
+?	?	?	?	G366	?	?		Fl	?			?	22.04.2022	7,398	ebay	(falsch) aus Set 7891, 55er für 93€ verkauft
+x	IV	DB	Omm 46	G367		01 80 5085 383-9		Tr	3538			56	24.01.0224	6,9975	ebay	Beifang, ohne KKK
+	IV	DR	Eaos	G368		31 50 594 9 373-6		HN	6082		X	86	19.11.2012	12,995	eBay	gealtert
+	IV	DR	Eaos	G369		31 50 594 9 324-9		HN	6082		X	86	19.11.2012	12,995	eBay	gealtert
+	IV	DR	Eaos	G370		11 80 534 1 713-5		HN	1004-2		X	86	27.10.2015	8	1zu160 R. Eger	Aus Startset HN1004
+	IV	DR	Eaos	G371		11 80 534 2 986-6		HN	1004-3		X	86	27.10.2015	8	1zu160 R. Eger	Aus Startset HN1004
+	IV	DR	Eas	G372		31 50 594 9 189-6		Fl	828347		X	86	29.09.2019	14,5838095238095	Speielmax	Rückerstattet, nicht ausgetauscht!
+	IV	DR	Eas	G373		31 50 594 9 225-6		Fl	828347		X	86	29.09.2019	14,5838095238095	Speielmax	Rückerstattet, nicht ausgetauscht!
+	IV	DR	Eas	G374		31 50 594 9 106-0		Fl	828347		X	86	29.09.2019	14,5838095238095	Speielmax	Rückerstattet, nicht ausgetauscht!
+	IV	DR	Eal	G375		31 50 592 3460-1		HN	6277.1		X	86	10.03.2016	11,66	eBay	"Martin braucht Schrott"
+	IV	DR	Eal	G376		31 50 592 3570-7		HN	6277.3		X	86	10.03.2016	11,66	eBay	"Martin braucht Schrott"
+	IV	DR	Eal	G377		31 50 592 3610-1		HN	6277.2		X	86	10.03.2016	11,66	eBay	"Martin braucht Schrott"
+	IV	DR	Kkkml	G378				Fl	931892		X	75	19.12.2020	12,4925	ebay	Set 931892, ohne BR110
+	IV	DB	Kklmmp 514	G379		20 80 327 3 378-4		Tr	13588		X	63	10.02.2020	3,94541125541126	ebay u.w.e.	Ladung Schiffskurbelwelle
+	III	DB	Rms 31	G380		#		Fl	8256		X	76	10.02.2020	3,94541125541126	ebay	Holzladung
+	III	DB	Kmm 36	G381		350 002		Tr	13531-25		X	63	10.02.2020	5,15452380952381	ebay u.w.e.	mit Kuppelstange, aus Display
+	III	DB	Kmm 36	G382		350 009		Tr	13531-31		X	63	10.02.2020	5,15452380952381	ebay u.w.e.	Aus Display
+	IV	DR	OOt-u	G383		21 50 6771 850-6		HN	'6349-1		X	52	17.12.2017	20,075	ebay	neu
+	IV	DR	OOt-u	G384		21 50 6771 852-2		HN	'6349-1		X	52	17.12.2017	20,075	ebay	neu
+	IV	DR	OOt-u	G385		21 50 6771 854-8		HN	'6349-1		X	52	17.12.2017	20,075	ebay	neu
+	IV	DR	OOhmtu	G386		31 50 677 1 828-0		HN	1630444		X	84	29.12.2020	22,3333333333333	ebay	neu
+	IV	DR	OOhmtu	G387		31 50 677 1 979-1		HN	1630475		X	84	29.12.2020	22,3333333333333	ebay	neu
+	IV	DR	OOhmtu	G388		31 50 677 2 201-9		HN	1630504		X	84	29.12.2020	22,3333333333333	ebay	neu
+	IV	DR	Tadgs-y	G389		31 50 583 5020-0		HN	'6333-1		X	119	17.12.2017	20,075	ebay	neu, Getreide
+	IV	DR	Tadgs-y	G390		31 50 583 5028-3		HN	'6333-2		X	119	17.12.2017	20,075	ebay	neu, Getreide
+	IV	DR	Tadgs-y	G391		31 50 583 5033-3		HN	'6333-3		X	119	17.12.2017	20,075	ebay	neu, Getreide
+	IV	DR	Tadgs-y	G392		31 50 583 5020-0		HN	'6333-1		X	119	30.07.2019	15	1zu160 F. Gomoll	ohne OVP, Getreide
+	IV	DR	Tadgs-y	G393		31 50 583 5028-3		HN	'6333-2		X	119	30.07.2019	15	1zu160 F. Gomoll	ohne OVP, Getreide
+	IV	DR	Tadgs-y	G394		31 50 583 5033-3		HN	'6333-3		X	119	30.07.2019	15	1zu160 F. Gomoll	ohne OVP, Getreide
+	IV	DR	Facs	G395				HN	1639241		X	119	22.01.2021	15	1zu160 F. Gomoll	ohne OVP, Getreide
+	IV	DB	Tds	G396		21 50 575 0 362-8		Fl	8513		X	58	09.12.2012	6,7	eBay	Selbstentladewagen
+	IV	DB	Tds	G397		21 50 575 0 362-8		Fl	8513		X	58	09.12.2012	6,7	eBay	Selbstentladewagen
+	IV	DR	Tds	G398		21 80 540 5 386-1		Fl	8510		X	58	15.10.2015	12,7	MBF Markel	Selbstentladewagen
+	IV	DP	Post aa-c/12,5	G399		50 50 00-29 417-1		Tr	15312-2		X		04.01.2021	30	1zu160 Hans-Joachim Pescht	
+	IV	DR	Gs	G400		21 50 120 5 405-8		Fl	8311		X	66	17.01.2013		eBay	Gedecter Gw
+	IV	DR	Gbs252	G401		20 81 111 0 042-5		Fl	831508		X	88	21.09.2015	12,5	1zu160	
+	IV	DR	Gbs1518	G402				Fl	931892		X	88	19.12.2020	12,4925	ebay	Set 931892, ohne BR110
+	IV	DR	Gbs252	G403		20 81 111 0 042-5		Fl	831508		X	88	21.09.2015	12,5	1zu160	
+	IV	DB	Gbs252	G404		01 80 151 2 166-8		Ro	25160		X	87	01.10.2019	6,575	1zu160 Flottwell	
+	IV	DR	Glmms	G405		21 50 150 0 118-7		Fl	826210		X	88	13.02.2023	27,485	Härtle	
+	IV	DR	Glmms	G406		21 50 150 0 076-7		Fl	826210		X	88	13.02.2023	27,485	Härtle	
+	IV	DR	Gmms	G407		21 50 120 0066-1		HN	6521		X	66	15.03.2023	29,985	Härtle	
+	IV	DR	Gmms	G408		21 50 120 0077-9		HN	6521		X	66	15.03.2023	29,985	Härtle	
+	IV	DR	Gbqss-z	G409		21 50 174 2517-7		Fl	828614		X	88	21.02.2023	27,29	bw bahn	Expressgut, mit Bremserbühne
+	IV	DB	Hbers358	G410		211 4 189-2		Li	260141-2		X	78	21.01.2021	24,5	1zu160 Pluschke	Verschlagwagen
+	III	DB	Tkoh	G411		300 217		Fl	9392		X	56	18.10.2016	8,9825	ebay	Kühlwagen grau, Tonnendach, DB
+	III	DB	Tmms	G412		56 93 31		Fl	968344		X	74	01.10.5019	6,575	1zu160	
+	IV	DR	Icor	G413		17 50 807 8032-9		HN	'6309-1		X	73	29.09.2017	10,075	ebay	neu
+	IV	DR	Icor	G414		17 50 807 8055-0		HN	'6309-2		X	73	29.09.2017	10,075	ebay	neu
+	IV	DR	Icor	G415		17 50 807 8090-7		HN	'6309-3		X	73	29.09.2017	10,075	ebay	neu
+	IV	DR	Icor	G416		17 50 807 8032-9		HN	'6309-1		X	73	04.10.2017	16,7416666666667	ebay	
+	IV	DR	Icor	G417		17 50 807 8055-0		HN	'6309-2		X	73	04.10.2017	16,7416666666667	ebay	
+	IV	DR	Icor	G418		17 50 807 8090-7		HN	6309-3		X	73	04.10.2017	16,7416666666667	ebay	
+	IV	FS	Ibces	G419		11 83 083 0 682-8		Fl	8321		X	74	10.02.2020	3,59	ebay	
+	IV	DB	Ichs	G420		43 80 082 4 112-9		Fl	8324		X	74	10.02.2020	3,59	ebay	
+	III	DB	Tehs 50	G421		308 351		Fl	8344		X	74	10.02.2020	3,59	ebay	Seitenwände verhunzt mit Aufschrift
+	IV	DR		G422				HN	6567.1	6567	X		22.01.2026	15,425	ebay	Bahndienstwagen grün (G)
+	IV	DR		G423				HN	6567.1	6567	X		22.01.2026	15,425	ebay	Bahndienstwagen grün (Flachw. mit Kiesladung)
+	IV	DR		G424				Fl	931892		X	55	19.12.2020	12,4925	ebay	Set 931892, ohne BR110
+	IV	DB	Z	G425		23 80 765 0 887-4		Fl	8415		X	55	21.09.2015	10	1zu160	ÖMV
+	IV	DB	Z	G426		23 80 735 6 013-4		Fl	8419		X	55	21.09.2015	10	1zu160	BfB
+	III	DB		G427		586 962		Tr	15124		X			13	ebay	DEA, Clubmodell. Culemeyer darin mit 20€ bewertet
+	IV	DR	Z	G428		21 50 730 0 826-4		HN	6313-1		X	55	04.01.2021	13,905	ebay	
+	IV	DR	Z	G429		21 50 730 0 977-5		HN	6313-2		X	55	04.01.2021	13,905	ebay	
+	IV	DR	Zas	G430		35 50 7858 514-8		HN	6337-1		X	86	17.12.2017	16,7416666666667	ebay	neu, Isolierkesselwagen
+	IV	DR	Zas	G431		35 50 7858 520-3		HN	6337-2		X	86	17.12.2017	16,7416666666667	ebay	neu, Isolierkesselwagen
+	IV	DR	Zas	G432		35 50 7858 543-5		HN	6337-3		X	86	17.12.2017	16,7416666666667	ebay	neu, Isolierkesselwagen
+	III	DB	Za	G433		542 571		Tr	15137		X	78	01.10.2019	6,575	1zu160 Flottwell	
+	IV	DB	Za	G434		21 80 005 1 291-1		Li	265984		X	78	26.01.2021	0	Alba	Prämie NBM 2021/2022
+	III	DR	ZZ	G435		51-98-36		Tr	15100		x		05.07.2021	20,45	ebay	BUNA, blau
+	IV	DB	Tcefs 845	G436		21 80 572 9 029-6		MU	66008		X	78	02.12.2022	18,99	ebay	Fährbootwagen
+	IV	DB	Gs	G437				MU			X		11.11.2022	19,99	Stellwerk S	
+	IV	DB	Pwghs	G438				MU	55013		X		01.12.2022	19,99	dm-toys	Güterzugbegleitwagen
+	IV	DB	Omm 52	G439				MU	52007		X		01.12.2022	14,99	dm-toys	Rüben
+	IV	DB	Gos	G440				Li			X		18.01.2023	23,33	dm-toys	
+	IV	DB	Gos	G441				Li			X		18.01.2023	23,33	dm-toys	
+	IV	DB	Gos	G442				Li			X		18.01.2023	23,33	dm-toys	
+	IV	DR	Gos	G443				Li			X		18.01.2023	23,33	dm-toys	
+	IV	DR	Gos	G444				Li			X		18.01.2023	23,33	dm-toys	
+	IV	DR	Gos	G445				Li			X		18.01.2023	23,33	dm-toys	
+	IV	DR	Gbs	G446		51 50 154 0257-5		Fl	5170001-2		X		09.12.2023	15	Ars Tecnica	aus Set
+	IV	DB	Ks 446	G447				Fl	5170001-3		x		09.12.2023	15	Ars Tecnica	aus Set; Schwenkrungenwagen
+	IV	DB	Zags	G448				Fl	5170001-4		x		09.12.2023	15	Ars Tecnica	aus Set; Wärmeschutzkesselwagen
+	IV	DB	Gs 204	G449		01 80 120 4 302-2		Fl	8319		X	66	24.01.0224	6,9975	ebay	mit Schlussbeleuchtung
+	IV	DR	Gs	G450		21 50 120 5405-8		Fl	8311		X	66	24.01.0224	6,9975	ebay	
+	IV	DR	Gs	G451		21 50 120 5405-8		Fl	8311		X	66	24.01.0224	6,9975	ebay	
