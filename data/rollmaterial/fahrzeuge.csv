@@ -1,0 +1,1135 @@
+﻿ID	Epoche	BV	Gattungsbezirk	Ordnungsnummer	Direktion	Bahnbetriebswerk	Hst	Art.-Nr.
+;Dampfloks
+L1	II	DRG	01^0-2	01 004	Essen	Hamm	Tr	12276
+L2	II	DRG	01^0-2	01 235	Regensburg	Hof	Ar	2521
+L3	II	DRG	01^10	01 1059	Halle	Halle P	Fl	7174
+L94	IV	DR	01^10	01 513	Erfurt	Erfurt-P	Ar	2525
+L95	IV	DR	01.5	01 1531-1	Erfurt	Saalfeld	Ar	0348.0
+L96	IV	DR	02	02 0201-0	Halle	Halle-G	HN	2428
+L4	II	DRG	03^0-2	03 062	N�rnberg	N�rnberg	Tr	12830
+L5	II	DRG		05 002			Ar	2217
+L6	II	DRG	14^1 (S2/5)	14 141	M�nchen	M�nchen Hbf	Tr	12232
+L7	II	DRG	17^2 (S102)	17 253	M�nster	Osnabr�ck	Tr	12831
+L8	II	DRG	17^4 (S3/5)	17 419	N�rnberg	N�rnberg	Tr	12222
+L9	II	DRG	18^5 (S3/6)	18 535	Mainz	Mainz	HN	2007
+L10	II	DRG	24	24 047			Fl	7141
+L11	II	DRG	36^4 (P42)	36 446	N�rnberg	N�rnberg Hbf	Ar	2545
+L97	I	KPEV	(P8)	2510	Breslau		Fl	7829
+L12	II	DRG	38^10-40	38 2025	Essen	Oberhausen	Fl	7818
+L13	II	DRG	38^10-40	38 2025	Essen	Oberhausen	Fl	7818
+L14	II	DRG	39	39 105	Berlin	Berlin Ahb	Fl	7827
+L15	II	DRG	39	39 109	Erfurt	Erfurt	Fl	7912
+L16	II	DRG	39	39 204	Stuttgart	Stuttgart	Fl	7139
+L17	II	DRG	39	39 204	Stuttgart	Stuttgart	Fl	7139
+L18	II	DRG	41	41 014	Essen	G�ttingen	Tr	12000
+L19	II	DRG	44	44 141	N�rnberg	Treuchtlingen	Fl	714403
+L98	IV	DR	44.0	44 0592-4			Fl	714472
+L20	II	DRG	45	45 026			Tr	12309
+L21	II	DRG	50	50 002	Halle	Leipzig-Wahren	Fl	7180
+L99	III	DR	50	50 849			Fl	7181
+L100	III	DR	52	52 705			Fl	715208
+L101	I	KPEV	(G4.3)	3910	Stettin		Fl	7902-1
+L22	II	DRG	53^7 (G4.3)	53 7752	Danzig	Danzig Rdz	Fl	7124
+L23	II	DRG	54^15 (G3/4H)	54 1658	N�rnberg	N�rnberg	Tr	12308
+L102	I	KPEV	(G8.1)	4914	Hannover		Fl	780901
+L24	II	DRG	55^25-26 (G8.1)	55 4536	Wuppertal	Opladen	Fl	7154
+L103	I	KPEV	(G8.2)	5351	Erfurt		Fl	781210
+L25	II	DRG	56^2-8 (G8.2)	56 376	K�ln	K�ln Bbf	Li	161560
+L26	II	DRG	56^8-11 (G4/5H)	56 1113	M�nchen	Treuchtlingen	Tr	2923
+L27	II	DRG	56^20-29 (G8.2)	56 2264	Cassel	G�ttingen	Fl	7900-1
+L28	II	DRG	56^20-29 (G8.2)	56 2048	Mainz	Mainz-Bisch	Fl	7156
+L29	II	DRG	56^20-29 (G8.2)	56 2048	Mainz	Mainz-Bisch	Fl	7156
+L104	I	KPEV	(G10)	5446			Tr	12248
+L105	III	DRG	57^10-37 (G10)	57 2801	Schwerin	G�strow	Tr	12247
+L106	I	KPEV	(G12)	5593	Erfurt		Tr	12608
+L30	II	DRG	58^10-21 (G12)	58 1437	Dresden		Tr	12716
+L31	II	DRG	61	61 001			Ar	0166.0
+L32	II	DRG	62	62 010	Erfurt	Meiningen	Fl	7053
+L33	II	DRG	64	64 365	Frankfurt	Frankfurt	Fl	7063
+L107	IV	DR	65^10	65 1049-9	Magdeburg	G�sten	Br	1610
+L108	I	KBayStsB	(Pt2/3)	6050			Fl	707085
+L34	II	DRG	70 (Pt2/3)	70 066	M�nchen	Rosenheim	Fl	7071
+L35	II	DRG	74^4-13 (T121)	74 1230	Berlin	Wustermark	Ar	2284
+L36	II	DRG	75^10-11 (Vic)	75 1109	Karlsruhe	Waldheim?	Ar	0155
+L109	I	KPEV	(T18)	8957	Essen		Fl	7820
+L110	I	KPEV	(T18)	8428	Stettin		Fl	867913
+L37	II	DRG	78^0-5 (T18)	78 017	Mainz	Alzey	Fl	7079
+L38	II	DRG	78^0-5 (T18)	78 017	Mainz	Alzey	Fl	7887
+L39	II	DRG	80^0	80 018	K�ln	K�ln Bbf	Fl	7027
+L40	II	DRG	81^0	81 001	Magdeburg	Vienenburg	Fl	7035
+L41	II	DRG	85	85 001	Karlsruhe	Freiburg	Tr	11455.0
+L42	II	DRG	86	86 436			Fl	781101
+L111	III	DR	86	86 184	Dresden	Riesa	Fl	F7087
+L112	IV	DR	86	86 1001-6			Fl	931002
+L113	I	KBayStsB	(R3/3)	4769			Tr	12255
+L43	II	DRG	89^7 (R3/3)	89 707	M�nchen	M�nchen Hbf	Tr	11422.0
+L44	II	DRG	89^74-75 (T3)	89 7493	Stettin	Stettin	Ar	2220
+L114	I	KPEV	(T93)	7337	Berlin		Fl	781202
+L115	I	KPEV	(T93)	7294	Altona		Fl	7898-1
+L116	I	KPEV	(T93)	7337	Altona		Fl	7898-1
+L117	III	DR	91^3-18 (T93)	91 1001			Fl	7030
+L118	I	KPEV	(T13)	7909			Fl	781503
+L45	II	DRG	92^5-10 (T13)	92 1004	Altona	Altona	Fl	709201
+L46	II	DRG	92^20 (R4/4)	92 2048			Tr	11631
+L47	II	DRG	93^5-12 (T141)	93 400	Berlin	Tempelhof	Ar	2292
+L119	I	KPEV	(T12)	6081	Altona		Tr	12005
+L48	II	DRG	98^3 (PtL2/2)	98 303			Tr	12212
+L120	I	KPEV	(T161)	8177	Trier		Fl	7823
+L121	I	KPEV	(T161)	8177	Trier		Fl	7823
+L122	I	KPEV	(T161)	8177	Trier		Fl	7823
+L123	I	KPEV	(T161)	8169			Fl	709483
+L49	II	DRG	94^5-17 (T161)	94 733	Mainz	Darmstadt-Kranichstatt	Fl	7091
+L50	II	DRG	94^5-17 (T161)	94 956	Breslau	Sommerfeld	Fl	7093
+L51	II	DRG	95 (T20)	95 003	N�rnberg	Saalfeld	HN	2419
+L124	IV	DR	95 (pr T20)	95 0009-1	Erfurt	Probstzella	HN	2186
+L52	II	DRG	96 (Gt 2x4/4)	96 022	N�rnberg	Pressig-Rothenkirchen	Ar	2278
+L125	I	KBayStsB	(BBII)	2502			Tr	11604-1
+L53	II	DRG	98^7 (BBII)	98 731	Regensburg	Passau	Tr	12700
+L54	II	DRG	98^8 (GtL4/4)	98 811	M�nchen	M�nchen Hbf	Fl	7098
+L55	II	DRG	98^8 (GtL4/4)	98 811	M�nchen	M�nchen Hbf	Fl	7098
+;Dampftriebwagen
+L56	II	DRG	CidT	DW 6			Ar	2923
+;Dieselloks
+L57	II	DRG	V16	V 16 101			Tr	12800
+L126	IV	DR	V60.0-1	106 094-6	Greifswald	Pasewalk	HN	2267
+L127	IV	DR	V60.0-1	106 030-0	Schwerin	Wittenberge	HN	2356
+L128	IV	DR	V60.12	106 530-9	Magdeburg	Stendal	Fl	722209
+L129	IV	DB	V60	261 626-6			Tr	12620
+L130	IV	DR	V100	111 032-9			Fl	5170001-1
+L131	IV	DR	V100	110 226-8	Dresden	Reichenbach	Fl	721001
+L132	IV	DR	V100	115 328-7	Erfurt	Saalfeld	Fl	931405-1
+L133	IV	DB	V100	211 092-2	Stuttgart	T�bingen	Fl	7228
+L134	IV	DR	V180	118 640-2	Magdeburg	Magdeburg	Fl	721301
+L135	IV	DR	V180	118 616-4	Magdeburg	Brandenburg	Fl	721404
+L136	IV	DR	V180	229 168-1			Fl	721402
+L137	IV	DR	V180	118 104-9			Fl	7360028
+L138	IV	DR	119	119 006-5	Erfurt	Probstzella	Br	1400
+L139	IV	DR	119	119 191-5	Magdeburg		Br	61123
+L140	IV	DR	V200	120 048-4	Erfurt	Gera	Fl	725201
+L141	IV	DR	V200	120 292-8	Magdeburg	Stendal	Fl	725209
+L142	IV	DR	V300	130 047-4	Halle	Halle G	HN	2296
+L143	IV	DR	V300	130 050-8	Berlin	Seddin	HN	2297
+L144	IV	DR	V300	131 158-8	Erfurt	Wei�enfels	HN	2227
+L145	IV	DR	V300	132 483-9	Magdeburg	Halberstadt	HN	2599
+L146	IV	DR	V300	142 002-	Greifswald	Stralsund	HN	2600
+;Dieseltriebwagen
+L58	II	DRG	VT851	VT 851			Tr	12841
+L59	II	DRG	(VT  135 009)	VT 135 009			Tr	12388
+L147	IV	DR	172	172 121-6			Br	64314
+L148	IV	DB	VT/VB95	785 211-2			Fl	7402
+L149	III	DB	VT/VB95	VT95 9159	N�rnberg	Ansbach	Fl	7400
+L150	IV	DB	VT/VS98	798 723-3			Pi	40250
+L174	II	DRG						
+156,88	L60	VT 137 251 + VS 145 173		dm-toys				
+L61	II	DRG	(BPwPostK8vT-34)	SVT 137 155			HT	2630
+L62	II	DRG	(B6i VT)	SVT 877a/b	Berlin	Lehrter Bf	Ka	10707
+L63	II	DRG	(B6i VT)	SVT 137 149a+b	Berlin	Lehrter Bf	Ka	10711
+L64	II	DRG	(B12 KVT)	SVT 137 853 a+b+c	Berlin	Berlin Ahb	HT	16061
+L65	II	DRG	(B12 KVT)	SVT 137 853 a+b+c	Berlin	Berlin Ahb	HT	16061
+L151	IV	DR	SVT175	175 011-6				
+5teilig. Kauf war 6teilig - Überschuss Verkauf 73213 - 2 Mittelwagen (50€) und 1 Mittelwagen dieses Sets (50€)	Berlin	Karlshorst						
+L152	IV	DR	SVT175	175 009-0				
+4teilg	Berlin	Karlshorst						
+;Elloks
+L66	II	DRG	E04	E 04 05	Halle	Leipzig-West	HN	2134
+L153	IV	DR	E04	204 011-1	Halle	Leipzig Hbf West	HN	2138
+L67	II	DRG	E17	E 17 113			HT	2890
+L68	II	DRG	E18	E 18 39			Pi	40303
+L154	IV	DR	E18	218 019-8	Halle	Halle P	Pi	40302
+L69	II	DRG	E19.0	E 19 02	N�rnberg	N�rnberg Hbf	Fl	877914
+L70	II	DRG	E19.1	E 19 11	N�rnberg	N�rnberg Hbf	Ar	2491
+L71	II	DRG	E32 (EP2)	E 32 108			Fl	737001
+L72	II	DRG	E36 (EP3)	E 36 01	M�nchen	Freilassing	Tr	12462
+L73	II	DRG	E44.5	E 44 103			Li	162540
+L74	II	DRG	E44	E 44 019			Br	63100
+L75	II	DRG	E69	E 69 05			Fl	737101
+L155	IV	DR	211	211 036-9	Halle	Leipzig Hbf West	HN	2275.0
+L156	IV	DR	211	211 048-4			Br	63019
+L157	IV	DR	242	242 005-7	Dresden	Dresden	HN	2524D
+L158	IV	DR	242	242 089-1	Erfurt	Erfurt	Br	1201
+L159	III	DR	242	E 42 011	Halle	Halle P	HN	2273
+L160	IV	DR	230	230 011-9	Dresden	Dresden	K�	95024
+L161	IV	DR	250	250 001-5	Halle	Halle P	HN	2283
+L162	IV	DR	250	250 226-8	Erfurt	Erfurt	HN	2373
+L163	IV	DR	251	251 010-5	Magdeburg	Blankenburg	HN	2285
+L164	IV	DR	212	212 001-2	LEW	LEW	HN	2076
+L165	IV	DR	243	243 599-8			HN	2032
+L166	V	DB	143	143 573-4	Erfurt	Erfurt	Ro	23276
+L76	II	DRG	E75	E 75 06			Tr	12537
+L77	II	DRG	E77	E 77 28	M�nchen	M�nchen	Br	63003
+L167	III	DR	E77	E 77 10			Br	1250
+L78	II	DRG	E91	E 91 102			Pi	40544
+L79	II	DRG	E93	E 93 01	Stuttgart	Kornwestheim	Tr	12752
+L80	II	DRG	E94	E 94 058	Erfurt	Probstzella	Fl	739401
+L168	III	DR	E94	E 94 069	Halle	Halle P	Fl	739403
+L169	IV	DR	E94	254 110-0			Fl	739410
+L170	III	DR	E95	E 95 02			Br	1210
+;Elektr. Triebwagen
+L175	II	DRG						
+117,085840793934	L81	C4esT-29 + BC4esS-29		TöffTöff				
+L176	II	DRG						
+110	L82	C4esT-29 + BC4esS-29		ebay				
+L177	II	DRG						
+65,9566526743122	L83	C4esT-29 + BC4es-29		TöffTöff				
+L178	II	DRG						
+99,99	L84	C4esT-29 + BC4es-29		ebay				
+L179	II	DRG						
+42,2	L85	C4esT-29 + BC4es-29		ebay				
+L180	II	DRG						
+65	L86	C4esT-29 + BC4esS-29		ebay				
+L181	II	DRG						
+93	L87	C4esT-29 + BC4esS-29		ebay				
+L182	II	DRG						
+93	L88	C4esT-29 + BC4esS-29		ebay				
+L89	II	DRG	ET85	elT 1130			Ro	23001
+L90	II	DRG	ET25	elT 1130			Ka	10709
+L171	VI	DB	ET425	.			Ka	10703
+L172	VI	DB	ET425	.			Ka	10707
+L173	I	KPEV	(AT3)	435/436			HT	15771
+L91	II	DRG	AT3	AT3 375+376			Ro	23012
+L92	II	DRG	AT3	AT3 295+296			HT	15772
+L93	II	DRG	AT3	AT3 405+406	Mainz		Ro	23390
+;Sonstiges
+;-
+;VI
+;Etc
+P1	II	RP	Erfurt	5084				
+P2	II	DRG	Berlin	736 762				
+P3	II	DRG	Osten	730 003				
+P4	II	DRG		088 719				
+;Bay. Schnellzugwagen
+P5	I	Pfalzbahn		290				
+P6	II	DRG	München	107 253				
+P7	I	KBayStsB	München	21 088				
+P8	I	KBayStsB	München	21 088				
+P9	I	KBayStsB	München	21 088				
+P10	II	DRG	München	13 190				
+P11	II	DRG	München	13 191				
+P12	I	Pfalzbahn		5062				
+P13	I	KBayStsB	München	26 011				
+P14	I	KBayStsB	München	26 011				
+P15	I	Pfalzbahn		1732				
+P16	I	Pfalzbahn		3071				
+P17	II	DRG	München	17 652				
+P18	II	DRG	München	17 645				
+P19	II	DRG	München	17 647				
+;Württ. Schnellzugwagen
+P20	I	KWStE	Württemberg	6581				
+P21	II	DRG	Altona	108 601				
+P22	I	KWStE		1838				
+P23	II	DRG	Stuttgart	14 936				
+P24	I	KWStE		5807				
+P25	I	KWStE		5807				
+P26	II	DRG	Stuttgart	15 922				
+P27	II	DRG	Stuttgart	15 922				
+P28	I	KWStE		6332				
+P29	I	KWStE		6332				
+P30	I	KWStE		6332				
+P31	II	DRG	Stuttgart	18 023				
+P32	II	DRG	Stuttgart	18 023				
+P33	II	DRG	Stuttgart	18 023				
+;Preuß. Schnellzugwagen
+P34	I	KPEV	Halle	1141				
+P35	I	KPEV	Posen	3107				
+P36	I	KPEV	Stettin	05241				
+P37	II	DRG	Altona	107 303				
+P38	II	DRG	Altona	107 303				
+P39	II	DRG	Berlin	107 318				
+P40	I	KPEV	Halle	02731				
+P41	I	KPEV	Halle	02731				
+P42	I	KPEV	Altona	2902				
+P43	I	KPEV	Halle	03303				
+P44	I	KPEV	Halle	03303				
+P45	I	KPEV	Halle	03303				
+P46	I	KPEV	Halle	03303				
+P47	I	KPEV	Altona	03011				
+P48	II	DRG	Altona	18 041				
+P49	II	DRG	Altona	18 041				
+P50	II	DRG	Altona	18 041				
+P51	II	DRG	Berlin	17 927				
+P52	II	DRG	Berlin					
+P53	I	DESG		792				
+P54	I	DESG		777				
+P55	II	Mitropa	Mitropa	798				
+P56	II	Mitropa	Mitropa	798				
+P57	II	Mitropa	Mitropa	707				
+P58	I	KPEV	Mitropa	2023				
+P59	I	KPEV	Mitropa	2023				
+P60	I	KPEV	Mitropa	2069				
+P61	I	KPEV	Mitropa	2069				
+P62	I	KPEV	Mitropa	2067				
+P63	II	DRG	Altona	13 305				
+P64	II	DRG	Altona	14 892				
+P65	II	DRG	Berlin	14 805				
+P66	II	DRG	Berlin	14 805				
+P67	II	DRG	Berlin	14 805				
+P68	II	Mitropa		20812				
+P69	II	Mitropa		20019				
+P70	II	Mitropa		20019				
+P71	II	Mitropa		20019				
+P72	II	Mitropa		20849				
+P73	II	Mitropa		20849				
+;Preuß. Eilzugwagen
+P74	I	KPEV	Erfurt	3022				
+;Fehler 2015
+P76	I	DRP	Berlin	2993				
+P77	I	DRP	Berlin	2993				
+P78	II	DRP	Hannover	99 524				
+P79	I	KPEV	Erfurt	126				
+P80	I	KPEV	Erfurt	126				
+P81	I	KPEV	Erfurt	126				
+P82	I	KPEV	Erfurt	126				
+P83	I	KPEV	Erfurt	126				
+P84	II	DRG	Altona	20 664				
+P85	II	DRG	Halle	61 042				
+P86	II	DRG	Halle	61 042				
+P87	II	DRG	Halle	61 042				
+P88	II	DRG	Halle	61 042				
+P89	II	DRG	Halle	61 042				
+P90	I	KPEV	Erfurt	242				
+P91	I	KPEV	Erfurt	262				
+P92	I	KPEV	Erfurt	262				
+P93	I	KPEV	Erfurt	262				
+P94	I	KPEV	Erfurt	262				
+P95	II	DRG	Halle	62 049				
+P96	II	DRG	Altona	41 800				
+P97	II	DRG	Halle	62 049				
+P98	II	DRG	Halle	62 049				
+P99	II	DRG	Halle	62 049				
+P100	II	DRG	Halle	62 049				
+P101	II	DRG	Halle	62 049				
+;Ruhrschnellverkehr (Set "Ruhrschnellverkehr I")
+P102	II	DRG	Essen	30 727				
+P103	II	DRG	Essen	41 963				
+P104	II	DRG	Essen	41 967				
+P105	II	DRG	Essen	41 967				
+P106	II	DRG	Essen	41 967				
+;Ruhrschnellverkehr (Set "Ruhrschnellverkehr II")
+P107	II	DRG	Essen	30 597				
+P108	II	DRG	Essen	41 958				
+P109	II	DRG	Essen	41 958				
+P110	II	DRG	Essen	41 971				
+P111	II	DRG	Essen	41 971				
+;Einheits-Schnellzugwagen Gruppe 23 (Hechtwagen)
+P112	II	DRG	Hannover	105 103				
+P113	II	DRP	Nürnberg	268				
+P114	II	DRP	Köln	3936				
+P115	II	DRG	Hannover	11 005				
+P116	II	DRG	Hannover	11 214				
+P117	II	DRG	Hannover	11 289				
+P118	II	DRG	Hannover	16 043				
+P119	II	DRG	Hannover	16 044				
+P120	II	Mitropa	Mitropa	36 002				
+;Rheingold
+P121	II	DRG	Köln	90 202				
+P122	II	Mitropa	Köln	20 504				
+P123	II	Mitropa	Köln	20 501				
+P124	II	Mitropa	Köln	24 508				
+P125	II	Mitropa	Köln	24 505				
+;Rheingold
+P126	II	DRG	Köln	105 002				
+P127	II	Mitropa	Köln	10 502				
+P128	II	Mitropa	Köln	10 503				
+P129	II	Mitropa	Köln	10 710				
+P130	II	Mitropa	Köln	10 703				
+;Karwendel
+P131	II	DRG	München	105 270				
+P132	II	DRG	München	16 365				
+P133	II	DRG	München	16 367				
+P134	II	DRG	München	16 364				
+P135	II	DRG	München	15 018				
+;ISG-Wagen
+P136	II	CIWL						
+P137	II	CIWL						
+P138	II	CIWL						
+P139	II	CIWL						
+P140	II	CIWL						
+;Einheits-Schnellzugwagen Gruppe 28
+P141	II	DRG	Hannover	100 021				
+P142	II	DRG	Karlsruhe	100 022				
+P143	II	DRG	Altona	100 003				
+P144	II	DRG	Hannover	11 343				
+P145	II	DRG	Köln	21 507				
+P146	II	DRG	Köln	21 507				
+P147	II	DRG	Köln	21 507				
+P148	II	DRG	München	16 217				
+P149	II	DRG	Köln	26 529				
+P150	II	DRG	Köln	26 529				
+P151	II	DRG	Köln	26 529				
+P152	II	DRG	Köln	26 534				
+P153	II	DRG	Köln	26 534				
+P154	II	DRG	Köln	26 534				
+P155	II	DRG	Karlsruhe	16 221				
+P156	II	DRG	Karlsruhe	16 223				
+P157	II	Mitropa		1045				
+P158	II	Mitropa		1052				
+P159	II	Mitropa		1052				
+P160	II	Mitropa		1052				
+;Henschel-Wegmann
+P161	II	DRG	Berlin	10 401				
+P162	II	DRG	Berlin	10 402				
+P163	II	DRG	Berlin	10 403				
+P164	II	DRG	Berlin	10 404				
+;Einheits-Schnellzugwagen Gruppe 35 (braungrün)
+P165	II	DRG	München					
+P166	II	DRG	München	16587				
+P167	II	DRG	München	16600				
+P168	II	DRG	Mitropa	1130				
+;Einheits-Schnellzugwagen Gruppe 35 (flaschengrün)
+P169	II	DRG	München	105 731				
+P170	II	DRG	München	105 731				
+P171	II	DRG	München	11 623				
+P172	II	DRG	München	11 623				
+P173	II	DRG	München	16 579				
+P174	II	DRG	München	16 579				
+P175	II	DRG	München	16 579				
+P176	II	DRG	München	16 579				
+P177	II	DRG	München	16 582				
+P178	II	DRG	München	16 582				
+;Einheits-Schnellzugwagen Gruppe 38 (Schürzenwagen)
+P179	II	DRG	Berlin	105 728				
+P180	II	DRG	München	4896				
+P181	II	DRG	München	11 699				
+P182	II	DRG	Berlin	11 703				
+P183	II	DRG	Berlin	215 533				
+P184	II	DRG	München	214 016				
+P185	II	DRG	Berlin	19 225				
+P186	II	DRG	München	19 347				
+P187	II	DRG	München	19 224				
+P188	II	DRG	München	19 224				
+P189	II	DRG	München	19 300				
+P190	II	Mitropa		22 079				
+P191	II	Mitropa		1215				
+P192	II	Mitropa		1213				
+;Einheits-Eilzugwagen Gruppe 30
+P193	II	DRG	Frankfurt	25 139				
+;Einheits-Eilzugwagen Gruppe 36
+P194	II	DRG	Köln	112 379				
+P195	II	DRG	München	33 614				
+P196	II	DRG	München	33 614				
+P197	II	DRG	München	73 627				
+P198	II	DRG	München	73 627				
+P199	II	DRG	München	73 627				
+;Bay. 3achs. Schnellzugwagen
+P200	II	DRG	München	29 001				
+P201	II	DRG	München	29 532				
+P202	II	DRG	München	29 533				
+P203	II	DRG	München	29 535				
+P204	II	DRG	München	90 503				
+;Bay. Nebenbahnwagen
+P205	II	DRG		24 Au				
+P206	II	DRG	München	116 663				
+P207	I	KBayStsB	Regensburg	21 141				
+P208	I	KBayStsB	Regensburg	2721				
+P209	II	DRG	München	38 441				
+P210	II	DRG	München	38 452				
+P211	I	KBayStsB	Regensburg	12 213				
+P212	II	DRG	München	93 968				
+;Württ. Nebenbahnwagen
+P213	II	DRG	Stuttgart	40 015				
+P214	II	DRG	Stuttgart	40 015				
+P215	II	DRG	Stutgart	50 238				
+P216	II	DRG	Stutgart	50 238				
+P217	II	DRG	Stuttgart	50 029				
+P218	II	DRG	Stuttgart	50 029				
+P219	II	DRG	41 Stuttgart					
+P220	II	DRG	Stuttgart 34 114					
+P221	II	DRG	Stuttgart 34 117					
+;Preuß. Lokalbahnwagen
+P222	I	KPEV	Altona	3801				
+P223	II	DRG	Königsberg	099 522				
+P224	II	DRG	Königsberg	037 061				
+P225	I	KPEV	Halle	1488				
+P226	I	KPEV	Halle	1489				
+P227	II	DRG	Königsberg	050 211				
+P228	I	KPEV	Halle	3961				
+P229	I	KPEV	Halle	2456				
+P230	I	KPEV	Halle	903				
+;Preuß. zweiachsige Nebenbahnwagen
+P231	II	DRG	Altona	92 340x				
+P232	I	KPEV	Altona	1959				
+P233	I	KPEV	Erfurt	2678				
+P234	I	KPEV	Erfurt	2361				
+P235	I	KPEV	Gotha	2522				
+P236	I	KPEV	Erfurt	2532				
+P237	II	DRG	Breslau	92467				
+P238	II	DRG	Breslau	92467				
+;Preuß. zwei- und dreiachsige Nebenbahnwagen
+P239	I	KPEV	Halle	5986				
+P240	I	KPEV	Halle	706				
+P241	I	KPEV	Hannover	720				
+P242	I	KPEV	Breslau	2282				
+P243	I	KPEV	Breslau	2429				
+P244	I	KPEV	Stettin	2747				
+P245	I	KPEV	Halle	2653				
+P246	I	KPEV	Hannover	2641				
+P247	II	DRG	Berlin	99 511				
+P248	II	DRG	Berlin	99 511				
+P249	II	DRG	Berlin	99 511				
+P250	II	DRG	Berlin	99 511				
+P251	II	DRG	Berlin	99 511				
+P252	II	DRG	Halle	49 001				
+P253	II	DRG	Halle	49 001				
+P254	II	DRG	Halle	49 001				
+P255	II	DRG	Halle	49 001				
+P256	II	DRG	Halle	49 001				
+P257	II	DRG	Halle	50 280				
+;Preuß. zwei-/dreiachsige Abteilwagen
+P258	I	KPEV	Erfurt	3140				
+P259	I	KPEV	Coeln	3247				
+P260	II	DRG	Altona	111 037				
+P261	I	KPEV	Coeln	1126				
+P262	I	KPEV	Coeln	1126				
+P263	I	KPEV	Berlin	1149				
+P264	I	KPEV	Berlin	1153				
+P265	I	KPEV	Halle	1762				
+P266	I	KPEV	Berlin	1891				
+P267	I	KPEV	Coeln	1873				
+P268	I	KPEV	Coeln	1873				
+P269	I	KPEV	Coeln	1873				
+P270	I	KPEV	Coeln	1879				
+P271	I	KPEV	Coeln	1879				
+P272	II	DRG	Altona	70 501				
+P273	II	DRG	Altona	70 517				
+P274	II	DRG	Altona	70 517				
+P275	II	DRG	Altona	70 544				
+P276	II	DRG	Altona	70 544				
+P277	II	DRG	Altona	70 544				
+;Einheitspersonenwagen (Abteil) für Hauptbahnen
+P278	II	DRG	Mainz	114 151				
+P279	II	DRG	München	114 178				
+P280	II	DRG	Mainz	44 831				
+P281	II	DRG	Frankfurt	45 424				
+P282	II	DRG	Mainz	31 040				
+P283	II	DRG	Mainz	31 036				
+;EInheitsdurchgangspersonenwagen (Donnerbüchsen)
+P284	II	DRG	Nürnberg	114 263				
+P285	II	DRG	Nürnberg	28 604				
+P286	II	DRG	Nürnberg	36 441				
+P287	II	DRG	Nürnberg	41 504				
+P288	II	DRG	Nürnberg	41 504				
+P289	II	DRG	Nürnberg	41 504				
+P290	II	DRG	Nürnberg	41 504				
+P291	II	DRG	Nürnberg	41 504				
+P292	II	DRG	Nürnberg	84 523				
+P293	II	DRG	Nürnberg	83 072				
+;Städteexpress
+P294	IV	DR		51 50 10 40 206-0				
+P295	IV	DR		51 50 10 40 206-0				
+P296	IV	DR		51 50 21 53 005-7				
+P297	IV	DR		51 50 21 53 005-7				
+P298	IV	DR		50 50 21 12 004-1				
+P299	IV	DR		50 50 21 12 000-9				
+P300	IV	DR						
+P301	IV	DR						
+P302	IV	Mitropa						
+;Internationaler Verkehr (UIC Y, Z)
+P303	IV	DR		51 50 82 45 007-8				
+P304	IV	DR		51 50 82 45 007-8				
+P305	IV	DR						
+P306	IV	DR		51 50 20-40 129-2				
+P307	IV	DR						
+P308	IV	DR		51 50 21 53-204-6				
+P309	IV	DR		51 50 21 53-124-6				
+P310	IV	DR		51 50 21 53-096-6				
+P311	IV	DR						
+P312	IV	DR						
+P313	IV	Mitropa						
+P314	IV	DR		51 80 10-40 223-9				
+P315	IV	DR		51 80 22-41 037-8				
+P316	IV	DR		51 80 22-40 951-1				
+P317	IV	DB						
+P318	IV	DB						
+P319	IV	DB						
+P320	IV	DB						
+P321	IV	DB						
+P322	IV	DB						
+;Binnenverkehr (UIC B)
+P323	IV	DR		51 50 20-40 030-2				
+P324	IV	DR		51 50 20-45 033-1				
+P325	IV	DR		51 50 88-40111-9				
+P326	IV	DR		51 50 39-40 061-6				
+P327	IV	DR		51 50 20-40 198-7				
+P328	IV	DR		51 50 20-40 207-6				
+P329	IV	DR		51 50 59 40 009-0				
+P330	IV	Mitropa		51 50 70 40 177-5				
+P331	IV	Mitropa		51 50 70 40 124-2				
+P332	IV	Mitropa		51 50 88 40 103-6				
+P333	IV	DR		51 50 98 80 002-9				
+P334	IV	DR		51 50 98 80 003-7				
+;Binnenverkehr (Mitteleinstiegwagen)
+P335	IV	Mitropa						
+P336	IV	DR		51 50 21-40 039-2				
+P337	IV	DR		51 50 21-40 045-9				
+P338	IV	DR		51 50 21-40 071-5				
+P339	IV	DR		51 50 21-40 106-9				
+P340	IV	DR		51 50 21-40 039-2				
+P341	IV	DR		51 50 21-45 078-5				
+P342	IV	DR		51 50 21-45 094-2				
+P343	IV	DR		51 50 21-45 101-5				
+P344	IV	DR		51 50 21-45 120-5				
+;Balt-Orient-Express
+P345	IV	DR		51 50 20-40 070-8				
+P346	IV	DR		51 50 19-80 043-9				
+P347	IV	DR		51 50 20-80 218-4				
+P348	IV	Mitropa		51 50 70-40 159-8				
+P349	IV	CFR		51 53 70-50 019-8				
+P350	IV	MAV		51 55 70-80 002-6				
+P351	IV	CSD		51 54 59-41 156-4				
+P352	IV	CSD		51 54 20-40 457-3				
+P353	IV	CSD		51 54 20-41 771-6				
+;Binneverkehr (Modernisierungswagen)
+P354	IV	DR		51 50 29 13 026-3				
+P355	IV	DR		51 50 29 45 268-5				
+P356	IV	DR		51 50 85 45 518-3				
+P357	IV	DR		51 50 17 45 061-8				
+P358	IV	DR		51 50 38 45 048-6				
+P359	IV	DR		51 50 95 40 220-8				
+P360	IV	DR		51 50 17 45 061-8				
+P361	IV	DR		51 50 38 45 048-6				
+P362	IV	DR		51 50 95 40 220-8				
+;Binnenverkehr (Lowa)
+P363	IV	DR		82-14 246-4				
+P364	IV	DR		29-14 314-4				
+P365	IV	DR		29-14 316-9				
+P366	IV	DR		29-14 319-3				
+P367	IV	DR		29-14 320-1				
+P368	IV	DR		50 50 80 14 200-1				
+P369	IV	DR		50 50 29 40 025-6				
+P370	IV	DR		50 50 49 14216-1				
+P371	IV	DR		50 50 49 14221-1				
+P372	IV	DR		50 50 49 14230-1				
+;Binnenverkehr (ex Karwendel)
+P373	III	DR		641-013				
+P374	III	DR		241-015				
+P375	III	DR		241-015				
+P376	III	DR		241-213				
+P377	III	DR		241-215				
+;Binnenverkehr (ex Eilzugwagen 30er)
+P378	IV	DR		51 50 92 43 359-5				
+P379	IV	DR		57 50 38 14 652-9				
+P380	IV	DR		57 50 38 14 652-9				
+P381	IV	DR		57 50 28 14 526-7				
+P382	IV	DR		57 50 28 14 526-7				
+P383	IV	DR		57 50 28 14 531-4				
+P384	III	DR		60 50 70 10 100-7				
+P385	III	DR		51 50 88 40 055-8				
+;Doppelstockeinzelwagen (Anfang 70er)
+P386	IV	DR		50 50 25-13 006-1				
+P387	IV	DR		50 50 25-13 039-2				
+P388	IV	DR		50 50 25-13 020-2				
+P389	IV	DR		50 50 25-13 030-1				
+P390	IV	DR		50 50 25-13 022-8				
+;Doppelstockeinzelwagen (Sputnikverkehr)
+P391	IV	DR						
+P392	IV	DR						
+P393	IV	DR						
+P394	IV	DR						
+P395	IV	DR						
+;Doppelstockzüge (DB7, D13)
+P396	IV	DR		50 50 26-25 467-0				
+P397	IV	DR		50 50 26-25 468-8				
+P398	IV	DR		50 50 26-12 085-5				
+P399	IV	DR		50 50 26-12 086-3				
+P400	IV	DR		50 50 26-12 087-1				
+P401	IV	DR		50 50 26-12 088-9				
+P402	IV	DR						
+P403	IV	DR						
+P404	IV	DR						
+P405	IV	DR						
+;4achs. Rekowagen
+P406	IV	DR						
+P407	IV	DR						
+P408	IV	DR		50 50 28-05 009-2				
+P409	IV	DR		50 50 28-05 009-2				
+P410	IV	DR		57 50 28-14 455-9				
+P411	IV	DR		57 50 28-13 262-0				
+P412	IV	DR		57 50 28-13 262-0				
+P413	IV	DR		57 50 28-13 262-0				
+P414	IV	DR		57 50 28-13 262-0				
+P415	IV	DR		57 50 28-13 420-4				
+P416	IV	DR		57 50 28-13 420-4				
+P417	IV	DR		57 50 28-13 420-4				
+;2/3achs. Rekowagen
+P418	IV	DR						
+P419	IV	DR						
+P420	IV	DR						
+P421	IV	DR		50 50 24-25 371-1				
+P422	IV	DR		50 50 23-24 719-8				
+P423	IV	DR		50 50 24-15 020-1				
+P424	IV	DR		50 50 23-15 296-2				
+P425	IV	DR		50 50 23-15 188-7				
+P426	IV	DR		50 50 93 50 070-2				
+P427	IV	DR		50 50 90 15 871-6				
+P428	IV	DR		50 50 23 15 351-1				
+;3achs. Umbauwagen
+P429	IV	DB		99 331 Wt				
+P430	IV	DB		86 033 Wt				
+P431	IV	DB		37 003 Wt				
+P432	IV	DB		85 862 Wt				
+P433	IV	DB		85 862 Wt				
+;GÃ¼terzugbegleitwagen
+G1	I	KPEV	Stettin					
+G2	I	KPEV	Frankfurt	5469				
+G3	I	KPEV	Frankfurt	5171				
+G4	II	DRG	Frankfurt	95 647				
+G5	II	DRG	Frankfurt	95 647				
+G6	II	DRG	Hannover	122 460				
+G7	II	DRG	Hannover	122 460				
+G8	II	DRG	Hannover	122 460				
+G9	II	DRG	Hannover	122 460				
+G10	II	DRG	Hannover	122 460				
+G11	II	DRG	NÃ¼rnberg	131 831				
+G12	IV	DR		30 50 940 0032 - 4				
+;Leig
+G13	II	DRG	Stuttgart	132 781				
+G14	II	DRG	Dresden	6344				
+G15	II	DRG	Dresden	6344				
+G16	II	DRG	Dresden	6344				
+G17	II	DRG	Dresden	11 483				
+G18	II	DRG	Dresden	11 484				
+G19	II	DRG	Dresden	11 483				
+G20	II	DRG	Dresden	11 484				
+;Hilfszugwagen, Bauwagen
+G21	II	DRG	NÃ¼rnberg	700 210				
+G22	II	DRG	NÃ¼rnberg	710 251				
+G23	III	DB						
+G24	III	DB						
+G25	III	DB						
+G26	III	DB						
+G27	III	DB						
+G28	II	DRG	Frankfurt	700 004				
+G29	II	DRG	Frankfurt	701 952				
+G30	II	DRG	Frankfurt	700 253				
+G31	II	DRG	Karlsruhe	700 500				
+G32	I	KPEV	Stettin	10824				
+G33	II	DRG	Magdeburg	1700				
+;Gedeckte Wagen
+G34	II	DRG	MÃ¼nchen	64 267				
+G35	I	KPEV	Frankfurt	12 530				
+G36	I	KPEV	Frankfurt	12 530				
+G37	I	KPEV	Frankfurt	12 530				
+G38	I	KPEV	Frankfurt	12 530				
+G39	I	KPEV	Altona	15 026				
+G40	I	K. Bay. St.B.	P	601 990				
+G41	II	DRG	Hannover	11 057				
+G42	I	KPEV	Berlin	16 142				
+G43	I	KPEV	Berlin	16 127				
+G44	I	KPEV	Berlin	16 127				
+G45	II	DRG	Stettin	33 885				
+G46	II	DRG	Stettin	33 885				
+G47	II	DRG	Stettin	33 885				
+G48	II	DRG	Stettin	33 885				
+G49	II	DRG	Stettin	34 448				
+G50	II	DRG	Stettin	35 448				
+G51	II	DRG	Stettin	35 448				
+G52	II	DRG	Stettin	35 448				
+G53	I	KPEV	Altona	14 527				
+G54	I	KPEV	Altona	14527				
+G55	I	KPEV	Altona	14527				
+G56	I	KPEV	Altona	14527				
+G57	I	DRG	Altona	14 520				
+G58	I	DRG	Altona	14 520				
+G59	II	DRG	Stettin	33856				
+G60	II	DRG	Stettin	33856				
+G61	II	DRG	Stettin	33856				
+G62	II	DRG	Stettin	33856				
+G63	II	DRG	Stettin	33856				
+G64	II	DRG	Stettin	33856				
+G65	II	DRG	Stettin	33856				
+G66	II	DRG	Stettin	33856				
+G67	II	DRG	Stettin	33856				
+G68	II	DRG	Stettin	33856				
+G69	I	Meckl-Schwerin		600 013				
+G70	II	DRG	Dresden	4040				
+G71	II	DRG	Dresden	4042				
+G72	I	KBayStB	NÃ¼rnberg	47 772				
+G73	I	KBayStB		86 561				
+G74	II	DRG	Kassel	52 219				
+G75	II	DRG	Dresden	7214				
+G76	II	DRG	Dresden	7214				
+G77	II	DRG	Dresden	7214				
+G78	II	DRG	Dresden	7214				
+G79	II	DRG	Dresden	7214				
+G80	II	DRG	Dresden	7214				
+G81	I	KPEV	Erfurt	8155				
+G82	II	DRG	Kassel	80 125				
+G83	II	DRG	Kassel	80 125				
+G84	II	DRG	Kassel	80 325				
+G85	II	DRG	Dresden	21 005				
+G86	I	KBayStB		43 596				
+G87	I	KBayStB		43846				
+G88	II	DRG	Kassel	14 206				
+G89	II	DRG	Kassel	45 897				
+G90	II	DRG	MÃ¼nchen	8 927				
+G91	I	KPEV	Essen	19 268				
+G92	I	KPEV	Essen	19 268				
+G93	II	DRG	Kassel	24 655				
+G94	II	FS		2301				
+G95	II	SBB		31 117				
+G96	II	SBB						
+G97	II	DRG	Oppeln	5698				
+G98	II	DRG	Oppeln	1555				
+G99	II	DRG	Oppeln	17 646				
+G100	II	DRG	Leipzig	2204				
+G101	II	DRG	Bromberg	10 020				
+G102	II	DRG	Bromberg	10 020				
+G103	I	KPEV	CÃ¶ln	600 248				
+G104	II	DRG	MÃ¼nster	579 031				
+;Offene Wagen
+G105	I	KPEV	Kgl. Mil. E.	487				
+G106	I	KPEV	Magdeburg	54 713				
+G107	I	K. Sachs. St. Eb		46 882				
+G108	I	K. Sachs. St. Eb		46 137				
+G109	I	KPEV	Magdeburg	31 555				
+G110	I	K. Sachs. St. Eb		46 882				
+G111	I	KPEV	SaarbrÃ¼cken	36 348				
+G112	I	KPEV	SaarbrÃ¼cken	31 830				
+G113	I	KPEV	Magdeburg	51 770				
+G114	I	KPEV	SaarbrÃ¼cken	31 910				
+G115	I	KPEV	SaarbrÃ¼cken	34 326				
+G116	I	Oldenburg		6162				
+G117	I	KPEV	Magdeburg	50 961				
+G118	I	Meckl-Schwerin		10 281				
+G119	I	KPEV	Bromberg	86 970				
+G120	I	KPEV	Bromberg	86 970				
+G121	I	KPEV	Bromberg	86 970				
+G122	I	KPEV	Bromberg	86 970				
+G123	I	KPEV	Bromberg	86 970				
+G124	I	KPEV	Bromberg	86 970				
+G125	I	KPEV	Magdeburg	66 887				
+G126	I	Bad.St.B.	Baden	50 381				
+G127	I	KPEV	Kattowitz	32 292				
+G128	I	KPEV	Essen	334 045				
+G129	I	KPEV	Essen	349 781				
+G130	I	KBayStB		57 601				
+G131	II	DRG	NÃ¼rnberg	23 219				
+G132	II	DRG	NÃ¼rnberg	23 219				
+G133	II	DRG	NÃ¼rnberg	23 219				
+G134	II	DRG	Schwerin	26 538				
+G135	II	DRG	Schwerin	26 538				
+G136	II	DRG	Schwerin	26 538				
+G137	II	DRG	Schwerin	25 231				
+G138	II	DRG	Schwerin	25 231				
+G139	II	DRG	Schwerin	26 538				
+G140	II	DRG	Schwerin	26 538				
+G141	II	DRG	Schwerin	26 538				
+G142	II	DRG	Schwerin	26 538				
+G143	II	DRG	Schwerin	26 538				
+G144	II	DRG	Schwerin	26 538				
+G145	II	DRG	Schwerin	26 538				
+G146	II	DRG	Schwerin	26 538				
+G147	II	DRG	Schwerin	26 538				
+G148	II	DRG	Schwerin	26 538				
+G149	II	DRG	Schwerin	26 538				
+G150	II	DRG	Schwerin	26 538				
+G151	II	DRG	Schwerin	26 538				
+G152	II	DRG	Schwerin	26 538				
+G153	II	DRG	Schwerin	26 538				
+G154	II	DRG	Schwerin	26 538				
+G155	II	DRG	Schwerin	26 538				
+G156	II	DRG	Schwerin	26 538				
+G157	II	DRG	Schwerin	26 538				
+G158	II	DRG	Schwerin	26 538				
+G159	II	DRG	Schwerin	26 538				
+G160	II	DRG	Schwerin	26 538				
+G161	II	DRG	Schwerin	25 231				
+G162	II	DRG	Schwerin	25 231				
+G163	II	DRG	Schwerin	25 231				
+G164	II	DRG	Schwerin	25 231				
+G165	II	DRG	Schwerin	25 231				
+G166	II	DRG	Schwerin	25 231				
+G167	II	DRG	Schwerin	25 231				
+G168	II	DRG	Schwerin	25 231				
+G169	II	DRG	Frankfiurt	60 113				
+G170	II	DRG	Halle	41 177				
+G171	II	DRG	Halle	41 177				
+G172	II	DRG	Halle	41 177				
+G173	II	DRG	Breslau	62 813				
+G174	II	DRG	Essen	26 055				
+G175	II	DRG	Essen	26 055				
+G176	II	DRG	Essen	26 055				
+G177	II	DRG	Essen	26 055				
+G178	II	DRG	Essen	26 055				
+G179	II	DRG	Essen	26 055				
+G180	II	DRG	Essen	26 055				
+G181	II	DRG	Essen	26 055				
+G182	II	DRG	Essen	26 055				
+G183	II	DRG	Essen	26 055				
+G184	II	DRG	Essen	26 055				
+G185	II	DRG	Breslau	56 147				
+G186	II	DRG	Breslau	56 147				
+G187	II	DRG	Breslau	56 147				
+G188	II	DRG	Breslau	56 147				
+G189	II	DRG	WÃ¼rttemberg	42 103				
+G190	II	DRG	WÃ¼rzburg	21 557				
+;Klappdeckelwagen
+G191	II	KPEV	Berlin	17 422				
+G192	I	KPEV	Berlin	17 422				
+G193	I	K. Bay. St.B.	Ludwigshafen	49 153				
+G194	II	DRG	Wuppertal	80 913				
+G195	II	Kn	Elberfeld	10 348				
+G196	II	DRG	Wuppertal	7576				
+G197	I	KPEV	Stettin	17 123				
+G198	I	K. SÃ¤chs. St. Eb.		24 924				
+G199	II	DRG	Wuppertal	8944				
+;Viehwagen
+G200	II	DRG	WÃ¼rzburg	5658				
+G201	I	KBayStB		65514				
+G202	II	DRG	Frankfurt	6151				
+G203	II	DRG	Frankfurt	6151				
+G204	II	DRG	WÃ¼rzburg	18 778				
+G205	II	DRG	WÃ¼rzburg	18 778				
+G206	I	KPEV	KÃ¶nigsberg	30 164				
+G207	I	KPEV	Magdeburg	34 608				
+G208	I	KPEV	Magdeburg	34 608				
+G209	II	DRG	WÃ¼rzburg	19 528				
+G210	II	DRG	WÃ¼rzburg	19 528				
+G211	II	DRG	WÃ¼rzburg	19 528				
+G212	I	DRG	Stettin	18 831				
+G213	I	DRG	Hanover	18 637				
+G214	I	DRG	Hanover	18 637				
+G215	II	DRG	Altona	508				
+G216	II	DRG	Altona	508				
+G217	I	KPEV	Hannover	18 648				
+G218	II	DRG	Altona	212				
+G219	II	DRG	Altona	212				
+G220	II	DRG	Altona	212				
+G221	II	DRG	Altona	18 196				
+G222	II	DRG	Altona	6205				
+G223	I	KPEV	Stettin	16 944				
+G224	I	KPEV	Stettin	16 835				
+;Selbstentladewagen
+G225	II	DRG	Oldenburg	191				
+G226	II	DRG	Oldenburg	141				
+G227	II	DRG	Oldenburg	692				
+G228	II	DRG	Oldenburg	698				
+G229	II	DRG	Oldenburg	705				
+G230	II	DRG	Oldenburg	692				
+G231	II	DRG	Oldenburg	698				
+G232	II	DRG	Oldenburg	734				
+G233	II	DRG	Oldenburg	738				
+G234	II	DRG	Oldenburg	832				
+G235	II	DRG	Oldenburg	734				
+G236	II	DRG	Oldenburg	738				
+G237	II	DRG	Oldenburg	832				
+G238	II	DRG	Oldenburg	734				
+G239	II	DRG	Oldenburg	738				
+G240	II	DRG	Oldenburg	832				
+G241	II	DRG	Oldenburg	734				
+G242	II	DRG	Oldenburg	738				
+G243	II	DRG	Oldenburg	832				
+G244	II	DRG	Oldenburg	734				
+G245	II	DRG	Oldenburg	738				
+G246	II	DRG	Oldenburg	832				
+G247	II	DRG	Regensburg	701 927				
+G248	II	DRG	Regensburg	701 927				
+G249	II	DRG	Regensburg	701 927				
+G250	II	DRG	Regensburg	701 927				
+G251	II	DRG	Regensburg	701 927				
+G252	II	DRG	Regensburg	701 927				
+G253	II	DRG	Regensburg	701 927				
+G254	II	DRG	Regensburg	701 927				
+G255	II	DRG	Oldenburg	4046				
+G256	II	DRG	Oldenburg	4048				
+G257	II	DRG	Oldenburg	4050				
+;Niederbord-, Flach-, Rungenwagen
+G258	II	DRG	KÃ¶ln	8366				
+G259	I	KPEV	Essen	17 309				
+G260	I	KPEV	CÃ¶ln	21 416				
+G261	I	KPEV	Essen	17 307				
+G262	I	KPEV	Hannover	37 095				
+G263	I	KPEV	Hannover	37 095				
+G264	I	KPEV	Hannover	37 095				
+G265	I	KPEV	Hannover	37 095				
+G266	II	DRG	KÃ¶ln	916				
+G267	II	DRG	Erfurt					
+G268	II	DRG	Erfurt	44 738				
+G269	II	DRG	Erfurt	6162				
+G270	II	SBB		566 001				
+G271	I	KBayStB		9545				
+G272	II	DRG	Erfurt	64 354				
+G273	II	DRG	Regensburg	19 864/20 275				
+G274	II	DRG	Regensburg	19 864/20 275				
+G275	I	KPEV	Magdeburg/					
+8814	101 105/45 051							
+G276	II	DRG	KÃ¶ln	14 402				
+G277	II	DRG		14 519				
+G278	II	DRG		14 489				
+G279	II	DRG		14 552				
+;Kesselwagen
+G280	I	K.Bay.St.B						
+G281	I	K.Bay.St.B						
+G282	I	DRG	Halle	502 578				
+G283	II	DRG	Hannover	564 691				
+G284	II	DRG	Halle	559 897				
+G285	I	DRG	Erfurt	502 231				
+G286	I	KPEV	CÃ¶ln	502 196				
+G287	I	KPEV	LÃ¼beck	502 284				
+G288	I	KPEV	CÃ¶ln	503 225 [P]				
+G289	I	KPEV	Elberfeld	502 301				
+G290	II	DRG	Essen	501 463				
+G291	II	DRG	Stettin	581 092				
+G292	II	DRG	Essen	502 856				
+G293	II	DRG	Hannover	900 399				
+G294	II	DRG	Stettin	581 829				
+G295	II	DRG	Stettin	581 829				
+G296	II	DRG	Essen	501 482				
+G297	II	DRG	Essen	501 483				
+G298	II	DRG	Essen	501 484				
+G299	II	DRG	KÃ¶ln	540 562				
+G300	II	DRG	MÃ¼nchen	518 322				
+G301	II	DRG	Dresden	550 993				
+G302	II	DRG	Dresden	550 993				
+G303	II	SBB		534 215				
+G304	II	DRG	MÃ¼nchen	518 131				
+;KÃ¼hlwagen
+G305	II	DRG	Dresden	555 137				
+G306	II	DRG	MÃ¼nchen	513 716				
+G307	II	DRG	Berlin	2870				
+G308	II	DRG	Berlin	600 215				
+G309	I	KPEV	CÃ¶ln	600 248				
+G310	II	DRG	MÃ¼nster	579 031				
+G311	II	DRG	Berlin	398				
+G312	I	DRG	MÃ¼nster	600 017				
+G313	I	DRG	MÃ¼nster	600 017				
+G314	I	KPEV	Essen	600 169				
+G315	I	KPEV	Essen	600 169				
+G316	I	KPEV	Essen	600 169				
+G317	I	KPEV	Essen	600 169				
+G318	II	DRG	Berlin	523				
+G319	II	DRG	Berlin	523				
+G320	II	DRG	Oldenburg	589 041				
+G321	II	DRG	Frankfurt	556 080				
+G322	II	DRG	Berlin	1678				
+G323	II	DRG	Berlin	1678				
+G324	I	KPEV	Berlin	600 532				
+G325	I	KPEV	Berlin	600 532				
+G326	II	SBB		533 216				
+G327	II	DRG	Berlin	530 255				
+G328	II	SBB		516 309				
+G329	II	DRG	SaarbrÃ¼cken	11 007				
+G330	II	DRG	SaarbrÃ¼cken	11 008				
+G331	I	DRG	Altona	600 707				
+;Sonstige Wagen
+G332	I	KPEV	Essen	505 165				
+G333	II	DRG		537 082				
+G334	II	DRG	MÃ¼nchen	520 769				
+G335	II	SBB		520 753				
+G336	II	DRG	Mainz	502 324				
+G337	I	KPEV	KÃ¶ln	500 043				
+G338	I	KPEV	KÃ¶ln	500 043				
+G339	I	KPEV	KÃ¶ln	500 043				
+G340	I	KPEV	KÃ¶ln	500 043				
+G341	I	KPEV	Halle	560 569				
+G342	II	DRG	MÃ¼nchen	518 324				
+G343	II	DRG	MÃ¼nchen	518 324				
+G344	II	DRG						
+G345	II	DRG	NÃ¼rnberg	26 611				
+G346	II	DRG	NÃ¼rnberg	26 669				
+;Ep III/IV DR und DB
+G347	IV	DR		40 50 943 9788-2				
+G348	IV	DR		40 50 944 4227-5				
+G349	IV	DB		21 80 411 7 882-1				
+G350	IV	DB		52 80 514 5 724-3				
+G351	IV	DB		52 80 514 5 613-1				
+G352	IV	DB		42 80 514 1 113.3				
+G353	IV	DR		21 50 510 3494-4				
+G354	IV	DR		21 50 510 3492-8				
+G355	IV	DB		01 80 505 6 612--6				
+G356	IV	DR						
+G357	IV	DB		47 35 480 5 517-6				
+G358	IV	DB		01 80 508 5 385-4				
+G359	IV	DB		01 80 508 5 385-4				
+G360	III	DB		715 248				
+G361	III	DB		884 262				
+G362	III	DB		884 262				
+G363	III	DB		884 262				
+G364	III	DB		885 008				
+G365	IV	DB		01 80 508 1 234-8				
+G366	?	?	?	?				
+G367	IV	DB		01 80 5085 383-9				
+G368	IV	DR		31 50 594 9 373-6				
+G369	IV	DR		31 50 594 9 324-9				
+G370	IV	DR		11 80 534 1 713-5				
+G371	IV	DR		11 80 534 2 986-6				
+G372	IV	DR		31 50 594 9 189-6				
+G373	IV	DR		31 50 594 9 225-6				
+G374	IV	DR		31 50 594 9 106-0				
+G375	IV	DR		31 50 592 3460-1				
+G376	IV	DR		31 50 592 3570-7				
+G377	IV	DR		31 50 592 3610-1				
+G378	IV	DR						
+G379	IV	DB		20 80 327 3 378-4				
+G380	III	DB		#				
+G381	III	DB		350 002				
+G382	III	DB		350 009				
+G383	IV	DR		21 50 6771 850-6				
+G384	IV	DR		21 50 6771 852-2				
+G385	IV	DR		21 50 6771 854-8				
+G386	IV	DR		31 50 677 1 828-0				
+G387	IV	DR		31 50 677 1 979-1				
+G388	IV	DR		31 50 677 2 201-9				
+G389	IV	DR		31 50 583 5020-0				
+G390	IV	DR		31 50 583 5028-3				
+G391	IV	DR		31 50 583 5033-3				
+G392	IV	DR		31 50 583 5020-0				
+G393	IV	DR		31 50 583 5028-3				
+G394	IV	DR		31 50 583 5033-3				
+G395	IV	DR						
+G396	IV	DB		21 50 575 0 362-8				
+G397	IV	DB		21 50 575 0 362-8				
+G398	IV	DR		21 80 540 5 386-1				
+G399	IV	DP		50 50 00-29 417-1				
+G400	IV	DR		21 50 120 5 405-8				
+G401	IV	DR		20 81 111 0 042-5				
+G402	IV	DR						
+G403	IV	DR		20 81 111 0 042-5				
+G404	IV	DB		01 80 151 2 166-8				
+G405	IV	DR		21 50 150 0 118-7				
+G406	IV	DR		21 50 150 0 076-7				
+G407	IV	DR		21 50 120 0066-1				
+G408	IV	DR		21 50 120 0077-9				
+G409	IV	DR		21 50 174 2517-7				
+G410	IV	DB		211 4 189-2				
+G411	III	DB		300 217				
+G412	III	DB		56 93 31				
+G413	IV	DR		17 50 807 8032-9				
+G414	IV	DR		17 50 807 8055-0				
+G415	IV	DR		17 50 807 8090-7				
+G416	IV	DR		17 50 807 8032-9				
+G417	IV	DR		17 50 807 8055-0				
+G418	IV	DR		17 50 807 8090-7				
+G419	IV	FS		11 83 083 0 682-8				
+G420	IV	DB		43 80 082 4 112-9				
+G421	III	DB		308 351				
+G422	IV	DR						
+G423	IV	DR						
+G424	IV	DR						
+G425	IV	DB		23 80 765 0 887-4				
+G426	IV	DB		23 80 735 6 013-4				
+G427	III	DB		586 962				
+G428	IV	DR		21 50 730 0 826-4				
+G429	IV	DR		21 50 730 0 977-5				
+G430	IV	DR		35 50 7858 514-8				
+G431	IV	DR		35 50 7858 520-3				
+G432	IV	DR		35 50 7858 543-5				
+G433	III	DB		542 571				
+G434	IV	DB		21 80 005 1 291-1				
+G435	III	DR		51-98-36				
+G436	IV	DB		21 80 572 9 029-6				
+G437	IV	DB						
+G438	IV	DB						
+G439	IV	DB						
+G440	IV	DB						
+G441	IV	DB						
+G442	IV	DB						
+G443	IV	DR						
+G444	IV	DR						
+G445	IV	DR						
+G446	IV	DR		51 50 154 0257-5				
+G447	IV	DB						
+G448	IV	DB						
+G449	IV	DB		01 80 120 4 302-2				
+G450	IV	DR		21 50 120 5405-8				
+G451	IV	DR		21 50 120 5405-8				

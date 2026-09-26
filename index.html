@@ -1632,6 +1632,8 @@
                         <span class="tab-pin" id="pin-sub-inv-wagen" title="Anpinnen, um diesen Tab beim Neustart standardmäßig zu öffnen" onclick="toggleSubTabPin('inv','wagen');"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M17 4a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h1v5.586l-1.707 1.707A1 1 0 0 0 8 15h3v5a1 1 0 0 0 2 0v-5h3a1 1 0 0 0 .707-1.707L15 11.586V7h1a1 1 0 0 0 1-1V4z"/></svg></span>
                         <span class="col-tab" id="inv-tab-g" onclick="switchInvTab('g')">G</span>
                         <span class="tab-pin" id="pin-sub-inv-g" title="Anpinnen, um diesen Tab beim Neustart standardmäßig zu öffnen" onclick="toggleSubTabPin('inv','g');"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M17 4a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h1v5.586l-1.707 1.707A1 1 0 0 0 8 15h3v5a1 1 0 0 0 2 0v-5h3a1 1 0 0 0 .707-1.707L15 11.586V7h1a1 1 0 0 0 1-1V4z"/></svg></span>
+                          <span class="col-tab" id="inv-tab-neu" onclick="switchInvTab('neu')">Neu</span>
+                          <span class="tab-pin" id="pin-sub-inv-neu" title="Anpinnen, um diesen Tab beim Neustart standardmYig zu ffnen" onclick="toggleSubTabPin('inv','neu');"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M17 4a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h1v5.586l-1.707 1.707A1 1 0 0 0 8 15h3v5a1 1 0 0 0 2 0v-5h3a1 1 0 0 0 .707-1.707L15 11.586V7h1a1 1 0 0 0 1-1V4z"/></svg></span>
                     </div>
                     <!-- Filter-Bar Wagen -->
                     <div id="inv-wagen-filter" class="inv-filter-bar" style="display:none;">
@@ -1737,6 +1739,41 @@
                                 </tr>
                                 <tr id="inv-g-header-row">
                                     <!-- Kopfzeile wird per JS gefüllt -->
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                    <div id="inv-neu-view" style="flex:1; overflow-y:auto; display:none;">
+                        <table class="inv-table" id="inv-neu-table" style="table-layout:auto;">
+                            <thead>
+                                <tr id="inv-neu-filter-row" style="background:#e8e8e8; position: sticky; top: 0; z-index: 11;">
+                                    <th style="padding:4px;"><input type="text" id="inv-neu-filter-id" style="width:100%; box-sizing:border-box;" oninput="invNeuRender()" placeholder="ID..."></th>
+                                    <th style="padding:4px;"><input type="text" id="inv-neu-filter-epoche" style="width:100%; box-sizing:border-box;" oninput="invNeuRender()" placeholder="Ep..."></th>
+                                    <th style="padding:4px;"><input type="text" id="inv-neu-filter-bv" style="width:100%; box-sizing:border-box;" oninput="invNeuRender()" placeholder="BV..."></th>
+                                    <th style="padding:4px;"><input type="text" id="inv-neu-filter-gattung" style="width:100%; box-sizing:border-box;" oninput="invNeuRender()" placeholder="Gattung..."></th>
+                                    <th style="padding:4px;"><input type="text" id="inv-neu-filter-ord" style="width:100%; box-sizing:border-box;" oninput="invNeuRender()" placeholder="Ord.Nr...."></th>
+                                    <th style="padding:4px;"><input type="text" id="inv-neu-filter-dir" style="width:100%; box-sizing:border-box;" oninput="invNeuRender()" placeholder="Direktion..."></th>
+                                    <th style="padding:4px;"><input type="text" id="inv-neu-filter-bw" style="width:100%; box-sizing:border-box;" oninput="invNeuRender()" placeholder="BW..."></th>
+                                    <th style="padding:4px;"><input type="text" id="inv-neu-filter-hst" style="width:100%; box-sizing:border-box;" oninput="invNeuRender()" placeholder="Hst..."></th>
+                                    <th style="padding:4px;">
+                                        <div style="display:flex; align-items:center; gap:4px;">
+                                            <input type="text" id="inv-neu-filter-art" style="flex:1; box-sizing:border-box;" oninput="invNeuRender()" placeholder="Art.-Nr....">
+                                            <span id="inv-neu-count" style="font-size:11px; color:#555; white-space:nowrap;"></span>
+                                            <button onclick="invNeuReset()" style="cursor:pointer; padding:0 4px; font-size:13px;" title="Filter zur&uuml;cksetzen">&#10006;</button>
+                                        </div>
+                                    </th>
+                                </tr>
+                                <tr id="inv-neu-header-row" style="background:#e8e8e8; position: sticky; top: 28px; z-index: 10;">
+                                    <th style="padding:4px; text-align:left;">ID</th>
+                                    <th style="padding:4px; text-align:left;">Epoche</th>
+                                    <th style="padding:4px; text-align:left;">BV</th>
+                                    <th style="padding:4px; text-align:left;">Gattungsbezirk</th>
+                                    <th style="padding:4px; text-align:left;">Ordnungsnummer</th>
+                                    <th style="padding:4px; text-align:left;">Direktion</th>
+                                    <th style="padding:4px; text-align:left;">Bahnbetriebswerk</th>
+                                    <th style="padding:4px; text-align:left;">Hst</th>
+                                    <th style="padding:4px; text-align:left;">Art.-Nr.</th>
                                 </tr>
                             </thead>
                             <tbody></tbody>
@@ -2766,6 +2803,14 @@
             if (tab === 'loks') {
                 document.getElementById('rm-tab-loks').classList.add('active');
                 document.getElementById('rm-loks-view').style.display = 'flex';
+                        } else if (tab === 'neu') {
+                const isFirstOpen = !window._neuLoaded;
+                const pData = window._neuLoaded ? Promise.resolve() : neuLoadCSV();
+                Promise.all([pData, pHer]).then(() => {
+                    if (isFirstOpen) {
+                        invNeuRender();
+                    }
+                });
             } else if (tab === 'g') {
                 if (tabG) tabG.classList.add('active');
                 if (viewG) viewG.style.display = 'flex';
@@ -7179,6 +7224,7 @@ ${von} – ${nach}`;
             document.getElementById('inv-tab-loks').classList.toggle('active', tab === 'loks');
             document.getElementById('inv-tab-wagen').classList.toggle('active', tab === 'wagen');
             document.getElementById('inv-tab-g').classList.toggle('active', tab === 'g');
+              const tabNeu = document.getElementById('inv-tab-neu'); if(tabNeu) tabNeu.classList.toggle('active', tab === 'neu');
             const wagenFilter = document.getElementById('inv-wagen-filter');
             if (wagenFilter) wagenFilter.style.display = tab === 'wagen' ? '' : 'none';
             const gFilterBar = document.getElementById('inv-g-filter-bar');
@@ -7186,6 +7232,7 @@ ${von} – ${nach}`;
             document.getElementById('inv-loks-view').style.display = tab === 'loks' ? 'block' : 'none';
             document.getElementById('inv-wagen-view').style.display = tab === 'wagen' ? 'block' : 'none';
             document.getElementById('inv-g-view').style.display = tab === 'g' ? 'block' : 'none';
+              const viewNeu = document.getElementById('inv-neu-view'); if(viewNeu) viewNeu.style.display = tab === 'neu' ? 'block' : 'none';
             
             const pHer = window._herstellerLoaded ? Promise.resolve() : loadHerstellerCSV();
             if (tab === 'loks') {
@@ -7194,6 +7241,14 @@ ${von} – ${nach}`;
             } else if (tab === 'wagen') {
                 const pData = window._wagenLoaded ? Promise.resolve() : wagenLoadCSV();
                 Promise.all([pData, pHer]).then(() => { _invBuildWagenHerBtns(); invWagenRender(); });
+                        } else if (tab === 'neu') {
+                const isFirstOpen = !window._neuLoaded;
+                const pData = window._neuLoaded ? Promise.resolve() : neuLoadCSV();
+                Promise.all([pData, pHer]).then(() => {
+                    if (isFirstOpen) {
+                        invNeuRender();
+                    }
+                });
             } else if (tab === 'g') {
                 const isFirstOpen = !window._gLoaded;
                 const pData = window._gLoaded ? Promise.resolve() : gLoadCSV();
@@ -7446,6 +7501,171 @@ ${von} – ${nach}`;
         let _gGroupCollapsed = {}; // groupKey -> true wenn collapsed
 
         let _gLoadPromise = null;
+                        // NEU (fahrzeuge.csv) Inventar
+        let _neuData = [];
+        let _neuLoadPromise = null;
+        function neuLoadCSV() {
+            if (!_neuLoadPromise) _neuLoadPromise = _neuLoadCSV_internal();
+            return _neuLoadPromise;
+        }
+
+        async function _neuLoadCSV_internal() {
+            window._neuLoaded = true;
+            try {
+                const resp = await fetch('data/rollmaterial/fahrzeuge.csv');
+                const buf = await resp.arrayBuffer();
+                const text = new TextDecoder('utf-8').decode(buf);
+                const lines = text.split('\n');
+                
+                for (let i = 0; i < lines.length; i++) {
+                    const line = lines[i].trim();
+                    if (!line) continue;
+                    if (i === 0 && !line.startsWith(';')) {
+                        continue;
+                    }
+                    _neuData.push(line);
+                }
+                invNeuRender();
+            } catch(e) {
+                console.error('Fehler beim Laden von fahrzeuge.csv', e);
+            }
+        }
+        
+        window.toggleNeuGroup = function(groupId) {
+            const trs = document.querySelectorAll('.neu-group-row-' + groupId);
+            const headerRow = document.getElementById('neu-group-header-' + groupId);
+            const isCollapsed = headerRow.getAttribute('data-collapsed') === 'true';
+            
+            trs.forEach(tr => {
+                tr.style.display = isCollapsed ? '' : 'none';
+            });
+            
+            headerRow.setAttribute('data-collapsed', isCollapsed ? 'false' : 'true');
+            const icon = headerRow.querySelector('.toggle-icon');
+            if(icon) icon.textContent = isCollapsed ? '\u25BC' : '\u25B6';
+        };
+
+                window.invNeuReset = function() {
+            ['inv-neu-filter-id','inv-neu-filter-epoche','inv-neu-filter-bv','inv-neu-filter-gattung','inv-neu-filter-ord','inv-neu-filter-dir','inv-neu-filter-bw','inv-neu-filter-hst','inv-neu-filter-art'].forEach(id => {
+                const el = document.getElementById(id);
+                if (el) el.value = '';
+            });
+            invNeuRender();
+        };
+
+        function fmtSup(s) {
+            if (!s) return '';
+            return s.replace(/\^([^\s(]+)/g, '<sup>$1</sup>');
+        }
+
+        window.invNeuRender = function() {
+            const tbody = document.querySelector('#inv-neu-table tbody');
+            if(!tbody) return;
+            tbody.innerHTML = '';
+            
+            // Read global epoche filter
+            const epBtn = document.querySelector('.global-ep-btn.active');
+            const globalEp = epBtn ? epBtn.textContent.trim() : '';
+
+            // Read text filters
+            const filterId  = (document.getElementById('inv-neu-filter-id')?.value  || '').toLowerCase();
+            const filterEp  = (document.getElementById('inv-neu-filter-epoche')?.value || '').toLowerCase();
+            const filterBv  = (document.getElementById('inv-neu-filter-bv')?.value  || '').toLowerCase();
+            const filterGat = (document.getElementById('inv-neu-filter-gattung')?.value || '').toLowerCase();
+            const filterOrd = (document.getElementById('inv-neu-filter-ord')?.value  || '').toLowerCase();
+            const filterDir = (document.getElementById('inv-neu-filter-dir')?.value  || '').toLowerCase();
+            const filterBw  = (document.getElementById('inv-neu-filter-bw')?.value   || '').toLowerCase();
+            const filterHst = (document.getElementById('inv-neu-filter-hst')?.value  || '').toLowerCase();
+            const filterArt = (document.getElementById('inv-neu-filter-art')?.value  || '').toLowerCase();
+            
+            // First pass: group the data
+            const groups = [];
+            let currentGroup = null;
+            let groupId = 0;
+
+            _neuData.forEach(line => {
+                if (line.startsWith(';')) {
+                    groupId++;
+                    currentGroup = { id: groupId, title: line.substring(1), items: [] };
+                    groups.push(currentGroup);
+                } else {
+                    const cols = line.split('\t');
+                    if (cols.length < 5) return;
+                    
+                    // Filter logic
+                    const idVal  = (cols[0] || '').toLowerCase();
+                    const epVal  = (cols[1] || '').toLowerCase();
+                    const bvVal  = (cols[2] || '').toLowerCase();
+                    const gatVal = (cols[3] || '').toLowerCase();
+                    const ordVal = (cols[4] || '').toLowerCase();
+                    const dirVal = (cols[5] || '').toLowerCase();
+                    const bwVal  = (cols[6] || '').toLowerCase();
+                    const hstVal = (cols[7] || '').toLowerCase();
+                    const artVal = (cols[8] || '').toLowerCase();
+
+                    // Epochen filter (global)
+                    if (globalEp && cols[1] !== globalEp && !globalEp.includes('Alle')) {
+                        return;
+                    }
+
+                    // Text filters (AND)
+                    if (filterId  && !idVal.includes(filterId))   return;
+                    if (filterEp  && !epVal.includes(filterEp))   return;
+                    if (filterBv  && !bvVal.includes(filterBv))   return;
+                    if (filterGat && !gatVal.includes(filterGat)) return;
+                    if (filterOrd && !ordVal.includes(filterOrd)) return;
+                    if (filterDir && !dirVal.includes(filterDir)) return;
+                    if (filterBw  && !bwVal.includes(filterBw))   return;
+                    if (filterHst && !hstVal.includes(filterHst)) return;
+                    if (filterArt && !artVal.includes(filterArt)) return;
+
+                    if (!currentGroup) {
+                        groupId++;
+                        currentGroup = { id: groupId, title: "Ungruppiert", items: [] };
+                        groups.push(currentGroup);
+                    }
+                    currentGroup.items.push(cols);
+                }
+            });
+
+            // Second pass: render
+            groups.forEach(group => {
+                if (group.items.length === 0) return; // Hide empty groups
+
+                // Group header
+                const trHeader = document.createElement('tr');
+                trHeader.id = 'neu-group-header-' + group.id;
+                trHeader.setAttribute('data-collapsed', 'false');
+                trHeader.style.cursor = 'pointer';
+                trHeader.style.backgroundColor = '#ddd';
+                trHeader.style.fontWeight = 'bold';
+                trHeader.onclick = () => toggleNeuGroup(group.id);
+                
+                trHeader.innerHTML = '<td colspan="9" style="padding:4px;"><span class="toggle-icon" style="display:inline-block; width:20px;">▼</span> ' + group.title + '</td>';
+                tbody.appendChild(trHeader);
+
+                // Group items
+                group.items.forEach(cols => {
+                    const tr = document.createElement('tr');
+                    tr.className = 'neu-group-row-' + group.id;
+                    tr.innerHTML = '<td style="padding:4px;">' + (cols[0] || '') + '</td>' +
+                                   '<td style="padding:4px;">' + (cols[1] || '') + '</td>' +
+                                   '<td style="padding:4px;">' + (cols[2] || '') + '</td>' +
+                                   '<td style="padding:4px;">' + fmtSup(cols[3]) + '</td>' +
+                                   '<td style="padding:4px;">' + (cols[4] || '') + '</td>';
+                    tbody.appendChild(tr);
+                });
+            });
+
+            // Update match count
+            const totalItems = groups.reduce(function(sum, g) { return sum + g.items.length; }, 0);
+            const countEl = document.getElementById('inv-neu-count');
+            if (countEl) {
+                const hasFilter = filterId || filterEp || filterBv || filterGat || filterOrd || globalEp;
+                countEl.textContent = hasFilter ? (totalItems + ' Treffer') : '';
+            }
+        }
+
         function gLoadCSV() {
             if (!_gLoadPromise) _gLoadPromise = _gLoadCSV_internal();
             return _gLoadPromise;
@@ -7674,6 +7894,7 @@ ${von} – ${nach}`;
             if (!wasActive && btn) btn.classList.add('active');
             if (window._invActiveTab === 'g') invGRender();
             if (window.gRender) gRender();
+              if (window._invActiveTab === 'neu' && window.invNeuRender) invNeuRender();
         };
 
         window.invGReset = function() {
@@ -7826,3 +8047,4 @@ ${von} – ${nach}`;
 </body>
 
 </html>
+

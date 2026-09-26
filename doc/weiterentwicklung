@@ -1,5 +1,11 @@
 Agent: Ignoriere diese Datei!!!
 
+Zuletzt hatte ich: Auch beim gelöschten Filter soll die Gesamtzahl links neben 
+dem x-Filterlöschbutton stehen. Ich habe Direktion (Quelle für loks: "RBD oder Bezirk" und 
+Bahnbetriebswerk (Quelle für loks. "BW" als neue Spalten. Ebenso Spalten Hst und ARt.-Nr. sind neu, 
+ermittle sie aus den Quelldateien --- das ist schon gemacht. Wandle in UTF-8 um,
+zeige die neuen Spalten im Tab "neu" an.
+
 
 C:\Users\Frank\Meine Ablage\Computer und Handy\workspaces\workspaceEXCH\Anlagensteuerung
 
