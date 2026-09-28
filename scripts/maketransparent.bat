@@ -24,6 +24,7 @@ except ImportError:
 SCRIPT_DIR = Path(__file__).resolve().parent
 BASE_DIR    = SCRIPT_DIR.parent
 IMG_DIRS    = [
+    BASE_DIR / "data" / "img" / "loks",
     BASE_DIR / "data" / "img" / "pwagen",
     BASE_DIR / "data" / "img" / "gwagen",
 ]

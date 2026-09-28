@@ -1,6 +1,36 @@
 Agent: Ignoriere diese Datei!!!
 
-Erweitere das Script maketransparent.bat/py um img/loks. Und: fahrzeuge.csv hat ein Umlautproblem.
+ 
+
+
+fahrzeuge.csv hat jetzt schon ein Umlautproblem. Achte beim Merge darauf, dass gemergte Einträge nicht in ihrer möglicherweise
+falschen Ursprungscodierung fahrzeuge.csv korrumpieren.
+
+Nimm in der Visualisierung von fahrzeuge.csv im Tab Rollmaterial die Spalte Anmerkung als letzte mit auf einschl. Filter
+Mach noch einen generellen Textfilter in der Bildspalte rechts vom dortigen Button [G] mit dem Hinweistext "Suche überall ..."
+Das dort eingegebene wird in allen Spalten gesucht
+Vereine auch die Filtereingaben "Modell" für Hst und Art.-Nr. zu einem einzigen Filterfeld. Es sucht in der Verkettung
+beider Felder mit zwischengeschaltetem Leerzeichen. Gebe ich bspw. "Fl 80" ein, matcht "Fl" + "8079"
+Erlaube einfache Regexp in den Textsuchen: ^ für das erste Zeichen, $ für das letzte Zeichen. "." für beliebiges Zeichen,
+"*" für 0 bis n Wiederholungen, "+" für 1 bis n Wiederholungen, "\s" für Whitespace. Sollte es einfacher sein, allgemeine
+Regexp zuzulassen, setze das um, ich benutze dann den Rest nicht. 
+Die Filter I, II, III, IV sind derzeit Radioboxes. Mach sie alle gleichzeitig wählbar (ODER-Verknüpfung), belege sie aber
+vor mit dem Wert für den Epochefilter rechts oben. Ist dort bspw. II gewählt, soll beim Rollmaterial II vorgewählt sein, es
+aber möglich sein, andere Epochen dazuzuwählen. Mach einen Filter in der Spalte Ausstattung, der leer/nichtleer zu
+filtern erlaubt. Lass dir was schönes einfallen, ein schnödes Dropdown leer/nicht leer/alle ist für mich zu wenig. 
+
+Die Spalte Gattungsbezirk kann ^ für Hochstellung und _ für Tiefstellung enthalten. Erstes ^/_ leitet das ein, zweites ^/_ 
+beendet den Modus. Beispiel: S^3^/_6_ hat 3 oben, / normal und 6 unten. Ein schließendes ^/_ kann fehlen, dann gilt es
+bis zum Rest des Wertes.
+
+
+Färbe die Gruppen-/Titelzeilen. Für Loks weiß auf schwarz. Für Personenwagen weiß auf braungrün, für Güterwagen weiß auf 
+rotbraun. Das Kriterium ist die ID, die mit L, P, G beginnt. Es kann in einer Gruppe von L (Loks) tatsächlich wenige P
+geben; es gilt die Farbe der Mehrheit. Die Datenzeilen bleiben wie bisher abwechselnd gefärbt.
+
+
+
+
 
 C:\Users\Frank\Meine Ablage\Computer und Handy\workspaces\workspaceEXCH\Anlagensteuerung
 

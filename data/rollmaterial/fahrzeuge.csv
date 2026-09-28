@@ -1,1123 +1,1127 @@
-ID	Epoche	BV	Gattungsbezirk	Ordnungsnummer	Direktion	Bahnbetriebswerk	Hst	Art.-Nr.	GAM
-;Dampfloks
-L1	II	DRG	01^0-2	01 004	Essen	Hamm	Tr	12276	-
-L2	II	DRG	01^0-2	01 235	Regensburg	Hof	Ar	2521	-
-L3	II	DRG	01^10	01 1059	Halle	Halle P	Fl	7174	-
-L94	IV	DR	01^10	01 513	Erfurt	Erfurt-P	Ar	2525	-
-L95	IV	DR	01.5	01 1531-1	Erfurt	Saalfeld	Ar	0348.0	-
-L96	IV	DR	02	02 0201-0	Halle	Halle-G	HN	2428	-
-L4	II	DRG	03^0-2	03 062	Nürnberg	Nürnberg	Tr	12830	x
-L5	II	DRG		05 002			Ar	2217	-
-L6	II	DRG	14^1 (S2/5)	14 141	München	München Hbf	Tr	12232	-
-L7	II	DRG	17^2 (S102)	17 253	Münster	Osnabrück	Tr	12831	-
-L8	II	DRG	17^4 (S3/5)	17 419	Nürnberg	Nürnberg	Tr	12222	-
-L9	II	DRG	18^5 (S3/6)	18 535	Mainz	Mainz	HN	2007	-
-L10	II	DRG	24	24 047			Fl	7141	-
-L11	II	DRG	36^4 (P42)	36 446	Nürnberg	Nürnberg Hbf	Ar	2545	-
-L97	I	KPEV	(P8)	2510	Breslau		Fl	7829	-
-L12	II	DRG	38^10-40	38 2025	Essen	Oberhausen	Fl	7818	-
-L13	II	DRG	38^10-40	38 2025	Essen	Oberhausen	Fl	7818	-
-L14	II	DRG	39	39 105	Berlin	Berlin Ahb	Fl	7827	-
-L15	II	DRG	39	39 109	Erfurt	Erfurt	Fl	7912	-
-L16	II	DRG	39	39 204	Stuttgart	Stuttgart	Fl	7139	-
-L17	II	DRG	39	39 204	Stuttgart	Stuttgart	Fl	7139	-
-L18	II	DRG	41	41 014	Essen	Göttingen	Tr	12000	-
-L19	II	DRG	44	44 141	Nürnberg	Treuchtlingen	Fl	714403	-
-L98	IV	DR	44.0	44 0592-4			Fl	714472	-
-L20	II	DRG	45	45 026			Tr	12309	-
-L21	II	DRG	50	50 002	Halle	Leipzig-Wahren	Fl	7180	-
-L99	III	DR	50	50 849			Fl	7181	-
-L100	III	DR	52	52 705			Fl	715208	-
-L101	I	KPEV	(G4.3)	3910	Stettin		Fl	7902-1	-
-L22	II	DRG	53^7 (G4.3)	53 7752	Danzig	Danzig Rdz	Fl	7124	-
-L23	II	DRG	54^15 (G3/4H)	54 1658	Nürnberg	Nürnberg	Tr	12308	-
-L102	I	KPEV	(G8.1)	4914	Hannover		Fl	780901	-
-L24	II	DRG	55^25-26 (G8.1)	55 4536	Wuppertal	Opladen	Fl	7154	-
-L103	I	KPEV	(G8.2)	5351	Erfurt		Fl	781210	-
-L25	II	DRG	56^2-8 (G8.2)	56 376	Köln	Köln Bbf	Li	161560	-
-L26	II	DRG	56^8-11 (G4/5H)	56 1113	München	Treuchtlingen	Tr	2923	-
-L27	II	DRG	56^20-29 (G8.2)	56 2264	Cassel	Göttingen	Fl	7900-1	-
-L28	II	DRG	56^20-29 (G8.2)	56 2048	Mainz	Mainz-Bisch	Fl	7156	-
-L29	II	DRG	56^20-29 (G8.2)	56 2048	Mainz	Mainz-Bisch	Fl	7156	-
-L104	I	KPEV	(G10)	5446			Tr	12248	-
-L105	III	DRG	57^10-37 (G10)	57 2801	Schwerin	Güstrow	Tr	12247	x
-L106	I	KPEV	(G12)	5593	Erfurt		Tr	12608	x
-L30	II	DRG	58^10-21 (G12)	58 1437	Dresden		Tr	12716	x
-L31	II	DRG	61	61 001			Ar	0166.0	-
-L32	II	DRG	62	62 010	Erfurt	Meiningen	Fl	7053	-
-L33	II	DRG	64	64 365	Frankfurt	Frankfurt	Fl	7063	-
-L107	IV	DR	65^10	65 1049-9	Magdeburg	Güsten	Br	1610	-
-L108	I	KBayStsB	(Pt2/3)	6050			Fl	707085	-
-L34	II	DRG	70 (Pt2/3)	70 066	München	Rosenheim	Fl	7071	-
-L35	II	DRG	74^4-13 (T121)	74 1230	Berlin	Wustermark	Ar	2284	-
-L36	II	DRG	75^10-11 (Vic)	75 1109	Karlsruhe	Waldheim?	Ar	0155	-
-L109	I	KPEV	(T18)	8957	Essen		Fl	7820	-
-L110	I	KPEV	(T18)	8428	Stettin		Fl	867913	-
-L37	II	DRG	78^0-5 (T18)	78 017	Mainz	Alzey	Fl	7079	-
-L38	II	DRG	78^0-5 (T18)	78 017	Mainz	Alzey	Fl	7887	-
-L39	II	DRG	80^0	80 018	Köln	Köln Bbf	Fl	7027	-
-L40	II	DRG	81^0	81 001	Magdeburg	Vienenburg	Fl	7035	-
-L41	II	DRG	85	85 001	Karlsruhe	Freiburg	Tr	11455.0	-
-L42	II	DRG	86	86 436			Fl	781101	x
-L111	III	DR	86	86 184	Dresden	Riesa	Fl	F7087	-
-L112	IV	DR	86	86 1001-6			Fl	931002	-
-L113	I	KBayStsB	(R3/3)	4769			Tr	12255	-
-L43	II	DRG	89^7 (R3/3)	89 707	München	München Hbf	Tr	11422.0	-
-L44	II	DRG	89^74-75 (T3)	89 7493	Stettin	Stettin	Ar	2220	-
-L114	I	KPEV	(T93)	7337	Berlin		Fl	781202	-
-L115	I	KPEV	(T93)	7294	Altona		Fl	7898-1	-
-L116	I	KPEV	(T93)	7337	Altona		Fl	7898-1	-
-L117	III	DR	91^3-18 (T93)	91 1001			Fl	7030	-
-L118	I	KPEV	(T13)	7909			Fl	781503	-
-L45	II	DRG	92^5-10 (T13)	92 1004	Altona	Altona	Fl	709201	-
-L46	II	DRG	92^20 (R4/4)	92 2048			Tr	11631	-
-L47	II	DRG	93^5-12 (T141)	93 400	Berlin	Tempelhof	Ar	2292	-
-L119	I	KPEV	(T12)	6081	Altona		Tr	12005	-
-L48	II	DRG	98^3 (PtL2/2)	98 303			Tr	12212	-
-L120	I	KPEV	(T161)	8177	Trier		Fl	7823	x
-L121	I	KPEV	(T161)	8177	Trier		Fl	7823	-
-L122	I	KPEV	(T161)	8177	Trier		Fl	7823	-
-L123	I	KPEV	(T161)	8169			Fl	709483	-
-L49	II	DRG	94^5-17 (T161)	94 733	Mainz	Darmstadt-Kranichstatt	Fl	7091	-
-L50	II	DRG	94^5-17 (T161)	94 956	Breslau	Sommerfeld	Fl	7093	-
-L51	II	DRG	95 (T20)	95 003	Nürnberg	Saalfeld	HN	2419	-
-L124	IV	DR	95 (pr T20)	95 0009-1	Erfurt	Probstzella	HN	2186	-
-L52	II	DRG	96 (Gt 2x4/4)	96 022	Nürnberg	Pressig-Rothenkirchen	Ar	2278	-
-L125	I	KBayStsB	(BBII)	2502			Tr	11604-1	-
-L53	II	DRG	98^7 (BBII)	98 731	Regensburg	Passau	Tr	12700	-
-L54	II	DRG	98^8 (GtL4/4)	98 811	München	München Hbf	Fl	7098	-
-L55	II	DRG	98^8 (GtL4/4)	98 811	München	München Hbf	Fl	7098	-
-;Dampftriebwagen
-L56	II	DRG	CidT	DW 6			Ar	2923	-
-;Dieselloks
-L57	II	DRG	V16	V 16 101			Tr	12800	-
-L126	IV	DR	V60.0-1	106 094-6	Greifswald	Pasewalk	HN	2267	-
-L127	IV	DR	V60.0-1	106 030-0	Schwerin	Wittenberge	HN	2356	-
-L128	IV	DR	V60.12	106 530-9	Magdeburg	Stendal	Fl	722209	-
-L129	IV	DB	V60	261 626-6			Tr	12620	x
-L130	IV	DR	V100	111 032-9			Fl	5170001-1	-
-L131	IV	DR	V100	110 226-8	Dresden	Reichenbach	Fl	721001	-
-L132	IV	DR	V100	115 328-7	Erfurt	Saalfeld	Fl	931405-1	-
-L133	IV	DB	V100	211 092-2	Stuttgart	Tübingen	Fl	7228	-
-L134	IV	DR	V180	118 640-2	Magdeburg	Magdeburg	Fl	721301	-
-L135	IV	DR	V180	118 616-4	Magdeburg	Brandenburg	Fl	721404	-
-L136	IV	DR	V180	229 168-1			Fl	721402	-
-L137	IV	DR	V180	118 104-9			Fl	7360028	-
-L138	IV	DR	119	119 006-5	Erfurt	Probstzella	Br	1400	-
-L139	IV	DR	119	119 191-5	Magdeburg		Br	61123	-
-L140	IV	DR	V200	120 048-4	Erfurt	Gera	Fl	725201	-
-L141	IV	DR	V200	120 292-8	Magdeburg	Stendal	Fl	725209	-
-L142	IV	DR	V300	130 047-4	Halle	Halle G	HN	2296	-
-L143	IV	DR	V300	130 050-8	Berlin	Seddin	HN	2297	-
-L144	IV	DR	V300	131 158-8	Erfurt	Weißenfels	HN	2227	-
-L145	IV	DR	V300	132 483-9	Magdeburg	Halberstadt	HN	2599	-
-L146	IV	DR	V300	142 002-	Greifswald	Stralsund	HN	2600	-
-;Dieseltriebwagen
-L58	II	DRG	VT851	VT 851			Tr	12841	-
-L59	II	DRG	(VT  135 009)	VT 135 009			Tr	12388	-
-L147	IV	DR	172	172 121-6			Br	64314	-
-L148	IV	DB	VT/VB95	785 211-2			Fl	7402	-
-L149	III	DB	VT/VB95	VT95 9159	Nürnberg	Ansbach	Fl	7400	-
-L150	IV	DB	VT/VS98	798 723-3			Pi	40250	-
-L60	II	DRG	(VT 137 VS 145)	VT 137 251 + VS 145 173			HT	2680	-
-L61	II	DRG	(BPwPostK8vT-34)	SVT 137 155			HT	2630	-
-L62	II	DRG	(B6i VT)	SVT 877a/b	Berlin	Lehrter Bf	Ka	10707	-
-L63	II	DRG	(B6i VT)	SVT 137 149a+b	Berlin	Lehrter Bf	Ka	10711	-
-L64	II	DRG	(B12 KVT)	SVT 137 853a+b+c	Berlin	Berlin Ahb	HT	16061	-
-L65	II	DRG	(B12 KVT)	SVT 137 853a+b+c	Berlin	Berlin Ahb	HT	16061	-
-L151	IV	DR	SVT175	175 011-6 175 411-8 175 311-0 175 5...-. 175 012-4	Berlin	Karlshorst	Ka	10745-1	-
-L152	IV	DR	SVT175	175 009-0 175 010-8 175 309-4 175 409-2	Berlin	Karlshorst	Ka	73712	-
-;Elloks
-L66	II	DRG	E04	E 04 05	Halle	Leipzig-West	HN	2134	-
-L153	IV	DR	E04	204 011-1	Halle	Leipzig Hbf West	HN	2138	-
-L67	II	DRG	E17	E 17 113			HT	2890	-
-L68	II	DRG	E18	E 18 39			Pi	40303	-
-L154	IV	DR	E18	218 019-8	Halle	Halle P	Pi	40302	-
-L69	II	DRG	E19.0	E 19 02	Nürnberg	Nürnberg Hbf	Fl	877914	-
-L70	II	DRG	E19.1	E 19 11	Nürnberg	Nürnberg Hbf	Ar	2491	-
-L71	II	DRG	E32 (EP2)	E 32 108			Fl	737001	-
-L72	II	DRG	E36 (EP3)	E 36 01	München	Freilassing	Tr	12462	-
-L73	II	DRG	E44.5	E 44 103			Li	162540	-
-L74	II	DRG	E44	E 44 019			Br	63100	-
-L75	II	DRG	E69	E 69 05			Fl	737101	-
-L155	IV	DR	211	211 036-9	Halle	Leipzig Hbf West	HN	2275.0	-
-L156	IV	DR	211	211 048-4			Br	63019	-
-L157	IV	DR	242	242 005-7	Dresden	Dresden	HN	2524D	-
-L158	IV	DR	242	242 089-1	Erfurt	Erfurt	Br	1201	-
-L159	III	DR	242	E 42 011	Halle	Halle P	HN	2273	-
-L160	IV	DR	230	230 011-9	Dresden	Dresden	K?	95024	-
-L161	IV	DR	250	250 001-5	Halle	Halle P	HN	2283	-
-L162	IV	DR	250	250 226-8	Erfurt	Erfurt	HN	2373	-
-L163	IV	DR	251	251 010-5	Magdeburg	Blankenburg	HN	2285	-
-L164	IV	DR	212	212 001-2	LEW	LEW	HN	2076	-
-L165	IV	DR	243	243 599-8			HN	2032	-
-L166	V	DB	143	143 573-4	Erfurt	Erfurt	Ro	23276	-
-L76	II	DRG	E75	E 75 06			Tr	12537	-
-L77	II	DRG	E77	E 77 28	München	München	Br	63003	-
-L167	III	DR	E77	E 77 10			Br	1250	-
-L78	II	DRG	E91	E 91 102			Pi	40544	-
-L79	II	DRG	E93	E 93 01	Stuttgart	Kornwestheim	Tr	12752	-
-L80	II	DRG	E94	E 94 058	Erfurt	Probstzella	Fl	739401	-
-L168	III	DR	E94	E 94 069	Halle	Halle P	Fl	739403	-
-L169	IV	DR	E94	254 110-0			Fl	739410	-
-L170	III	DR	E95	E 95 02			Br	1210	-
-;Elektr. Triebwagen
-L81	II	DRG	(C4esT-29 BC4esS-29)	C4esT-29 + BC4esS-29			RR	5525001	x
-L82	II	DRG	(C4esT-29 BC4esS-29)	C4esT-29 + BC4esS-29			RR	5525001	x
-L83	II	DRG	(C4esT-29 BC4es-29)	C4esT-29 + BC4es-29			Ar	0189	-
-L84	II	DRG	(C4esT-29 BC4es-29)	C4esT-29 + BC4es-29			Ar	0189	-
-L85	II	DRG	(BC4 ET C4 ET)	C4esT-29 + BC4es-29			RR	RR 5525001 + Ar 0189	-
-L86	II	DRG	(C4esT-29 BC4esS-29)	C4esT-29 + BC4esS-29			RR	5525001	-
-L87	II	DRG	(C4esT-29 BC4esS-29)	C4esT-29 + BC4esS-29			RR	5525001	-
-L88	II	DRG	(C4esT-29 BC4esS-29)	C4esT-29 + BC4esS-29			RR	5525001	-
-L89	II	DRG	ET85	elT 1130			Ro	23001	-
-L90	II	DRG	ET25	elT 1130			Ka	10709	-
-L171	VI	DB	ET425	.			Ka	10703	-
-L172	VI	DB	ET425	.			Ka	10707	-
-L173	I	KPEV	(AT3)	435/436			HT	15771	-
-L91	II	DRG	AT3	AT3 375+376			Ro	23012	-
-L92	II	DRG	AT3	AT3 295+296			HT	15772	-
-L93	II	DRG	AT3	AT3 405+406	Mainz		Ro	23390	-
-;Sonstiges
+"ID"	Epoche	BV	Gattungsbezirk	Ordnungsnummer	Direktion	Bahnbetriebswerk	Hst	Art.-Nr.	GAM	z	LüP	OVP	Datum	KP	Quelle	Zugschluss	Zuglauf	Bel	Korr	Set	Adr	Dec	SS	KD	Puf
+";Dampfloks
+L1"	II	DRG	01^0-2	01 004	Essen	Hamm	Tr	12276	-		150		24.07.2011	176	ebay						2	DCX75	NEM651	-	-
+L2	II	DRG	01^0-2	01 235	Regensburg	Hof	Ar	2521	-		149		02.02.1998	95	MBFm						1	DCX75	Ohne	-	-
+L3	II	DRG	01^10	01 1059	Halle	Halle P	Fl	7174	-		158		18.03.2016	80	1zu160						4	DHL160	Ohne	x	-
+L94	IV	DR	01^10	01 513	Erfurt	Erfurt-P	Ar	2525	-		149		21.08.2026	126	ebay								Ohne	-	-
+L95	IV	DR	01.5	01 1531-1	Erfurt	Saalfeld	Ar	0348.0	-		149		12.10.2024	117	Modellbahn Rhein-Main					0348			Ohne	-	-
+L96	IV	DR	02	02 0201-0	Halle	Halle-G	HN	2428	-		180		01.09.2020	156	SpMax							DH05C	NEM651	-	-
+L4	II	DRG	03^0-2	03 062	Nürnberg	Nürnberg	Tr	12830	x		150		10.11.1997	97	MBW						3	DCX75	Ohne	-	-
+L5	II	DRG		05 002			Ar	2217	-	x	164		13.07.1905	115	ebay								Ohne	-	-
+L6	II	DRG	14^1^ (S^2^/_5_)	14 141	München	München Hbf	Tr	12232	-		123		12.01.2020	115	ebay								Löt	-	-
+L7	II	DRG	17^2^ (S10^2^)	17 253	Münster	Osnabrück	Tr	12831	-		132		11.06.2020	68	ebay								Ohne	-	-
+L8	II	DRG	17^4^ (S^3^/_5_)	17 419	Nürnberg	Nürnberg	Tr	12222	-		123		09.12.2018	118	ebay						17	N025	NEM651	-	-
+L9	II	DRG	18^5^ (S^3^/_6_)	18 535	Mainz	Mainz	HN	2007	-		133		11.06.2009	95	Kramm						18	DCX75	NEM651	-	-
+L10	II	DRG	24	24 047			Fl	7141	-		106		10.11.2015	105	1zu160								Ohne	-	-
+L11	II	DRG	36^4 (P42)	36 446	Nürnberg	Nürnberg Hbf	Ar	2545	-		71,04		13.06.2021	71	ebay								Ohne	-	-
+L97	I	KPEV	(P8)	2510	Breslau		Fl	7829	-		122		04.01.2022	107	ebay					7899			Ohne	-	-
+L12	II	DRG	38^10-40	38 2025	Essen	Oberhausen	Fl	7818	-		122		12.12.1994	90	SpMax								Ohne	-	-
+L13	II	DRG	38^10-40	38 2025	Essen	Oberhausen	Fl	7818	-		122		15.06.2015	80	ebay					7888			Ohne	-	-
+L14	II	DRG	39	39 105	Berlin	Berlin Ahb	Fl	7827	-		144		23.05.2007	105	ebay								Ohne	-	-
+L15	II	DRG	39	39 109	Erfurt	Erfurt	Fl	7912	-		144		24.03.2023	65	ebay					7912			Ohne	-	-
+L16	II	DRG	39	39 204	Stuttgart	Stuttgart	Fl	7139	-		144		22.02.1996	124	Spitzner								Ohne	-	-
+L17	II	DRG	39	39 204	Stuttgart	Stuttgart	Fl	7139	-	x	144		26.09.2008	64	ebay								Ohne	-	-
+L18	II	DRG	41	41 014	Essen	Göttingen	Tr	12000	-		150		02.05.2006	122	Spitzner								Ohne	-	-
+L19	II	DRG	44	44 141	Nürnberg	Treuchtlingen	Fl	714403	-		141		13.09.2024	195	ebay							Noch einbauen	Next18	-	-
+L98	IV	DR	44.0	44 0592-4			Fl	714472	-	x	141		26.07.2020	290	ebay							Zimo?	Next18	x	-
+L20	II	DRG	45	45 026			Tr	12309	-		160		24.04.2025	185	ebay								NEM651	-	-
+L21	II	DRG	50	50 002	Halle	Leipzig-Wahren	Fl	7180	-		144		18.09.2012	90	1zu160								Ohne	-	-
+L99	III	DR	50	50 849			Fl	7181	-		144		27.01.2024	100	1zu160								Ohne	-	-
+L100	III	DR	52	52 705			Fl	715208	-	x	144		12.02.2017	115	ebay							N025	NEM651	-	-
+L101	I	KPEV	(G4.3)	3910	Stettin		Fl	7902-1	-		103		05.01.2021	77	1zu160					7902			Ohne	-	-
+L22	II	DRG	53^7 (G4.3)	53 7752	Danzig	Danzig Rdz	Fl	7124	-		103		01.01.2020	62	1zu160						53	N025	Ohne	x	-
+L23	II	DRG	54^15 (G3/4H)	54 1658	Nürnberg	Nürnberg	Tr	12308	-		112		23.11.2020	72	ebay								NEM651	-	-
+L102	I	KPEV	(G8.1)	4914	Hannover		Fl	780901	-		116		20.04.2023	72	ebay					780901			Ohne	-	-
+L24	II	DRG	55^25-26 (G8.1)	55 4536	Wuppertal	Opladen	Fl	7154	-		116		26.08.1998	82	Rudow							DCX75	Ohne	-	-
+L103	I	KPEV	(G8.2)	5351	Erfurt		Fl	781210	-		117		26.07.2022	100	dm-toys					781212			Ohne	-	-
+L25	II	DRG	56^2-8 (G8.2)	56 376	Köln	Köln Bbf	Li	161560	-		114		10.05.2020	143	ebay						54	Ja, welcher?	Next18	-	-
+L26	II	DRG	56^8-11 (G4/5H)	56 1113	München	Treuchtlingen	Tr	2923	-	x	117		08.11.2021	65	ebay								Ohne	-	-
+L27	II	DRG	56^20-29 (G8.2)	56 2264	Cassel	Göttingen	Fl	7900-1	-		111		23.11.2023	75	ebay					7900			Ohne	-	-
+L28	II	DRG	56^20-29 (G8.2)	56 2048	Mainz	Mainz-Bisch	Fl	7156	-		111		05.09.2018	100	1zu160							U73400	Ohne	x	-
+L29	II	DRG	56^20-29 (G8.2)	56 2048	Mainz	Mainz-Bisch	Fl	7156	-	x	111		1993	117	Pietsch								Ohne	-	-
+L104	I	KPEV	(G10)	5446			Tr	12248	-		119		22.11.2024	145	1zu160								NEM651	-	-
+L105	III	DRG	57^10-37 (G10)	57 2801	Schwerin	Güstrow	Tr	12247	x	x	119		16.12.2018	146	ebay							N025	NEM651	-	-
+L106	I	KPEV	(G12)	5593	Erfurt		Tr	12608	x		114		06.10.2023	132	ebay								NEM651	-	-
+L30	II	DRG	58^10-21 (G12)	58 1437	Dresden		Tr	12716	x		114		24.03.2023	151	ebay							Gold mini	NEM651	x	-
+L31	II	DRG	61	61 001			Ar	0166.0	-		124		15.06.2002	70	MBFm					0166			Ohne	-	-
+L32	II	DRG	62	62 010	Erfurt	Meiningen	Fl	7053	-		107		17.12.2005	149	ebay							DCX76	Ohne	-	-
+L33	II	DRG	64	64 365	Frankfurt	Frankfurt	Fl	7063	-		78		07.04.2000	95	SMDV							DCX75	Ohne	-	-
+L107	IV	DR	65^10	65 1049-9	Magdeburg	Güsten	Br	1610	-		110		15.11.2025	125	ebay								Ohne	-	-
+L108	I	KBayStsB	(Pt2/3)	6050			Fl	707085	-	x	58		17.07.2024	151	ebay							MX617	Löt	x	-
+L34	II	DRG	70 (Pt2/3)	70 066	München	Rosenheim	Fl	7071	-		58		28.10.2014	118	ebay							DCX76z	Löt	-	-
+L35	II	DRG	74^4-13 (T121)	74 1230	Berlin	Wustermark	Ar	2284	-		74		31.12.1996	86	Spitzner								Ohne	-	-
+L36	II	DRG	75^10-11 (Vic)	75 1109	Karlsruhe	Waldheim?	Ar	0155	-		79		12.10.2021	70	1zu160					0155			Ohne	-	-
+L109	I	KPEV	(T18)	8957	Essen		Fl	7820	-	x	93		03.05.2022	76	ebay					7890			Ohne	-	-
+L110	I	KPEV	(T18)	8428	Stettin		Fl	867913	-		93		14.12.2023	102	Catawiki								Ohne	-	-
+L37	II	DRG	78^0-5 (T18)	78 017	Mainz	Alzey	Fl	7079	-		93		14.04.1999	77	MBW								Ohne	-	-
+L38	II	DRG	78^0-5 (T18)	78 017	Mainz	Alzey	Fl	7887	-		93		14.04.1999	60	ebay					7887			Ohne	-	-
+L39	II	DRG	80^0	80 018	Köln	Köln Bbf	Fl	7027	-		60		04.09.2017	54	ebay								Ohne	-	-
+L40	II	DRG	81^0	81 001	Magdeburg	Vienenburg	Fl	7035	-		69	¨	27.09.2025	45	ebay								Ohne	-	-
+L41	II	DRG	85	85 001	Karlsruhe	Freiburg	Tr	11455.0	-		102		01.10.2019	84	ebay					11455			?	-	-
+L42	II	DRG	86	86 436			Fl	781101	x		97		26.10.2022	167	1zu160								Ohne	-	-
+L111	III	DR	86	86 184	Dresden	Riesa	Fl	F7087	-	x	87		31.12.2015	90	ebay								Ohne	-	-
+L112	IV	DR	86	86 1001-6			Fl	931002	-		87		07.11.2024	90	ebay					931002			Ohne	-	-
+L113	I	KBayStsB	(R3/3)	4769			Tr	12255	-	x	60		22.07.2022	100	1zu160						33	DH…	Ohne	x	-
+L43	II	DRG	89^7 (R3/3)	89 707	München	München Hbf	Tr	11422.0	-		60		24.11.2019	44	ebay					11422	89	DCX76z	Ohne	-	-
+L44	II	DRG	89^74-75 (T3)	89 7493	Stettin	Stettin	Ar	2220	-		54		27.09.1999	49	MBW								Ohne	-	-
+L114	I	KPEV	(T93)	7337	Berlin		Fl	781202	-	x	68		14.03.2025	64	ebay					781202			Ohne	-	-
+L115	I	KPEV	(T93)	7294	Altona		Fl	7898-1	-	x	68		12.12.2020	81	ebay					7898			Ohne	-	-
+L116	I	KPEV	(T93)	7337	Altona		Fl	7898-1	-	x	68		14.07.2024	30	ebay					7898			Ohne	-	-
+L117	III	DR	91^3-18 (T93)	91 1001			Fl	7030	-		68		27.06.2020	50	ebay								Ohne	-	-
+L118	I	KPEV	(T13)	7909			Fl	781503	-		69		13.03.2025	70	ebay					781503			NEM651	-	-
+L45	II	DRG	92^5-10 (T13)	92 1004	Altona	Altona	Fl	709201	-		69		18.08.2013	144	MSL						92	DCX76	NEM651	-	-
+L46	II	DRG	92^20 (R4/4)	92 2048			Tr	11631	-		69		10.11.2019	103	ebay					11631	93	DH10B	Platine	x	-
+L47	II	DRG	93^5-12 (T141)	93 400	Berlin	Tempelhof	Ar	2292	-		90		19.05.2022	90	ebay								Ohne	-	-
+L119	I	KPEV	(T12)	6081	Altona		Tr	12005	-		45		04.07.2023	78	ebay								Ohne	-	-
+L48	II	DRG	98^3 (PtL2/2)	98 303			Tr	12212	-		45		21.07.2018	80	ebay								Ohne	-	-
+L120	I	KPEV	(T161)	8177	Trier		Fl	7823	x		79		31.05.2022	53	ebay					7893	94	DCX76	Ohne	-	x
+L121	I	KPEV	(T161)	8177	Trier		Fl	7823	-	x	79		03.05.2024	70	ebay					7893			Ohne	-	-
+L122	I	KPEV	(T161)	8177	Trier		Fl	7823	-	x	79		24.10.2024	40	ebay					7893			Ohne	-	-
+L123	I	KPEV	(T161)	8169			Fl	709483	-		79		16.09.2024	61	ebay								Ohne	x	-
+L49	II	DRG	94^5-17 (T161)	94 733	Mainz	Darmstadt-Kranichstatt	Fl	7091	-		79		04.09.2021	95	ebay								Ohne	-	-
+L50	II	DRG	94^5-17 (T161)	94 956	Breslau	Sommerfeld	Fl	7093	-	x	79		13.10.1995	92	SpMax								Ohne	-	-
+L51	II	DRG	95 (T20)	95 003	Nürnberg	Saalfeld	HN	2419	-		95		08.07.2020	117	ebay								Ohne	-	-
+L124	IV	DR	95 (pr T20)	95 0009-1	Erfurt	Probstzella	HN	2186	-		95		22.06.2019	140	Elriwa							N025	NEM651	-	-
+L52	II	DRG	96 (Gt 2x4/4)	96 022	Nürnberg	Pressig-Rothenkirchen	Ar	2278	-		111		11.11.2021	140	1zu160								Ohne	-	-
+L125	I	KBayStsB	(BBII)	2502			Tr	11604-1	-	x	64		20.03.2021	97	ebay					11604			Ohne	-	-
+L53	II	DRG	98^7 (BBII)	98 731	Regensburg	Passau	Tr	12700	-		64		11.09.2022	127	ebay								Ohne	-	-
+L54	II	DRG	98^8 (GtL4/4)	98 811	München	München Hbf	Fl	7098	-	x	58		18.03.1995	74	spMax								Ohne	-	-
+L55	II	DRG	98^8 (GtL4/4)	98 811	München	München Hbf	Fl	7098	-		58		30.10.2018	55	1zu160								Ohne	-	-
+";Dampftriebwagen
+L56"	II	DRG	CidT	DW 6			Ar	2923	-		71,5		28.11.2021	40	ebay								Ohne	-	-
+";Dieselloks
+L57"	II	DRG	V16	V 16 101			Tr	12800	-	x	90		30.06.2022	100	ebay							?	NEM651	x	-
+L126	IV	DR	V60.0-1	106 094-6	Greifswald	Pasewalk	HN	2267	-		68		29.01.2025	115	ebay							DH18A	Next18	-	-
+L127	IV	DR	V60.0-1	106 030-0	Schwerin	Wittenberge	HN	2356	-		68		10.09.2020	88	dm-Toys							DH18A	Next18	-	-
+L128	IV	DR	V60.12	106 530-9	Magdeburg	Stendal	Fl	722209	-		68		10.12.2012	130	Pietsch							DCX76	Ohne	-	-
+L129	IV	DB	V60	261 626-6			Tr	12620	x	x	68		27.11.2022	78	ebay							?	NEM651	-	-
+L130	IV	DR	V100	111 032-9			Fl	5170001-1	-		87		09.12.2023	68	Ars Tecnica					5170001		Ja, welcher?	NEM651	-	-
+L131	IV	DR	V100	110 226-8	Dresden	Reichenbach	Fl	721001	-		87		03.01.2013	89	MSL							DCX76	NEM651	-	-
+L132	IV	DR	V100	115 328-7	Erfurt	Saalfeld	Fl	931405-1	-		87		21.11.2014	72	1zu160							Zimo	NEM651	-	-
+L133	IV	DB	V100	211 092-2	Stuttgart	Tübingen	Fl	7228	-	x	78		17.11.2022	54	ebay								Ohne	-	-
+L134	IV	DR	V180	118 640-2	Magdeburg	Magdeburg	Fl	721301	-		121		06.08.2019	147	MBS							N045	Next18	-	-
+L135	IV	DR	V180	118 616-4	Magdeburg	Brandenburg	Fl	721404	-		121		09.07.2025	72	1zu160							Dummy!	Next18	-	-
+L136	IV	DR	V180	229 168-1			Fl	721402	-	x	121		29.01.2026	171	ebay 									-	-
+L137	IV	DR	V180	118 104-9			Fl	7360028	-		121		21.05.2026	158	ebay 							Noch einbauen	Next18	-	-
+L138	IV	DR	119	119 006-5	Erfurt	Probstzella	Br	1400	-		122		07.10.2015	72	ebay							N025	Ohne	-	-
+L139	IV	DR	119	119 191-5	Magdeburg		Br	61123	-		122		09.05.2018	55	1zu160							Ohne Motor	Ohne	-	-
+L140	IV	DR	V200	120 048-4	Erfurt	Gera	Fl	725201	-		110		02.09.2017	170	1zu160							Sound	NEM651	-	-
+L141	IV	DR	V200	120 292-8	Magdeburg	Stendal	Fl	725209	-		110		09.07.2025	72	1zu160 							ohne Motor	NEM651	-	-
+L142	IV	DR	V300	130 047-4	Halle	Halle G	HN	2296	-		129		17.01.2024	120	ebay							DH PD18MU	Next18	-	-
+L143	IV	DR	V300	130 050-8	Berlin	Seddin	HN	2297	-		129		05.01.2023	134	EKA							SD18A	Next18	x	-
+L144	IV	DR	V300	131 158-8	Erfurt	Weißenfels	HN	2227	-		129		18.11.2015	100	MBFn							SD18A	Next18	-	-
+L145	IV	DR	V300	132 483-9	Magdeburg	Halberstadt	HN	2599	-		130		17.04.2024	163	Fischer Modellbau							DH PD18MU	Next18	-	-
+L146	IV	DR	V300	142 002-	Greifswald	Stralsund	HN	2600	-		130		28.08.2026	121	ebay 								Next18	-	-
+";Dieseltriebwagen
+L58"	II	DRG	VT851	VT 851			Tr	12841	-		131		11.12.2019	0	ebay							DRG	Ohne	-	-
+L59	II	DRG	(VT  135 009)	VT 135 009			Tr	12388	-		156		21.11.2018	116	ebay						135	Trix	Platine	x	-
+L147	IV	DR	172	172 121-6			Br	64314	-		169,4		11.08.2016	160	meinMBS							DH10C	Löt	-	-
+L148	IV	DB	VT/VB95	785 211-2			Fl	7402	-	x	83		08.11.2022	116	ebay								Ohne	-	-
+L149	III	DB	VT/VB95	VT95 9159	Nürnberg	Ansbach	Fl	7400	-	x	83		03.03.2023	53	1zu160								Ohne	-	-
+L150	IV	DB	VT/VS98	798 723-3			Pi	40250	-	x	174		02.11.2022	160	ebay							Uhlenbrock	Plux16	-	-
+L60	II	DRG	(VT 137 VS 145)	VT 137 251 + VS 145 173			HT	2680	-																
+L61	II	DRG	(BPwPostK8vT-34)	SVT 137 155			HT	2630	-		436		02.10.2024	177	1zu160							geplant U73410	NEM651	-	-
+L62	II	DRG	(B6i VT)	SVT 877a/b	Berlin	Lehrter Bf	Ka	10707	-		263		01.07.2017	85	ebay						12	N025	Ohne	-	-
+L63	II	DRG	(B6i VT)	SVT 137 149a+b	Berlin	Lehrter Bf	Ka	10711	-		277		25.06.1905	129	ebay						11	68530	Ohne	-	-
+L64	II	DRG	(B12 KVT)	SVT 137 853a+b+c	Berlin	Berlin Ahb	HT	16061	-		297				ebay							N025	Ohne	-	-
+L65	II	DRG	(B12 KVT)	SVT 137 853a+b+c	Berlin	Berlin Ahb	HT	16061	-		297		01.03.2013	82	ebay							Ohne Motor	Ohne	-	-
+L151	IV	DR	SVT175	175 011-6	Berlin	Karlshorst	Ka	10745-1	-														NEM652	-	-
+P434	IV	DR	SVT175	175 411-8	Berlin	Karlshorst	Ka	10745-2	-																
+P435	IV	DR	SVT175	175 311-0	Berlin	Karlshorst	Ka	10745-3	-																
+P436	IV	DR	SVT175	175 511-5	Berlin	Karlshorst	Ka	10745-4	-																
+P437	IV	DR	SVT175	175 012-4	Berlin	Karlshorst	Ka	10745-6	-																
+L152	IV	DR	SVT175	175 009-0 175 010-8 175 309-4 175 409-2	Berlin	Karlshorst	Ka	73712	-													N025	Ohne	-	-
+";Elloks
+L66"	II	DRG	E04	E 04 05	Halle	Leipzig-West	HN	2134	-		95		28.04.2023	126	1zu160							geplant U73410	NEM651	-	-
+L153	IV	DR	E04	204 011-1	Halle	Leipzig Hbf West	HN	2138	-		95		30.01.2017	94	ebay							N025	NEM651	-	-
+L67	II	DRG	E17	E 17 113			HT	2890	-		100		19.08.2021	154	ebay							DH18A	Next18	-	-
+L68	II	DRG	E18	E 18 39			Pi	40303	-		106		13.05.2017	102	Lippe							DH18A	Plux12	-	-
+L154	IV	DR	E18	218 019-8	Halle	Halle P	Pi	40302	-		106		20.06.2021	109	ebay 							U73340	Plux12	-	-
+L69	II	DRG	E19.0	E 19 02	Nürnberg	Nürnberg Hbf	Fl	877914	-		106		01.06.2026	126	ebay							ESU...	NEM651	-	-
+L70	II	DRG	E19.1	E 19 11	Nürnberg	Nürnberg Hbf	Ar	2491	-		116		29.08.2023	89	ebay								Ohne	-	-
+L71	II	DRG	E32 (EP2)	E 32 108			Fl	737001	-		81		15.03.2025	146	ebay							geplant U73410	NEM651	-	-
+L72	II	DRG	E36 (EP3)	E 36 01	München	Freilassing	Tr	12462	-		77		18.11.2021	133	ebay							DH10C	NEM651	-	-
+L73	II	DRG	E44.5	E 44 103			Li	162540	-		86		17.07.2021	104	ebay							DH18A	Next18	-	-
+L74	II	DRG	E44	E 44 019			Br	63100	-		95,6		28.06.2018	144	Lokmuseum							DH18A	Next18	-	-
+L75	II	DRG	E69	E 69 05			Fl	737101	-		54		28.03.2023	116	ebay							685503	NEM651	x	-
+L155	IV	DR	211	211 036-9	Halle	Leipzig Hbf West	HN	2275.0	-		102		09.01.2018	140	MBFn					2275		Noch einbauen	Next18	-	-
+L156	IV	DR	211	211 048-4			Br	63019	-		102		17.01.2023	135	ebay							Hat einen, welcher?	Next18	-	-
+L157	IV	DR	242	242 005-7	Dresden	Dresden	HN	2524D	-		102		07.11.2024	130	1zu160							Ja, welcher?	Next18	x	-
+L158	IV	DR	242	242 089-1	Erfurt	Erfurt	Br	1201	-		102		29.01.1999	74	MBFp								Ohne	-	-
+L159	III	DR	242	E 42 011	Halle	Halle P	HN	2273	-		102		12.08.2020	107	MSL							DH18A	Next18	-	-
+L160	IV	DR	230	230 011-9	Dresden	Dresden	K?	95024	-		105		19.10.2023	115	dm-toys							ESU	Next18	-	-
+L161	IV	DR	250	250 001-5	Halle	Halle P	HN	2283	-		123		06.05.2017	84	ebay							N025	NEM651	-	-
+L162	IV	DR	250	250 226-8	Erfurt	Erfurt	HN	2373	-		123		19.05.2020	109	dm-Toys							N025	NEM651	-	-
+L163	IV	DR	251	251 010-5	Magdeburg	Blankenburg	HN	2285	-		117		03.02.2017	110	ds-automodelle							N025	NEM651	-	-
+L164	IV	DR	212	212 001-2	LEW	LEW	HN	2076	-		114		02.09.2026	113	1zu160								NEM651	-	-
+L165	IV	DR	243	243 599-8			HN	2032	-		104		17.09.2017	65	1zu160							?	NEM651	x	-
+L166	V	DB	143	143 573-4	Erfurt	Erfurt	Ro	23276	-	x	104		ca. 1999	50	MBFm								Ohne	-	-
+L76	II	DRG	E75	E 75 06			Tr	12537	-		96		07.08.2021	87	ebay							DCX76	Löt	-	-
+L77	II	DRG	E77	E 77 28	München	München	Br	63003	-		102		28.04.2023	146	1zu160								Löt	-	-
+L167	III	DR	E77	E 77 10			Br	1250	-	x	102		11.08.2021	123	ebay								Löt	-	-
+L78	II	DRG	E91	E 91 102			Pi	40544	-		104		07.11.2024	186	ebay							Hat einen, welcher?	Next18	-	-
+L79	II	DRG	E93	E 93 01	Stuttgart	Kornwestheim	Tr	12752	-		111		30.10.2018	84	ebay								NEM651	-	-
+L80	II	DRG	E94	E 94 058	Erfurt	Probstzella	Fl	739401	-		116		05.01.2023	126	ebay							ESU 54687	NEM651	x	-
+L168	III	DR	E94	E 94 069	Halle	Halle P	Fl	739403	-	x	116		26.01.2020	80	ebay								NEM651	-	-
+L169	IV	DR	E94	254 110-0			Fl	739410	-		116		25.06.2025	102	ebay							MX622N 	NEM651	x	-
+L170	III	DR	E95	E 95 02			Br	1210	-		132		16.02.2022	105	ebay								Ohne	-	-
+";Elektr. Triebwagen
+L81"	II	DRG	(C4esT-29 BC4esS-29)	C4esT-29 + BC4esS-29			RR	5525001	x																
+L82	II	DRG	(C4esT-29 BC4esS-29)	C4esT-29 + BC4esS-29			RR	5525001	x																
+L83	II	DRG	(C4esT-29 BC4es-29)	C4esT-29 + BC4es-29			Ar	0189	-																
+L84	II	DRG	(C4esT-29 BC4es-29)	C4esT-29 + BC4es-29			Ar	0189	-																
+L85	II	DRG	(BC4 ET C4 ET)	C4esT-29 + BC4es-29			RR	RR 5525001 + Ar 0189	-																
+L86	II	DRG	(C4esT-29 BC4esS-29)	C4esT-29 + BC4esS-29			RR	5525001	-																
+L87	II	DRG	(C4esT-29 BC4esS-29)	C4esT-29 + BC4esS-29			RR	5525001	-																
+L88	II	DRG	(C4esT-29 BC4esS-29)	C4esT-29 + BC4esS-29			RR	5525001	-																
+L89	II	DRG	ET85	elT 1130			Ro	23001	-		256		02.04.2020	48	ebay							Ohne Motor	Ohne	-	-
+L90	II	DRG	ET25	elT 1130			Ka	10709	-		273		30.03.2014	74	ebay								Ohne	-	-
+L171	VI	DB	ET425	.			Ka	10703	-	x	297		29.05.2013	125	Lippe							DCX75	Ohne	-	-
+L172	VI	DB	ET425	.			Ka	10707	-	x	297		01.06.2013	122	Lippe							N045	Ohne	-	-
+L173	I	KPEV	(AT3)	435/436			HT	15771	-		161		16.12.2021	98	ebay								Ohne	-	-
+L91	II	DRG	AT3	AT3 375+376			Ro	23012	-		162				Laden?								Ohne	-	-
+L92	II	DRG	AT3	AT3 295+296			HT	15772	-		161		07.11.2021	76	ebay							DCX76	Ohne	x	-
+L93	II	DRG	AT3	AT3 405+406	Mainz		Ro	23390	-		162		27.11.2021	54	ebay							N045	Ohne	x	-
+";Sonstiges
 ;-
 ;VI
 ;Etc
-P1	II	RP	Erfurt	5084					
-P2	II	DRG	Berlin	736 762					
-P3	II	DRG	Osten	730 003					
-P4	II	DRG		088 719					
-;Bay. Schnellzugwagen
-P5	I	Pfalzbahn		290					
-P6	II	DRG	München	107 253					
-P7	I	KBayStsB	München	21 088					
-P8	I	KBayStsB	München	21 088					
-P9	I	KBayStsB	München	21 088					
-P10	II	DRG	München	13 190					
-P11	II	DRG	München	13 191					
-P12	I	Pfalzbahn		5062					
-P13	I	KBayStsB	München	26 011					
-P14	I	KBayStsB	München	26 011					
-P15	I	Pfalzbahn		1732					
-P16	I	Pfalzbahn		3071					
-P17	II	DRG	München	17 652					
-P18	II	DRG	München	17 645					
-P19	II	DRG	München	17 647					
-;Württ. Schnellzugwagen
-P20	I	KWStE	Württemberg	6581					
-P21	II	DRG	Altona	108 601					
-P22	I	KWStE		1838					
-P23	II	DRG	Stuttgart	14 936					
-P24	I	KWStE		5807					
-P25	I	KWStE		5807					
-P26	II	DRG	Stuttgart	15 922					
-P27	II	DRG	Stuttgart	15 922					
-P28	I	KWStE		6332					
-P29	I	KWStE		6332					
-P30	I	KWStE		6332					
-P31	II	DRG	Stuttgart	18 023					
-P32	II	DRG	Stuttgart	18 023					
-P33	II	DRG	Stuttgart	18 023					
-;Preuß. Schnellzugwagen
-P34	I	KPEV	Halle	1141					
-P35	I	KPEV	Posen	3107					
-P36	I	KPEV	Stettin	05241					
-P37	II	DRG	Altona	107 303					
-P38	II	DRG	Altona	107 303					
-P39	II	DRG	Berlin	107 318					
-P40	I	KPEV	Halle	02731					
-P41	I	KPEV	Halle	02731					
-P42	I	KPEV	Altona	2902					
-P43	I	KPEV	Halle	03303					
-P44	I	KPEV	Halle	03303					
-P45	I	KPEV	Halle	03303					
-P46	I	KPEV	Halle	03303					
-P47	I	KPEV	Altona	03011					
-P48	II	DRG	Altona	18 041					
-P49	II	DRG	Altona	18 041					
-P50	II	DRG	Altona	18 041					
-P51	II	DRG	Berlin	17 927					
-P52	II	DRG	Berlin						
-P53	I	DESG		792					
-P54	I	DESG		777					
-P55	II	Mitropa	Mitropa	798					
-P56	II	Mitropa	Mitropa	798					
-P57	II	Mitropa	Mitropa	707					
-P58	I	KPEV	Mitropa	2023					
-P59	I	KPEV	Mitropa	2023					
-P60	I	KPEV	Mitropa	2069					
-P61	I	KPEV	Mitropa	2069					
-P62	I	KPEV	Mitropa	2067					
-P63	II	DRG	Altona	13 305					
-P64	II	DRG	Altona	14 892					
-P65	II	DRG	Berlin	14 805					
-P66	II	DRG	Berlin	14 805					
-P67	II	DRG	Berlin	14 805					
-P68	II	Mitropa		20812					
-P69	II	Mitropa		20019					
-P70	II	Mitropa		20019					
-P71	II	Mitropa		20019					
-P72	II	Mitropa		20849					
-P73	II	Mitropa		20849					
-;Preuß. Eilzugwagen
-P74	I	KPEV	Erfurt	3022					
-;Fehler 2015
-P76	I	DRP	Berlin	2993					
-P77	I	DRP	Berlin	2993					
-P78	II	DRP	Hannover	99 524					
-P79	I	KPEV	Erfurt	126					
-P80	I	KPEV	Erfurt	126					
-P81	I	KPEV	Erfurt	126					
-P82	I	KPEV	Erfurt	126					
-P83	I	KPEV	Erfurt	126					
-P84	II	DRG	Altona	20 664					
-P85	II	DRG	Halle	61 042					
-P86	II	DRG	Halle	61 042					
-P87	II	DRG	Halle	61 042					
-P88	II	DRG	Halle	61 042					
-P89	II	DRG	Halle	61 042					
-P90	I	KPEV	Erfurt	242					
-P91	I	KPEV	Erfurt	262					
-P92	I	KPEV	Erfurt	262					
-P93	I	KPEV	Erfurt	262					
-P94	I	KPEV	Erfurt	262					
-P95	II	DRG	Halle	62 049					
-P96	II	DRG	Altona	41 800					
-P97	II	DRG	Halle	62 049					
-P98	II	DRG	Halle	62 049					
-P99	II	DRG	Halle	62 049					
-P100	II	DRG	Halle	62 049					
-P101	II	DRG	Halle	62 049					
-;Ruhrschnellverkehr (Set "Ruhrschnellverkehr I")
-P102	II	DRG	Essen	30 727					
-P103	II	DRG	Essen	41 963					
-P104	II	DRG	Essen	41 967					
-P105	II	DRG	Essen	41 967					
-P106	II	DRG	Essen	41 967					
-;Ruhrschnellverkehr (Set "Ruhrschnellverkehr II")
-P107	II	DRG	Essen	30 597					
-P108	II	DRG	Essen	41 958					
-P109	II	DRG	Essen	41 958					
-P110	II	DRG	Essen	41 971					
-P111	II	DRG	Essen	41 971					
-;Einheits-Schnellzugwagen Gruppe 23 (Hechtwagen)
-P112	II	DRG	Hannover	105 103					
-P113	II	DRP	Nürnberg	268					
-P114	II	DRP	Köln	3936					
-P115	II	DRG	Hannover	11 005					
-P116	II	DRG	Hannover	11 214					
-P117	II	DRG	Hannover	11 289					
-P118	II	DRG	Hannover	16 043					
-P119	II	DRG	Hannover	16 044					
-P120	II	Mitropa	Mitropa	36 002					
-;Rheingold
-P121	II	DRG	Köln	90 202					
-P122	II	Mitropa	Köln	20 504					
-P123	II	Mitropa	Köln	20 501					
-P124	II	Mitropa	Köln	24 508					
-P125	II	Mitropa	Köln	24 505					
-;Rheingold
-P126	II	DRG	Köln	105 002					
-P127	II	Mitropa	Köln	10 502					
-P128	II	Mitropa	Köln	10 503					
-P129	II	Mitropa	Köln	10 710					
-P130	II	Mitropa	Köln	10 703					
-;Karwendel
-P131	II	DRG	München	105 270					
-P132	II	DRG	München	16 365					
-P133	II	DRG	München	16 367					
-P134	II	DRG	München	16 364					
-P135	II	DRG	München	15 018					
-;ISG-Wagen
-P136	II	CIWL							
-P137	II	CIWL							
-P138	II	CIWL							
-P139	II	CIWL							
-P140	II	CIWL							
-;Einheits-Schnellzugwagen Gruppe 28
-P141	II	DRG	Hannover	100 021					
-P142	II	DRG	Karlsruhe	100 022					
-P143	II	DRG	Altona	100 003					
-P144	II	DRG	Hannover	11 343					
-P145	II	DRG	Köln	21 507					
-P146	II	DRG	Köln	21 507					
-P147	II	DRG	Köln	21 507					
-P148	II	DRG	München	16 217					
-P149	II	DRG	Köln	26 529					
-P150	II	DRG	Köln	26 529					
-P151	II	DRG	Köln	26 529					
-P152	II	DRG	Köln	26 534					
-P153	II	DRG	Köln	26 534					
-P154	II	DRG	Köln	26 534					
-P155	II	DRG	Karlsruhe	16 221					
-P156	II	DRG	Karlsruhe	16 223					
-P157	II	Mitropa		1045					
-P158	II	Mitropa		1052					
-P159	II	Mitropa		1052					
-P160	II	Mitropa		1052					
-;Henschel-Wegmann
-P161	II	DRG	Berlin	10 401					
-P162	II	DRG	Berlin	10 402					
-P163	II	DRG	Berlin	10 403					
-P164	II	DRG	Berlin	10 404					
-;Einheits-Schnellzugwagen Gruppe 35 (braungrün)
-P165	II	DRG	München						
-P166	II	DRG	München	16587					
-P167	II	DRG	München	16600					
-P168	II	DRG	Mitropa	1130					
-;Einheits-Schnellzugwagen Gruppe 35 (flaschengrün)
-P169	II	DRG	München	105 731					
-P170	II	DRG	München	105 731					
-P171	II	DRG	München	11 623					
-P172	II	DRG	München	11 623					
-P173	II	DRG	München	16 579					
-P174	II	DRG	München	16 579					
-P175	II	DRG	München	16 579					
-P176	II	DRG	München	16 579					
-P177	II	DRG	München	16 582					
-P178	II	DRG	München	16 582					
-;Einheits-Schnellzugwagen Gruppe 38 (Schürzenwagen)
-P179	II	DRG	Berlin	105 728					
-P180	II	DRG	München	4896					
-P181	II	DRG	München	11 699					
-P182	II	DRG	Berlin	11 703					
-P183	II	DRG	Berlin	215 533					
-P184	II	DRG	München	214 016					
-P185	II	DRG	Berlin	19 225					
-P186	II	DRG	München	19 347					
-P187	II	DRG	München	19 224					
-P188	II	DRG	München	19 224					
-P189	II	DRG	München	19 300					
-P190	II	Mitropa		22 079					
-P191	II	Mitropa		1215					
-P192	II	Mitropa		1213					
-;Einheits-Eilzugwagen Gruppe 30
-P193	II	DRG	Frankfurt	25 139					
-;Einheits-Eilzugwagen Gruppe 36
-P194	II	DRG	Köln	112 379					
-P195	II	DRG	München	33 614					
-P196	II	DRG	München	33 614					
-P197	II	DRG	München	73 627					
-P198	II	DRG	München	73 627					
-P199	II	DRG	München	73 627					
-;Bay. 3achs. Schnellzugwagen
-P200	II	DRG	München	29 001					
-P201	II	DRG	München	29 532					
-P202	II	DRG	München	29 533					
-P203	II	DRG	München	29 535					
-P204	II	DRG	München	90 503					
-;Bay. Nebenbahnwagen
-P205	II	DRG		24 Au					
-P206	II	DRG	München	116 663					
-P207	I	KBayStsB	Regensburg	21 141					
-P208	I	KBayStsB	Regensburg	2721					
-P209	II	DRG	München	38 441					
-P210	II	DRG	München	38 452					
-P211	I	KBayStsB	Regensburg	12 213					
-P212	II	DRG	München	93 968					
-;Württ. Nebenbahnwagen
-P213	II	DRG	Stuttgart	40 015					
-P214	II	DRG	Stuttgart	40 015					
-P215	II	DRG	Stutgart	50 238					
-P216	II	DRG	Stutgart	50 238					
-P217	II	DRG	Stuttgart	50 029					
-P218	II	DRG	Stuttgart	50 029					
-P219	II	DRG	41 Stuttgart						
-P220	II	DRG	Stuttgart 34 114						
-P221	II	DRG	Stuttgart 34 117						
-;Preuß. Lokalbahnwagen
-P222	I	KPEV	Altona	3801					
-P223	II	DRG	Königsberg	099 522					
-P224	II	DRG	Königsberg	037 061					
-P225	I	KPEV	Halle	1488					
-P226	I	KPEV	Halle	1489					
-P227	II	DRG	Königsberg	050 211					
-P228	I	KPEV	Halle	3961					
-P229	I	KPEV	Halle	2456					
-P230	I	KPEV	Halle	903					
-;Preuß. zweiachsige Nebenbahnwagen
-P231	II	DRG	Altona	92 340x					
-P232	I	KPEV	Altona	1959					
-P233	I	KPEV	Erfurt	2678					
-P234	I	KPEV	Erfurt	2361					
-P235	I	KPEV	Gotha	2522					
-P236	I	KPEV	Erfurt	2532					
-P237	II	DRG	Breslau	92467					
-P238	II	DRG	Breslau	92467					
-;Preuß. zwei- und dreiachsige Nebenbahnwagen
-P239	I	KPEV	Halle	5986					
-P240	I	KPEV	Halle	706					
-P241	I	KPEV	Hannover	720					
-P242	I	KPEV	Breslau	2282					
-P243	I	KPEV	Breslau	2429					
-P244	I	KPEV	Stettin	2747					
-P245	I	KPEV	Halle	2653					
-P246	I	KPEV	Hannover	2641					
-P247	II	DRG	Berlin	99 511					
-P248	II	DRG	Berlin	99 511					
-P249	II	DRG	Berlin	99 511					
-P250	II	DRG	Berlin	99 511					
-P251	II	DRG	Berlin	99 511					
-P252	II	DRG	Halle	49 001					
-P253	II	DRG	Halle	49 001					
-P254	II	DRG	Halle	49 001					
-P255	II	DRG	Halle	49 001					
-P256	II	DRG	Halle	49 001					
-P257	II	DRG	Halle	50 280					
-;Preuß. zwei-/dreiachsige Abteilwagen
-P258	I	KPEV	Erfurt	3140					
-P259	I	KPEV	Coeln	3247					
-P260	II	DRG	Altona	111 037					
-P261	I	KPEV	Coeln	1126					
-P262	I	KPEV	Coeln	1126					
-P263	I	KPEV	Berlin	1149					
-P264	I	KPEV	Berlin	1153					
-P265	I	KPEV	Halle	1762					
-P266	I	KPEV	Berlin	1891					
-P267	I	KPEV	Coeln	1873					
-P268	I	KPEV	Coeln	1873					
-P269	I	KPEV	Coeln	1873					
-P270	I	KPEV	Coeln	1879					
-P271	I	KPEV	Coeln	1879					
-P272	II	DRG	Altona	70 501					
-P273	II	DRG	Altona	70 517					
-P274	II	DRG	Altona	70 517					
-P275	II	DRG	Altona	70 544					
-P276	II	DRG	Altona	70 544					
-P277	II	DRG	Altona	70 544					
-;Einheitspersonenwagen (Abteil) für Hauptbahnen
-P278	II	DRG	Mainz	114 151					
-P279	II	DRG	München	114 178					
-P280	II	DRG	Mainz	44 831					
-P281	II	DRG	Frankfurt	45 424					
-P282	II	DRG	Mainz	31 040					
-P283	II	DRG	Mainz	31 036					
-;EInheitsdurchgangspersonenwagen (Donnerbüchsen)
-P284	II	DRG	Nürnberg	114 263					
-P285	II	DRG	Nürnberg	28 604					
-P286	II	DRG	Nürnberg	36 441					
-P287	II	DRG	Nürnberg	41 504					
-P288	II	DRG	Nürnberg	41 504					
-P289	II	DRG	Nürnberg	41 504					
-P290	II	DRG	Nürnberg	41 504					
-P291	II	DRG	Nürnberg	41 504					
-P292	II	DRG	Nürnberg	84 523					
-P293	II	DRG	Nürnberg	83 072					
-;Städteexpress
-P294	IV	DR		51 50 10 40 206-0					
-P295	IV	DR		51 50 10 40 206-0					
-P296	IV	DR		51 50 21 53 005-7					
-P297	IV	DR		51 50 21 53 005-7					
-P298	IV	DR		50 50 21 12 004-1					
-P299	IV	DR		50 50 21 12 000-9					
-P300	IV	DR							
-P301	IV	DR							
-P302	IV	Mitropa							
-;Internationaler Verkehr (UIC Y, Z)
-P303	IV	DR		51 50 82 45 007-8					
-P304	IV	DR		51 50 82 45 007-8					
-P305	IV	DR							
-P306	IV	DR		51 50 20-40 129-2					
-P307	IV	DR							
-P308	IV	DR		51 50 21 53-204-6					
-P309	IV	DR		51 50 21 53-124-6					
-P310	IV	DR		51 50 21 53-096-6					
-P311	IV	DR							
-P312	IV	DR							
-P313	IV	Mitropa							
-P314	IV	DR		51 80 10-40 223-9					
-P315	IV	DR		51 80 22-41 037-8					
-P316	IV	DR		51 80 22-40 951-1					
-P317	IV	DB							
-P318	IV	DB							
-P319	IV	DB							
-P320	IV	DB							
-P321	IV	DB							
-P322	IV	DB							
-;Binnenverkehr (UIC B)
-P323	IV	DR		51 50 20-40 030-2					
-P324	IV	DR		51 50 20-45 033-1					
-P325	IV	DR		51 50 88-40111-9					
-P326	IV	DR		51 50 39-40 061-6					
-P327	IV	DR		51 50 20-40 198-7					
-P328	IV	DR		51 50 20-40 207-6					
-P329	IV	DR		51 50 59 40 009-0					
-P330	IV	Mitropa		51 50 70 40 177-5					
-P331	IV	Mitropa		51 50 70 40 124-2					
-P332	IV	Mitropa		51 50 88 40 103-6					
-P333	IV	DR		51 50 98 80 002-9					
-P334	IV	DR		51 50 98 80 003-7					
-;Binnenverkehr (Mitteleinstiegwagen)
-P335	IV	Mitropa							
-P336	IV	DR		51 50 21-40 039-2					
-P337	IV	DR		51 50 21-40 045-9					
-P338	IV	DR		51 50 21-40 071-5					
-P339	IV	DR		51 50 21-40 106-9					
-P340	IV	DR		51 50 21-40 039-2					
-P341	IV	DR		51 50 21-45 078-5					
-P342	IV	DR		51 50 21-45 094-2					
-P343	IV	DR		51 50 21-45 101-5					
-P344	IV	DR		51 50 21-45 120-5					
-;Balt-Orient-Express
-P345	IV	DR		51 50 20-40 070-8					
-P346	IV	DR		51 50 19-80 043-9					
-P347	IV	DR		51 50 20-80 218-4					
-P348	IV	Mitropa		51 50 70-40 159-8					
-P349	IV	CFR		51 53 70-50 019-8					
-P350	IV	MAV		51 55 70-80 002-6					
-P351	IV	CSD		51 54 59-41 156-4					
-P352	IV	CSD		51 54 20-40 457-3					
-P353	IV	CSD		51 54 20-41 771-6					
-;Binneverkehr (Modernisierungswagen)
-P354	IV	DR		51 50 29 13 026-3					
-P355	IV	DR		51 50 29 45 268-5					
-P356	IV	DR		51 50 85 45 518-3					
-P357	IV	DR		51 50 17 45 061-8					
-P358	IV	DR		51 50 38 45 048-6					
-P359	IV	DR		51 50 95 40 220-8					
-P360	IV	DR		51 50 17 45 061-8					
-P361	IV	DR		51 50 38 45 048-6					
-P362	IV	DR		51 50 95 40 220-8					
-;Binnenverkehr (Lowa)
-P363	IV	DR		82-14 246-4					
-P364	IV	DR		29-14 314-4					
-P365	IV	DR		29-14 316-9					
-P366	IV	DR		29-14 319-3					
-P367	IV	DR		29-14 320-1					
-P368	IV	DR		50 50 80 14 200-1					
-P369	IV	DR		50 50 29 40 025-6					
-P370	IV	DR		50 50 49 14216-1					
-P371	IV	DR		50 50 49 14221-1					
-P372	IV	DR		50 50 49 14230-1					
-;Binnenverkehr (ex Karwendel)
-P373	III	DR		641-013					
-P374	III	DR		241-015					
-P375	III	DR		241-015					
-P376	III	DR		241-213					
-P377	III	DR		241-215					
-;Binnenverkehr (ex Eilzugwagen 30er)
-P378	IV	DR		51 50 92 43 359-5					
-P379	IV	DR		57 50 38 14 652-9					
-P380	IV	DR		57 50 38 14 652-9					
-P381	IV	DR		57 50 28 14 526-7					
-P382	IV	DR		57 50 28 14 526-7					
-P383	IV	DR		57 50 28 14 531-4					
-P384	III	DR		60 50 70 10 100-7					
-P385	III	DR		51 50 88 40 055-8					
-;Doppelstockeinzelwagen (Anfang 70er)
-P386	IV	DR		50 50 25-13 006-1					
-P387	IV	DR		50 50 25-13 039-2					
-P388	IV	DR		50 50 25-13 020-2					
-P389	IV	DR		50 50 25-13 030-1					
-P390	IV	DR		50 50 25-13 022-8					
-;Doppelstockeinzelwagen (Sputnikverkehr)
-P391	IV	DR							
-P392	IV	DR							
-P393	IV	DR							
-P394	IV	DR							
-P395	IV	DR							
-;Doppelstockzüge (DB7, D13)
-P396	IV	DR		50 50 26-25 467-0					
-P397	IV	DR		50 50 26-25 468-8					
-P398	IV	DR		50 50 26-12 085-5					
-P399	IV	DR		50 50 26-12 086-3					
-P400	IV	DR		50 50 26-12 087-1					
-P401	IV	DR		50 50 26-12 088-9					
-P402	IV	DR							
-P403	IV	DR							
-P404	IV	DR							
-P405	IV	DR							
-;4achs. Rekowagen
-P406	IV	DR							
-P407	IV	DR							
-P408	IV	DR		50 50 28-05 009-2					
-P409	IV	DR		50 50 28-05 009-2					
-P410	IV	DR		57 50 28-14 455-9					
-P411	IV	DR		57 50 28-13 262-0					
-P412	IV	DR		57 50 28-13 262-0					
-P413	IV	DR		57 50 28-13 262-0					
-P414	IV	DR		57 50 28-13 262-0					
-P415	IV	DR		57 50 28-13 420-4					
-P416	IV	DR		57 50 28-13 420-4					
-P417	IV	DR		57 50 28-13 420-4					
-;2/3achs. Rekowagen
-P418	IV	DR							
-P419	IV	DR							
-P420	IV	DR							
-P421	IV	DR		50 50 24-25 371-1					
-P422	IV	DR		50 50 23-24 719-8					
-P423	IV	DR		50 50 24-15 020-1					
-P424	IV	DR		50 50 23-15 296-2					
-P425	IV	DR		50 50 23-15 188-7					
-P426	IV	DR		50 50 93 50 070-2					
-P427	IV	DR		50 50 90 15 871-6					
-P428	IV	DR		50 50 23 15 351-1					
-;3achs. Umbauwagen
-P429	IV	DB		99 331 Wt					
-P430	IV	DB		86 033 Wt					
-P431	IV	DB		37 003 Wt					
-P432	IV	DB		85 862 Wt					
-P433	IV	DB		85 862 Wt					
-;GÃ¼terzugbegleitwagen
-G1	I	KPEV	Stettin						
-G2	I	KPEV	Frankfurt	5469					
-G3	I	KPEV	Frankfurt	5171					
-G4	II	DRG	Frankfurt	95 647					
-G5	II	DRG	Frankfurt	95 647					
-G6	II	DRG	Hannover	122 460					
-G7	II	DRG	Hannover	122 460					
-G8	II	DRG	Hannover	122 460					
-G9	II	DRG	Hannover	122 460					
-G10	II	DRG	Hannover	122 460					
-G11	II	DRG	NÃ¼rnberg	131 831					
-G12	IV	DR		30 50 940 0032 - 4					
-;Leig
-G13	II	DRG	Stuttgart	132 781					
-G14	II	DRG	Dresden	6344					
-G15	II	DRG	Dresden	6344					
-G16	II	DRG	Dresden	6344					
-G17	II	DRG	Dresden	11 483					
-G18	II	DRG	Dresden	11 484					
-G19	II	DRG	Dresden	11 483					
-G20	II	DRG	Dresden	11 484					
-;Hilfszugwagen, Bauwagen
-G21	II	DRG	NÃ¼rnberg	700 210					
-G22	II	DRG	NÃ¼rnberg	710 251					
-G23	III	DB							
-G24	III	DB							
-G25	III	DB							
-G26	III	DB							
-G27	III	DB							
-G28	II	DRG	Frankfurt	700 004					
-G29	II	DRG	Frankfurt	701 952					
-G30	II	DRG	Frankfurt	700 253					
-G31	II	DRG	Karlsruhe	700 500					
-G32	I	KPEV	Stettin	10824					
-G33	II	DRG	Magdeburg	1700					
-;Gedeckte Wagen
-G34	II	DRG	MÃ¼nchen	64 267					
-G35	I	KPEV	Frankfurt	12 530					
-G36	I	KPEV	Frankfurt	12 530					
-G37	I	KPEV	Frankfurt	12 530					
-G38	I	KPEV	Frankfurt	12 530					
-G39	I	KPEV	Altona	15 026					
-G40	I	K. Bay. St.B.	P	601 990					
-G41	II	DRG	Hannover	11 057					
-G42	I	KPEV	Berlin	16 142					
-G43	I	KPEV	Berlin	16 127					
-G44	I	KPEV	Berlin	16 127					
-G45	II	DRG	Stettin	33 885					
-G46	II	DRG	Stettin	33 885					
-G47	II	DRG	Stettin	33 885					
-G48	II	DRG	Stettin	33 885					
-G49	II	DRG	Stettin	34 448					
-G50	II	DRG	Stettin	35 448					
-G51	II	DRG	Stettin	35 448					
-G52	II	DRG	Stettin	35 448					
-G53	I	KPEV	Altona	14 527					
-G54	I	KPEV	Altona	14527					
-G55	I	KPEV	Altona	14527					
-G56	I	KPEV	Altona	14527					
-G57	I	DRG	Altona	14 520					
-G58	I	DRG	Altona	14 520					
-G59	II	DRG	Stettin	33856					
-G60	II	DRG	Stettin	33856					
-G61	II	DRG	Stettin	33856					
-G62	II	DRG	Stettin	33856					
-G63	II	DRG	Stettin	33856					
-G64	II	DRG	Stettin	33856					
-G65	II	DRG	Stettin	33856					
-G66	II	DRG	Stettin	33856					
-G67	II	DRG	Stettin	33856					
-G68	II	DRG	Stettin	33856					
-G69	I	Meckl-Schwerin		600 013					
-G70	II	DRG	Dresden	4040					
-G71	II	DRG	Dresden	4042					
-G72	I	KBayStB	NÃ¼rnberg	47 772					
-G73	I	KBayStB		86 561					
-G74	II	DRG	Kassel	52 219					
-G75	II	DRG	Dresden	7214					
-G76	II	DRG	Dresden	7214					
-G77	II	DRG	Dresden	7214					
-G78	II	DRG	Dresden	7214					
-G79	II	DRG	Dresden	7214					
-G80	II	DRG	Dresden	7214					
-G81	I	KPEV	Erfurt	8155					
-G82	II	DRG	Kassel	80 125					
-G83	II	DRG	Kassel	80 125					
-G84	II	DRG	Kassel	80 325					
-G85	II	DRG	Dresden	21 005					
-G86	I	KBayStB		43 596					
-G87	I	KBayStB		43846					
-G88	II	DRG	Kassel	14 206					
-G89	II	DRG	Kassel	45 897					
-G90	II	DRG	MÃ¼nchen	8 927					
-G91	I	KPEV	Essen	19 268					
-G92	I	KPEV	Essen	19 268					
-G93	II	DRG	Kassel	24 655					
-G94	II	FS		2301					
-G95	II	SBB		31 117					
-G96	II	SBB							
-G97	II	DRG	Oppeln	5698					
-G98	II	DRG	Oppeln	1555					
-G99	II	DRG	Oppeln	17 646					
-G100	II	DRG	Leipzig	2204					
-G101	II	DRG	Bromberg	10 020					
-G102	II	DRG	Bromberg	10 020					
-G103	I	KPEV	CÃ¶ln	600 248					
-G104	II	DRG	MÃ¼nster	579 031					
-;Offene Wagen
-G105	I	KPEV	Kgl. Mil. E.	487					
-G106	I	KPEV	Magdeburg	54 713					
-G107	I	K. Sachs. St. Eb		46 882					
-G108	I	K. Sachs. St. Eb		46 137					
-G109	I	KPEV	Magdeburg	31 555					
-G110	I	K. Sachs. St. Eb		46 882					
-G111	I	KPEV	SaarbrÃ¼cken	36 348					
-G112	I	KPEV	SaarbrÃ¼cken	31 830					
-G113	I	KPEV	Magdeburg	51 770					
-G114	I	KPEV	SaarbrÃ¼cken	31 910					
-G115	I	KPEV	SaarbrÃ¼cken	34 326					
-G116	I	Oldenburg		6162					
-G117	I	KPEV	Magdeburg	50 961					
-G118	I	Meckl-Schwerin		10 281					
-G119	I	KPEV	Bromberg	86 970					
-G120	I	KPEV	Bromberg	86 970					
-G121	I	KPEV	Bromberg	86 970					
-G122	I	KPEV	Bromberg	86 970					
-G123	I	KPEV	Bromberg	86 970					
-G124	I	KPEV	Bromberg	86 970					
-G125	I	KPEV	Magdeburg	66 887					
-G126	I	Bad.St.B.	Baden	50 381					
-G127	I	KPEV	Kattowitz	32 292					
-G128	I	KPEV	Essen	334 045					
-G129	I	KPEV	Essen	349 781					
-G130	I	KBayStB		57 601					
-G131	II	DRG	NÃ¼rnberg	23 219					
-G132	II	DRG	NÃ¼rnberg	23 219					
-G133	II	DRG	NÃ¼rnberg	23 219					
-G134	II	DRG	Schwerin	26 538					
-G135	II	DRG	Schwerin	26 538					
-G136	II	DRG	Schwerin	26 538					
-G137	II	DRG	Schwerin	25 231					
-G138	II	DRG	Schwerin	25 231					
-G139	II	DRG	Schwerin	26 538					
-G140	II	DRG	Schwerin	26 538					
-G141	II	DRG	Schwerin	26 538					
-G142	II	DRG	Schwerin	26 538					
-G143	II	DRG	Schwerin	26 538					
-G144	II	DRG	Schwerin	26 538					
-G145	II	DRG	Schwerin	26 538					
-G146	II	DRG	Schwerin	26 538					
-G147	II	DRG	Schwerin	26 538					
-G148	II	DRG	Schwerin	26 538					
-G149	II	DRG	Schwerin	26 538					
-G150	II	DRG	Schwerin	26 538					
-G151	II	DRG	Schwerin	26 538					
-G152	II	DRG	Schwerin	26 538					
-G153	II	DRG	Schwerin	26 538					
-G154	II	DRG	Schwerin	26 538					
-G155	II	DRG	Schwerin	26 538					
-G156	II	DRG	Schwerin	26 538					
-G157	II	DRG	Schwerin	26 538					
-G158	II	DRG	Schwerin	26 538					
-G159	II	DRG	Schwerin	26 538					
-G160	II	DRG	Schwerin	26 538					
-G161	II	DRG	Schwerin	25 231					
-G162	II	DRG	Schwerin	25 231					
-G163	II	DRG	Schwerin	25 231					
-G164	II	DRG	Schwerin	25 231					
-G165	II	DRG	Schwerin	25 231					
-G166	II	DRG	Schwerin	25 231					
-G167	II	DRG	Schwerin	25 231					
-G168	II	DRG	Schwerin	25 231					
-G169	II	DRG	Frankfiurt	60 113					
-G170	II	DRG	Halle	41 177					
-G171	II	DRG	Halle	41 177					
-G172	II	DRG	Halle	41 177					
-G173	II	DRG	Breslau	62 813					
-G174	II	DRG	Essen	26 055					
-G175	II	DRG	Essen	26 055					
-G176	II	DRG	Essen	26 055					
-G177	II	DRG	Essen	26 055					
-G178	II	DRG	Essen	26 055					
-G179	II	DRG	Essen	26 055					
-G180	II	DRG	Essen	26 055					
-G181	II	DRG	Essen	26 055					
-G182	II	DRG	Essen	26 055					
-G183	II	DRG	Essen	26 055					
-G184	II	DRG	Essen	26 055					
-G185	II	DRG	Breslau	56 147					
-G186	II	DRG	Breslau	56 147					
-G187	II	DRG	Breslau	56 147					
-G188	II	DRG	Breslau	56 147					
-G189	II	DRG	WÃ¼rttemberg	42 103					
-G190	II	DRG	WÃ¼rzburg	21 557					
-;Klappdeckelwagen
-G191	II	KPEV	Berlin	17 422					
-G192	I	KPEV	Berlin	17 422					
-G193	I	K. Bay. St.B.	Ludwigshafen	49 153					
-G194	II	DRG	Wuppertal	80 913					
-G195	II	Kn	Elberfeld	10 348					
-G196	II	DRG	Wuppertal	7576					
-G197	I	KPEV	Stettin	17 123					
-G198	I	K. SÃ¤chs. St. Eb.		24 924					
-G199	II	DRG	Wuppertal	8944					
-;Viehwagen
-G200	II	DRG	WÃ¼rzburg	5658					
-G201	I	KBayStB		65514					
-G202	II	DRG	Frankfurt	6151					
-G203	II	DRG	Frankfurt	6151					
-G204	II	DRG	WÃ¼rzburg	18 778					
-G205	II	DRG	WÃ¼rzburg	18 778					
-G206	I	KPEV	KÃ¶nigsberg	30 164					
-G207	I	KPEV	Magdeburg	34 608					
-G208	I	KPEV	Magdeburg	34 608					
-G209	II	DRG	WÃ¼rzburg	19 528					
-G210	II	DRG	WÃ¼rzburg	19 528					
-G211	II	DRG	WÃ¼rzburg	19 528					
-G212	I	DRG	Stettin	18 831					
-G213	I	DRG	Hanover	18 637					
-G214	I	DRG	Hanover	18 637					
-G215	II	DRG	Altona	508					
-G216	II	DRG	Altona	508					
-G217	I	KPEV	Hannover	18 648					
-G218	II	DRG	Altona	212					
-G219	II	DRG	Altona	212					
-G220	II	DRG	Altona	212					
-G221	II	DRG	Altona	18 196					
-G222	II	DRG	Altona	6205					
-G223	I	KPEV	Stettin	16 944					
-G224	I	KPEV	Stettin	16 835					
-;Selbstentladewagen
-G225	II	DRG	Oldenburg	191					
-G226	II	DRG	Oldenburg	141					
-G227	II	DRG	Oldenburg	692					
-G228	II	DRG	Oldenburg	698					
-G229	II	DRG	Oldenburg	705					
-G230	II	DRG	Oldenburg	692					
-G231	II	DRG	Oldenburg	698					
-G232	II	DRG	Oldenburg	734					
-G233	II	DRG	Oldenburg	738					
-G234	II	DRG	Oldenburg	832					
-G235	II	DRG	Oldenburg	734					
-G236	II	DRG	Oldenburg	738					
-G237	II	DRG	Oldenburg	832					
-G238	II	DRG	Oldenburg	734					
-G239	II	DRG	Oldenburg	738					
-G240	II	DRG	Oldenburg	832					
-G241	II	DRG	Oldenburg	734					
-G242	II	DRG	Oldenburg	738					
-G243	II	DRG	Oldenburg	832					
-G244	II	DRG	Oldenburg	734					
-G245	II	DRG	Oldenburg	738					
-G246	II	DRG	Oldenburg	832					
-G247	II	DRG	Regensburg	701 927					
-G248	II	DRG	Regensburg	701 927					
-G249	II	DRG	Regensburg	701 927					
-G250	II	DRG	Regensburg	701 927					
-G251	II	DRG	Regensburg	701 927					
-G252	II	DRG	Regensburg	701 927					
-G253	II	DRG	Regensburg	701 927					
-G254	II	DRG	Regensburg	701 927					
-G255	II	DRG	Oldenburg	4046					
-G256	II	DRG	Oldenburg	4048					
-G257	II	DRG	Oldenburg	4050					
-;Niederbord-, Flach-, Rungenwagen
-G258	II	DRG	KÃ¶ln	8366					
-G259	I	KPEV	Essen	17 309					
-G260	I	KPEV	CÃ¶ln	21 416					
-G261	I	KPEV	Essen	17 307					
-G262	I	KPEV	Hannover	37 095					
-G263	I	KPEV	Hannover	37 095					
-G264	I	KPEV	Hannover	37 095					
-G265	I	KPEV	Hannover	37 095					
-G266	II	DRG	KÃ¶ln	916					
-G267	II	DRG	Erfurt						
-G268	II	DRG	Erfurt	44 738					
-G269	II	DRG	Erfurt	6162					
-G270	II	SBB		566 001					
-G271	I	KBayStB		9545					
-G272	II	DRG	Erfurt	64 354					
-G273	II	DRG	Regensburg	19 864/20 275					
-G274	II	DRG	Regensburg	19 864/20 275					
-G275	I	KPEV	Magdeburg/ Stettin	101 105/45 051			Fl	8814	-
-G276	II	DRG	KÃ¶ln	14 402					
-G277	II	DRG		14 519					
-G278	II	DRG		14 489					
-G279	II	DRG		14 552					
-;Kesselwagen
-G280	I	K.Bay.St.B							
-G281	I	K.Bay.St.B							
-G282	I	DRG	Halle	502 578					
-G283	II	DRG	Hannover	564 691					
-G284	II	DRG	Halle	559 897					
-G285	I	DRG	Erfurt	502 231					
-G286	I	KPEV	CÃ¶ln	502 196					
-G287	I	KPEV	LÃ¼beck	502 284					
-G288	I	KPEV	CÃ¶ln	503 225 [P]					
-G289	I	KPEV	Elberfeld	502 301					
-G290	II	DRG	Essen	501 463					
-G291	II	DRG	Stettin	581 092					
-G292	II	DRG	Essen	502 856					
-G293	II	DRG	Hannover	900 399					
-G294	II	DRG	Stettin	581 829					
-G295	II	DRG	Stettin	581 829					
-G296	II	DRG	Essen	501 482					
-G297	II	DRG	Essen	501 483					
-G298	II	DRG	Essen	501 484					
-G299	II	DRG	KÃ¶ln	540 562					
-G300	II	DRG	MÃ¼nchen	518 322					
-G301	II	DRG	Dresden	550 993					
-G302	II	DRG	Dresden	550 993					
-G303	II	SBB		534 215					
-G304	II	DRG	MÃ¼nchen	518 131					
-;KÃ¼hlwagen
-G305	II	DRG	Dresden	555 137					
-G306	II	DRG	MÃ¼nchen	513 716					
-G307	II	DRG	Berlin	2870					
-G308	II	DRG	Berlin	600 215					
-G309	I	KPEV	CÃ¶ln	600 248					
-G310	II	DRG	MÃ¼nster	579 031					
-G311	II	DRG	Berlin	398					
-G312	I	DRG	MÃ¼nster	600 017					
-G313	I	DRG	MÃ¼nster	600 017					
-G314	I	KPEV	Essen	600 169					
-G315	I	KPEV	Essen	600 169					
-G316	I	KPEV	Essen	600 169					
-G317	I	KPEV	Essen	600 169					
-G318	II	DRG	Berlin	523					
-G319	II	DRG	Berlin	523					
-G320	II	DRG	Oldenburg	589 041					
-G321	II	DRG	Frankfurt	556 080					
-G322	II	DRG	Berlin	1678					
-G323	II	DRG	Berlin	1678					
-G324	I	KPEV	Berlin	600 532					
-G325	I	KPEV	Berlin	600 532					
-G326	II	SBB		533 216					
-G327	II	DRG	Berlin	530 255					
-G328	II	SBB		516 309					
-G329	II	DRG	SaarbrÃ¼cken	11 007					
-G330	II	DRG	SaarbrÃ¼cken	11 008					
-G331	I	DRG	Altona	600 707					
-;Sonstige Wagen
-G332	I	KPEV	Essen	505 165					
-G333	II	DRG		537 082					
-G334	II	DRG	MÃ¼nchen	520 769					
-G335	II	SBB		520 753					
-G336	II	DRG	Mainz	502 324					
-G337	I	KPEV	KÃ¶ln	500 043					
-G338	I	KPEV	KÃ¶ln	500 043					
-G339	I	KPEV	KÃ¶ln	500 043					
-G340	I	KPEV	KÃ¶ln	500 043					
-G341	I	KPEV	Halle	560 569					
-G342	II	DRG	MÃ¼nchen	518 324					
-G343	II	DRG	MÃ¼nchen	518 324					
-G344	II	DRG							
-G345	II	DRG	NÃ¼rnberg	26 611					
-G346	II	DRG	NÃ¼rnberg	26 669					
-;Ep III/IV DR und DB
-G347	IV	DR		40 50 943 9788-2					
-G348	IV	DR		40 50 944 4227-5					
-G349	IV	DB		21 80 411 7 882-1					
-G350	IV	DB		52 80 514 5 724-3					
-G351	IV	DB		52 80 514 5 613-1					
-G352	IV	DB		42 80 514 1 113.3					
-G353	IV	DR		21 50 510 3494-4					
-G354	IV	DR		21 50 510 3492-8					
-G355	IV	DB		01 80 505 6 612--6					
-G356	IV	DR							
-G357	IV	DB		47 35 480 5 517-6					
-G358	IV	DB		01 80 508 5 385-4					
-G359	IV	DB		01 80 508 5 385-4					
-G360	III	DB		715 248					
-G361	III	DB		884 262					
-G362	III	DB		884 262					
-G363	III	DB		884 262					
-G364	III	DB		885 008					
-G365	IV	DB		01 80 508 1 234-8					
-G366	?	?	?	?					
-G367	IV	DB		01 80 5085 383-9					
-G368	IV	DR		31 50 594 9 373-6					
-G369	IV	DR		31 50 594 9 324-9					
-G370	IV	DR		11 80 534 1 713-5					
-G371	IV	DR		11 80 534 2 986-6					
-G372	IV	DR		31 50 594 9 189-6					
-G373	IV	DR		31 50 594 9 225-6					
-G374	IV	DR		31 50 594 9 106-0					
-G375	IV	DR		31 50 592 3460-1					
-G376	IV	DR		31 50 592 3570-7					
-G377	IV	DR		31 50 592 3610-1					
-G378	IV	DR							
-G379	IV	DB		20 80 327 3 378-4					
-G380	III	DB		#					
-G381	III	DB		350 002					
-G382	III	DB		350 009					
-G383	IV	DR		21 50 6771 850-6					
-G384	IV	DR		21 50 6771 852-2					
-G385	IV	DR		21 50 6771 854-8					
-G386	IV	DR		31 50 677 1 828-0					
-G387	IV	DR		31 50 677 1 979-1					
-G388	IV	DR		31 50 677 2 201-9					
-G389	IV	DR		31 50 583 5020-0					
-G390	IV	DR		31 50 583 5028-3					
-G391	IV	DR		31 50 583 5033-3					
-G392	IV	DR		31 50 583 5020-0					
-G393	IV	DR		31 50 583 5028-3					
-G394	IV	DR		31 50 583 5033-3					
-G395	IV	DR							
-G396	IV	DB		21 50 575 0 362-8					
-G397	IV	DB		21 50 575 0 362-8					
-G398	IV	DR		21 80 540 5 386-1					
-G399	IV	DP		50 50 00-29 417-1					
-G400	IV	DR		21 50 120 5 405-8					
-G401	IV	DR		20 81 111 0 042-5					
-G402	IV	DR							
-G403	IV	DR		20 81 111 0 042-5					
-G404	IV	DB		01 80 151 2 166-8					
-G405	IV	DR		21 50 150 0 118-7					
-G406	IV	DR		21 50 150 0 076-7					
-G407	IV	DR		21 50 120 0066-1					
-G408	IV	DR		21 50 120 0077-9					
-G409	IV	DR		21 50 174 2517-7					
-G410	IV	DB		211 4 189-2					
-G411	III	DB		300 217					
-G412	III	DB		56 93 31					
-G413	IV	DR		17 50 807 8032-9					
-G414	IV	DR		17 50 807 8055-0					
-G415	IV	DR		17 50 807 8090-7					
-G416	IV	DR		17 50 807 8032-9					
-G417	IV	DR		17 50 807 8055-0					
-G418	IV	DR		17 50 807 8090-7					
-G419	IV	FS		11 83 083 0 682-8					
-G420	IV	DB		43 80 082 4 112-9					
-G421	III	DB		308 351					
-G422	IV	DR							
-G423	IV	DR							
-G424	IV	DR							
-G425	IV	DB		23 80 765 0 887-4					
-G426	IV	DB		23 80 735 6 013-4					
-G427	III	DB		586 962					
-G428	IV	DR		21 50 730 0 826-4					
-G429	IV	DR		21 50 730 0 977-5					
-G430	IV	DR		35 50 7858 514-8					
-G431	IV	DR		35 50 7858 520-3					
-G432	IV	DR		35 50 7858 543-5					
-G433	III	DB		542 571					
-G434	IV	DB		21 80 005 1 291-1					
-G435	III	DR		51-98-36					
-G436	IV	DB		21 80 572 9 029-6					
-G437	IV	DB							
-G438	IV	DB							
-G439	IV	DB							
-G440	IV	DB							
-G441	IV	DB							
-G442	IV	DB							
-G443	IV	DR							
-G444	IV	DR							
-G445	IV	DR							
-G446	IV	DR		51 50 154 0257-5					
-G447	IV	DB							
-G448	IV	DB							
-G449	IV	DB		01 80 120 4 302-2					
-G450	IV	DR		21 50 120 5405-8					
-G451	IV	DR		21 50 120 5405-8					
+P1"	II	RP	Erfurt	5084							102	¨	18.09.2012	15	ebay			-							
+P2	II	DRG	Berlin	736 762							106		28.12.2017	25	1zu160			-							
+P3	II	DRG	Osten	730 003							74		09.11.2018	20	1zu160			-							
+P4	II	DRG		088 719							63		09.11.2018	17	1zu160			-							
+";Bay. Schnellzugwagen
+P5"	I	Pfalzbahn		290							108		14.12.2024	25	ebay			-	Bild	15709					
+P6	II	DRG	München	107 253							108		12.08.2011	14	ebay			-		15859					
+P7	I	KBayStsB	München	21 088							119		25.07.2023	21	ebay		Rom-München-Hof-Leipzig-Berlin	-							
+P8	I	KBayStsB	München	21 088							119		09.01.2025	17	1zu160		Rom-München-Hof-Leipzig-Berlin	-							
+P9	I	KBayStsB	München	21 088							119		09.01.2025	17	1zu160		Rom-München-Hof-Leipzig-Berlin	-							
+P10	II	DRG	München	13 190							119		12.08.2011	14	ebay			-		15859					
+P11	II	DRG	München	13 191							119		12.08.2011	14	ebay			-		15859					
+P12	I	Pfalzbahn		5062							119		14.12.2024	25	ebay			-	Bild	15709					
+P13	I	KBayStsB	München	26 011							119		25.07.2023	21	ebay		Rom-München-Hof-Leipzig-Berlin	-							
+P14	I	KBayStsB	München	26 011							119		09.01.2025	17	1zu160		Rom-München-Hof-Leipzig-Berlin	-							
+P15	I	Pfalzbahn		1732							119		14.12.2024	25	ebay			-	Bild	15709					
+P16	I	Pfalzbahn		3071							119		14.12.2024	25	ebay			-	Bild	15709					
+P17	II	DRG	München	17 652							119		12.08.2011	14	ebay			-		15859					
+P18	II	DRG	München	17 645						x	119		30.04.2003	29	SMDV			-							
+P19	II	DRG	München	17 647							119		01.10.2019	20	ebay			x		11455					
+";Württ. Schnellzugwagen
+P20"	I	KWStE	Württemberg	6581							121		19.12.2024	14	ebay			-							
+P21	II	DRG	Altona	108 601							121		06.05.2019	14	ebay			-							
+P22	I	KWStE		1838							121		29.07.2023	15	ebay			-							
+P23	II	DRG	Stuttgart	14 936							121		06.05.2019	14	ebay			-							
+P24	I	KWStE		5807							121		21.08.2023	18	ebay			-							
+P25	I	KWStE		5807							121		04.12.2024	10	ebay			-							
+P26	II	DRG	Stuttgart	15 922							121		2002	25	SMDV			-							
+P27	II	DRG	Stuttgart	15 922							121		06.05.2019	14	ebay			-							
+P28	I	KWStE		6332							121		21.08.2023	18	ebay			-							
+P29	I	KWStE		6332							121		04.12.2024	10	ebay			-							
+P30	I	KWStE		6332							121		04.12.2024	10	ebay			-							
+P31	II	DRG	Stuttgart	18 023						x	121		06.05.2019	14	ebay			-							
+P32	II	DRG	Stuttgart	18 023							121		2002	25	SMDV			-							
+P33	II	DRG	Stuttgart	18 023							121		2002	25	SMDV			-							
+";Preuß. Schnellzugwagen
+P34"	I	KPEV	Halle	1141							116		05.04.2023	15	ebay		Von Berlin Anh. Bhf. über Leipzig Hof nach München H.B.	-		7894					
+P35	I	KPEV	Posen	3107							116		12.06.2023	13	ebay		Von .... nach Danzig' 	-							
+P36	I	KPEV	Stettin	05241							116		14.12.2023	28	ebay			-		7913					
+P37	II	DRG	Altona	107 303							116		17.12.2002	18	SpMax			-							
+P38	II	DRG	Altona	107 303						x	116		27.07.2024	15	1zu160			-							
+P39	II	DRG	Berlin	107 318							116		24.03.2023	18	ebay			-							
+P40	I	KPEV	Halle	02731							124		05.04.2023	15	ebay		Von Berlin Anh. Bhf. über Leipzig Hof nach München H.B.	-		7894					
+P41	I	KPEV	Halle	02731							124		26.04.2023	10	ebay		Von Berlin Anh. Bhf. über Leipzig Hof nach München H.B.	-		7894					
+P42	I	KPEV	Altona	2902							124		18.03.2025	20	ebay		Von Berlin Anh Bhf über Halle Erfurt Würzburg Singen Stuttgart nach Zürich	-		781204					
+P43	I	KPEV	Halle	03303							124		05.04.2023	15	ebay	?	Von Berlin Anh. Bhf. über Leipzig Hof nach München H.B.	-		7894					
+P44	I	KPEV	Halle	03303							124		26.04.2023	10	ebay	?	Von Berlin Anh. Bhf. über Leipzig Hof nach München H.B.	-		7894					
+P45	I	KPEV	Halle	03303							124		26.04.2023	10	ebay	?	Von Berlin Anh. Bhf. über Leipzig Hof nach München H.B.	-		7894					
+P46	I	KPEV	Halle	03303							124		26.04.2023	10	ebay	?	Von Berlin Anh. Bhf. über Leipzig Hof nach München H.B.	-		7894					
+P47	I	KPEV	Altona	03011							124		18.03.2025	20	ebay		Von Berlin Anh Bhf über Halle Erfurt Würzburg Singen Stuttgart nach Zürich	-		781204					
+P48	II	DRG	Altona	18 041							124				Spitzner			-							
+P49	II	DRG	Altona	18 041							124							-							
+P50	II	DRG	Altona	18 041							124		27.07.2024	15	1zu160			-							
+P51	II	DRG	Berlin	17 927						x	124		24.03.2023	18	ebay		Berlin Ahb - Stuttgart	-		7912					
+P52	II	DRG	Berlin							x	124		24.03.2023	18	ebay		Berlin Ahb - Stuttgart	-		7912					
+P53	I	DESG		792							128		05.04.2023	15	ebay		Von Berlin Anh. Bhf. über Leipzig Hof nach München H.B.	-		7894					
+P54	I	DESG		777						x	128		14.12.2023	28	ebay			-	Bild 6achsig!	7913					
+P55	II	Mitropa	Mitropa	798							128		26.04.2003	16	ebay			-							
+P56	II	Mitropa	Mitropa	798						x	128		27.07.2024	15	1zu160			-							
+P57	II	Mitropa	Mitropa	707							128		24.03.2023	18	ebay			-		7912					
+P58	I	KPEV	Mitropa	2023							128		14.12.2023	28	ebay		Sassnitz - Frankfurt - Basel	-		7913					
+P59	I	KPEV	Mitropa	2023							128		09.07.2025	29	ebay		Sassnitz - Frankfurt - Basel	-		7913					
+P60	I	KPEV	Mitropa	2069							128		09.07.2025	29	ebay		Sassnitz - Frankfurt - Basel	-		7913					
+P61	I	KPEV	Mitropa	2069							128		22.06.2023	28	ebay		Sassnitz - Frankfurt - Basel	-							
+P62	I	KPEV	Mitropa	2067							128		14.12.2023	28	ebay	?	Sassnitz - Frankfurt - Basel	-		7913					
+P63	II	DRG	Altona	13 305							124		2014		ebay			-							
+P64	II	DRG	Altona	14 892							124				Spitzner			-							
+P65	II	DRG	Berlin	14 805							124		24.03.2023	18	ebay		Berlin Ahb - Stuttgart	-		7912					
+P66	II	DRG	Berlin	14 805							124		02.05.2020	8	1zu160		Berlin Ahb - Stuttgart	-		7912					
+P67	II	DRG	Berlin	14 805							124		27.07.2024	15	1zu160		Berlin Ahb - Stuttgart	-		7912					
+P68	II	Mitropa		20812							128		24.03.2023	18	ebay			-							
+P69	II	Mitropa		20019							128				Spitzner			-							
+P70	II	Mitropa		20019							128		09.03.2019	20	1zu160			-							
+P71	II	Mitropa		20019							128		27.07.2024	15	1zu160			-							
+P72	II	Mitropa		20849							128		09.03.2019	20	1zu160		Westerland - Hamburg - Berlin L	-							
+P73	II	Mitropa		20849							128		09.03.2019	20	1zu160		Westerland - Hamburg - Berlin L	-							
+";Preuß. Eilzugwagen
+P74"	I	KPEV	Erfurt	3022							116		24.01.2022	12	ebay		von Erfurt über Sangerhausen-Dessau nach Berlin	-							
+";Fehler 2015
+P76"	I	DRP	Berlin	2993							116		24.01.2022	12	ebay			-							
+P77	I	DRP	Berlin	2993							116		24.01.2022	12	ebay			-							
+P78	II	DRP	Hannover	99 524							116		04.03.2013	18	ebay			-							
+P79	I	KPEV	Erfurt	126							116		24.01.2022	12	ebay		von Eisenach über Erfurt nach Weimar	-							
+P80	I	KPEV	Erfurt	126							116		24.01.2022	12	ebay		von Eisenach über Erfurt nach Weimar	-							
+P81	I	KPEV	Erfurt	126							116		24.01.2022	12	ebay		von Eisenach über Erfurt nach Weimar	-							
+P82	I	KPEV	Erfurt	126							116		03.05.2022	15	ebay		von Eisenach über Erfurt nach Weimar	-		7890					
+P83	I	KPEV	Erfurt	126							116		12.06.2023	13	ebay		von Eisenach über Erfurt nach Weimar	-							
+P84	II	DRG	Altona	20 664							116		17.12.2002	15	ebay			-							
+P85	II	DRG	Halle	61 042							116		04.03.2013	18	ebay			-							
+P86	II	DRG	Halle	61 042							116		23.05.2007	18	ebay			-		7897					
+P87	II	DRG	Halle	61 042							116		11.07.2024	5	ebay			-		7897					
+P88	II	DRG	Halle	61 042							116		14.08.2025	5	ebay			-		7897					
+P89	II	DRG	Halle	61 042							116		30.08.2019	13	ebay			-							
+P90	I	KPEV	Erfurt	242							116		24.01.2022	12	ebay		von Erfurt über Sangerhausen-Dessau nach Berlin	-							
+P91	I	KPEV	Erfurt	262							116		24.01.2022	12	ebay		von Erfurt über Sangerhausen-Dessau nach Berlin	x		7890					
+P92	I	KPEV	Erfurt	262							116		03.05.2022	15	ebay		von Eisenach über Erfurt nach Weimar	-		7890					
+P93	I	KPEV	Erfurt	262							116		12.06.2023	13	ebay			-							
+P94	I	KPEV	Erfurt	262							116		12.06.2023	13	ebay		von Eisenach über Erfurt nach Weimar	-							
+P95	II	DRG	Halle	62 049							116		30.08.2019	13	ebay	?		-							
+P96	II	DRG	Altona	41 800							116			13				-							
+P97	II	DRG	Halle	62 049							116		07.04.2015	24	SMDV			-							
+P98	II	DRG	Halle	62 049							116		23.05.2007	18	ebay			-		7897					
+P99	II	DRG	Halle	62 049							116		11.07.2024	5	ebay			-		7897					
+P100	II	DRG	Halle	62 049							116		14.08.2025	5	ebay			-		7897					
+P101	II	DRG	Halle	62 049							116		04.03.2013	18	ebay			-							
+";Ruhrschnellverkehr (Set ""Ruhrschnellverkehr I"")
+P102"	II	DRG	Essen	30 727							116		15.06.2015	19	ebay		Essen Hbf - Dortmund Hbf	-		7887					
+P103	II	DRG	Essen	41 963							116		15.06.2015	19	ebay		Essen Hbf - Dortmund Hbf	-		7887					
+P104	II	DRG	Essen	41 967							116		15.06.2015	19	ebay	?	Essen Hbf - Dortmund Hbf	-		7887					
+P105	II	DRG	Essen	41 967							116		05.05.2025	13	ebay		Essen Hbf - Dortmund Hbf	-		7887					
+P106	II	DRG	Essen	41 967							116		05.05.2025	13	ebay		Essen Hbf - Dortmund Hbf	-		7887					
+";Ruhrschnellverkehr (Set ""Ruhrschnellverkehr II"")
+P107"	II	DRG	Essen	30 597							116		10.05.2015	20	ebay		Essen Hbf - Dortmund Hbf	-							
+P108	II	DRG	Essen	41 958							116		10.05.2015	20	ebay		Essen Hbf - Dortmund Hbf	-							
+P109	II	DRG	Essen	41 958							116		10.05.2025	20	ebay		Essen Hbf - Dortmund Hbf	-							
+P110	II	DRG	Essen	41 971							116		10.05.2015	20	ebay	?	Essen Hbf - Dortmund Hbf	-							
+P111	II	DRG	Essen	41 971							116		10.05.2025	13	ebay		Essen Hbf - Dortmund Hbf	x							
+";Einheits-Schnellzugwagen Gruppe 23 (Hechtwagen)
+P112"	II	DRG	Hannover	105 103							117		27.10.2002	11	ebay			-							
+P113	II	DRP	Nürnberg	268							132		18.09.2012	10	ebay			-							
+P114	II	DRP	Köln	3936							132		27.10.2002	11	ebay			-							
+P115	II	DRG	Hannover	11 005							128		27.10.2002	11	ebay			-							
+P116	II	DRG	Hannover	11 214							128		27.10.2002	11	ebay			-							
+P117	II	DRG	Hannover	11 289							128		27.10.2002	11	ebay			-							
+P118	II	DRG	Hannover	16 043							128		27.10.2002	11	ebay			-							
+P119	II	DRG	Hannover	16 044							128		27.10.2002	11	ebay			-							
+P120	II	Mitropa	Mitropa	36 002							133		27.10.2002	11	ebay			-							
+";Rheingold
+P121"	II	DRG	Köln	90 202							122	¨	10.08.2022	25	1zu160			-		11468					
+P122	II	Mitropa	Köln	20 504							147	¨	10.08.2022	25	1zu160		n. Zürich	-		11468					
+P123	II	Mitropa	Köln	20 501							147	¨	10.08.2022	25	1zu160		n. Basel	-		11468					
+P124	II	Mitropa	Köln	24 508							147	¨	10.08.2022	25	1zu160		n. Basel	-		11468					
+P125	II	Mitropa	Köln	24 505							147	¨	10.08.2022	25	1zu160		n. Zürich	-		11468					
+";Rheingold
+P126"	II	DRG	Köln	105 002							122	¨	08.12.2013	28	ebay			-							
+P127	II	Mitropa	Köln	10 502							147	¨	08.12.2013	28	ebay			-							
+P128	II	Mitropa	Köln	10 503							147	¨	08.12.2013	28	ebay			-							
+P129	II	Mitropa	Köln	10 710							147	¨	08.12.2013	28	ebay			-							
+P130	II	Mitropa	Köln	10 703							147	¨	08.12.2013	28	ebay			-							
+";Karwendel
+P131"	II	DRG	München	105 270							123	?	31.03.2020	30	ebay Michas Bahnhof			-							
+P132	II	DRG	München	16 365							130	?	24.05.2020	37	ebay			-							
+P133	II	DRG	München	16 367							130	¨	07.05.2021	40	SMDV			-							
+P134	II	DRG	München	16 364							130	¨	07.05.2021	40	SMDV			-							
+P135	II	DRG	München	15 018							130	¨	07.05.2021	40	SMDV			-							
+";ISG-Wagen
+P136"	II	CIWL										¨	29.11.2013	22	ebay			-		4001					
+P137	II	CIWL										¨	29.11.2013	22	ebay			-		4001					
+P138	II	CIWL										¨	29.11.2013	22	ebay			-		4001					
+P139	II	CIWL										¨	29.11.2013	22	ebay			-		4001					
+P140	II	CIWL										¨	29.11.2013	22	ebay			-		4001					
+";Einheits-Schnellzugwagen Gruppe 28
+P141"	II	DRG	Hannover	100 021							140		16.10.2011	20	ebay			-		11432					
+P142	II	DRG	Karlsruhe	100 022						x	140		01.10.2011	20	ebay			x		11455					
+P143	II	DRG	Altona	100 003							141		22.05.2013	29	MSL			-							
+P144	II	DRG	Hannover	11 343							136		16.10.2011	20	ebay			-		11432					
+P145	II	DRG	Köln	21 507							136		09.08.2011	27	ebay 			-		15710					
+P146	II	DRG	Köln	21 507							136		04.12.2011	22	ebay			-		15710					
+P147	II	DRG	Köln	21 507							136		07.12.2011	22	ebay			-		15710					
+P148	II	DRG	München	16 217							136		12.08.2011	14	ebay			-		15859					
+P149	II	DRG	Köln	26 529							136		09.08.2011	27	ebay			-		15710					
+P150	II	DRG	Köln	26 529						x	136		04.12.2011	22	ebay			-		15710					
+P151	II	DRG	Köln	26 529						x	136		07.12.2011	22	ebay			-		15710					
+P152	II	DRG	Köln	26 534							136		15710.3	27	ebay			-		15710					
+P153	II	DRG	Köln	26 534						x	136		04.12.2011	22	ebay			-		15710					
+P154	II	DRG	Köln	26 534						x	136		07.12.2011	22	ebay			-		15710					
+P155	II	DRG	Karlsruhe	16 221							136		01.10.2019	20	ebay			x		11455					
+P156	II	DRG	Karlsruhe	16 223							136		01.10.2019	20	ebay			x		11455					
+P157	II	Mitropa		1045							147		12.08.2011	14	ebay			-		15859					
+P158	II	Mitropa		1052							147		09.08.2011	27	ebay			-		15710					
+P159	II	Mitropa		1052						x	147		04.12.2011	22	ebay			-		15710					
+P160	II	Mitropa		1052						x	147		07.12.2011	22	ebay			-		15710					
+";Henschel-Wegmann
+P161"	II	DRG	Berlin	10 401							136		15.06.2002	15	MBFn		Dresden Hbf - Berlin Ahb	-		0166					
+P162	II	DRG	Berlin	10 402							132		15.06.2002	15	MBFn		Dresden Hbf - Berlin Ahb	-		0166					
+P163	II	DRG	Berlin	10 403							132		15.06.2002	15	MBFn		Dresden Hbf - Berlin Ahb	-		0166					
+P164	II	DRG	Berlin	10 404							136		15.06.2002	15	MBFn	?	Dresden Hbf - Berlin Ahb	-		0166					
+";Einheits-Schnellzugwagen Gruppe 35 (braungrün)
+P165"	II	DRG	München								135	¨	30.10.2020	33	SMDV			-							
+P166	II	DRG	München	16587							135	¨	30.09.2020	29	SMDV		Berlin-Leipzig-Hof-Regensburg-München-Berchtesgaden	-							
+P167	II	DRG	München	16600							135	¨	30.09.2020	30	SMDV		Berlin-Leipzig-Hof-Regensburg-München-Berchtesgaden	-							
+P168	II	DRG	Mitropa	1130							135	¨	30.09.2020	31	SMDV		Berlin-Halle-Probstzella-Nürnberg-Augsburg-München	-							
+";Einheits-Schnellzugwagen Gruppe 35 (flaschengrün)
+P169"	II	DRG	München	105 731							135		04.09.2011	31	Modellbahn-Kramm			-							
+P170	II	DRG	München	105 731						x	135		08.08.2015	21	ebay 			-							
+P171	II	DRG	München	11 623							135		08.08.2015	21	ebay			-							
+P172	II	DRG	München	11 623							135		09.07.2025	9	ebay			x							
+P173	II	DRG	München	16 579							135		29.08.2011	23	Lokmuseum	?		-							
+P174	II	DRG	München	16 579							135		29.08.2011	23	Lokmuseum	?		-							
+P175	II	DRG	München	16 579						x	135		08.08.2015	21	Ebay	?		-							
+P176	II	DRG	München	16 579						x	135		08.08.2015	21	Ebay	?		-							
+P177	II	DRG	München	16 582						x	135		08.08.2015	21	ebay 			-							
+P178	II	DRG	München	16 582							135		08.08.2015	21	ebay			-							
+";Einheits-Schnellzugwagen Gruppe 38 (Schürzenwagen)
+P179"	II	DRG	Berlin	105 728							135			3	ebay		 Berlin Leb - Hamburg Altona	-		15801					
+P180	II	DRG	München	4896							143			25	SMDV			-							
+P181	II	DRG	München	11 699							133			20	idee+spiel Nürnberg		München Hbf - Berlin Ahb	-		13721					
+P182	II	DRG	Berlin	11 703							133			3	ebay		 Berlin Leb - Hamburg Altona	x		15802					
+P183	II	DRG	Berlin	215 533							133			3	ebay		 Berlin Leb - Hamburg Altona	-		15802					
+P184	II	DRG	München	214 016							136			20	idee+spiel Nürnberg		München Hbf - Berlin Ahb	-		13721					
+P185	II	DRG	Berlin	19 225							133			3	ebay		 Berlin Leb - Hamburg Altona	-							
+P186	II	DRG	München	19 347							133			20	idee+spiel Nürnberg		München Hbf - Berlin Ahb	-		13721					
+P187	II	DRG	München	19 224							133		01.07.2004	16	MBF Markel		München Hbf - Berlin Ahb	-		15713					
+P188	II	DRG	München	19 224							133		13.04.2002	28	SpMax		München Hbf - Berlin Ahb	-		15713					
+P189	II	DRG	München	19 300							133		13.04.2002	28	SpMax		München Hbf - Berlin Ahb	-		15713					
+P190	II	Mitropa		22 079							147			20	idee+spiel Nürnberg		Berlin - München - Berlin	-		13721					
+P191	II	Mitropa		1215							147			20	idee+spiel Nürnberg		Berlin - München - Berlin	-		13721					
+P192	II	Mitropa		1213						x	147			2	ebay		 Berlin Leb - Hamburg Altona	x		15801					
+";Einheits-Eilzugwagen Gruppe 30
+P193"	II	DRG	Frankfurt	25 139							131		20.10.2019	33	ebay			-							
+";Einheits-Eilzugwagen Gruppe 36
+P194"	II	DRG	Köln	112 379							131			27	ebay			-		02061S					
+P195	II	DRG	München	33 614							132			27	ebay			-		02061S					
+P196	II	DRG	München	33 614							132			27	ebay			-		02061S					
+P197	II	DRG	München	73 627							130			27	ebay			-		02061S					
+P198	II	DRG	München	73 627							130			27	ebay			-		02061S					
+P199	II	DRG	München	73 627							130			27	ebay			-		02061S					
+";Bay. 3achs. Schnellzugwagen
+P200"	II	DRG	München	29 001							85		08.05.2019	26	ebay			-		15681					
+P201	II	DRG	München	29 532							85		08.05.2019	26	ebay			-		15681					
+P202	II	DRG	München	29 533							85		08.05.2019	26	ebay			-		15681					
+P203	II	DRG	München	29 535							85		08.05.2019	26	ebay			-		15681					
+P204	II	DRG	München	90 503							72		08.05.2019	26	ebay			-		15681					
+";Bay. Nebenbahnwagen
+P205"	II	DRG		24 Au							65		02.01.2017	15	MiWuLa		Postumlauf 2027 Nördlingen -> Bernbühl, 2028 Gegenrichtung	-							
+P206	II	DRG	München	116 663							66		26.05.2018	25	ebay			-							
+P207	I	KBayStsB	Regensburg	21 141						x	63		20.03.2023	20	ebay			-		11604					
+P208	I	KBayStsB	Regensburg	2721						x	74		20.03.2023	20	ebay			-		11604					
+P209	II	DRG	München	38 441							71		18.01.2014	17	dm-toys			-							
+P210	II	DRG	München	38 452							71		26.05.2018	25	ebay		Rosenheim - Frasdorf	-							
+P211	I	KBayStsB	Regensburg	12 213						x	74		20.03.2023	20	ebay			-		11604					
+P212	II	DRG	München	93 968							75		26.05.2018	25	ebay			-							
+";Württ. Nebenbahnwagen
+P213"	II	DRG	Stuttgart	40 015							81		16.07.2016	22	zu160			-		1850					
+P214	II	DRG	Stuttgart	40 015							81		13.01.2019	17	zu160			-		1850					
+P215	II	DRG	Stutgart	50 238							81		16.07.2016	22	zu160			-		1850					
+P216	II	DRG	Stutgart	50 238							81		13.01.2019	17	zu160			-		1850					
+P217	II	DRG	Stuttgart	50 029							81		16.07.2016	22	zu160			-		1850					
+P218	II	DRG	Stuttgart	50 029							81		13.01.2019	17	zu160			-		1850					
+P219	II	DRG	41 Stuttgart								92		13.01.2019	17	zu160			-							
+P220	II	DRG	Stuttgart 34 114								92		13.01.2019	17	zu160			-							
+P221	II	DRG	Stuttgart 34 117								92		21.08.2022	28	ebay			-	Bild						
+";Preuß. Lokalbahnwagen
+P222"	I	KPEV	Altona	3801							57		12.12.2021	18	ebay			-	Bild	7898					
+P223	II	DRG	Königsberg	099 522							56		20.11.2015	12	Modell Süd			-							
+P224	II	DRG	Königsberg	037 061							56		20.11.2015	13	Modell Süd			-							
+P225	I	KPEV	Halle	1488							56		13.11.2023	17	ebay		Stahnsdorf - Bitterfeld	-		7898					
+P226	I	KPEV	Halle	1489							56		13.11.2023	17	ebay		Stahnsdorf - Bitterfeld	-		7898					
+P227	II	DRG	Königsberg	050 211							56		20.11.2015	10	Modell Süd			-							
+P228	I	KPEV	Halle	3961							57		13.11.2023	17	ebay			-							
+P229	I	KPEV	Halle	2456							56		13.11.2023	17	ebay		Stahnsdorf - Bitterfeld	-		7898					
+P230	I	KPEV	Halle	903							56		13.11.2023	17	ebay		Stahnsdorf - Bitterfeld	-		7898					
+";Preuß. zweiachsige Nebenbahnwagen
+P231"	II	DRG	Altona	92 340x						x	68				ebay		Husum - Schleswig	-							
+P232	I	KPEV	Altona	1959							68		12.12.2021	18	ebay			-	Bild	7898					
+P233	I	KPEV	Erfurt	2678							69		23.07.2022	12	ebay			-	Bild	7881					
+P234	I	KPEV	Erfurt	2361							68		23.07.2022	12	ebay		Gotha - Leinefelde	-	Bild	7881					
+P235	I	KPEV	Gotha	2522							68		23.07.2022	12	ebay		Gotha - Leinefelde	-	Bild	7881					
+P236	I	KPEV	Erfurt	2532							68		23.07.2022	12	ebay		Gotha - Leinefelde	-	Bild	7881					
+P237	II	DRG	Breslau	92467						x	68		06.12.2018	15	ebay			-							
+P238	II	DRG	Breslau	92467						x	68			0	Wolfgang Nachbar			-							
+";Preuß. zwei- und dreiachsige Nebenbahnwagen
+P239"	I	KPEV	Halle	5986									05.01.2022	18	ebay			-	Bild	7899					
+P240	I	KPEV	Halle	706									05.01.2022	18	ebay			-	Bild	7899					
+P241	I	KPEV	Hannover	720									13.03.2025	22	ebay			-	Bild	781202					
+P242	I	KPEV	Breslau	2282									05.01.2022	18	ebay			-	Bild	7899					
+P243	I	KPEV	Breslau	2429									05.01.2022	18	ebay			-	Bild	7899					
+P244	I	KPEV	Stettin	2747									05.01.2022	18	ebay			-	Bild	7902					
+P245	I	KPEV	Halle	2653									23.06.2023	18	ebay			-	Bild						
+P246	I	KPEV	Hannover	2641									13.03.2025	22	ebay			-	Bild	781202					
+P247	II	DRG	Berlin	99 511						x	74		23.05.2007	18	ebay			-		7897					
+P248	II	DRG	Berlin	99 511							74		11.07.2024	5	ebay			-		7897					
+P249	II	DRG	Berlin	99 511						x	74		02.02.2001	23	Pietsch			-							
+P250	II	DRG	Berlin	99 511						x	74		30.07.2021	10	ebay			x							
+P251	II	DRG	Berlin	99 511						x	74		14.08.2025	5	ebay			-		7897					
+P252	II	DRG	Halle	49 001							76							-							
+P253	II	DRG	Halle	49 001							76		23.05.2007	18	ebay			-		7897					
+P254	II	DRG	Halle	49 001							76		11.07.2024	5	ebay			-		7897					
+P255	II	DRG	Halle	49 001							76		30.07.2021	10	ebay			-		7897					
+P256	II	DRG	Halle	49 001							76		14.08.2025	5	ebay			-		7897					
+P257	II	DRG	Halle	50 280							76							-							
+";Preuß. zwei-/dreiachsige Abteilwagen
+P258"	I	KPEV	Erfurt	3140							69		03.05.2022	15	ebay			-		7890					
+P259	I	KPEV	Coeln	3247							81		19.03.2022	14	1zu160			-							
+P260	II	DRG	Altona	111 037							80		17.02.2013	26	ebay			-							
+P261	I	KPEV	Coeln	1126							79		19.03.2022	18	1zu160		Coeln-Düren-Aachen	-							
+P262	I	KPEV	Coeln	1126							79						Coeln-Düren-Aachen	-							
+P263	I	KPEV	Berlin	1149							79		13.03.2025	22	ebay			-		781202					
+P264	I	KPEV	Berlin	1153							79		13.03.2025	22	ebay			-		781202					
+P265	I	KPEV	Halle	1762							69		03.05.2022	15	ebay		von Eisenach über Erfurt nach Weimar	-		7890					
+P266	I	KPEV	Berlin	1891							79		13.03.2025	22	ebay			-		781202					
+P267	I	KPEV	Coeln	1873							79						Coeln-Düren-Aachen	-							
+P268	I	KPEV	Coeln	1873							79		19.03.2022	18	1zu160		Coeln-Düren-Aachen	-							
+P269	I	KPEV	Coeln	1873							79		22.09.2025	26	1zu160		Coeln-Düren-Aachen	-							
+P270	I	KPEV	Coeln	1879							79						Coeln-Düren-Aachen	-							
+P271	I	KPEV	Coeln	1879							79		19.03.2022	18	1zu160		Coeln-Düren-Aachen	-							
+P272	II	DRG	Altona	70 501							79		08.03.2014	20	ebay			-							
+P273	II	DRG	Altona	70 517							79		08.03.2014	20	ebay			-							
+P274	II	DRG	Altona	70 517							79		08.03.2014	20	ebay			-							
+P275	II	DRG	Altona	70 544							79							-							
+P276	II	DRG	Altona	70 544							79							-							
+P277	II	DRG	Altona	70 544							79							-							
+";Einheitspersonenwagen (Abteil) für Hauptbahnen
+P278"	II	DRG	Mainz	114 151							86							-							
+P279	II	DRG	München	114 178							86		24.11.2019	12	ebay			-		11422					
+P280	II	DRG	Mainz	44 831							86							-							
+P281	II	DRG	Frankfurt	45 424							86		24.11.2019	12	ebay		München-Ingolstadt	-		11422					
+P282	II	DRG	Mainz	31 040							86		24.11.2019	12	ebay		München-Ingolstadt	-		11422					
+P283	II	DRG	Mainz	31 036							86		07.12.2018	12	ebay			-							
+";EInheitsdurchgangspersonenwagen (Donnerbüchsen)
+P284"	II	DRG	Nürnberg	114 263							87							-							
+P285	II	DRG	Nürnberg	28 604							87							-							
+P286	II	DRG	Nürnberg	36 441							87							-							
+P287	II	DRG	Nürnberg	41 504							87		25.10.2002	12	ebay			-							
+P288	II	DRG	Nürnberg	41 504							87		23.05.2007	18	ebay			-		7897					
+P289	II	DRG	Nürnberg	41 504							87		11.07.2024	5	ebay			-		7897					
+P290	II	DRG	Nürnberg	41 504							87		14.08.2025	5	ebay			-		7897					
+P291	II	DRG	Nürnberg	41 504							87		30.07.2021	10	ebay			-							
+P292	II	DRG	Nürnberg	84 523							87							-							
+P293	II	DRG	Nürnberg	83 072							87		06.12.2018	21	ebay Nann		Nürnberg - Forchheim - Beringersmühle	-							
+";Städteexpress
+P294"	IV	DR		51 50 10 40 206-0							165			46	Modellbahn-Apitz		Ex 170/177 Elbflorenz Dresden-Berlin	-							
+P295	IV	DR		51 50 10 40 206-0							165			46	Modellbahn-Apitz		Ex 170/177 Elbflorenz Dresden-Berlin	-							
+P296	IV	DR		51 50 21 53 005-7							165			46	Modellbahn-Apitz		Ex 170/177 Elbflorenz Dresden-Berlin	-							
+P297	IV	DR		51 50 21 53 005-7							165			46	Modellbahn-Apitz		Ex 170/177 Elbflorenz Dresden-Berlin	-							
+P298	IV	DR		50 50 21 12 004-1							165		17.09.2024	42	ebay		Ex 170/177 Elbflorenz Dresden-Berlin	-							
+P299	IV	DR		50 50 21 12 000-9							165		17.09.2024	42	ebay		Ex 170/177 Elbflorenz Dresden-Berlin	-							
+P300	IV	DR									165		08.01.2025	42	MSL			-							
+P301	IV	DR									165		08.01.2025	42	MSL			-							
+P302	IV	Mitropa									117			50				-							
+";Internationaler Verkehr (UIC Y, Z)
+P303"	IV	DR		51 50 82 45 007-8							153		05.10.2015	27	ebay		Erfurt - Karl-Marx-Stadt	-							
+P304	IV	DR		51 50 82 45 007-8						x	153		11.09.2025	36	ebay		Erfurt - Karl-Marx-Stadt	-							
+P305	IV	DR									165		18.06.2015	21	dm-toys (ebay)			-							
+P306	IV	DR		51 50 20-40 129-2							153		11.09.2025	36	ebay		Erfurt - Karl-Marx-Stadt	-							
+P307	IV	DR									153		11.09.2025	36	ebay		Erfurt - Karl-Marx-Stadt	-							
+P308	IV	DR		51 50 21 53-204-6							165		12.10.2024	30	Modellbahn Rhein-Main			-		0348					
+P309	IV	DR		51 50 21 53-124-6							165		12.10.2024	30	Modellbahn Rhein-Main			-		0348					
+P310	IV	DR		51 50 21 53-096-6							165		12.10.2024	30	Modellbahn Rhein-Main			-		0348					
+P311	IV	DR									165		16.01.2024	40	Ars Technica		D242 Paris-Warschau	-							
+P312	IV	DR									165		16.01.2024	40	Ars Technica		D242 Paris-Warschau	-							
+P313	IV	Mitropa									165		16.01.2024	40	Ars Technica		D242 Paris-Warschau	-							
+P314	IV	DR		51 80 10-40 223-9							165		04.08.2023	25	ebay			-							
+P315	IV	DR		51 80 22-41 037-8							165		04.08.2023	25	ebay			-							
+P316	IV	DR		51 80 22-40 951-1							165		04.08.2023	25	ebay			-							
+P317	IV	DB									165		22.07.2026	0	ebay 		250 und 15639 verkauft	-							
+P318	IV	DB									165		22.07.2026	0	ebay 		250 und 15639 verkauft	-							
+P319	IV	DB									165		22.07.2026	0	ebay 		250 und 15639 verkauft	-							
+P320	IV	DB									165		22.07.2026	0	ebay 		250 und 15639 verkauft	-							
+P321	IV	DB									165		22.07.2026	0	ebay 		250 und 15639 verkauft	-							
+P322	IV	DB									165		22.07.2026	0	ebay 		250 und 15639 verkauft	-							
+";Binnenverkehr (UIC B)
+P323"	IV	DR		51 50 20-40 030-2							154		20.01.2026	44	MSL		Ohne!	-							
+P324	IV	DR		51 50 20-45 033-1							154		20.01.2026	44	MSL		Ohne!	-							
+P325	IV	DR		51 50 88-40111-9							154		20.01.2026	44	MSL		Ohne!	-							
+P326	IV	DR		51 50 39-40 061-6							154		19.05.2025	38	ebay		Berlin Stadtb - Hamburg	-							
+P327	IV	DR		51 50 20-40 198-7							154		19.05.2025	38	ebay		Berlin Stadtb - Hamburg	-							
+P328	IV	DR		51 50 20-40 207-6							154		19.05.2025	38	ebay		Berlin Stadtb - Hamburg	-							
+P329	IV	DR		51 50 59 40 009-0							154		14.02.2025	40	ebay 			-							
+P330	IV	Mitropa		51 50 70 40 177-5							154		14.02.2025	40	ebay 			-							
+P331	IV	Mitropa		51 50 70 40 124-2							154		14.02.2025	40	ebay 			-							
+P332	IV	Mitropa		51 50 88 40 103-6							154		14.02.2025	44	Modellbahn-Härtle			-							
+P333	IV	DR		51 50 98 80 002-9							165		14.02.2025	44	Modellbahn-Härtle			-							
+P334	IV	DR		51 50 98 80 003-7							165		14.02.2025	44	Modellbahn-Härtle			-							
+";Binnenverkehr (Mitteleinstiegwagen)
+P335"	IV	Mitropa									116,9		13.09.2017	28	MSL			-							
+P336	IV	DR		51 50 21-40 039-2							165		09.08.2018	18	1zu160			-							
+P337	IV	DR		51 50 21-40 045-9							165		09.08.2018	18	1zu160			-							
+P338	IV	DR		51 50 21-40 071-5							165		09.08.2018	18	1zu160			-							
+P339	IV	DR		51 50 21-40 106-9							165		09.08.2018	18	1zu160			-							
+P340	IV	DR		51 50 21-40 039-2							165		26.05.2015	19	Modellbahn Kramm 			-							
+P341	IV	DR		51 50 21-45 078-5							165		26.05.2015	16	Modellbahn Kramm 			-							
+P342	IV	DR		51 50 21-45 094-2							165		26.05.2015	16	Modellbahn Kramm 			-							
+P343	IV	DR		51 50 21-45 101-5							165		26.05.2015	16	Modellbahn Kramm 			-							
+P344	IV	DR		51 50 21-45 120-5							165		26.05.2015	16	Modellbahn Kramm 			-							
+";Balt-Orient-Express
+P345"	IV	DR		51 50 20-40 070-8							153		18.09.2020	34	SMDV		Berlin Ost/Bhf - Bad Schandau - Praha stred - Stútovo - Budapest - Bucaresti Nord	-		15995					
+P346	IV	DR		51 50 19-80 043-9							153		18.09.2020	34	SMDV		Berlin Ost/Bhf - Bad Schandau - Praha stred - Stútovo - Budapest - Bucaresti Nord	-		15995					
+P347	IV	DR		51 50 20-80 218-4							153		18.09.2020	34	SMDV		Berlin Ost/Bhf - Bad Schandau - Praha stred - Stútovo - Budapest - Bucaresti Nord	-		15995					
+P348	IV	Mitropa		51 50 70-40 159-8							153		23.09.2020	50	ebay			-		15996					
+P349	IV	CFR		51 53 70-50 019-8							153		23.09.2020	50	ebay		Berlin Ost/Bhf - Bad Schandau - Praha stred - Stútovo - Budapest - Bucaresti Nord	-		15996					
+P350	IV	MAV		51 55 70-80 002-6							153		23.09.2020	50	ebay		Berlin Ost/Bhf - Bad Schandau - Praha stred - Stútovo - Budapest	-		15996					
+P351	IV	CSD		51 54 59-41 156-4							153		17.09.2020		dmToys		Berlin Ost/Bhf - Bad Schandau - Praha stred - Stútovo - Budapest - Bucaresti Nord	-		15997					
+P352	IV	CSD		51 54 20-40 457-3							153		17.09.2020		dmToys		Berlin Ost/Bhf - Bad Schandau - Praha stred - Stútovo - Budapest - Bucaresti Nord	-		15997					
+P353	IV	CSD		51 54 20-41 771-6							153		17.09.2020		dmToys		Berlin Ost/Bhf - Bad Schandau - Praha stred - Stútovo - Budapest - Bucaresti Nord	-		15997					
+";Binneverkehr (Modernisierungswagen)
+P354"	IV	DR		51 50 29 13 026-3									03.02.2017	20	dm-toys			-							
+P355	IV	DR		51 50 29 45 268-5									03.02.2017	20	dm-toys			-							
+P356	IV	DR		51 50 85 45 518-3									03.02.2017	20	dm-toys			-							
+P357	IV	DR		51 50 17 45 061-8									03.02.2017	20	dm-toys			-							
+P358	IV	DR		51 50 38 45 048-6									03.02.2017	20	dm-toys			-							
+P359	IV	DR		51 50 95 40 220-8									03.02.2017	20	dm-toys			-							
+P360	IV	DR		51 50 17 45 061-8									17.05.2018	19	1zu160 Bernd Siebel			-							
+P361	IV	DR		51 50 38 45 048-6									17.05.2018	19	1zu160 Bernd Siebel			-							
+P362	IV	DR		51 50 95 40 220-8						x			17.05.2018	19	1zu160 Bernd Siebel			-							
+";Binnenverkehr (Lowa)
+P363"	IV	DR		82-14 246-4									14.02.2018	46	MSL			-							
+P364	IV	DR		29-14 314-4									14.02.2018	33	MSL			-							
+P365	IV	DR		29-14 316-9									14.02.2018	33	MSL			-							
+P366	IV	DR		29-14 319-3									14.02.2018	33	MSL			-							
+P367	IV	DR		29-14 320-1									14.02.2018	33	MSL			-							
+P368	IV	DR		50 50 80 14 200-1									09.01.2018	45	MBFn			-							
+P369	IV	DR		50 50 29 40 025-6									09.01.2018	35	MBFn			-							
+P370	IV	DR		50 50 49 14216-1									19.01.2018	39	dm-toys			-							
+P371	IV	DR		50 50 49 14221-1									19.01.2018	39	dm-toys			-							
+P372	IV	DR		50 50 49 14230-1									19.01.2018	39	dm-toys			-							
+";Binnenverkehr (ex Karwendel)
+P373"	III	DR		641-013						x			09.08.2024	20	1zu160			-	Bild						
+P374	III	DR		241-015						x			18.08.2021	15	ebay			-	Bild						
+P375	III	DR		241-015						x			09.08.2024	20	1zu160			-	Bild						
+P376	III	DR		241-213						x			09.08.2024	20	1zu160			-	Bild						
+P377	III	DR		241-215						x			09.08.2024	20	1zu160			-	Bild						
+";Binnenverkehr (ex Eilzugwagen 30er)
+P378"	IV	DR		51 50 92 43 359-5									21.08.2023	15	1zu160		Leipzig - Dresden - Zittau	-		15761					
+P379	IV	DR		57 50 38 14 652-9									21.08.2023	15	1zu160		Leipzig - Dresden - Zittau	-		15761					
+P380	IV	DR		57 50 38 14 652-9									21.08.2023	15	1zu160		Leipzig - Dresden - Zittau	-		15761					
+P381	IV	DR		57 50 28 14 526-7									21.08.2023	15	1zu160		Leipzig - Dresden - Zittau	-		15761					
+P382	IV	DR		57 50 28 14 526-7									21.08.2023	15	1zu160		Leipzig - Dresden - Zittau	-		15761					
+P383	IV	DR		57 50 28 14 531-4									21.08.2023	15	1zu160		Leipzig - Dresden - Zittau	-		15761					
+P384	III	DR		60 50 70 10 100-7						x			21.08.2023	15	1zu160		München - Bln Ostbf	-	Bild	13719					
+P385	III	DR		51 50 88 40 055-8						x			21.08.2023	15	1zu160		München - Bln Ostbf	-		13719					
+";Doppelstockeinzelwagen (Anfang 70er)
+P386"	IV	DR		50 50 25-13 006-1							167		16.09.2015	24	Spielemax			-							
+P387	IV	DR		50 50 25-13 039-2							167		16.09.2015	24	Spielemax			-							
+P388	IV	DR		50 50 25-13 020-2							167		16.09.2015	24	Spielemax			-							
+P389	IV	DR		50 50 25-13 030-1							167		30.11.2024	40	SMDV			-		6260042					
+P390	IV	DR		50 50 25-13 022-8							167		30.11.2024	40	SMDV			-		6260042					
+";Doppelstockeinzelwagen (Sputnikverkehr)
+P391"	IV	DR									167		26.09.2017	37	besserepreise			-							
+P392	IV	DR									167		26.09.2017	37	besserepreise			-							
+P393	IV	DR									167		26.09.2017	37	besserepreise			-							
+P394	IV	DR									167		26.09.2017	32	besserepreise			-							
+P395	IV	DR									167		26.09.2017	32	besserepreise			-							
+";Doppelstockzüge (DB7, D13)
+P396"	IV	DR		50 50 26-25 467-0							121		16.11.2012	34				-		13389					
+P397	IV	DR		50 50 26-25 468-8							121							-		13389					
+P398	IV	DR		50 50 26-12 085-5							121		18.10.2018	36				-		13392					
+P399	IV	DR		50 50 26-12 086-3							104,5		18.10.2018	36				-		13392					
+P400	IV	DR		50 50 26-12 087-1							104,5							-		13392					
+P401	IV	DR		50 50 26-12 088-9							121							-		13392					
+P402	IV	DR											09.01.2025	46	MSL			-		4472					
+P403	IV	DR											09.01.2025	46	MSL			-		4472					
+P404	IV	DR											09.01.2025	46	MSL			-		4472					
+P405	IV	DR											09.01.2025	46	MSL			-		4472					
+";4achs. Rekowagen
+P406"	IV	DR									116,9		03.12.2012	40	Hünerbein			-							
+P407	IV	DR									117	-	24.03.2026	35	1zu160 Fabian Goll		Dach rehbraun	-							
+P408	IV	DR		50 50 28-05 009-2							116,9		27.11.2012	36	Exoneit			-							
+P409	IV	DR		50 50 28-05 009-2							116,9		27.11.2012	36	Exoneit			-							
+P410	IV	DR		57 50 28-14 455-9							116,9		10.06.2018	27	1zu160			-							
+P411	IV	DR		57 50 28-13 262-0							116,9		10.06.2018	27	1zu160			-							
+P412	IV	DR		57 50 28-13 262-0							116,9	-	10.06.2018	35	1zu160 Fabian Goll			-							
+P413	IV	DR		57 50 28-13 262-0							116,9	-	10.06.2018	35	1zu160 Fabian Goll			-							
+P414	IV	DR		57 50 28-13 262-0							116,9	-	10.06.2018	35	1zu160 Fabian Goll			-							
+P415	IV	DR		57 50 28-13 420-4							116,9		10.06.2018	27	1zu160			-							
+P416	IV	DR		57 50 28-13 420-4							116,9	-	10.06.2018	35	1zu160 Fabian Goll			-							
+P417	IV	DR		57 50 28-13 420-4							116,9	-	10.06.2018	35	1zu160 Fabian Goll			-							
+";2/3achs. Rekowagen
+P418"	IV	DR									82		21.11.2014	17	MSL			-		4167					
+P419	IV	DR									82		21.11.2014	17	MSL			-		4167					
+P420	IV	DR									82		21.11.2014	17	MSL			-		4167					
+P421	IV	DR		50 50 24-25 371-1							82		15.12.2015	21	ds-Automodelle			-		4163					
+P422	IV	DR		50 50 23-24 719-8							82		15.12.2015	21	ds-Automodelle			-		4163					
+P423	IV	DR		50 50 24-15 020-1							82		15.12.2015	21	ds-Automodelle			-		4163					
+P424	IV	DR		50 50 23-15 296-2							82		15.12.2015	21	ds-Automodelle			-		4163					
+P425	IV	DR		50 50 23-15 188-7							82		15.12.2015	21	ds-Automodelle			-		4163					
+P426	IV	DR		50 50 93 50 070-2							82		15.12.2015	21	ds-Automodelle			-		4163					
+P427	IV	DR		50 50 90 15 871-6							82		29.09.2018	22	1zu160			-		4164					
+P428	IV	DR		50 50 23 15 351-1							82		29.09.2018	22	1zu160			-		4164					
+";3achs. Umbauwagen
+P429"	IV	DB		99 331 Wt						x	83		23.12.2022	16	1zu160		Hagen Westf.-Düsseldrof Hbf	x							
+P430	IV	DB		86 033 Wt						x	83		23.12.2022	16	1zu160		Hagen Westf.-Düsseldrof Hbf	x							
+P431	IV	DB		37 003 Wt						x	83		23.12.2022	16	1zu160		Hagen Westf.-Düsseldrof Hbf	x							
+P432	IV	DB		85 862 Wt						x	83		23.12.2022	16	1zu160		Hagen Westf.-Düsseldrof Hbf	x							
+P433	IV	DB		85 862 Wt						x	83		23.12.2022	16	1zu160		Hagen Westf.-Düsseldrof Hbf	x							
+";GÃ¼terzugbegleitwagen
+G1"	I	KPEV	Stettin								53		05.01.2022	18	ebay										
+G2	I	KPEV	Frankfurt	5469							53		26.07.2022	20	dm-toys					81210					
+G3	I	KPEV	Frankfurt	5171							53		26.07.2022	20	dm-toys					81210					
+G4	II	DRG	Frankfurt	95 647							53		23.11.2023	15	ebay					7900					
+G5	II	DRG	Frankfurt	95 647							53		14.12.2021	27	ebay					900					
+G6	II	DRG	Hannover	122 460						x	53				MBW										
+G7	II	DRG	Hannover	122 460							53		08.08.2011	21	MSL										
+G8	II	DRG	Hannover	122 460							53		27.08.2011	19	MSL										
+G9	II	DRG	Hannover	122 460							53		27.08.2011	19	MSL										
+G10	II	DRG	Hannover	122 460							53		08.11.2018	20	ebay										
+G11	II	DRG	NÃ¼rnberg	131 831							53		09.11.2018	14	1zu160										
+G12	IV	DR		30 50 940 0032 - 4							64		15.08.2023	36	Lokmuseum										
+";Leig
+G13"	II	DRG	Stuttgart	132 781							51	O	24.12.2004	14	SpMax 										
+G14	II	DRG	Dresden	6344							73		24.12.2004	14	SpMax 										
+G15	II	DRG	Dresden	6344							73		03.09.2025	38	ebay										
+G16	II	DRG	Dresden	6344							73		03.09.2025	38	ebay										
+G17	II	DRG	Dresden	11 483						x	80				SMDV										
+G18	II	DRG	Dresden	11 484						x	73				SMDV										
+G19	II	DRG	Dresden	11 483							80		14.12.2002	12	ebay										
+G20	II	DRG	Dresden	11 484							73		14.12.2002	12	ebay										
+";Hilfszugwagen, Bauwagen
+G21"	II	DRG	NÃ¼rnberg	700 210							46			15	Pietsch										
+G22	II	DRG	NÃ¼rnberg	710 251							46			15	Pietsch										
+G23	III	DB											25.11.2021	22	ebay					859902					
+G24	III	DB											25.11.2021	22	ebay					859902					
+G25	III	DB											25.11.2021	22	ebay					859902					
+G26	III	DB											25.11.2021	22	ebay					859902					
+G27	III	DB											25.11.2021	22	ebay					859902					
+G28	II	DRG	Frankfurt	700 004							76		07.12.2006	8	ebay										
+G29	II	DRG	Frankfurt	701 952							69														
+G30	II	DRG	Frankfurt	700 253							68		07.12.2006	8	ebay										
+G31	II	DRG	Karlsruhe	700 500							80		20.03.2008	11	SpMax										
+G32	I	KPEV	Stettin	10824							62		05.01.2022	18	ebay										
+G33	II	DRG	Magdeburg	1700							62		09.04.2009	15	SpMax										
+";Gedeckte Wagen
+G34"	II	DRG	MÃ¼nchen	64 267						x	57		15.06.2005		SpMax 										
+G35	I	KPEV	Frankfurt	12 530							60		31.05.2022	15	ebay					7893					
+G36	I	KPEV	Frankfurt	12 530							60		03.12.2023	9	ebay					7893					
+G37	I	KPEV	Frankfurt	12 530							60		03.05.2024	7	ebay					7893					
+G38	I	KPEV	Frankfurt	12 530							60		24.10.2024	8	ebay					7893					
+G39	I	KPEV	Altona	15 026							60		11.03.2025	7	Kleinanzeigen					7886					
+G40	I	K. Bay. St.B.	P	601 990							60		11.03.2025	7	Kleinanzeigen					7886					
+G41	II	DRG	Hannover	11 057						x	60		28.12.2004	9	MBF Nbg										
+G42	I	KPEV	Berlin	16 142							60		20.04.2023	25	eBay					780901					
+G43	I	KPEV	Berlin	16 127							60		05.04.2025	17	eBay					880903					
+G44	I	KPEV	Berlin	16 127							60		25.08.2025	20	eBay					880903					
+G45	II	DRG	Stettin	33 885							53		14.11.2006	19	eBay										
+G46	II	DRG	Stettin	33 885							53		20.11.2015	13	Modell Süd 										
+G47	II	DRG	Stettin	33 885							53		09.04.2009	10	SpMax										
+G48	II	DRG	Stettin	33 885							53		09.11.2018	11	1zu160 A. Großer										
+G49	II	DRG	Stettin	34 448							55		22.01.2012	13	ebay										
+G50	II	DRG	Stettin	35 448							55		25.01.2012	11	ebay										
+G51	II	DRG	Stettin	35 448							55		09.11.2018	12	1zu160 A. Großer										
+G52	II	DRG	Stettin	35 448							55		25.08.2025	12	ebay										
+G53	I	KPEV	Altona	14 527							68		04.01.2022	18	ebay										
+G54	I	KPEV	Altona	14527							68		30.04.2024	20	ebay										
+G55	I	KPEV	Altona	14527							68		30.04.2024	20	ebay										
+G56	I	KPEV	Altona	14527							68		17.05.2024	14	ebay										
+G57	I	DRG	Altona	14 520							68		26.07.2022	20	dm-toys					781210					
+G58	I	DRG	Altona	14 520							68		03.09.2024	9	ebay										
+G59	II	DRG	Stettin	33856							68				Spitzner										
+G60	II	DRG	Stettin	33856							68		20.11.2015	15	Modell Süd 										
+G61	II	DRG	Stettin	33856							68		02.10.2016	19	M+H Leipzig										
+G62	II	DRG	Stettin	33856							68		30.10.2018	20	ebay										
+G63	II	DRG	Stettin	33856							68		09.11.2018	16	1zu160 A. Großer										
+G64	II	DRG	Stettin	33856							68		03.09.2024	7	ebay										
+G65	II	DRG	Stettin	33856							68		03.09.2024	7	ebay										
+G66	II	DRG	Stettin	33856							68		03.09.2024	7	ebay										
+G67	II	DRG	Stettin	33856							68		03.09.2024	7	ebay										
+G68	II	DRG	Stettin	33856							68		03.09.2024	7	ebay										
+G69	I	Meckl-Schwerin		600 013							68		19.11.2025	12	ebay					881012					
+G70	II	DRG	Dresden	4040							72		28.12.2005	14	MBF Nbg										
+G71	II	DRG	Dresden	4042							72		08.05.2019	26	ebay					15681					
+G72	I	KBayStB	NÃ¼rnberg	47 772							72		25.07.2023	17	ebay										
+G73	I	KBayStB		86 561							57		21.08.2023	16	ebay										
+G74	II	DRG	Kassel	52 219							57		23.11.2023	15	ebay					7900					
+G75	II	DRG	Dresden	7214							75			14	KaDeWe										
+G76	II	DRG	Dresden	7214							75			6	ebay										
+G77	II	DRG	Dresden	7214							75		22.12.2012	6	ebay										
+G78	II	DRG	Dresden	7214							75		22.12.2012	6	ebay										
+G79	II	DRG	Dresden	7214							75		21.01.2012	10	ebay										
+G80	II	DRG	Dresden	7214							75		28.03.2019	11	1zu160										
+G81	I	KPEV	Erfurt	8155							75		12.12.2021	18	ebay										
+G82	II	DRG	Kassel	80 125							59		08.05.2003	6	ebay										
+G83	II	DRG	Kassel	80 125							59		28.12.2004	7	MBF Nbg										
+G84	II	DRG	Kassel	80 325							56		28.12.2004	5	MBF Nbg										
+G85	II	DRG	Dresden	21 005							74		02.01.2009	17	SpMax										
+G86	I	KBayStB		43 596							60		06.07.2023	15	ebay					15005					
+G87	I	KBayStB		43846							60		06.07.2023	15	ebay					15005					
+G88	II	DRG	Kassel	14 206							56		10.11.2019	12	ebay					11631					
+G89	II	DRG	Kassel	45 897							58		21.06.2017	21	elriwa					67432					
+G90	II	DRG	MÃ¼nchen	8 927							58		21.06.2017	21	elriwa					67432					
+G91	I	KPEV	Essen	19 268							60		27.12.2021	25	MSL										
+G92	I	KPEV	Essen	19 268							60		13.11.2024	28	ebay										
+G93	II	DRG	Kassel	24 655							60		12.01.2020	21	ebay										
+G94	II	FS		2301							58		20.01.2018	18	ebay Nann					15122					
+G95	II	SBB		31 117							52		12.01.2020	21	ebay										
+G96	II	SBB									61		18.01.2022	31	dm-toys										
+G97	II	DRG	Oppeln	5698							60		04.03.2022	18	ebay										
+G98	II	DRG	Oppeln	1555							55		04.03.2022	18	ebay										
+G99	II	DRG	Oppeln	17 646							55		04.03.2022	18											
+G100	II	DRG	Leipzig	2204							75	X	05.04.2025	17											
+G101	II	DRG	Bromberg	10 020							112		23.04.2020	14	Fabian Goll 1zu160										
+G102	II	DRG	Bromberg	10 020							112		23.04.2020	14	Fabian Goll 1zu160										
+G103	I	KPEV	CÃ¶ln	600 248							57		19.11.2025	12	ebay					881012					
+G104	II	DRG	MÃ¼nster	579 031							57		02.10.2016	14	M+H Leipzig										
+";Offene Wagen
+G105"	I	KPEV	Kgl. Mil. E.	487							41		19.01.2022	11	ebay					821201					
+G106	I	KPEV	Magdeburg	54 713							41		13.11.2024	11	ebay					7883					
+G107	I	K. Sachs. St. Eb		46 882							41		13.11.2024	11	ebay					7888					
+G108	I	K. Sachs. St. Eb		46 137							41		20.12.2024	9	1zu160 J. Horn					15048					
+G109	I	KPEV	Magdeburg	31 555							41		20.12.2024	9	1zu160 J. Horn					15048					
+G110	I	K. Sachs. St. Eb		46 882							41		11.03.2025	7	Kleinanzeigen					7886					
+G111	I	KPEV	SaarbrÃ¼cken	36 348							42		20.12.2024	9	1zu160 J. Horn					15048					
+G112	I	KPEV	SaarbrÃ¼cken	31 830							46		20.12.2024	9	1zu160 J. Horn					15048					
+G113	I	KPEV	Magdeburg	51 770							42		20.12.2024	9	1zu160 J. Horn					15048					
+G114	I	KPEV	SaarbrÃ¼cken	31 910							42		20.12.2024	9	1zu160 J. Horn					15048					
+G115	I	KPEV	SaarbrÃ¼cken	34 326							42		20.12.2024	9	1zu160 J. Horn					15048					
+G116	I	Oldenburg		6162							42		20.12.2024	9	1zu160 J. Horn					15048					
+G117	I	KPEV	Magdeburg	50 961							42		20.12.2024	9	1zu160 J. Horn					15048					
+G118	I	Meckl-Schwerin		10 281							42		20.12.2024	9	1zu160 J. Horn					15048					
+G119	I	KPEV	Bromberg	86 970							55		31.05.2022	12	ebay					7893					
+G120	I	KPEV	Bromberg	86 970							55		03.12.2023	9	ebay					7893					
+G121	I	KPEV	Bromberg	86 970							55		03.05.2024	7	ebay					7893					
+G122	I	KPEV	Bromberg	86 970							55		21.10.2024	8	ebay					7893					
+G123	I	KPEV	Bromberg	86 970							55		10.02.2020	9	ebay					7898					
+G124	I	KPEV	Bromberg	86 970							55		10.02.2020	9	ebay					7898					
+G125	I	KPEV	Magdeburg	66 887							55		22.04.2022	7	ebay					7891					
+G126	I	Bad.St.B.	Baden	50 381							57		11.03.2025	7	Kleinanzeigen					7886					
+G127	I	KPEV	Kattowitz	32 292							61		05.01.2022	18	ebay										
+G128	I	KPEV	Essen	334 045							61		17.05.2024	8	ebay										
+G129	I	KPEV	Essen	349 781							57		22.04.2022	7	ebay					7891					
+G130	I	KBayStB		57 601							58		06.07.2023	15	ebay					15005					
+G131	II	DRG	NÃ¼rnberg	23 219							42		15.02.2016	12	ebay										
+G132	II	DRG	NÃ¼rnberg	23 219							42		11.01.2021	7	ebay mmxtra										
+G133	II	DRG	NÃ¼rnberg	23 219							42		21.03.2021	13	ebay										
+G134	II	DRG	Schwerin	26 538							41			6	MBF Markel										
+G135	II	DRG	Schwerin	26 538							41			7	MBF Markel										
+G136	II	DRG	Schwerin	26 538							41		11.01.2021	7	ebay										
+G137	II	DRG	Schwerin	25 231							45		28.12.2004	8	MBF Nbg										
+G138	II	DRG	Schwerin	25 231							45		11.01.2021	8	ebay										
+G139	II	DRG	Schwerin	26 538							41		11.09.2025	7	ebay										
+G140	II	DRG	Schwerin	26 538							41		11.09.2025	7	ebay										
+G141	II	DRG	Schwerin	26 538							41		11.09.2025	7	ebay										
+G142	II	DRG	Schwerin	26 538							41		11.09.2025	7	ebay										
+G143	II	DRG	Schwerin	26 538							41		11.09.2025	7	ebay										
+G144	II	DRG	Schwerin	26 538							41		11.09.2025	7	ebay										
+G145	II	DRG	Schwerin	26 538							41		11.09.2025	7	ebay										
+G146	II	DRG	Schwerin	26 538							41		11.09.2025	7	ebay										
+G147	II	DRG	Schwerin	26 538							41		11.09.2025	7	ebay										
+G148	II	DRG	Schwerin	26 538							41		11.09.2025	7	ebay										
+G149	II	DRG	Schwerin	26 538							41		11.09.2025	7	ebay										
+G150	II	DRG	Schwerin	26 538							41		11.09.2025	7	ebay										
+G151	II	DRG	Schwerin	26 538							41		11.09.2025	7	ebay										
+G152	II	DRG	Schwerin	26 538							41		11.09.2025	7	ebay										
+G153	II	DRG	Schwerin	26 538							41		11.09.2025	7	ebay										
+G154	II	DRG	Schwerin	26 538							41		11.09.2025	7	ebay										
+G155	II	DRG	Schwerin	26 538							41		11.09.2025	7	ebay										
+G156	II	DRG	Schwerin	26 538							41		11.09.2025	7	ebay										
+G157	II	DRG	Schwerin	26 538							41		11.09.2025	7	ebay										
+G158	II	DRG	Schwerin	26 538							41		11.09.2025	7	ebay										
+G159	II	DRG	Schwerin	26 538							41		11.09.2025	7	ebay										
+G160	II	DRG	Schwerin	26 538							41		11.09.2025	7	ebay										
+G161	II	DRG	Schwerin	25 231							45		11.09.2025	7	ebay										
+G162	II	DRG	Schwerin	25 231							45		11.09.2025	7	ebay										
+G163	II	DRG	Schwerin	25 231							45		11.09.2025	7	ebay										
+G164	II	DRG	Schwerin	25 231							45		11.09.2025	7	ebay										
+G165	II	DRG	Schwerin	25 231							45		11.09.2025	7	ebay										
+G166	II	DRG	Schwerin	25 231							45		11.09.2025	7	ebay										
+G167	II	DRG	Schwerin	25 231							45		11.09.2025	7	ebay										
+G168	II	DRG	Schwerin	25 231							45		11.09.2025	7	ebay										
+G169	II	DRG	Frankfiurt	60 113							55		23.11.2023	15	ebay										
+G170	II	DRG	Halle	41 177							55		22.12.2004	5	MBF Markel										
+G171	II	DRG	Halle	41 177							55		22.12.2004	5	MBF Markel										
+G172	II	DRG	Halle	41 177							55		18.10.2016	9	ebay										
+G173	II	DRG	Breslau	62 813							57		23.11.2023	15	ebay										
+G174	II	DRG	Essen	26 055							57		15.06.1905		SpMax										
+G175	II	DRG	Essen	26 055							57				MBF Markel										
+G176	II	DRG	Essen	26 055							57		30.06.2007	11	MBF Markel										
+G177	II	DRG	Essen	26 055							57		21.01.2012	8	ebay										
+G178	II	DRG	Essen	26 055							57		28.07.2013	10	ebay										
+G179	II	DRG	Essen	26 055							57		28.07.2013	10	ebay										
+G180	II	DRG	Essen	26 055							57		18.10.2016	11	ebay										
+G181	II	DRG	Essen	26 055							57		18.10.2016	9	ebay										
+G182	II	DRG	Essen	26 055							57		18.10.2016	9	ebay										
+G183	II	DRG	Essen	26 055							57		20.01.2018	11	ebay										
+G184	II	DRG	Essen	26 055							57		09.11.2018	10	1zu160										
+G185	II	DRG	Breslau	56 147							61		18.10.2016	9	ebay										
+G186	II	DRG	Breslau	56 147							61														
+G187	II	DRG	Breslau	56 147							61		30.06.2007	12	MBF Markel										
+G188	II	DRG	Breslau	56 147							61		10.02.2020	10	ebay										
+G189	II	DRG	WÃ¼rttemberg	42 103							59			5	MBF Pest										
+G190	II	DRG	WÃ¼rzburg	21 557							54		28.12.2004	7	MBF Nbg										
+";Klappdeckelwagen
+G191"	II	KPEV	Berlin	17 422							45		18.10.2016	9	ebay										
+G192	I	KPEV	Berlin	17 422							45		26.12.2021	13	ebay										
+G193	I	K. Bay. St.B.	Ludwigshafen	49 153							45		11.03.2025	7	EKA										
+G194	II	DRG	Wuppertal	80 913							55				KaDeWe										
+G195	II	Kn	Elberfeld	10 348							45		23.11.2023	15	ebay										
+G196	II	DRG	Wuppertal	7576							41		10.02.2020	7	ebay										
+G197	I	KPEV	Stettin	17 123							41		13.11.2024	12	ebay										
+G198	I	K. SÃ¤chs. St. Eb.		24 924							41		13.11.2024	17	ebay										
+G199	II	DRG	Wuppertal	8944							45		10.02.2020	7	ebay										
+";Viehwagen
+G200"	II	DRG	WÃ¼rzburg	5658						x	58				Pietsch										
+G201	I	KBayStB		65514							60		06.07.2024	15	ebay										
+G202	II	DRG	Frankfurt	6151							58		25.01.2008	9	ebay										
+G203	II	DRG	Frankfurt	6151							58		25.01.2008	9	ebay										
+G204	II	DRG	WÃ¼rzburg	18 778							53		14.03.2009	15	SpMax										
+G205	II	DRG	WÃ¼rzburg	18 778							53		28.05.2025	12	ebay										
+G206	I	KPEV	KÃ¶nigsberg	30 164							57		20.04.2023	25	ebay										
+G207	I	KPEV	Magdeburg	34 608							57		05.04.2025	17	ebay										
+G208	I	KPEV	Magdeburg	34 608							57		25.08.2025	18	ebay										
+G209	II	DRG	WÃ¼rzburg	19 528							57		25.01.2012	11	ebay										
+G210	II	DRG	WÃ¼rzburg	19 528							57		09.04.2009	14	SpMax										
+G211	II	DRG	WÃ¼rzburg	19 528							57		21.04.2007	17	Saxonia Ch.										
+G212	I	DRG	Stettin	18 831							53		26.07.2022	15	dm-toys										
+G213	I	DRG	Hanover	18 637							53		05.04.2025	17	ebay										
+G214	I	DRG	Hanover	18 637							53		28.08.2025	18	ebay										
+G215	II	DRG	Altona	508							53		20.03.2008	11	SpMax										
+G216	II	DRG	Altona	508							53		09.11.2018	12	1zu160										
+G217	I	KPEV	Hannover	18 648							53		20.04.2023	25	ebay										
+G218	II	DRG	Altona	212							53		20.11.2015	15	Modell Süd										
+G219	II	DRG	Altona	212							55		13.04.2006	23	Pietsch										
+G220	II	DRG	Altona	212							55		11.09.2018	13	1zu160										
+G221	II	DRG	Altona	18 196							57		18.10.2016	9	ebay										
+G222	II	DRG	Altona	6205							57		28.12.2004	7	MBF Nbg										
+G223	I	KPEV	Stettin	16 944							57		13.11.2024	12	ebay										
+G224	I	KPEV	Stettin	16 835							59		13.11.2024	12	ebay										
+";Selbstentladewagen
+G225"	II	DRG	Oldenburg	191							89		20.03.2021	28	ebay										
+G226	II	DRG	Oldenburg	141							89		20.03.2021	28	ebay										
+G227	II	DRG	Oldenburg	692							63														
+G228	II	DRG	Oldenburg	698							63														
+G229	II	DRG	Oldenburg	705							63														
+G230	II	DRG	Oldenburg	692							63			15	eBay										
+G231	II	DRG	Oldenburg	698							63			15	eBay										
+G232	II	DRG	Oldenburg	734							63		20.03.2012	16	eBay										
+G233	II	DRG	Oldenburg	738							63		20.03.2012	16	eBay										
+G234	II	DRG	Oldenburg	832							63		20.03.2012	16	ebay										
+G235	II	DRG	Oldenburg	734							63		20.03.2012	17	Amazon										
+G236	II	DRG	Oldenburg	738							63		20.03.2012	17	Amazon										
+G237	II	DRG	Oldenburg	832							63		20.03.2012	17	Amazon										
+G238	II	DRG	Oldenburg	734							63		07.10.2012	16	ebay										
+G239	II	DRG	Oldenburg	738							63		07.10.2012	16	ebay										
+G240	II	DRG	Oldenburg	832							63		07.10.2012	16	ebay										
+G241	II	DRG	Oldenburg	734							63		09.10.2012	16	ebay										
+G242	II	DRG	Oldenburg	738							63		09.10.2012	16	ebay										
+G243	II	DRG	Oldenburg	832							63		09.10.2012	16	ebay										
+G244	II	DRG	Oldenburg	734							63														
+G245	II	DRG	Oldenburg	738							63														
+G246	II	DRG	Oldenburg	832							63														
+G247	II	DRG	Regensburg	701 927							43		13.07.2022	6	ebay										
+G248	II	DRG	Regensburg	701 927							43		13.07.2022	6	ebay										
+G249	II	DRG	Regensburg	701 927							43		13.07.2022	6	ebay										
+G250	II	DRG	Regensburg	701 927							43		13.07.2022	6	ebay										
+G251	II	DRG	Regensburg	701 927							43		13.07.2022	6	ebay										
+G252	II	DRG	Regensburg	701 927							43		13.07.2022	6	ebay										
+G253	II	DRG	Regensburg	701 927							43		13.07.2022	6	ebay										
+G254	II	DRG	Regensburg	701 927							43														
+G255	II	DRG	Oldenburg	4046							79		18.06.2012	11	MSL										
+G256	II	DRG	Oldenburg	4048							79		20.01.2018	19	ebay										
+G257	II	DRG	Oldenburg	4050							79		20.01.2018	19	ebay										
+";Niederbord-, Flach-, Rungenwagen
+G258"	II	DRG	KÃ¶ln	8366							106		16.07.2013	21	ebay W. Leitz										
+G259	I	KPEV	Essen	17 309							90		20.04.2023	25	ebay										
+G260	I	KPEV	CÃ¶ln	21 416							90	O	29.11.2015	16	1zu160					823603					
+G261	I	KPEV	Essen	17 307							90	O	29.11.2015	16	1zu160										
+G262	I	KPEV	Hannover	37 095							83		31.05.2022	18	ebay										
+G263	I	KPEV	Hannover	37 095							83		03.12.2023	9	ebay										
+G264	I	KPEV	Hannover	37 095							83		03.05.2024	7	ebay										
+G265	I	KPEV	Hannover	37 095							83		24.10.2024	8	ebay										
+G266	II	DRG	KÃ¶ln	916							83		09.11.2018	15	1zu160										
+G267	II	DRG	Erfurt							x	56			5	MBF Markel										
+G268	II	DRG	Erfurt	44 738							63		10.02.2020	4	ebay u.w.e.										
+G269	II	DRG	Erfurt	6162							58				SMDV										
+G270	II	SBB		566 001							58		20.01.2018	18	ebay Nann										
+G271	I	KBayStB		9545							58		06.07.2023	15	ebay										
+G272	II	DRG	Erfurt	64 354							58		10.11.2017	20	ebay										
+G273	II	DRG	Regensburg	19 864/20 275							130		17.03.2019	16	1zu160										
+G274	II	DRG	Regensburg	19 864/20 275							130		17.03.2019	16	1zu160										
+G275	I	KPEV	Magdeburg/ Stettin	101 105/45 051			Fl	8814	-																
+G276	II	DRG	KÃ¶ln	14 402							83		29.05.2017	28	1zu160 S. Ara										
+G277	II	DRG		14 519							85		13.01.2019	19	1zu160 B. Heidorn										
+G278	II	DRG		14 489							85		13.01.2019	19	1zu160 B. Heidorn										
+G279	II	DRG		14 552							85		13.01.2019	19	1zu160 B. Heidorn										
+";Kesselwagen
+G280"	I	K.Bay.St.B											26.04.2025	32	bw bahn										
+G281	I	K.Bay.St.B											26.04.2025	32	bw bahn										
+G282	I	DRG	Halle	502 578							55		26.07.2022	15	dm-toys										
+G283	II	DRG	Hannover	564 691							55				?										
+G284	II	DRG	Halle	559 897							55		14.12.2001	10	Börse Ullst										
+G285	I	DRG	Erfurt	502 231							55		29.12.2011	20	MBF Markel										
+G286	I	KPEV	CÃ¶ln	502 196							55		05.01.2022	18	ebay										
+G287	I	KPEV	LÃ¼beck	502 284							55		12.12.2022	18	ebay										
+G288	I	KPEV	CÃ¶ln	503 225 [P]							55		22.04.2022	7	ebay										
+G289	I	KPEV	Elberfeld	502 301							55		19.11.2025	12	ebay					881012					
+G290	II	DRG	Essen	501 463							57		23.11.2023	15	ebay										
+G291	II	DRG	Stettin	581 092							55		22.12.2012	6	ebay										
+G292	II	DRG	Essen	502 856							55		22.12.2012	6	ebay										
+G293	II	DRG	Hannover	900 399						x	56		22.12.2012	6	ebay										
+G294	II	DRG	Stettin	581 829							55		15.11.2020	13	ebay										
+G295	II	DRG	Stettin	581 829							55		15.11.2020	13	ebay										
+G296	II	DRG	Essen	501 482							65,5		18.11.2017	17	ebay										
+G297	II	DRG	Essen	501 483							65,5		18.11.2017	17	ebay										
+G298	II	DRG	Essen	501 484							65,5		18.11.2017	17	ebay										
+G299	II	DRG	KÃ¶ln	540 562							61		15.12.2017	21	Modellbahn-Licht										
+G300	II	DRG	MÃ¼nchen	518 322							61		10.01.2018	25	MSL										
+G301	II	DRG	Dresden	550 993							61		15.12.2017	23	Modellbahn-Licht										
+G302	II	DRG	Dresden	550 993							61		15.12.2017	23	Modellbahn-Licht										
+G303	II	SBB		534 215							55		20.01.2018	18	ebay Nann										
+G304	II	DRG	MÃ¼nchen	518 131							55		10.11.2019	17	ebay										
+";KÃ¼hlwagen
+G305"	II	DRG	Dresden	555 137							80		21.06.2005		SMDV										
+G306	II	DRG	MÃ¼nchen	513 716							60				SMDV										
+G307	II	DRG	Berlin	2870							60		30.09.2017	12	1zu160 Günther										
+G308	II	DRG	Berlin	600 215							53		28.12.2004	14	MBF Nbg										
+G309	I	KPEV	CÃ¶ln	600 248							57		19.11.2025	12	ebay					881012					
+G310	II	DRG	MÃ¼nster	579 031							57		02.10.2016	14	M+H Leipzig										
+G311	II	DRG	Berlin	398							68		17.12.2005	21	SpMax										
+G312	I	DRG	MÃ¼nster	600 017							68		28.08.2025	18	ebay										
+G313	I	DRG	MÃ¼nster	600 017							68		05.04.2019	17	ebay										
+G314	I	KPEV	Essen	600 169							61		31.05.2022	12	ebay										
+G315	I	KPEV	Essen	600 169							61		03.12.2023	9	ebay										
+G316	I	KPEV	Essen	600 169							61		03.05.2024	8	ebay										
+G317	I	KPEV	Essen	600 169							61		24.10.2024	8	ebay										
+G318	II	DRG	Berlin	523							57		21.04.2007	16	Saxonia Ch.										
+G319	II	DRG	Berlin	523							57		10.12.2007	9	ebay										
+G320	II	DRG	Oldenburg	589 041							55		12.01.2014	10	ebay										
+G321	II	DRG	Frankfurt	556 080							55		12.01.2014	10	ebay										
+G322	II	DRG	Berlin	1678							62		22.12.2012	6	ebay										
+G323	II	DRG	Berlin	1678							62		03.06.2012	11	ebay										
+G324	I	KPEV	Berlin	600 532							55		18.10.2016	9	ebay										
+G325	I	KPEV	Berlin	600 532							55		26.12.2021	13	ebay										
+G326	II	SBB		533 216							56		20.01.2018	22	ebay Nann										
+G327	II	DRG	Berlin	530 255							56		ca-Preis	27	Modellbahnshop Lippe										
+G328	II	SBB		516 309							55		20.01.2018	18	ebay Nann										
+G329	II	DRG	SaarbrÃ¼cken	11 007							73		11.09.2018	18	ebay dm-toys										
+G330	II	DRG	SaarbrÃ¼cken	11 008							73		11.09.2018	16	ebay dm-toys										
+G331	I	DRG	Altona	600 707							56		10.02.2020	20	ebay										
+";Sonstige Wagen
+G332"	I	KPEV	Essen	505 165							55		19.11.2025	12	ebay					881012					
+G333	II	DRG		537 082							55		02.05.2008	15	SpMax										
+G334	II	DRG	MÃ¼nchen	520 769							51		13.01.2018	25	MSL										
+G335	II	SBB		520 753							51		13.01.2018	25	MSL										
+G336	II	DRG	Mainz	502 324							50		06.11.2018	30	1zu160										
+G337	I	KPEV	KÃ¶ln	500 043							55		31.05.2022	0	ebay										
+G338	I	KPEV	KÃ¶ln	500 043							55		03.12.2023	9	ebay										
+G339	I	KPEV	KÃ¶ln	500 043							55		03.05.2024	7	ebay										
+G340	I	KPEV	KÃ¶ln	500 043							55		03.05.2024	8	ebay										
+G341	I	KPEV	Halle	560 569							55		24.10.2024	20	dm-toys										
+G342	II	DRG	MÃ¼nchen	518 324							55														
+G343	II	DRG	MÃ¼nchen	518 324							55		03.12.2022	12	ebay										
+G344	II	DRG									54		05.07.2021	24	ebay										
+G345	II	DRG	NÃ¼rnberg	26 611							47,5		27.04.2019	27	Kramm										
+G346	II	DRG	NÃ¼rnberg	26 669							47,5		27.04.2019	27	Kramm										
+";Ep III/IV DR und DB
+G347"	IV	DR		40 50 943 9788-2							66		16.09.2025	18	1zu160 Sven Kreutzer										
+G348	IV	DR		40 50 944 4227-5							86		16.09.2025	18	1zu160 Sven Kreutzer										
+G349	IV	DB		21 80 411 7 882-1							90		21.09.2015	10	1zu160										
+G350	IV	DB		52 80 514 5 724-3							61		21.09.2015	10	1zu160 F. Möller										
+G351	IV	DB		52 80 514 5 613-1							61		21.09.2015	10	1zu160 F. Möller										
+G352	IV	DB		42 80 514 1 113.3							61		29.09.2019	12	Spielemax										
+G353	IV	DR		21 50 510 3494-4							63		29.09.2019	13	Spielemax										
+G354	IV	DR		21 50 510 3492-8							63		29.09.2019	13	Spielemax										
+G355	IV	DB		01 80 505 6 612--6							64		29.09.2019	15	Spielemax										
+G356	IV	DR									64		19.12.2020	12	ebay										
+G357	IV	DB		47 35 480 5 517-6							63		01.10.2019	7	1zu160 Flottwell										
+G358	IV	DB		01 80 508 5 385-4							61		10.02.2020	4	ebay u.w.e.										
+G359	IV	DB		01 80 508 5 385-4							61		10.02.2020	4	ebay u.w.e.										
+G360	III	DB		715 248							57		10.02.2020	4	ebay										
+G361	III	DB		884 262							63		10.02.2020	4	ebay										
+G362	III	DB		884 262							63		10.02.2020	4	ebay										
+G363	III	DB		884 262							63		10.02.2020	4	ebay										
+G364	III	DB		885 008							63		10.02.2020	4	ebay										
+G365	IV	DB		01 80 508 1 234-8							61		10.02.2020	4	ebay u.w.e.										
+G366	?	?	?	?						?	?		22.04.2022	7	ebay										
+G367	IV	DB		01 80 5085 383-9						x	56		24.01.0224	7	ebay										
+G368	IV	DR		31 50 594 9 373-6							86		19.11.2012	13	eBay										
+G369	IV	DR		31 50 594 9 324-9							86		19.11.2012	13	eBay										
+G370	IV	DR		11 80 534 1 713-5							86		27.10.2015	8	1zu160 R. Eger										
+G371	IV	DR		11 80 534 2 986-6							86		27.10.2015	8	1zu160 R. Eger										
+G372	IV	DR		31 50 594 9 189-6							86		29.09.2019	15	Speielmax										
+G373	IV	DR		31 50 594 9 225-6							86		29.09.2019	15	Speielmax										
+G374	IV	DR		31 50 594 9 106-0							86		29.09.2019	15	Speielmax										
+G375	IV	DR		31 50 592 3460-1							86		10.03.2016	12	eBay										
+G376	IV	DR		31 50 592 3570-7							86		10.03.2016	12	eBay										
+G377	IV	DR		31 50 592 3610-1							86		10.03.2016	12	eBay										
+G378	IV	DR									75		19.12.2020	12	ebay										
+G379	IV	DB		20 80 327 3 378-4							63		10.02.2020	4	ebay u.w.e.										
+G380	III	DB		#							76		10.02.2020	4	ebay										
+G381	III	DB		350 002							63		10.02.2020	5	ebay u.w.e.										
+G382	III	DB		350 009							63		10.02.2020	5	ebay u.w.e.										
+G383	IV	DR		21 50 6771 850-6							52		17.12.2017	20	ebay										
+G384	IV	DR		21 50 6771 852-2							52		17.12.2017	20	ebay										
+G385	IV	DR		21 50 6771 854-8							52		17.12.2017	20	ebay										
+G386	IV	DR		31 50 677 1 828-0							84		29.12.2020	22	ebay										
+G387	IV	DR		31 50 677 1 979-1							84		29.12.2020	22	ebay										
+G388	IV	DR		31 50 677 2 201-9							84		29.12.2020	22	ebay										
+G389	IV	DR		31 50 583 5020-0							119		17.12.2017	20	ebay										
+G390	IV	DR		31 50 583 5028-3							119		17.12.2017	20	ebay										
+G391	IV	DR		31 50 583 5033-3							119		17.12.2017	20	ebay										
+G392	IV	DR		31 50 583 5020-0							119		30.07.2019	15	1zu160 F. Gomoll										
+G393	IV	DR		31 50 583 5028-3							119		30.07.2019	15	1zu160 F. Gomoll										
+G394	IV	DR		31 50 583 5033-3							119		30.07.2019	15	1zu160 F. Gomoll										
+G395	IV	DR									119		22.01.2021	15	1zu160 F. Gomoll										
+G396	IV	DB		21 50 575 0 362-8							58		09.12.2012	7	eBay										
+G397	IV	DB		21 50 575 0 362-8							58		09.12.2012	7	eBay										
+G398	IV	DR		21 80 540 5 386-1							58		15.10.2015	13	MBF Markel										
+G399	IV	DP		50 50 00-29 417-1									04.01.2021	30	1zu160 Hans-Joachim Pescht										
+G400	IV	DR		21 50 120 5 405-8							66		17.01.2013		eBay										
+G401	IV	DR		20 81 111 0 042-5							88		21.09.2015	12	1zu160										
+G402	IV	DR									88		19.12.2020	12	ebay										
+G403	IV	DR		20 81 111 0 042-5							88		21.09.2015	12	1zu160										
+G404	IV	DB		01 80 151 2 166-8							87		01.10.2019	7	1zu160 Flottwell										
+G405	IV	DR		21 50 150 0 118-7							88		13.02.2023	27	Härtle										
+G406	IV	DR		21 50 150 0 076-7							88		13.02.2023	27	Härtle										
+G407	IV	DR		21 50 120 0066-1							66		15.03.2023	30	Härtle										
+G408	IV	DR		21 50 120 0077-9							66		15.03.2023	30	Härtle										
+G409	IV	DR		21 50 174 2517-7							88		21.02.2023	27	bw bahn										
+G410	IV	DB		211 4 189-2							78		21.01.2021	24	1zu160 Pluschke										
+G411	III	DB		300 217							56		18.10.2016	9	ebay										
+G412	III	DB		56 93 31							74		01.10.5019	7	1zu160										
+G413	IV	DR		17 50 807 8032-9							73		29.09.2017	10	ebay										
+G414	IV	DR		17 50 807 8055-0							73		29.09.2017	10	ebay										
+G415	IV	DR		17 50 807 8090-7							73		29.09.2017	10	ebay										
+G416	IV	DR		17 50 807 8032-9							73		04.10.2017	17	ebay										
+G417	IV	DR		17 50 807 8055-0							73		04.10.2017	17	ebay										
+G418	IV	DR		17 50 807 8090-7							73		04.10.2017	17	ebay										
+G419	IV	FS		11 83 083 0 682-8							74		10.02.2020	4	ebay										
+G420	IV	DB		43 80 082 4 112-9							74		10.02.2020	4	ebay										
+G421	III	DB		308 351							74		10.02.2020	4	ebay										
+G422	IV	DR											22.01.2026	15	ebay					6567					
+G423	IV	DR											22.01.2026	15	ebay					6567					
+G424	IV	DR									55		19.12.2020	12	ebay										
+G425	IV	DB		23 80 765 0 887-4							55		21.09.2015	10	1zu160										
+G426	IV	DB		23 80 735 6 013-4							55		21.09.2015	10	1zu160										
+G427	III	DB		586 962										13	ebay										
+G428	IV	DR		21 50 730 0 826-4							55		04.01.2021	14	ebay										
+G429	IV	DR		21 50 730 0 977-5							55		04.01.2021	14	ebay										
+G430	IV	DR		35 50 7858 514-8							86		17.12.2017	17	ebay										
+G431	IV	DR		35 50 7858 520-3							86		17.12.2017	17	ebay										
+G432	IV	DR		35 50 7858 543-5							86		17.12.2017	17	ebay										
+G433	III	DB		542 571							78		01.10.2019	7	1zu160 Flottwell										
+G434	IV	DB		21 80 005 1 291-1							78		26.01.2021	0	Alba										
+G435	III	DR		51-98-36									05.07.2021	20	ebay										
+G436	IV	DB		21 80 572 9 029-6							78		02.12.2022	19	ebay										
+G437	IV	DB											11.11.2022	20	Stellwerk S										
+G438	IV	DB											01.12.2022	20	dm-toys										
+G439	IV	DB											01.12.2022	15	dm-toys										
+G440	IV	DB											18.01.2023	23	dm-toys										
+G441	IV	DB											18.01.2023	23	dm-toys										
+G442	IV	DB											18.01.2023	23	dm-toys										
+G443	IV	DR											18.01.2023	23	dm-toys										
+G444	IV	DR											18.01.2023	23	dm-toys										
+G445	IV	DR											18.01.2023	23	dm-toys										
+G446	IV	DR		51 50 154 0257-5									09.12.2023	15	Ars Tecnica										
+G447	IV	DB											09.12.2023	15	Ars Tecnica										
+G448	IV	DB											09.12.2023	15	Ars Tecnica										
+G449	IV	DB		01 80 120 4 302-2							66		24.01.0224	7	ebay										
+G450	IV	DR		21 50 120 5405-8							66		24.01.0224	7	ebay										
+G451	IV	DR		21 50 120 5405-8							66		24.01.0224	7	ebay										

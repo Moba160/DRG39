@@ -94,6 +94,11 @@
             color: #1a56db;
         }
 
+        .neu-sym-filter-btn.active {
+            background: #c0392b !important;
+            color: #fff !important;
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.2) !important;
+        }
         .tab-pin.pinned {
             opacity: 1;
             color: #c0392b;
@@ -353,24 +358,44 @@
             height: 100%;
         }
 
-        /* Gattung filter buttons */
+        /* ── Rollmaterial-Buttons: Modern Light Mode ── */
+                /* ■ Rollmaterial-Buttons: Modern Flat Design ■ */
         .gat-btn {
             font-size: 11px;
-            padding: 1px 5px;
-            border-radius: 3px;
-            border: 1px solid #aaa;
+            font-weight: 600;
+            padding: 3px 8px;
+            border-radius: 2px;
+            border: none !important;
             cursor: pointer;
-            background: #eee;
-            font-weight: bold;
+            background: #f1f3f5;
+            color: #495057;
+            transition: all 0.2s ease;
+            line-height: 1.6;
+            letter-spacing: 0.03em;
         }
 
         .gat-btn:hover {
-            filter: brightness(0.9);
+            background: #e2e6ea;
+            color: #212529;
         }
 
         .gat-btn.active {
-            outline: 2px solid #333;
+            background: #3498db;
+            color: #fff;
+            box-shadow: none !important;
+            border: none !important;
         }
+
+        /* Epoche-Buttons: Moderne Akzentfarben */
+        .neu-ep-btn.active {
+            background: #218c74;
+            color: #fff;
+        }
+
+        /* Typ-Buttons L/P/G */
+        .neu-type-btn[data-type="l"].active { background: #2c3e50; color: #fff; }
+        .neu-type-btn[data-type="p"].active { background: #27ae60; color: #fff; }
+        .neu-type-btn[data-type="g"].active { background: #d35400; color: #fff; }
 
         .gat-fd {
             color: #800080;
@@ -1329,7 +1354,7 @@
         }
 
         .inv-table th {
-            background: #f0f0f0;
+            background: #dce4f0;
             position: sticky;
             top: 0;
             z-index: 5;
@@ -1337,11 +1362,11 @@
         }
 
         .inv-table tbody tr:nth-child(even) {
-            background: #f9f9f9;
+            background: #f4f7fc;
         }
 
         .inv-table tbody tr:hover {
-            background: #e8f0fe !important;
+            background: #d4e4fa !important;
         }
 
         .inv-img-cell img {
@@ -1363,7 +1388,32 @@
         #inv-neu-table .inv-img-cell img {
             height: 45px;
             width: auto;
-            max-width: none;
+            max-width: 808px;
+            display: inline-block;
+        }
+
+        /* Rollmaterial Filter-Inputs */
+        #inv-neu-filter-row input[type="text"],
+        #inv-neu-global-toolbar input[type="text"] {
+            border: 1px solid #b0bdd8;
+            border-radius: 4px;
+            background: #fff;
+            color: #333;
+            padding: 2px 5px;
+            transition: border-color 0.15s, box-shadow 0.15s;
+            outline: none;
+        }
+
+        #inv-neu-filter-row input[type="text"]:focus,
+        #inv-neu-global-toolbar input[type="text"]:focus {
+            border-color: #4a7fcb;
+            box-shadow: 0 0 0 2px rgba(74,127,203,0.2);
+        }
+
+        /* Gruppen-Header Text */
+        #inv-neu-table tr[id^="neu-group-header-"] td {
+            font-size: 12px;
+            letter-spacing: 0.03em;
         }
 
         .missing-img-label {
@@ -1966,87 +2016,83 @@
                         style="flex:1; overflow-y:auto; overflow-x:auto; display:none; align-items:flex-start;">
                         <table class="inv-table" id="inv-neu-table" style="table-layout:auto; width:auto;">
                             <thead>
-                                <tr id="inv-neu-filter-row"
-                                    style="background:#e8e8e8; position: sticky; top: 0; z-index: 11;">
-                                    <th style="padding:4px;">
-                                        <input type="text" id="inv-neu-filter-id"
-                                            style="width:55px; font-size:11px; padding:2px; box-sizing:border-box;"
-                                            oninput="invNeuRender()" placeholder="ID...">
-                                    </th>
-                                    <th style="padding:4px;"><input type="text" id="inv-neu-filter-epoche"
-                                            style="width:40px; font-size:11px; padding:2px; box-sizing:border-box;"
-                                            oninput="invNeuRender()" placeholder="Ep..."></th>
-                                    <th style="padding:4px;"><input type="text" id="inv-neu-filter-bv"
-                                            style="width:50px; font-size:11px; padding:2px; box-sizing:border-box;"
-                                            oninput="invNeuRender()" placeholder="BV..."></th>
-                                    <th style="padding:4px;"><input type="text" id="inv-neu-filter-ord"
-                                            style="width:80px; font-size:11px; padding:2px; box-sizing:border-box;"
-                                            oninput="invNeuRender()" placeholder="Ord.Nr...."></th>
-                                    <th style="padding:2px; vertical-align: middle;">
-                                        <div
-                                            style="display:flex; justify-content:space-between; align-items:center; width:100%;">
-                                            <div style="display:flex; gap:6px;">
-                                                <div style="display:flex; gap:2px;">
-                                                    <button class="gat-btn neu-ep-btn" data-ep="I"
-                                                        onclick="toggleNeuEp(this)">I</button>
-                                                    <button class="gat-btn neu-ep-btn active" data-ep="II"
-                                                        onclick="toggleNeuEp(this)">II</button>
-                                                    <button class="gat-btn neu-ep-btn" data-ep="III"
-                                                        onclick="toggleNeuEp(this)">III</button>
-                                                    <button class="gat-btn neu-ep-btn" data-ep="IV"
-                                                        onclick="toggleNeuEp(this)">IV</button>
-                                                </div>
-                                                <div style="display:flex; gap:2px;">
-                                                    <button class="gat-btn active neu-type-btn" data-type="l"
-                                                        onclick="toggleNeuType(this)">L</button>
-                                                    <button class="gat-btn active neu-type-btn" data-type="p"
-                                                        onclick="toggleNeuType(this)">P</button>
-                                                    <button class="gat-btn active neu-type-btn" data-type="g"
-                                                        onclick="toggleNeuType(this)">G</button>
-                                                </div>
-                                            </div>
-                                            <div style="display:flex; align-items:center; gap:4px;">
-                                                <span id="inv-neu-count"
-                                                    style="font-size:11px; color:#555; white-space:nowrap;"></span>
-                                                <button onclick="invNeuReset()"
-                                                    style="cursor:pointer; padding:0 4px; font-size:13px;"
-                                                    title="Filter zur&uuml;cksetzen">&#10006;</button>
-                                            </div>
-                                        </div>
-                                    </th>
-                                    <th style="padding:4px;"><input type="text" id="inv-neu-filter-gattung"
-                                            style="width:80px; font-size:11px; padding:2px; box-sizing:border-box;"
-                                            oninput="invNeuRender()" placeholder="Gattung..."></th>
-                                    <th style="padding:4px;"><input type="text" id="inv-neu-filter-dir"
-                                            style="width:80px; font-size:11px; padding:2px; box-sizing:border-box;"
-                                            oninput="invNeuRender()" placeholder="Direktion..."></th>
-                                    <th style="padding:4px;"><input type="text" id="inv-neu-filter-bw"
-                                            style="width:80px; font-size:11px; padding:2px; box-sizing:border-box;"
-                                            oninput="invNeuRender()" placeholder="BW..."></th>
-                                    <th style="padding:4px;">
-                                        <div style="display:flex; align-items:center; gap:4px;">
-                                            <input type="text" id="inv-neu-filter-hst"
-                                                style="width:40px; font-size:11px; padding:2px; box-sizing:border-box;"
-                                                oninput="invNeuRender()" placeholder="Hst...">
-                                            <input type="text" id="inv-neu-filter-art"
-                                                style="width:70px; font-size:11px; padding:2px; box-sizing:border-box;"
-                                                oninput="invNeuRender()" placeholder="Art.-Nr....">
-                                        </div>
-                                    </th>
-                                    <th style="padding:4px;"></th>
-                                </tr>
-                                <tr id="inv-neu-header-row"
-                                    style="background:#e8e8e8; position: sticky; top: 28px; z-index: 10;">
+                                <!-- Globale Toolbar -->
+                                <tr id="inv-neu-filter-row" style="background:#edf1f7; border-bottom: 1px solid #c5cfe0; position: sticky; top: -1px; z-index: 11;">
+
+                                      <th style="padding:4px; display:flex; align-items:center;">
+                                          <input type="text" id="inv-neu-filter-id" style="width:55px; font-size:11px; padding:2px; box-sizing:border-box;" oninput="invNeuRender()" placeholder="ID...">
+                                          <button id="neu-sym-btn-z" class="gat-btn neu-sym-filter-btn" onclick="toggleNeuSymFilter('Z')" title="Nur z-Fahrzeuge (nicht mehr im Betrieb)" style="color:red;font-weight:bold; margin-left:4px;">z</button>
+                                      </th>
+                                      <th style="padding:4px;"><input type="text" id="inv-neu-filter-epoche" style="width:40px; font-size:11px; padding:2px; box-sizing:border-box;" oninput="invNeuRender()" placeholder="Ep..."></th>
+                                      <th style="padding:4px;"><input type="text" id="inv-neu-filter-bv" style="width:50px; font-size:11px; padding:2px; box-sizing:border-box;" oninput="invNeuRender()" placeholder="BV..."></th>
+                                      <th style="padding:4px;"><input type="text" id="inv-neu-filter-ord" style="width:80px; font-size:11px; padding:2px; box-sizing:border-box;" oninput="invNeuRender()" placeholder="Ord.Nr...."></th>
+                                                                            <th style="padding:2px; min-width:812px; display:flex; align-items:center; justify-content:space-between;">
+                                          <div style="display:flex; gap:6px; align-items:center;">
+                                              <div style="display:flex; gap:2px;">
+                                                  <button class="gat-btn neu-ep-btn" data-ep="I" onclick="toggleNeuEp(this)">I</button>
+                                                  <button class="gat-btn neu-ep-btn active" data-ep="II" onclick="toggleNeuEp(this)">II</button>
+                                                  <button class="gat-btn neu-ep-btn" data-ep="III" onclick="toggleNeuEp(this)">III</button>
+                                                  <button class="gat-btn neu-ep-btn" data-ep="IV" onclick="toggleNeuEp(this)">IV</button>
+                                              </div>
+                                              <div style="display:flex; gap:2px; margin-left: 10px;">
+                                                  <button class="gat-btn active neu-type-btn" data-type="l" onclick="toggleNeuType(this)">L</button>
+                                                  <button class="gat-btn active neu-type-btn" data-type="p" onclick="toggleNeuType(this)">P</button>
+                                                  <button class="gat-btn active neu-type-btn" data-type="g" onclick="toggleNeuType(this)">G</button>
+                                              </div>
+                                              <div style="display:flex; gap:2px; margin-left: 10px;">
+                                                  <input type="text" id="inv-neu-filter-all" placeholder="Suche überall..." style="width:120px; font-size:11px; padding:2px;" oninput="invNeuRender()">
+                                              </div>
+                                          </div>
+                                          <div style="display:flex; align-items:center; gap:4px; margin-right:4px;">
+                                              <span id="inv-neu-count" style="font-size:11px; color:#555; white-space:nowrap;"></span>
+                                              <button onclick="invNeuReset()" style="cursor:pointer; padding:0 4px; font-size:13px;" title="Filter zurücksetzen">&#10006;</button>
+                                          </div>
+                                      </th>
+                                      <th style="padding:4px;"><input type="text" id="inv-neu-filter-gattung" style="width:80px; font-size:11px; padding:2px; box-sizing:border-box;" oninput="invNeuRender()" placeholder="Gattung..."></th>
+                                      <th style="padding:4px;"><input type="text" id="inv-neu-filter-dir" style="width:80px; font-size:11px; padding:2px; box-sizing:border-box;" oninput="invNeuRender()" placeholder="RBD..."></th>
+                                      <th style="padding:4px;"><input type="text" id="inv-neu-filter-bw" style="width:80px; font-size:11px; padding:2px; box-sizing:border-box;" oninput="invNeuRender()" placeholder="BW..."></th>
+                                      <th style="padding:4px;"></th>
+                                      <th style="padding:4px;"></th>
+                                      <th style="padding:4px;">
+                                          <input type="text" id="inv-neu-filter-modell" style="width:110px; font-size:11px; padding:2px; box-sizing:border-box;" oninput="invNeuRender()" placeholder="Modell (Hst Art)">
+                                      </th>
+                                      <th style="padding:4px;"></th>
+                                      <th style="padding:4px;"></th>
+                                      <th style="padding:4px; text-align:center; white-space:nowrap; display:flex; align-items:center; gap:2px;">
+                                          <button id="neu-ausstattung-toggle" class="gat-btn" style="padding:1px 3px;" onclick="toggleNeuAusstattung()" data-state="0" title="Ausstattung (leer/gefüllt)">&#x25EF;</button>
+                                          <button id="neu-sym-btn-zs" class="gat-btn neu-sym-filter-btn" onclick="toggleNeuSymFilter('Zs')" title="Zugschlussscheibe"><svg width="8" height="11" viewBox="0 0 12 16"><rect x="0.5" y="0.5" width="11" height="15" fill="white" stroke="#333" stroke-width="1"/><polygon points="0.5,0.5 11.5,0.5 6,8" fill="red"/><polygon points="0.5,15.5 11.5,15.5 6,8" fill="red"/></svg></button>
+                                          <button id="neu-sym-btn-kd" class="gat-btn neu-sym-filter-btn" onclick="toggleNeuSymFilter('Kd')" title="KD-Schnittstelle">KD</button>
+                                          <button id="neu-sym-btn-puf" class="gat-btn neu-sym-filter-btn" onclick="toggleNeuSymFilter('Puf')" title="Pufferkondensator">&#x22A5;&#x22A5;</button>
+                                      </th>
+                                      <th style="padding:4px; text-align:center;">
+                                          <button id="neu-sym-btn-ovp" class="gat-btn neu-sym-filter-btn" onclick="toggleNeuSymFilter('Ovp')" title="OVP vorhanden"><svg width="16" height="10" viewBox="0 0 22 14"><rect x="1" y="3" width="18" height="10" rx="1" fill="none" stroke="#555" stroke-width="1.5"/><polygon points="1,3 10,1 19,3" fill="#b8d4f5" stroke="#555" stroke-width="1"/></svg></button>
+                                      </th>
+                                      <th style="padding:4px;"><input type="text" id="inv-neu-filter-zuglauf" style="width:80px; font-size:11px; padding:2px; box-sizing:border-box;" oninput="invNeuRender()" placeholder="Zuglauf..."></th>
+                                      <th style="padding:4px; text-align:center;">
+                                          <div style="display:flex; align-items:center; gap:2px;">
+                                              <input type="text" id="inv-neu-filter-anmerkung" style="width:80px; font-size:11px; padding:2px; box-sizing:border-box;" oninput="invNeuRender()" placeholder="Anmerkung...">
+                                              <button id="neu-sym-btn-bel" class="gat-btn neu-sym-filter-btn" onclick="toggleNeuSymFilter('Bel')" title="Beleuchtung vorhanden"><svg width="10" height="13" viewBox="0 0 14 18"><circle cx="7" cy="7" r="5" fill="#ffe066" stroke="#cc9900" stroke-width="1.2"/><rect x="4.5" y="11.5" width="5" height="2" rx="0.5" fill="#999"/></svg></button>
+                                          </div>
+                                      </th>
+
+</tr>
+                                <tr id="inv-neu-header-row" style="background:#dce4f0; border-bottom: 2px solid #a8b8d8; position: sticky; top: 27px; z-index: 10; font-size: 11px; color: #344; text-transform: uppercase; letter-spacing: 0.04em;">
                                     <th style="padding:4px; text-align:left;">ID</th>
-                                    <th style="padding:4px; text-align:left;">Epoche</th>
+                                    <th style="padding:4px; text-align:left;">Ep.</th>
                                     <th style="padding:4px; text-align:left;">BV</th>
                                     <th style="padding:4px; text-align:left;">Ord.-Nr.</th>
                                     <th style="padding:2px;"></th>
-                                    <th style="padding:4px; text-align:left;">Gattungsbezirk</th>
-                                    <th style="padding:4px; text-align:left;">Direktion</th>
-                                    <th style="padding:4px; text-align:left;">Bahnbetriebswerk</th>
+                                    <th style="padding:4px; text-align:left;">Gattung</th>
+                                    <th style="padding:4px; text-align:left;">RBD</th>
+                                    <th style="padding:4px; text-align:left;">BW</th>
+                                    <th style="padding:4px; text-align:right;">L&uuml;P</th>
+                                    <th style="padding:4px; text-align:left;">Adr/Dec/SS</th>
                                     <th style="padding:4px; text-align:left;">Modell</th>
+                                    <th style="padding:4px; text-align:left;">Set</th>
+                                    <th style="padding:4px; text-align:left;">Kauf</th>
                                     <th style="padding:4px; text-align:center;">Ausstattung</th>
+                                    <th style="padding:4px; text-align:center;">OVP</th>
+                                    <th style="padding:4px; text-align:left;">Zuglauf</th><th style="padding:4px; text-align:left;">Anmerkung</th>
                                 </tr>
                             </thead>
                             <tbody></tbody>
@@ -7868,7 +7914,7 @@ ${von} â€“ ${nach}`;
                     const target = headers[targetIdx];
                     const container = document.getElementById('inv-neu-view');
                     if (container) {
-                        const topPos = target.offsetTop - 56; // compensate for sticky headers
+                        const topPos = target.offsetTop - 84; // compensate for sticky headers
                         container.scrollTo({ top: topPos, behavior: 'smooth' });
                     } else {
                         target.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -7876,12 +7922,34 @@ ${von} â€“ ${nach}`;
                 }
             };
 
+            // Symbol-Filter-States
+            window._neuFilterZ   = false;
+            window._neuFilterOvp = false;
+            window._neuFilterZs  = false;
+            window._neuFilterBel = false;
+            window._neuFilterKd  = false;
+            window._neuFilterPuf = false;
+
+            window.toggleNeuSymFilter = function(name) {
+                window['_neuFilter' + name] = !window['_neuFilter' + name];
+                const btn = document.getElementById('neu-sym-btn-' + name.toLowerCase());
+                if (btn) btn.classList.toggle('active', window['_neuFilter' + name]);
+                invNeuRender();
+            };
+
             window.invNeuReset = function () {
-                ['inv-neu-filter-id', 'inv-neu-filter-epoche', 'inv-neu-filter-bv', 'inv-neu-filter-gattung', 'inv-neu-filter-ord', 'inv-neu-filter-dir', 'inv-neu-filter-bw', 'inv-neu-filter-hst', 'inv-neu-filter-art'].forEach(id => {
+                ['inv-neu-filter-all', 'inv-neu-filter-id', 'inv-neu-filter-epoche', 'inv-neu-filter-bv', 'inv-neu-filter-gattung', 'inv-neu-filter-ord', 'inv-neu-filter-dir', 'inv-neu-filter-bw', 'inv-neu-filter-hst', 'inv-neu-filter-art'].forEach(id => {
                     const el = document.getElementById(id);
                     if (el) el.value = '';
                 });
                 document.querySelectorAll('.neu-type-btn').forEach(b => b.classList.add('active'));
+                window._neuFilterZ   = false;
+                window._neuFilterOvp = false;
+                window._neuFilterZs  = false;
+                window._neuFilterBel = false;
+                window._neuFilterKd  = false;
+                window._neuFilterPuf = false;
+                document.querySelectorAll('.neu-sym-filter-btn').forEach(b => b.classList.remove('active'));
                 invNeuRender();
             };
 
@@ -7898,8 +7966,19 @@ ${von} â€“ ${nach}`;
                 invNeuRender();
             };
             window.toggleNeuEp = function (btn) {
-                document.querySelectorAll('.neu-ep-btn').forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
+                btn.classList.toggle('active');
+                invNeuRender();
+            };
+
+            window.toggleNeuAusstattung = function() {
+                const btn = document.getElementById('neu-ausstattung-toggle');
+                if(!btn) return;
+                let state = parseInt(btn.dataset.state || '0');
+                state = (state + 1) % 3;
+                btn.dataset.state = state;
+                if (state === 0) { btn.innerHTML = '&#x25EF;'; btn.style.color = '#333'; btn.title = 'Ausstattung (egal)'; }
+                else if (state === 1) { btn.innerHTML = '&#x25C9;'; btn.style.color = 'blue'; btn.title = 'Ausstattung (nur mit)'; }
+                else { btn.innerHTML = '&#x25A2;'; btn.style.color = 'red'; btn.title = 'Ausstattung (nur ohne)'; }
                 invNeuRender();
             };
             window.invNeuRender = function () {
@@ -7907,23 +7986,36 @@ ${von} â€“ ${nach}`;
                 if (!tbody) return;
                 tbody.innerHTML = '';
 
-                // Read global epoche filter
-                const epBtn = document.querySelector('.neu-ep-btn.active');
-                const globalEp = epBtn ? epBtn.textContent.trim() : '';
+                // Regex helper
+                const matchRegex = (pattern, text) => {
+                    if (!pattern) return true;
+                    try {
+                        const regex = new RegExp(pattern, 'i');
+                        return regex.test(text);
+                    } catch (e) {
+                        return text.toLowerCase().includes(pattern.toLowerCase());
+                    }
+                };
+
+                // Read global epoche filter (OR)
+                const activeEps = Array.from(document.querySelectorAll('.neu-ep-btn.active')).map(b => b.textContent.trim());
 
                 // Read type filters
                 const activeTypes = Array.from(document.querySelectorAll('.neu-type-btn.active')).map(b => b.getAttribute('data-type'));
 
                 // Read text filters
-                const filterId = (document.getElementById('inv-neu-filter-id')?.value || '').toLowerCase();
-                const filterEp = (document.getElementById('inv-neu-filter-epoche')?.value || '').toLowerCase();
-                const filterBv = (document.getElementById('inv-neu-filter-bv')?.value || '').toLowerCase();
-                const filterGat = (document.getElementById('inv-neu-filter-gattung')?.value || '').toLowerCase();
-                const filterOrd = (document.getElementById('inv-neu-filter-ord')?.value || '').toLowerCase();
-                const filterDir = (document.getElementById('inv-neu-filter-dir')?.value || '').toLowerCase();
-                const filterBw = (document.getElementById('inv-neu-filter-bw')?.value || '').toLowerCase();
-                const filterHst = (document.getElementById('inv-neu-filter-hst')?.value || '').toLowerCase();
-                const filterArt = (document.getElementById('inv-neu-filter-art')?.value || '').toLowerCase();
+                const filterId = (document.getElementById('inv-neu-filter-id')?.value || '');
+                const filterEp = (document.getElementById('inv-neu-filter-epoche')?.value || '');
+                const filterBv = (document.getElementById('inv-neu-filter-bv')?.value || '');
+                const filterGat = (document.getElementById('inv-neu-filter-gattung')?.value || '');
+                const filterDir = (document.getElementById('inv-neu-filter-dir')?.value || '');
+                const filterBw = (document.getElementById('inv-neu-filter-bw')?.value || '');
+                const filterModell = (document.getElementById('inv-neu-filter-modell')?.value || '');
+                const filterOrd = (document.getElementById('inv-neu-filter-ord')?.value || '');
+                const filterZuglauf = (document.getElementById('inv-neu-filter-zuglauf')?.value || '');
+                const filterAnmerkung = (document.getElementById('inv-neu-filter-anmerkung')?.value || '');
+                const filterAll = (document.getElementById('inv-neu-filter-all')?.value || '');
+                const ausstattungState = document.getElementById('neu-ausstattung-toggle')?.dataset.state || '0';
 
                 // First pass: group the data
                 const groups = [];
@@ -7943,7 +8035,7 @@ ${von} â€“ ${nach}`;
                         const idVal = (cols[0] || '').toLowerCase();
                         const epVal = (cols[1] || '').toLowerCase();
                         const bvVal = (cols[2] || '').toLowerCase();
-                        const gatVal = (cols[3] || '').toLowerCase();
+                        const gatVal = (cols[3] || '').toLowerCase().replace(/[\^_]/g, '');
                         const ordVal = (cols[4] || '').toLowerCase();
                         const dirVal = (cols[5] || '').toLowerCase();
                         const bwVal = (cols[6] || '').toLowerCase();
@@ -7960,21 +8052,53 @@ ${von} â€“ ${nach}`;
                             return; // None active, show none
                         }
 
-                        // Epochen filter (global)
-                        if (globalEp && cols[1] !== globalEp && !globalEp.includes('Alle')) {
+                        // Epochen filter (OR)
+                        if (activeEps.length > 0 && !activeEps.includes(cols[1] || '') && !activeEps.includes('Alle')) {
                             return;
                         }
 
-                        // Text filters (AND)
-                        if (filterId && !idVal.includes(filterId)) return;
-                        if (filterEp && !epVal.includes(filterEp)) return;
-                        if (filterBv && !bvVal.includes(filterBv)) return;
-                        if (filterGat && !gatVal.includes(filterGat)) return;
-                        if (filterOrd && !ordVal.includes(filterOrd)) return;
-                        if (filterDir && !dirVal.includes(filterDir)) return;
-                        if (filterBw && !bwVal.includes(filterBw)) return;
-                        if (filterHst && !hstVal.includes(filterHst)) return;
-                        if (filterArt && !artVal.includes(filterArt)) return;
+                        // Checkbox filter
+                        const cZ = (cols[10] || '').toLowerCase();
+                        const cOvp = (cols[12] || '').trim();
+                        const cZs = (cols[16] || '').toLowerCase();
+                        const cBel = (cols[18] || '').toLowerCase();
+                        const cKd = (cols[24] || '').toLowerCase();
+                        const cPuf = (cols[25] || '').toLowerCase();
+
+                        if (window._neuFilterZ && cZ !== 'z' && cZ !== 'x') return;
+                        if (window._neuFilterOvp && cOvp === '') return;
+                        if (window._neuFilterZs && cZs !== 'x') return;
+                        if (window._neuFilterBel && cBel !== 'x') return;
+                        if (window._neuFilterKd && cKd !== 'x') return;
+                        if (window._neuFilterPuf && cPuf !== 'x') return;
+
+                        // Ausstattung (leer/nicht leer)
+                        if (ausstattungState === '1') {
+                            if (!cols[16] && !cols[18] && !cols[24] && !cols[25]) return;
+                        } else if (ausstattungState === '2') {
+                            if (cols[16] || cols[18] || cols[24] || cols[25]) return;
+                        }
+
+                        // Regex Text filter
+                        if (filterId && !matchRegex(filterId, idVal)) return;
+                        if (filterEp && !matchRegex(filterEp, epVal)) return;
+                        if (filterBv && !matchRegex(filterBv, bvVal)) return;
+                        if (filterOrd && !matchRegex(filterOrd, ordVal)) return;
+                        if (filterGat && !matchRegex(filterGat, gatVal)) return;
+                        if (filterDir && !matchRegex(filterDir, dirVal)) return;
+                        if (filterBw && !matchRegex(filterBw, bwVal)) return;
+                        if (filterZuglauf && !matchRegex(filterZuglauf, cols[17] || '')) return;
+                        if (filterAnmerkung && !matchRegex(filterAnmerkung, cols[26] || '')) return;
+                        
+                        if (filterModell) {
+                            const combined = (cols[7] || '') + ' ' + (cols[8] || '');
+                            if (!matchRegex(filterModell, combined)) return;
+                        }
+
+                        if (filterAll) {
+                            const fullRow = cols.join(' ').toLowerCase();
+                            if (!matchRegex(filterAll, fullRow)) return;
+                        }
 
                         if (!currentGroup) {
                             groupId++;
@@ -7994,12 +8118,25 @@ ${von} â€“ ${nach}`;
                     trHeader.id = 'neu-group-header-' + group.id;
                     trHeader.setAttribute('data-collapsed', window._allNeuCollapsed ? 'true' : 'false');
                     trHeader.style.cursor = 'pointer';
-                    trHeader.style.backgroundColor = '#ddd';
+                    // Determine majority prefix (L, P, G)
+                      let counts = {L:0, P:0, G:0};
+                      group.items.forEach(c => { const p = (c[0]||'').charAt(0).toUpperCase(); if(counts[p]!==undefined) counts[p]++; });
+                      let maxC = 0, maxP = 'L';
+                      for (let p in counts) { if(counts[p]>maxC) { maxC = counts[p]; maxP = p; } }
+                      
+                      if (maxP === 'L') {
+                          trHeader.style.background = 'linear-gradient(to right, #111, #333)';
+                      } else if (maxP === 'P') {
+                          trHeader.style.background = 'linear-gradient(to right, #4a5c32, #6a7c4f)';
+                      } else {
+                          trHeader.style.background = 'linear-gradient(to right, #7b331a, #9c4c2d)';
+                      }
+                      trHeader.style.color = '#fff';
                     trHeader.style.fontWeight = 'bold';
                     trHeader.onclick = () => toggleNeuGroup(group.id);
 
-                    trHeader.innerHTML = '<td colspan="10" style="padding:4px;">' +
-                        '<span class="toggle-icon" style="display:inline-block; width:20px;">' + (window._allNeuCollapsed ? '\u25B6' : '\u25BC') + '</span>' +
+                    trHeader.innerHTML = '<td colspan="17" style="padding:4px;">' +
+                        '<span class="toggle-icon" style="display:inline-block; width:20px; color:#fff;">' + (window._allNeuCollapsed ? '\u25B6' : '\u25BC') + '</span>' +
                         '<span class="toggle-all-icon" title="Alle Gruppen auf/zuklappen" onclick="toggleAllNeuGroups(event)" style="display:inline-block; margin-right:6px; cursor:pointer; font-size:16px;">' + (window._allNeuCollapsed ? '&#8862;' : '&#8863;') + '</span>' +
                         '<span title="Zur vorherigen Gruppe" onclick="jumpNeuGroup(-1, \'' + group.id + '\', event)" style="display:inline-block; margin-right:6px; cursor:pointer; font-size:16px;">&#8593;</span>' +
                         '<span title="Zur n&auml;chsten Gruppe" onclick="jumpNeuGroup(1, \'' + group.id + '\', event)" style="display:inline-block; margin-right:8px; cursor:pointer; font-size:16px;">&#8595;</span> ' +
@@ -8016,6 +8153,35 @@ ${von} â€“ ${nach}`;
                         const art = cols[8] || '';
                         const ord = cols[4] || '';
                         const idType = id.charAt(0).toUpperCase();
+                        const formatGat = (str) => {
+                            if (!str) return '';
+                            let res = '';
+                            let inSup = false, inSub = false;
+                            for (let i=0; i<str.length; i++) {
+                                if (str[i] === '^') {
+                                    if (inSup) { res += '</sup>'; inSup = false; }
+                                    else { if (inSub) { res += '</sub>'; inSub = false; } res += '<sup>'; inSup = true; }
+                                } else if (str[i] === '_') {
+                                    if (inSub) { res += '</sub>'; inSub = false; }
+                                    else { if (inSup) { res += '</sup>'; inSup = false; } res += '<sub>'; inSub = true; }
+                                } else {
+                                    res += str[i];
+                                }
+                            }
+                            if (inSup) res += '</sup>';
+                            if (inSub) res += '</sub>';
+                            return res;
+                        };
+
+                        let gattungHtml = '';
+                        let ordHtml = '';
+                        if (idType === 'P' || idType === 'G') {
+                            ordHtml = formatGat(cols[3]) + '<br>' + ord;
+                            gattungHtml = '';
+                        } else {
+                            ordHtml = ord;
+                            gattungHtml = formatGat(cols[3]);
+                        }
                         let imgName, imgSrc, imgFolder;
                         if (idType === 'P') {
                             imgFolder = 'pwagen';
@@ -8044,21 +8210,119 @@ ${von} â€“ ${nach}`;
                             artHtml = '<a href="' + searchUrl + '" target="_blank" title="Verweis auf spurweite-n.de" style="text-decoration:none; color:inherit;">' + art + '</a>';
                         }
 
+                        // ---- z-Flag ----
+                        const zFlag = (cols[10] || '').toLowerCase() === 'x';
+                        const zHtml = zFlag ? '<span style="color:red;font-weight:bold;font-size:10px;margin-right:2px;">z</span>' : '';
+
+                        // ---- LüP ----
+                        const lupStr = (cols[11] || '');
+                        const lupHtml = lupStr ? '<span style="white-space:nowrap;">' + lupStr + '</span>' : '';
+
+                        // ---- Set ----
+                        const setStr = (cols[20] || '');
+                        const setHtml = setStr ? '<span style="font-size:11px;color:#555;">' + setStr + '</span>' : '';
+
+                        // ---- OVP-Symbol ----
+                        const ovpFlag = (cols[12] || '').trim() !== '';
+                        const ovpHtml = ovpFlag
+                            ? '<svg width="22" height="14" viewBox="0 0 22 14" style="vertical-align:middle;" title="OVP vorhanden">'
+                              + '<rect x="1" y="3" width="18" height="10" rx="1" fill="none" stroke="#555" stroke-width="1.5"/>'
+                              + '<polygon points="1,3 10,1 19,3" fill="#b8d4f5" stroke="#555" stroke-width="1"/>'
+                              + '<line x1="10" y1="1" x2="10" y2="3" stroke="#555" stroke-width="1"/>'
+                              + '</svg>'
+                            : '';
+
+                        // ---- Datum / KP / Quelle ----
+                        let kpStr = cols[14] ? '<span style="color:#000;"><b>' + cols[14] + '&euro;</b></span>' : '';
+                        let datumStr = cols[13] ? '<span>' + cols[13] + '</span>' : '';
+                        let topRowHtml = (kpStr || datumStr) ? '<div style="display:flex; justify-content:space-between; gap:4px; font-size:10px; color:#666;">' + datumStr + kpStr + '</div>' : '';
+                        const quelleHtml = cols[15] ? '<div style="font-size:10px;color:#888;">' + cols[15] + '</div>' : '';
+                        const kaufHtml = [topRowHtml, quelleHtml].filter(Boolean).join('');
+
+                        // ---- Ausstattungs-Symbole ----
                         let ausstattungHtml = '';
+                        // GAM
                         if (cols[9] && cols[9].trim().toLowerCase() === 'x') {
-                            ausstattungHtml = '<span title="Glockenankermotor" style="cursor:help; font-size:14px;">&#9673;</span>';
+                            ausstattungHtml += '<span title="Glockenankermotor" style="cursor:help;font-size:14px;">&#9673;</span>';
+                        }
+                        // Zugschlussscheibe
+                        if ((cols[16] || '').toLowerCase() === 'x') {
+                            ausstattungHtml += '<svg width="12" height="16" viewBox="0 0 12 16" style="vertical-align:middle;margin:0 1px;" title="Zugschlussscheibe">'
+                              + '<rect x="0.5" y="0.5" width="11" height="15" fill="white" stroke="#333" stroke-width="1"/>'
+                              + '<polygon points="0.5,0.5 11.5,0.5 6,8" fill="red"/>'
+                              + '<polygon points="0.5,15.5 11.5,15.5 6,8" fill="red"/>'
+                              + '<polygon points="0.5,0.5 0.5,15.5 6,8" fill="white"/>'
+                              + '<polygon points="11.5,0.5 11.5,15.5 6,8" fill="white"/>'
+                              + '</svg>';
+                        }
+                        // KD
+                        if ((cols[24] || '').toLowerCase() === 'x') {
+                            ausstattungHtml += '<svg width="16" height="14" viewBox="0 0 16 14" style="vertical-align:middle;margin:0 1px;" title="KD-Schnittstelle">'
+                              + '<rect x="1" y="4" width="14" height="6" rx="2" fill="none" stroke="#333" stroke-width="1.2"/>'
+                              + '<line x1="4" y1="7" x2="4" y2="4" stroke="#333" stroke-width="1"/>'
+                              + '<line x1="4" y1="4" x2="7" y2="4" stroke="#333" stroke-width="1"/>'
+                              + '<line x1="7" y1="4" x2="7" y2="7" stroke="#333" stroke-width="1"/>'
+                              + '<line x1="9" y1="7" x2="9" y2="4" stroke="#333" stroke-width="1"/>'
+                              + '<line x1="9" y1="4" x2="12" y2="4" stroke="#333" stroke-width="1"/>'
+                              + '<line x1="12" y1="4" x2="12" y2="7" stroke="#333" stroke-width="1"/>'
+                              + '</svg>';
+                        }
+                        // Puf
+                        if ((cols[25] || '').toLowerCase() === 'x') {
+                            ausstattungHtml += '<svg width="14" height="14" viewBox="0 0 14 14" style="vertical-align:middle;margin:0 1px;" title="Pufferkondensator">'
+                              + '<line x1="2" y1="7" x2="5" y2="7" stroke="#333" stroke-width="1.2"/>'
+                              + '<line x1="5" y1="3" x2="5" y2="11" stroke="#333" stroke-width="2"/>'
+                              + '<line x1="9" y1="3" x2="9" y2="11" stroke="#333" stroke-width="2"/>'
+                              + '<line x1="9" y1="7" x2="12" y2="7" stroke="#333" stroke-width="1.2"/>'
+                              + '</svg>';
                         }
 
-                        tr.innerHTML = '<td style="padding:1px 4px; vertical-align:middle;">' + id + '</td>' +
+                        // ---- Anmerkungen (Bel + Korr-Indikator + Zuglauf) ----
+                        let anmerkungHtml = '';
+                        let rowStyle = '';
+                        if (cols[19] && cols[19].trim() !== '') {
+                            anmerkungHtml += '% ';
+                            rowStyle = 'background-color:#fffde7;';
+                        }
+                        if ((cols[18] || '').toLowerCase() === 'x') {
+                            anmerkungHtml += '<svg width="14" height="18" viewBox="0 0 14 18" style="vertical-align:middle;" title="Beleuchtung">'
+                              + '<circle cx="7" cy="7" r="5" fill="#ffe066" stroke="#cc9900" stroke-width="1.2"/>'
+                              + '<rect x="4.5" y="11.5" width="5" height="2" rx="0.5" fill="#999"/>'
+                              + '<rect x="5" y="13.5" width="4" height="1.5" rx="0.5" fill="#999"/>'
+                              + '<line x1="7" y1="2" x2="7" y2="0.5" stroke="#cc9900" stroke-width="1"/>'
+                              + '</svg> ';
+                        }
+                        let combinedAnmerkung = [];
+                        if (cols[17]) combinedAnmerkung.push('Lauf: ' + cols[17]);
+                        // Wait, Anmerkung used to be in `loks.csv` / `p.csv` but it was not requested to be merged or there's no Anmerkung column in `fahrzeuge.csv`!
+                        // "Die Spalte Zugschluss stelle vor der Spalte Anmerkungen dar."
+                        // It seems we should just render it in the last column.
+                        anmerkungHtml += combinedAnmerkung.join(', ');
+
+                        // ---- Adr/Dec/SS ----
+                        let adrDecHtml = '';
+                        if (cols[21]) adrDecHtml += '<div><b>' + cols[21] + '</b></div>';
+                        if (cols[22]) adrDecHtml += '<div>' + cols[22] + '</div>';
+                        if (cols[23]) adrDecHtml += '<div>' + cols[23] + '</div>';
+
+                        tr.style.cssText = rowStyle;
+                        tr.innerHTML = 
+                            '<td style="padding:1px 4px; vertical-align:middle; white-space:nowrap;">' + zHtml + id + '</td>' +
                             '<td style="padding:1px 4px; vertical-align:middle;">' + (cols[1] || '') + '</td>' +
                             '<td style="padding:1px 4px; vertical-align:middle;">' + (cols[2] || '') + '</td>' +
-                            '<td style="padding:1px 4px; vertical-align:middle;">' + ord + '</td>' +
-                            '<td class="inv-img-cell" style="padding:0 2px; text-align:center; vertical-align:middle;"><img src="' + imgSrc + '"></td>' +
-                            '<td style="padding:1px 4px; vertical-align:middle;">' + fmtSup(cols[3]) + '</td>' +
+                            '<td style="padding:1px 4px; vertical-align:middle;">' + ordHtml + '</td>' +
+                            '<td class="inv-img-cell" style="padding:0 2px; vertical-align:middle;"><div class="img-col-div"><img src="' + imgSrc + '"></div></td>' +
+                            '<td style="padding:1px 4px; vertical-align:middle;">' + gattungHtml + '</td>' +
                             '<td style="padding:1px 4px; vertical-align:middle;">' + (cols[5] || '') + '</td>' +
                             '<td style="padding:1px 4px; vertical-align:middle;">' + (cols[6] || '') + '</td>' +
+                            '<td style="padding:1px 4px; vertical-align:middle; text-align:right; white-space:nowrap;">' + lupHtml + '</td>' +
+                            '<td style="padding:1px 4px; vertical-align:middle; font-size:10px;">' + adrDecHtml + '</td>' +
                             '<td style="padding:1px 4px; vertical-align:middle;">' + (hstHtml ? hstHtml + ' ' : '') + artHtml + '</td>' +
-                            '<td style="padding:1px 4px; text-align:center; vertical-align:middle;">' + ausstattungHtml + '</td>';
+                            '<td style="padding:1px 4px; vertical-align:middle;">' + setHtml + '</td>' +
+                            '<td style="padding:1px 4px; vertical-align:middle; font-size:11px;">' + kaufHtml + '</td>' +
+                            '<td style="padding:1px 4px; text-align:center; vertical-align:middle; white-space:nowrap;">' + ausstattungHtml + '</td>' +
+                            '<td style="padding:1px 4px; text-align:center; vertical-align:middle;">' + ovpHtml + '</td>' +
+                            '<td style="padding:1px 4px; vertical-align:middle; font-size:11px;">' + anmerkungHtml + '</td>';
                         // Fehlenden Bildnamen anzeigen wenn kein Bild vorhanden
                         const imgEl = tr.querySelector('.inv-img-cell img');
                         if (imgEl) {
@@ -8081,6 +8345,31 @@ ${von} â€“ ${nach}`;
                 if (countEl) {
                     countEl.textContent = ' ' + totalItems + '/' + totalAll + ' Einträge';
                 }
+
+                // Dynamische Spaltenbreite: genau so breit wie das breiteste sichtbare Bild
+                const _applyImgColWidth = function() {
+                    let maxW = 0;
+                    document.querySelectorAll('#inv-neu-table .inv-img-cell img').forEach(function(img) {
+                        if (img.complete && img.naturalWidth > 0 && img.naturalHeight > 0) {
+                            const w = Math.round(img.naturalWidth * 45 / img.naturalHeight);
+                            if (w > maxW) maxW = w;
+                        }
+                    });
+                    if (maxW < 1) return;
+                    document.querySelectorAll('#inv-neu-table .img-col-div').forEach(function(d) {
+                        d.style.width = maxW + 'px';
+                    });
+                };
+                clearTimeout(window._imgColTimer);
+                window._imgColTimer = setTimeout(_applyImgColWidth, 0);
+                document.querySelectorAll('#inv-neu-table .inv-img-cell img').forEach(function(img) {
+                    if (!img.complete) {
+                        img.addEventListener('load', function() {
+                            clearTimeout(window._imgColTimer);
+                            window._imgColTimer = setTimeout(_applyImgColWidth, 0);
+                        }, { once: true });
+                    }
+                });
             }
 
             function gLoadCSV() {
@@ -8308,7 +8597,13 @@ ${von} â€“ ${nach}`;
                 const btn = document.getElementById('global-ep-' + ep);
                 const wasActive = btn && btn.classList.contains('active');
                 btns.forEach(b => b.classList.remove('active'));
-                if (!wasActive && btn) btn.classList.add('active');
+                if (!wasActive && btn) {
+                    btn.classList.add('active');
+                    // Sync Rollmaterial
+                    document.querySelectorAll('.neu-ep-btn').forEach(b => b.classList.remove('active'));
+                    const rBtn = Array.from(document.querySelectorAll('.neu-ep-btn')).find(b => b.dataset.ep === ep);
+                    if (rBtn) rBtn.classList.add('active');
+                }
                 if (window._invActiveTab === 'g') invGRender();
                 if (window.gRender) gRender();
                 if (window._invActiveTab === 'neu' && window.invNeuRender) invNeuRender();
